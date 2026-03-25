@@ -1,0 +1,106 @@
+%%{init: {'theme': 'dark', 'themeVariables': {'fontSize': '14px'}}}%%
+graph TB
+    subgraph POWER["전원 시스템 (48V)"]
+        BAT["배터리 팩<br/>48V 460Ah LiFePO4<br/>22.08kWh · 15S2P"]
+        BMS["BMS<br/>SOC · 셀밸런싱<br/>보호로직"]
+        CHG["충전기<br/>54V/30A"]
+        MR["Main Relay<br/>TLE8110ED"]
+        DCDC["DC-DC<br/>48V → 12V"]
+    end
+
+    subgraph CONTROL["제어 시스템"]
+        VCU["VCU<br/>STM32F479<br/>REV03 · 4층 PCB"]
+        SM["상태머신<br/>RC / LCD / ADT"]
+    end
+
+    subgraph DRIVE["구동 시스템"]
+        MC1["모터컨트롤러 L<br/>CAN 제어"]
+        MC2["모터컨트롤러 R<br/>CAN 제어"]
+        M1["구동모터 L<br/>DB110"]
+        M2["구동모터 R<br/>DB110"]
+    end
+
+    subgraph SPRAY["분사 시스템"]
+        PUMP_DRV["펌프 드라이버"]
+        PUMP["펌프 모터<br/>48V DC"]
+        SOL["솔레노이드 밸브<br/>×5 (분사4 + 교반1)"]
+        NOZZLE["노즐<br/>1.0mm × 12ea"]
+    end
+
+    subgraph FAN["송풍 시스템"]
+        FAN_DRV["팬 드라이버"]
+        FAN_M["팬 모터<br/>Hobbywing X6 Plus<br/>~8000rpm"]
+        PROP["프로펠러<br/>20파이 · 4블레이드"]
+    end
+
+    subgraph HMI["사용자 인터페이스"]
+        LCD_D["LCD 디스플레이"]
+        RC_D["RF 리모콘"]
+        SENSOR["센서류<br/>수위 · 유량 · 온도"]
+    end
+
+    subgraph AUTO["자율주행"]
+        ADT_PC["ADT PC<br/>경로추종 제어"]
+        GNSS["GNSS<br/>RTK 1~2cm"]
+        CAM["카메라"]
+        IMU["IMU"]
+    end
+
+    %% CAN 버스 연결
+    VCU ===|"CAN Bus"| MC1
+    VCU ===|"CAN Bus"| MC2
+    VCU ===|"CAN Bus"| BMS
+    VCU ===|"CAN Bus"| FAN_DRV
+    VCU ===|"CAN Bus"| PUMP_DRV
+
+    %% 전원 흐름
+    BAT --> BMS
+    BAT --> MR
+    MR --> VCU
+    MR --> DCDC
+    DCDC --> LCD_D
+    DCDC --> SENSOR
+    CHG -.->|"CAN"| BMS
+
+    %% 구동
+    MC1 --> M1
+    MC2 --> M2
+
+    %% 분사
+    PUMP_DRV --> PUMP
+    VCU -->|"GPIO"| SOL
+    PUMP --> NOZZLE
+
+    %% 송풍
+    FAN_DRV --> FAN_M
+    FAN_M --> PROP
+
+    %% HMI
+    LCD_D -->|"UART"| VCU
+    RC_D -->|"RF"| VCU
+    SENSOR -->|"ADC"| VCU
+
+    %% 자율주행
+    ADT_PC -->|"CAN"| VCU
+    GNSS --> ADT_PC
+    CAM --> ADT_PC
+    IMU --> ADT_PC
+
+    %% 상태머신
+    VCU --> SM
+
+    classDef power fill:#e74c3c,stroke:#c0392b,color:#fff
+    classDef control fill:#3498db,stroke:#2980b9,color:#fff
+    classDef drive fill:#2ecc71,stroke:#27ae60,color:#fff
+    classDef spray fill:#9b59b6,stroke:#8e44ad,color:#fff
+    classDef fan fill:#f39c12,stroke:#e67e22,color:#fff
+    classDef hmi fill:#1abc9c,stroke:#16a085,color:#fff
+    classDef auto fill:#e67e22,stroke:#d35400,color:#fff
+
+    class BAT,BMS,CHG,MR,DCDC power
+    class VCU,SM control
+    class MC1,MC2,M1,M2 drive
+    class PUMP_DRV,PUMP,SOL,NOZZLE spray
+    class FAN_DRV,FAN_M,PROP fan
+    class LCD_D,RC_D,SENSOR hmi
+    class ADT_PC,GNSS,CAM,IMU auto

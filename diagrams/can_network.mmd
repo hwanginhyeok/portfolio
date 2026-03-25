@@ -1,0 +1,41 @@
+%%{init: {'theme': 'dark', 'themeVariables': {'fontSize': '13px'}}}%%
+graph LR
+    subgraph CAN_BUS["CAN Bus (500 kbps)"]
+        direction LR
+        BUS["━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"]
+    end
+
+    VCU["🔧 VCU<br/>STM32F479<br/>─────────<br/>DM 로직<br/>상태머신<br/>안전 관리"]
+
+    BMS_N["🔋 BMS<br/>48V 460Ah<br/>─────────<br/>SOC<br/>셀 전압 ×15<br/>온도<br/>Warning/Fault"]
+
+    TRAC["⚙️ 구동 MC ×2<br/>DMKE 1226BL<br/>─────────<br/>속도 제어<br/>전류 제한<br/>브레이크"]
+
+    FAN_N["🌀 팬 ESC<br/>Hobbywing X6<br/>─────────<br/>RPM 제어<br/>온도 모니터<br/>3단 속도"]
+
+    PUMP_N["💧 펌프 DRV<br/>48V DC<br/>─────────<br/>압력 제어<br/>유량 모니터"]
+
+    ADT_N["🤖 ADT PC<br/>자율주행<br/>─────────<br/>경로 지령<br/>속도 제어<br/>모드 전환"]
+
+    VCU ---|"Tx: 제어 지령<br/>Rx: 상태 피드백"| BUS
+    BMS_N ---|"Tx: SOC, 셀전압<br/>Rx: Shutdown 요청"| BUS
+    TRAC ---|"Tx: 속도/전류 FB<br/>Rx: 속도/방향 지령"| BUS
+    FAN_N ---|"Tx: RPM, 온도<br/>Rx: RPM 지령"| BUS
+    PUMP_N ---|"Tx: 압력, 유량<br/>Rx: 구동 지령"| BUS
+    ADT_N ---|"Tx: 경로/속도<br/>Rx: 차량 상태"| BUS
+
+    classDef vcu fill:#3498db,stroke:#2980b9,color:#fff
+    classDef bms fill:#e74c3c,stroke:#c0392b,color:#fff
+    classDef motor fill:#2ecc71,stroke:#27ae60,color:#fff
+    classDef fan fill:#f39c12,stroke:#e67e22,color:#fff
+    classDef pump fill:#9b59b6,stroke:#8e44ad,color:#fff
+    classDef adt fill:#e67e22,stroke:#d35400,color:#fff
+    classDef bus fill:#34495e,stroke:#2c3e50,color:#ecf0f1
+
+    class VCU vcu
+    class BMS_N bms
+    class TRAC motor
+    class FAN_N fan
+    class PUMP_N pump
+    class ADT_N adt
+    class BUS bus

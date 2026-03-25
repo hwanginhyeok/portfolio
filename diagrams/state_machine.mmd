@@ -1,0 +1,65 @@
+%%{init: {'theme': 'dark', 'themeVariables': {'fontSize': '13px'}}}%%
+stateDiagram-v2
+    [*] --> Init: 전원 ON
+
+    Init --> RC: 리모콘 페어링 완료
+    Init --> LCD: LCD 조작 감지
+
+    state RC {
+        [*] --> RC_Ready
+        RC_Ready --> RC_Drive: 속도 지령
+        RC_Drive --> RC_Ready: 속도 0
+        RC_Drive --> RC_SpeedLock: 속도 고정 ON
+        RC_SpeedLock --> RC_Drive: 속도 고정 OFF
+    }
+
+    state LCD {
+        [*] --> LCD_Ready
+        LCD_Ready --> LCD_Setting: 파라미터 조정
+        note right of LCD_Ready
+            LCD 모드에서는
+            속도 0(Init) 지속 인가
+            ← 핵심 안전 설계
+        end note
+    }
+
+    state ADT {
+        [*] --> ADT_Ready
+        ADT_Ready --> ADT_Navigate: 경로 수신
+        ADT_Navigate --> ADT_Spray: 분사 구간 진입
+        ADT_Spray --> ADT_Navigate: 분사 구간 종료
+        ADT_Navigate --> ADT_Return: 약제 부족 / 배터리 저전압
+    }
+
+    RC --> LCD: Init 루틴 실행\n(모든 모터 속도 0)
+    LCD --> RC: Init 루틴 실행\n(모든 모터 속도 0)
+    RC --> ADT: Init 루틴 실행\n(모든 모터 속도 0)
+    ADT --> RC: Init 루틴 실행\n(모든 모터 속도 0)
+    LCD --> ADT: Init 루틴 실행\n(모든 모터 속도 0)
+    ADT --> LCD: Init 루틴 실행\n(모든 모터 속도 0)
+
+    state Emergency {
+        [*] --> E_Stop: 비상정지 스위치
+        E_Stop --> E_Alarm: 5분 알람
+        E_Alarm --> E_Wait: 5분 대기
+        E_Wait --> E_MR_Off: Main Relay 차단
+    }
+
+    RC --> Emergency: 비상정지
+    LCD --> Emergency: 비상정지
+    ADT --> Emergency: 비상정지
+    Emergency --> Init: 비상 해제 + 재시동
+
+    state BumperStop {
+        [*] --> B_Detect: 범퍼 감지
+        B_Detect --> B_Stop: 즉시 정지\n(0.05초, 308A)
+        note right of B_Stop
+            정지거리: 0.082m @3km/h
+            전진/조향 불가
+            후진만 가능
+        end note
+    }
+
+    ADT --> BumperStop: 장애물 감지
+    RC --> BumperStop: 장애물 감지
+    BumperStop --> RC: 후진 조작
