@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import CaseCard from '../components/CaseCard.astro';
+import ThemeHeatmap from '../components/ThemeHeatmap.astro';
+import cases from '../data/cases.json';
+---
+
+<BaseLayout title="황인혁 — 경계 없는 엔지니어">
+  <!-- Layer 1: 10초 스캔 (리크루터) -->
+  <Hero />
+
+  <!-- Layer 2: 2분 읽기 (팀 리드) -->
+  <main class="max-w-5xl mx-auto px-6">
+
+    <!-- 케이스 카드 그리드 (Design Review: 히트맵보다 먼저) -->
+    <section class="py-12">
+      <h2 class="text-2xl font-bold text-primary mb-2">프로젝트 케이스</h2>
+      <p class="text-sm text-muted mb-6">SS500 Speed Sprayer 개발 중 해결한 실제 문제들</p>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        {cases.map((c) => (
+          <CaseCard {...c} />
+        ))}
+      </div>
+    </section>
+
+    <!-- 테마 히트맵 (케이스 카드 뒤에 배치, Design Review 반영) -->
+    <ThemeHeatmap />
+
+    <!-- 간단한 About 섹션 -->
+    <section class="py-12 border-t border-gray-100">
+      <h2 class="text-2xl font-bold text-primary mb-4">About</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="font-bold text-lg mb-2">경력</h3>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li><strong>전력제어개발팀 · 선임연구원</strong> — 모터제어 개발</li>
+            <li><strong>제품개발팀 · 주니어 PM</strong> — 기획~양산 횡단</li>
+            <li>기계공학부 석사 (KAIST 연구 협업)</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-lg mb-2">기술 영역</h3>
+          <div class="flex flex-wrap gap-2 text-sm">
+            {['BLDC/PMSM 모터제어', 'CAN/CAN-FD', 'STM32 FW', 'BMS',
+              'Python', 'C/C++', 'APQP/PPAP', 'Git', 'Claude Code'
+            ].map((skill) => (
+              <span class="bg-surface px-3 py-1 rounded-full text-muted">{skill}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 연락처 -->
+    <footer class="py-8 border-t border-gray-100 text-center text-sm text-muted">
+      <p>황인혁 · 분야를 가리지 않는 엔지니어</p>
+      <p class="mt-1">
+        <a href="https://github.com/hwanginhyeok" class="text-accent hover:underline">GitHub</a>
+      </p>
+    </footer>
+  </main>
+</BaseLayout>

@@ -1,0 +1,61 @@
+---
+// 테마×프로젝트 히트맵 — 순수 Astro + CSS Grid (Svelte 불필요, Eng Review 반영)
+import themeMap from '../data/theme-map.json';
+
+const { themes, projects, matrix } = themeMap;
+
+// 셀 강도 → 색상 (Design Review: 4단계 empty/low/mid/high)
+function cellColor(value: number): string {
+  if (value === 0) return 'bg-gray-50 text-gray-300';
+  if (value === 1) return 'bg-blue-100 text-blue-600';
+  if (value === 2) return 'bg-blue-300 text-blue-800';
+  return 'bg-blue-500 text-white';
+}
+
+function cellDots(value: number): string {
+  return '■'.repeat(value) || '·';
+}
+---
+
+<section class="py-12">
+  <h2 class="text-2xl font-bold text-primary mb-2">역량 테마 맵</h2>
+  <p class="text-sm text-muted mb-6">프로젝트를 가로지르는 7가지 반복 역량</p>
+
+  <div class="overflow-x-auto">
+    <div
+      class="grid gap-1 min-w-[640px]"
+      style={`grid-template-columns: 120px repeat(${themes.length}, 1fr);`}
+    >
+      <!-- 헤더 행 -->
+      <div class="text-xs font-medium text-muted p-2"></div>
+      {themes.map((t) => (
+        <div class="text-xs font-medium text-center text-muted p-2">{t.short}</div>
+      ))}
+
+      <!-- 데이터 행 -->
+      {projects.map((proj) => (
+        <>
+          <div class="text-sm font-medium text-primary p-2 flex flex-col justify-center">
+            <span>{proj.name}</span>
+            <span class="text-xs text-muted">{proj.sub}</span>
+          </div>
+          {(matrix[proj.id as keyof typeof matrix] || []).map((val, i) => (
+            <div
+              class={`${cellColor(val)} rounded text-center p-2 text-sm font-bold cursor-default transition-colors hover:ring-2 hover:ring-accent`}
+              title={`${proj.name} × ${themes[i].name}: ${'■'.repeat(val) || '해당 없음'}`}
+            >
+              {cellDots(val)}
+            </div>
+          ))}
+        </>
+      ))}
+    </div>
+  </div>
+
+  <div class="flex gap-4 mt-4 text-xs text-muted">
+    <span class="flex items-center gap-1"><span class="w-4 h-4 bg-gray-50 border rounded"></span>해당 없음</span>
+    <span class="flex items-center gap-1"><span class="w-4 h-4 bg-blue-100 rounded"></span>경험</span>
+    <span class="flex items-center gap-1"><span class="w-4 h-4 bg-blue-300 rounded"></span>깊은 경험</span>
+    <span class="flex items-center gap-1"><span class="w-4 h-4 bg-blue-500 rounded"></span>핵심 역량</span>
+  </div>
+</section>

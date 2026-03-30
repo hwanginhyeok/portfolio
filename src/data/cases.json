@@ -1,0 +1,50 @@
+[
+  {
+    "id": "d12-test-equipment",
+    "title": "시험장비 9종 직접 구축",
+    "subtitle": "확인하고 싶으면 장비를 만들어서라도 본다",
+    "metric": "9종",
+    "metricLabel": "직접 구축한 시험장비",
+    "problem": "검증 인프라 부재 — 데이터 없이 설계 결정을 내려야 하는 상황",
+    "role": "시험 설계 + 장비 제작 + 데이터 분석",
+    "result": "다이나모미터, 범퍼 시험기, CAN 분석 환경 등 9종 자체 구축",
+    "themes": ["T-4", "T-5", "T-7"],
+    "file": "D12_test_driven_engineer.md"
+  },
+  {
+    "id": "d2-battery-bms",
+    "title": "배터리 BMS 정합성 해결",
+    "subtitle": "SOC 162%의 원인을 추적하다",
+    "metric": "SOC 162%",
+    "metricLabel": "이상 현상 발견 및 원인 규명",
+    "problem": "BMS와 VCU 간 CAN 데이터 불일치 — SOC가 162%로 표시",
+    "role": "데이터 분석 + 원인 추적 + 배터리 업체 협의",
+    "result": "7셀 중 1셀 전압 편차 발견, DBC 프로토콜 불일치 확인",
+    "themes": ["T-2", "T-5", "T-7"],
+    "file": "D2_battery_compatibility_case.md"
+  },
+  {
+    "id": "d3-state-machine",
+    "title": "제어권 상태머신 설계",
+    "subtitle": "NONE 상태를 삭제한 이유",
+    "metric": "5개 상태",
+    "metricLabel": "안전 상태전이 설계",
+    "problem": "수동/자율 전환 시 제어 공백 발생 위험",
+    "role": "상태머신 설계 + 안전 로직 구현",
+    "result": "불명확한 NONE 상태 삭제, 명시적 전이 조건으로 안전성 확보",
+    "themes": ["T-1", "T-7"],
+    "file": "D3_state_machine_case.md"
+  },
+  {
+    "id": "d4-pump-power",
+    "title": "펌프 전력 분석",
+    "subtitle": "역기전력에서 답을 찾다",
+    "metric": "308A",
+    "metricLabel": "피크 전류 실측",
+    "problem": "펌프 구동 시 과전류로 인한 시스템 불안정",
+    "role": "오실로스코프 실측 + 전력 분석 + 해결방안 설계",
+    "result": "역기전력 원인 규명, PWM 전략 최적화로 안정화",
+    "themes": ["T-1", "T-4", "T-5"],
+    "file": "D4_pump_power_case.md"
+  }
+]

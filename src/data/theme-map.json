@@ -1,0 +1,27 @@
+{
+  "themes": [
+    { "id": "T-1", "name": "모터제어", "short": "모터" },
+    { "id": "T-2", "name": "CAN 설계", "short": "CAN" },
+    { "id": "T-3", "name": "PCB/HW", "short": "PCB" },
+    { "id": "T-4", "name": "시험장비", "short": "시험" },
+    { "id": "T-5", "name": "데이터", "short": "데이터" },
+    { "id": "T-6", "name": "양산품질", "short": "양산" },
+    { "id": "T-7", "name": "문제해결", "short": "해결" }
+  ],
+  "projects": [
+    { "id": "scu", "name": "SCU", "sub": "현대/DIC", "period": "2022-2023" },
+    { "id": "eop", "name": "EOP 400W", "sub": "국책과제", "period": "2023-2024" },
+    { "id": "adt", "name": "ADT 모터", "sub": "3세대 개선", "period": "2023" },
+    { "id": "ss500", "name": "SS500", "sub": "자율주행 핵심", "period": "2025-2026" },
+    { "id": "wia", "name": "자동차", "sub": "WIA", "period": "2022" },
+    { "id": "patent", "name": "특허", "sub": "2건", "period": "2023" }
+  ],
+  "matrix": {
+    "scu":    [3, 2, 3, 0, 1, 3, 0],
+    "eop":    [3, 2, 2, 3, 3, 0, 0],
+    "adt":    [2, 0, 0, 1, 2, 0, 0],
+    "ss500":  [2, 3, 0, 3, 3, 3, 3],
+    "wia":    [1, 0, 0, 0, 0, 0, 0],
+    "patent": [3, 0, 0, 0, 1, 0, 0]
+  }
+}
