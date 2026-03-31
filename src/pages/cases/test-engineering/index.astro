@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+
+const tests = [
+  {
+    phase: 'Phase 1 — 기초를 쌓다 (2023)',
+    items: [
+      {
+        name: '다이나모미터 토크제어 시스템',
+        what: 'Strain Gauge Full Bridge + Wheatstone Bridge 아날로그 처리 + 토크 컨트롤러 FW + 10포인트 교정',
+        numbers: '비선형성 0.008% · 토크 감도 0.996 N·m · 사내 기술 세미나 개최',
+        impact: '이후 EOP, ADT 모든 성능 시험의 표준 장비로 정착',
+      },
+    ],
+  },
+  {
+    phase: 'Phase 2 — 방법론을 확장하다 (2024)',
+    items: [
+      {
+        name: 'PWM 절환 온도 비교 시험',
+        what: 'SVPWM vs DPWM 비교 프로토콜 · 55°/85°/120° 시험 매트릭스 · 실시간 CSV 로깅',
+        numbers: '2,932개 데이터 포인트 · FET 온도 16~17°C 저감 · 12세트 비교',
+        impact: '국책과제(EOP 400W) 완료보고서 핵심 근거',
+      },
+      {
+        name: 'ADT 모터 실주행 비교',
+        what: '실주행 Before/After 비교 프레임워크 · Zbench 지표 기반 정량 평가',
+        numbers: 'Zbench +60%(2.714→4.346) · OVT 100% 제거 · 리플 안정화',
+        impact: '3세대 모터 개선 효과 실증',
+      },
+    ],
+  },
+  {
+    phase: 'Phase 3 — 시스템으로 진화하다 (2025~2026, SS500)',
+    items: [
+      {
+        name: '펌프 성능평가 테스트베드',
+        what: 'Blancett 유량계 + SENSYS 압력계 + 배관/밸브/탱크 · 단독 구축(ISSUE #126)',
+        numbers: '3개 시료 비교(10.4/13.0/15.6 LPM) · 압력-유량 선형관계 규명',
+        impact: '펌프 선정 의사결정 근거 — "감성 평가"에서 "데이터 기반 선정"으로',
+      },
+      {
+        name: '팬 시스템 벤치',
+        what: '프로펠러형 풍속계 + 거리별(1~5m) 측정 + RS-500X 대조군 포함',
+        numbers: '갭 45→9mm(-80%) · 모터 출력 +114%(19.7→42.2W)',
+        impact: '모터 플레이트 설계 변경 요청의 정량적 근거',
+      },
+      {
+        name: '범퍼 안전 시험',
+        what: '6단계 이론 모델(v²/2a) + 범퍼 스트로크 123.5mm 기반 설계 + 실차 시험',
+        numbers: '3km/h 정지거리 0.082m(이론 0.672m의 8배) · 피크 308A · 정착 467ms',
+        impact: '자율주행 안전 인증 핵심 데이터',
+      },
+      {
+        name: 'SS500 vs 기성모델 성능 비교',
+        what: '기성모델(한아 SS기) 실물 대여 · 노즐/펌프/팬 3대축 비교',
+        numbers: '펌프 압력 SS500 2배 · 유량 기성모델 4배 · 전자식 개별 제어 우위',
+        impact: '제품 포지셔닝 및 업그레이드 방향 수립',
+      },
+      {
+        name: '내구성 시험 설계',
+        what: '128,000 Cycle Kill Test 계획 · Worst Case 교반 Profile · 극한 조건 매트릭스',
+        numbers: '온도(고/저) × 습도(고/건) × 지형(평/경사) 매트릭스',
+        impact: '양산 품질 확보의 기초 — "프로토타입 동작"과 "양산품 3년 사용"의 차이',
+      },
+    ],
+  },
+];
+---
+
+<BaseLayout title="시험 기획 9종 — 가설에서 데이터까지">
+  <main class="max-w-3xl mx-auto px-6 py-16">
+    <a href={base} class="text-sm text-accent hover:underline mb-8 inline-block">← 홈으로</a>
+
+    <span class="text-xs bg-orange-100 text-orange-700 px-2 py-0.5 rounded-full">시험 기획</span>
+    <h1 class="text-3xl font-black text-primary mt-2 mb-2">확인하고 싶으면 장비를 만들어서라도 본다</h1>
+    <p class="text-muted mb-4">3년간 9개 시험 체계를 직접 설계·구축·운영</p>
+
+    <!-- 반복 루프 다이어그램 -->
+    <div class="bg-surface rounded-lg p-4 mb-12 text-sm text-center text-gray-600">
+      가설 수립 → 측정 방법 설계 → 장비/벤치 구축 → 데이터 수집 → 정량적 결론 → 의사결정
+    </div>
+
+    {tests.map((phase) => (
+      <section class="mb-12">
+        <h2 class="text-lg font-bold text-primary mb-6 border-b pb-2">{phase.phase}</h2>
+        <div class="space-y-8">
+          {phase.items.map((item) => (
+            <div class="border-l-2 border-accent pl-4">
+              <h3 class="font-bold text-primary">{item.name}</h3>
+              <p class="text-sm text-gray-600 mt-1">{item.what}</p>
+              <p class="text-sm mt-2">
+                <span class="text-accent font-medium">수치: </span>
+                <span class="text-gray-700">{item.numbers}</span>
+              </p>
+              <p class="text-sm mt-1">
+                <span class="text-green-600 font-medium">임팩트: </span>
+                <span class="text-gray-600">{item.impact}</span>
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+    ))}
+
+    <!-- 패턴 -->
+    <section class="bg-primary text-white rounded-lg p-6 mb-12">
+      <h2 class="font-bold mb-3">패턴 — 3년간의 진화</h2>
+      <div class="text-sm space-y-2 text-gray-300">
+        <p><strong class="text-blue-400">2023:</strong> 단일 장비 제작 (다이나모미터) → "만든 장비가 회사 인프라가 됨"</p>
+        <p><strong class="text-blue-400">2024:</strong> 비교 시험 방법론 (PWM 온도, ADT 실주행) → "Before/After를 숫자로"</p>
+        <p><strong class="text-blue-400">2025~:</strong> 시스템 시험 체계 (펌프/팬/범퍼/내구/성능비교) → "제품 전체를 커버"</p>
+      </div>
+    </section>
+
+    <div class="mt-12 flex justify-between">
+      <a href={`${base}cases/eop-svpwm/`} class="text-sm text-accent hover:underline">← SVPWM 효율</a>
+      <a href={`${base}cases/ss500-state-machine/`} class="text-sm text-accent hover:underline">상태머신 →</a>
+    </div>
+  </main>
+</BaseLayout>

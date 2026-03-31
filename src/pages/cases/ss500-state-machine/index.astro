@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="제어권 상태머신 — SS500">
+  <main class="max-w-3xl mx-auto px-6 py-16">
+    <a href={base} class="text-sm text-accent hover:underline mb-8 inline-block">← 홈으로</a>
+
+    <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">SS500</span>
+    <h1 class="text-3xl font-black text-primary mt-2 mb-2">제어권 상태머신 — NONE 상태를 삭제한 이유</h1>
+    <p class="text-muted mb-8">RC/LCD/ADT 3모드 전환 시 안전을 보장하는 설계</p>
+
+    <section class="space-y-8">
+      <div>
+        <h2 class="text-lg font-bold text-primary mb-2">Situation</h2>
+        <p class="text-gray-600">SS500은 3가지 제어 모드(RC 리모콘, LCD 패널, ADT 자율주행)를 지원. 농기계는 비전문가(농민)가 운용하므로, 모든 모드 전환에서 모터가 예측 가능하게 동작해야 합니다. 예측과 다르게 동작하면 사고입니다.</p>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-bold text-primary mb-2">Task</h2>
+        <p class="text-gray-600">"어떤 모드에서 어떤 모드로 전환하든, 차량이 예측 가능하게 동작하는가?" — RC→LCD 전환 시 속도 초기화, ADT→RC 강제 전환 시 잔존 속도 제거, 비상정지 후 안전 복귀 확인.</p>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-bold text-primary mb-2">Action</h2>
+
+        <h3 class="font-bold text-red-500 mt-4 mb-2">발견한 치명적 버그</h3>
+        <div class="bg-red-50 border border-red-200 rounded-lg p-4 text-sm text-gray-700">
+          <p>RC 모드에서 3km/h로 주행 중 리모콘 페어링 발생 → 제어권 RC→LCD 전환.</p>
+          <p class="mt-2">이때 LCD 모드에서는 속도 지령을 보내지 않기 때문에, <strong>모터 컨트롤러에 이전 속도(3km/h)가 그대로 남아</strong> 있었습니다.</p>
+          <p class="mt-2 font-bold text-red-600">결과: 차량이 LCD 모드로 전환되었는데 아무 조작 없이 계속 전진.</p>
+        </div>
+
+        <h3 class="font-bold mt-6 mb-2">해결: 아키텍처 변경</h3>
+        <ul class="list-disc list-inside text-gray-600 space-y-2 text-sm">
+          <li><strong>NONE 상태 삭제</strong> — "제어권 없음" 상태가 있어서 이전 속도가 유지되는 구조. NONE을 삭제하고 항상 명시적 제어 모드 유지.</li>
+          <li><strong>모든 Transition에서 Init 루틴 실행</strong> — 제어권 전환 시 모든 모터 컨트롤러에 속도 0 지령 인가.</li>
+          <li><strong>비상정지 시퀀스</strong> — Kill Switch → BMS Shutdown 요청 → 5분 알람 → Main Relay 차단.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-bold text-primary mb-2">Result</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead><tr class="border-b"><th class="text-left py-2 text-muted">항목</th><th class="text-left py-2 text-muted">결과</th></tr></thead>
+            <tbody class="text-gray-600">
+              <tr class="border-b"><td class="py-2">제어 모드</td><td class="py-2">RC / LCD / ADT 3가지</td></tr>
+              <tr class="border-b"><td class="py-2">NONE 상태</td><td class="py-2 font-bold text-accent">삭제 → 명시적 전이 조건</td></tr>
+              <tr class="border-b"><td class="py-2">비상정지 시퀀스</td><td class="py-2">Kill → BMS → MR 차단 (5분 대기)</td></tr>
+              <tr><td class="py-2">실차 검증</td><td class="py-2">ISSUE #79 — 모든 전환 시나리오 통과</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <div class="mt-12 flex justify-between">
+      <a href={`${base}cases/test-engineering/`} class="text-sm text-accent hover:underline">← 시험 기획 9종</a>
+      <a href={`${base}cases/patent/`} class="text-sm text-accent hover:underline">특허 2건 →</a>
+    </div>
+  </main>
+</BaseLayout>

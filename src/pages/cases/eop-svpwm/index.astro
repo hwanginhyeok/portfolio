@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="SVPWM 효율 최적화 — EOP 400W">
+  <main class="max-w-3xl mx-auto px-6 py-16">
+    <a href={base} class="text-sm text-accent hover:underline mb-8 inline-block">← 홈으로</a>
+
+    <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">EOP 400W 국책과제</span>
+    <h1 class="text-3xl font-black text-primary mt-2 mb-2">SVPWM 효율 최적화</h1>
+    <p class="text-muted mb-8">고온 환경에서 전력효율 4% 향상, 온도 1~3°C 저감</p>
+
+    <section class="space-y-8">
+      <div>
+        <h2 class="text-lg font-bold text-primary mb-2">Situation</h2>
+        <p class="text-gray-600">EOP 12V 400W 전동기 국책과제 수행 중, 고온(55°/85°/120°) 환경에서 FET 발열 및 전력효율 저하가 문제. 협력사(현대 트랜시스, DIC) 요구조건 만족이 필수.</p>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-bold text-primary mb-2">Task</h2>
+        <p class="text-gray-600">지령전압 크기에 따른 DPWM/SVPWM 방법의 효율 비교 및 임계점에서의 절환 알고리즘 개발. 시험적 검증을 통한 정량적 입증.</p>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-bold text-primary mb-2">Action</h2>
+        <ul class="list-disc list-inside text-gray-600 space-y-1">
+          <li>DPWM-SVPWM 절환 알고리즘 단독 개발 (NXP12ZVMC MCU, C언어)</li>
+          <li>55°/85°/120° × 2개 Assy × 2개 PWM 방식 = <strong>12세트</strong> 비교 시험 설계</li>
+          <li>48분 52초 연속 수집, <strong>2,932개 데이터 포인트</strong> 분석</li>
+          <li>국책과제 완료보고서 핵심 근거 데이터로 활용</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-bold text-primary mb-2">Result</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b">
+                <th class="text-left py-2 text-muted">항목</th>
+                <th class="text-left py-2 text-muted">수치</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-600">
+              <tr class="border-b"><td class="py-2">저온 효율 향상</td><td class="py-2 font-bold">1%</td></tr>
+              <tr class="border-b"><td class="py-2">고온 효율 향상</td><td class="py-2 font-bold text-accent">4%</td></tr>
+              <tr class="border-b"><td class="py-2">온도 저감</td><td class="py-2 font-bold">1~3°C (다속도 조건)</td></tr>
+              <tr class="border-b"><td class="py-2">FET 온도 저감 (PWM 비교)</td><td class="py-2 font-bold">16~17°C</td></tr>
+              <tr class="border-b"><td class="py-2">데이터 포인트</td><td class="py-2">2,932개</td></tr>
+              <tr><td class="py-2">시험 조건</td><td class="py-2">12세트 (3온도 × 2Assy × 2PWM)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-bold text-primary mb-2">기술 스택</h2>
+        <div class="flex flex-wrap gap-2">
+          {['NXP12ZVMC', 'C언어', 'FOC', 'Field Weakening', 'CAN', 'SPI', 'ADC'].map(t => (
+            <span class="text-xs bg-surface px-2 py-1 rounded-full text-muted">{t}</span>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <div class="mt-12 flex gap-4">
+      <a href={`${base}cases/test-engineering/`} class="text-sm text-accent hover:underline">다음: 시험 기획 9종 →</a>
+    </div>
+  </main>
+</BaseLayout>
