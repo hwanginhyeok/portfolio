@@ -24,7 +24,7 @@
   {
     "id": "ss500-state-machine",
     "title": "제어권 상태머신 설계",
-    "subtitle": "SS500 — NONE 상태를 삭제한 이유",
+    "subtitle": "GT-SS500 — NONE 상태를 삭제한 이유",
     "metric": "버그 1건",
     "metricLabel": "사용자 안전 직결 치명적 버그 발견",
     "problem": "RC→LCD 전환 시 모터 속도 미초기화 — 아무 조작 없이 차량이 계속 전진",

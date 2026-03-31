@@ -12,7 +12,7 @@
     { "id": "scu", "name": "SCU", "sub": "현대/DIC", "period": "2022-2023" },
     { "id": "eop", "name": "EOP 400W", "sub": "국책과제", "period": "2023-2024" },
     { "id": "adt", "name": "ADT 모터", "sub": "3세대 개선", "period": "2023" },
-    { "id": "ss500", "name": "SS500", "sub": "자율주행 핵심", "period": "2025-2026" },
+    { "id": "ss500", "name": "GT-SS500", "sub": "자율주행 핵심", "period": "2025-2026" },
     { "id": "wia", "name": "자동차", "sub": "WIA", "period": "2022" },
     { "id": "patent", "name": "특허", "sub": "2건", "period": "2023" }
   ],
