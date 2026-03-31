@@ -3,18 +3,21 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 const base = import.meta.env.BASE_URL;
 ---
 
-<BaseLayout title="직무발명 특허 2건">
+<BaseLayout title="직무발명 특허 + 극저온 기동 실험">
   <main class="max-w-3xl mx-auto px-6 py-16">
     <a href={base} class="text-sm text-accent hover:underline mb-8 inline-block">← 홈으로</a>
 
-    <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">특허</span>
+    <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">특허 · 연구</span>
     <h1 class="text-3xl font-black text-primary mt-2 mb-2">문제를 풀면 특허가 된다</h1>
-    <p class="text-muted mb-8">직무발명 특허 2건 출원</p>
+    <p class="text-muted mb-8">직무발명 특허 1건 출원 + 극저온 기동 실험적 검증</p>
 
     <section class="space-y-10">
-      <!-- 특허 1 -->
-      <div class="border rounded-xl p-6">
-        <h2 class="text-lg font-bold text-primary mb-1">모터 초기 위치 검출 알고리즘</h2>
+      <!-- 특허 1: 본인 발명 -->
+      <div class="border-2 border-accent rounded-xl p-6">
+        <div class="flex items-center gap-2 mb-1">
+          <h2 class="text-lg font-bold text-primary">모터 초기 위치 검출 알고리즘</h2>
+          <span class="text-xs bg-accent text-white px-2 py-0.5 rounded-full">본인 발명</span>
+        </div>
         <p class="text-xs text-muted mb-4">PN231067KR · 2023 · 특허법인 더웨이브 출원</p>
 
         <div class="space-y-3 text-sm text-gray-600">
@@ -24,31 +27,35 @@ const base = import.meta.env.BASE_URL;
         </div>
 
         <div class="mt-4 text-xs text-muted">
-          관련 논문 1건, 관련 특허 10건 선행 조사 완료
+          출처: 발명신고서(231108) · 발명설명서 · 선행 논문 1건 · 선행 특허 10건 조사
         </div>
       </div>
 
-      <!-- 특허 2 -->
+      <!-- 특허 2: 실험 담당 -->
       <div class="border rounded-xl p-6">
-        <h2 class="text-lg font-bold text-primary mb-1">극저온 기동 알고리즘</h2>
+        <div class="flex items-center gap-2 mb-1">
+          <h2 class="text-lg font-bold text-primary">극저온 기동 알고리즘</h2>
+          <span class="text-xs bg-gray-200 text-gray-600 px-2 py-0.5 rounded-full">실험적 검증 담당</span>
+        </div>
         <p class="text-xs text-muted mb-4">2024 · 출원</p>
 
         <div class="space-y-3 text-sm text-gray-600">
           <p><strong class="text-primary">문제:</strong> -40°C 극저온 환경에서 모터 기동 신뢰성 확보. 기존 방식으로는 open-loop → closed-loop 전환까지 300초 소요.</p>
           <p><strong class="text-primary">접근:</strong> 역기전력 관측기(Back-EMF Observer)의 특성을 활용한 능동제어기 개발. Open-loop에서 closed-loop 전환 속도 구간까지의 도달 시간을 단축.</p>
-          <p><strong class="text-primary">결과:</strong> 전환 시간 <strong class="text-accent">300초 → 100초 이내</strong>로 단축. 극저온 환경에서의 기동 신뢰성 확보.</p>
+          <p><strong class="text-primary">본인 역할:</strong> 알고리즘의 <strong>실험적 검증</strong> 담당 — 극저온(-40°C) 환경에서 초기제어 요구조건 만족 여부를 시험으로 입증.</p>
+          <p><strong class="text-primary">결과:</strong> 전환 시간 <strong class="text-accent">300초 → 100초 이내</strong>로 단축 확인.</p>
         </div>
 
         <div class="mt-4 text-xs text-muted">
-          관련 논문 3건 (극저온 유도전동기, 전자기-열 해석 등) 조사 완료
+          출처: EOP 400W 완료보고서 · 선행 논문 3건 (극저온 유도전동기, 전자기-열 해석 등)
         </div>
       </div>
     </section>
 
     <!-- 연결 -->
     <div class="bg-surface rounded-lg p-6 mt-10">
-      <h3 class="font-bold text-primary mb-2">두 특허의 공통점</h3>
-      <p class="text-sm text-gray-600">둘 다 "현장에서 만난 실제 문제"를 풀다가 나온 발명입니다. 초기위치 검출은 SCU 프로젝트에서 센서리스 구동의 한계를 경험하며, 극저온 기동은 EOP 국책과제의 요구조건을 만족시키며 탄생했습니다.</p>
+      <h3 class="font-bold text-primary mb-2">현장 문제에서 연구까지</h3>
+      <p class="text-sm text-gray-600">초기위치 검출은 SCU 프로젝트에서 센서리스 구동의 한계를 경험하며 발명. 극저온 기동은 EOP 국책과제의 현대 트랜시스 요구조건(-40°C 기동)을 만족시키기 위한 연구에서 탄생.</p>
     </div>
 
     <div class="mt-12 flex justify-between">
