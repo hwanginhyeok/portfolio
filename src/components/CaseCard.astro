@@ -31,7 +31,7 @@ const themeNames: Record<string, string> = {
 ---
 
 <a href={`${import.meta.env.BASE_URL}cases/${id}/`} class="block">
-<article class="group bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-accent transition-all duration-200 cursor-pointer">
+<article class="group bg-white border border-gray-200 rounded-lg p-5 md:p-6 hover:shadow-md hover:border-accent/50 transition-all duration-150 cursor-pointer">
   <!-- 메트릭 배지 -->
   <div class="flex items-start justify-between mb-3">
     <div>
@@ -44,20 +44,10 @@ const themeNames: Record<string, string> = {
   <h3 class="text-lg font-bold text-primary mb-1">{title}</h3>
   <p class="text-sm text-muted mb-4">{subtitle}</p>
 
-  <!-- 문제 → 역할 → 결과 (Design Review: 카드만으로 1분 결정 가능) -->
-  <div class="space-y-2 text-sm">
-    <div class="flex gap-2">
-      <span class="text-red-500 font-medium shrink-0">문제</span>
-      <span class="text-gray-600">{problem}</span>
-    </div>
-    <div class="flex gap-2">
-      <span class="text-blue-500 font-medium shrink-0">역할</span>
-      <span class="text-gray-600">{role}</span>
-    </div>
-    <div class="flex gap-2">
-      <span class="text-green-500 font-medium shrink-0">결과</span>
-      <span class="text-gray-600">{result}</span>
-    </div>
+  <!-- 문제 → 결과 (모바일 가독성 개선: 역할은 상세페이지에서) -->
+  <div class="space-y-1.5 text-sm">
+    <p class="text-gray-500">{problem}</p>
+    <p class="text-gray-700 font-medium">{result}</p>
   </div>
 
   <!-- 테마 태그 -->
