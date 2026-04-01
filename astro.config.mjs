@@ -5,7 +5,7 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   site: 'https://hwanginhyeok.github.io',
-  base: '/portfolio',
+  base: '/portfolio/',
   integrations: [mdx(), sitemap(), tailwind()],
   output: 'static',
 });
