@@ -1,7 +1,36 @@
 # 포트폴리오 프로젝트
 
 > Physical AI 시대의 하드웨어 제품 개발자로서의 역량을 어필하는 취업용 포트폴리오.
-> 기반 프로젝트: PLUVA FRIEND SS500 (농업용 전동 자율주행 Speed Sprayer)
+> 기반 프로젝트: PLUVA FRIEND GT-SS500 (농업용 전동 자율주행 Speed Sprayer)
+
+---
+
+## Tech Stack
+
+- **Astro 6** + MDX + Tailwind CSS 3 — 정적 사이트
+- 배포 대상: GitHub Pages
+- 다이어그램: Mermaid (.mmd)
+- 데이터: JSON (`src/data/`)
+
+## 파일 구조
+
+```
+포트폴리오/
+├── CLAUDE.md              ← 이 파일
+├── TASK.md                ← 작업 관리
+├── WEB_STRUCTURE.md       ← 페이지 구조 설계
+├── cases/                 ← 케이스 원고 (Markdown)
+├── diagrams/              ← Mermaid 다이어그램 (.mmd)
+├── src/
+│   ├── components/        ← Astro 컴포넌트
+│   ├── content/cases/     ← MDX 케이스 콘텐츠
+│   ├── data/              ← JSON 데이터 (cases, theme-map)
+│   ├── layouts/           ← BaseLayout
+│   ├── pages/             ← 라우트 (index, cases/, 404)
+│   └── styles/            ← global.css
+├── public/                ← 정적 파일
+└── docs/포트폴리오/       ← 야간 브리핑 등
+```
 
 ---
 
@@ -58,7 +87,7 @@
 
 ## 참조 프로젝트
 
-- **HIH_2** (`~/projects/HIH_2/`): SS500 프로젝트 원본 — **읽기 전용**
+- **HIH_2** (`~/HIH_2/`): GT-SS500 프로젝트 원본 — **읽기 전용**
 - 사이드 프로젝트: 자율주행(ROS2), politics-stat(Next.js), 주식부자(Python)
 
 ## 언어

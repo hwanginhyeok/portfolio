@@ -1,6 +1,19 @@
+# 빌드 산출물
 node_modules/
 dist/
 .astro/
+
+# 시스템
 .DS_Store
+
+# 로그
 *.log
+logs/
+
+# 도구
 .gstack/
+
+# 임시 파일
+tonight_prompt.txt
+tonight_prompt_done.txt
+preview.html
