@@ -1,5 +1,5 @@
-/* Google Fonts - Noto Sans KR */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+/* Google Fonts — Noto Sans KR (본문) + Outfit (영문 제목) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Outfit:wght@700;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -12,7 +12,10 @@
   body {
     @apply font-sans text-primary bg-white antialiased;
   }
-  h1, h2, h3, h4 {
+  h1, h2 {
+    @apply font-display font-bold tracking-tight;
+  }
+  h3, h4 {
     @apply font-bold tracking-tight;
   }
 }

@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['"Noto Sans KR"', '"Apple SD Gothic Neo"', 'sans-serif'],
+        display: ['"Outfit"', '"Noto Sans KR"', 'sans-serif'],
       },
       colors: {
         primary: '#1a1a2e',
