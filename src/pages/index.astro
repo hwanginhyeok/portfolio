@@ -4,6 +4,7 @@ import Hero from '../components/Hero.astro';
 import CaseCard from '../components/CaseCard.astro';
 import ThemeHeatmap from '../components/ThemeHeatmap.astro';
 import Timeline from '../components/Timeline.astro';
+import SystemArchitecture from '../components/SystemArchitecture.astro';
 import cases from '../data/cases.json';
 ---
 
@@ -13,6 +14,9 @@ import cases from '../data/cases.json';
 
   <!-- Layer 2: 2분 읽기 -->
   <main class="max-w-5xl mx-auto px-6">
+
+    <!-- 시스템 아키텍처 -->
+    <SystemArchitecture />
 
     <!-- 케이스 카드: EOP + GT-SS500 + 특허 -->
     <section class="py-12">

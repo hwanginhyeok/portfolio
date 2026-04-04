@@ -1,0 +1,185 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="EOP 400W 국책과제 — 모터제어 개발 4가지 성과">
+  <main class="max-w-3xl mx-auto px-6 py-16">
+    <a href={base} class="text-sm text-accent hover:underline mb-8 inline-block">← 홈으로</a>
+
+    <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">EOP 400W 국책과제</span>
+    <h1 class="text-3xl font-black text-primary mt-2 mb-2">EOP 12V 400W — 모터제어 개발</h1>
+    <p class="text-muted mb-8">SVPWM 효율 최적화 · CAN Sleep/Wakeup · 극저온 기동 · 초기위치 검출 특허</p>
+
+    <!-- 1. SVPWM -->
+    <section class="space-y-6 mb-16">
+      <h2 class="text-xl font-black text-primary border-b pb-2">1. SVPWM 효율 최적화</h2>
+
+      <div>
+        <h3 class="text-lg font-bold text-primary mb-2">문제</h3>
+        <p class="text-gray-600">고온(55°/85°/120°) 환경에서 FET 발열 및 전력효율 저하. 협력사(현대 트랜시스, DIC) 요구조건 충족 필요.</p>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-bold text-primary mb-2">결과</h3>
+        <div class="grid grid-cols-3 gap-3 text-center">
+          <div class="bg-surface rounded-lg p-3">
+            <div class="text-2xl font-black text-accent">4%</div>
+            <div class="text-xs text-muted">고온 효율 향상</div>
+          </div>
+          <div class="bg-surface rounded-lg p-3">
+            <div class="text-2xl font-black text-accent">16~17°C</div>
+            <div class="text-xs text-muted">FET 온도 저감</div>
+          </div>
+          <div class="bg-surface rounded-lg p-3">
+            <div class="text-2xl font-black text-accent">2,932</div>
+            <div class="text-xs text-muted">데이터 포인트</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-bold text-primary mb-2">해결과정</h3>
+        <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm">
+          <li>지령전압 크기에 따른 DPWM↔SVPWM 절환 알고리즘 단독 개발 (NXP MC9S12ZVMC, C)</li>
+          <li>55°/85°/120° × 2 Assy × 2 PWM = <strong>12세트</strong> 비교 시험 설계 및 실행</li>
+          <li>48분 52초 연속 수집 → 정량적 입증 → 국책과제 완료보고서 핵심 근거</li>
+        </ul>
+        <div class="grid grid-cols-2 gap-3 mt-4">
+          <figure>
+            <img src={`${base}images/cases/eop-400w/pwm-chart-55c.webp`} alt="55°C SVPWM 시험" class="rounded-lg border w-full" loading="lazy" />
+            <figcaption class="text-xs text-muted mt-1">55°C — RPM·토크·전류·온도 모니터링</figcaption>
+          </figure>
+          <figure>
+            <img src={`${base}images/cases/eop-400w/pwm-chart-120c.webp`} alt="120°C SVPWM 시험" class="rounded-lg border w-full" loading="lazy" />
+            <figcaption class="text-xs text-muted mt-1">120°C — FET 온도 16~17°C 저감 확인</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. CAN Sleep -->
+    <section class="space-y-6 mb-16">
+      <h2 class="text-xl font-black text-primary border-b pb-2">2. CAN Sleep/Wakeup 구현</h2>
+
+      <div>
+        <h3 class="text-lg font-bold text-primary mb-2">문제</h3>
+        <p class="text-gray-600">차량 정지 시 배터리 드레인 방지. 고객사(현대 트랜시스, DIC)의 암전류(Dark Current) 요구조건 충족 필요.</p>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-bold text-primary mb-2">결과</h3>
+        <div class="bg-green-50 border border-green-200 rounded-lg p-4 text-sm">
+          <p class="text-gray-700"><strong>고객사 암전류 요구조건 충족.</strong></p>
+          <p class="text-gray-600 mt-1">CAN 프로토콜 Physical~Application Layer 깊은 이해 확보 → GT-SS500 CAN 5노드 설계에 직접 연결.</p>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-bold text-primary mb-2">해결과정</h3>
+        <ul class="list-disc list-inside text-gray-600 space-y-2 text-sm">
+          <li><strong>IC + MCU 레지스터 정밀 분석</strong> — MC9S12ZVMC MSCAN 모듈 레지스터 맵, Sleep/Wakeup 시퀀스, 인터럽트 플래그를 데이터시트 기반 분석. CAN Transceiver IC 모드 전환 타이밍 검토.</li>
+          <li><strong>ISO 11898 규격 Wakeup Pattern 구현</strong> — ISO 정의 dominant pulse 패턴 기반, 호환성 확보.</li>
+          <li>Sleep 진입(무통신 타임아웃) → Wakeup 트리거(CAN 수신) → 정상 복귀 전체 시퀀스 FW 구현.</li>
+        </ul>
+        <div class="grid grid-cols-2 gap-3 mt-4">
+          <figure>
+            <img src={`${base}images/cases/eop-400w/can-sleep-test.webp`} alt="CAN Sleep IC 동작 시험" class="rounded-lg border w-full" loading="lazy" />
+            <figcaption class="text-xs text-muted mt-1">Sleep IC 동작 시험 (Tektronix)</figcaption>
+          </figure>
+          <figure>
+            <img src={`${base}images/cases/eop-400w/can-wakeup-pattern.webp`} alt="ISO 11898 Wakeup Pattern" class="rounded-lg border w-full" loading="lazy" />
+            <figcaption class="text-xs text-muted mt-1">ISO 11898 Wakeup Pattern — CAN_H/CAN_L</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 극저온 기동 -->
+    <section class="space-y-6 mb-16">
+      <h2 class="text-xl font-black text-primary border-b pb-2">3. 극저온 기동 검증 (-40°C)</h2>
+
+      <div>
+        <h3 class="text-lg font-bold text-primary mb-2">문제</h3>
+        <p class="text-gray-600">-40°C 극저온에서 모터 기동 신뢰성 확보. 기존 open-loop → closed-loop 전환까지 300초 소요.</p>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-bold text-primary mb-2">결과</h3>
+        <div class="bg-green-50 border border-green-200 rounded-lg p-4 text-sm">
+          <p class="text-gray-700">전환 시간 <strong class="text-accent text-lg">300초 → 100초 이내</strong> 단축 확인.</p>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-bold text-primary mb-2">해결과정</h3>
+        <p class="text-sm text-gray-600 mb-3">EEMF 추정기로 로터 위치/속도를 관측, feedforward 입력 포함 위치·속도 추정기로 전환 시간 단축. 본인 역할: 알고리즘의 <strong>실험적 검증</strong> 담당.</p>
+        <div class="grid grid-cols-2 gap-3">
+          <figure>
+            <img src={`${base}images/cases/eop-400w/eemf-estimator.webp`} alt="EEMF estimator" class="rounded-lg border bg-white p-3 w-full" loading="lazy" />
+            <figcaption class="text-xs text-muted mt-1">Fig.1 — EEMF estimator for IPMSM</figcaption>
+          </figure>
+          <figure>
+            <img src={`${base}images/cases/eop-400w/position-speed-estimator.webp`} alt="Position/Speed estimator" class="rounded-lg border bg-white p-3 w-full" loading="lazy" />
+            <figcaption class="text-xs text-muted mt-1">Fig.2 — Position/Speed estimator (feedforward)</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 초기위치 검출 특허 -->
+    <section class="space-y-6 mb-16">
+      <h2 class="text-xl font-black text-primary border-b pb-2">4. 모터 초기위치 검출 — 직무발명 특허</h2>
+
+      <div>
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-xs bg-accent text-white px-2 py-0.5 rounded-full">본인 발명</span>
+          <span class="text-xs text-muted">PN231067KR · 2023</span>
+        </div>
+        <h3 class="text-lg font-bold text-primary mb-2">문제</h3>
+        <p class="text-gray-600">센서리스 BLDC 구동에서 로터 초기 위치를 모르면 기동 불안정. 기존 방식은 센서 의존 또는 정밀도 부족.</p>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-bold text-primary mb-2">결과</h3>
+        <div class="bg-green-50 border border-green-200 rounded-lg p-4 text-sm">
+          <p class="text-gray-700">요구조건 <strong>1.0sec 이내</strong>에서 <strong class="text-accent text-lg">0.56sec 달성</strong> — 44% 초과 달성</p>
+          <p class="text-gray-500 mt-1 text-xs">선행 논문 1건 · 선행 특허 10건 조사 · 발명신고서(231108) · 특허법인 더웨이브 출원</p>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-bold text-primary mb-2">해결과정</h3>
+        <p class="text-sm text-gray-600 mb-3">IPMSM의 위치별 리액턴스 차이를 활용. 고주파 신호 주입으로 d/q축 임피던스 비대칭성을 검출하여 초기 위치 추정.</p>
+        <figure class="mb-3">
+          <img src={`${base}images/cases/patent/dq-inductance.webp`} alt="d-q축 인덕턴스" class="rounded-lg border bg-gray-900 p-2 w-full" loading="lazy" />
+          <figcaption class="text-xs text-muted mt-1">d/q축 인덕턴스 비대칭 — 섹터별 위치 검출 원리</figcaption>
+        </figure>
+        <div class="grid grid-cols-2 gap-3">
+          <figure>
+            <img src={`${base}images/cases/patent/initial-position-scope.webp`} alt="초기위치 검출" class="rounded-lg border w-full" loading="lazy" />
+            <figcaption class="text-xs text-muted mt-1">초기위치 -8.54°/-123.78° → 558ms 도달</figcaption>
+          </figure>
+          <figure>
+            <img src={`${base}images/cases/eop-400w/startup-waveform.webp`} alt="기동 성능" class="rounded-lg border w-full" loading="lazy" />
+            <figcaption class="text-xs text-muted mt-1">Speed CMD→Actual 0.645s, Overshoot Control</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 기술 스택 -->
+    <section>
+      <h2 class="text-lg font-bold text-primary mb-2">기술 스택</h2>
+      <div class="flex flex-wrap gap-2">
+        {['NXP MC9S12ZVMC', 'C언어', 'FOC', 'SVPWM/DPWM', 'Field Weakening', 'CAN Protocol', 'ISO 11898', 'SPI', 'ADC'].map(t => (
+          <span class="text-xs bg-surface px-2 py-1 rounded-full text-muted">{t}</span>
+        ))}
+      </div>
+    </section>
+
+    <div class="mt-12 flex gap-4">
+      <a href={`${base}cases/test-engineering/`} class="text-sm text-accent hover:underline">다음: 시험 기획 8종 →</a>
+    </div>
+  </main>
+</BaseLayout>

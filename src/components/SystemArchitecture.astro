@@ -1,0 +1,131 @@
+---
+// GT-SS500 시스템 아키텍처 — HTML/CSS 다이어그램
+// Mermaid 대체: 사이트 디자인과 통일, 반응형 지원
+---
+
+<section class="py-12">
+  <h2 class="text-2xl font-bold text-primary mb-2">GT-SS500 시스템 아키텍처</h2>
+  <p class="text-sm text-muted mb-6">CAN 버스 5노드, 48V 전원계, 3모드 제어 — 직접 설계한 전체 구조</p>
+
+  <div class="border rounded-xl p-4 md:p-6 bg-white overflow-x-auto">
+    <!-- VCU 중심부 -->
+    <div class="flex flex-col items-center mb-4">
+      <div class="bg-primary text-white rounded-lg px-5 py-3 text-center shadow-lg border-2 border-accent">
+        <div class="font-display font-bold text-sm">VCU</div>
+        <div class="text-xs text-gray-300 mt-0.5">STM32F479 · 4층 PCB</div>
+        <div class="text-[10px] text-gray-400">상태머신 RC/LCD/ADT</div>
+      </div>
+    </div>
+
+    <!-- CAN 버스 -->
+    <div class="relative flex items-center justify-center my-2 mx-4">
+      <div class="absolute inset-x-0 h-1 bg-accent rounded-full"></div>
+      <span class="relative bg-accent text-white text-[10px] font-bold px-3 py-0.5 rounded-full z-10">CAN Bus 500kbps</span>
+    </div>
+
+    <!-- CAN 연결 노드들 -->
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mt-4">
+      <!-- 구동 MC -->
+      <div class="can-node border-green-500">
+        <div class="node-dot bg-green-500"></div>
+        <div class="node-title text-green-700">구동 MC ×2</div>
+        <div class="node-detail">DMKE 1226BL</div>
+        <div class="node-sub">좌/우 독립 속도제어</div>
+        <div class="node-child">→ DB110 모터 ×2</div>
+      </div>
+
+      <!-- BMS -->
+      <div class="can-node border-red-500">
+        <div class="node-dot bg-red-500"></div>
+        <div class="node-title text-red-700">BMS</div>
+        <div class="node-detail">48V 460Ah LiFePO4</div>
+        <div class="node-sub">SOC · 셀밸런싱 · 보호</div>
+        <div class="node-child">22.08kWh · 15S2P</div>
+      </div>
+
+      <!-- 팬 ESC -->
+      <div class="can-node border-amber-500">
+        <div class="node-dot bg-amber-500"></div>
+        <div class="node-title text-amber-700">팬 ESC</div>
+        <div class="node-detail">Hobbywing X6 Plus</div>
+        <div class="node-sub">RPM 제어 · 3단 속도</div>
+        <div class="node-child">→ 프로펠러 20" 4blade</div>
+      </div>
+
+      <!-- 펌프 DRV -->
+      <div class="can-node border-purple-500">
+        <div class="node-dot bg-purple-500"></div>
+        <div class="node-title text-purple-700">펌프 DRV</div>
+        <div class="node-detail">48V DC</div>
+        <div class="node-sub">압력 제어 · 유량 모니터</div>
+        <div class="node-child">→ 솔레노이드 ×5 · 노즐 ×12</div>
+      </div>
+
+      <!-- ADT PC -->
+      <div class="can-node border-orange-500 col-span-2 md:col-span-1">
+        <div class="node-dot bg-orange-500"></div>
+        <div class="node-title text-orange-700">ADT PC</div>
+        <div class="node-detail">자율주행</div>
+        <div class="node-sub">경로추종 · 모드전환</div>
+        <div class="node-child">GNSS RTK · 카메라 · IMU</div>
+      </div>
+    </div>
+
+    <!-- 하단: 비-CAN 연결 -->
+    <div class="grid grid-cols-3 gap-3 mt-4 pt-4 border-t border-dashed border-gray-200">
+      <div class="peripheral-node">
+        <div class="text-xs font-bold text-gray-600">LCD 디스플레이</div>
+        <div class="text-[10px] text-muted">UART → VCU</div>
+      </div>
+      <div class="peripheral-node">
+        <div class="text-xs font-bold text-gray-600">RF 리모콘</div>
+        <div class="text-[10px] text-muted">RF → VCU</div>
+      </div>
+      <div class="peripheral-node">
+        <div class="text-xs font-bold text-gray-600">센서류</div>
+        <div class="text-[10px] text-muted">수위 · 유량 · 온도 → ADC</div>
+      </div>
+    </div>
+
+    <!-- 전원 계통 -->
+    <div class="mt-4 pt-4 border-t border-dashed border-gray-200">
+      <div class="text-[10px] font-bold text-muted uppercase tracking-wider mb-2">전원 계통</div>
+      <div class="flex flex-wrap items-center gap-2 text-[11px]">
+        <span class="bg-red-50 text-red-700 px-2 py-0.5 rounded border border-red-200">BAT 48V</span>
+        <span class="text-muted">→</span>
+        <span class="bg-red-50 text-red-700 px-2 py-0.5 rounded border border-red-200">Main Relay</span>
+        <span class="text-muted">→</span>
+        <span class="bg-blue-50 text-blue-700 px-2 py-0.5 rounded border border-blue-200">VCU · MC · 펌프 · 팬</span>
+        <span class="text-muted ml-4">|</span>
+        <span class="bg-gray-50 text-gray-600 px-2 py-0.5 rounded border border-gray-200">DC-DC 48→12V</span>
+        <span class="text-muted">→</span>
+        <span class="bg-gray-50 text-gray-600 px-2 py-0.5 rounded border border-gray-200">LCD · 센서 · 충전기</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .can-node {
+    border-left-width: 3px;
+    @apply rounded-lg bg-gray-50 p-3 text-center;
+  }
+  .node-dot {
+    @apply w-2 h-2 rounded-full mx-auto mb-1;
+  }
+  .node-title {
+    @apply text-xs font-bold;
+  }
+  .node-detail {
+    @apply text-[10px] text-gray-500 mt-0.5;
+  }
+  .node-sub {
+    @apply text-[10px] text-muted mt-0.5;
+  }
+  .node-child {
+    @apply text-[10px] text-gray-400 mt-1 pt-1 border-t border-gray-200;
+  }
+  .peripheral-node {
+    @apply bg-gray-50 rounded-lg p-2 text-center;
+  }
+</style>

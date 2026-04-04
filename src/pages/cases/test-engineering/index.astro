@@ -82,9 +82,52 @@ const tests = [
       가설 수립 → 측정 방법 설계 → 장비/벤치 구축 → 데이터 수집 → 정량적 결론 → 의사결정
     </div>
 
-    {tests.map((phase) => (
+    {tests.map((phase, phaseIdx) => (
       <section class="mb-12">
         <h2 class="text-lg font-bold text-primary mb-6 border-b pb-2">{phase.phase}</h2>
+
+        {/* Phase 1: 다이나모미터 오실로스코프 데이터 */}
+        {phaseIdx === 0 && (
+          <div class="grid grid-cols-2 gap-3 mb-6">
+            <figure>
+              <img src={`${base}images/cases/test-engineering/PID_16.png`} alt="다이나모 PID 제어 파형" class="rounded-lg border w-full" loading="lazy" />
+              <figcaption class="text-xs text-muted mt-1">PID 토크제어 파형 (16-step)</figcaption>
+            </figure>
+            <figure>
+              <img src={`${base}images/cases/test-engineering/blacktan-noload-spd5.webp`} alt="BLACKTAN 무부하 시험" class="rounded-lg border w-full" loading="lazy" />
+              <figcaption class="text-xs text-muted mt-1">구동모터 무부하 Spd5 (Tektronix)</figcaption>
+            </figure>
+          </div>
+        )}
+
+        {/* Phase 2: PWM 절환 온도 비교 차트 */}
+        {phaseIdx === 1 && (
+          <div class="grid grid-cols-2 gap-3 mb-6">
+            <figure>
+              <img src={`${base}images/cases/test-engineering/pwm-chart-55c.webp`} alt="PWM 55°C 시험 데이터" class="rounded-lg border w-full" loading="lazy" />
+              <figcaption class="text-xs text-muted mt-1">55°C 조건 — RPM·토크·온도 실시간 모니터링</figcaption>
+            </figure>
+            <figure>
+              <img src={`${base}images/cases/test-engineering/pwm-chart-120c.webp`} alt="PWM 120°C 시험 데이터" class="rounded-lg border w-full" loading="lazy" />
+              <figcaption class="text-xs text-muted mt-1">120°C 조건 — FET 온도 16~17°C 저감 확인</figcaption>
+            </figure>
+          </div>
+        )}
+
+        {/* Phase 3: 펌프 시험 벤치 + 분사 시험 */}
+        {phaseIdx === 2 && (
+          <div class="grid grid-cols-2 gap-3 mb-6">
+            <figure>
+              <img src={`${base}images/cases/test-engineering/pump-bench-1.webp`} alt="펌프 성능평가 벤치" class="rounded-lg w-full h-40 object-cover" loading="lazy" />
+              <figcaption class="text-xs text-muted mt-1">펌프 성능평가 테스트베드</figcaption>
+            </figure>
+            <figure>
+              <img src={`${base}images/cases/test-engineering/spray-test-3.webp`} alt="노즐 분사 비교 시험" class="rounded-lg w-full h-40 object-cover" loading="lazy" />
+              <figcaption class="text-xs text-muted mt-1">비닐하우스 분사 패턴 검증</figcaption>
+            </figure>
+          </div>
+        )}
+
         <div class="space-y-8">
           {phase.items.map((item) => (
             <div class="border-l-2 border-accent pl-4">
@@ -115,7 +158,7 @@ const tests = [
     </section>
 
     <div class="mt-12 flex justify-between">
-      <a href={`${base}cases/eop-svpwm/`} class="text-sm text-accent hover:underline">← SVPWM 효율</a>
+      <a href={`${base}cases/eop-400w/`} class="text-sm text-accent hover:underline">← EOP 400W</a>
       <a href={`${base}cases/ss500-state-machine/`} class="text-sm text-accent hover:underline">상태머신 →</a>
     </div>
   </main>
