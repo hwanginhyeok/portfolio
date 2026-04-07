@@ -4,9 +4,9 @@
 
 ## 요약
 
-- Current: 3개
+- Current: 2개 (blocked: 2)
 - Prepared: 11개 (P1: 1, P2: 8, P3: 3)
-- Finished: 5개
+- Finished: 6개
 
 > **넘버링**: `{분야코드}-{순번}` — 1:기획 2:케이스 3:콘텐츠 4:제작 5:부가자료 6:미디어
 > **아카이브**: [TASK_ARCHIVE/](TASK_ARCHIVE/)
