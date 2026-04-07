@@ -6,6 +6,7 @@ import ThemeHeatmap from '../components/ThemeHeatmap.astro';
 import Timeline from '../components/Timeline.astro';
 import SystemArchitecture from '../components/SystemArchitecture.astro';
 import cases from '../data/cases.json';
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="황인혁 — 물리 세계의 문제를 데이터로 해결하는 엔지니어">
@@ -41,6 +42,13 @@ import cases from '../data/cases.json';
       <h2 class="text-2xl font-bold text-primary mb-4">About</h2>
       <div class="grid md:grid-cols-2 gap-8">
         <div>
+          <div class="flex items-center gap-4 mb-4">
+            <img src={`${base}images/about/profile.webp`} alt="황인혁" class="w-16 h-16 rounded-full object-cover border-2 border-gray-200" loading="lazy" />
+            <div>
+              <p class="font-bold text-primary">황인혁 (Inhyeok Hwang)</p>
+              <p class="text-sm text-muted">전력제어개발팀 · 선임연구원</p>
+            </div>
+          </div>
           <h3 class="font-bold text-lg mb-2">현재</h3>
           <ul class="space-y-2 text-sm text-gray-600">
             <li><strong>전력제어개발팀 · 선임연구원</strong> — 모터제어, 전력설계, 시험검증</li>
