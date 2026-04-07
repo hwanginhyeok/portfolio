@@ -1,0 +1,181 @@
+---
+// GT-SS500 제어권 상태머신 — HTML/CSS 다이어그램
+// Mermaid dark SVG 대체: 사이트 디자인 통일, 반응형 지원
+---
+
+<div class="border rounded-xl p-4 md:p-6 bg-white overflow-x-auto">
+  <!-- Init -->
+  <div class="flex flex-col items-center mb-3">
+    <div class="state-init">
+      <div class="font-bold text-sm">Init</div>
+      <div class="text-[10px] text-gray-500">전원 ON</div>
+    </div>
+    <div class="arrow-down"></div>
+    <div class="flex gap-4 text-[10px] text-muted">
+      <span>리모콘 페어링 →</span>
+      <span>← LCD 조작 감지</span>
+    </div>
+  </div>
+
+  <!-- 3모드: RC / LCD / ADT -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-3">
+    <!-- RC 모드 -->
+    <div class="mode-box border-green-400">
+      <div class="mode-header bg-green-50 text-green-800">RC 모드</div>
+      <div class="mode-body">
+        <div class="state-node bg-green-50 border-green-300">RC_Ready</div>
+        <div class="arrow-down-sm"></div>
+        <div class="text-[10px] text-muted">속도 지령</div>
+        <div class="arrow-down-sm"></div>
+        <div class="state-node bg-green-50 border-green-300">RC_Drive</div>
+        <div class="arrow-down-sm"></div>
+        <div class="text-[10px] text-muted">속도 고정 ON/OFF</div>
+        <div class="arrow-down-sm"></div>
+        <div class="state-node bg-green-50 border-green-300">RC_SpeedLock</div>
+      </div>
+    </div>
+
+    <!-- LCD 모드 -->
+    <div class="mode-box border-blue-400">
+      <div class="mode-header bg-blue-50 text-blue-800">LCD 모드</div>
+      <div class="mode-body">
+        <div class="state-node bg-blue-50 border-blue-300">LCD_Ready</div>
+        <div class="arrow-down-sm"></div>
+        <div class="text-[10px] text-muted">파라미터 조정</div>
+        <div class="arrow-down-sm"></div>
+        <div class="state-node bg-blue-50 border-blue-300">LCD_Setting</div>
+        <div class="safety-note">
+          <span class="font-bold">안전 설계:</span> LCD 모드 진입 시 속도 0 지속 인가
+        </div>
+      </div>
+    </div>
+
+    <!-- ADT 모드 -->
+    <div class="mode-box border-orange-400">
+      <div class="mode-header bg-orange-50 text-orange-800">ADT 자율주행</div>
+      <div class="mode-body">
+        <div class="state-node bg-orange-50 border-orange-300">ADT_Ready</div>
+        <div class="arrow-down-sm"></div>
+        <div class="text-[10px] text-muted">경로 수신</div>
+        <div class="arrow-down-sm"></div>
+        <div class="state-node bg-orange-50 border-orange-300">ADT_Navigate</div>
+        <div class="flex gap-1 items-center justify-center my-1">
+          <div class="arrow-right-sm"></div>
+          <div class="state-node-sm bg-orange-50 border-orange-300">Spray</div>
+          <div class="arrow-left-sm"></div>
+        </div>
+        <div class="text-[10px] text-muted">약제 부족 / 저전압</div>
+        <div class="arrow-down-sm"></div>
+        <div class="state-node bg-orange-50 border-orange-300">ADT_Return</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 모드 전환 규칙 -->
+  <div class="transition-bar">
+    <span class="transition-label">모든 모드 전환 시</span>
+    <span class="transition-rule">Init 루틴 실행 — 전 모터 속도 0 인가</span>
+  </div>
+
+  <!-- 하단: Emergency / BumperStop -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
+    <!-- 비상정지 시퀀스 -->
+    <div class="mode-box border-red-400">
+      <div class="mode-header bg-red-50 text-red-800">비상정지 (Emergency)</div>
+      <div class="mode-body">
+        <div class="flex items-center gap-2 flex-wrap justify-center">
+          <div class="state-node-sm bg-red-50 border-red-300">E_Stop</div>
+          <div class="arrow-right-sm"></div>
+          <div class="state-node-sm bg-red-50 border-red-300">5분 알람</div>
+          <div class="arrow-right-sm"></div>
+          <div class="state-node-sm bg-red-50 border-red-300">대기</div>
+          <div class="arrow-right-sm"></div>
+          <div class="state-node-sm bg-red-50 border-red-300">MR 차단</div>
+        </div>
+        <div class="text-[10px] text-muted mt-2 text-center">비상 해제 + 재시동 → Init 복귀</div>
+      </div>
+    </div>
+
+    <!-- 범퍼 정지 -->
+    <div class="mode-box border-amber-400">
+      <div class="mode-header bg-amber-50 text-amber-800">범퍼 정지 (BumperStop)</div>
+      <div class="mode-body">
+        <div class="flex items-center gap-2 flex-wrap justify-center">
+          <div class="state-node-sm bg-amber-50 border-amber-300">감지</div>
+          <div class="arrow-right-sm"></div>
+          <div class="state-node-sm bg-amber-50 border-amber-300">즉시 정지</div>
+        </div>
+        <div class="text-[10px] text-muted mt-2 text-center">
+          0.05초, 308A · 정지거리 0.082m @3km/h<br/>
+          전진/조향 불가 · <strong>후진만 가능</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .state-init {
+    @apply bg-gray-100 border-2 border-gray-400 rounded-lg px-4 py-2 text-center;
+  }
+  .mode-box {
+    @apply border rounded-lg overflow-hidden;
+  }
+  .mode-header {
+    @apply text-xs font-bold px-3 py-1.5 text-center;
+  }
+  .mode-body {
+    @apply p-3 flex flex-col items-center;
+  }
+  .state-node {
+    @apply border rounded px-3 py-1 text-xs font-mono text-center;
+  }
+  .state-node-sm {
+    @apply border rounded px-2 py-0.5 text-[10px] font-mono text-center whitespace-nowrap;
+  }
+  .safety-note {
+    @apply mt-2 bg-blue-50 border border-blue-200 rounded p-2 text-[10px] text-blue-700 text-center;
+  }
+  .transition-bar {
+    @apply bg-gray-50 border border-dashed border-gray-300 rounded-lg px-4 py-2 flex flex-col md:flex-row items-center justify-center gap-1 text-xs;
+  }
+  .transition-label {
+    @apply font-bold text-gray-600;
+  }
+  .transition-rule {
+    @apply text-accent font-bold;
+  }
+  .arrow-down {
+    @apply w-0.5 h-4 bg-gray-400 mx-auto my-1 relative;
+  }
+  .arrow-down::after {
+    content: '';
+    @apply absolute -bottom-1 left-1/2 -translate-x-1/2;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid #9ca3af;
+  }
+  .arrow-down-sm {
+    @apply w-0.5 h-2 bg-gray-300 mx-auto;
+  }
+  .arrow-right-sm {
+    @apply w-3 h-0.5 bg-gray-400 relative;
+  }
+  .arrow-right-sm::after {
+    content: '';
+    @apply absolute -right-1 top-1/2 -translate-y-1/2;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-left: 4px solid #9ca3af;
+  }
+  .arrow-left-sm {
+    @apply w-3 h-0.5 bg-gray-400 relative;
+  }
+  .arrow-left-sm::after {
+    content: '';
+    @apply absolute -left-1 top-1/2 -translate-y-1/2;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-right: 4px solid #9ca3af;
+  }
+</style>
