@@ -3,6 +3,10 @@
 > Physical AI 시대의 하드웨어 제품 개발자로서의 역량을 어필하는 취업용 포트폴리오.
 > 기반 프로젝트: PLUVA FRIEND GT-SS500 (농업용 전동 자율주행 Speed Sprayer)
 
+## Tasks
+
+- [CURRENT_TASK.md](CURRENT_TASK.md) | [PREPARED_TASK.md](PREPARED_TASK.md) | [FINISHED_TASK.md](FINISHED_TASK.md)
+
 ---
 
 ## Tech Stack
@@ -17,19 +21,18 @@
 ```
 포트폴리오/
 ├── CLAUDE.md              ← 이 파일
-├── TASK.md                ← 작업 관리
-├── WEB_STRUCTURE.md       ← 페이지 구조 설계
+├── TASK.md                ← 태스크 인덱스
+├── CURRENT_TASK.md        ← 진행 중
+├── PREPARED_TASK.md       ← 예정
+├── FINISHED_TASK.md       ← 완료
+├── DIFFICULTY.md          ← 삽질 & 노하우
+├── TASK_ARCHIVE/          ← 월별 완료 아카이브
 ├── cases/                 ← 케이스 원고 (Markdown)
 ├── diagrams/              ← Mermaid 다이어그램 (.mmd)
-├── src/
-│   ├── components/        ← Astro 컴포넌트
-│   ├── content/cases/     ← MDX 케이스 콘텐츠
-│   ├── data/              ← JSON 데이터 (cases, theme-map)
-│   ├── layouts/           ← BaseLayout
-│   ├── pages/             ← 라우트 (index, cases/, 404)
-│   └── styles/            ← global.css
+├── src/                   ← Astro 소스
 ├── public/                ← 정적 파일
-└── docs/포트폴리오/       ← 야간 브리핑 등
+├── docs/포트폴리오/       ← 브리핑, 팩트체크, 웹구조 설계
+└── docs/archive/          ← 과거 야간작업 등
 ```
 
 ---
