@@ -17,3 +17,6 @@ logs/
 tonight_prompt.txt
 tonight_prompt_done.txt
 preview.html
+
+# 구버전 사이트 (node_modules 포함, 502MB)
+site/
