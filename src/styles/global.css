@@ -9,6 +9,9 @@
   html {
     scroll-behavior: smooth;
   }
+  figure img {
+    @apply cursor-zoom-in;
+  }
   body {
     @apply font-sans text-primary bg-white antialiased;
   }
