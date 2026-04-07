@@ -77,8 +77,8 @@
 | 파일 | 내용 |
 |------|------|
 | `.claude/rules/writing.md` | 포트폴리오 작성 원칙 (정량적 성과, 포지셔닝, HIH_2 참조 규칙) |
-| `.claude/rules/task-management.md` | TASK.md 갱신 규칙, 넘버링 체계 |
 | `.claude/rules/critical-thinking.md` | 비판적 사고 파트너 원칙 |
+| `~/.claude/rules/task-management.md` | TASK 4파일 갱신 규칙 (글로벌) |
 
 ## Skills (트리거 시 참조)
 
