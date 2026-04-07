@@ -44,7 +44,10 @@ import cases from '../data/cases.json';
           <h3 class="font-bold text-lg mb-2">현재</h3>
           <ul class="space-y-2 text-sm text-gray-600">
             <li><strong>전력제어개발팀 · 선임연구원</strong> — 모터제어, 전력설계, 시험검증</li>
-            <li><strong>제품개발팀 · PM 겸임</strong> — 이슈 트래킹, BOM, 양산 준비</li>
+            <li>
+              <strong>제품개발팀 · PM 겸임</strong> — 이슈 37건+ 트래킹 (전력제어 담당 14건),
+              BOM 132개 항목 관리, APQP Phase 2~3, 양산 준비
+            </li>
           </ul>
 
           <h3 class="font-bold text-lg mt-6 mb-2">학력</h3>
@@ -52,14 +55,21 @@ import cases from '../data/cases.json';
             <li><strong>석사</strong> — 모터 모델링/고장진단(PHM), 저널 2편 · 학회 5편</li>
             <li><strong>학부</strong> — 기계공학부 (학사) · 기계설계학과 (석사)</li>
           </ul>
+
+          <h3 class="font-bold text-lg mt-6 mb-2">AI 워크플로우</h3>
+          <p class="text-sm text-gray-600">
+            Claude Code를 단순 코딩 보조가 아닌 개발 프로세스에 통합 —
+            이슈 관리 자동화, 주간보고 자동화, CAN 로그 분석 등.
+            "AI를 사용하는 수준"이 아닌 "AI 워크플로우를 설계하는 수준"으로.
+          </p>
         </div>
         <div>
           <h3 class="font-bold text-lg mb-2">기술</h3>
           <div class="flex flex-wrap gap-2 text-sm">
             {['BLDC/PMSM 모터제어', 'FOC/SVPWM', 'CAN/CAN-FD',
-              'STM32 · NXP MCU', 'DFMEA/APQP',
+              'STM32 · NXP MCU', 'DFMEA/DRBFM · APQP',
               'Python', 'C/C++', 'Matlab/Simulink',
-              'Git', 'Claude Code', 'ROS2'
+              'Git', 'Claude Code'
             ].map((skill) => (
               <span class="bg-surface px-3 py-1 rounded-full text-muted">{skill}</span>
             ))}
