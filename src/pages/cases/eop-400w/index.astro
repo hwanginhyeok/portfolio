@@ -168,6 +168,27 @@ const base = import.meta.env.BASE_URL;
       </div>
     </section>
 
+    <!-- 다이나모 시스템 -->
+    <section class="space-y-6 mb-16">
+      <h2 class="text-xl font-black text-primary border-b pb-2">다이나모미터 시스템 — 자체 구축</h2>
+      <p class="text-sm text-gray-600">EOP 시험을 위한 전용 다이나모미터 시스템을 직접 설계·구축했다. Hysteresis brake + 토크센서 + 전류제어기를 통합한 폐루프 토크 제어 환경.</p>
+
+      <div class="grid grid-cols-2 gap-4">
+        <figure>
+          <img src={`${base}images/cases/eop-400w/dynamo-schematic.webp`} alt="다이나모 전원통합 회로도" class="rounded-lg border w-full" loading="lazy" />
+          <figcaption class="text-xs text-muted mt-1">전원통합 — PS + 전류제어기(CC) + Hysteresis brake PI 제어 구성</figcaption>
+        </figure>
+        <figure>
+          <img src={`${base}images/cases/eop-400w/dynamo-response.webp`} alt="다이나모 토크 응답성 시험" class="rounded-lg border w-full" loading="lazy" />
+          <figcaption class="text-xs text-muted mt-1">응답성 시험 — 개선 전(좌)/후(우) 토크 피드백 제어 비교</figcaption>
+        </figure>
+      </div>
+
+      <div class="bg-surface rounded-lg p-3 text-xs text-gray-600">
+        비선형성 0.008% 달성 · Torque feedback PI 제어기 설계 · RS485 통신으로 실시간 데이터 수집
+      </div>
+    </section>
+
     <!-- 기술 스택 -->
     <section>
       <h2 class="text-lg font-bold text-primary mb-2">기술 스택</h2>
