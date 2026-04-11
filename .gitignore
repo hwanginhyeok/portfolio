@@ -20,3 +20,6 @@ preview.html
 
 # 구버전 사이트 (node_modules 포함, 502MB)
 site/
+
+# Claude Code 로컬 설정
+.claude/settings.local.json
