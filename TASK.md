@@ -4,13 +4,13 @@
 
 ## 요약
 
-- Current: 2개 (blocked: 2)
-- Prepared: 11개 (P1: 1, P2: 7, P3: 3)
-- Finished: 7개
+- Current: 1개 (blocked: 0)
+- Prepared: 12개 (P1: 0, P2: 9, P3: 3)
+- Finished: 9개
 
 > **넘버링**: `{분야코드}-{순번}` — 1:기획 2:케이스 3:콘텐츠 4:제작 5:부가자료 6:미디어
 > **아카이브**: [TASK_ARCHIVE/](TASK_ARCHIVE/)
-> 최종 수정: 2026-04-13
+> 최종 수정: 2026-04-23
 
 ## TODO (아이디어 / 미확정)
 
