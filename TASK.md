@@ -7,7 +7,7 @@
 
 - Current: 1개 (blocked: 0)
 - Prepared: 19개 (B1: 12, B2: 1, B3: 2, B4: 1, B5: 3)
-- Finished: 16개
+- Finished: 17개
 
 > **넘버링 (2026-04-24 개편)**: `B{블록}-{순번}`
 > - B1: 자료 인벤토리 (WHAT HAVE)

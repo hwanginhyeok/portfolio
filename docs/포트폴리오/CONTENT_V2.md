@@ -668,7 +668,12 @@ Claude Code · GLM · Ollama · MCP · Obsidian + Dataview · hih-skills · PM �
 > 제거 대신 **빈칸/추정**으로 두고 진행. 수정은 세션 종반 리뷰에서.
 
 - **5번째 학회 발표 제목** — 현재 PPT 소스에 4개만 확인됨 (PHM 2021 · 신뢰성 2022 · PHM 2022 · PCIM Asia 2022). 1개 빈칸.
+  - 2026-04-26 추가 발견: **PHM Society Asia-Pacific Conference 2023** (Kwon/Oh/Hwang/Kim 공저, DOI 10.36001/phmap.2023.v4i1.3780). PAPERS.md P-01 참조. 이게 5번째인지 또는 J-01 저널의 기반 발표인지 확인 필요.
 - **특허 #2 저온기동 출원번호** — FACT_CHECK에 문서명만 있음. 출원번호 확인 필요.
 - **MCB #204 전해부식 수치 공개 여부** — 업체명 등 영업 관련 내용 노출 여부.
+- **학위논문 정확한 제목** — 2026-04-26 RISS 검색 미발견. dcollection.konkuk.ac.kr 직접 접속 필요.
+- **J-01 저널(*Co-simulation for Fault Diagnosis of 120kW IPMSM*) 게재지** — KCI/Web of Science 검색 결과 미확인.
+
+→ 논문 관련 SSOT 분리 → `docs/포트폴리오/PAPERS.md` 참조.
 
 이 3개는 포트폴리오 공개 버전에서 "보완 필요" 태그로 표시 후 사용자 직접 채움.

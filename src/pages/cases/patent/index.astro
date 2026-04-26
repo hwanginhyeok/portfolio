@@ -107,16 +107,20 @@ const base = import.meta.env.BASE_URL;
           <p class="text-xs text-muted">키워드: IPMSM · 고장진단(PHM) · Co-simulation · FEM · 신뢰성기반최적설계(RBDO)</p>
         </div>
 
-        <!-- 논문 2: 오재욱 공동 — IGBT bondwire fault -->
+        <!-- 논문 2: 오재욱 공저 — PHM Asia-Pacific 2023 (DOI 확정) -->
+        {/* 변경 2026-04-26: PAPERS.md SSOT 기준 확정 — Kwon/Oh/Hwang/Kim 공저, DOI 10.36001/phmap.2023.v4i1.3780 */}
         <div class="border rounded-xl p-6 space-y-3">
-          <div class="flex items-center gap-2 mb-1">
+          <div class="flex items-center gap-2 mb-1 flex-wrap">
             <span class="text-xs bg-accent text-white px-2 py-0.5 rounded-full">학회 발표 · 공동</span>
-            <span class="text-xs text-muted">PCIM Asia 2022 · 공저자 오재욱</span>
-            {/* [확인필요] 학회 출처 — PCIM Asia 2022 (IGBT Power Cycling) 또는 한국PHM학회 2021 (IGBT 개방 고장 진단) 중 정본 확정 */}
+            <span class="text-xs text-muted">PHM Society Asia-Pacific 2023 · 공저자 오재욱</span>
           </div>
-          <h3 class="text-lg font-bold text-primary">Inverter IGBT Bondwire Fault — Power Cycling 기반 고장 진단</h3>
-          <p class="text-sm text-gray-600">Inverter IGBT의 본드와이어(bondwire) 단선 고장을 Power Cycling 시험으로 가속 검증. 전동화 차량 구동 시스템의 신뢰성 진단 기술 일환으로, 시스템 수준 측정값을 활용한 고장 모드 식별.</p>
-          <p class="text-xs text-muted">키워드: IGBT · Bondwire · Power Cycling · Inverter · PHM</p>
+          <h3 class="text-lg font-bold text-primary">System-Level Simulation of 120 kW IPMSM Drive for EV Usage Under Various Types of Faults for Fault Diagnosis</h3>
+          <p class="text-sm text-gray-600">120 kW 8극 36슬롯 IPMSM 구동 시스템에 다양한 고장 모드(영구자석 감자·권선 단락 등) 주입 → 상전류 데이터 → SVM 분류. 200 kW 다이나모 + NI-9215 DAQ로 실험 검증.</p>
+          <p class="text-xs text-muted">저자: Woyeong Kwon, <strong>Jaewook Oh</strong>, <strong>Inhyeok Hwang</strong>, Namsu Kim (건국대학교)</p>
+          <p class="text-xs">
+            <a href="https://doi.org/10.36001/phmap.2023.v4i1.3780" target="_blank" rel="noopener" class="text-accent hover:underline">DOI: 10.36001/phmap.2023.v4i1.3780 →</a>
+          </p>
+          <p class="text-xs text-muted">키워드: IPMSM · 시스템 수준 시뮬레이션 · 고장 진단 · SVM · PHM</p>
         </div>
       </div>
 
