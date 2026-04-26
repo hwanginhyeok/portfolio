@@ -4,6 +4,7 @@
 
 | # | 태스크 | 완료일 | 비고 |
 |---|--------|--------|------|
+| 4-9 | EOP 케이스 이미지 보강 — SVPWM 120℃ 열평형(1Assy/2Assy), 극저온기동(rotor frames + BEMF observer 추가), 다이나모(전원통합 + Lower limit 응답성 슬라이드 교체) | 2026-04-26 | pdftoppm으로 PPTX→PDF→PNG 직접 슬라이드 렌더 방식 도입 |
 | 4-1 | 전체 페이지 리뷰 — 홈 + 특허 페이지 | 2026-04-07 | 이슈 없음, 이미지/수치/링크 정상 |
 | 4-6 | 상태머신 Mermaid SVG → HTML 컴포넌트 교체 + CAN 테이블 추가 | 2026-04-07 | StateMachine.astro + CAN 6노드 테이블 (ss500 케이스) |
 | 4-8 | EOP 다이나모 이미지 적용 — 전원통합 회로도 + 응답성 시험 | 2026-04-07 | dynamo-schematic + dynamo-response 추출 |

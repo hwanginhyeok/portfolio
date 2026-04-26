@@ -45,13 +45,12 @@ const base = import.meta.env.BASE_URL;
         </ul>
         <div class="grid grid-cols-2 gap-3 mt-4">
           <figure>
-            <img src={`${base}images/cases/eop-400w/pwm-chart-55c.webp`} alt="55°C SVPWM 시험" class="rounded-lg border w-full" loading="lazy" />
-            <figcaption class="text-xs text-muted mt-1">55°C — RPM·토크·전류·온도 모니터링</figcaption>
+            <img src={`${base}images/cases/eop-400w/pwm-chart-120c-1assy.webp`} alt="120°C 열평형 1Assy 시험" class="rounded-lg border w-full" loading="lazy" />
+            <figcaption class="text-xs text-muted mt-1">120°C 열평형 — HSG#26 <strong>1Assy</strong> (240424 12:05) · RPM·토크·전류·압력·온도(FL_HOT, TC02-04) 동시 수집</figcaption>
           </figure>
           <figure>
-            <img src={`${base}images/cases/eop-400w/pwm-chart-120c.webp`} alt="120°C SVPWM 시험" class="rounded-lg border w-full" loading="lazy" />
-            {/* 변경 2026-04-26: FET 16~17°C → 1~6°C (CONTENT_V2 §4.2 검증값) */}
-            <figcaption class="text-xs text-muted mt-1">120°C — FET 온도 1~6°C 저감 확인</figcaption>
+            <img src={`${base}images/cases/eop-400w/pwm-chart-120c-2assy.webp`} alt="120°C 열평형 2Assy 시험" class="rounded-lg border w-full" loading="lazy" />
+            <figcaption class="text-xs text-muted mt-1">120°C 열평형 — HSG#26 <strong>2Assy</strong> (240424 16:23) · 동일 패턴 반복 시험으로 PWM 기법별 FET 온도 1~6°C 저감 정량 확인</figcaption>
           </figure>
         </div>
       </div>
@@ -113,11 +112,19 @@ const base = import.meta.env.BASE_URL;
 
       <div>
         <h3 class="text-lg font-bold text-primary mb-2">해결과정</h3>
-        <p class="text-sm text-gray-600 mb-3">EEMF 추정기로 로터 위치/속도를 관측, feedforward 입력 포함 위치·속도 추정기로 전환 시간 단축. 본인 역할: 알고리즘의 <strong>실험적 검증</strong> 담당.</p>
+        <p class="text-sm text-gray-600 mb-3">로터 reference frame 기반 EEMF/BEMF 관측기로 위치·속도 추정, feedforward 포함 위치·속도 추정기로 전환 시간 단축. 본인 역할: 알고리즘의 <strong>실험적 검증</strong> 담당.</p>
         <div class="grid grid-cols-2 gap-3">
+          <figure>
+            <img src={`${base}images/cases/eop-400w/rotor-reference-frames.webp`} alt="Rotor reference frames" class="rounded-lg border bg-white p-3 w-full" loading="lazy" />
+            <figcaption class="text-xs text-muted mt-1">Fig.27 — Rotor reference frames (α-β / d-q / γ-δ)</figcaption>
+          </figure>
           <figure>
             <img src={`${base}images/cases/eop-400w/eemf-estimator.webp`} alt="EEMF estimator" class="rounded-lg border bg-white p-3 w-full" loading="lazy" />
             <figcaption class="text-xs text-muted mt-1">Fig.1 — EEMF estimator for IPMSM</figcaption>
+          </figure>
+          <figure>
+            <img src={`${base}images/cases/eop-400w/bemf-observer.webp`} alt="BEMF observer structure" class="rounded-lg border bg-white p-3 w-full" loading="lazy" />
+            <figcaption class="text-xs text-muted mt-1">Fig.28 — BEMF observer structure</figcaption>
           </figure>
           <figure>
             <img src={`${base}images/cases/eop-400w/position-speed-estimator.webp`} alt="Position/Speed estimator" class="rounded-lg border bg-white p-3 w-full" loading="lazy" />
@@ -172,18 +179,17 @@ const base = import.meta.env.BASE_URL;
     <!-- 다이나모 시스템 -->
     <section class="space-y-6 mb-16">
       <h2 class="text-xl font-black text-primary border-b pb-2">다이나모미터 시스템 — 자체 구축</h2>
-      <p class="text-sm text-gray-600">EOP 시험을 위한 전용 다이나모미터 시스템을 직접 설계·구축했다. Hysteresis brake + 토크센서 + 전류제어기를 통합한 폐루프 토크 제어 환경.</p>
+      <p class="text-sm text-gray-600">EOP 시험을 위한 전용 다이나모미터 시스템을 직접 설계·구축했다. <strong>전원 통합</strong>으로 3개로 분리된 24V 입력을 단일 Adapter(60W)로 합치고, Hysteresis brake의 비선형 데드존을 보상하는 <strong>Lower limit + Torque feedback PI 제어기</strong>를 설계했다.</p>
 
-      <div class="grid grid-cols-2 gap-4">
-        <figure>
-          <img src={`${base}images/cases/eop-400w/dynamo-schematic.webp`} alt="다이나모 전원통합 회로도" class="rounded-lg border w-full" loading="lazy" />
-          <figcaption class="text-xs text-muted mt-1">전원통합 — PS + 전류제어기(CC) + Hysteresis brake PI 제어 구성</figcaption>
-        </figure>
-        <figure>
-          <img src={`${base}images/cases/eop-400w/dynamo-response.webp`} alt="다이나모 토크 응답성 시험" class="rounded-lg border w-full" loading="lazy" />
-          <figcaption class="text-xs text-muted mt-1">응답성 시험 — 개선 전(좌)/후(우) 토크 피드백 제어 비교</figcaption>
-        </figure>
-      </div>
+      <figure>
+        <img src={`${base}images/cases/eop-400w/power-integration.webp`} alt="전원 통합 시스템 블록도" class="rounded-lg border bg-white w-full" loading="lazy" />
+        <figcaption class="text-xs text-muted mt-1">전원 통합 — Datum Transducer + SCU Controller + Current Controller 3개 전원을 24V 2.5A(60W) 단일 Adapter로 통합한 제어 시스템</figcaption>
+      </figure>
+
+      <figure>
+        <img src={`${base}images/cases/eop-400w/lower-limit-response.webp`} alt="Lower limit 유무에 따른 토크 응답성 비교" class="rounded-lg border bg-white w-full" loading="lazy" />
+        <figcaption class="text-xs text-muted mt-1">Lower limit 유무 비교 — 100mA 하한 적용 시 0.8Nm 오버슈트 8.5%→2.1%, 1.2Nm 오버슈트 15.7%→8.7%로 감소 (브레이크 데드존 보상 효과)</figcaption>
+      </figure>
 
       <div class="bg-surface rounded-lg p-3 text-xs text-gray-600">
         비선형성 0.008% 달성 · Torque feedback PI 제어기 설계 · RS485 통신으로 실시간 데이터 수집
