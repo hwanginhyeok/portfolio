@@ -19,6 +19,45 @@ const base = import.meta.env.BASE_URL;
     <!-- 시스템 아키텍처 -->
     <SystemArchitecture />
 
+    {/* 변경 2026-04-26 (B3 LAYOUT): Impact 요약 섹션 신규 추가 — 4개 케이스 핵심 수치 압축 (사용자 지시) */}
+    <section class="py-12 border-t border-gray-100">
+      <h2 class="text-2xl font-bold text-primary mb-2">Impact 요약</h2>
+      <p class="text-sm text-muted mb-6">4개 케이스에서 만들어낸 정량 임팩트</p>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div class="bg-surface rounded-lg p-4">
+          <div class="text-xs text-muted mb-1">GT-SS500</div>
+          <div class="text-xl font-black text-primary leading-tight">양산 출하</div>
+          <div class="text-xs text-gray-500 mt-1">현장 이슈 37건+ 해결</div>
+        </div>
+        <div class="bg-surface rounded-lg p-4">
+          <div class="text-xs text-muted mb-1">EOP 400W</div>
+          <div class="text-xl font-black text-primary leading-tight">-40&deg;C / 300&rarr;100s</div>
+          <div class="text-xs text-gray-500 mt-1">극저온 기동시간 1/3</div>
+        </div>
+        <div class="bg-surface rounded-lg p-4">
+          <div class="text-xs text-muted mb-1">EOP 400W</div>
+          <div class="text-xl font-black text-primary leading-tight">특허 출원 2건</div>
+          <div class="text-xs text-gray-500 mt-1">공동 1 · 기여 1</div>
+        </div>
+        <div class="bg-surface rounded-lg p-4">
+          <div class="text-xs text-muted mb-1">시험 인프라</div>
+          <div class="text-xl font-black text-primary leading-tight">7종 단독 구축</div>
+          <div class="text-xs text-gray-500 mt-1">다이나모 정밀도 0.008%</div>
+        </div>
+        <div class="bg-surface rounded-lg p-4">
+          <div class="text-xs text-muted mb-1">대학원 연구</div>
+          <div class="text-xl font-black text-primary leading-tight">저널 3 · 학회 4</div>
+          <div class="text-xs text-gray-500 mt-1">PHM · 모터 모델링 (공저)</div>
+        </div>
+        <div class="bg-surface rounded-lg p-4">
+          <div class="text-xs text-muted mb-1">대학원 연구</div>
+          <div class="text-xl font-black text-primary leading-tight">수상 2건</div>
+          <div class="text-xs text-gray-500 mt-1">학회 발표 우수 실적</div>
+        </div>
+      </div>
+    </section>
+
     <!-- 케이스 카드: EOP + GT-SS500 + 특허 -->
     <section class="py-12">
       <h2 class="text-2xl font-bold text-primary mb-2">프로젝트 케이스</h2>

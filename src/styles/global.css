@@ -14,6 +14,10 @@
   }
   body {
     @apply font-sans text-primary bg-white antialiased;
+    /* 변경 2026-04-26 (B3 LAYOUT): 본문 기본 폰트 18px 상향 (사용자 지시).
+       Tailwind text-sm/text-xs(캡션/메타)는 utility로 작은 크기 유지됨. */
+    font-size: 18px;
+    line-height: 1.65;
   }
   h1, h2 {
     @apply font-display font-bold tracking-tight;
