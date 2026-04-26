@@ -74,9 +74,18 @@
 
 ---
 
-## 2. CONTENT_V2 §4.3 인용 — 한국 학회 발표
+## 2. CONTENT_V2 §4.3 인용 — 한국 학회 발표 + J-01 검증 결과
 
 > 영문 저널/학회와 별도로 CONTENT_V2.md §4.3에 한국 학회 발표 4건이 SSOT로 등록됨. 일부는 위 §1과 매칭 가능.
+
+### J-01. CONTENT_V2 "주저자 저널 1편" — ⚠ 외부 DB 미확인 (2026-04-26 B1-17b 검증)
+- **제목 (CONTENT_V2 §4.3 인용)**: *Co-simulation for Fault Diagnosis of 120kW Interior Permanent Magnet Synchronous Machine and Experimental Validation*
+- **검증 결과**: Google Scholar / KCI / Springer / PHM Society / ADS 모두 **일치 항목 0건**.
+- **결론**: "주저자 저널" 표현은 근거 부재 가능성 높음. 가장 가까운 출판물은 P-03 (PHM Asia-Pacific 2023, 황인혁 3저자 컨퍼런스) — "주저자 저널"은 아님. 학위논문(T-01) 영문 인용일 가능성도 있음.
+- **권장 처리** (사용자 결정 영역):
+  - (a) **단일화**: CONTENT_V2 §4.3에서 "주저자 저널 1편" 표현 삭제 → "학위논문 + 공저 저널 3편"로 재정렬
+  - (b) **재정의**: J-01 → P-03 (공저 PHM Asia-Pacific 2023)으로 명시
+- **사이트 영향**: patent 페이지 P-1 카드는 학위논문(T-01)으로 이미 교체 완료(e4f4c4a). J-01 표현은 사이트에서 사용 안 함. CONTENT_V2 §4.3 텍스트만 잔존.
 
 ### C-01. 한국PHM학회 2021 정기학술대회 (우수포스터상)
 - **제목**: 시스템 수준 측정값을 이용한 모터 구동 시스템 내 IGBT 개방 고장 진단 기법

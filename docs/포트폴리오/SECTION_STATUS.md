@@ -34,7 +34,7 @@
 | 8 | Case · SS500 상태머신 | `cases/ss500-state-machine/index.astro` | 🟢 | 🟢 | CONTENT_V2 §4.1, §7A.2 | B1-13 양산 전장함 IMG_9304 적용 완료. B1-16 동파 문구 삭제 완료 |
 | 9 | Case · 시험 기획 (Test Engineering) | `cases/test-engineering/index.astro` | 🟢 | 🟢 | CONTENT_V2 §6 | — |
 | 10 | Case · 특허/논문 | `cases/patent/index.astro` | 🟢 | 🟢 | **PAPERS.md (신규 SSOT)** | RISS 외부 링크 적용 (2026-04-26) |
-| 11 | 논문/학회 SSOT | `docs/포트폴리오/PAPERS.md` | 🟢 | 🟢 | RISS + DBLP + IEEE + Google Scholar + Crossref | C-01~C-03 한국 학회 PDF, P-02 PCIM 페이지 (잔여) |
+| 11 | 논문/학회 SSOT | `docs/포트폴리오/PAPERS.md` | 🟢 | 🟢 | RISS + DBLP + IEEE + Google Scholar + Crossref | J-01 외부 미확인(2026-04-26) — 사용자 결정 대기. C-01~C-03 한국 학회 PDF |
 | 12 | StateMachine 다이어그램 | `StateMachine.astro` | 🟢 | 🟢 | CONTENT_V2 §7A | — |
 | 13 | CAN 5노드 다이어그램 | `CanNetworkDiagram.astro` | 🟢 | 🟢 | CONTENT_V2 §4.1 | — |
 
@@ -44,8 +44,8 @@
 
 | 블록 | SSOT 산출물 | 상태 | 미해결 |
 |------|------|:----:|---|
-| **B1 인벤토리** | `docs/blocks/01-inventory/INVENTORY.md` + `HOMEPAGE_AUDIT_20260426.md` + **PAPERS.md** | 🟢 게이트 통과 가능 | 잔여는 사용자 입력 대기 (B1-13/14/16) — 본 문서 §5 참조 |
-| **B2 활용 전략** | `USAGE_STRATEGY.md` (미작성) | 🔴 | B1 완료 후 착수 |
+| **B1 인벤토리** | `docs/blocks/01-inventory/INVENTORY.md` + `HOMEPAGE_AUDIT_20260426.md` + **PAPERS.md** | 🟢 게이트 통과 | P1 잔여 0. P2 (B1-02~08, B1-17b) 자료 발굴은 사용자 작업 영역 |
+| **B2 활용 전략** | `docs/blocks/02-usage/USAGE_STRATEGY.md` (골격 작성) | 🟡 진행 | §1 타겟 회사·JD §2 메시지 확정 — 사용자 입력 대기 |
 | **B3 배치** | `LAYOUT.md` (미작성) | 🔴 | B2 완료 후 |
 | **B4 디자인** | `DESIGN_SYSTEM.md` (미작성) | 🔴 | B3 완료 후 |
 | **B5 부가** | 이력서·GitHub·영문 | 🔴 | B4 완료 후 |
