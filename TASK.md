@@ -6,8 +6,8 @@
 ## 요약
 
 - Current: 1개 (blocked: 0)
-- Prepared: 22개 (B1: 15, B2: 1, B3: 2, B4: 1, B5: 3)
-- Finished: 13개
+- Prepared: 21개 (B1: 14, B2: 1, B3: 2, B4: 1, B5: 3)
+- Finished: 14개
 
 > **넘버링 (2026-04-24 개편)**: `B{블록}-{순번}`
 > - B1: 자료 인벤토리 (WHAT HAVE)
@@ -23,7 +23,7 @@
 
 | 블록 | 상태 | 산출물 | Current | Prepared |
 |------|:----:|--------|:-------:|:--------:|
-| B1 인벤토리 | 🟡 진행 | `docs/blocks/01-inventory/INVENTORY.md` | 1 | 15 |
+| B1 인벤토리 | 🟡 진행 | `docs/blocks/01-inventory/INVENTORY.md` | 1 | 14 |
 | B2 활용 전략 | ⬜ 대기 | `docs/blocks/02-usage/USAGE_STRATEGY.md` | 0 | 1 |
 | B3 배치 | ⬜ 대기 | `docs/blocks/03-layout/LAYOUT.md` | 0 | 2 |
 | B4 디자인 | ⬜ 대기 | `docs/blocks/04-design/DESIGN_SYSTEM.md` | 0 | 1 |
