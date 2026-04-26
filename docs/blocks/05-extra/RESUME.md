@@ -230,14 +230,13 @@ Systems · CAN-based Motor Control · End-to-end Productization · AI-Augmented 
 
 ## §9 어학 / 자격
 
-> 사용자 메모: "english 업무 대화 조금 가능. 토익 스피킹 토익 점수 있음".
-> **[TODO 어학 자료 검색 결과 반영]** — 별도 검색 작업 진행 중. 결과 확보 시 점수/레벨 채움.
+> 점수 출처: 사용자 직접 입력 (2026-04-26). 원본 성적표 PDF는 로컬 시스템 미발견 — 정확도 검증 시 ETS 본인 페이지(toeic.ybmnet.co.kr)에서 재발급 가능.
 
 | 항목 | 내용 |
 |------|------|
 | 영어 | 업무 대화 가능 (Working Proficiency) |
-| TOEIC | `[TODO 점수 — 어학 자료 검색 후 채움]` |
-| TOEIC Speaking | `[TODO Level — 어학 자료 검색 후 채움]` |
+| TOEIC | **920점** (응시 약 2021~2022 추정) |
+| TOEIC Speaking | **140점** (Level 6 — Intermediate High) |
 | 기타 어학 | `[TODO: 사용자 입력 — 해당 시]` |
 | 자격증 | `[TODO: 사용자 입력 — 기사/산업기사/PMP/식스시그마 등 해당 시]` |
 | 보안 | `[TODO: 사용자 입력 — 병역 / 보안 등급 등]` |
