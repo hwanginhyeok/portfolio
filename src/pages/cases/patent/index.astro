@@ -9,14 +9,16 @@ const base = import.meta.env.BASE_URL;
 
     <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">특허 · 연구</span>
     <h1 class="text-3xl font-black text-primary mt-2 mb-2">문제를 풀면 특허가 된다</h1>
-    <p class="text-muted mb-8">직무발명 특허 1건 출원 + 극저온 기동 실험적 검증</p>
+    {/* 변경 2026-04-26: "특허 1건" → "특허 참여 2건 (공동 1·기여 1)" — CONTENT_V2 §5.1, 본문 카드 2개와 일치 */}
+    <p class="text-muted mb-8">특허 참여 2건 — 공동 발명 1 · 개발 기여 1</p>
 
     <section class="space-y-10">
       <!-- 특허 1: 본인 발명 -->
       <div class="border-2 border-accent rounded-xl p-6 space-y-4">
         <div class="flex items-center gap-2 mb-1">
           <h2 class="text-lg font-bold text-primary">모터 초기 위치 검출 알고리즘</h2>
-          <span class="text-xs bg-accent text-white px-2 py-0.5 rounded-full">본인 발명</span>
+          {/* 변경 2026-04-26: "본인 발명" → "공동 발명" (CONTENT_V2 §5.2 정직 기재 원칙) */}
+          <span class="text-xs bg-accent text-white px-2 py-0.5 rounded-full">공동 발명</span>
         </div>
         <p class="text-xs text-muted">PN231067KR · 2023 · 특허법인 더웨이브 출원</p>
 
@@ -86,8 +88,40 @@ const base = import.meta.env.BASE_URL;
     <!-- 연결 -->
     <div class="bg-surface rounded-lg p-6 mt-10">
       <h3 class="font-bold text-primary mb-2">현장 문제에서 연구까지</h3>
-      <p class="text-sm text-gray-600">초기위치 검출은 SCU에서 센서리스 구동의 한계를 경험하며 발명. 극저온 기동은 현대 트랜시스 요구조건(-40°C)을 만족시키기 위한 연구에서 탄생.</p>
+      <p class="text-sm text-gray-600">초기위치 검출은 SCU에서 센서리스 구동의 한계를 경험하며 발명. 극저온 기동은 EOP 국책과제 요구조건(-40°C)을 만족시키기 위한 연구에서 탄생.</p>
     </div>
+
+    {/* 신규 2026-04-26: 핵심 논문 2편 첨부 (사용자 지시) — 졸업논문 + 오재욱 공동 inverter bondwire fault */}
+    <section class="mt-10">
+      <h2 class="text-xl font-black text-primary border-b pb-2 mb-6">관련 연구 — 핵심 논문</h2>
+
+      <div class="space-y-6">
+        <!-- 논문 1: 졸업논문 (저널) -->
+        <div class="border rounded-xl p-6 space-y-3">
+          <div class="flex items-center gap-2 mb-1">
+            <span class="text-xs bg-accent text-white px-2 py-0.5 rounded-full">석사 졸업논문 · 저널</span>
+            <span class="text-xs text-muted">건국대학교 · 2023</span>
+          </div>
+          <h3 class="text-lg font-bold text-primary">Co-simulation for Fault Diagnosis of 120kW Interior Permanent Magnet Synchronous Machine and Experimental Validation</h3>
+          <p class="text-sm text-gray-600">120kW IPMSM의 고장 진단을 위한 Co-simulation 환경 구축 + 실험적 검증. Transient FEM(Ansys Maxwell) → 모터 파라미터 LUT → MATLAB/Simulink 시스템 시뮬레이션 → 실험 검증 루프.</p>
+          <p class="text-xs text-muted">키워드: IPMSM · 고장진단(PHM) · Co-simulation · FEM · 신뢰성기반최적설계(RBDO)</p>
+        </div>
+
+        <!-- 논문 2: 오재욱 공동 — IGBT bondwire fault -->
+        <div class="border rounded-xl p-6 space-y-3">
+          <div class="flex items-center gap-2 mb-1">
+            <span class="text-xs bg-accent text-white px-2 py-0.5 rounded-full">학회 발표 · 공동</span>
+            <span class="text-xs text-muted">PCIM Asia 2022 · 공저자 오재욱</span>
+            {/* [확인필요] 학회 출처 — PCIM Asia 2022 (IGBT Power Cycling) 또는 한국PHM학회 2021 (IGBT 개방 고장 진단) 중 정본 확정 */}
+          </div>
+          <h3 class="text-lg font-bold text-primary">Inverter IGBT Bondwire Fault — Power Cycling 기반 고장 진단</h3>
+          <p class="text-sm text-gray-600">Inverter IGBT의 본드와이어(bondwire) 단선 고장을 Power Cycling 시험으로 가속 검증. 전동화 차량 구동 시스템의 신뢰성 진단 기술 일환으로, 시스템 수준 측정값을 활용한 고장 모드 식별.</p>
+          <p class="text-xs text-muted">키워드: IGBT · Bondwire · Power Cycling · Inverter · PHM</p>
+        </div>
+      </div>
+
+      <p class="text-xs text-muted mt-4">두 논문 모두 모터·인버터 신뢰성 진단 영역 — 특허(센서리스 BLDC 초기위치 / 저온 기동) 연구와 같은 맥락에서 "물리적 시스템의 한계를 데이터로 진단"하는 작업.</p>
+    </section>
 
     <div class="mt-12 flex justify-between">
       <a href={`${base}cases/ss500-state-machine/`} class="text-sm text-accent hover:underline">← 상태머신</a>

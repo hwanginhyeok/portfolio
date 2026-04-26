@@ -1,18 +1,13 @@
 ---
-// 경력 타임라인: 학부 → 석사 → 주임 → 선임
+// 변경 2026-04-26: 경력 최신순으로 정렬 (사용자 지시) — 선임 → 주임 → 석사 → 학부
 const timeline = [
   {
-    period: '2015 — 2021',
-    title: '기계공학부 기계설계학과',
-    role: '학부',
-    detail: '',
-  },
-  {
-    period: '2021 — 2023',
-    title: '대학원 석사',
-    role: '석사과정',
-    detail: '120kW 모터 모델링 · 고장진단(PHM) · 현대차·현대엔지비·산자부 과제 3건 · 저널 2편 · 학회 5편(주저자 2)',
-    tools: 'Matlab · Simulink · Ansys MAXWELL',
+    period: '2025.01 —',
+    // 변경 2026-04-26: PM 톤 통일 — "(PM)" → "(주니어 PM)" (사용자 지시)
+    title: 'GINT 전력제어개발팀 + 제품개발팀(주니어 PM)',
+    role: '선임연구원',
+    detail: 'GT-SS500 전력설계 통합 · 구동/펌프 검증 · 자율주행 연동 · 이슈 37건 트래킹',
+    tools: 'STM32 · CAN-FD · Python · Claude Code',
   },
   {
     period: '2023.02 — 2024.12',
@@ -22,11 +17,18 @@ const timeline = [
     tools: 'C · NXP MCU · CAN · FOC/SVPWM',
   },
   {
-    period: '2025.01 —',
-    title: 'GINT 전력제어개발팀 + 제품개발팀(PM)',
-    role: '선임연구원',
-    detail: 'GT-SS500 전력설계 통합 · 구동/펌프 검증 · 자율주행 연동 · 이슈 37건 트래킹',
-    tools: 'STM32 · CAN-FD · Python · Claude Code',
+    period: '2021 — 2023',
+    title: '대학원 석사',
+    role: '석사과정',
+    // 저널 1/학회 4 (CONTENT_V2 §4.3 검증값)
+    detail: '120kW 모터 모델링 · 고장진단(PHM) · 현대차·현대엔지비·산자부 과제 3건 · 저널 1편 · 학회 4편(주저자)',
+    tools: 'Matlab · Simulink · Ansys MAXWELL',
+  },
+  {
+    period: '2015 — 2021',
+    title: '기계공학부 기계설계학과',
+    role: '학부',
+    detail: '',
   },
 ];
 ---
@@ -41,8 +43,8 @@ const timeline = [
     <div class="space-y-8">
       {timeline.map((item, i) => (
         <div class="relative pl-12 md:pl-16">
-          <!-- 도트 -->
-          <div class={`absolute left-2.5 md:left-4.5 w-3 h-3 rounded-full border-2 border-white ${i === timeline.length - 1 ? 'bg-accent' : 'bg-gray-400'}`}></div>
+          <!-- 도트: 변경 2026-04-26 — 최신순 정렬에 맞춰 첫 항목(현재)에 accent -->
+          <div class={`absolute left-2.5 md:left-4.5 w-3 h-3 rounded-full border-2 border-white ${i === 0 ? 'bg-accent' : 'bg-gray-400'}`}></div>
 
           <div class="text-xs text-muted mb-1">{item.period}</div>
           <h3 class="text-base font-bold text-primary">{item.title}</h3>

@@ -10,7 +10,8 @@ const base = import.meta.env.BASE_URL;
 
     <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">GT-SS500</span>
     <h1 class="text-3xl font-black text-primary mt-2 mb-2">48V 전동 자율주행 방제기 — 전력제어 개발</h1>
-    <p class="text-muted mb-8">3kW BLDC ×2 · 48V LiFePO4 15S2P · CAN 10노드 · APQP 양산 체계</p>
+    {/* 변경 2026-04-26: "CAN 10노드" → "CAN 5노드" (CONTENT_V2 §4.1/§7A.2 SSOT — VCU↔구동×2↔팬↔펌프↔BMS) */}
+    <p class="text-muted mb-8">3kW BLDC ×2 · 48V LiFePO4 15S2P · CAN 5노드 · APQP 양산 체계</p>
 
     <!-- ─── 0. VCU 운전 상태머신 ─── -->
     <section class="space-y-6 mb-16">
@@ -110,7 +111,8 @@ const base = import.meta.env.BASE_URL;
 
     <!-- ─── 0b. CAN 네트워크 ─── -->
     <section class="space-y-4 mb-16">
-      <h2 class="text-xl font-black text-primary border-b pb-2">CAN 네트워크 — 6노드 메시지 구조</h2>
+      {/* 변경 2026-04-26: "6노드" → "5노드" (CONTENT_V2 §4.1/§7A.2 SSOT). 본문 5개와 일치 */}
+      <h2 class="text-xl font-black text-primary border-b pb-2">CAN 네트워크 — 5노드 메시지 구조</h2>
       <p class="text-sm text-gray-600">VCU가 CAN Bus 500kbps를 통해 5개 노드를 중재한다. 각 노드의 Tx/Rx 역할을 정확히 이해해야 제어 로직을 작성할 수 있다.</p>
 
       <div class="overflow-x-auto">
@@ -362,7 +364,8 @@ const base = import.meta.env.BASE_URL;
           <p class="text-xs text-gray-600">유량계 + 압력계 테스트베드 <strong>단독 구축</strong>. 3시료 비교 → 압력-유량 선형관계 규명 → 양산 IQC 기준 수립.</p>
         </div>
         <div class="border rounded-lg p-4">
-          <h3 class="font-bold text-primary text-sm mb-2">농진원 분사시험 1박2일</h3>
+          {/* 변경 2026-04-26: "1박2일" 제거 (사용자 지시) */}
+          <h3 class="font-bold text-primary text-sm mb-2">농진원 분사시험</h3>
           <p class="text-xs text-gray-600">6건 시험 <strong>전체 주관</strong>. 팬 14포인트 풍속 +43~53%, 사각지대 5→2개 해소. 공인 시험장 재현성 검증.</p>
         </div>
         <div class="border rounded-lg p-4">
