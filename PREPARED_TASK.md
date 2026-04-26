@@ -40,6 +40,7 @@
 
 | # | 태스크 | 우선순위 | depends | 비고 |
 |---|--------|:--------:|---------|------|
-| B5-01 | 이력서 작성 | P3 | 사용자 입력 (연락처/어학) | `RESUME.md` 마스터 + 4 도메인 분기 모듈 골격 완료 |
+| B5-01 | 이력서 작성 | P3 | 이메일/사이트 URL 입력 + 토익 재응시 | `RESUME.md` 마스터 완료. 어학 만료 명시 |
+| B5-04 | TOEIC + TOEIC Speaking 재응시 | P2 | 사용자 외부 작업 | 이전 점수: TOEIC 920 / TS 140 (IH). 응시 후 RESUME §9 갱신 |
 | B5-02 | GitHub 프로필 정비 | P3 | 사용자 실행 | `GITHUB_PROFILE.md` 가이드 완료. P1: profile README + 핀 6개 |
 | B5-03 | 영문 버전 | P3 | 사용자 결정 (i18n 옵션) | `ENGLISH_VERSION.md` 가이드 완료. 어휘집 + Summary 4종 + IEEE 인용 |
