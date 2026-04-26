@@ -4,6 +4,9 @@
 
 | # | 태스크 | 완료일 | 비고 |
 |---|--------|--------|------|
+| B1-09 | SVPWM 사진 교체 — pwm-chart-120c-1assy/2assy 신규 적용 | 2026-04-26 | 4-9에 흡수. eop-400w/index.astro line 48/52 |
+| B1-10 | 저온 기동 사진 발굴 — rotor-reference-frames + BEMF observer 적용 | 2026-04-26 | 4-9에 흡수. eop-400w/index.astro line 118/126 |
+| B1-11 | 다이나모 시스템 사진 — power-integration + lower-limit-response 신규 | 2026-04-26 | 4-9에 흡수. eop-400w/index.astro line 185/190 |
 | 4-9 | EOP 케이스 이미지 보강 — SVPWM 120℃ 열평형(1Assy/2Assy), 극저온기동(rotor frames + BEMF observer 추가), 다이나모(전원통합 + Lower limit 응답성 슬라이드 교체) | 2026-04-26 | pdftoppm으로 PPTX→PDF→PNG 직접 슬라이드 렌더 방식 도입 |
 | 4-1 | 전체 페이지 리뷰 — 홈 + 특허 페이지 | 2026-04-07 | 이슈 없음, 이미지/수치/링크 정상 |
 | 4-6 | 상태머신 Mermaid SVG → HTML 컴포넌트 교체 + CAN 테이블 추가 | 2026-04-07 | StateMachine.astro + CAN 6노드 테이블 (ss500 케이스) |

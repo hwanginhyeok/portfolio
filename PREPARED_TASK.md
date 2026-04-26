@@ -15,9 +15,7 @@
 | B1-06 | VCU PCB 실물 + CAN 장비 화면 | P3 | 촬영 | 기존 TODO. W06/W07 |
 | B1-07 | GT-SS500 PM 경험 문서화 (APQP/WBS/이슈관리/BOM) | P2 | | 기존 2-3. E01 |
 | B1-08 | AI 활용 사례 + 사이드 프로젝트 3종 문서화 | P2 | | 기존 2-4/2-5 병합. E02/E03 |
-| B1-09 | SVPWM 사진 교체 — 현재 pwm-chart-55c/120c 잘못됨 | P1 | 사용자와 같이 발굴 | eop-400w 페이지. PPTX/HIH_2 검색 |
-| B1-10 | 저온 기동 사진 발굴 — -40°C 챔버/시간 단축 | P1 | 사용자와 같이 발굴 | patent + eop-400w 페이지 보강 |
-| B1-11 | 다이나모 시스템 사진 다시 찾기 | P1 | 사용자와 같이 발굴 | 현 dynamo-schematic/response 외 후보 |
+| B1-10b | 저온 기동 사진 — patent 페이지 보강 | P2 | 사용자와 같이 발굴 | patent/index.astro에 -40°C 챔버 또는 기동 파형 이미지 추가 (eop-400w쪽은 완료) |
 | B1-12 | 내구성 사진 신품으로 교체 | P1 | 사용자와 같이 발굴 | test-engineering 페이지 durability-before/after 교체 |
 | B1-13 | 양산 전장함 사진 최신본 적용 | P1 | B1-05 (W05) | ss500-state-machine line 352 교체 |
 | B1-14 | SVPWM/DPWM 절환 핵심 본문 재정의 | P1 | 사용자 입력 | "절환 로직 핵심은 딴거" — CONTENT_V2 §4.2 + eop-400w 페이지 |
