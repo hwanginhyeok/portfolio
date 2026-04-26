@@ -133,4 +133,4 @@
 | P-04 Solar Energy 정확한 권/페이지/DOI | DOI 직접 접속 검증 |
 | P-02 PCIM Asia 2022 정확한 페이지 | VDE proceedings 또는 IEEE 직접 |
 | C-01~C-03 한국 학회 발표 PDF | 학회 홈페이지/ResearchGate |
-| 2025/2026 신규 논문 | Google Scholar 미발견 — 추후 모니터링 |
+| 2025/2026 신규 논문 | Google Scholar 미발견 — 추후 모니터링. 단 같은 랩 IEEE Access 2025 논문(Noh/Lee/Oh/Kang/Kim)은 황인혁 미포함 확인 |
