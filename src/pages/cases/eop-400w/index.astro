@@ -40,17 +40,58 @@ const base = import.meta.env.BASE_URL;
         <h3 class="text-lg font-bold text-primary mb-2">해결과정</h3>
         <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm">
           <li>지령전압 크기에 따른 DPWM↔SVPWM 절환 알고리즘 단독 개발 (NXP MC9S12ZVMC, C)</li>
-          <li>55°/85°/120° × 2 Assy × 2 PWM = <strong>12세트</strong> 비교 시험 설계 및 실행</li>
-          <li>48분 52초 연속 수집 → 정량적 입증 → 국책과제 완료보고서 핵심 근거</li>
+          <li>55°/85°/120° × 2 Assy × 2 PWM = <strong>12세트</strong> 비교 시험 설계 및 실행 → 국책과제 완료보고서 핵심 근거</li>
         </ul>
+
+        {/* 변경 2026-04-26 (3rd): "48분 52초" 제거. 조건별 개선 효과 표로 정리 (B1-14 사용자 지시) */}
+        <div class="mt-4 overflow-x-auto">
+          <table class="w-full text-xs border-collapse">
+            <thead>
+              <tr class="border-b-2 border-primary text-left">
+                <th class="py-2 pr-3 font-bold">시험 온도</th>
+                <th class="py-2 pr-3 font-bold">시료</th>
+                <th class="py-2 pr-3 font-bold">비교</th>
+                <th class="py-2 font-bold text-accent">SVPWM 절환 효과</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-700">
+              <tr class="border-b border-gray-100">
+                <td class="py-2 pr-3 font-bold">120°C 열평형</td>
+                <td class="py-2 pr-3 text-muted">HSG#26 1Assy</td>
+                <td class="py-2 pr-3">DPWM ↔ SVPWM</td>
+                <td class="py-2 text-accent font-bold">FET ↓ 1~6°C · 입력전력 ↓ 1~3.8%</td>
+              </tr>
+              <tr class="border-b border-gray-100">
+                <td class="py-2 pr-3 font-bold">120°C 열평형</td>
+                <td class="py-2 pr-3 text-muted">HSG#26 2Assy</td>
+                <td class="py-2 pr-3">DPWM ↔ SVPWM</td>
+                <td class="py-2 text-accent font-bold">반복 시험 — 동일 패턴 정량 확인</td>
+              </tr>
+              <tr class="border-b border-gray-100">
+                <td class="py-2 pr-3 font-bold">85°C</td>
+                <td class="py-2 pr-3 text-muted">1Assy / 2Assy</td>
+                <td class="py-2 pr-3">DPWM ↔ SVPWM</td>
+                <td class="py-2 text-muted">중온 영역 검증</td>
+              </tr>
+              <tr>
+                <td class="py-2 pr-3 font-bold">55°C</td>
+                <td class="py-2 pr-3 text-muted">1Assy / 2Assy</td>
+                <td class="py-2 pr-3">DPWM ↔ SVPWM</td>
+                <td class="py-2 text-muted">저온 영역 검증</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="text-[10px] text-muted mt-2">시험 설비: HSG#26 (2024-04-24 시험) · RPM·토크·전류·압력·온도(FL_HOT, TC02-04) 동시 수집</p>
+        </div>
+
         <div class="grid grid-cols-2 gap-3 mt-4">
           <figure>
             <img src={`${base}images/cases/eop-400w/pwm-chart-120c-1assy.webp`} alt="120°C 열평형 1Assy 시험" class="rounded-lg border w-full" loading="lazy" />
-            <figcaption class="text-xs text-muted mt-1">120°C 열평형 — HSG#26 <strong>1Assy</strong> (240424 12:05) · RPM·토크·전류·압력·온도(FL_HOT, TC02-04) 동시 수집</figcaption>
+            <figcaption class="text-xs text-muted mt-1">120°C 열평형 — HSG#26 <strong>1Assy</strong></figcaption>
           </figure>
           <figure>
             <img src={`${base}images/cases/eop-400w/pwm-chart-120c-2assy.webp`} alt="120°C 열평형 2Assy 시험" class="rounded-lg border w-full" loading="lazy" />
-            <figcaption class="text-xs text-muted mt-1">120°C 열평형 — HSG#26 <strong>2Assy</strong> (240424 16:23) · 동일 패턴 반복 시험으로 PWM 기법별 FET 온도 1~6°C 저감 정량 확인</figcaption>
+            <figcaption class="text-xs text-muted mt-1">120°C 열평형 — HSG#26 <strong>2Assy</strong></figcaption>
           </figure>
         </div>
       </div>

@@ -30,8 +30,8 @@
 | 4 | ThemeHeatmap | `ThemeHeatmap.astro` + `theme-map.json` | 🟠 | 🟠 | THEME_MAP_V3 (B3 영역) | LifecycleHeatmap 교체 예정 |
 | 5 | SystemArchitecture | `SystemArchitecture.astro` | 🟢 | 🟢 | CONTENT_V2 §4.1 | — |
 | 6 | CaseCard | `CaseCard.astro` + `cases.json` | 🟡 | 🟡 | cases.json | v3 6 카드 vs 현재 4 카드 (B3 영역) |
-| 7 | Case · EOP-400W | `cases/eop-400w/index.astro` | 🟢 | 🟡 | CONTENT_V2 §4.2, INVENTORY 3-1 | B1-14 SVPWM/DPWM 본문 재정의 (사용자 입력) |
-| 8 | Case · SS500 상태머신 | `cases/ss500-state-machine/index.astro` | 🟢 | 🟢 | CONTENT_V2 §4.1, §7A.2 | B1-13 양산 전장함 사진만 잔여 (사용자 IMG 선택). B1-16 동파 문구 삭제 완료 |
+| 7 | Case · EOP-400W | `cases/eop-400w/index.astro` | 🟢 | 🟢 | CONTENT_V2 §4.2, INVENTORY 3-1 | B1-14 본문 재정의 완료 (조건별 개선 표 적용) |
+| 8 | Case · SS500 상태머신 | `cases/ss500-state-machine/index.astro` | 🟢 | 🟢 | CONTENT_V2 §4.1, §7A.2 | B1-13 양산 전장함 IMG_9304 적용 완료. B1-16 동파 문구 삭제 완료 |
 | 9 | Case · 시험 기획 (Test Engineering) | `cases/test-engineering/index.astro` | 🟢 | 🟢 | CONTENT_V2 §6 | — |
 | 10 | Case · 특허/논문 | `cases/patent/index.astro` | 🟢 | 🟢 | **PAPERS.md (신규 SSOT)** | RISS 외부 링크 적용 (2026-04-26) |
 | 11 | 논문/학회 SSOT | `docs/포트폴리오/PAPERS.md` | 🟢 | 🟢 | RISS + DBLP + IEEE + Google Scholar + Crossref | C-01~C-03 한국 학회 PDF, P-02 PCIM 페이지 (잔여) |
@@ -85,8 +85,8 @@
 
 | ID | 항목 | 필요한 입력 |
 |---|---|---|
-| U-1 | B1-13 양산 전장함 사진 | iCloud IMG 번호 또는 사진 직접 공유 |
-| U-2 | B1-14 SVPWM/DPWM 절환 본문 재정의 | "절환 로직 핵심" 메시지 |
+| ~~U-1~~ | B1-13 양산 전장함 사진 | ✅ 2026-04-26 — IMG_9304.JPEG (90도 좌회전, 1600x1200) 적용 |
+| ~~U-2~~ | B1-14 SVPWM/DPWM 절환 본문 재정의 | ✅ 2026-04-26 — "48분 52초" 제거 + 조건별 개선 효과 표 추가 |
 | ~~U-3~~ | B1-16 동파 파손 문구 | ✅ 2026-04-26 — 사용자 지시로 섹션 삭제 |
 | ~~U-4~~ | Hero 카운트 정책 | ✅ 2026-04-26 — 정직 옵션 (공저 저널 3 · 학회 4 · 수상 2) |
 | ~~U-5~~ | About 사이드 프로젝트 정책 | ✅ 2026-04-26 — 6→3 축소 (자율주행/AI/포트폴리오) |
