@@ -4,6 +4,8 @@
 
 | # | 태스크 | 완료일 | 비고 |
 |---|--------|--------|------|
+| B1-15 | CAN 5노드 블록다이어그램 컴포넌트 신규 — CanNetworkDiagram.astro | 2026-04-26 | ss500 페이지 CAN 섹션에 표 위 시각 요약. Tx/Rx 흐름 강조 |
+| B1-18 | Timeline 경력 최신순 정렬 (선임→주임→석사→학부) | 2026-04-26 | c97ed52에 흡수됨 |
 | B1-12 | 내구성 사진 신품 교체 — durability-before.webp 양산 샘플(2025-03-25)로 교체 | 2026-04-26 | KakaoTalk_20250325_105211688_15.jpg → 1600x1200 webp. after는 기존 유지 |
 | B1-09 | SVPWM 사진 교체 — pwm-chart-120c-1assy/2assy 신규 적용 | 2026-04-26 | 4-9에 흡수. eop-400w/index.astro line 48/52 |
 | B1-10 | 저온 기동 사진 발굴 — rotor-reference-frames + BEMF observer 적용 | 2026-04-26 | 4-9에 흡수. eop-400w/index.astro line 118/126 |

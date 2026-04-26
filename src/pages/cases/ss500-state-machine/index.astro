@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import StateMachine from '../../../components/StateMachine.astro';
+import CanNetworkDiagram from '../../../components/CanNetworkDiagram.astro';
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -112,8 +113,11 @@ const base = import.meta.env.BASE_URL;
     <!-- ─── 0b. CAN 네트워크 ─── -->
     <section class="space-y-4 mb-16">
       {/* 변경 2026-04-26: "6노드" → "5노드" (CONTENT_V2 §4.1/§7A.2 SSOT). 본문 5개와 일치 */}
+      {/* 변경 2026-04-26: B1-15 — CanNetworkDiagram 컴포넌트로 메시지 흐름 시각화 추가 (표 위) */}
       <h2 class="text-xl font-black text-primary border-b pb-2">CAN 네트워크 — 5노드 메시지 구조</h2>
       <p class="text-sm text-gray-600">VCU가 CAN Bus 500kbps를 통해 5개 노드를 중재한다. 각 노드의 Tx/Rx 역할을 정확히 이해해야 제어 로직을 작성할 수 있다.</p>
+
+      <CanNetworkDiagram />
 
       <div class="overflow-x-auto">
         <table class="w-full text-xs">
