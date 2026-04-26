@@ -4,7 +4,12 @@
 
 | # | 태스크 | 완료일 | 비고 |
 |---|--------|--------|------|
-| B1-17 | 특허 페이지 핵심 논문 P-2 카드 확정 — PHM Asia-Pacific 2023 (Kwon/Oh/Hwang/Kim, DOI 10.36001/phmap.2023.v4i1.3780) + PAPERS.md SSOT 신규 | 2026-04-26 | 학위논문/J-01 저널 정확한 출처는 B1-17b로 분리. CONTENT_V2 §15에 미해결 명시 |
+| U-4 | Hero 카운트 정직 옵션 — 공저 저널 3편 · 학회 4편 (수상 2) — Hero/Timeline/index 일괄 갱신 | 2026-04-26 | PAPERS.md SSOT 기준. "공저자" 명시 강조 |
+| U-5 | About 사이드 프로젝트 축소 — 6개 → 핵심 3개 (자율주행/AI 자동화/포트폴리오) | 2026-04-26 | index.astro |
+| B1-16 | "동파 파손 (#58)" 섹션 삭제 — ss500 페이지 | 2026-04-26 | 사용자 지시 "별로다 해도 반영이 안되니 없애라" |
+| Q-6 | cases.json ss500 카드 result 갱신 — CAN 5노드·현장 이슈 37건+ | 2026-04-26 | 010eeb0 |
+| Q-1~Q-4 | 논문 인용 정보 검증 (RISS T-01, P-01 IEEE TIM, P-04 Solar Energy, P-05 J. Power Electronics) | 2026-04-26 | 9f07d9e |
+| B1-17 | 특허 페이지 핵심 논문 P-2 카드 확정 — IEEE TIM 2024 (Oh/Kim/Hwang/Choi/Kim) + PAPERS.md SSOT 신규 | 2026-04-26 | 학위논문/J-01 저널 정확한 출처는 B1-17b로 분리. CONTENT_V2 §15에 미해결 명시 |
 | B1-15 | CAN 5노드 블록다이어그램 컴포넌트 신규 — CanNetworkDiagram.astro | 2026-04-26 | ss500 페이지 CAN 섹션에 표 위 시각 요약. Tx/Rx 흐름 강조 |
 | B1-18 | Timeline 경력 최신순 정렬 (선임→주임→석사→학부) | 2026-04-26 | c97ed52에 흡수됨 |
 | B1-12 | 내구성 사진 신품 교체 — durability-before.webp 양산 샘플(2025-03-25)로 교체 | 2026-04-26 | KakaoTalk_20250325_105211688_15.jpg → 1600x1200 webp. after는 기존 유지 |

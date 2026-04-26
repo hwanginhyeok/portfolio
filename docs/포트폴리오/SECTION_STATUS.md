@@ -24,14 +24,14 @@
 
 | # | 섹션 | 위치 | SSOT(S) | Quality(Q) | 핵심 SSOT | 미해결 |
 |---|---|---|:---:|:---:|---|---|
-| 1 | Hero | `Hero.astro` | 🟡 | 🟡 | CONTENT_V2 §2.2 / FACT_CHECK | 카운트 정합 (저널/학회 편수) |
-| 2 | About | `index.astro` line 88~ | 🟡 | 🟠 | CONTENT_V2 §11 | 사이드 프로젝트 6개 표시 정책 미정 |
+| 1 | Hero | `Hero.astro` | 🟢 | 🟢 | PAPERS.md SSOT | U-4 정직 옵션 적용 (공저 저널 3 · 학회 4 · 수상 2) |
+| 2 | About | `index.astro` line 88~ | 🟢 | 🟡 | CONTENT_V2 §11 | U-5 적용 — 사이드 프로젝트 6→3 축소 |
 | 3 | Timeline | `Timeline.astro` | 🟢 | 🟢 | CONTENT_V2 §1 + Timeline 검증 | — |
 | 4 | ThemeHeatmap | `ThemeHeatmap.astro` + `theme-map.json` | 🟠 | 🟠 | THEME_MAP_V3 (B3 영역) | LifecycleHeatmap 교체 예정 |
 | 5 | SystemArchitecture | `SystemArchitecture.astro` | 🟢 | 🟢 | CONTENT_V2 §4.1 | — |
 | 6 | CaseCard | `CaseCard.astro` + `cases.json` | 🟡 | 🟡 | cases.json | v3 6 카드 vs 현재 4 카드 (B3 영역) |
 | 7 | Case · EOP-400W | `cases/eop-400w/index.astro` | 🟢 | 🟡 | CONTENT_V2 §4.2, INVENTORY 3-1 | B1-14 SVPWM/DPWM 본문 재정의 (사용자 입력) |
-| 8 | Case · SS500 상태머신 | `cases/ss500-state-machine/index.astro` | 🟢 | 🟡 | CONTENT_V2 §4.1, §7A.2 | B1-13 양산 전장함 사진 (사용자 IMG 선택), B1-16 동파 문구 |
+| 8 | Case · SS500 상태머신 | `cases/ss500-state-machine/index.astro` | 🟢 | 🟢 | CONTENT_V2 §4.1, §7A.2 | B1-13 양산 전장함 사진만 잔여 (사용자 IMG 선택). B1-16 동파 문구 삭제 완료 |
 | 9 | Case · 시험 기획 (Test Engineering) | `cases/test-engineering/index.astro` | 🟢 | 🟢 | CONTENT_V2 §6 | — |
 | 10 | Case · 특허/논문 | `cases/patent/index.astro` | 🟢 | 🟢 | **PAPERS.md (신규 SSOT)** | RISS 외부 링크 적용 (2026-04-26) |
 | 11 | 논문/학회 SSOT | `docs/포트폴리오/PAPERS.md` | 🟢 | 🟢 | RISS + DBLP + IEEE + Google Scholar + Crossref | C-01~C-03 한국 학회 PDF, P-02 PCIM 페이지 (잔여) |
@@ -76,9 +76,9 @@
 | ~~Q-2~~ | P-05 J. Power Electronics 권/페이지 (Vol 24 Issue 5, pp 822-831) | ✅ 2026-04-26 |
 | ~~Q-3~~ | P-01 IEEE TIM 권/Article No (Vol 73, pp 1-8, Art. 10726721) | ✅ 2026-04-26 |
 | ~~Q-4~~ | P-04 Solar Energy DOI/페이지 (Vol 276, Art 112645) + 저자 순서 정정 | ✅ 2026-04-26 |
-| **Q-5** | Hero/Timeline 카운트 표기 통일 (사용자 결정 U-4 받은 후) | 대기 |
-| **Q-6** | cases.json metric 갱신 (특허 페이지 카드 수치) | 가능 |
-| **Q-7** | EOP-400W 페이지 SVPWM 본문 톤 점검 (B1-14 완료 전 사전 점검) | 가능 |
+| ~~Q-5~~ | Hero/Timeline 카운트 표기 통일 (U-4 정직 옵션 적용) | ✅ 2026-04-26 |
+| ~~Q-6~~ | cases.json ss500 카드 result 갱신 | ✅ 2026-04-26 (010eeb0) |
+| ~~Q-7~~ | EOP-400W 페이지 SVPWM 본문 톤 점검 — 사실 OK, B1-14 대기 | ✅ 2026-04-26 |
 | **Q-8** | 5섹션 와이어프레임 초안 (B3-01) — THEME_MAP_V3 기반 placeholder | B2 완료 후 |
 
 ## 5. 사용자 입력 대기 (즉시 위임 불가)
@@ -87,9 +87,9 @@
 |---|---|---|
 | U-1 | B1-13 양산 전장함 사진 | iCloud IMG 번호 또는 사진 직접 공유 |
 | U-2 | B1-14 SVPWM/DPWM 절환 본문 재정의 | "절환 로직 핵심" 메시지 |
-| U-3 | B1-16 동파 파손(#58) 문구 | 원인/대책 톤 결정 |
-| U-4 | Hero 카운트 정책 | "저널 3편 · 학회 4편" 또는 보수적 "저널 1편 · 학회 4편" |
-| U-5 | About 사이드 프로젝트 6개 정책 | 표시 유지 / 축소 / 제거 |
+| ~~U-3~~ | B1-16 동파 파손 문구 | ✅ 2026-04-26 — 사용자 지시로 섹션 삭제 |
+| ~~U-4~~ | Hero 카운트 정책 | ✅ 2026-04-26 — 정직 옵션 (공저 저널 3 · 학회 4 · 수상 2) |
+| ~~U-5~~ | About 사이드 프로젝트 정책 | ✅ 2026-04-26 — 6→3 축소 (자율주행/AI/포트폴리오) |
 
 ---
 

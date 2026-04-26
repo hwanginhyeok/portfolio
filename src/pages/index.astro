@@ -61,8 +61,8 @@ const base = import.meta.env.BASE_URL;
 
           <h3 class="font-bold text-lg mt-6 mb-2">학력</h3>
           <ul class="space-y-2 text-sm text-gray-600">
-            {/* 변경 2026-04-26: 저널 2/학회 5 → 저널 1/학회 4 (CONTENT_V2 §4.3 정합성 통일) */}
-            <li><strong>석사</strong> — 모터 모델링/고장진단(PHM), 저널 1편 · 학회 4편</li>
+            {/* 변경 2026-04-26 (2nd): U-4 정직 옵션 — PAPERS.md SSOT (공저 저널 3 + 학회 4 + 수상 2) */}
+            <li><strong>석사</strong> — 모터 모델링/고장진단(PHM), 공저 저널 3편 · 학회 4편 (수상 2건)</li>
             <li><strong>학부</strong> — 기계공학부 (학사) · 기계설계학과 (석사)</li>
           </ul>
 
@@ -86,12 +86,10 @@ const base = import.meta.env.BASE_URL;
           </div>
 
           <h3 class="font-bold text-lg mt-6 mb-2">사이드 프로젝트</h3>
+          {/* 변경 2026-04-26 (2nd): U-5 축소 — 6개 → 엔지니어링 핵심 3개 (자율주행·AI 워크플로우·포트폴리오) */}
           <div class="flex flex-wrap gap-2 text-sm">
             {[
               '자율주행 ROS2+Gazebo',
-              '정치통계 Next.js',
-              '주식분석 Python',
-              '음악 프로덕션',
               'AI 개발 자동화',
               '포트폴리오 (이 사이트)'
             ].map((proj) => (
