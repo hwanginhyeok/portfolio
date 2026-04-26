@@ -33,8 +33,8 @@
 | 7 | Case · EOP-400W | `cases/eop-400w/index.astro` | 🟢 | 🟡 | CONTENT_V2 §4.2, INVENTORY 3-1 | B1-14 SVPWM/DPWM 본문 재정의 (사용자 입력) |
 | 8 | Case · SS500 상태머신 | `cases/ss500-state-machine/index.astro` | 🟢 | 🟡 | CONTENT_V2 §4.1, §7A.2 | B1-13 양산 전장함 사진 (사용자 IMG 선택), B1-16 동파 문구 |
 | 9 | Case · 시험 기획 (Test Engineering) | `cases/test-engineering/index.astro` | 🟢 | 🟢 | CONTENT_V2 §6 | — |
-| 10 | Case · 특허/논문 | `cases/patent/index.astro` | 🟢 | 🟢 | **PAPERS.md (신규 SSOT)** | RISS control_no 링크, J-01 저널 게재지 |
-| 11 | 논문/학회 SSOT | `docs/포트폴리오/PAPERS.md` | 🟢 | 🟢 | RISS + DBLP + IEEE + Google Scholar | T-01 RISS 링크, P-04 권/페이지, 한국 학회 PDF |
+| 10 | Case · 특허/논문 | `cases/patent/index.astro` | 🟢 | 🟢 | **PAPERS.md (신규 SSOT)** | RISS 외부 링크 적용 (2026-04-26) |
+| 11 | 논문/학회 SSOT | `docs/포트폴리오/PAPERS.md` | 🟢 | 🟢 | RISS + DBLP + IEEE + Google Scholar + Crossref | C-01~C-03 한국 학회 PDF, P-02 PCIM 페이지 (잔여) |
 | 12 | StateMachine 다이어그램 | `StateMachine.astro` | 🟢 | 🟢 | CONTENT_V2 §7A | — |
 | 13 | CAN 5노드 다이어그램 | `CanNetworkDiagram.astro` | 🟢 | 🟢 | CONTENT_V2 §4.1 | — |
 
@@ -44,7 +44,7 @@
 
 | 블록 | SSOT 산출물 | 상태 | 미해결 |
 |------|------|:----:|---|
-| **B1 인벤토리** | `docs/blocks/01-inventory/INVENTORY.md` + `HOMEPAGE_AUDIT_20260426.md` + **PAPERS.md** | 🟡 | B1-13/14/16/17b 사용자 입력 대기 |
+| **B1 인벤토리** | `docs/blocks/01-inventory/INVENTORY.md` + `HOMEPAGE_AUDIT_20260426.md` + **PAPERS.md** | 🟢 게이트 통과 가능 | 잔여는 사용자 입력 대기 (B1-13/14/16) — 본 문서 §5 참조 |
 | **B2 활용 전략** | `USAGE_STRATEGY.md` (미작성) | 🔴 | B1 완료 후 착수 |
 | **B3 배치** | `LAYOUT.md` (미작성) | 🔴 | B2 완료 후 |
 | **B4 디자인** | `DESIGN_SYSTEM.md` (미작성) | 🔴 | B3 완료 후 |
@@ -70,16 +70,16 @@
 
 > 사용자가 "이거 시켜" 하면 그대로 위임 처리.
 
-| ID | 작업 | 예상 시간 |
+| ID | 작업 | 상태 |
 |---|---|:---:|
-| **Q-1** | RISS에서 T-01 학위논문 control_no 추출 → patent 페이지 외부 링크 추가 | 5분 |
-| **Q-2** | DOI 10.1007/s43236-024-00810-8 직접 접속해 P-05 권/페이지/완전 인용 검증 | 5분 |
-| **Q-3** | DOI 10.1109/TIM.2024.3472910 직접 접속해 P-01 권/페이지/abstract 추출 | 5분 |
-| **Q-4** | Solar Energy P-04 권/페이지/DOI 추출 + 저자 순서 검증 | 5분 |
-| **Q-5** | Hero/Timeline 카운트 표기 통일 (저널 3 / 학회 4 vs 보수적 1+4 — 사용자 결정 후 적용) | 10분 |
-| **Q-6** | cases.json metric 갱신 (특허 페이지 카드 수치) | 10분 |
-| **Q-7** | EOP-400W 페이지 SVPWM 본문 톤 점검 (사실 오류 없는지) | 15분 |
-| **Q-8** | 5섹션 와이어프레임 초안 (B3-01) — THEME_MAP_V3 기반 placeholder | 30분 |
+| ~~Q-1~~ | RISS에서 T-01 학위논문 control_no 추출 → patent 페이지 외부 링크 추가 | ✅ 2026-04-26 |
+| ~~Q-2~~ | P-05 J. Power Electronics 권/페이지 (Vol 24 Issue 5, pp 822-831) | ✅ 2026-04-26 |
+| ~~Q-3~~ | P-01 IEEE TIM 권/Article No (Vol 73, pp 1-8, Art. 10726721) | ✅ 2026-04-26 |
+| ~~Q-4~~ | P-04 Solar Energy DOI/페이지 (Vol 276, Art 112645) + 저자 순서 정정 | ✅ 2026-04-26 |
+| **Q-5** | Hero/Timeline 카운트 표기 통일 (사용자 결정 U-4 받은 후) | 대기 |
+| **Q-6** | cases.json metric 갱신 (특허 페이지 카드 수치) | 가능 |
+| **Q-7** | EOP-400W 페이지 SVPWM 본문 톤 점검 (B1-14 완료 전 사전 점검) | 가능 |
+| **Q-8** | 5섹션 와이어프레임 초안 (B3-01) — THEME_MAP_V3 기반 placeholder | B2 완료 후 |
 
 ## 5. 사용자 입력 대기 (즉시 위임 불가)
 

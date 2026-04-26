@@ -14,10 +14,12 @@
 - **국문 제목**: 전자기 해석을 이용한 매입형 영구자석 동기 전동기의 고장 진단 시뮬레이션에 관한 연구
 - **영문 제목**: Fault Diagnosis Simulation of Interior Permanent Magnet Synchronous Motor using Electromagnetic Analysis
 - **저자**: 황인혁 (Inhyeok Hwang)
-- **소속**: 건국대학교 대학원 (국내석사)
+- **소속**: 건국대학교 대학원 **기계설계학과** (국내석사)
 - **연도**: 2023 (학위수여 2023-03-22)
-- **지도교수**: 김남수 (Namsu Kim)
-- **주제**: 공학
+- **지도교수**: 김남수 (Namsu Kim) — RBDO Lab
+- **페이지 수**: 49p
+- **RISS control_no**: `f678963f23f2e418ffe0bdc3ef48d419`
+- **RISS 링크**: https://www.riss.kr/search/detail/DetailView.do?p_mat_type=be54d9b8bc7cdb09&control_no=f678963f23f2e418ffe0bdc3ef48d419
 - **핵심 기여**: flux-state variable model + FEA로 IPMSM의 자기포화 효과 포함 시뮬레이션. 모터 구동 시스템 + 인버터 제어와 Co-simulation. 다양한 운전 조건 실험 검증.
 - **출처**: RISS 학위논문 DB (2026-04-26 검증)
 - **비고**: J-01 ("Co-simulation for Fault Diagnosis of 120kW IPMSM and Experimental Validation")의 한국어 학위논문 정본. 사이트의 P-1 카드 정본.
@@ -29,7 +31,9 @@
 ### P-01. IEEE TIM 2024 ⭐ (인버터 본드와이어 고장 진단) — 정본
 - **제목**: Programmable Online Bond-Wire Fault Detection and Location Method for Insulated Gate Bipolar Transistor Using Inverter Output Parameters
 - **저자 (순서)**: Jaewook Oh, Inhwan Kim, **Inhyeok Hwang**, Bowook Choi, Namsu Kim
-- **저널**: IEEE Transactions on Instrumentation and Measurement, Vol. 73, pp. 1-8 (2024)
+- **저널**: IEEE Transactions on Instrumentation and Measurement, **Vol. 73, pp. 1-8** (2024)
+- **Article No / Document ID**: 10726721
+- **출판일**: 2024-10-21 (online)
 - **DOI**: https://doi.org/10.1109/TIM.2024.3472910
 - **링크**: https://ieeexplore.ieee.org/document/10726721/
 - **핵심 기여**: IGBT 본드와이어 lift-off 결함을 게이트 신호/콜렉터 단자 접근 없이 인버터 출력 파라미터(3상 전동기 단자 전압)만으로 검출 + 위치 식별. EV 인버터 신뢰성 진단의 핵심 기여.
@@ -52,18 +56,21 @@
 
 ### P-04. Solar Energy 2024 (PV 폴리머 수명 예측)
 - **제목**: Lifetime prediction of polymeric materials in PV module under continuously varying environments based on damage summation approach
-- **저자 (순서)**: Sungho Choi, Woyeong Kwon, Jaewook Oh, **Inhyeok Hwang**, Junggun Lee, et al., Namsu Kim
-- **저널**: Solar Energy, Elsevier (2024)
+- **저자 (순서, 10명)**: Sikgyeong Choi, Woyeong Kwon, Jaewook Oh, **Inhyeok Hwang** (4번째), Junho Lee, Jeonghae Lee, Gil Hong, Jaewan Kim, Dabo Shim, Namsu Kim (교신)
+- **저널**: Solar Energy, Elsevier, **Vol. 276, Article 112645** (2024)
+- **DOI**: https://doi.org/10.1016/j.solener.2024.112645
+- **출판일**: 2024-06-08 (online) / 2024-07 (print)
 - **링크**: https://www.sciencedirect.com/science/article/pii/S0038092X24003402
-- **핵심 기여**: PV 모듈 폴리머 재료의 변동 환경 노출 시 손상 누적(damage summation) 기반 수명 예측. 황인혁은 공저자(랩 협업).
+- **핵심 기여**: 백시트 등 폴리머의 가속수명시험 기반 경험식 수명모델 도출 → 실제 운영조건과 ALT 조건 양쪽에서 누적 damage 계산 → damage summation으로 변동 환경하 수명 추정.
 
-### P-05. Journal of Power Electronics 2024 ⭐ NEW (IPMSM 가속수명시험)
+### P-05. Journal of Power Electronics 2024 (IPMSM 가속수명시험)
 - **제목**: Identification of failure modes in interior permanent magnet synchronous motor under accelerated life test based on dual sensor architecture
-- **저자 (순서)**: Sikgyeong Choi, Jaewook Oh, Juho Lee, Woyeong Kwon, Jeonghae Lee, **Inhyeok Hwang**, Jongbum Park, Namsu Kim
-- **저널**: Journal of Power Electronics, Vol. 24, p. 822 (2024)
+- **저자 (순서, 8명)**: Sikgyeong Choi, Jaewook Oh, Juho Lee, Woyeong Kwon, Jeonghae Lee, **Inhyeok Hwang** (6번째), Jongbum Park, Namsu Kim (교신)
+- **저널**: Journal of Power Electronics, **Vol. 24, Issue 5, pp. 822-831** (2024)
 - **DOI**: https://doi.org/10.1007/s43236-024-00810-8
+- **출판일**: 2024-04-12 (online) / 2024-05 (print)
 - **링크**: https://link.springer.com/article/10.1007/s43236-024-00810-8
-- **핵심 기여**: IPMSM 가속수명시험 + dual sensor 아키텍처(상전류·온도·축 변위·진동)로 고장 모드 식별. 방사형 하중 스트레스 영향 분석.
+- **핵심 기여**: PMSM 샤프트에 radial load → 가속수명시험. phase current·온도·shaft displacement·진동 모니터링 → 베어링/샤프트가 가장 취약. 전류와 진동 신호로 failure mode 분류 가능.
 
 ---
 
@@ -129,8 +136,11 @@
 
 | 항목 | 작업 |
 |---|---|
-| T-01 학위논문 RISS control_no | 직접 RISS 검색 후 패스 링크 확보 |
-| P-04 Solar Energy 정확한 권/페이지/DOI | DOI 직접 접속 검증 |
-| P-02 PCIM Asia 2022 정확한 페이지 | VDE proceedings 또는 IEEE 직접 |
-| C-01~C-03 한국 학회 발표 PDF | 학회 홈페이지/ResearchGate |
-| 2025/2026 신규 논문 | Google Scholar 미발견 — 추후 모니터링. 단 같은 랩 IEEE Access 2025 논문(Noh/Lee/Oh/Kang/Kim)은 황인혁 미포함 확인 |
+| ~~T-01 학위논문 RISS control_no~~ | ✅ 2026-04-26 확보 (`f678963f23f2e418ffe0bdc3ef48d419`) |
+| ~~P-04 Solar Energy 정확한 권/페이지/DOI~~ | ✅ 2026-04-26 확보 (Vol 276, Art 112645, DOI 10.1016/j.solener.2024.112645) |
+| ~~P-05 J. Power Electronics 페이지/Issue~~ | ✅ 2026-04-26 확보 (Vol 24 Issue 5, pp 822-831) |
+| ~~P-01 IEEE TIM 출판일/Article No~~ | ✅ 2026-04-26 확보 (Art. 10726721, 2024-10-21 online) |
+| P-02 PCIM Asia 2022 정확한 페이지 | VDE proceedings 또는 IEEE 직접 — 잔여 |
+| C-01~C-03 한국 학회 발표 PDF | 학회 홈페이지/ResearchGate — 잔여 |
+| dcollection.konkuk 직접 링크 | 외부 검색엔진 인덱싱 막힘 — RISS "원문보기" 경유 권장 |
+| 2025/2026 신규 논문 | Google Scholar 미발견 (모니터링). IEEE Access 2025 (Noh/Lee/Oh/Kang/Kim)는 황인혁 미포함 확인 |

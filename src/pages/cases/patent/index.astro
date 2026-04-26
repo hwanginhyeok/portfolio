@@ -97,15 +97,18 @@ const base = import.meta.env.BASE_URL;
 
       <div class="space-y-6">
         <!-- 논문 1: 석사 학위논문 (T-01, RISS 확정) -->
-        {/* 변경 2026-04-26: PAPERS.md SSOT 정본 — RISS 검증, 지도교수 김남수 */}
+        {/* 변경 2026-04-26: PAPERS.md SSOT 정본 — RISS control_no f678963f...419 */}
         <div class="border rounded-xl p-6 space-y-3">
           <div class="flex items-center gap-2 mb-1 flex-wrap">
             <span class="text-xs bg-accent text-white px-2 py-0.5 rounded-full">석사 학위논문</span>
-            <span class="text-xs text-muted">건국대학교 대학원 · 2023 · 지도교수 김남수</span>
+            <span class="text-xs text-muted">건국대학교 대학원 기계설계학과 · 2023 · 지도교수 김남수</span>
           </div>
           <h3 class="text-lg font-bold text-primary">전자기 해석을 이용한 매입형 영구자석 동기 전동기의 고장 진단 시뮬레이션에 관한 연구</h3>
           <p class="text-xs text-muted italic">Fault Diagnosis Simulation of Interior Permanent Magnet Synchronous Motor using Electromagnetic Analysis</p>
           <p class="text-sm text-gray-600">flux-state variable model + FEA로 IPMSM의 자기포화 효과 포함 시뮬레이션. 모터 구동 시스템 + 인버터 제어와 Co-simulation 환경 구축. 다양한 운전 조건에서 실험 검증.</p>
+          <p class="text-xs">
+            <a href="https://www.riss.kr/search/detail/DetailView.do?p_mat_type=be54d9b8bc7cdb09&control_no=f678963f23f2e418ffe0bdc3ef48d419" target="_blank" rel="noopener" class="text-accent hover:underline">RISS 학위논문 →</a>
+          </p>
           <p class="text-xs text-muted">키워드: IPMSM · 전자기 해석 · 고장 진단 · Co-simulation · FEA · 자기포화</p>
         </div>
 
@@ -114,7 +117,7 @@ const base = import.meta.env.BASE_URL;
         <div class="border rounded-xl p-6 space-y-3">
           <div class="flex items-center gap-2 mb-1 flex-wrap">
             <span class="text-xs bg-accent text-white px-2 py-0.5 rounded-full">공저 저널 · IEEE TIM</span>
-            <span class="text-xs text-muted">IEEE Trans. Instrum. Meas. · Vol. 73 (2024) · 공저자 오재욱</span>
+            <span class="text-xs text-muted">IEEE Trans. Instrum. Meas., Vol. 73, pp. 1-8 (2024-10) · 공저자 오재욱</span>
           </div>
           <h3 class="text-lg font-bold text-primary">Programmable Online Bond-Wire Fault Detection and Location Method for Insulated Gate Bipolar Transistor Using Inverter Output Parameters</h3>
           <p class="text-sm text-gray-600">EV 인버터 IGBT의 본드와이어(bond-wire) lift-off 결함을 게이트 신호/콜렉터 단자 직접 접근 없이 <strong>인버터 출력 파라미터(3상 전동기 단자 전압)</strong>만으로 검출 + 위치 식별. 본드와이어 단선/열화는 IGBT 모듈 신뢰성의 핵심 결함 모드.</p>
