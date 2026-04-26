@@ -45,10 +45,10 @@
 | 블록 | SSOT 산출물 | 상태 | 미해결 |
 |------|------|:----:|---|
 | **B1 인벤토리** | `docs/blocks/01-inventory/INVENTORY.md` + `HOMEPAGE_AUDIT_20260426.md` + **PAPERS.md** | 🟢 게이트 통과 | P1 잔여 0. P2 (B1-02~08, B1-17b) 자료 발굴은 사용자 작업 영역 |
-| **B2 활용 전략** | `docs/blocks/02-usage/USAGE_STRATEGY.md` (골격 작성) | 🟡 진행 | §1 타겟 회사·JD §2 메시지 확정 — 사용자 입력 대기 |
-| **B3 배치** | `LAYOUT.md` (미작성) | 🔴 | B2 완료 후 |
-| **B4 디자인** | `DESIGN_SYSTEM.md` (미작성) | 🔴 | B3 완료 후 |
-| **B5 부가** | 이력서·GitHub·영문 | 🔴 | B4 완료 후 |
+| **B2 활용 전략** | `docs/blocks/02-usage/USAGE_STRATEGY.md` 골격 | 🟡 | §1 타겟 회사·JD §2 메시지 확정 — 사용자 입력 대기 |
+| **B3 배치** | `docs/blocks/03-layout/LAYOUT.md` 골격 | 🟡 | Hero 후보 3 / Impact 위치 / 신규 케이스 후보 사용자 결정 대기 |
+| **B4 디자인** | `docs/blocks/04-design/DESIGN_SYSTEM.md` 골격 | 🟡 | 10절 + 5건 사용자 결정 (다크모드/폰트 등) |
+| **B5 부가** | `docs/blocks/05-extra/RESUME.md` + `GITHUB_PROFILE.md` + `ENGLISH_VERSION.md` 골격 | 🟡 | 3 산출물 골격 완료. 사용자 입력 대기 (연락처/어학/i18n 옵션) |
 
 ---
 
