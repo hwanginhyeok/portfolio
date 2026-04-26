@@ -1,5 +1,18 @@
 # Difficulties & Know-how
 
+## D-006: iCloud for Windows 동기화 폴더 — Read 호출 시 자동 다운로드 트리거
+- **날짜**: 2026-04-26
+- **상황**: B1-13 양산 전장함 사진 발굴 위해 `/mnt/c/Users/gint pcd/iCloudPhotos/Photos/` 사진 약 10장 Read 도구로 열람
+- **문제**: iCloud for Windows는 온디맨드 동기화(스마트 다운로드) — 로컬엔 메타만 있고 실제 파일은 클라우드. Read 호출 시마다 자동 다운로드 발생
+- **삽질**: WSL `find -printf` 메타데이터로는 사진 내용 식별 불가. 무작정 샘플링하면서 다운로드 누적
+- **해결**: 사용자가 알아채고 중단 요청 → 사용자가 iPhone/iCloud.com에서 직접 IMG 번호 골라주는 방식으로 전환
+- **노하우**:
+  - iCloud Photos는 약 7400장 규모. 무작위 탐색 절대 금지
+  - WSL에서는 썸네일 보기 불가 (Windows Explorer/iCloud 앱은 가능)
+  - 사진 식별이 필요하면 **사용자가 직접 골라준 1~2장만 처리**가 정답
+  - 큰 파일 다수 자동 다운로드는 디스크/네트워크 부담 + 사용자 메모리 부담
+- **관련 파일**: 없음 (원격 PC 환경 이슈)
+
 ## D-001: GitHub Pages base URL trailing slash 누락 → 케이스 링크 전부 깨짐
 - **날짜**: 2026-04-04
 - **상황**: GitHub Pages에 `/portfolio` base path로 배포, 케이스 상세페이지 링크 클릭 시 404
