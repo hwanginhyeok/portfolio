@@ -15,7 +15,6 @@
 | B1-06 | VCU PCB 실물 + CAN 장비 화면 | P3 | 촬영 | 기존 TODO. W06/W07 |
 | B1-07 | GT-SS500 PM 경험 문서화 (APQP/WBS/이슈관리/BOM) | P2 | | 기존 2-3. E01 |
 | B1-08 | AI 활용 사례 + 사이드 프로젝트 3종 문서화 | P2 | | 기존 2-4/2-5 병합. E02/E03 |
-| B1-10b | 저온 기동 사진 — patent 페이지 보강 | P2 | 사용자와 같이 발굴 | patent/index.astro에 -40°C 챔버 또는 기동 파형 이미지 추가 (eop-400w쪽은 완료) |
 | B1-17b | 학위논문 정확한 제목/J-01 저널 게재지 확정 | P2 | dcollection.konkuk / KCI 직접 검색 | PAPERS.md 미해결 항목. 현재 patent 페이지 P-1 카드는 CONTENT_V2 인용 제목 사용 중 |
 
 ## B2 — 활용 전략 (1개)
