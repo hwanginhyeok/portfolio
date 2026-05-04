@@ -8,29 +8,29 @@ const base = import.meta.env.BASE_URL;
     <div class="grid md:grid-cols-5 gap-8 items-center">
       <!-- 좌: 텍스트 (3/5) -->
       <div class="md:col-span-3">
-        {/* 변경 2026-04-26 (B3 LAYOUT): H-A + H-B 조합 — "스토리 흐름" 톤으로 재작성 (사용자 지시) */}
-        <p class="text-sm tracking-widest text-gray-400 uppercase mb-4">Motor Control · Embedded HW · Junior PM</p>
+        <p class="text-sm tracking-widest text-gray-400 uppercase mb-4">전력제어 · 임베디드 HW · 주니어 PM</p>
         <h1 class="font-display text-3xl md:text-5xl font-black leading-tight mb-6">
-          Full-stack Hardware<br />
-          0&rarr;1 Builder &middot; AI-Augmented
+          분야를 막론하고 —<br />
+          문제가 있으면 해결한다
         </h1>
 
         <p class="text-lg text-gray-300 max-w-xl mb-10">
-          대학원에서 Sim2Real(IPMSM 디지털트윈)로 모터를 검증했고,<br class="hidden md:block" />
-          회사에서 EOP &middot; GT-SS500 양산까지 끌고 갔습니다.<br class="hidden md:block" />
-          다음은 로보틱스로 확장 중.
+          코드·HW·기구·전력·SW. 경계 없이 엔지니어링 관점에서<br class="hidden md:block" />
+          원인을 찾고, 시험으로 증명하고, 양산까지 끌고 간다.
         </p>
 
         <div class="flex flex-wrap gap-x-8 gap-y-4 text-sm">
-          {/* 변경 2026-04-26: "14건 전력제어 이슈 직접 담당" 제거 (사용자 지시) */}
           <div>
             <span class="text-2xl font-black text-white">-40°C</span>
             <span class="text-gray-400 ml-1">극저온 기동 300→100초</span>
           </div>
           <div>
-            {/* 변경 2026-04-26 (2nd): U-4 정직 옵션 — PAPERS.md SSOT 기준 저널 3편(공저)·학회 4편 + 수상 2건 */}
             <span class="text-2xl font-black text-white">특허 2건</span>
-            <span class="text-gray-400 ml-1">공동 1·기여 1 + 공저 저널 3편·학회 4편 (수상 2)</span>
+            <span class="text-gray-400 ml-1">공동 1·기여 1 + 공저 저널 3편·학회 4편</span>
+          </div>
+          <div>
+            <span class="text-2xl font-black text-white">16대</span>
+            <span class="text-gray-400 ml-1">GT-SS500 · 0→1 풀사이클 완주</span>
           </div>
         </div>
       </div>
@@ -45,7 +45,7 @@ const base = import.meta.env.BASE_URL;
           width="640"
           height="480"
         />
-        <p class="text-xs text-gray-500 mt-2 text-center">PLUVA FRIEND GT-SS500</p>
+        <p class="text-xs text-muted mt-2 text-center">PLUVA FRIEND GT-SS500</p>
       </div>
     </div>
   </div>
