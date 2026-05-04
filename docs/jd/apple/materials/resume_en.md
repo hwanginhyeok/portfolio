@@ -1,14 +1,14 @@
 # Resume — Inhyeok Hwang
 
 > Target: Apple Korea · Reliability Engineer, Core Technology Operations
-> Version: 2026-05-04 v2 (Apple tailored — standard mapping applied)
-> Source SSOT: RESUME.md master + PAPERS.md + reliability_competency.md §3
+> Version: 2026-05-04 v3 (fact-check pass — RESUME.md SSOT direct quotation only)
+> Source SSOT: `docs/blocks/05-extra/RESUME.md`
 
 ---
 
 ## INHYEOK HWANG
 
-**Senior Researcher** · Electrical Control & Product Development (Junior PM)
+**Senior Researcher** · Electrical Control & Product Development (Junior PM, concurrent)
 **Email**: dlsgur5560@gmail.com
 **GitHub**: github.com/hwanginhyeok
 **Portfolio**: hwanginhyeok.github.io/portfolio
@@ -17,13 +17,9 @@
 
 ## SUMMARY
 
-Reliability engineer with a graduate background in **Reliability-Based Design Optimization (RBDO)** and **Prognostics & Health Management (PHM)** of electric motors. Conducted Power Cycling Tests (PCT per JESD47/JEP122) on IGBT modules, witnessed the full ALT design-test-redesign cycle for IPMSM fault characterization, and applied damage summation (Miner's Rule) to lifetime prediction under varying environments (IEEE TIM · Solar Energy · J. Power Electronics, 2024).
+Mechanical-design M.S. from Konkuk University's Reliability-Based Design Optimization (RBDO) Lab, with thesis research on IPMSM digital-twin fault diagnosis (Co-simulation of Ansys Maxwell FEM and a MATLAB/Simulink inverter model). Three peer-reviewed journal publications as co-author (IEEE Transactions on Instrumentation and Measurement · Solar Energy · Journal of Power Electronics, all 2024) and two Korean patents.
 
-In industry, built four test rigs aligned with MIL-STD-810 / IEC 60068-2 environmental test methods, authored 5 DFMEAs per AIAG-VDA 2019, closed 4 RCAs using 5 Why and Ishikawa diagrams, and operated an NCR tracking system (27 items) as FRACAS-equivalent closed-loop corrective action — all through APQP Phase 2–3 leading to first-article shipment of **16 units**.
-
-**Core competencies**: ALT design · PCT (JESD47/JEP122) · DFMEA/RCA (AIAG-VDA 2019) · FRACAS-equivalent NCR closed-loop · Environmental testing (MIL-STD-810 / IEC 60068-2 / IEC 60529) · Six Sigma DMAIC / Cpk/Ppk · Damage Summation (Miner's Rule) · PHM/RUL multi-sensor fault diagnosis
-
-**Bridge**: "I bridge academic rigor and production reality — the profile Apple mass production teams need most."
+Three years of industrial product development at GINT Corp.: led the GT-SS500 48 V autonomous speed sprayer through APQP Phase 2–3 to a first-article production plan of 16 units (plus 2 transport carts and 2 spares); authored DFMEA #201/#210 Step 1–7 with five high-priority risks closed before ramp; closed four root-cause analyses on real field issues; tracked 27 NCRs through closure; and built four custom test rigs in-house (dynamometer, fan bench, pump bench, bumper safety rig).
 
 ---
 
@@ -32,38 +28,33 @@ In industry, built four test rigs aligned with MIL-STD-810 / IEC 60068-2 environ
 ### GINT Corp. — Electrical Control R&D + Product Development (Junior PM, concurrent)
 **Senior Researcher** · Jan 2025 – Present
 
-**GT-SS500: 48V Electric Autonomous Speed Sprayer — Full Lifecycle**
-- Led APQP Phase 2–3 from algorithm development through first-article shipment (16 units); bridged design validation and production reality across 6 cross-functional teams
-- Authored **5 DFMEAs per AIAG-VDA 2019** (DFMEA #201/#210 Step 1–7); identified 5 high-priority action points (AP=H), all resolved before production ramp
-- **Led 4 RCAs using 5 Why and Ishikawa diagrams** — all resolved before production:
-  - MCB contact carbonization (#204): confirmed electrolytic corrosion mechanism → redesigned to IEC 60947-2 spec
-  - Control-mode state machine bug (#79): eliminated undefined state transitions → zero unintended drive incidents in validation
-  - Pump freeze failure: identified O-ring dimensional non-conformance → redesigned + re-qualified
-  - GND bounce noise: mapped to DFMEA, applied shielding/grounding countermeasure
-- **Operated NCR tracking (27 items) as part of FRACAS-equivalent closed-loop corrective action** (Failure → Reporting → Analysis → Corrective Action → System update)
-- **Designed and operated 4 test rigs aligned with MIL-STD-810 / IEC 60068-2 environmental test methods** — built from zero: dynamometer torque-control (nonlinearity 0.008%), fan bench (+57% airflow validated), pump bench, bumper safety rig (stop distance 0.082 m · peak current 308 A)
-- **Designed sealed CAN connectors meeting IEC 60529 IP67 requirements** for EOP 400W program
-- **Defined IQC/OQC inspection criteria consistent with Six Sigma DMAIC; monitored process capability indices (Cpk/Ppk)** for supplier qualification
-- Managed **BOM of 132 items**; identified 23 items with insufficient stock ahead of production
-- Tracked 37+ field issues; personally resolved 14 electrical-control items
-
-**CAN Distributed Control — GT-SS500**
-- Designed 5-node CAN topology (VCU ↔ dual drive MC ↔ fan ESC ↔ pump DRV ↔ BMS); authored 4 DBC files
-- Detected **4 breaking changes** through DBC version comparison before integration
-- Standardized 3-pass CAN consistency checklist protocol
+**GT-SS500: 48 V Electric Autonomous Speed Sprayer — Full Lifecycle**
+- Led the program through **APQP Phase 2–3** from algorithm development to a first-article production plan of **16 units, plus 2 transport carts and 2 spares**, coordinating across six cross-functional teams
+- Authored **DFMEA #201 and #210 (Step 1–7)**; five high-priority (AP=H) risks identified and resolved before production ramp
+- Closed **four root-cause analyses** on real field issues:
+  - **MCB contact carbonization (#204)**: confirmed electrolytic corrosion mechanism; the breaker was replaced with an IEC 60947-2-grade part and re-qualified
+  - **LCD-mode state-machine bug (#79)**: undefined transitions removed; verified through validation runs
+  - **Pump O-ring freeze failure**: O-ring redesigned and re-qualified for low-temperature operation
+  - **Ground-bounce noise on the control bus**: countermeasure mapped back into the DFMEA
+- Operated **27 NCRs** through to closure as a closed-loop corrective action process (Failure → Reporting → Analysis → Corrective Action → System update)
+- Built **four custom test rigs** in-house: **dynamometer torque control (nonlinearity 0.008%)**, **fan bench (airflow 7.9 → 12.4 m/s, +57%)**, **pump bench** (three-sample linearity characterization, nameplate-spec falsification), **bumper safety rig** (stop distance 0.082 m, peak current 308 A, settling time 467 ms at 3 km/h)
+- Designed a **5-node CAN distributed-control architecture** (VCU ↔ dual drive MC ↔ fan ESC ↔ pump DRV ↔ BMS); authored four DBC files; detected four breaking changes before integration through a three-pass consistency protocol
+- **BOM management** across 132 items; 23 items with insufficient stock surfaced ahead of ramp
+- Tracked **37+ field issues**, personally resolving 14 in the electrical-control scope
+- Represented the program at the Innovation-Product on-site audit (4 of 9 items handled)
 
 ---
 
 ### GINT Corp. — Electrical Control R&D
 **Junior Researcher** · Feb 2023 – Dec 2024
 
-**EOP 400W: Automotive BLDC Motor Control (Government R&D Project)**
-- **Conducted PCT per JESD47/JEP122 on IGBT modules; identified bond-wire lift-off failure mode** (P-01 IEEE TIM 2024, DOI 10.1109/TIM.2024.3472910)
-- **SVPWM/DPWM switching strategy**: reduced FET temperature 1–6°C, input power 1–3.8% (validated on 2,932 data points)
-- **Cryogenic start test**: demonstrated cold-start time reduction from 300 s → 100 s at −40°C
-- **CAN Sleep/Wakeup**: implemented quiescent-current-compliant bus management (5 revision cycles)
-- **Built dynamometer torque-control system** achieving 0.008% nonlinearity; presented at internal seminar
-- **2 patent filings** (see Patents section)
+**EOP 400 W: Automotive BLDC Motor Control (Government R&D Project, NXP MC9S12ZVMC)**
+- Co-authored a programmable online bond-wire fault detection and location method for IGBT modules using inverter output parameters — published in *IEEE Transactions on Instrumentation and Measurement* (2024, third author, DOI 10.1109/TIM.2024.3472910)
+- **SVPWM/DPWM switching strategy**: FET temperature reduced 1–6 °C, input power reduced 1–3.8 % (validated across 2,932 data points)
+- **Cryogenic start test**: cold-start time reduced from 300 s to 100 s at −40 °C
+- **CAN Sleep/Wakeup**: quiescent-current-compliant bus management (five revision cycles)
+- Built a **dynamometer torque-control system** with nonlinearity 0.008 %; presented at internal seminar
+- Two Korean patent contributions (see Patents)
 
 ---
 
@@ -72,12 +63,11 @@ In industry, built four test rigs aligned with MIL-STD-810 / IEC 60068-2 environ
 ### Konkuk University — M.S. in Mechanical Design (RBDO Lab)
 **Mar 2021 – Feb 2023** · 27 major credits · Major GPA 3.77/4.5 · Advisor: Prof. Namsu Kim
 
-**Thesis**: *Fault Diagnosis Simulation of Interior Permanent Magnet Synchronous Motor using Electromagnetic Analysis* (49 pp., RISS: f678963f23f2e418ffe0bdc3ef48d419)
+**Thesis**: *Fault Diagnosis Simulation of Interior Permanent Magnet Synchronous Motor using Electromagnetic Analysis* (49 pp., RISS f678963f23f2e418ffe0bdc3ef48d419)
 
-- Built IPMSM digital twin: flux-state variable model + Ansys Maxwell FEM → Co-simulation with MATLAB/Simulink inverter model
-- Validated against experimental data across multiple operating conditions (Sim2Real precursor approach)
-- Participated in government-funded PHM SoC development project (MOTIE, Apr 2021 – Oct 2022); conducted RUL estimation for IPMSM drivetrain fault diagnosis with multi-sensor signals
-- **Witnessed full ALT design-test-redesign cycle** (IPMSM eccentricity fault characterization; load factor application → FTA → destruct-limit-adjacent test); observed dual-sensor architecture in operation (P-05 J. Power Electron. 2024)
+- Built an IPMSM digital twin: flux-state variable model + Ansys Maxwell FEM, co-simulated with a MATLAB/Simulink inverter model and validated against experimental data across multiple operating conditions
+- Participated in a government-funded PHM SoC development project (MOTIE, 2021–2022); contributed to multi-sensor fault diagnosis and remaining-useful-life estimation work for the IPMSM drivetrain
+- Observed an IPMSM accelerated-life-test program (eccentricity-fault characterization with load-factor stress and FTA-driven test design); the resulting work was later published as *Identification of failure modes in IPMSM under accelerated life test based on dual sensor architecture* (J. Power Electronics, 2024, sixth author)
 
 ### Konkuk University — B.S. in Mechanical Design
 **Mar 2015 – Feb 2021** · 79 major credits · Major GPA 3.24/4.5
@@ -88,68 +78,70 @@ In industry, built four test rigs aligned with MIL-STD-810 / IEC 60068-2 environ
 
 ### Peer-Reviewed Journals (3, co-authored)
 
-| Year | Journal | Title (abbreviated) | Role |
-|------|---------|--------------------|----|
-| 2024 | **IEEE Transactions on Instrumentation and Measurement**, Vol. 73 | Bond-wire fault detection in IGBT via inverter output parameters | 3rd author |
-| 2024 | **Solar Energy** (Elsevier), Vol. 276, Art. 112645 | Lifetime prediction of PV polymers under varying environments via damage summation (Miner's Rule) | 4th author |
-| 2024 | **Journal of Power Electronics**, Vol. 24(5), pp. 822–831 | Failure mode identification in IPMSM under ALT via dual sensor architecture | 6th author |
+| Year | Journal | Title | Author position |
+|------|---------|-------|-----------------|
+| 2024 | **IEEE Trans. on Instrumentation and Measurement**, Vol. 73, Art. 10726721 | Programmable Online Bond-Wire Fault Detection and Location Method for IGBT Using Inverter Output Parameters (DOI 10.1109/TIM.2024.3472910) | 3rd author |
+| 2024 | **Solar Energy** (Elsevier), Vol. 276, Art. 112645 | Lifetime prediction of polymeric materials in PV module under continuously varying environments based on damage summation approach (DOI 10.1016/j.solener.2024.112645) | 4th author |
+| 2024 | **Journal of Power Electronics**, Vol. 24(5), pp. 822–831 | Identification of failure modes in IPMSM under accelerated life test based on dual sensor architecture (DOI 10.1007/s43236-024-00810-8) | 6th author |
 
 ### Conference Presentations (4)
 
 | Year | Conference | Topic | Award |
-|------|-----------|-------|-------|
-| 2023 | PHM Society Asia-Pacific | 120 kW IPMSM system-level fault diagnosis | — |
-| 2022 | PCIM Asia | IGBT IPM quasi-DC power cycling | — |
-| 2022 | Korean Society for Reliability (KSR) | Predictive maintenance for EV drivetrain | **Best Paper Award** |
-| 2021 | Korean PHM Society | IGBT open-fault diagnosis via system-level measurements | **Best Poster Award** |
+|------|------------|-------|-------|
+| 2023 | PHM Society Asia-Pacific Conference (DOI 10.36001/phmap.2023.v4i1.3780) | 120 kW IPMSM system-level fault diagnosis | — |
+| 2022 | PCIM Asia | IGBT IPM power cycling — bond-wire / solder degradation | — |
+| 2022 | Korean Society for Reliability — Spring Conference | Predictive maintenance for EV drivetrain | **Best Paper Award** |
+| 2021 | Korean PHM Society Annual Conference | IGBT open-fault diagnosis via system-level measurements | **Best Poster Award** |
 
-### Patents (2)
+### Patents (2 — honest disclosure)
 
-- **Patent #1** — Motor initial position detection · Co-inventor · KR App. PN231067KR (2023) · Detection time: 1.0 s → **0.56 s**
-- **Patent #2** — *Method for preventing step-out of rotor of motor in low temperature and apparatus thereof* · KR App. **10-2023-0175484** (filed 2023-12-06) · Reg. **10-2654562** (granted 2024-04-01) · Applicant: GINT Inc. · IPC H02P 29/032 · Development contributor (experimental validation; not on inventor list — inventors: Je Jeong-mun, Kim Eun-tae) · −40°C start time: 300 s → **100 s**
+- **Patent #1** — Motor initial position detection (co-inventor) · KR App. PN231067KR (2023, filed via The Wave IP) · detection time 1.0 s → **0.56 s** · prior-art screen of 1 paper and 10 patents
+- **Patent #2** — *Method for preventing step-out of rotor of motor in low temperature and apparatus thereof* · KR App. **10-2023-0175484** (filed 2023-12-06) · Reg. **10-2654562** (granted 2024-04-01) · Applicant: GINT Inc. · IPC H02P 29/032 · **Development contributor** (experimental validation of −40 °C cold start, 300 s → 100 s; not on the inventor list — inventors of record: Je Jeong-mun, Kim Eun-tae)
 
 ---
 
 ## SKILLS
 
-### Reliability Engineering
-- ALT design (witnessed/observed full cycle: IPMSM eccentricity characterization, P-05)
-- PCT (Power Cycling Test) per JESD47 / JEP122 (directly conducted: IGBT bond-wire lift-off, P-01)
-- DFMEA per AIAG-VDA 2019 · FTA · RCA with 5 Why and Ishikawa diagrams
-- FRACAS-equivalent NCR closed-loop (27 items tracked)
-- Environmental testing aligned with MIL-STD-810 / IEC 60068-2 / IEC 60529 IP67
-- Six Sigma DMAIC · Cpk/Ppk-based IQC/OQC
-- Damage Summation (Miner's Rule) · Weibull lifetime estimation
-- PHM/RUL — multi-sensor fault diagnosis (IPMSM SoC, MOTIE project 2021–2022)
-- APQP Phase 2–3 (full cycle to mass production first article)
+### Motor Control & Power Electronics
+- BLDC · IPMSM · PMSM control · FOC · SVPWM/DPWM switching · sensorless initial-position estimation · BEMF observer · cryogenic start
+- Inverter gate-signal diagnosis · IGBT bond-wire lift-off detection (IEEE TIM 2024)
 
-### Failure Analysis & Diagnosis
-- Root Cause Analysis (RCA) with 5 Why and Ishikawa · FRACAS closed-loop
-- Multi-sensor PHM (current · temperature · vibration · displacement)
-- Bond-wire fault diagnosis (IEEE TIM 2024) · IPMSM fault mode identification
+### Embedded & Firmware
+- STM32 · NXP MC9S12ZVMC · Infineon TC23x · RTOS · multi-mode state machines (RC / LCD / autonomous) · motor-controller firmware code review
+
+### Communication & System Design
+- CAN · CAN-FD · CAN Sleep/Wakeup · DBC authoring (4 files) · CAN BusLoad analysis · 5-node distributed control topology
+- Reading-level familiarity with ISO 13849 and functional-safety mapping
+
+### Simulation & Analysis
+- Ansys Maxwell (FEM, transient) · MATLAB/Simulink · Co-simulation (Sim2Real precursor) · MIL/SIL/HIL concepts
 
 ### Test & Measurement
-- Dynamometer torque-control system (0.008% nonlinearity) · Fan / pump / impact test benches (self-built, MIL-STD-810 / IEC 60068-2 aligned)
-- CANoe · Vector VN1600 · NI DAQ (NI-9215) · Oscilloscope · SPICE
+- Dynamometer torque control · self-built fan / pump / bumper benches · CANoe · Vector VN1600 · SPICE · oscilloscope · NI DAQ (NI-9215)
 
-### Simulation & Modeling
-- Ansys Maxwell (FEM / Transient) · MATLAB / Simulink · Co-simulation · HIL (VCU + dynamometer bench)
+### PHM & Signal Processing
+- Multi-sensor PHM (phase current · temperature · shaft displacement · vibration) · anomaly detection · multi-signal fusion
 
-### Embedded & Motor Control
-- STM32 · NXP MC9S12ZVMC · CAN / CAN-FD (5-node topology, DBC authoring) · FOC · SVPWM / DPWM · Sensorless IPMSM (BEMF observer, initial position detection)
+### Quality & PM Artifacts
+- APQP Phase 1–5 · DFMEA / PFMEA · DRBFM · boundary diagram · BOM management · IQC/OQC inspection guides · WBS · NCR closed-loop handling
 
-### Software
-- Python · C / C++ · Git · Linux
+### Software & AI Workflow
+- Python · C/C++ · Git · Linux
+- Three-tier LLM routing (Opus / GLM / Ollama) · Claude Code · MCP · Obsidian + Dataview
+- PM-orchestrator workflow across 8 internal projects · 13-skill automation library (`hih-skills`) · cron-driven overnight execution
+- Learning / applying: PyTorch · LangChain · Docker
 
 ### Languages
-- Korean: Native
-- English: Professional working proficiency
+- Korean: native
+- English: professional working proficiency
+- TOEIC 920 / TOEIC Speaking Lv. 6 (IH 140) — both expired; re-test planned
 
 ---
 
 ## AWARDS
 
 | Year | Award | Issuing Body |
-|------|-------|-------------|
-| 2022 | **Best Paper Award** | Korean Society for Reliability (KSR) |
-| 2021 | **Best Poster Award** | Korean PHM Society |
+|------|-------|--------------|
+| 2022 | **Best Paper Award** (Spring Conference) — Predictive maintenance for EV drivetrain | Korean Society for Reliability (KSR) |
+| 2021 | **Best Poster Award** — IGBT open-fault diagnosis via system-level measurements | Korean PHM Society |
+| Internal | Internal seminar presentation — EOP 400 W dynamometer torque-control system (nonlinearity 0.008 %) | GINT Corp. |
