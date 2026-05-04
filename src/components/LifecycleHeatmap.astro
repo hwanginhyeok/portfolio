@@ -1,0 +1,64 @@
+---
+// Lifecycle Heatmap — 7단계 × 3프로젝트 (ThemeHeatmap 대체)
+// SSOT: CONTENT_V2 §3
+const stages = ['개발', '기획·설계', '증명·분석', '양산 품질', '현장 해결', '대외 인증', '양산·납품'];
+const stagesEn = ['Development', 'Plan & Design', 'Prove & Analyze', 'Quality System', 'Field Resolution', 'Certification', 'Production'];
+
+const projects = [
+  {
+    name: 'GT-SS500',
+    period: '2025~2026',
+    scores: [3, 3, 3, 3, 3, 3, 2],
+  },
+  {
+    name: 'EOP 400W',
+    period: '2023~2024',
+    scores: [3, 3, 3, 0, 0, 0, 0],
+  },
+  {
+    name: '대학원 연구',
+    period: '2021~2023',
+    scores: [2, 2, 3, 0, 0, 0, 0],
+  },
+];
+
+const cellClass = (s: number) => {
+  if (s === 3) return 'bg-accent text-white';
+  if (s === 2) return 'bg-accent/50 text-primary';
+  return 'bg-ink-100 text-ink-300';
+};
+---
+
+<div class="overflow-x-auto">
+  <table class="w-full text-sm border-collapse">
+    <thead>
+      <tr>
+        <th class="text-left p-3 text-ink-500 font-medium w-28"></th>
+        {stages.map((s, i) => (
+          <th class="p-2 text-center font-medium text-ink-700 text-xs leading-tight min-w-[72px]">
+            <div>{s}</div>
+            <div class="text-[10px] text-ink-500 font-normal">{stagesEn[i]}</div>
+          </th>
+        ))}
+      </tr>
+    </thead>
+    <tbody>
+      {projects.map((proj) => (
+        <tr class="border-t border-ink-100">
+          <td class="p-3 font-semibold text-primary text-xs">
+            <div>{proj.name}</div>
+            <div class="text-[10px] text-ink-500 font-normal">{proj.period}</div>
+          </td>
+          {proj.scores.map((s) => (
+            <td class="p-1.5 text-center">
+              <div class={`rounded ${cellClass(s)} text-xs py-1.5 px-1`}>
+                {s === 3 ? '■■■' : s === 2 ? '■■' : '—'}
+              </div>
+            </td>
+          ))}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+<p class="text-xs text-ink-500 mt-2">GT-SS500 행이 7단계 전부 채워진다 — "끝까지 간다"를 한눈에.</p>

@@ -1,0 +1,74 @@
+---
+// T-1: DFMEA로 본 현장 — 4건 카드
+// SSOT: CONTENT_V2 §6
+const episodes = [
+  {
+    id: 'A-1',
+    title: 'MCB 접점 탄화',
+    sub: '48V 전력단자 전해부식',
+    fm: 'D-13 (48V 전력단자 부식) · Issue #204',
+    cause: '전해 부식 → 접촉저항↑ → 발열 → 탄화 확정',
+    fix: '산업용(IEC 60947-2) 또는 150A급 교체 · D-13 DFMEA 정식 등록',
+    verify: '알파2호기 현장 고장 분석 → 원인 확정 (C-120)',
+  },
+  {
+    id: 'A-2',
+    title: 'RC/LCD/ADT 제어권 버그',
+    sub: '상태머신 전환 시 이전 속도지령 잔존',
+    fm: 'FM-DM (모드 전환 시 속도지령 잔존) · Issue #79',
+    cause: 'NONE 상태가 모호한 전환 허용 · 모드 진입 시 Init 루틴 누락',
+    fix: 'NONE 상태 삭제 · 모든 Transition에 Init(속도 0) 강제 · 3모드 간소화',
+    verify: '재현 시험 → 무인 전진 0건 · 안전 검증 통과',
+  },
+  {
+    id: 'A-3',
+    title: '펌프 동파',
+    sub: '솔레노이드 오링 설계 변경',
+    fm: '밸브 밀폐 불량 → 잔수 → 동파 (5호기 동시 발생)',
+    cause: '오링 가공불량 — depth + wall thickness 규격 미달',
+    fix: '오링 20개 재발주 + 설계 규격 재정의 (depth/wall thickness)',
+    verify: '동일 조건 재현 시험 → 재발 0',
+  },
+  {
+    id: 'A-4',
+    title: 'GND 바운스 + 노이즈 대책',
+    sub: 'P-15 노이즈 경로 DFMEA 반영',
+    fm: 'FM-6 (GND 바운스 노이즈) · PFMEA P-15 노이즈 경로',
+    cause: '쉴드/접지 경로 미완 (현장 실측 확인)',
+    fix: 'SYS FM-4/FM-6 DFMEA 반영 · 쉴드·접지 대책 현장 적용',
+    verify: '현장 실측 확인 (C-122)',
+  },
+];
+---
+
+<div class="grid md:grid-cols-2 gap-4">
+  {episodes.map((ep) => (
+    <div class="rounded-lg border border-ink-300 p-5 bg-white">
+      <div class="flex items-start justify-between mb-3">
+        <div>
+          <span class="text-xs font-mono text-ink-500">{ep.id}</span>
+          <h4 class="font-bold text-primary mt-0.5">{ep.title}</h4>
+          <p class="text-xs text-ink-500">{ep.sub}</p>
+        </div>
+      </div>
+      <div class="space-y-2 text-sm">
+        <div class="flex gap-2">
+          <span class="text-xs font-semibold text-error shrink-0 pt-0.5">고장모드</span>
+          <span class="text-ink-700">{ep.fm}</span>
+        </div>
+        <div class="flex gap-2">
+          <span class="text-xs font-semibold text-warning shrink-0 pt-0.5">근본원인</span>
+          <span class="text-ink-700">{ep.cause}</span>
+        </div>
+        <div class="flex gap-2">
+          <span class="text-xs font-semibold text-accent shrink-0 pt-0.5">설계변경</span>
+          <span class="text-ink-700">{ep.fix}</span>
+        </div>
+        <div class="flex gap-2">
+          <span class="text-xs font-semibold text-success shrink-0 pt-0.5">검&nbsp;&nbsp;&nbsp;&nbsp;증</span>
+          <span class="text-ink-700">{ep.verify}</span>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>

@@ -1,138 +1,160 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
-import CaseCard from '../components/CaseCard.astro';
-import ThemeHeatmap from '../components/ThemeHeatmap.astro';
+import LifecycleHeatmap from '../components/LifecycleHeatmap.astro';
+import DFMEAField from '../components/DFMEAField.astro';
+import PerformanceFlow from '../components/PerformanceFlow.astro';
+import TestProcess from '../components/TestProcess.astro';
+import CanNetworkDiagram from '../components/CanNetworkDiagram.astro';
+import NextGen from '../components/NextGen.astro';
+import APQPSystem from '../components/APQPSystem.astro';
+import AINative from '../components/AINative.astro';
 import Timeline from '../components/Timeline.astro';
-import SystemArchitecture from '../components/SystemArchitecture.astro';
-import cases from '../data/cases.json';
 const base = import.meta.env.BASE_URL;
+
+const skills = [
+  'BLDC/PMSM 모터제어', 'FOC/SVPWM', 'CAN/CAN-FD',
+  'STM32 · NXP MCU', 'DFMEA/DRBFM · APQP',
+  'Ansys Maxwell · Co-simulation', 'HIL',
+  'PHM · multi-sensor fusion',
+  'RTK GNSS · IMU 융합',
+  'Python', 'C/C++', 'Matlab/Simulink',
+  'ROS2 · Gazebo · nav2 (사이드)', 'Linux',
+  'Git', 'Claude Code',
+];
 ---
 
-<BaseLayout title="황인혁 — 물리 세계의 문제를 데이터로 해결하는 엔지니어">
-  <!-- Layer 1: 10초 스캔 -->
-  <Hero />
+<BaseLayout title="황인혁 — 분야를 막론하고 문제가 있으면 해결한다">
 
-  <!-- Layer 2: 2분 읽기 -->
+  <!-- #hero: 10초 스캔 (nav 높이 56px 보정) -->
+  <div id="hero" class="pt-14">
+    <Hero />
+  </div>
+
   <main class="max-w-5xl mx-auto px-6">
 
-    <!-- 시스템 아키텍처 -->
-    <SystemArchitecture />
+    <!-- #lifecycle: Lifecycle Heatmap -->
+    <section id="lifecycle" class="py-12 border-t border-ink-100 scroll-mt-16">
+      <h2 class="text-xl font-bold text-primary mb-1">제품 생애주기 × 프로젝트</h2>
+      <p class="text-sm text-ink-500 mb-6">어느 단계까지 직접 수행했는가 — 한눈에</p>
+      <LifecycleHeatmap />
+    </section>
 
-    {/* 변경 2026-04-26 (B3 LAYOUT): Impact 요약 섹션 신규 추가 — 4개 케이스 핵심 수치 압축 (사용자 지시) */}
-    <section class="py-12 border-t border-gray-100">
-      <h2 class="text-2xl font-bold text-primary mb-2">Impact 요약</h2>
-      <p class="text-sm text-muted mb-6">4개 케이스에서 만들어낸 정량 임팩트</p>
-
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-        <div class="bg-surface rounded-lg p-4">
-          <div class="text-xs text-muted mb-1">GT-SS500</div>
-          <div class="text-xl font-black text-primary leading-tight">양산 출하</div>
-          <div class="text-xs text-gray-500 mt-1">현장 이슈 37건+ 해결</div>
-        </div>
-        <div class="bg-surface rounded-lg p-4">
-          <div class="text-xs text-muted mb-1">EOP 400W</div>
-          <div class="text-xl font-black text-primary leading-tight">-40&deg;C / 300&rarr;100s</div>
-          <div class="text-xs text-gray-500 mt-1">극저온 기동시간 1/3</div>
-        </div>
-        <div class="bg-surface rounded-lg p-4">
-          <div class="text-xs text-muted mb-1">EOP 400W</div>
-          <div class="text-xl font-black text-primary leading-tight">특허 출원 2건</div>
-          <div class="text-xs text-gray-500 mt-1">공동 1 · 기여 1</div>
-        </div>
-        <div class="bg-surface rounded-lg p-4">
-          <div class="text-xs text-muted mb-1">시험 인프라</div>
-          <div class="text-xl font-black text-primary leading-tight">7종 단독 구축</div>
-          <div class="text-xs text-gray-500 mt-1">다이나모 정밀도 0.008%</div>
-        </div>
-        <div class="bg-surface rounded-lg p-4">
-          <div class="text-xs text-muted mb-1">대학원 연구</div>
-          <div class="text-xl font-black text-primary leading-tight">저널 3 · 학회 4</div>
-          <div class="text-xs text-gray-500 mt-1">PHM · 모터 모델링 (공저)</div>
-        </div>
-        <div class="bg-surface rounded-lg p-4">
-          <div class="text-xs text-muted mb-1">대학원 연구</div>
-          <div class="text-xl font-black text-primary leading-tight">수상 2건</div>
-          <div class="text-xs text-gray-500 mt-1">학회 발표 우수 실적</div>
-        </div>
+    <!-- #t1-dfmea: T-1 현장에서 돌아오는 설계 -->
+    <section id="t1-dfmea" class="py-12 border-t border-ink-100 scroll-mt-16">
+      <h2 class="text-xl font-bold text-primary mb-1">현장에서 돌아오는 설계</h2>
+      <p class="text-sm text-ink-500 mb-2">DFMEA는 문서가 아니다. 고장모드를 먼저 상상하고, 설계로 돌아가는 사고방식이다.</p>
+      <p class="text-xs text-ink-500 mb-6">현장에서 사고가 나기 전에 Boundary Diagram에서 그 고장을 잡는다.</p>
+      <DFMEAField />
+      <div class="mt-4 text-right">
+        <a href={`${base}cases/ss500-state-machine/`} class="text-sm text-accent hover:underline">상태머신 케이스 심화 →</a>
       </div>
     </section>
 
-    <!-- 케이스 카드: EOP + GT-SS500 + 특허 -->
-    <section class="py-12">
-      <h2 class="text-2xl font-bold text-primary mb-2">프로젝트 케이스</h2>
-      <p class="text-sm text-muted mb-6">EOP 400W + GT-SS500에서 해결한 실제 문제들</p>
-
-      <div class="grid md:grid-cols-2 gap-6">
-        {cases.map((c) => (
-          <CaseCard {...c} />
-        ))}
+    <!-- #t2-test: T-2 기획에서 양산까지 -->
+    <section id="t2-test" class="py-12 border-t border-ink-100 scroll-mt-16">
+      <h2 class="text-xl font-bold text-primary mb-1">기획에서 양산까지</h2>
+      <p class="text-sm text-ink-500 mb-6">시험은 몇 개 만들었는가가 아니다. 매번 어떻게 접근하는가가 역량이다.</p>
+      <PerformanceFlow />
+      <TestProcess />
+      <div class="mt-4 text-right">
+        <a href={`${base}cases/test-engineering/`} class="text-sm text-accent hover:underline">시험 엔지니어링 케이스 →</a>
       </div>
     </section>
 
-    <!-- 경력 타임라인 -->
-    <Timeline />
+    <!-- #t3-system: T-3 시스템 아키텍처 -->
+    <section id="t3-system" class="py-12 border-t border-ink-100 scroll-mt-16">
+      <h2 class="text-xl font-bold text-primary mb-1">시스템 아키텍처</h2>
+      <p class="text-sm text-ink-500 mb-2">통신이 깨지면 제품이 죽는다. Breaking Change 4건을 사전에 잡아낸 것은 체크리스트가 있었기 때문이다.</p>
+      <p class="text-xs text-ink-500 mb-6">CAN 5노드 + DBC 4종 + BusLoad 분석 · 단일 노드에서 분산 시스템으로.</p>
+      <CanNetworkDiagram />
+      <NextGen />
+    </section>
 
-    <!-- 테마 히트맵 -->
-    <ThemeHeatmap />
+    <!-- #t4-apqp: T-4 양산 체계 -->
+    <section id="t4-apqp" class="py-12 border-t border-ink-100 scroll-mt-16">
+      <h2 class="text-xl font-bold text-primary mb-1">양산 체계</h2>
+      <p class="text-sm text-ink-500 mb-6">양산은 문서로 굴러간다. DFMEA가 없으면 엔지니어의 직감이 사라졌을 때 품질이 무너진다.</p>
+      <APQPSystem />
+    </section>
 
-    <!-- About -->
-    <section class="py-12 border-t border-gray-100">
+    <!-- #t5-roots: T-5 엔지니어의 뿌리 -->
+    <section id="t5-roots" class="py-12 border-t border-ink-100 scroll-mt-16">
+      <h2 class="text-xl font-bold text-primary mb-1">엔지니어의 뿌리</h2>
+      <p class="text-sm text-ink-500 mb-6">대학원에서 훈련한 "모델→시뮬레이션→실험 검증" 체질이 EOP 다이나모미터와 SS500 시험체계까지 이어진다.</p>
+
+      <div class="grid md:grid-cols-2 gap-4">
+        <!-- EOP 400W -->
+        <a href={`${base}cases/eop-400w/`} class="block rounded-lg border border-ink-300 bg-white p-5 hover:shadow-md hover:border-accent/50 transition-all duration-150">
+          <p class="text-xs text-ink-500 mb-1">모터제어 깊이</p>
+          <h4 class="font-bold text-primary">EOP 400W</h4>
+          <p class="text-sm text-ink-700 mt-2">SVPWM/DPWM 절환 · CAN Sleep/Wakeup · -40°C 기동 · 다이나모 0.008%</p>
+          <span class="mt-3 inline-block text-xs text-accent">케이스 보기 →</span>
+        </a>
+
+        <!-- Patents -->
+        <a href={`${base}cases/patent/`} class="block rounded-lg border border-ink-300 bg-white p-5 hover:shadow-md hover:border-accent/50 transition-all duration-150">
+          <p class="text-xs text-ink-500 mb-1">특허 참여 2건</p>
+          <h4 class="font-bold text-primary">특허 — 정직한 기재</h4>
+          <p class="text-sm text-ink-700 mt-2">공동 발명 1건 (초기위치 검출) · 개발 기여 1건 (저온 기동). 발명자 명단이 전부는 아니다.</p>
+          <span class="mt-3 inline-block text-xs text-accent">케이스 보기 →</span>
+        </a>
+
+        <!-- Research -->
+        <div class="rounded-lg border border-ink-300 bg-white p-5">
+          <p class="text-xs text-ink-500 mb-1">대학원 연구</p>
+          <h4 class="font-bold text-primary">PHM · Co-simulation</h4>
+          <p class="text-sm text-ink-700 mt-2">IPMSM 디지털트윈 · Ansys Maxwell(FEM) → MATLAB/Simulink → 실험 검증 · 공저 저널 3편 · 학회 4편 (수상 2)</p>
+        </div>
+
+        <!-- AI-Native -->
+        <AINative />
+      </div>
+    </section>
+
+    <!-- #timeline: 경력 -->
+    <div id="timeline" class="scroll-mt-16">
+      <Timeline />
+    </div>
+
+    <!-- #about: About + 기술 스택 -->
+    <section id="about" class="py-12 border-t border-ink-100 scroll-mt-16">
       <h2 class="text-2xl font-bold text-primary mb-4">About</h2>
       <div class="grid md:grid-cols-2 gap-8">
         <div>
           <div class="flex items-center gap-4 mb-4">
-            <img src={`${base}images/about/profile.webp`} alt="황인혁" class="w-16 h-16 rounded-full object-cover border-2 border-gray-200" loading="lazy" />
+            <img src={`${base}images/about/profile.webp`} alt="황인혁" class="w-16 h-16 rounded-full object-cover border-2 border-ink-300" loading="lazy" />
             <div>
               <p class="font-bold text-primary">황인혁 (Inhyeok Hwang)</p>
               <p class="text-sm text-muted">전력제어개발팀 · 선임연구원</p>
             </div>
           </div>
+
           <h3 class="font-bold text-lg mb-2">현재</h3>
-          <ul class="space-y-2 text-sm text-gray-600">
+          <ul class="space-y-2 text-sm text-ink-700">
             <li><strong>전력제어개발팀 · 선임연구원</strong> — 모터제어, 전력설계, 시험검증</li>
-            <li>
-              {/* 변경 2026-04-26: PM 톤 통일 — "PM 겸임" → "주니어 PM 겸임" (사용자 지시) */}
-              <strong>제품개발팀 · 주니어 PM 겸임</strong> — 이슈 37건+ 트래킹 (전력제어 담당 14건),
-              BOM 132개 항목 관리, APQP Phase 2~3, 양산 준비
-            </li>
+            <li><strong>제품개발팀 · 주니어 PM 겸임</strong> — 이슈 37건+ 트래킹 (전력제어 담당 14건), BOM 132개 항목, APQP Phase 2~3</li>
           </ul>
 
           <h3 class="font-bold text-lg mt-6 mb-2">학력</h3>
-          <ul class="space-y-2 text-sm text-gray-600">
-            {/* 변경 2026-04-26 (2nd): U-4 정직 옵션 — PAPERS.md SSOT (공저 저널 3 + 학회 4 + 수상 2) */}
+          <ul class="space-y-2 text-sm text-ink-700">
             <li><strong>석사</strong> — 모터 모델링/고장진단(PHM), 공저 저널 3편 · 학회 4편 (수상 2건)</li>
-            <li><strong>학부</strong> — 기계공학부 (학사) · 기계설계학과 (석사)</li>
+            <li><strong>학부</strong> — 기계공학부 · 기계설계학과 (학·석사)</li>
           </ul>
 
-          <h3 class="font-bold text-lg mt-6 mb-2">AI 워크플로우</h3>
-          <p class="text-sm text-gray-600">
-            Claude Code를 단순 코딩 보조가 아닌 개발 프로세스에 통합 —
-            이슈 관리 자동화, 주간보고 자동화, CAN 로그 분석 등.
-            "AI를 사용하는 수준"이 아닌 "AI 워크플로우를 설계하는 수준"으로.
-          </p>
-        </div>
-        <div>
-          <h3 class="font-bold text-lg mb-2">기술</h3>
+          <h3 class="font-bold text-lg mt-6 mb-2">사이드 프로젝트</h3>
           <div class="flex flex-wrap gap-2 text-sm">
-            {['BLDC/PMSM 모터제어', 'FOC/SVPWM', 'CAN/CAN-FD',
-              'STM32 · NXP MCU', 'DFMEA/DRBFM · APQP',
-              'Python', 'C/C++', 'Matlab/Simulink',
-              'Git', 'Claude Code'
-            ].map((skill) => (
-              <span class="bg-surface px-3 py-1 rounded-full text-muted">{skill}</span>
+            {['자율주행 ROS2+Gazebo', 'AI 개발 자동화', '포트폴리오 (이 사이트)'].map((proj) => (
+              <span class="bg-blue-50 px-3 py-1 rounded-full text-blue-600">{proj}</span>
             ))}
           </div>
+        </div>
 
-          <h3 class="font-bold text-lg mt-6 mb-2">사이드 프로젝트</h3>
-          {/* 변경 2026-04-26 (2nd): U-5 축소 — 6개 → 엔지니어링 핵심 3개 (자율주행·AI 워크플로우·포트폴리오) */}
+        <div>
+          <h3 class="font-bold text-lg mb-3">기술 스택</h3>
           <div class="flex flex-wrap gap-2 text-sm">
-            {[
-              '자율주행 ROS2+Gazebo',
-              'AI 개발 자동화',
-              '포트폴리오 (이 사이트)'
-            ].map((proj) => (
-              <span class="bg-blue-50 px-3 py-1 rounded-full text-blue-600">{proj}</span>
+            {skills.map((skill) => (
+              <span class="bg-surface px-3 py-1 rounded-full text-muted">{skill}</span>
             ))}
           </div>
         </div>
@@ -140,11 +162,12 @@ const base = import.meta.env.BASE_URL;
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 border-t border-gray-100 text-center text-sm text-muted">
-      <p>황인혁 · 물리 세계의 문제를 데이터로 해결하는 엔지니어</p>
+    <footer class="py-8 border-t border-ink-100 text-center text-sm text-muted">
+      <p>황인혁 · 분야를 막론하고 — 문제가 있으면 해결한다</p>
       <p class="mt-1">
-        <a href="https://github.com/hwanginhyeok" class="text-accent hover:underline">GitHub</a>
+        <a href="https://github.com/hwanginhyeok" class="text-accent hover:underline" target="_blank" rel="noopener">GitHub</a>
       </p>
     </footer>
+
   </main>
 </BaseLayout>

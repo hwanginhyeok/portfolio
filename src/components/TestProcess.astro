@@ -1,0 +1,69 @@
+---
+// T-2: 시험 4단계 프로세스
+// SSOT: CONTENT_V2 §7.2
+const steps = [
+  {
+    step: '01',
+    name: '기획',
+    en: 'Plan',
+    desc: '어떤 가설을 세우는가?',
+    examples: [
+      'EOP: "SVPWM 절환이 FET 온도를 낮추는가?"',
+      'SS500 범퍼: "3km/h 주행 중 정지거리는?"',
+      'SS500 팬: "프로펠러 직경 변경이 풍속에 미치는 영향은?"',
+    ],
+  },
+  {
+    step: '02',
+    name: '설계',
+    en: 'Design',
+    desc: '장비가 없으면 만든다',
+    examples: [
+      '다이나모미터 토크제어 시스템 — 비선형성 0.008% 달성',
+      '팬 벤치 / 펌프 벤치 / 범퍼 시험대 직접 구축',
+      'CAN 정합성 체크리스트 — 반복 검증 프로토콜 표준화',
+    ],
+  },
+  {
+    step: '03',
+    name: '증명',
+    en: 'Prove',
+    desc: '데이터로 답한다',
+    examples: [
+      'FET 온도 1~6°C 저감 (2,932 데이터 포인트)',
+      '풍속 +57% (7.9→12.4 m/s, 20파이 프로펠러)',
+      '정지거리 0.082m · 피크 308A (자율주행 안전)',
+    ],
+  },
+  {
+    step: '04',
+    name: '분석',
+    en: 'Analyze',
+    desc: '데이터가 말하는 것 → 다음 결정',
+    examples: [
+      'SVPWM 채택 결정 근거 제공 → 국책과제 완료',
+      '펌프 업그레이드 보류 (비용 3배 + 운전시간 반감)',
+      '팬 20파이 프로펠러 채택 (+57% 정량 비교)',
+    ],
+  },
+];
+---
+
+<div class="grid md:grid-cols-4 gap-3 mt-8">
+  {steps.map((s) => (
+    <div class="rounded-lg border border-ink-300 bg-white p-4">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="font-mono text-xs text-ink-500">{s.step}</span>
+        <span class="font-black text-lg text-primary">{s.name}</span>
+        <span class="text-xs text-ink-500">/ {s.en}</span>
+      </div>
+      <p class="text-xs text-accent font-semibold mb-3">{s.desc}</p>
+      <ul class="space-y-1.5">
+        {s.examples.map((ex) => (
+          <li class="text-xs text-ink-700 leading-snug before:content-['·'] before:mr-1.5 before:text-ink-300">{ex}</li>
+        ))}
+      </ul>
+    </div>
+  ))}
+</div>
+<p class="text-sm text-ink-500 mt-4 italic">대학원 "모델→시뮬레이션→실험 검증" 체질이 실무 "기획→설계→증명→분석"으로 이어진다.</p>

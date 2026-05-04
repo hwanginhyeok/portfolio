@@ -1,0 +1,38 @@
+---
+// T-4: 양산 체계 APQP
+// SSOT: CONTENT_V2 §7B
+const items = [
+  { id: 'D-1', title: 'APQP Phase 2~3', detail: '5단계 중 2~3 직접 수행. 양산 16pcs + 대차/Spare 4' },
+  { id: 'D-2', title: 'DFMEA Assembly 재편 + Boundary Diagram', detail: 'AIAG-VDA 정석 구조. FM 배치 규칙 수립 (C-134)' },
+  { id: 'D-3', title: 'DFMEA #201/#210 Step 1~7 완료', detail: 'CBA/SYS DFMEA — AP=H 5건 도출 (C-135)' },
+  { id: 'D-4', title: 'BOM 132항목 관리', detail: '재고 미확보 23건 식별 · PreMP V0.3.4' },
+  { id: 'D-5', title: 'IQC 검사 가이드', detail: '구동모터 · 노즐 수입검사 기준 문서화 (C-83, C-84)' },
+  { id: 'D-6', title: '양산 ROM 검토 체크리스트', detail: 'FW 양산 게이트 운영 (C-76)' },
+  { id: 'D-7', title: '혁신제품 실사 4/9 대응', detail: '#205, 전력제어 공동대응 (C-125)' },
+  { id: 'D-8', title: 'D-13 즉시 조치 4건', detail: '그리스/와셔/토크/방수캡 (C-124)' },
+];
+---
+
+<div class="rounded-lg overflow-hidden border border-ink-300">
+  <table class="w-full text-sm">
+    <thead class="bg-ink-50">
+      <tr>
+        <th class="text-left p-3 font-semibold text-ink-700 w-8">#</th>
+        <th class="text-left p-3 font-semibold text-ink-700">활동</th>
+        <th class="text-left p-3 font-semibold text-ink-700 hidden md:table-cell">내용</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-ink-100">
+      {items.map((item) => (
+        <tr class="hover:bg-ink-50/50 transition-colors">
+          <td class="p-3 font-mono text-xs text-ink-500">{item.id}</td>
+          <td class="p-3 font-medium text-primary">
+            {item.title}
+            <p class="md:hidden text-xs text-ink-500 font-normal mt-0.5">{item.detail}</p>
+          </td>
+          <td class="p-3 text-ink-700 hidden md:table-cell">{item.detail}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
