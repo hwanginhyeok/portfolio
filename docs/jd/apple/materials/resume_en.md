@@ -99,7 +99,7 @@ In industry, built four test benches from scratch, led DFMEA-based root cause an
 ### Patents (2)
 
 - **Patent #1** — Motor initial position detection · Co-inventor · KR App. PN231067KR (2023) · Detection time: 1.0 s → **0.56 s**
-- **Patent #2** — Cryogenic motor starting method · Development contributor (experimental validation) · −40°C start time: 300 s → **100 s** · *Application No. [TODO: confirm via KIPRIS — search "저온 기동 황인혁"]*
+- **Patent #2** — Cryogenic motor starting method · Development contributor (experimental validation) · −40°C start time: 300 s → **100 s** · *Application No. [TODO: confirm via KIPRIS — listed inventors: 제정문 (Je Jeong-mun), 김은태 (Kim Eun-tae); user not on inventor list]*
 
 ---
 
