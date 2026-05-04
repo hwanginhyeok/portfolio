@@ -140,5 +140,5 @@ In industry, built four test benches from scratch, led DFMEA-based root cause an
 
 ## TODO (fill before submission)
 
-- [ ] Patent #2 application number — check KIPRIS.or.kr → 출원인 "황인혁" 검색 (또는 특허법인 더웨이브 문의)
-- [ ] 포트폴리오 사이트 실제 배포 여부 확인 (hwanginhyeok.github.io/portfolio)
+- [ ] Patent #2 application number — 사용자 KIPRIS 확인 완료, 번호 전달 필요
+- [x] 포트폴리오 사이트 배포 확인 — hwanginhyeok.github.io/portfolio 접속 확인 (2026-05-04) *단, 현재 구버전. V3 배포 필요*

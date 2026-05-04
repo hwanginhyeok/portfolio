@@ -35,7 +35,8 @@
 |---|--------|:--------:|---------|------|
 | JD-A1 | Apple 영문 이력서 작성 | P1 | | `docs/jd/apple/materials/resume_en.md`. RESUME.md 마스터 기반 영문 변환 |
 | JD-A2 | Camera/VCM 구조 + Reliability 이론 적용 학습 | P1 | | `docs/jd/apple/materials/camera_vcm_reliability.md`. 면접 준비 핵심 |
-| JD-A3 | Apple 지원서 최종 제출 | P2 | JD-A1 완료 | jobs.apple.com Job ID 200656459-3631 직접 지원 |
+| JD-A3 | Apple 지원서 최종 제출 | P2 | JD-A1 완료 | jobs.apple.com Job ID 200656459-3631. 잔여: 특허#2 출원번호 전달 필요 |
+| JD-A4 | 포트폴리오 V3 GitHub Pages 배포 | P1 | | 현재 구버전(V3 이전) 배포 중. git push 후 Pages 배포 필요 |
 
 ## B5 — 부가자료 (3개)
 
