@@ -4,6 +4,7 @@
 
 | # | 태스크 | 완료일 | 비고 |
 |---|--------|--------|------|
+| B3-01 | 5섹션 와이어프레임 확정 — LAYOUT.md §7 게이트 12/12 통과 | 2026-05-04 | Hero 16대·autonomy-stack P1·기술스택 확정·H-A 유지. B4 진입 가능 |
 | B1-10b | patent 페이지 극저온 기동 섹션 시각화 — rotor-reference-frames + bemf-observer 2-grid 추가 | 2026-04-26 | eop-400w 이미지 재사용. 본문 "Back-EMF Observer 능동제어기" 직접 설명 |
 | B1-13 | 양산 전장함 사진 — IMG_9304.JPEG (iCloud) 90도 좌회전 + webp 변환 적용 | 2026-04-26 | ss500 control-box-external.webp 교체. 1600x1200, 178KB |
 | B1-14 | SVPWM/DPWM 본문 재정의 — "48분 52초" 제거 + 조건별 개선 효과 표 추가 | 2026-04-26 | 4행 표(120°C 1Assy/2Assy, 85°C, 55°C) + 시험 설비 메타 |
