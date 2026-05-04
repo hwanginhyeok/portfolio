@@ -216,7 +216,7 @@ font-display: Outfit · Noto Sans KR
 </figure>
 ```
 
-`global.css:12` 의 `figure img { cursor-zoom-in }` — **제거 확정 (2026-05-04)**. 라이트박스 미구현 상태에서 zoom 커서는 UX 혼란. 다이어그램은 풀폭 렌더로 충분.
+`global.css:12` 의 `figure img { cursor-zoom-in }` — **유지 확정 (2026-05-04)**. `BaseLayout.astro`에 라이트박스 구현 확인됨. 커서가 클릭 가능성 안내.
 
 ### 5-4. 표(table) 통일
 
@@ -408,7 +408,7 @@ sm: 640  md: 768  lg: 1024  xl: 1280  2xl: 1536
 - [x] **#2-1** 한글 폰트: **Pretendard 전환**
 - [x] **#2-2** 코드 폰트: **JetBrains Mono**
 - [x] **#3** 본문 폰트크기: **16px 유지**
-- [x] **#4** Hero 이미지 zoom: **cursor-zoom-in 제거** (라이트박스 미구현)
+- [x] **#4** Hero 이미지 zoom: **cursor-zoom-in 유지** (BaseLayout 라이트박스 구현 확인)
 - [x] **#5** 도메인별 헤더 분기: **단일 헤더** (H-A 유지, 분기 없음)
 
 ---
