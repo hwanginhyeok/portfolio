@@ -5,9 +5,9 @@
 
 ## 요약
 
-- Current: 2개 (blocked: 0)
-- Prepared: 14개 (B1: 8, B2: 1, B3: 0, B4: 1, B5: 4)
-- Finished: 26개
+- Current: 3개 (blocked: 0)
+- Prepared: 16개 (B1: 8, B2: 1, B4: 1, B5: 4, JD-Apple: 3)
+- Finished: 27개
 
 > **넘버링 (2026-04-24 개편)**: `B{블록}-{순번}`
 > - B1: 자료 인벤토리 (WHAT HAVE)
@@ -26,7 +26,8 @@
 | B1 인벤토리 | 🟢 게이트 통과 | `docs/blocks/01-inventory/INVENTORY.md` + PAPERS.md | 1 | 8 |
 | B2 활용 전략 | 🟡 골격 작성 | `docs/blocks/02-usage/USAGE_STRATEGY.md` | 0 | 1 |
 | B3 배치 | 🟢 **완료** | `docs/blocks/03-layout/LAYOUT.md` §7 게이트 12/12 | 0 | 0 |
-| B4 디자인 | 🔵 **진행 중** | V3 5섹션 홈 구현 완료. P2 컴포넌트 진행 중 | 1 | 1 |
+| B4 디자인 | 🟢 **V3 완료** | V3 5섹션 홈·컴포넌트 7종·Nav N2 구현 완료 | 0 | 1 |
+| JD-Apple | 🔵 **진행 중** | Apple Reliability Engineer 지원 준비 | 2 | 3 |
 | B5 부가 | 🟡 골격 작성 (3종) + 어학 점수 | RESUME/GITHUB_PROFILE/ENGLISH_VERSION | 0 | 4 |
 
 ## TODO (아이디어 / 미확정)

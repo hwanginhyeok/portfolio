@@ -29,6 +29,14 @@
 |---|--------|:--------:|---------|------|
 | B4-02 | `/impact` 페이지 구현 | P2 | B4-01 완료 후 | LAYOUT.md §2.4 명세. Hero 4카드 확장판 + LifecycleHeatmap + 메시지별 정량표. nav 미노출, 이력서/LinkedIn 공유용 URL |
 
+## JD 지원 — Apple (3개)
+
+| # | 태스크 | 우선순위 | depends | 비고 |
+|---|--------|:--------:|---------|------|
+| JD-A1 | Apple 영문 이력서 작성 | P1 | | `docs/jd/apple/materials/resume_en.md`. RESUME.md 마스터 기반 영문 변환 |
+| JD-A2 | Camera/VCM 구조 + Reliability 이론 적용 학습 | P1 | | `docs/jd/apple/materials/camera_vcm_reliability.md`. 면접 준비 핵심 |
+| JD-A3 | Apple 지원서 최종 제출 | P2 | JD-A1 완료 | jobs.apple.com Job ID 200656459-3631 직접 지원 |
+
 ## B5 — 부가자료 (3개)
 
 | # | 태스크 | 우선순위 | depends | 비고 |
