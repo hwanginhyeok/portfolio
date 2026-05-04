@@ -3,6 +3,11 @@
 > 작성: 2026-05-04 | Apple Reliability Engineer 면접 준비
 > 목적: 기존 신뢰성 방법론(ALT·PHM·DFMEA)을 광학 컴포넌트 도메인에 적용하는 브리지 문서
 
+> **자가학습 SSOT 명시 (2026-05-04 fact-check pass)**: 본 문서는 학습용 자가 정리 자료다.
+> 외부 제출 자료(cover letter / resume / 지원서)에 본 문서의 표현을 직접 인용하지 말 것.
+> 사용자 실제 경험은 RESUME.md (`docs/blocks/05-extra/RESUME.md`)가 SSOT.
+> 학습 진행 후 깊이 도달이 검증된 항목만 외부 자료에 반영.
+
 ---
 
 ## 1. Camera Module 기본 구조

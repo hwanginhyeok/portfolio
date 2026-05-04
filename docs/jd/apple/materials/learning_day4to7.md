@@ -1,8 +1,13 @@
 # Reliability 학습 코스 — Day 4~7
 
 > 작성: 2026-05-04 | Apple Reliability Engineer 면접 준비
-> 전편: learning_day1to3.md (Weibull·B10 / JESD47·Coffin-Manson / 환경시험 표준)
+> 전편: learning_day1to3.md (Weibull·B10 / PCT·Coffin-Manson / 환경시험 카테고리)
 > 목표: FRACAS·Reliability Growth / Bayesian·Cpk / VCM 통합 / STAR 5종 영문 풀스크립트
+
+> **자가학습 SSOT 명시 (2026-05-04 fact-check pass)**: 본 문서는 학습용 자가 정리 자료다.
+> 외부 제출 자료(cover letter / resume / 지원서)에 본 문서의 표현을 직접 인용하지 말 것.
+> 사용자 실제 경험은 RESUME.md (`docs/blocks/05-extra/RESUME.md`)가 SSOT.
+> 학습 진행 후 깊이 도달이 검증된 항목만 외부 자료에 반영.
 > 기준: "이 개념을 영문으로 60초 안에 설명할 수 있는가"
 
 ---
