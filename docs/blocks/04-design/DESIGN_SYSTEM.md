@@ -90,12 +90,9 @@ colors: {
 }
 ```
 
-### 2-3. 다크모드 [사용자 입력 필요 #1]
+### 2-3. 다크모드 ✅ 확정 (2026-05-04)
 
-- **옵션 A** (권장): 라이트 전용. 채용 PDF 인쇄 호환·복잡도 최소.
-- **옵션 B**: `prefers-color-scheme` 자동. 코드 작업 +30% 추정.
-
-→ **사용자 결정 필요**: A/B?
+**라이트 전용** — 채용 PDF 인쇄 호환·복잡도 최소. 다크모드 토큰 미구현.
 
 ### 2-4. WCAG 대비 검증 (B4 완료 게이트)
 
@@ -117,15 +114,13 @@ font-display: Outfit · Noto Sans KR
 
 **문제**: 코드(`mono`) 폰트 미지정 → 브라우저 기본(`Courier New`)으로 떨어짐. `StateMachine.astro:131` `font-mono` 사용 중인데 토큰 없음.
 
-### 3-2. 폰트 결정 [사용자 입력 필요 #2]
+### 3-2. 폰트 결정 ✅ 확정 (2026-05-04)
 
-| 슬롯 | 옵션 A | 옵션 B | 추천 |
-|---|---|---|---|
-| 한글 본문 | **Pretendard** (가독성·렌더링 우수) | Noto Sans KR (현재) | A — Pretendard 전환 (CDN 1줄, 즉시 가능) |
-| 영문 헤딩 | **Outfit** (현재) | Inter / Geist | A — 유지 (디자인 디스플레이 적합) |
-| 코드/수치 | **JetBrains Mono** | Fira Code · IBM Plex Mono | A — JetBrains Mono (한글 fallback Noto) |
-
-→ **사용자 결정 필요**: 한글 폰트 Pretendard 전환 OK? 코드 폰트 JetBrains Mono OK?
+| 슬롯 | 결정 |
+|---|---|
+| 한글 본문 | **Pretendard** — Noto Sans KR에서 전환 (CDN 1줄) |
+| 영문 헤딩 | **Outfit** — 현행 유지 |
+| 코드/수치 | **JetBrains Mono** (한글 fallback: Pretendard) |
 
 ### 3-3. 타입 스케일 (px @ desktop / mobile)
 
@@ -221,7 +216,7 @@ font-display: Outfit · Noto Sans KR
 </figure>
 ```
 
-`global.css:12` 의 `figure img { cursor-zoom-in }` 정책은 유지(라이트박스 미구현이라면 제거 또는 구현 결정 필요).
+`global.css:12` 의 `figure img { cursor-zoom-in }` — **제거 확정 (2026-05-04)**. 라이트박스 미구현 상태에서 zoom 커서는 UX 혼란. 다이어그램은 풀폭 렌더로 충분.
 
 ### 5-4. 표(table) 통일
 
@@ -357,10 +352,9 @@ sm: 640  md: 768  lg: 1024  xl: 1280  2xl: 1536
 - 다이어그램은 `role="img" aria-label="..."` + 본문 텍스트 동등물 제공
 - 표는 `<caption>` 또는 `aria-describedby`
 
-### 8-3. 폰트 크기 [사용자 입력 필요 #3]
+### 8-3. 폰트 크기 ✅ 확정 (2026-05-04)
 
-본문 16px 기준 — 시니어 채용 담당자 대비 **18px 옵션**? (정보 밀도 -10% 트레이드오프)
-→ A) 16 유지 / B) 18 전환
+**16px 유지** — 정보 밀도 유지 우선.
 
 ---
 
@@ -409,13 +403,13 @@ sm: 640  md: 768  lg: 1024  xl: 1280  2xl: 1536
 - [ ] Lighthouse Desktop 90+ / Mobile 85+
 - [ ] LCP < 2.5s, CLS < 0.1
 
-### 사용자 결정 (5건)
-- [ ] **#1** 다크모드: 라이트 전용 / 자동 전환
-- [ ] **#2-1** 한글 폰트: Pretendard 전환 / Noto Sans KR 유지
-- [ ] **#2-2** 코드 폰트: JetBrains Mono / Fira Code / 기본 mono
-- [ ] **#3** 본문 폰트크기: 16px / 18px
-- [ ] **#4** Hero 이미지 zoom 인터랙션: 라이트박스 구현 / `cursor-zoom-in` 제거
-- [ ] **#5** 도메인별 헤더 분기: 단일 / Physical AI · 로보틱스 · PM 부제 가변
+### 사용자 결정 (5건) ✅ 전체 확정 (2026-05-04)
+- [x] **#1** 다크모드: **라이트 전용**
+- [x] **#2-1** 한글 폰트: **Pretendard 전환**
+- [x] **#2-2** 코드 폰트: **JetBrains Mono**
+- [x] **#3** 본문 폰트크기: **16px 유지**
+- [x] **#4** Hero 이미지 zoom: **cursor-zoom-in 제거** (라이트박스 미구현)
+- [x] **#5** 도메인별 헤더 분기: **단일 헤더** (H-A 유지, 분기 없음)
 
 ---
 
