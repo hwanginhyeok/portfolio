@@ -9,9 +9,9 @@
 ## INHYEOK HWANG
 
 **Senior Researcher** · Electrical Control & Product Development (Junior PM)
-**Email**: [TODO: public email]
+**Email**: dlsgur5560@gmail.com
 **GitHub**: github.com/hwanginhyeok
-**Portfolio**: [TODO: deployed URL]
+**Portfolio**: hwanginhyeok.github.io/portfolio
 
 ---
 
@@ -64,7 +64,7 @@ In industry, built four test benches from scratch, led DFMEA-based root cause an
 ## EDUCATION
 
 ### Konkuk University — M.S. in Mechanical Design (RBDO Lab)
-**Mar 2021 – Feb 2023** · Advisor: Prof. Namsu Kim
+**Mar 2021 – Feb 2023** · GPA: 3.77/4.5 · Advisor: Prof. Namsu Kim
 
 **Thesis**: *Fault Diagnosis Simulation of Interior Permanent Magnet Synchronous Motor using Electromagnetic Analysis* (49 pp., RISS: f678963f23f2e418ffe0bdc3ef48d419)
 
@@ -73,7 +73,7 @@ In industry, built four test benches from scratch, led DFMEA-based root cause an
 - Participated in government-funded PHM SoC development project (MOTIE, Apr 2021 – Oct 2022)
 
 ### Konkuk University — B.S. in Mechanical Design
-**Mar 2015 – Feb 2021**
+**Mar 2015 – Feb 2021** · GPA: 3.24/4.5
 
 ---
 
@@ -99,7 +99,7 @@ In industry, built four test benches from scratch, led DFMEA-based root cause an
 ### Patents (2)
 
 - **Patent #1** — Motor initial position detection · Co-inventor · KR App. PN231067KR (2023) · Detection time: 1.0 s → **0.56 s**
-- **Patent #2** — Cryogenic motor starting method · Development contributor (experimental validation) · −40°C start time: 300 s → **100 s**
+- **Patent #2** — Cryogenic motor starting method · Development contributor (experimental validation) · −40°C start time: 300 s → **100 s** · *Application No. [TODO: confirm via KIPRIS — search "저온 기동 황인혁"]*
 
 ---
 
@@ -125,7 +125,7 @@ In industry, built four test benches from scratch, led DFMEA-based root cause an
 
 ### Languages
 - Korean: Native
-- English: Professional working proficiency (TOEIC 920 · TOEIC Speaking IH — *note: scores expired; retaking scheduled*)
+- English: Professional working proficiency
 
 ---
 
@@ -140,8 +140,5 @@ In industry, built four test benches from scratch, led DFMEA-based root cause an
 
 ## TODO (fill before submission)
 
-- [ ] Public email address
-- [ ] Portfolio site deployed URL
-- [ ] Undergraduate GPA (optional)
-- [ ] Patent #2 application number
-- [ ] TOEIC retake date / new score
+- [ ] Patent #2 application number — check KIPRIS.or.kr → 출원인 "황인혁" 검색 (또는 특허법인 더웨이브 문의)
+- [ ] 포트폴리오 사이트 실제 배포 여부 확인 (hwanginhyeok.github.io/portfolio)
