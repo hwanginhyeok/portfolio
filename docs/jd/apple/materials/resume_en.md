@@ -70,7 +70,7 @@ In industry, built four test rigs aligned with MIL-STD-810 / IEC 60068-2 environ
 ## EDUCATION
 
 ### Konkuk University — M.S. in Mechanical Design (RBDO Lab)
-**Mar 2021 – Feb 2023** · GPA: 3.77/4.5 · Advisor: Prof. Namsu Kim
+**Mar 2021 – Feb 2023** · 27 major credits · Major GPA 3.77/4.5 · Advisor: Prof. Namsu Kim
 
 **Thesis**: *Fault Diagnosis Simulation of Interior Permanent Magnet Synchronous Motor using Electromagnetic Analysis* (49 pp., RISS: f678963f23f2e418ffe0bdc3ef48d419)
 
@@ -80,7 +80,7 @@ In industry, built four test rigs aligned with MIL-STD-810 / IEC 60068-2 environ
 - **Witnessed full ALT design-test-redesign cycle** (IPMSM eccentricity fault characterization; load factor application → FTA → destruct-limit-adjacent test); observed dual-sensor architecture in operation (P-05 J. Power Electron. 2024)
 
 ### Konkuk University — B.S. in Mechanical Design
-**Mar 2015 – Feb 2021** · GPA: 3.24/4.5
+**Mar 2015 – Feb 2021** · 79 major credits · Major GPA 3.24/4.5
 
 ---
 

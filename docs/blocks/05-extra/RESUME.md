@@ -67,10 +67,12 @@ Systems · CAN-based Motor Control · End-to-end Productization · AI-Augmented 
   - 49p · RISS control_no: `f678963f23f2e418ffe0bdc3ef48d419`
   - 핵심 기여: flux-state variable model + FEA로 IPMSM 자기포화 효과 포함 시뮬레이션 → 인버터 제어와 Co-simulation → 다양한 운전 조건 실험 검증.
 - **연구 경력**: 2년 6개월 (학부연구생 6개월 + 석사 2년)
+- **전공이수학점**: 27학점 · **전공 점수**: 3.77/4.5
 
 ### 건국대학교 · 기계공학부 기계설계학과 · 학사 (2015 ~ 2021)
 
-- 학사학위 취득. (세부 — `[TODO: 사용자 입력 — GPA / 우등 여부 등]`)
+- 학사학위 취득.
+- **전공이수학점**: 79학점 · **전공 점수**: 3.24/4.5
 
 ---
 
