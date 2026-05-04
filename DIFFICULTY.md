@@ -1,5 +1,38 @@
 # Difficulties & Know-how
 
+## D-007: 사실 검증 (Fact-Check) 없이 표준명 사후 매핑 → 외부 제출 자료에 부정직 표현 누적
+- **날짜**: 2026-05-04
+- **상황**: Apple/xAI 영문 cover letter + resume 작성. Sub-agent가 어필력 강화 위해 사용자 RESUME에 없는 표준명을 사후 매핑 — JESD47/JEP122, MIL-STD-810, IEC 60068-2, IEC 60529 IP67, FRACAS, AIAG-VDA 2019, Six Sigma DMAIC, Cpk/Ppk
+- **문제**:
+  - "직접 시험 수행"과 "표준에 사실상 부합"의 차이 모호화
+  - "BOM freezes / line-stop decisions" 등 SSOT에 없는 표현이 자연스럽게 섞여 들어감
+  - "ALT design" 표현 사용 (사용자는 옆에서 본 것이지 직접 design 아님)
+  - "self-study brief" 1169줄 산출물 어필 — 줄수는 많지만 사용자가 인터뷰에서 답변 가능한 깊이 미도달
+  - "the most reliability-demanding component" 같은 검증 불가 단언
+- **삽질**:
+  - 사용자가 직접 cover letter 읽고 "이 부분 어디서 가져왔니?", "지어낸 듯한 느낌"이라고 지적 → 4~5라운드 정정
+  - reliability_competency.md §3 매핑 표가 cover letter에 그대로 흘러들어감 (자가학습 자료 ≠ 제출 가능 어필)
+- **해결**:
+  - RESUME.md 풀로 grep — "IP67/Cpk/Six Sigma/방수" 검색하면 0건 확인
+  - 매핑 표현 모두 제거. 사용자 직접 한 사실만 정량 수치로 (다이나모 0.008%, 팬 +57%, 범퍼 0.082m/308A/467ms, CAN 5노드/DBC 4종, BOM 132/재고 23건)
+  - 저자 위치 명시 (3rd/6th/4th author)로 contribution 정직 기재
+  - "ALT design" → "instrumenting ALT" / "observed full ALT cycle"로 분리
+  - self-study brief 구체 항목 제거, "actively building optics-domain depth" 진행 중 톤
+  - "I have not worked on cameras, VCMs, or lens assemblies" 갭 첫 줄에서 솔직 인정
+- **노하우**:
+  - 외부 제출 자료(cover letter / resume / 지원서)는 **사용자 SSOT(RESUME.md / CONTENT_V2.md) 직접 인용만**
+  - Sub-agent에 작성 위임 시 입력으로 "RESUME에 명시된 사실만 사용. 표준명 매핑은 RESUME에 명시된 경우에만" 명시 필요
+  - "내가 아는 거 뽐내기" vs "실제로 한 것" 구분 — 인터뷰에서 깊이 답변 가능한지가 기준
+  - 자가학습 자료는 줄수가 아니라 **답변 깊이**가 어필 자격. 깊이 미도달 시 산출물 자체를 cover letter에 어필 금지
+  - "ALT design / conducted / led" vs "observed / participated / co-authored" 동사 선택 = 정직성의 핵심 지표
+  - 매 정정 후 사용자 검토 단계에서 grep으로 RESUME 매핑 재확인 (`grep -n "키워드" RESUME.md`)
+- **회고**: D-005 (BMS 정합성 타인 업무) 패턴 재발. AI가 사용자 자료를 풍부하게 보이려 추론·매핑·확장하는 경향 = 정직성과 충돌. **외부 제출 자료 작성 시 sub-agent에 "추가 매핑 금지, SSOT 직접 인용만" 강제 필요**
+- **관련 파일**:
+  - `docs/jd/apple/materials/cover_letter.md` (5라운드 정정)
+  - `docs/jd/apple/materials/resume_en.md` (표준명 매핑 다수 — 추가 검토 필요)
+  - `docs/jd/xai/materials/cover_letter_xai.md` (2건 정정)
+  - `docs/jd/apple/materials/reliability_competency.md` §3 (매핑 표 — 자가학습 자료 SSOT, 제출자료에는 인용 금지)
+
 ## D-006: iCloud for Windows 동기화 폴더 — Read 호출 시 자동 다운로드 트리거
 - **날짜**: 2026-04-26
 - **상황**: B1-13 양산 전장함 사진 발굴 위해 `/mnt/c/Users/gint pcd/iCloudPhotos/Photos/` 사진 약 10장 Read 도구로 열람
