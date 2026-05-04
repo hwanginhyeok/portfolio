@@ -4,6 +4,7 @@
 
 | # | 태스크 | 완료일 | 비고 |
 |---|--------|--------|------|
+| B3-02 | Impact Dashboard 위치 + 내비게이션 결정 — A+C 병행·L3·N2 확정 | 2026-05-04 | /impact 구현은 B4-02로 분리. 내비게이션 N2 홈 적용 완료 |
 | B3-01 | 5섹션 와이어프레임 확정 — LAYOUT.md §7 게이트 12/12 통과 | 2026-05-04 | Hero 16대·autonomy-stack P1·기술스택 확정·H-A 유지. B4 진입 가능 |
 | B1-10b | patent 페이지 극저온 기동 섹션 시각화 — rotor-reference-frames + bemf-observer 2-grid 추가 | 2026-04-26 | eop-400w 이미지 재사용. 본문 "Back-EMF Observer 능동제어기" 직접 설명 |
 | B1-13 | 양산 전장함 사진 — IMG_9304.JPEG (iCloud) 90도 좌회전 + webp 변환 적용 | 2026-04-26 | ss500 control-box-external.webp 교체. 1600x1200, 178KB |

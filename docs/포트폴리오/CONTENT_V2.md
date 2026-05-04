@@ -39,13 +39,15 @@
 원인을 찾고, 시험으로 증명하고, 양산까지 끌고 간다.
 ```
 
-### 2.2 핵심 수치 카드 3장
+### 2.2 핵심 수치 카드 3장 (2026-05-04 사이트 기준)
+
+> 현재 `Hero.astro` 구현 기준. 논문·학회/현장이슈 카드는 T-5 뿌리 섹션에서 표현.
 
 | 카드 | 수치 | 서브 |
 |---|---|---|
-| **논문·학회** | 저널 1 · 학회 4 | 석사 연구 (모터 고장진단 PHM) |
-| **특허 참여** | 공동 1 · 기여 1 | 초기위치 검출 / 저온 기동 |
-| **현장 이슈** | 37건+ | 전력제어 담당 14건, 분야 불문 해결 |
+| **극저온 기동** | -40°C | 극저온 기동 300→100초 |
+| **특허 참여** | 공동 1 · 기여 1 | 공저 저널 3편·학회 4편 |
+| **사업 임팩트** | 초도 양산 16대 | GT-SS500 · 0→1 풀사이클 완주 |
 
 ---
 
@@ -474,10 +476,13 @@ BLDC / PMSM · FOC / SVPWM · CAN / CAN-FD · BMS · DC-DC · PCB (4/6층)
 STM32 · Infineon TC23x · MC9S12ZVMC · RTOS · 상태머신
 
 **시험 · 분석**
-다이나모미터 · CANoe · Vector VN1600 · SPICE · Oscilloscope
+다이나모미터 · CANoe · Vector VN1600 · SPICE · Oscilloscope · HIL (다이나모 VCU 연동)
+
+**시뮬레이션 · 진단**
+Ansys Maxwell · Co-simulation · PHM · multi-sensor fusion · ROS2 · Gazebo · nav2 (사이드) · RTK GNSS · IMU 융합 · Linux
 
 **SW · 도구**
-Python · C/C++ · MATLAB/Simulink · Ansys Maxwell · Git
+Python · C/C++ · MATLAB/Simulink · Git
 
 **품질 · PM**
 APQP · DFMEA · DRBFM · BOM · Notion · WBS
