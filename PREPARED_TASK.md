@@ -29,12 +29,14 @@
 |---|--------|:--------:|---------|------|
 | B4-02 | `/impact` 페이지 구현 | P2 | B4-01 완료 후 | LAYOUT.md §2.4 명세. Hero 4카드 확장판 + LifecycleHeatmap + 메시지별 정량표. nav 미노출, 이력서/LinkedIn 공유용 URL |
 
-## JD 지원 — Apple (2개)
+## JD 지원 — Apple (4개)
 
 | # | 태스크 | 우선순위 | depends | 비고 |
 |---|--------|:--------:|---------|------|
-| JD-A3 | Apple 지원서 최종 제출 | P1 | — | jobs.apple.com Job ID 200656459-3631. **블로커 해제 (2026-05-04)** — 특허#2 출원번호 확정(10-2023-0175484). 즉시 제출 가능 |
-| JD-A4 | 포트폴리오 V3 GitHub Pages 배포 | P1 | | 현재 구버전(V3 이전) 배포 중. git push 후 Pages 배포 필요 |
+| JD-A3 | Apple 지원서 최종 제출 | P1 | JD-A5, JD-A6 | jobs.apple.com Job ID 200656459-3631. 특허#2 출원번호 확정(10-2023-0175484). Reliability 역량 재정리 + 커버레터 후 제출 |
+| JD-A4 | 포트폴리오 V3 GitHub Pages 배포 | P1 | | 현재 구버전 배포 중. git push 후 Pages 배포 필요 |
+| JD-A5 | Reliability 역량 정리 + 연계 경험 발굴 (사용자 인터뷰) | P1 | — | PM-83과 동일. ALT/Weibull/Arrhenius/PHM/DFMEA/FRACAS/MTBF/Bathtub/HALT-HASS/Damage Summation 보유 vs 미보유 구분. 학부/대학원/회사 미기재 경험 발굴 → `materials/reliability_competency.md` |
+| JD-A6 | Apple 커버레터 작성 (`materials/cover_letter.md`) | P1 | JD-A5 | jd_resume_match.md §3 강점/갭 + JD-A5 결과를 4단락으로 압축. RBDO Lab 출신 강조하되 다른 강점도 균형 배치 |
 
 ## B5 — 부가자료 (3개)
 
