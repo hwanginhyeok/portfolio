@@ -1,6 +1,6 @@
 # JD 분석 — xAI · Mechanical Engineering Tutor (AI Tutor)
 
-> 분석일: 2026-05-04
+> 분석일: 2026-05-04 | v2: fact-check pass — 저자 위치 명시, 과장 표현 약화 (2026-05-04)
 > URL: https://job-boards.greenhouse.io/xai/jobs/4925848007
 > 결론: **적극 권장 — 부업/부수입 + 글로벌 경험 + AI 도메인 노출. 본업 유지 가능.**
 
@@ -92,12 +92,12 @@ PhD 미보유는 약점이지만 "Master's OR PhD"가 필수라서 자격 자체
 
 | 강점 | 어필 포인트 |
 |------|-------------|
-| **저널 4편 (IEEE TIM·Solar Energy·J. Power Electron.·PHM Society)** | xAI의 "publication record in reputable journals" 우대 — **이게 가장 큰 차별점** |
+| **저널 3편 공저 + 학회 4편** | xAI의 "publication record in reputable journals" 우대 — **이게 가장 큰 차별점**. IEEE TIM (3rd author) / Solar Energy (4th author) / J. Power Electron. (6th author) |
 | **모터 제어·신뢰성 도메인 깊이** | 학위논문 IPMSM Co-simulation, PHM SoC, IGBT PCT — AI에게 가르칠 ME 콘텐츠가 두꺼움 |
 | **산업 ME 실무 3년** | GINT 전력제어·제품개발·PM 겸임. "real-world experience" 우대 매칭 |
-| **기술 글쓰기 역량** | 한국어 마스터 RESUME 1500줄, 포트폴리오 1900줄, 특허 명세서 기여 |
-| **자율 학습·자율 판단** | 카메라 도메인 1주 자가학습 (camera_vcm_reliability.md 1169줄) — 자율적 정보 탐색 능력 직접 증명 |
-| **특허 2건** | KR PN231067KR / KR 10-2023-0175484 — 발명 + 명세서 작성 경험 |
+| **기술 글쓰기 역량** | 한국어 마스터 RESUME 428줄, 포트폴리오 1900줄+, 특허 명세서 기여 |
+| **자율 학습·자율 판단** | 카메라 도메인 1주 자가학습 (camera_vcm_reliability.md — 광학 신뢰성 자가학습 자료) — 자율적 정보 탐색 능력 |
+| **특허 2건** | KR PN231067KR (공동발명) / KR 10-2023-0175484 (개발 기여, 발명자 미포함) — 명세서 작성 경험 |
 
 ---
 
@@ -114,9 +114,9 @@ PhD 미보유는 약점이지만 "Master's OR PhD"가 필수라서 자격 자체
 
 ### 5.2 강점 부각 전략
 
-- **"신뢰성 엔지니어 + 저널 4편 + 모터 도메인 깊이"** 한 줄 포지셔닝
+- **"신뢰성 엔지니어 + 저널 공저 3편 + 모터 도메인 깊이"** 한 줄 포지셔닝
 - 한국어/영어 bilingual 가능 → AI 학습 데이터 다국어 기여 가능성
-- 자가학습으로 광학 도메인 1주 만에 1169줄 brief 작성 — **autonomous learner 직접 증명 자료**
+- 자가학습으로 광학 도메인 1주 만에 자가학습 자료 작성 — **autonomous learner 직접 증명**
 
 ---
 
@@ -137,7 +137,7 @@ PhD 미보유는 약점이지만 "Master's OR PhD"가 필수라서 자격 자체
 
 - [ ] `materials/resume_en.md` — Apple용 resume_en을 baseline으로 xAI 톤으로 미세 조정
   - "Reliability engineer" 강조 → **"ME researcher with 4 peer-reviewed publications"** 톤으로 전환
-  - 신뢰성 표준명 매핑은 여전히 유지 (도메인 깊이 어필)
+  - 저자 위치 명시 (3rd/4th/6th author) 유지 (정직성)
   - APQP/양산 경험은 **"real-world ME experience"** 어필 포인트로 활용
 - [ ] `materials/application_answers.md` — Greenhouse 폼 짧은 답변 모음
   - "Why xAI?", "What do you bring?", "Tutoring philosophy" 등 단답 영문

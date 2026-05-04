@@ -1,6 +1,6 @@
 # Apple · Reliability Engineer — 지원 가이드
 
-> 작성: 2026-05-04
+> 작성: 2026-05-04 | v2: 면접 준비 매핑 표 fact-check pass (2026-05-04)
 > 포지션: Reliability Engineer, Core Technology Operations, Korea
 > Job ID: **200656459-3631** (jobs.apple.com)
 
@@ -54,13 +54,13 @@
 
 | 질문 유형 | 황인혁 매핑 답변 소재 |
 |-----------|----------------------|
-| ALT 설계 — 스트레스 인자 → 가속 인자 → 합격 기준 | P-04(Solar Energy) PV 폴리머 ALT, P-05 IPMSM dual sensor ALT |
-| Failure Mode 어떻게 식별하는가? | DFMEA AP=H 5건, RBDO Lab 연구 |
+| ALT 설계 — 스트레스 인자 → 가속 인자 → 합격 기준 | P-04(Solar Energy, 4th author) PV 폴리머 ALT, P-05 IPMSM dual sensor ALT 관찰 참여 |
+| Failure Mode 어떻게 식별하는가? | DFMEA 5건 AP=H 5건, RBDO Lab 연구 |
 | 시험 결과를 어떻게 필드 사용 조건으로 연결하는가? | Co-simulation + 실험 검증 체계 (T-01, P-03) |
-| 부품 없이 시험 환경 구축한 경험 | 다이나모미터·팬벤치·범퍼 시험대 자력 구축 |
+| 부품 없이 시험 환경 구축한 경험 | 다이나모미터·팬벤치·범퍼 시험대 자력 구축 (in-house) |
 | Specific fault vs comprehensive test suite | DFMEA RPN 우선순위화 → AP=H 5건 집중 |
 | ORT vs DVT/PVT 역할 | APQP Phase 게이트 운영 경험 |
-| 반도체 모듈 신뢰성 경험 | IGBT 본드와이어 lift-off (P-01 IEEE TIM 2024) |
+| 반도체 모듈 신뢰성 경험 | IGBT PCT 직접 수행 — 본드와이어 lift-off (P-01 IEEE TIM 2024, 3rd author) |
 
 ### Apple 면접 특성
 - **정답보다 사고 과정**이 평가 대상
@@ -96,10 +96,11 @@
 
 ```
 단락 1: RBDO Lab 출신 — 신뢰성 방법론이 석사 연구의 핵심
-단락 2: ALT 설계·운용 (IPMSM, PV 폴리머), 반도체 신뢰성 (IGBT IEEE TIM)
-단락 3: 실무 시험체계 자력 구축 + DFMEA RCA 4건 — Apple 업무와 1:1 대응
+단락 2: ALT 관찰 참여 (IPMSM, PV 폴리머), IGBT PCT 직접 수행 (P-01 IEEE TIM 2024, 3rd author)
+단락 3: 실무 시험체계 4종 자력 구축 + root-cause analysis 4건 + NCR 27건 closed-loop — Apple 업무와 대응
 단락 4: 광학 도메인 학습 의지 + Apple 제품에 대한 구체적 관심
 ```
+→ 상세 최신 초안: `materials/cover_letter.md`
 
 → 초안: `materials/cover_letter.md`
 
