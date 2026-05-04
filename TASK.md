@@ -5,7 +5,7 @@
 
 ## 요약
 
-- Current: 1개 (blocked: 0)
+- Current: 2개 (blocked: 0)
 - Prepared: 16개 (B1: 8, B2: 1, B4: 1, B5: 4, JD-Apple: 2)
 - Finished: 30개
 

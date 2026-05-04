@@ -93,6 +93,19 @@
 - **HIH_2** (`~/HIH_2/`): GT-SS500 프로젝트 원본 — **읽기 전용**
 - 사이드 프로젝트: 자율주행(ROS2), politics-stat(Next.js), 주식부자(Python)
 
+## JD 디렉토리 구조
+
+> 운영 원칙: [docs/jd/README.md](docs/jd/README.md)
+
+| 회사 | 포지션 | 상태 |
+|------|--------|:----:|
+| [docs/jd/apple/](docs/jd/apple/) | Apple · Reliability Engineer | 🔵 지원서 준비 완료 |
+| [docs/jd/nearlab/](docs/jd/nearlab/) | 니어스랩 · 임베디드/전장 엔지니어 | 🟡 JD URL 미확보, 면접 자료 완료 |
+
+**원칙**: 회사별 디렉토리 완전 분리. 메인 사이트(`src/pages/`)는 특정 회사 JD에 맞춰 수정하지 않는다.
+
+---
+
 ## 언어
 
 - 포트폴리오 본문: **한국어** (기술 용어/고유명사는 원문 유지)
