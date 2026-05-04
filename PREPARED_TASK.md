@@ -33,9 +33,17 @@
 
 | # | 태스크 | 우선순위 | depends | 비고 |
 |---|--------|:--------:|---------|------|
-| JD-A3 | Apple 지원서 최종 제출 | P1 | JD-A5, JD-A6 | jobs.apple.com Job ID 200656459-3631. 특허#2 출원번호 확정(10-2023-0175484). Reliability 역량 재정리 + 커버레터 후 제출 |
+| JD-A3 | Apple 지원서 최종 제출 (사용자 직접) | P1 | JD-A5, JD-A6 | jobs.apple.com Job ID 200656459-3631. 자료 준비 완료(resume_en/cover_letter/learning Day1~7/STAR 5종). **제출은 사용자 직접 수행** |
 | JD-A5 | Reliability 역량 정리 + 연계 경험 발굴 (사용자 인터뷰) | P1 | — | PM-83과 동일. ALT/Weibull/Arrhenius/PHM/DFMEA/FRACAS/MTBF/Bathtub/HALT-HASS/Damage Summation 보유 vs 미보유 구분. 학부/대학원/회사 미기재 경험 발굴 → `materials/reliability_competency.md` |
 | JD-A6 | Apple 커버레터 작성 (`materials/cover_letter.md`) | P1 | JD-A5 | jd_resume_match.md §3 강점/갭 + JD-A5 결과를 4단락으로 압축. RBDO Lab 출신 강조하되 다른 강점도 균형 배치 |
+
+## JD 지원 — xAI (3개)
+
+| # | 태스크 | 우선순위 | depends | 비고 |
+|---|--------|:--------:|---------|------|
+| JD-X1 | xAI Mechanical Engineering Tutor — JD 분석 + 적합성 판단 | P1 | — | `docs/jd/xai/JD_분석_xAI_Mechanical_Engineering_Tutor.md` 작성 완료. Remote part-time, $45~75/hr, 저널 4편 매칭 ✅, PhD 미보유는 자격 영향 없음 |
+| JD-X2 | xAI 맞춤 resume + cover letter 작성 (`docs/jd/xai/materials/`) | P1 | JD-X1 | Apple resume_en을 baseline으로 ME researcher 톤 전환. 저널 4편 + autonomous learner 강점 부각 |
+| JD-X3 | xAI 지원서 제출 (사용자 직접) | P1 | JD-X2 | greenhouse 폼. **제출은 사용자 직접 수행** |
 
 ## B5 — 부가자료 (3개)
 
