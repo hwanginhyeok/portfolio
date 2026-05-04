@@ -27,7 +27,7 @@
 | **현재 소속** | GINT(긴트) · 전력제어개발팀 (선임연구원) + 제품개발팀 (주니어 PM 겸임) |
 | **이메일** | `[TODO: 사용자 채움 — 공개 이메일]` |
 | **GitHub** | github.com/hwanginhyeok |
-| **포트폴리오 사이트** | `[TODO: 배포 URL 채움]` |
+| **포트폴리오 사이트** | hwanginhyeok.github.io/portfolio |
 
 > 전화번호 / 거주지: 공개 안 함 (제외).
 
