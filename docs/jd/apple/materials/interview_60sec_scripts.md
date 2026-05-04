@@ -1,8 +1,9 @@
 # 인터뷰 60초 답변 스크립트 — Cheat Sheet
 
-> 작성: 2026-05-04 | Apple Reliability Engineer 면접 준비
-> 목적: Day 1~3 핵심을 60초 영문 답변 5개로 압축한 최종 cheat sheet
-> 기준: 60~90 단어, 자연스러운 회화 톤, 경험 기반 구체성
+> 작성: 2026-05-04 | 갱신: 2026-05-04 (Day 4~7 스크립트 6개 추가, 총 11개)
+> Apple Reliability Engineer 면접 준비
+> 목적: Day 1~7 핵심을 60초 영문 답변으로 압축한 최종 cheat sheet
+> 기준: 60~120 단어, 자연스러운 회화 톤, 경험 기반 구체성
 
 ---
 
@@ -90,7 +91,104 @@
 
 ---
 
-## 빠른 참조 — 숫자 + 공식 카드
+---
+
+## Script 6 — "Walk me through how you operated NCR / FRACAS"
+
+> "FRACAS is a five-step closed loop: Failure Reporting, Analysis, Corrective
+> Action, Verification, and System Update. At GINT I ran this loop on 27 NCRs
+> for the GT-SS500 program. Each NCR started with a standard form — date, product ID,
+> observed symptom, who found it. We ran RCA, I personally led four — including an
+> MCB carbonization case traced to electrolytic corrosion via IEC 60947-2 spec
+> mismatch. The corrective action was verified by reproducing the original failure,
+> then confirmed zero recurrence. Then we updated the DFMEA, inspection guide, and
+> BOM. The label was NCR, but the structure is textbook FRACAS."
+
+단어 수: 112 / 발화: ~62초
+
+---
+
+## Script 7 — "How do you handle small-sample reliability?"
+
+> "When sample sizes are small — say fewer than twenty units in an ALT —
+> frequentist MLE gives wide confidence intervals on B10, sometimes too wide for
+> useful decision-making. Bayesian reliability addresses this by incorporating a
+> prior: historical data from a predecessor component, or a Jeffreys non-informative
+> prior if nothing better is available. The posterior on Weibull parameters is
+> narrower, and you can extract a credible interval on B10 directly.
+> I haven't applied Bayesian reliability in production yet, but it's a natural
+> extension of the RBDO framework from my graduate lab, where we used prior
+> distributions to model strength uncertainty before test data arrived."
+
+단어 수: 110 / 발화: ~62초
+
+---
+
+## Script 8 — "What is Cpk and how does it relate to IQC/OQC?"
+
+> "Cpk is the process capability index that accounts for both spread and centering —
+> the minimum of USL minus mean over three sigma, and mean minus LSL over three sigma.
+> A Cpk of 1.33 is the standard production baseline: the mean is at least four sigma
+> away from the nearer spec limit. For high-reliability parts you'd target 1.67 or
+> above. At GINT I defined IQC and OQC inspection criteria for GT-SS500 production,
+> consistent with Six Sigma DMAIC gating logic and process capability monitoring
+> for supplier qualification. Cpk and Ppk together diagnose whether an underperforming
+> supplier has a precision problem — Cpk low — or a drift problem — Ppk lower than Cpk."
+
+단어 수: 118 / 발화: ~65초
+
+---
+
+## Script 9 — "How would you approach Apple's VCM reliability test plan?"
+
+> "I'd start with DFMEA — coil open, spring fatigue, Hall sensor drift,
+> demagnetization, and contamination are the five primary failure modes.
+> Then map each to an ALT stress: HTOL at 85°C for coating delamination and magnet
+> degradation, temperature cycling for FPC fatigue, drop test for spring failure,
+> THB for coil corrosion. From ALT data I'd fit Weibull, compute B10, and require
+> B10 to exceed the field life target times a safety factor of 1.5. For production
+> I'd run incoming Cpk monitoring on coil resistance and stroke length. Any field
+> NCR feeds back into a FRACAS closed loop — DFMEA update, inspection guide
+> revision, horizontal deployment to similar part numbers."
+
+단어 수: 118 / 발화: ~65초
+
+---
+
+## Script 10 — "What's a corrective action that didn't work the first time?"
+
+> "On the GT-SS500, we had a ground-bounce noise issue that caused intermittent
+> control instability. The first corrective action was a localized grounding strap
+> — it reduced noise amplitude but didn't eliminate it. On retesting, the symptom
+> recurred under high-load conditions. We re-ran the RCA and discovered the root
+> cause was deeper: the power and signal ground planes were sharing a single return
+> path that became a noise antenna under motor braking current. We redesigned the
+> PCB grounding topology — separate return planes with a single tie point — and
+> added differential shielding on the signal lines. Recurrence zero on re-verification.
+> The lesson: if the symptom reduced but didn't disappear, the root cause analysis
+> wasn't deep enough."
+
+단어 수: 122 / 발화: ~68초
+
+---
+
+## Script 11 — "Tell me about your APQP experience"
+
+> "I led APQP Phase 2 and 3 for the GT-SS500, a 48V autonomous agricultural sprayer.
+> In Phase 2, I built four test rigs aligned with MIL-STD-810 and IEC 60068-2 and
+> authored five DFMEAs per AIAG-VDA 2019 — all five AP=H action points resolved
+> before gate. In Phase 3, I defined IQC and OQC criteria using Six Sigma DMAIC
+> gating logic and managed a 132-item BOM. I ran weekly Gate Reviews across six
+> cross-functional teams, tracked 27 NCRs through closure, and took the product
+> to first-article shipment of 16 units on schedule."
+
+단어 수: 98 / 발화: ~55초
+
+---
+
+## 빠른 참조 — 숫자 + 공식 카드 (Day 1~7 통합)
+
+### Day 1~3 (기존)
 
 | 항목 | 값 / 공식 |
 |------|---------|
@@ -111,3 +209,30 @@
 | THB 조건 | 85°C / 85%RH, 1000h |
 | HAST 조건 | 130°C / 85%RH (가압), ~96h |
 | HBM ESD | 100pF + 1.5kΩ, 피크 ~1.33A |
+
+### Day 4~6 (신규 추가)
+
+| 항목 | 값 / 공식 |
+|------|---------|
+| FRACAS 5단계 | Failure Reporting → Analysis → Corrective Action → Verification → System Update |
+| Duane growth rate α | 0.3~0.5 = 양호한 신뢰도 성장 |
+| AMSAA intensity | λ(t) = λ·β·t^(β-1), β<1이면 신뢰도 성장 중 |
+| Cpk 공식 | min[(USL-μ)/3σ, (μ-LSL)/3σ] |
+| Cpk 기준 | 1.33 = 양산 baseline (4σ / 63 DPMO), 1.67 = 고신뢰성 (5σ) |
+| Ppk vs Cpk | Cpk: 단기 within-σ / Ppk: 장기 overall-σ |
+| Bayesian | posterior ∝ likelihood × prior |
+| Jeffreys prior | π(η) ∝ 1/η — 비정보적, 변환 불변 |
+| Miner's Rule | D = Σ(ni/Ni), D≥1 → 수명 만료 |
+| VCM B10 예시 | η=500k cycles, β=2.5 → B10 ≈ 201,100 cycles |
+| 안전계수 기준 | B10 ≥ 필드 수명 × 1.5 |
+| VCM 5 고장 모드 | 코일 단선 / 스프링 피로 / 홀센서 드리프트 / 자석 감자 / 이물 침입 |
+
+### STAR 5종 핵심 수치 빠른 암기
+
+| STAR | 핵심 수치 |
+|------|---------|
+| #1 MCB RCA | 48V·30A, 200 cycles 검증, NCR #204, 16 units 출하 |
+| #2 IGBT PCT | ΔTj, Vce-sat 20% 기준, IEEE TIM 2024, bond-wire lift-off |
+| #3 DFMEA | AIAG-VDA 2019, 5 DFMEAs, AP=H 5건, 잔여 위험 0 |
+| #4 APQP | 132-item BOM, 27 NCRs, 6팀, 16 units 출하, 45항목 체크리스트 |
+| #5 Damage Sum | Miner's Rule, Σ(ni/Ni), Solar Energy 2024 |
