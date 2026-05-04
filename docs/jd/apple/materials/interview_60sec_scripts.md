@@ -136,19 +136,20 @@
 
 ## Script 8 — "What is Cpk and how does it relate to IQC/OQC?"
 
-> "Cpk is the process capability index that accounts for both spread and centering —
-> the minimum of USL minus mean over three sigma, and mean minus LSL over three sigma.
-> A Cpk of 1.33 is the standard production baseline: the mean is at least four sigma
-> away from the nearer spec limit.
-> At GINT I defined IQC and OQC inspection criteria for GT-SS500 production,
-> setting supplier qualification thresholds. Cpk and Ppk monitoring are
-> the natural extension of those criteria in ongoing production —
-> Cpk diagnoses precision problems, Ppk diagnoses drift problems.
-> That's the direction I'd extend the IQC/OQC framework as production scales."
+> "Cpk is the process capability index — the minimum of USL minus mean over
+> three sigma and mean minus LSL over three sigma — accounting for both spread
+> and centering. A Cpk of 1.33 is the standard production baseline: the mean
+> sits at least four sigma from the nearer spec limit.
+> At GINT I defined IQC and OQC inspection criteria for GT-SS500 — pass/fail
+> thresholds and re-sample rules — at first-article scale (16 units plus
+> spares). We didn't yet operate a formal Cpk/Ppk dashboard since sample
+> volume was small, but that's the layer I'd add as production scales —
+> Cpk for spread and centering on each measurement, Ppk for long-term drift
+> across batches."
 
-단어 수: 108 / 발화: ~61초
+단어 수: 113 / 발화: ~63초
 
-*Note (fact-check): 사용자가 IQC/OQC 정의는 직접 수행(RESUME §5.1 명시), Cpk/Ppk 모니터링 직접 수행은 RESUME에 없음. "consistent with Six Sigma DMAIC / Cpk/Ppk monitoring" 제거 → "방향성으로 확장하겠다" 톤으로 변경. 이 답변에서 "I applied Cpk" 단언 금지.*
+*Note (fact-check): 사용자가 IQC/OQC 정의는 직접 수행(RESUME §5.1 "IQC 검사 가이드"), Cpk/Ppk 대시보드 운영은 RESUME에 없음 — 답변에서 "We didn't yet operate a formal Cpk/Ppk dashboard since sample volume was small"로 직접 수행 X를 명시 분리. "first-article scale (16 units plus spares)" RESUME §4 직접 매핑. 면접관 후속 질문 "Did you run Cpk?" → "No, sample volume was first-article scale, not full production"로 자연스럽게 답변 가능.*
 
 ---
 
