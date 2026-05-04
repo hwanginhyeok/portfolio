@@ -4,6 +4,7 @@
 
 | # | 태스크 | 완료일 | 비고 |
 |---|--------|--------|------|
+| JD-N1 | 니어스랩 JD 매핑 문서 작성 — §1~§5 (요건/매트릭스/메시지/갭/면접 템플릿) | 2026-05-04 | `docs/jd/nearlab/JD_매핑_니어스랩.md`. JD 잠정 base — 실제 JD 확보 시 §1 교체 필요 |
 | JD-A2 | Camera/VCM 구조 + Reliability 이론 적용 학습 | 2026-05-04 | camera_vcm_reliability.md — 고장모드·ALT·DFMEA·PHM 적용법·면접 Q&A 완성 |
 | JD-A1 | Apple 영문 이력서 초안 작성 | 2026-05-04 | resume_en.md — 이메일·URL·GPA 채움. 특허#2 번호만 JD-A3에서 처리 |
 | B4-01 | 디자인 시스템 수립 + V3 5섹션 홈 구현 — 컴포넌트 7종 + Nav N2 | 2026-05-04 | 토큰(Pretendard·JetBrains·ink), Hero H-A, 홈 V3 구현 완료. B4-02(/impact) 분리 |
