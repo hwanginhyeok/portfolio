@@ -4,6 +4,8 @@
 
 | # | 태스크 | 완료일 | 비고 |
 |---|--------|--------|------|
+| JD-N3 | 니어스랩 기술 학습 인덱스 + 갭 보강 3개 | 2026-05-04 | `기술_학습.md` 커버리지 매트릭스 + tech_study/ (arm_cortex_m·imu_sensor_fusion·embedded_linux_driver) |
+| JD-N2 | 니어스랩 회사·직무 이해 자료 작성 | 2026-05-04 | `회사_직무_이해.md` (직무R&R·CEO인용·문화·마일스톤·역질문6개) + JD 디렉토리 운영 원칙 |
 | JD-N1 | 니어스랩 JD 매핑 문서 작성 — §1~§5 (요건/매트릭스/메시지/갭/면접 템플릿) | 2026-05-04 | `docs/jd/nearlab/JD_매핑_니어스랩.md`. JD 잠정 base — 실제 JD 확보 시 §1 교체 필요 |
 | JD-A2 | Camera/VCM 구조 + Reliability 이론 적용 학습 | 2026-05-04 | camera_vcm_reliability.md — 고장모드·ALT·DFMEA·PHM 적용법·면접 Q&A 완성 |
 | JD-A1 | Apple 영문 이력서 초안 작성 | 2026-05-04 | resume_en.md — 이메일·URL·GPA 채움. 특허#2 번호만 JD-A3에서 처리 |

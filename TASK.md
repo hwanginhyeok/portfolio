@@ -5,9 +5,9 @@
 
 ## 요약
 
-- Current: 3개 (blocked: 0)
+- Current: 1개 (blocked: 0)
 - Prepared: 16개 (B1: 8, B2: 1, B4: 1, B5: 4, JD-Apple: 2)
-- Finished: 30개
+- Finished: 32개
 
 > **넘버링 (2026-04-24 개편)**: `B{블록}-{순번}`
 > - B1: 자료 인벤토리 (WHAT HAVE)
