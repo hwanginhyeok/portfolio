@@ -99,7 +99,7 @@ In industry, built four test benches from scratch, led DFMEA-based root cause an
 ### Patents (2)
 
 - **Patent #1** — Motor initial position detection · Co-inventor · KR App. PN231067KR (2023) · Detection time: 1.0 s → **0.56 s**
-- **Patent #2** — Cryogenic motor starting method · Development contributor (experimental validation) · −40°C start time: 300 s → **100 s** · *Application No. [TODO: confirm via KIPRIS — listed inventors: 제정문 (Je Jeong-mun), 김은태 (Kim Eun-tae); user not on inventor list]*
+- **Patent #2** — *Method for preventing step-out of rotor of motor in low temperature and apparatus thereof* · KR App. **10-2023-0175484** (filed 2023-12-06) · Reg. **10-2654562** (granted 2024-04-01) · Applicant: GINT Inc. · IPC H02P 29/032 · Development contributor (experimental validation; not on inventor list — inventors: Je Jeong-mun, Kim Eun-tae) · −40°C start time: 300 s → **100 s**
 
 ---
 
@@ -140,5 +140,5 @@ In industry, built four test benches from scratch, led DFMEA-based root cause an
 
 ## TODO (fill before submission)
 
-- [ ] Patent #2 application number — 사용자 KIPRIS 확인 완료, 번호 전달 필요
+- [x] Patent #2 application number — KR 10-2023-0175484 / Reg. 10-2654562 / GINT Inc. (confirmed 2026-05-04)
 - [x] 포트폴리오 사이트 배포 확인 — hwanginhyeok.github.io/portfolio 접속 확인 (2026-05-04) *단, 현재 구버전. V3 배포 필요*
