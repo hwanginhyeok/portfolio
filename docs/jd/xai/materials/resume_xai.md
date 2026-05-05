@@ -1,7 +1,7 @@
 # Resume — Inhyeok Hwang
 
 > Target: xAI · Mechanical Engineering Tutor (Remote, Part-time)
-> Version: 2026-05-04 v2 (xAI tailored — researcher + writer tone; fact-check pass)
+> Version: 2026-05-05 v3 (xAI tailored — researcher + writer tone; SSOT fact-check 2026-05-05: title corrected, PCT verb downgraded)
 > Source SSOT: RESUME.md master (`docs/blocks/05-extra/RESUME.md`)
 > Note: All experience claims reflect RESUME.md SSOT directly. No standard-name post-mapping.
 
@@ -88,11 +88,11 @@ Beyond domain depth, I bring a demonstrable record of autonomous learning and te
 ---
 
 ### GINT Corp. — Electrical Control R&D
-**Junior Researcher** · Feb 2023 – Dec 2024
+**Researcher** · Feb 2023 – Dec 2024
 
 **EOP 400W: Automotive BLDC Motor Control (Government R&D Project)**
 
-- Conducted Power Cycling Tests on IGBT modules; identified bond-wire lift-off as primary failure mode (P-01, IEEE TIM 2024, 3rd author, DOI 10.1109/TIM.2024.3472910)
+- Contributed to Power Cycling Test work on IGBT modules characterizing bond-wire lift-off as a primary failure mode (P-01, IEEE TIM 2024, 3rd author, DOI 10.1109/TIM.2024.3472910)
 - Developed SVPWM/DPWM switching strategy — reduced FET temperature 1–6°C, input power 1–3.8% (validated on 2,932 data points)
 - Demonstrated cold-start improvement at −40°C: 300 s → 100 s (subject of Patent #2; experimental validation conducted independently)
 - Built dynamometer torque-control system achieving 0.008% nonlinearity; presented at internal engineering seminar
@@ -126,7 +126,7 @@ Beyond domain depth, I bring a demonstrable record of autonomous learning and te
 
 ## SELECTED RESEARCH HIGHLIGHTS
 
-- **IGBT bond-wire fault detection via inverter output parameters** — Power Cycling Test directly conducted; failure mechanism characterized at system level without in-circuit instrumentation (IEEE TIM 2024, 3rd author)
+- **IGBT bond-wire fault detection via inverter output parameters** — Power Cycling Test work characterizing failure mechanism at system level without in-circuit instrumentation (IEEE TIM 2024, 3rd author)
 - **PV polymer lifetime prediction under continuously varying environments** — Damage Summation (Miner's Rule) applied to multi-environment stress histories; demonstrates ability to structure complex multi-variable ME problems rigorously (Solar Energy 2024, 4th author)
 - **Failure mode identification in IPMSM under ALT via dual-sensor architecture** — Observed full design-test-redesign cycle; methodology illustrates ALT principles applicable to AI training explanation (J. Power Electronics 2024, 6th author)
 - **120 kW IPMSM system-level fault diagnosis** — Multi-sensor signal fusion for drivetrain RUL estimation (PHM Society Asia-Pacific 2023)
