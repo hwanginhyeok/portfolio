@@ -29,13 +29,14 @@
 |---|--------|:--------:|---------|------|
 | B4-02 | `/impact` 페이지 구현 | P2 | B4-01 완료 후 | LAYOUT.md §2.4 명세. Hero 4카드 확장판 + LifecycleHeatmap + 메시지별 정량표. nav 미노출, 이력서/LinkedIn 공유용 URL |
 
-## JD 지원 — Apple (3개)
+## JD 지원 — Apple (4개)
 
 | # | 태스크 | 우선순위 | depends | 비고 |
 |---|--------|:--------:|---------|------|
-| JD-A3 | Apple 지원서 최종 제출 (사용자 직접) | P1 | JD-A5, JD-A6 | jobs.apple.com Job ID 200656459-3631. 자료 준비 완료(resume_en/cover_letter/learning Day1~7/STAR 5종). **제출은 사용자 직접 수행** |
+| JD-A3 | Apple 지원서 최종 제출 (사용자 직접) | P1 | JD-A5, JD-A6, JD-A7 | jobs.apple.com Job ID 200656459-3631. 자료 준비 완료(resume_en/cover_letter/learning Day1~7/STAR 5종). **제출은 사용자 직접 수행** |
 | JD-A5 | Reliability 역량 정리 + 연계 경험 발굴 (사용자 인터뷰) | P1 | — | PM-83과 동일. ALT/Weibull/Arrhenius/PHM/DFMEA/FRACAS/MTBF/Bathtub/HALT-HASS/Damage Summation 보유 vs 미보유 구분. 학부/대학원/회사 미기재 경험 발굴 → `materials/reliability_competency.md` |
 | JD-A6 | Apple 커버레터 작성 (`materials/cover_letter.md`) | P1 | JD-A5 | jd_resume_match.md §3 강점/갭 + JD-A5 결과를 4단락으로 압축. RBDO Lab 출신 강조하되 다른 강점도 균형 배치 |
+| JD-A7 | 학습자료 fact-check 정정 — 1차 자료(P-01·P-02·T-01) 수령 후 학습자료 사후매핑 제거 + 풍부화 | P1 | 사용자 PDF 제공 (P-01 IEEE TIM 2024 / P-02 PCIM Asia 2022 / T-01 석사 학위논문) | 트리거: D1 §3 "β>1 wear-out" 단언이 P-01 검출·위치식별 방법과 mismatch (D-007 패턴 재발). FACTCHECK_bondwire.md §6~9 참조. 정정 대상: D1 §3, D2, D6, reliability_competency Block2 Arrhenius, index.html. 사용자 답변 항목: P-02 본인 역할 / PCT 직접 셋업 경험 / Weibull β 직접 산출 경험 / T-01 한글 제목 / T-01 신뢰성 챕터 유무 |
 
 ## JD 지원 — xAI (2개)
 
