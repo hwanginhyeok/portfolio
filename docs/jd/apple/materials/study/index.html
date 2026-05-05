@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apple Reliability 자가학습 — D1~D7</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root{--bg:#1a1a2e;--panel:#16213e;--card:#0f3460;--accent:#e94560;--text:#eaeaea;--muted:#888;--border:#2a2a4a;--green:#4ade80;--yellow:#facc15;--blue:#60a5fa}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,sans-serif;font-size:15px;line-height:1.65;display:flex;min-height:100vh}
+/* NAV */
+nav{width:200px;min-width:200px;background:var(--panel);position:sticky;top:0;height:100vh;overflow-y:auto;padding:16px 0;border-right:1px solid var(--border)}
+nav h2{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;padding:0 16px 8px}
+nav a{display:block;padding:7px 16px;color:var(--text);text-decoration:none;font-size:13px;border-left:3px solid transparent;transition:all .15s}
+nav a:hover,nav a.active{color:var(--accent);border-left-color:var(--accent);background:rgba(233,69,96,.07)}
+nav .divider{height:1px;background:var(--border);margin:8px 16px}
+/* MAIN */
+main{flex:1;padding:32px 40px;max-width:900px}
+section{margin-bottom:64px;scroll-margin-top:24px}
+h1{font-size:26px;font-weight:700;margin-bottom:4px}
+h1 span{color:var(--accent)}
+.subtitle{color:var(--muted);font-size:13px;margin-bottom:24px}
+h2{font-size:18px;font-weight:600;color:var(--blue);margin:28px 0 12px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+h3{font-size:14px;font-weight:600;color:var(--yellow);margin:20px 0 8px}
+p{margin-bottom:10px}
+/* CARDS */
+.card{background:var(--card);border-radius:8px;padding:16px 20px;margin:12px 0}
+.card-green{border-left:4px solid var(--green)}
+.card-yellow{border-left:4px solid var(--yellow)}
+.card-accent{border-left:4px solid var(--accent)}
+.card-blue{border-left:4px solid var(--blue)}
+.answer-box{background:#0a2240;border-left:4px solid var(--accent);border-radius:6px;padding:16px 20px;margin:14px 0;font-style:italic;color:#d4e8ff}
+.answer-box .q{font-style:normal;font-weight:600;color:var(--muted);font-size:12px;margin-bottom:8px}
+/* TABLE */
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13px}
+th{background:var(--card);color:var(--yellow);text-align:left;padding:8px 12px;border:1px solid var(--border)}
+td{padding:7px 12px;border:1px solid var(--border);vertical-align:top}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+/* CODE */
+pre{background:#0d1117;border-radius:6px;padding:14px 16px;overflow-x:auto;font-size:13px;line-height:1.6;margin:10px 0;border:1px solid var(--border)}
+code{font-family:'JetBrains Mono',Consolas,monospace;color:#7dd3fc}
+pre code{color:#c9d1d9}
+/* SVG FIGURES */
+.fig-wrap{margin:16px 0;text-align:center}
+.fig-wrap svg{max-width:100%}
+.fig-caption{font-size:12px;color:var(--muted);margin-top:6px}
+.fig-wrap img{max-width:100%;border-radius:6px;border:1px solid var(--border)}
+/* FOLLOW-UP */
+details{margin:6px 0}
+summary{cursor:pointer;padding:8px 12px;background:var(--panel);border-radius:6px;font-size:13px;color:var(--blue);user-select:none}
+summary:hover{color:var(--accent)}
+details[open] summary{border-radius:6px 6px 0 0;color:var(--accent)}
+details .content{padding:10px 14px;background:#0c1a2e;border-radius:0 0 6px 6px;font-size:13px}
+/* EXPERIENCE */
+.exp-box{background:#071a0e;border:1px solid #1a4a2e;border-radius:6px;padding:14px 18px;margin:12px 0}
+.exp-box .label{font-size:11px;color:var(--green);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+/* URL REFS */
+.url-list{margin:10px 0}
+.url-list li{margin:6px 0;font-size:13px}
+.url-list a{color:var(--blue);text-decoration:none}
+.url-list a:hover{text-decoration:underline}
+.url-desc{color:var(--muted);font-size:12px;margin-left:4px}
+/* CHIPS */
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.chip{background:var(--card);border-radius:20px;padding:4px 12px;font-size:12px;color:var(--text)}
+.chip.accent{background:rgba(233,69,96,.15);color:var(--accent)}
+/* NAV SCROLL */
+html{scroll-behavior:smooth}
+</style>
+</head>
+<body>
+
+<nav>
+  <h2>학습 가이드</h2>
+  <a href="#d1">D1 · Stress-Strength + Weibull</a>
+  <a href="#d2">D2 · JESD47 + Coffin-Manson</a>
+  <a href="#d3">D3 · MIL-STD / IEC / IP 코드</a>
+  <a href="#d4">D4 · FRACAS + Reliability Growth</a>
+  <a href="#d5">D5 · Bayesian + Cpk/Ppk</a>
+  <a href="#d6">D6 · Camera/VCM 통합</a>
+  <a href="#d7">D7 · STAR 영문 답변 5종</a>
+  <div class="divider"></div>
+  <a href="#quick">빠른 암기 카드</a>
+</nav>
+
+<main>
+<h1><span>Apple Reliability</span> 자가학습 D1~D7</h1>
+<p class="subtitle">작성: 2026-05-05 | 자가학습 전용 — 외부 제출 인용 금지 | figure = SVG 직접 제작 + Wikipedia Commons</p>
+
+<!-- ===== D1 ===== -->
+<section id="d1">
+<h1><span>D1</span> · Stress-Strength Interference + Weibull / B10</h1>
+
+<h2>1-A. Stress-Strength Interference</h2>
+<div class="card card-green">
+  <strong>한 줄 정의</strong>: 부품 강도(Strength)와 부하(Stress)가 모두 분포를 가지며, 두 분포가 겹치는 영역이 고장 확률 $P_f$다.
+</div>
+<pre><code>R = P(S > L) = ∫ f_S(s)·G_L(s) ds
+Pf = 1 − R   (overlap 면적)
+SF = μ_S / μ_L  ← 평균만 봄 (한계)</code></pre>
+
+<div class="fig-wrap">
+  <svg width="480" height="220" viewBox="0 0 480 220">
+    <defs>
+      <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#e94560" stop-opacity="0.6"/>
+        <stop offset="100%" stop-color="#e94560" stop-opacity="0"/>
+      </linearGradient>
+      <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.6"/>
+        <stop offset="100%" stop-color="#60a5fa" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <!-- Stress curve (left, red) -->
+    <path d="M60,180 Q130,180 160,80 Q190,0 220,80 Q250,160 280,180" fill="url(#g1)" stroke="#e94560" stroke-width="2"/>
+    <!-- Strength curve (right, blue) -->
+    <path d="M200,180 Q230,180 260,80 Q290,0 320,80 Q350,160 400,180" fill="url(#g2)" stroke="#60a5fa" stroke-width="2"/>
+    <!-- Overlap fill -->
+    <path d="M200,180 Q230,140 260,80 Q250,160 250,180 Z" fill="#facc15" opacity="0.4"/>
+    <!-- Labels -->
+    <text x="130" y="170" fill="#e94560" font-size="12" font-family="system-ui">Stress / Load (L)</text>
+    <text x="310" y="170" fill="#60a5fa" font-size="12" font-family="system-ui">Strength (S)</text>
+    <text x="235" y="125" fill="#facc15" font-size="11" font-family="system-ui">Pf</text>
+    <!-- X axis -->
+    <line x1="40" y1="185" x2="440" y2="185" stroke="#888" stroke-width="1"/>
+    <text x="220" y="210" fill="#888" font-size="11" font-family="system-ui" text-anchor="middle">Force / Stress value</text>
+    <!-- Y axis -->
+    <line x1="40" y1="10" x2="40" y2="185" stroke="#888" stroke-width="1"/>
+    <text x="30" y="100" fill="#888" font-size="11" font-family="system-ui" transform="rotate(-90,30,100)" text-anchor="middle">Probability Density</text>
+  </svg>
+  <div class="fig-caption">Stress-Strength Interference: 겹치는 노란 영역 = 고장 확률 Pf. 직접 제작 SVG.</div>
+</div>
+
+<h2>1-B. Weibull 분포</h2>
+<pre><code>f(t) = (β/η)·(t/η)^(β-1)·exp[-(t/η)^β]
+R(t) = exp[-(t/η)^β]
+MTTF = η·Γ(1 + 1/β)
+B10  = η·(-ln 0.9)^(1/β) ≈ η·(0.1054)^(1/β)</code></pre>
+
+<table>
+  <tr><th>β</th><th>고장 모드</th><th>Bathtub</th><th>대응 전략</th></tr>
+  <tr><td><strong>&lt;1</strong></td><td>초기 불량 (h↓)</td><td>Infant mortality</td><td>Burn-in</td></tr>
+  <tr><td><strong>=1</strong></td><td>우발 고장 (h=const)</td><td>Useful life</td><td>Redundancy</td></tr>
+  <tr><td><strong>&gt;1</strong></td><td>마모 고장 (h↑)</td><td>Wear-out</td><td>PM / redesign</td></tr>
+</table>
+
+<div class="fig-wrap">
+  <svg width="460" height="200" viewBox="0 0 460 200">
+    <!-- Bathtub curve -->
+    <polyline points="40,60 80,100 120,120 160,125 200,125 240,125 280,125 320,130 360,150 400,180" fill="none" stroke="#facc15" stroke-width="2.5"/>
+    <!-- Region labels -->
+    <text x="80" y="50" fill="#e94560" font-size="11" font-family="system-ui">β&lt;1</text>
+    <text x="80" y="62" fill="#e94560" font-size="11" font-family="system-ui">Infant mortality</text>
+    <text x="200" y="108" fill="#4ade80" font-size="11" font-family="system-ui">β=1</text>
+    <text x="185" y="120" fill="#4ade80" font-size="11" font-family="system-ui">Useful life</text>
+    <text x="340" y="130" fill="#60a5fa" font-size="11" font-family="system-ui">β&gt;1</text>
+    <text x="335" y="142" fill="#60a5fa" font-size="11" font-family="system-ui">Wear-out</text>
+    <!-- Dividers -->
+    <line x1="160" y1="15" x2="160" y2="185" stroke="#555" stroke-width="1" stroke-dasharray="4"/>
+    <line x1="300" y1="15" x2="300" y2="185" stroke="#555" stroke-width="1" stroke-dasharray="4"/>
+    <!-- Axes -->
+    <line x1="30" y1="185" x2="430" y2="185" stroke="#888" stroke-width="1"/>
+    <line x1="30" y1="10" x2="30" y2="185" stroke="#888" stroke-width="1"/>
+    <text x="230" y="200" fill="#888" font-size="11" font-family="system-ui" text-anchor="middle">Time →</text>
+    <text x="18" y="100" fill="#888" font-size="11" font-family="system-ui" transform="rotate(-90,18,100)" text-anchor="middle">h(t)</text>
+    <text x="40" y="26" fill="#facc15" font-size="11" font-family="system-ui">Bathtub Curve (Hazard Rate)</text>
+  </svg>
+  <div class="fig-caption">Bathtub Curve: β와 구간의 1:1 매핑. 직접 제작 SVG.</div>
+</div>
+
+<div class="fig-wrap">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Weibull_PDF.svg/640px-Weibull_PDF.svg.png"
+       alt="Weibull PDF — β별 형상 변화" loading="lazy">
+  <div class="fig-caption">Weibull PDF — β=0.5/1/1.5/5 형상 비교. 출처: Wikipedia Commons (public domain).</div>
+</div>
+
+<div class="exp-box">
+  <div class="label">황인혁 경험 연결</div>
+  RBDO Lab 석사 2년 → Stress-Strength Interference는 RBDO의 기반.<br>
+  IGBT PCT bond-wire lift-off → β&gt;1 (wear-out) 확인 (P-01 IEEE TIM 2024).
+</div>
+
+<div class="answer-box">
+  <div class="q">Q: "How would you set a reliability target for a new actuator?"</div>
+  "I'd start by treating both load and strength as distributions — that's stress-strength interference.
+  The overlap area is the failure probability. For lifetime, I'd fit Weibull to ALT data and report B10
+  instead of mean — for safety-critical parts, the early failure tail matters more than the average.
+  The shape parameter β tells me whether I'm dealing with infant mortality, random failures, or wear-out,
+  which determines whether I need burn-in, redundancy, or design margin."
+</div>
+
+<h3>Follow-up (클릭 펼치기)</h3>
+<details><summary>What's the difference between Pf and 1/MTTF?</summary><div class="content">Pf는 누적 확률 (시간 종속). 1/MTTF는 평균 고장률. β=1일 때만 동치.</div></details>
+<details><summary>Why B10 not B50?</summary><div class="content">산업 표준 (베어링/모터). Safety-critical은 B1 또는 B0.1 사용.</div></details>
+<details><summary>How do you estimate β with censored data?</summary><div class="content">MLE (Maximum Likelihood Estimation). Median Rank Regression은 small sample.</div></details>
+</section>
+
+<!-- ===== D2 ===== -->
+<section id="d2">
+<h1><span>D2</span> · JESD47 7종 + PCT / Coffin-Manson</h1>
+
+<h2>2-A. JESD47 7종 시험</h2>
+<table>
+  <tr><th>시험</th><th>약자</th><th>스트레스</th><th>표준 조건</th><th>주요 고장</th></tr>
+  <tr><td>High Temp Operating Life</td><td><strong>HTOL</strong></td><td>고온+동작</td><td>125°C, 1000h</td><td>Hot carrier, EM</td></tr>
+  <tr><td>Temperature Humidity Bias</td><td><strong>THB</strong></td><td>고온·고습</td><td>85°C/85%RH, 1000h</td><td>부식, 이온 이동</td></tr>
+  <tr><td>Temperature Cycling</td><td><strong>TC</strong></td><td>챔버 공기 온도</td><td>-55↔+125°C, 1000c</td><td>솔더·와이어 피로</td></tr>
+  <tr><td>Power Cycling</td><td><strong>PC</strong></td><td>접합 온도 ΔTj</td><td>전류 직접 가열</td><td>본드와이어, die-attach</td></tr>
+  <tr><td>ESD — Human Body Model</td><td><strong>HBM</strong></td><td>정전기</td><td>100pF/1.5kΩ, ±2kV</td><td>Gate 절연 파괴</td></tr>
+  <tr><td>ESD — Charged Device</td><td><strong>CDM</strong></td><td>디바이스 충전</td><td>±500V</td><td>얇은 Gate 산화막</td></tr>
+  <tr><td>Electromigration</td><td><strong>EM</strong></td><td>DC 전류밀도</td><td>고온 + J_max</td><td>금속선 보이드·힐록</td></tr>
+</table>
+
+<h2>2-B. Coffin-Manson + 가속 인자</h2>
+<pre><code>Nf = A · (ΔT)^(-n)   [온도 기반 단순화형]
+AF = (ΔT_test / ΔT_field)^n
+
+예: ΔT_field=20°C, ΔT_test=100°C, n=2
+   AF = (100/20)^2 = 25
+   → 시험 1,000 cycles = 필드 25,000 cycles</code></pre>
+
+<div class="fig-wrap">
+  <svg width="420" height="200" viewBox="0 0 420 200">
+    <!-- Log-log axes -->
+    <line x1="50" y1="170" x2="400" y2="170" stroke="#888" stroke-width="1"/>
+    <line x1="50" y1="10" x2="50" y2="170" stroke="#888" stroke-width="1"/>
+    <!-- Coffin-Manson line -->
+    <line x1="80" y1="30" x2="370" y2="160" stroke="#e94560" stroke-width="2.5"/>
+    <!-- Data points -->
+    <circle cx="100" cy="45" r="5" fill="#facc15"/>
+    <circle cx="160" cy="75" r="5" fill="#facc15"/>
+    <circle cx="230" cy="108" r="5" fill="#facc15"/>
+    <circle cx="310" cy="143" r="5" fill="#facc15"/>
+    <!-- Labels -->
+    <text x="55" y="25" fill="#60a5fa" font-size="11" font-family="system-ui">log(Nf)</text>
+    <text x="380" y="175" fill="#60a5fa" font-size="11" font-family="system-ui">log(ΔT)</text>
+    <text x="180" y="85" fill="#e94560" font-size="12" font-family="system-ui" transform="rotate(28,180,85)">slope = -n</text>
+    <text x="55" y="195" fill="#888" font-size="11" font-family="system-ui">Coffin-Manson log-log plot — 직선 기울기 = -n (재료 지수)</text>
+  </svg>
+  <div class="fig-caption">Coffin-Manson log-log plot: 직선 기울기 = -n. 직접 제작 SVG.</div>
+</div>
+
+<div class="card card-accent">
+  <strong>PCT ≠ Coffin-Manson 혼용 금지</strong><br>
+  PCT = <em>시험 프로토콜</em> (어떻게 테스트하는가)<br>
+  Coffin-Manson = <em>수명 외삽 모델</em> (테스트 데이터로 수명 계산)<br><br>
+  PCT 수행 → 데이터 수집 → Coffin-Manson으로 외삽 = 올바른 순서
+</div>
+
+<div class="url-list"><ul>
+  <li><a href="https://en.wikipedia.org/wiki/Coffin%E2%80%93Manson_relation" target="_blank">Coffin-Manson relation — Wikipedia</a><span class="url-desc">→ 수식 + log-log 직선 정의</span></li>
+  <li><a href="https://en.wikipedia.org/wiki/Solder_fatigue" target="_blank">Solder fatigue — Wikipedia</a><span class="url-desc">→ 솔더 크랙 단면 사진 + C-M 연결</span></li>
+  <li><a href="https://en.wikipedia.org/wiki/Electromigration" target="_blank">Electromigration — Wikipedia</a><span class="url-desc">→ EM void + hillock 그림. HTOL/EM 시험 원리</span></li>
+</ul></div>
+
+<div class="exp-box">
+  <div class="label">황인혁 경험 연결</div>
+  IGBT PCT 기여 (P-01 IEEE TIM 2024, 3저자) → bond-wire lift-off β&gt;1 확인 → Coffin-Manson 적용 유효.<br>
+  Miner's Rule (Solar Energy P-04) = Coffin-Manson 철학의 일반화.
+</div>
+
+<div class="answer-box">
+  <div class="q">Q: "How would you select a JESD47 test for a new power module?"</div>
+  "I'd start with the failure mechanism. For bond-wire interconnects, thermal fatigue is dominant — so Power Cycling per JESD47 is the primary test. PCT controls junction temperature directly, unlike TC which controls ambient. To translate PCT data to field life, you apply Coffin-Manson: N_f = A·ΔT^(-n). The acceleration factor is (ΔT_test/ΔT_field)^n — typically n=2 for solder. Key: PCT is the test protocol, Coffin-Manson is the life model. I ran PCT on IGBT modules at the lab — bond-wire lift-off showed β &gt; 1, classic wear-out, which validates Coffin-Manson applicability."
+</div>
+
+<details><summary>TC vs PC 차이?</summary><div class="content">TC = 챔버 공기 온도 제어. PC = 전류로 접합 직접 가열. TC는 솔더/패키지, PC는 본드와이어/die-attach 타겟.</div></details>
+<details><summary>Activation energy Ea는 어떻게 결정?</summary><div class="content">복수 온도에서 HTOL → ln(MTTF) vs 1/T 직선 기울기 = Ea/k. 문헌값 참조도 일반적.</div></details>
+</section>
+
+<!-- ===== D3 ===== -->
+<section id="d3">
+<h1><span>D3</span> · MIL-STD-810 / IEC 60068-2 / IP 코드</h1>
+
+<h2>3-A. MIL-STD-810 주요 Method</h2>
+<table>
+  <tr><th>Method</th><th>이름</th><th>조건 예시</th><th>고장 모드</th></tr>
+  <tr><td><strong>501</strong></td><td>High Temperature</td><td>71°C storage</td><td>크리프, 코팅 박리</td></tr>
+  <tr><td><strong>502</strong></td><td>Low Temperature</td><td>-40°C operating</td><td>재료 취성, 기동 실패</td></tr>
+  <tr><td><strong>507</strong></td><td>Humidity</td><td>30°C/95%RH</td><td>부식, 절연 저하</td></tr>
+  <tr><td><strong>514</strong></td><td>Vibration</td><td>광대역 랜덤 PSD</td><td>피로, 체결 풀림</td></tr>
+  <tr><td><strong>516</strong></td><td>Shock</td><td>반사인파 half-sine</td><td>솔더 크랙, PCB 파손</td></tr>
+</table>
+
+<h2>3-B. IEC 60068-2 ↔ MIL-STD-810 매핑</h2>
+<table>
+  <tr><th>MIL-STD-810</th><th>IEC 60068-2</th><th>코드</th></tr>
+  <tr><td>501 High Temp</td><td>고온 건조열</td><td><strong>Bb (2-2)</strong></td></tr>
+  <tr><td>502 Low Temp</td><td>저온</td><td><strong>Ab (2-1)</strong></td></tr>
+  <tr><td>— (Thermal Shock)</td><td>열충격</td><td><strong>N (2-14)</strong></td></tr>
+  <tr><td>514 Vibration (sine)</td><td>정현파 진동</td><td><strong>Fc (2-6)</strong></td></tr>
+  <tr><td>514 Vibration (random)</td><td>랜덤 진동</td><td><strong>Fh (2-64)</strong></td></tr>
+  <tr><td>516 Shock</td><td>충격</td><td><strong>Ea (2-27)</strong></td></tr>
+</table>
+
+<h2>3-C. IP 코드 (IEC 60529)</h2>
+<div class="fig-wrap">
+  <svg width="460" height="120" viewBox="0 0 460 120">
+    <!-- IP box -->
+    <rect x="40" y="30" width="60" height="60" rx="4" fill="#0f3460" stroke="#60a5fa" stroke-width="2"/>
+    <text x="70" y="72" fill="#60a5fa" font-size="28" font-family="system-ui" font-weight="700" text-anchor="middle">IP</text>
+    <!-- Digit 1 -->
+    <rect x="115" y="30" width="60" height="60" rx="4" fill="#1a4a2e" stroke="#4ade80" stroke-width="2"/>
+    <text x="145" y="72" fill="#4ade80" font-size="28" font-family="system-ui" font-weight="700" text-anchor="middle">6</text>
+    <!-- Digit 2 -->
+    <rect x="190" y="30" width="60" height="60" rx="4" fill="#2a1a3e" stroke="#e94560" stroke-width="2"/>
+    <text x="220" y="72" fill="#e94560" font-size="28" font-family="system-ui" font-weight="700" text-anchor="middle">8</text>
+    <!-- Labels -->
+    <text x="145" y="108" fill="#4ade80" font-size="11" font-family="system-ui" text-anchor="middle">방진 (0-6)</text>
+    <text x="220" y="108" fill="#e94560" font-size="11" font-family="system-ui" text-anchor="middle">방수 (0-9K)</text>
+    <!-- iPhone spec -->
+    <text x="290" y="50" fill="#facc15" font-size="13" font-family="system-ui">IP68 = 6m / 30min</text>
+    <text x="290" y="68" fill="#888" font-size="11" font-family="system-ui">(Apple iPhone 13+ 사양)</text>
+    <text x="290" y="86" fill="#888" font-size="11" font-family="system-ui">IP67 = 1m / 30min</text>
+  </svg>
+  <div class="fig-caption">IP 코드 구조: 첫 자리=방진(6=완전), 둘째 자리=방수(8=제조사 지정). 직접 제작 SVG.</div>
+</div>
+
+<div class="url-list"><ul>
+  <li><a href="https://en.wikipedia.org/wiki/IP_code" target="_blank">IP code — Wikipedia</a><span class="url-desc">→ 방진·방수 등급 전체 표 + 아이콘</span></li>
+  <li><a href="https://en.wikipedia.org/wiki/MIL-STD-810" target="_blank">MIL-STD-810 — Wikipedia</a><span class="url-desc">→ Method 번호 목록 + 역사 overview</span></li>
+  <li><a href="https://en.wikipedia.org/wiki/IEC_60068" target="_blank">IEC 60068 — Wikipedia</a><span class="url-desc">→ IEC 시험 코드 목록 (Fc/Ea/N 확인)</span></li>
+</ul></div>
+
+<div class="exp-box">
+  <div class="label">황인혁 경험 연결</div>
+  GT-SS500 범퍼 시험대 (M516 Shock 대응) / -40°C 기동 실증 (M502 Low Temp) / 농업용 IP65+ 설계 요구.
+</div>
+
+<div class="answer-box">
+  <div class="q">Q: "How would you specify environmental tests for an outdoor agricultural robot?"</div>
+  "Outdoor, dusty fields, water spray, temperature extremes, rough terrain — maps to: IP66/67 (IEC 60529), IEC 60068-2 Ab/Bb for temperature, thermal shock via IEC 60068-2 N, random vibration via IEC 60068-2 Fh. MIL-STD-810 Methods 502/501/514/516 are the DoD equivalents. On GT-SS500, DFMEA told me where to focus: pump O-ring freeze at -40°C and GND noise from vibration — always design the test matrix around the failure mechanisms."
+</div>
+
+<details><summary>IP68 vs IP67 핵심 차이?</summary><div class="content">IP67 = 1m/30min (IEC 기본). IP68 = 제조사가 더 깊은/긴 조건 지정 (Apple: 6m/30min). IP68이 IP67을 포함.</div></details>
+<details><summary>Thermal Shock vs Temperature Cycling 차이?</summary><div class="content">Thermal Shock (IEC 2-14 N): 급격한 전환 (수 초~수 분) → 세라믹·솔더 크랙. TC (IEC 2-30 Db): 느린 전환 → 크리프 피로. 타겟 메커니즘 다름.</div></details>
+</section>
+
+<!-- ===== D4 ===== -->
+<section id="d4">
+<h1><span>D4</span> · FRACAS 5단계 + Reliability Growth ★★★</h1>
+
+<h2>4-A. FRACAS 5단계 폐루프</h2>
+<div class="fig-wrap">
+  <svg width="480" height="140" viewBox="0 0 480 140">
+    <!-- Boxes -->
+    <rect x="10" y="30" width="80" height="40" rx="4" fill="#0f3460" stroke="#60a5fa" stroke-width="1.5"/>
+    <text x="50" y="47" fill="#60a5fa" font-size="10" font-family="system-ui" text-anchor="middle">① Failure</text>
+    <text x="50" y="60" fill="#60a5fa" font-size="10" font-family="system-ui" text-anchor="middle">Reporting</text>
+    <rect x="110" y="30" width="80" height="40" rx="4" fill="#0f3460" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="150" y="47" fill="#4ade80" font-size="10" font-family="system-ui" text-anchor="middle">② Analysis</text>
+    <text x="150" y="60" fill="#4ade80" font-size="10" font-family="system-ui" text-anchor="middle">(RCA)</text>
+    <rect x="210" y="30" width="80" height="40" rx="4" fill="#0f3460" stroke="#facc15" stroke-width="1.5"/>
+    <text x="250" y="47" fill="#facc15" font-size="10" font-family="system-ui" text-anchor="middle">③ Corrective</text>
+    <text x="250" y="60" fill="#facc15" font-size="10" font-family="system-ui" text-anchor="middle">Action</text>
+    <rect x="310" y="30" width="80" height="40" rx="4" fill="#0f3460" stroke="#e94560" stroke-width="1.5"/>
+    <text x="350" y="47" fill="#e94560" font-size="10" font-family="system-ui" text-anchor="middle">④ Verification</text>
+    <rect x="310" y="90" width="80" height="40" rx="4" fill="#0f3460" stroke="#a855f7" stroke-width="1.5"/>
+    <text x="350" y="107" fill="#a855f7" font-size="10" font-family="system-ui" text-anchor="middle">⑤ System</text>
+    <text x="350" y="120" fill="#a855f7" font-size="10" font-family="system-ui" text-anchor="middle">Update</text>
+    <!-- Arrows right -->
+    <path d="M90,50 L110,50" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+    <path d="M190,50 L210,50" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+    <path d="M290,50 L310,50" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+    <!-- Arrow down -->
+    <path d="M350,70 L350,90" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+    <!-- Arrow back left (bottom) -->
+    <path d="M310,110 L50,110 L50,70" stroke="#888" stroke-width="1.5" stroke-dasharray="4" marker-end="url(#arr)"/>
+    <defs><marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 Z" fill="#888"/></marker></defs>
+  </svg>
+  <div class="fig-caption">FRACAS 폐루프: ⑤에서 ①로 돌아와야 진정한 Close. 직접 제작 SVG.</div>
+</div>
+
+<table>
+  <tr><th>단계</th><th>내용</th><th>산출물</th></tr>
+  <tr><td>① Failure Reporting</td><td>발견 즉시 기록: 날짜·제품ID·현상·발견자</td><td>NCR / Defect Report</td></tr>
+  <tr><td>② Analysis</td><td>RCA (5 Why / Fishbone / DoE)</td><td>Root Cause Statement</td></tr>
+  <tr><td>③ Corrective Action</td><td>설계/공정/SOP 변경</td><td>ECN / PCN / SOP Rev</td></tr>
+  <tr><td>④ Verification</td><td>재현 시험 / 통계 유의성 확인</td><td>Re-test Report</td></tr>
+  <tr><td>⑤ System Update</td><td>DFMEA·검사가이드·SOP 업데이트 + 수평 전개</td><td>개정 문서 배포</td></tr>
+</table>
+
+<h2>4-B. Duane Plot + AMSAA Crow</h2>
+<pre><code>Duane:  log(θ_c) = log(K) + α·log(T)
+α = 0.3~0.5 (건강한 성장)
+
+AMSAA:  λ(t) = λ·β·t^(β-1)
+β < 1 → 신뢰도 향상 중 ✓
+β = 1 → 일정 고장률
+β > 1 → 고장률 증가 ✗</code></pre>
+
+<div class="fig-wrap">
+  <svg width="380" height="180" viewBox="0 0 380 180">
+    <!-- Log-log axes -->
+    <line x1="50" y1="160" x2="360" y2="160" stroke="#888" stroke-width="1"/>
+    <line x1="50" y1="20" x2="50" y2="160" stroke="#888" stroke-width="1"/>
+    <!-- Duane line (healthy growth) -->
+    <line x1="70" y1="150" x2="340" y2="40" stroke="#4ade80" stroke-width="2.5"/>
+    <!-- Data points -->
+    <circle cx="100" cy="140" r="4" fill="#facc15"/>
+    <circle cx="160" cy="110" r="4" fill="#facc15"/>
+    <circle cx="240" cy="75" r="4" fill="#facc15"/>
+    <circle cx="320" cy="48" r="4" fill="#facc15"/>
+    <!-- Labels -->
+    <text x="55" y="35" fill="#888" font-size="11" font-family="system-ui">log(θ_c)</text>
+    <text x="340" y="172" fill="#888" font-size="11" font-family="system-ui">log(T)</text>
+    <text x="180" y="80" fill="#4ade80" font-size="12" font-family="system-ui" transform="rotate(-20,180,80)">slope = α</text>
+    <text x="55" y="15" fill="#4ade80" font-size="11" font-family="system-ui">Duane Plot — α=0.3~0.5 목표</text>
+  </svg>
+  <div class="fig-caption">Duane Plot: 기울기 α = Reliability Growth rate. 양의 기울기 = 신뢰도 향상 중. 직접 제작 SVG.</div>
+</div>
+
+<div class="url-list"><ul>
+  <li><a href="https://en.wikipedia.org/wiki/Failure_reporting,_analysis,_and_corrective_action_system" target="_blank">FRACAS — Wikipedia</a><span class="url-desc">→ FRACAS 개요 + 루프 구조</span></li>
+  <li><a href="https://reliawiki.org/index.php/Reliability_Growth_Reference" target="_blank">Reliability Growth — ReliaWiki</a><span class="url-desc">→ Duane Plot + AMSAA figure (로그인 불필요)</span></li>
+  <li><a href="https://en.wikipedia.org/wiki/Five_whys" target="_blank">Five Whys (RCA 도구) — Wikipedia</a><span class="url-desc">→ 5 Why 방법론. ② Analysis 핵심 도구</span></li>
+</ul></div>
+
+<div class="exp-box">
+  <div class="label">황인혁 경험 연결 — NCR 27건 = FRACAS 1:1 매핑</div>
+  NCR 발행(①) → RCA 4건 직접(②) → 설계변경(③) → 재현시험(④) → DFMEA/BOM 갱신(⑤)<br>
+  "The label was NCR, but the structure is textbook FRACAS."
+</div>
+
+<div class="answer-box">
+  <div class="q">Q: "How do you manage a FRACAS system in product development?"</div>
+  "FRACAS is a five-step closed loop: Failure Reporting, Analysis, Corrective Action, Verification, and System Update. On GT-SS500 I tracked 27 NCRs through this loop. I personally led four RCAs — including MCB carbonization traced to electrolytic corrosion beyond its IEC 60947-2 spec. The fix was verified by reproducing the failure mode and confirming zero recurrence over 200 power cycles. Then I updated the DFMEA, IQC list, and BOM. The label was NCR, but the structure is textbook FRACAS."
+</div>
+
+<details><summary>How to close an NCR?</summary><div class="content">재현 시험 통과 + DFMEA/SOP 업데이트 완료 + 동종 제품 수평 전개 확인. 하나라도 미완이면 미닫힘.</div></details>
+<details><summary>FRACAS vs CAPA?</summary><div class="content">CAPA = FDA QSR Part 820 (의료기기 규제). FRACAS = MIL-HDBK-2155 (항공·반도체·소비재). 구조 유사하나 규정 목적 다름.</div></details>
+</section>
+
+<!-- ===== D5 ===== -->
+<section id="d5">
+<h1><span>D5</span> · Bayesian Reliability + Six Sigma Cpk/Ppk</h1>
+
+<h2>5-A. Bayesian Reliability</h2>
+<div class="card card-blue">
+  <strong>Bayes' Theorem</strong>: $P(\theta | data) \propto P(data | \theta) \times P(\theta)$<br>
+  <span style="color:var(--muted)">posterior ∝ likelihood × prior</span>
+</div>
+<table>
+  <tr><th>항목</th><th>Frequentist (MLE)</th><th>Bayesian</th></tr>
+  <tr><td>추정 기반</td><td>데이터만</td><td>prior + 데이터</td></tr>
+  <tr><td>소표본 시</td><td>신뢰구간 폭 큼</td><td>prior로 좁힐 수 있음</td></tr>
+  <tr><td>결과</td><td>점추정 + 신뢰구간</td><td>사후 분포 전체</td></tr>
+</table>
+
+<div class="fig-wrap">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Bayes%27_Theorem_MMB_01.jpg/640px-Bayes%27_Theorem_MMB_01.jpg"
+       alt="Bayes Theorem visual" loading="lazy">
+  <div class="fig-caption">Bayes' Theorem 시각화. 출처: Wikipedia Commons (CC BY-SA 3.0).</div>
+</div>
+
+<h2>5-B. Cpk / Ppk 산식</h2>
+<pre><code>Cp  = (USL - LSL) / 6σ_within
+Cpk = min[ (USL - μ)/3σ_within,  (μ - LSL)/3σ_within ]
+
+Pp  = (USL - LSL) / 6σ_overall
+Ppk = min[ (USL - μ)/3σ_overall,  (μ - LSL)/3σ_overall ]
+
+Cpk > Ppk → 공정 드리프트 존재</code></pre>
+
+<table>
+  <tr><th>Cpk</th><th>Sigma</th><th>DPMO</th><th>기준</th></tr>
+  <tr><td>1.00</td><td>3σ</td><td>2,700</td><td>최소</td></tr>
+  <tr><td style="color:var(--yellow)"><strong>1.33</strong></td><td>4σ</td><td>63</td><td><strong>양산 기본</strong></td></tr>
+  <tr><td>1.67</td><td>5σ</td><td>0.57</td><td>고신뢰성</td></tr>
+  <tr><td style="color:var(--accent)"><strong>2.00</strong></td><td>6σ</td><td>0.002</td><td><strong>Apple / 의료 수준</strong></td></tr>
+</table>
+
+<div class="card card-yellow">
+  <strong>6 Sigma 3.4 ppm</strong>: 단기 ±6σ = 0.002 DPMO. 장기 1.5σ 드리프트 가정 시 3.4 DPMO.<br>
+  "6 Sigma = 3.4 ppm"은 <em>장기 성과 기준</em>임에 주의.
+</div>
+
+<div class="url-list"><ul>
+  <li><a href="https://en.wikipedia.org/wiki/Process_capability_index" target="_blank">Process capability index (Cpk) — Wikipedia</a><span class="url-desc">→ Cp/Cpk 정의 + 시각화 figure</span></li>
+  <li><a href="https://en.wikipedia.org/wiki/Six_Sigma" target="_blank">Six Sigma — Wikipedia</a><span class="url-desc">→ DPMO 표 + DMAIC 다이어그램</span></li>
+  <li><a href="https://en.wikipedia.org/wiki/68%E2%80%9395%E2%80%9399.7_rule" target="_blank">68-95-99.7 rule — Wikipedia</a><span class="url-desc">→ 정규분포 시그마 영역 figure</span></li>
+</ul></div>
+
+<div class="exp-box">
+  <div class="label">황인혁 경험 연결</div>
+  GT-SS500 IQC/OQC 기준 정의 = DMAIC 구조와 동일.<br>
+  "The gating logic was consistent with Cpk-based acceptance, though the full Six Sigma dashboard wasn't always our daily artifact."
+</div>
+
+<div class="answer-box">
+  <div class="q">Q: "How do you handle small-sample reliability testing?"</div>
+  "When sample sizes are small — fewer than twenty units — frequentist MLE gives wide confidence intervals on B10. Bayesian reliability addresses this by incorporating a prior: historical data from a predecessor component, or Jeffreys non-informative prior. The posterior is narrower, and you extract a credible interval on B10 directly. I haven't applied this in production yet, but it's a natural extension of RBDO — where we used prior strength distributions before test data arrived. On the production side, Cpk quantifies whether the process is centered and capable. Cpk 1.33 is the baseline: four sigma clearance. Ppk adds long-term drift. If Cpk exceeds Ppk, your process is drifting."
+</div>
+
+<details><summary>Cpk vs Ppk — when does the gap matter?</summary><div class="content">Cpk > Ppk → 드리프트. 설비 교체·배치 간 원자재 변동 의심. Cpk ≈ Ppk → 공정 안정.</div></details>
+</section>
+
+<!-- ===== D6 ===== -->
+<section id="d6">
+<h1><span>D6</span> · Camera / VCM 도메인 + D1~5 교차연결</h1>
+
+<h2>6-A. VCM 5대 고장 모드</h2>
+<table>
+  <tr><th>#</th><th>고장 모드</th><th>메커니즘</th><th>스트레스</th><th>Day 연결</th></tr>
+  <tr><td>1</td><td><strong>코일 단선·단락</strong></td><td>과전류·굴곡 피로</td><td>반복 전류, 진동</td><td>D2 Coffin-Manson (ΔT)</td></tr>
+  <tr><td>2</td><td><strong>스프링 피로 파괴</strong></td><td>반복 변위 사이클</td><td>AF 사이클, 낙하</td><td>D1 Weibull β&gt;1</td></tr>
+  <tr><td>3</td><td><strong>홀센서 드리프트</strong></td><td>온도 의존성</td><td>고온, 장기 사용</td><td>D2 HTOL</td></tr>
+  <tr><td>4</td><td><strong>자석 감자</strong></td><td>고온·역자기장</td><td>85°C+, ESD</td><td>D2 HTOL, D3 IP67</td></tr>
+  <tr><td>5</td><td><strong>이물 침입</strong></td><td>밀봉 불량</td><td>낙하·수분</td><td>D3 IP68</td></tr>
+</table>
+
+<h2>6-B. Day 1~5 → Camera 교차연결</h2>
+<table>
+  <tr><th>D-day</th><th>개념</th><th>Camera/VCM 적용</th></tr>
+  <tr><td>D1</td><td>Weibull β</td><td>OIS 스프링 β≈2.5~3.5 (마모), 코일 β≈1~2</td></tr>
+  <tr><td>D1</td><td>B10</td><td>스프링 피로 B10 ≥ 109,500 cycles × SF1.5</td></tr>
+  <tr><td>D2</td><td>Coffin-Manson</td><td>솔더 범프 Nf = A·(ΔT)^(-n), ΔT≈6°C/AF</td></tr>
+  <tr><td>D3</td><td>IP67/68</td><td>iPhone 방수 규격 → 이물 침입 고장모드 대응</td></tr>
+  <tr><td>D4</td><td>FRACAS</td><td>AF 불량 NCR → RCA → IQC 강화</td></tr>
+  <tr><td>D5</td><td>Bayesian</td><td>ALT n=10 → Jeffreys prior → posterior B10</td></tr>
+  <tr><td>D5</td><td>Cpk</td><td>코일 저항 Cpk: USL=22Ω/LSL=18Ω/σ=0.5 → 1.33</td></tr>
+</table>
+
+<h2>6-C. B10 계산 예시 (VCM 스프링)</h2>
+<pre><code>η = 500,000 AF cycles, β = 2.5
+
+B10 = 500,000 × (-ln 0.9)^(1/2.5)
+    = 500,000 × (0.10536)^0.4
+    ≈ 201,000 cycles
+
+필드 요구: 109,500 × 1.5(SF) = 164,250 cycles
+201,000 > 164,250 → 합격 ✓ (22.4% margin)</code></pre>
+
+<div class="url-list"><ul>
+  <li><a href="https://en.wikipedia.org/wiki/Voice_coil_actuator" target="_blank">Voice Coil Actuator — Wikipedia</a><span class="url-desc">→ VCM 구조도 + 로렌츠 힘 설명</span></li>
+  <li><a href="https://en.wikipedia.org/wiki/Image_stabilization" target="_blank">Image Stabilization (OIS) — Wikipedia</a><span class="url-desc">→ OIS 메커니즘 + VCM 위치 제어 그림</span></li>
+  <li><a href="https://en.wikipedia.org/wiki/Fatigue_(material)" target="_blank">Fatigue / Miner's Rule — Wikipedia</a><span class="url-desc">→ S-N curve + Miner's Rule 수식</span></li>
+</ul></div>
+
+<div class="exp-box">
+  <div class="label">황인혁 경험 연결</div>
+  1주 자가학습 → camera_vcm_reliability.md (structured technical brief).<br>
+  IGBT 본드와이어 전류 시그니처 → VCM 코일 전류 시그니처: 동일 원리.
+</div>
+
+<div class="answer-box">
+  <div class="q">Q: "What do you know about camera module reliability?"</div>
+  "VCM reliability centers on five failure modes: coil fatigue, spring fatigue, Hall sensor drift, magnet demagnetization, and contamination ingress. The physics maps directly to what I've studied: Weibull beta greater than one for spring fatigue means wear-out, so Coffin-Manson extrapolation from the ALT applies. B10 must exceed field life target times safety factor 1.5. Field NCRs feed into FRACAS — DFMEA update, IQC revision. My PHM background extends here: monitoring VCM drive current signatures detects coil degradation before hard failure, same principle as IGBT bond-wire PCT monitoring."
+</div>
+</section>
+
+<!-- ===== D7 ===== -->
+<section id="d7">
+<h1><span>D7</span> · STAR 영문 답변 5종 핵심 카드</h1>
+<p style="color:var(--muted);font-size:13px">풀스크립트 원본: <code>learning_day4to7.md</code> §7.1~7.5 참조. 이 섹션은 핵심 압축 카드.</p>
+
+<h2>STAR #1 — MCB Carbonization RCA</h2>
+<div class="chips">
+  <span class="chip accent">48V / 30A</span><span class="chip accent">NCR #204</span>
+  <span class="chip accent">200 cycles 검증</span><span class="chip accent">16 units 출하</span>
+</div>
+<table>
+  <tr><th>S</th><td>GT-SS500 pre-production, 48V MCB 단자 탄화 발견. 양산 2개월 전.</td></tr>
+  <tr><th>T</th><td>RCA 주도, 시정조치, DFMEA/BOM 반영, 양산 전 완료.</td></tr>
+  <tr><th>A</th><td>5 Why RCA → 근본원인: IEC 60947-2 미달 MCB + 전해부식 + 열폭주. 준수 MCB 교체 → 200 cycles 재현 검증 → NCR Close.</td></tr>
+  <tr><th>R</th><td>NCR #204 Close. 16 units 출하 무재발. 동종 프로그램 수평 전개.</td></tr>
+</table>
+<div class="answer-box">
+  <div class="q">외울 1단락 (Action+Result 핵심):</div>
+  "I ran a five-step RCA. Root cause: electrolytic corrosion — the MCB was running beyond its IEC 60947-2 specification. I redesigned to a compliant breaker, reproduced the original failure in the lab, and confirmed zero recurrence over 200 power cycles. NCR #204 closed. First-article batch of 16 units shipped with zero MCB faults. The fix was horizontally deployed to the inspection guide for all future programs."
+</div>
+<details><summary>Follow-up: How did you reproduce the failure?</summary><div class="content">동일 MCB + 48V/30A 지속 전류 + 수 시간 → 동일 탄화 패턴. 재현 = 근본원인 신뢰도 증거.</div></details>
+<details><summary>Follow-up: Was there schedule impact?</summary><div class="content">2주 지연. Critical Path 영향 없음. 버퍼 내 흡수.</div></details>
+
+<h2>STAR #2 — IGBT PCT Bond-Wire Lift-Off (IEEE TIM 2024)</h2>
+<div class="chips">
+  <span class="chip accent">JESD47 PCT</span><span class="chip accent">Vce-sat 20% 기준</span>
+  <span class="chip accent">bond-wire lift-off</span><span class="chip accent">IEEE TIM 2024 (3저자)</span>
+</div>
+<table>
+  <tr><th>S</th><td>건국대 RBDO Lab 2022. IGBT 본드와이어 열화를 분해 없이 전기 파라미터로 감지.</td></tr>
+  <tr><th>T</th><td>PCT 수행, 지배적 고장 모드 식별, 전기 시그니처 검증.</td></tr>
+  <tr><th>A</th><td>3가지 파라미터 모니터링: Vce-sat, 전류 고조파, 열저항(Rth). 수천 cycles 후 Vce-sat 상승 + Rth 변화 없음 = bond-wire lift-off 확인. 단면 현미경 검증.</td></tr>
+  <tr><th>R</th><td>비침습 전기 시그니처로 본드와이어 열화 감지 가능 입증. IEEE TIM 2024 출판.</td></tr>
+</table>
+<div class="answer-box">
+  <div class="q">외울 1단락:</div>
+  "I monitored three parameters throughout PCT: Vce saturation voltage, collector current harmonics, and thermal resistance. After several thousand cycles, I saw a step increase in Vce-sat with no corresponding rise in thermal resistance — that asymmetry isolated bond-wire lift-off from die-attach solder fatigue. Confirmed with cross-sectional microscopy post-test. Published in IEEE Transactions on Instrumentation and Measurement, 2024."
+</div>
+<details><summary>Follow-up: Can this apply to VCM coil?</summary><div class="content">VCM 코일 저항 증가 → 구동 전류 변화 → 서명 기반 진단. 원리 동일. PHM → Camera 확장 스토리.</div></details>
+
+<h2>STAR #3 — DFMEA AP=H 5건 해소</h2>
+<div class="chips">
+  <span class="chip accent">AIAG-VDA 2019</span><span class="chip accent">5 DFMEAs</span>
+  <span class="chip accent">AP=H 5건</span><span class="chip accent">잔여 위험 0</span><span class="chip accent">16 units</span>
+</div>
+<table>
+  <tr><th>S</th><td>GT-SS500 48V 전장. 양산 게이트 전 DFMEA 5종 작성.</td></tr>
+  <tr><th>T</th><td>AIAG-VDA 2019 7단계 적용, AP=H 전부 해소, 게이트 통과.</td></tr>
+  <tr><th>A</th><td>5 DFMEAs: MCB/LCD/펌프/CAN/EMI. AP=H 5건 도출 → 각 NCR 연결 → 오너 지정·일정 설정 → 검증 완료.</td></tr>
+  <tr><th>R</th><td>양산 게이트 전 전부 Close. 잔여 위험 0. 16 units 안전 결함 없음.</td></tr>
+</table>
+<div class="answer-box">
+  <div class="q">외울 1단락:</div>
+  "Across five DFMEAs I identified five AP=H items — each requiring corrective action regardless of occurrence rate. I owned tracking: assigned owners, set dates, linked each to an NCR, followed through to verified closure. All five AP=H items closed before the gate review. Residual risk at production entry: zero high-priority items. First-article batch of 16 units shipped with zero safety-critical defects."
+</div>
+
+<h2>STAR #4 — APQP Phase 2~3 + 16pcs Ramp</h2>
+<div class="chips">
+  <span class="chip accent">132-item BOM</span><span class="chip accent">27 NCRs</span>
+  <span class="chip accent">6팀</span><span class="chip accent">16+2+2 units</span><span class="chip accent">45항목 체크리스트</span>
+</div>
+<table>
+  <tr><th>S</th><td>GT-SS500 48V. 전력제어 + 주니어 PM 겸임. 6팀 동시 수렴 필요.</td></tr>
+  <tr><th>T</th><td>APQP Phase 2~3 → Gate Review → 양산 출하. BOM 132, NCR 27, AP=H 5건.</td></tr>
+  <tr><th>A</th><td>Phase 2: 시험대 4종 직접 설계. Phase 3: IQC 기준 정의, 45항목 체크리스트. 양산 3주 전 BOM 23건 부족 → NCR 재우선화, 8건 Critical Path 가속, 5건 대체품 협의.</td></tr>
+  <tr><th>R</th><td>Gate Review 계획대로 통과. 16+2+2 units 출하. 27 NCRs 전부 Close.</td></tr>
+</table>
+<div class="answer-box">
+  <div class="q">외울 1단락:</div>
+  "Three weeks before planned shipment, procurement flagged 23 BOM items with insufficient stock — I reprioritized the NCR backlog, accelerated 8 critical-path items, and negotiated 5 component substitutions. Gate Review passed on schedule. Sixteen units shipped on plan. All 27 NCRs closed, five AP=H items resolved with zero residual safety risk. The NCR dashboard and readiness checklist are now templates for the next program."
+</div>
+
+<h2>STAR #5 — Damage Summation PV Polymer (Solar Energy 2024)</h2>
+<div class="chips">
+  <span class="chip accent">Miner's Rule</span><span class="chip accent">D = Σ(n_i/N_i)</span>
+  <span class="chip accent">D=1.0 고장</span><span class="chip accent">Solar Energy 2024 (4저자)</span>
+</div>
+<table>
+  <tr><th>S</th><td>건국대 학부 연구원 2023. PV 폴리머 수명 예측. 단일 스트레스 모델 = 과보수적.</td></tr>
+  <tr><th>T</th><td>Miner's Rule로 변동환경 스트레스 이력 통합, 정확도 개선.</td></tr>
+  <tr><th>A</th><td>필드 온도·습도 시계열 → 스트레스 구간별 N_i 계산 → D = Σ(n_i/N_i) 적산. D=1.0 = 수명 종료. 단일 스트레스 모델 및 필드 관찰 데이터와 비교.</td></tr>
+  <tr><th>R</th><td>Damage Summation이 필드와 훨씬 정합. Solar Energy 2024 출판.</td></tr>
+</table>
+<div class="answer-box">
+  <div class="q">외울 1단락:</div>
+  "I discretized the field stress history into bins — each a temperature-humidity combination with a measured duration. For each bin I computed N_i from the single-stress model, then accumulated the damage fraction n_i/N_i. When the sum reached 1.0, predicted end-of-life. The damage summation model aligned much more closely with field observations than worst-case constant-stress predictions. Published in Solar Energy, Elsevier, 2024. Directly applicable to smartphone camera modules exposed to daily temperature and humidity cycles."
+</div>
+</section>
+
+<!-- ===== QUICK ===== -->
+<section id="quick">
+<h1><span>빠른</span> 암기 카드 — 전체</h1>
+<table>
+  <tr><th>주제</th><th>핵심 수치·공식</th></tr>
+  <tr><td>STAR #1 MCB</td><td>48V · 30A · NCR #204 · 200 cycles · 16 units</td></tr>
+  <tr><td>STAR #2 IGBT PCT</td><td>ΔTj · Vce-sat 20% · IEEE TIM 2024 · bond-wire lift-off</td></tr>
+  <tr><td>STAR #3 DFMEA</td><td>AIAG-VDA 2019 · 5 DFMEAs · AP=H 5건 · 잔여위험 0</td></tr>
+  <tr><td>STAR #4 APQP</td><td>132 BOM · 27 NCRs · 6팀 · 16+2+2 units · 45항목</td></tr>
+  <tr><td>STAR #5 Damage Sum</td><td>Miner's D=Σ(n/N) · D=1.0 고장 · Solar Energy 2024</td></tr>
+  <tr><td>Weibull B10</td><td>$B_{10} = \eta \cdot (-\ln 0.9)^{1/\beta}$</td></tr>
+  <tr><td>Coffin-Manson AF</td><td>$AF = (\Delta T_{test}/\Delta T_{field})^n$</td></tr>
+  <tr><td>Cpk</td><td>$\min[(USL-\mu)/3\sigma, (\mu-LSL)/3\sigma]$</td></tr>
+  <tr><td>6 Sigma</td><td>Cpk=2.0 → 3.4 ppm (장기 1.5σ drift 가정)</td></tr>
+  <tr><td>IP68 (iPhone)</td><td>6m / 30min (Apple 사양)</td></tr>
+  <tr><td>FRACAS</td><td>Reporting→Analysis→CA→Verification→System Update</td></tr>
+  <tr><td>Duane α</td><td>0.3~0.5 = 건강한 성장. β(AMSAA)&lt;1 = 신뢰도 향상 중</td></tr>
+</table>
+
+<div style="margin-top:32px;padding:16px;background:var(--panel);border-radius:8px;font-size:13px;color:var(--muted)">
+  <strong style="color:var(--text)">파일 열기</strong><br>
+  터미널에서: <code>python3 -m http.server 8765 --directory docs/jd/apple/materials/study/</code><br>
+  브라우저: <code>http://localhost:8765/index.html</code><br>
+  또는 파일 직접 열기: <code>file:///home/gint_pcd/projects/포트폴리오/docs/jd/apple/materials/study/index.html</code>
+</div>
+</section>
+
+</main>
+
+<script>
+// Highlight active nav link on scroll
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('nav a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 60) current = s.id; });
+  navLinks.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+});
+</script>
+</body>
+</html>
