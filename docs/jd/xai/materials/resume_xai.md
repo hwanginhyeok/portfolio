@@ -1,10 +1,5 @@
 # Resume — Inhyeok Hwang
 
-> Target: xAI · Mechanical Engineering Tutor (Remote, Part-time)
-> Version: 2026-05-05 v3 (xAI tailored — researcher + writer tone; SSOT fact-check 2026-05-05: title corrected, PCT verb downgraded)
-> Source SSOT: RESUME.md master (`docs/blocks/05-extra/RESUME.md`)
-> Note: All experience claims reflect RESUME.md SSOT directly. No standard-name post-mapping.
-
 ---
 
 ## INHYEOK HWANG
@@ -18,11 +13,11 @@
 
 ## SUMMARY
 
-Mechanical engineering researcher with an M.S. from Konkuk University's Reliability-Based Design Optimization (RBDO) Lab, 4 peer-reviewed publications (IEEE TIM · Solar Energy · Journal of Power Electronics, 2024; PHM Asia-Pacific, 2023), and 2 patents. My research spans IPMSM fault diagnosis, accelerated life testing, PHM/RUL estimation, and lifetime prediction under varying stress environments — across three distinct material systems (semiconductor, polymer, motor drivetrain).
+Mechanical engineering researcher with an M.S. from Konkuk University's Reliability-Based Design Optimization (RBDO) Lab, 4 peer-reviewed publications (IEEE TIM · Solar Energy · Journal of Power Electronics, 2024; PHM Asia-Pacific, 2023), and 1 patent (co-inventor). My research spans IPMSM motor control modeling and fault physics simulation — FEM-based fault implementation (Ansys Maxwell), inverter Co-simulation (MATLAB/Simulink), and Sim2Real validation — through to accelerated life testing, PHM/RUL estimation, and lifetime prediction under varying stress environments, across three distinct material systems (semiconductor, polymer, motor drivetrain).
 
 At GINT Corp., I have applied this academic foundation across three years of industrial product development: from motor control firmware through full APQP lifecycle management to first-article production plan. The bridge between academic rigor and production reality is where I operate.
 
-Beyond domain depth, I bring a demonstrable record of autonomous learning and technical writing. When tasked with a knowledge gap in optical and camera reliability, I conducted a self-directed one-week study — the kind of cross-domain acquisition that AI training data curation demands.
+Beyond domain depth, I bring a demonstrable record of autonomous learning and technical writing. My three publications span three structurally distinct failure mechanisms — semiconductor bond-wire degradation, polymer photovoltaic lifetime, and electromechanical drivetrain fault diagnosis — each acquired from primary literature within a single 2.5-year M.S. research period. That breadth of structured domain acquisition is exactly the kind of cross-domain capability that AI training data curation demands.
 
 **Core identity**: ME researcher with publication depth · autonomous learner · technical writer · industrial practitioner.
 
@@ -47,9 +42,9 @@ Beyond domain depth, I bring a demonstrable record of autonomous learning and te
 | 2022 | Korean Society for Reliability (KSR) | Predictive maintenance for EV drivetrain | **Best Paper Award** |
 | 2021 | Korean PHM Society | IGBT open-fault diagnosis via system-level measurements | **Best Poster Award** |
 
-### Patents (2)
+### Patents
 
-- **Patent #1** — Motor initial position detection · Co-inventor · KR App. PN231067KR (2023) · Detection time reduced: 1.0 s → **0.56 s**
+- **Patent #1** — Motor initial position detection · Co-inventor · KR App. PN231067KR (2023) · Applicant: GINT Inc. · Detection time reduced: 1.0 s → **0.56 s**
 - **Patent #2** — *Method for preventing step-out of rotor of motor in low temperature and apparatus thereof* · KR App. **10-2023-0175484** (filed 2023-12-06) · Reg. **10-2654562** (granted 2024-04-01) · Applicant: GINT Inc. · IPC H02P 29/032 · Development contributor (experimental validation; not on inventor list) · −40°C cold-start time: 300 s → **100 s**
 
 ---
@@ -61,9 +56,10 @@ Beyond domain depth, I bring a demonstrable record of autonomous learning and te
 
 **Thesis**: *Fault Diagnosis Simulation of Interior Permanent Magnet Synchronous Motor using Electromagnetic Analysis* (49 pp., RISS: f678963f23f2e418ffe0bdc3ef48d419)
 
-- Constructed an IPMSM digital twin integrating Ansys Maxwell FEM with MATLAB/Simulink inverter Co-simulation; validated across multiple operating conditions (Sim2Real precursor methodology)
+- Constructed an IPMSM digital twin: implemented fault modes (static/dynamic eccentricity, winding asymmetry) in Ansys Maxwell FEM; coupled with MATLAB/Simulink inverter control model for Co-simulation; reproduced fault signatures (phase current harmonics, flux density distribution) under multiple operating conditions and validated against experimental data (Sim2Real precursor methodology)
 - Participated in government-funded PHM SoC development project (MOTIE, Apr 2021 – Oct 2022): RUL estimation for IPMSM drivetrain fault diagnosis using multi-sensor signal fusion
 - Observed full ALT design-test-redesign cycle for IPMSM eccentricity fault characterization — load factor application, FTA, dual-sensor architecture operation (P-05, J. Power Electron. 2024, 6th author)
+- Contributed to Power Cycling Test work on IGBT modules characterizing bond-wire lift-off as a primary failure mode — online detection via inverter output parameters (Vce saturation, switching energy) without in-circuit instrumentation (P-01, IEEE TIM 2024, 3rd author, DOI 10.1109/TIM.2024.3472910)
 - Research experience: 2.5 years total (6 months undergrad research assistant + 2 years M.S.)
 
 ### Konkuk University — B.S. in Mechanical Design
@@ -92,35 +88,35 @@ Beyond domain depth, I bring a demonstrable record of autonomous learning and te
 
 **EOP 400W: Automotive BLDC Motor Control (Government R&D Project)**
 
-- Contributed to Power Cycling Test work on IGBT modules characterizing bond-wire lift-off as a primary failure mode (P-01, IEEE TIM 2024, 3rd author, DOI 10.1109/TIM.2024.3472910)
 - Developed SVPWM/DPWM switching strategy — reduced FET temperature 1–6°C, input power 1–3.8% (validated on 2,932 data points)
 - Demonstrated cold-start improvement at −40°C: 300 s → 100 s (subject of Patent #2; experimental validation conducted independently)
 - Built dynamometer torque-control system achieving 0.008% nonlinearity; presented at internal engineering seminar
-- 2 patent filings (see Patents section above)
+- 1 patent as co-inventor + development contribution to 1 additional patent (see Patents section above)
 
 ---
 
 ## SKILLS
 
 ### Mechanical Engineering Domains
-- Motor design & control: IPMSM, BLDC, sensorless FOC, SVPWM/DPWM, CAN distributed control
+- Motor design & control: IPMSM, BLDC, sensorless FOC, SVPWM/DPWM
+- System architecture: CAN distributed control (5-node network design, DBC authoring, consistency validation)
 - Reliability engineering: ALT (participated in full cycle as observer), PCT (directly conducted), DFMEA (Step 1–7), root-cause analysis, PHM/RUL estimation
 - Simulation & modeling: FEM (Ansys Maxwell), Co-simulation (MATLAB/Simulink), digital twin, Sim2Real validation
-- Test infrastructure: dynamometer, custom test rigs built in-house, CAN / CANoe
+- Test infrastructure: custom test rigs designed and built in-house — torque-control dynamometer (0.008% nonlinearity), fan airflow bench (flow velocity measurement), pump endurance rig, bumper safety rig (stop distance / peak current / settling time)
 - Lifetime analysis: Damage Summation (Miner's Rule), Weibull estimation (concept), multi-environment stress mapping
 
 ### Research & Communication
 - Peer-reviewed journal publications: IEEE TIM (Vol. 73, 3rd author), Solar Energy (Vol. 276, 4th author), J. Power Electronics (Vol. 24, 6th author)
 - Conference presentations with awards: KSR Best Paper Award (2022), Korean PHM Society Best Poster Award (2021)
 - Technical writing: journal manuscripts, patent specifications, design documentation, 1,900+ lines of portfolio materials
-- Autonomous learning: self-directed cross-domain knowledge acquisition — self-study notes on camera/optical reliability produced in one week
+- Autonomous learning: self-directed cross-domain domain acquisition across three distinct failure mechanisms (semiconductor · polymer · electromechanical) within a single M.S. research period; self-directed acquisition of APQP/DFMEA methodology from primary standards documentation during industrial transition
 - Bilingual: Korean (native) · English (professional reading & writing)
 
 ### Tools & Platforms
 - Programming: Python, MATLAB/Simulink, C (embedded — STM32, NXP MC9S12ZVMC)
 - Signal processing & ML familiarity: multi-sensor PHM, prognostics models, classical anomaly detection
 - Documentation: Markdown, LaTeX, Git workflow
-- Instrumentation: CANoe, Vector VN1600, NI DAQ (NI-9215), oscilloscope, SPICE
+- Instrumentation: CANoe, Vector VN1600, NI DAQ (NI-9215), oscilloscope
 
 ---
 
@@ -130,4 +126,4 @@ Beyond domain depth, I bring a demonstrable record of autonomous learning and te
 - **PV polymer lifetime prediction under continuously varying environments** — Damage Summation (Miner's Rule) applied to multi-environment stress histories; demonstrates ability to structure complex multi-variable ME problems rigorously (Solar Energy 2024, 4th author)
 - **Failure mode identification in IPMSM under ALT via dual-sensor architecture** — Observed full design-test-redesign cycle; methodology illustrates ALT principles applicable to AI training explanation (J. Power Electronics 2024, 6th author)
 - **120 kW IPMSM system-level fault diagnosis** — Multi-sensor signal fusion for drivetrain RUL estimation (PHM Society Asia-Pacific 2023)
-- **IPMSM digital twin thesis** — Co-simulation (FEM + control model) validated against experimental data; Sim2Real precursor methodology (Konkuk University, 2023)
+- **IPMSM digital twin thesis** — Implemented eccentricity and winding fault modes in Ansys Maxwell FEM; co-simulated with MATLAB/Simulink inverter control model to reproduce fault signatures under both normal and faulted operating conditions; validated simulation outputs against experimental measurements (Sim2Real methodology) (Konkuk University, 2023)

@@ -38,13 +38,11 @@
 | JD-A6 | Apple 커버레터 작성 (`materials/cover_letter.md`) | P1 | JD-A5 | jd_resume_match.md §3 강점/갭 + JD-A5 결과를 4단락으로 압축. RBDO Lab 출신 강조하되 다른 강점도 균형 배치 |
 | JD-A7 | 학습자료 fact-check 정정 — 1차 자료(P-01·P-02·T-01) 수령 후 학습자료 사후매핑 제거 + 풍부화 | P1 | 사용자 PDF 제공 (P-01 IEEE TIM 2024 / P-02 PCIM Asia 2022 / T-01 석사 학위논문) | 트리거: D1 §3 "β>1 wear-out" 단언이 P-01 검출·위치식별 방법과 mismatch (D-007 패턴 재발). FACTCHECK_bondwire.md §6~9 참조. 정정 대상: D1 §3, D2, D6, reliability_competency Block2 Arrhenius, index.html. 사용자 답변 항목: P-02 본인 역할 / PCT 직접 셋업 경험 / Weibull β 직접 산출 경험 / T-01 한글 제목 / T-01 신뢰성 챕터 유무 |
 
-## JD 지원 — xAI (3개)
+## JD 지원 — xAI (1개)
 
 | # | 태스크 | 우선순위 | depends | 비고 |
 |---|--------|:--------:|---------|------|
-| JD-X2 | xAI 맞춤 resume + cover letter 작성 (`docs/jd/xai/materials/`) | P1 | JD-X1 | Apple resume_en을 baseline으로 ME researcher 톤 전환. 저널 4편 + autonomous learner 강점 부각 |
-| JD-X2b | xAI PHM SoC 표현 SSOT 정합 수정 (컨펌 후 실행) | P1 | 사용자 제출 여부 확인 | `resume_xai.md` L65 + `cover_letter_xai.md` L13: "multi-sensor fault diagnosis·RUL" → "motor/fault modeling·Co-simulation". PPT 근거 없는 표현. xAI 지원이 이미 제출됐으면 수정 불필요 |
-| JD-X3 | xAI 지원서 제출 (사용자 직접) | P1 | JD-X2 | greenhouse 폼. **제출은 사용자 직접 수행** |
+| JD-X3 | xAI 지원서 제출 (사용자 직접) | P1 | — | greenhouse 폼. 복붙 자료 준비 완료(2026-05-08). **사용자 주말 집에서 제출 예정** |
 
 ## B5 — 부가자료 (3개)
 
@@ -53,4 +51,4 @@
 | B5-01 | 이력서 작성 | P3 | 이메일/사이트 URL 입력 + 토익 재응시 | `RESUME.md` 마스터 완료. 어학 만료 명시 |
 | B5-04 | TOEIC + TOEIC Speaking 재응시 | P2 | 사용자 외부 작업 | 이전 점수: TOEIC 920 / TS 140 (IH). 응시 후 RESUME §9 갱신 |
 | B5-02 | GitHub 프로필 정비 | P3 | 사용자 실행 | `GITHUB_PROFILE.md` 가이드 완료. P1: profile README + 핀 6개 |
-| B5-03 | 영문 버전 | P3 | 사용자 결정 (i18n 옵션) | `ENGLISH_VERSION.md` 가이드 완료. 어휘집 + Summary 4종 + IEEE 인용 |
+| B5-03 | **i18n 한/영 언어 토글 구현** — 단일 사이트에서 Korean/English 전환 | P1 | B5-03 기존 가이드 | 사용자 지시 2026-05-08: 한 사이트에서 EN/KO 선택 가능하게. Astro i18n 라우팅 (`/en/`, `/ko/`) 또는 클라이언트 토글 방식. `ENGLISH_VERSION.md` 어휘집 + Summary 4종 기존 자료 활용. 메인 페이지·케이스 페이지·about 전체 번역 대상. |

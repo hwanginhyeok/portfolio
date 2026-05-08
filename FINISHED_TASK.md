@@ -4,6 +4,8 @@
 
 | # | 태스크 | 완료일 | 비고 |
 |---|--------|--------|------|
+| JD-X2b | xAI Apple 오염 제거 + PHM SoC 확인 | 2026-05-08 | 카메라/광학 자가학습 3파일 제거. PHM SoC 사용자 확인 완료. |
+| JD-X2 | xAI resume + cover letter 완성 | 2026-05-08 | 타임라인 픽스, patent 1개 정정, IGBT→Education 이동, 페트병 origin story 추가. PDF + Google Drive 업로드 완료. |
 | JD-X1 | xAI Mechanical Engineering Tutor — JD 분석 + 적합성 판단 | 2026-05-04 | `docs/jd/xai/JD_분석_xAI_Mechanical_Engineering_Tutor.md`. Remote part-time, $45~75/hr, 저널 4편 매칭 ✅ |
 | JD-A4 | 포트폴리오 V3 GitHub Pages 배포 | 2026-05-04 | git push → Actions 자동 빌드·배포. hwanginhyeok.github.io/portfolio |
 | JD-N3 | 니어스랩 기술 학습 인덱스 + 갭 보강 3개 | 2026-05-04 | `기술_학습.md` 커버리지 매트릭스 + tech_study/ (arm_cortex_m·imu_sensor_fusion·embedded_linux_driver) |

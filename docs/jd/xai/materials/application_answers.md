@@ -45,12 +45,16 @@ problems with expert precision and communicate that reasoning in writing. That s
 
 ## Q3. What expertise do you bring to ME tutoring?
 
-My ME expertise spans three interconnected domains. First, motor reliability and fault
-diagnosis: my M.S. thesis built an IPMSM digital twin (FEM + control model co-simulation,
-validated against experiment); I observed a full accelerated life test design-test-redesign
-cycle for IPMSM eccentricity fault characterization; and I contributed to Power Cycling
-Test work on IGBT modules characterizing bond-wire lift-off as the dominant failure mode
-(published IEEE TIM 2024, 3rd author, DOI 10.1109/TIM.2024.3472910). Second,
+My ME expertise spans three interconnected domains. First, motor control modeling and
+fault simulation: my M.S. thesis implemented eccentricity and winding fault modes in
+Ansys Maxwell FEM, co-simulated with a MATLAB/Simulink inverter control model to
+reproduce fault signatures under both normal and faulted conditions, and validated
+simulation outputs against experimental measurements — a full motor modeling pipeline
+from fault physics to control-layer Co-simulation to Sim2Real validation. I also observed
+a full accelerated life test design-test-redesign cycle for IPMSM eccentricity fault
+characterization, and contributed to Power Cycling Test work on IGBT modules characterizing
+bond-wire lift-off as the dominant failure mode (IEEE TIM 2024, 3rd author,
+DOI 10.1109/TIM.2024.3472910). Second,
 product-level reliability engineering: I authored five DFMEAs following the AIAG-VDA 2019
 seven-step process, identified five high-priority action items, and tracked all to verified
 closure before production ramp. Third, damage accumulation modeling: I applied Miner's Rule
@@ -84,21 +88,24 @@ publication.
 
 ## Q5. Self-directed learning example
 
-When my role at GINT Corp. exposed an adjacent knowledge gap in camera and optical
-reliability, I treated it as a structured learning sprint. I mapped the problem space
-first: VCM coil fatigue, OIS spring wear, lens adhesive delamination, and contamination
-ingress are the primary failure modes. Then I traced each to its governing ALT stress
-factor — thermal cycling maps to Coffin-Manson solder joint fatigue, humidity exposure
-maps to diffusion-based corrosion models, shock maps to half-sine impulse characterization,
-and high-temperature exposure maps to Arrhenius degradation. Finally, I traced how PHM
-current-signature approaches from motor diagnostics extend to actuator health monitoring
-in camera modules — the same principle that identified bond-wire lift-off in IGBT modules
-via Vce saturation voltage signatures. The output was a structured technical brief covering
-VCM failure modes, ALT stress-factor mapping, and PHM current-signature approaches —
-produced in one week of focused parallel reading across JEDEC standards, ReliaSoft
-documentation, and primary literature.
+My three peer-reviewed publications span three structurally distinct failure mechanisms
+and material systems — and each required acquiring a new domain from primary literature
+with no prior background. The first was bond-wire lift-off in IGBT power modules:
+starting from Power Cycling Test fundamentals, I mapped Joule heating → thermal fatigue →
+intermetallic delamination → resistance drift, then traced how inverter output parameters
+(Vce saturation, switching energy) encode that degradation signal without in-circuit
+instrumentation (IEEE TIM 2024, 3rd author). The second was photovoltaic polymer lifetime
+under continuously varying real-world environments: I acquired Miner's Rule damage
+summation, UV degradation kinetics, and multi-environment stress superposition to build a
+predictive model across non-constant stress histories (Solar Energy 2024, 4th author).
+The third was IPMSM drivetrain fault characterization under accelerated life testing:
+I mapped eccentricity fault signatures across phase current, vibration, and shaft
+displacement sensors within a dual-sensor detection architecture (J. Power Electronics
+2024, 6th author). Three domains, three governing models, three measurement
+methodologies — each acquired systematically from primary documentation and applied to
+published experimental work within a 2.5-year M.S. research period.
 
-*(~160 words)*
+*(~180 words)*
 
 ---
 

@@ -27,7 +27,7 @@ https://job-boards.greenhouse.io/xai/jobs/4925848007
 | Full Name | In-hyeok Hwang (Inhyeok Hwang) |
 | Email | dlsgur5560@gmail.com |
 | Phone | [사용자 직접 입력] |
-| LinkedIn URL | **[사용자 확인 필요]** |
+| LinkedIn URL | 없음 — 빈칸 제출 |
 | GitHub | github.com/hwanginhyeok |
 | Portfolio / Website | hwanginhyeok.github.io/portfolio |
 | Time Zone | KST (UTC+9), Seoul, South Korea |
@@ -52,13 +52,11 @@ https://job-boards.greenhouse.io/xai/jobs/4925848007
 - [ ] **시급 입력** — $45–55/hr 입력
 - [ ] **application_answers.md Q1~Q5** — Greenhouse 폼 해당 란에 복사
 
-### ⚠️ 확인 필요 (제출 전 사용자 결정)
+### ✅ 확인 완료 (2026-05-08)
 
-> **PHM SoC 표현**: `resume_xai.md` L65 및 `cover_letter_xai.md` 본문에 "government-funded PHM SoC development project (MOTIE, Apr 2021 – Oct 2022)"가 기재되어 있음.
-> RESUME.md SSOT에 해당 과제명/기관명 직접 근거 없음.
-> → 석사 기간 MOTIE PHM SoC 과제 참여 여부 확인 후:
->   - **참여 사실 확실** → RESUME.md SSOT에 한 줄 추가, 현 표현 유지
->   - **불확실** → 두 파일 모두 "PHM-related research at RBDO Lab"으로 약화
+- **PHM SoC 표현**: 사용자 확인 — MOTIE PHM SoC 과제 실제 참여. 현 표현 그대로 유지.
+- **LinkedIn**: 없음. 빈칸 제출.
+- **카메라/광학 자가학습 참조**: Apple 오염 제거 완료 — 3개 파일 수정됨 (2026-05-08).
 
 ---
 
