@@ -1,13 +1,13 @@
 # 취업용 포트폴리오 태스크
 
-> Current: [CURRENT_TASK.md](CURRENT_TASK.md) | Prepared: [PREPARED_TASK.md](PREPARED_TASK.md) | Finished: [FINISHED_TASK.md](FINISHED_TASK.md)
+> Current: [CURRENT_TASK.md](CURRENT_TASK.md) | Prepared: [PREPARED_TASK.md](Finished: [FINISHED_TASK.md](FINISHED_TASK.md)
 > 4블록 워크플로우: [docs/blocks/README.md](docs/blocks/README.md)
 
 ## 요약
 
-- Current: 1개 (blocked: 0)
-- Prepared: 21개 (B1: 8, B2: 1, B4: 1, B5: 4, JD-Apple: 4, JD-xAI: 3)
-- Finished: 34개
+- Current: 3개 (blocked: 2)
+- Prepared: 11개 (P1: 1, P2: 7, P3: 3)
+- Finished: 38개
 
 > **넘버링 (2026-04-24 개편)**: `B{블록}-{순번}`
 > - B1: 자료 인벤토리 (WHAT HAVE)
@@ -17,7 +17,7 @@
 > - B5: 부가자료 (4블록 외)
 >
 > **아카이브**: [TASK_ARCHIVE/](TASK_ARCHIVE/)
-> 최종 수정: 2026-05-05 (PHM SoC SSOT 보강 세션)
+> 최종 수정: 2026-05-12 (PM 자동화 - 집/노트북 병합)
 
 ## 블록별 진행 상태
 
