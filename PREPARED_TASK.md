@@ -33,9 +33,9 @@
 
 | # | 태스크 | 우선순위 | depends | 비고 |
 |---|--------|:--------:|---------|------|
-| JD-A3 | Apple 지원서 최종 제출 (사용자 직접) | P1 | JD-A5, JD-A6, JD-A7 | jobs.apple.com Job ID 200656459-3631. 자료 준비 완료(resume_en/cover_letter/learning Day1~7/STAR 5종). **제출은 사용자 직접 수행** |
-| JD-A5 | Reliability 역량 정리 + 연계 경험 발굴 (사용자 인터뷰) | P1 | — | PM-83과 동일. ALT/Weibull/Arrhenius/PHM/DFMEA/FRACAS/MTBF/Bathtub/HALT-HASS/Damage Summation 보유 vs 미보유 구분. 학부/대학원/회사 미기재 경험 발굴 → `materials/reliability_competency.md` |
-| JD-A7 | 학습자료 fact-check 정정 — 1차 자료(P-01·P-02·T-01) 수령 후 학습자료 사후매핑 제거 + 풍부화 | P1 | 사용자 PDF 제공 (P-01 IEEE TIM 2024 / P-02 PCIM Asia 2022 / T-01 석사 학위논문) | 트리거: D1 §3 "β>1 wear-out" 단언이 P-01 검출·위치식별 방법과 mismatch (D-007 패턴 재발). FACTCHECK_bondwire.md §6~9 참조. 정정 대상: D1 §3, D2, D6, reliability_competency Block2 Arrhenius, index.html. 사용자 답변 항목: P-02 본인 역할 / PCT 직접 셋업 경험 / Weibull β 직접 산출 경험 / T-01 한글 제목 / T-01 신뢰성 챕터 유무 |
+| JD-A3 | Apple 지원서 최종 제출 (사용자 직접) | P1 | JD-A7, JD-A8 | jobs.apple.com Job ID 200656459-3631. resume v5.1 + cover letter v3 완성. **제출은 사용자 직접 수행** |
+| JD-A7 | 학습자료 fact-check 정정 — 1차 자료(P-01·P-02·T-01) 수령 후 | P1 | 사용자 PDF 제공 | FACTCHECK_bondwire.md §6~9 참조. 정정 대상: D1 §3, D2, D6, reliability_competency Block2 Arrhenius, index.html |
+| JD-A9 | Apple 인터뷰 학습 Day 1~7 | P2 | — | reliability_competency.md §5.2 7일 코스. ★★★: Stress-Strength / JESD47 / FRACAS. STAR 영문 5종 준비. 추후 진행 예정 |
 
 ## JD 지원 — xAI (0개)
 

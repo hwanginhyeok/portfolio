@@ -4,6 +4,7 @@
 
 | # | 태스크 | 완료일 | 비고 |
 |---|--------|--------|------|
+| JD-A5 | Reliability 역량 정리 + Phase 2 인터뷰 완료 | 2026-05-15 | 12개 항목 전부 확인. APQP 1~5/AgPL/Supplier Audit/SVM/solder fatigue 등 발굴. `reliability_competency.md` Phase 2 완료. |
 | JD-X3 | xAI 지원서 제출 (사용자 직접) | 2026-05-15 | greenhouse 폼. 사용자 직접 제출 완료. |
 | JD-A6 | Apple 커버레터 작성 (`materials/cover_letter.md`) | 2026-05-04 | 4단락 완성. RBDO Lab·반도체 신뢰성·광학 갭 솔직 인정 구조. ~430 words. |
 | JD-X2b | xAI Apple 오염 제거 + PHM SoC 확인 | 2026-05-08 | 카메라/광학 자가학습 3파일 제거. PHM SoC 사용자 확인 완료. |
