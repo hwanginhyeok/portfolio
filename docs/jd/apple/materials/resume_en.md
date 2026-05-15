@@ -1,7 +1,7 @@
 # Resume — Inhyeok Hwang
 
 > Target: Apple Korea · Reliability Engineer, Core Technology Operations
-> Version: 2026-05-04 v3 (fact-check pass — RESUME.md SSOT direct quotation only)
+> Version: 2026-05-15 v4 (APQP Full Lifecycle + ISO 25119 AgPL + Supplier Audit + OJT + AI/ML + SPC 추가)
 > Source SSOT: `docs/blocks/05-extra/RESUME.md`
 
 ---

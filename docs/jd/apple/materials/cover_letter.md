@@ -1,8 +1,8 @@
 # Cover Letter — Inhyeok Hwang
 # Apple Korea · Reliability Engineer, Core Technology Operations (Job ID 200656459-3631)
 
-> Version: 2026-05-15 v2 (AI/ML 단락 추가 + SPC 보강)
-> Word count: ~530 words (body)
+> Version: 2026-05-15 v2 (AI/ML 단락 + SPC + ISO 25119 AgPL 추가)
+> Word count: ~560 words (body)
 
 ---
 
