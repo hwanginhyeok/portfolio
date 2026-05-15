@@ -1,7 +1,7 @@
 # Resume — Inhyeok Hwang
 
 > Target: Apple Korea · Reliability Engineer, Core Technology Operations
-> Version: 2026-05-15 v4 (APQP Full Lifecycle + ISO 25119 AgPL + Supplier Audit + OJT + AI/ML + SPC 추가)
+> Version: 2026-05-15 v5 (팩트 리스크 3개 수정 + APQP bullet 분리 + Skills APQP 정렬 + TOEIC 표기 개선)
 > Source SSOT: `docs/blocks/05-extra/RESUME.md`
 
 ---
@@ -29,16 +29,16 @@ Three years of industrial product development at GINT Corp.: led the GT-SS500 48
 **Senior Researcher** · Jan 2025 – Present
 
 **GT-SS500: 48 V Electric Autonomous Speed Sprayer — Full Lifecycle**
-- Led the program through **APQP Phase 2–3** (primary scope: design validation, DFMEA, IQC/OQC criteria, NCR closed-loop) with supporting contributions across **Phase 1** (reliability goal-setting — MTBF/B10 targets, VOC, special-characteristics identification), **Phase 4** (PPAP ROM sign-off, first-article plan of **16 units + 2 transport carts + 2 spares**), and **Phase 5** (60-item field-issue database + cascading-failure analysis of 61 issues from alpha prototypes), coordinating six cross-functional teams
-- Authored **DFMEA #201 and #210 (Step 1–7)**; five high-priority (AP=H) risks identified and resolved before production ramp
-- Applied **ISO 25119 AgPL** risk assessment to SS500 safety functions; rated over-charge protection at **AgPL d** (highest category for agricultural machinery functional safety)
+- Led **APQP Phase 2–3** (primary scope: design validation, DFMEA, IQC/OQC criteria, NCR closed-loop) for GT-SS500, coordinating six cross-functional teams from algorithm development to a first-article production plan of **16 units + 2 transport carts + 2 spares**
+- Supporting scope across the full program lifecycle: **Phase 1** (MTBF/B10 reliability goals, VOC, special-characteristics identification), **Phase 4** (PPAP ROM sign-off), **Phase 5** (60+ field-issue database; cascading-failure analysis identified six failure chains across alpha-prototype issues)
+- Authored **DFMEA #201 and #210 (Step 1–7)** and applied **ISO 25119 AgPL** risk assessment — over-charge protection rated **AgPL d** (highest category for agricultural machinery functional safety); five high-priority (AP=H) risks resolved before production ramp
 - Closed **four root-cause analyses** on real field issues:
   - **MCB contact carbonization (#204)**: confirmed electrolytic corrosion mechanism; breaker replaced with IEC 60947-2-grade part and re-qualified
   - **LCD-mode state-machine bug (#79)**: undefined transitions removed; verified through validation runs
   - **Pump O-ring freeze failure**: O-ring redesigned and re-qualified for low-temperature operation
   - **Ground-bounce noise on the control bus**: countermeasure mapped back into the DFMEA
-- Operated **27 NCRs** through to closure as a closed-loop corrective action process (Failure → Reporting → Analysis → Corrective Action → System update) with SPC-based Cpk/Ppk criteria applied at IQC/OQC gates
-- Led a **supplier quality visit** to BMS vendor (Hyundai Inverter Solutions) with a structured checklist covering 6 open issues — FW version verification, SOC anomaly root-cause confirmation, and relay-behavior validation
+- Operated **27 NCRs** through to closure as a closed-loop corrective action process (Failure → Reporting → Analysis → Corrective Action → System update); defined IQC/OQC acceptance criteria with **Cpk ≥ 1.33 targets** for key characteristics
+- Managed a structured quality review when BMS vendor (Hyundai Inverter Solutions) visited our facility — 6-item agenda covering FW version verification, SOC anomaly root-cause, and relay-behavior confirmation
 - Built **four custom test rigs** in-house: **dynamometer torque control (nonlinearity 0.008%)**, **fan bench (airflow 7.9 → 12.4 m/s, +57%)**, **pump bench** (three-sample linearity characterization, nameplate-spec falsification), **bumper safety rig** (stop distance 0.082 m, peak current 308 A, settling time 467 ms at 3 km/h)
 - Designed a **5-node CAN distributed-control architecture** (VCU ↔ dual drive MC ↔ fan ESC ↔ pump DRV ↔ BMS); authored four DBC files; detected four breaking changes before integration through a three-pass consistency protocol
 - **BOM management** across 132 items; 23 items with insufficient stock surfaced ahead of ramp
@@ -126,7 +126,7 @@ Three years of industrial product development at GINT Corp.: led the GT-SS500 48
 - Multi-sensor fusion (phase current · temperature · shaft displacement · vibration) · anomaly detection · field usage model → ALT stress-factor mapping
 
 ### Quality & PM Artifacts
-- APQP Phase 1–5 · DFMEA / PFMEA · DRBFM · boundary diagram · BOM management · IQC/OQC inspection guides with **SPC-based Cpk/Ppk criteria** · WBS · NCR closed-loop handling (FRACAS-equivalent)
+- APQP Phase 2–3 (primary) + Phase 1/4/5 supporting · DFMEA / PFMEA · DRBFM · boundary diagram · BOM management · IQC/OQC inspection guides with **Cpk ≥ 1.33 acceptance criteria** · WBS · NCR closed-loop handling (FRACAS-equivalent)
 
 ### Software & AI Workflow
 - Python · C/C++ · Git · Linux
@@ -137,7 +137,7 @@ Three years of industrial product development at GINT Corp.: led the GT-SS500 48
 ### Languages
 - Korean: native
 - English: professional working proficiency
-- TOEIC 920 / TOEIC Speaking Lv. 6 (IH 140) — both expired; re-test planned
+- TOEIC 920 / TOEIC Speaking Lv. 6 (IH 140) — re-test scheduled
 
 ---
 
