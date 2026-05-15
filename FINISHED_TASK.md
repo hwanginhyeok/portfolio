@@ -4,6 +4,8 @@
 
 | # | 태스크 | 완료일 | 비고 |
 |---|--------|--------|------|
+| JD-X3 | xAI 지원서 제출 (사용자 직접) | 2026-05-15 | greenhouse 폼. 사용자 직접 제출 완료. |
+| JD-A6 | Apple 커버레터 작성 (`materials/cover_letter.md`) | 2026-05-04 | 4단락 완성. RBDO Lab·반도체 신뢰성·광학 갭 솔직 인정 구조. ~430 words. |
 | JD-X2b | xAI Apple 오염 제거 + PHM SoC 확인 | 2026-05-08 | 카메라/광학 자가학습 3파일 제거. PHM SoC 사용자 확인 완료. |
 | JD-X2 | xAI resume + cover letter 완성 | 2026-05-08 | 타임라인 픽스, patent 1개 정정, IGBT→Education 이동, 페트병 origin story 추가. PDF + Google Drive 업로드 완료. |
 | JD-X1 | xAI Mechanical Engineering Tutor — JD 분석 + 적합성 판단 | 2026-05-04 | `docs/jd/xai/JD_분석_xAI_Mechanical_Engineering_Tutor.md`. Remote part-time, $45~75/hr, 저널 4편 매칭 ✅ |

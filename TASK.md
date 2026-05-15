@@ -6,8 +6,8 @@
 ## 요약
 
 - Current: 3개 (blocked: 2)
-- Prepared: 11개 (P1: 1, P2: 7, P3: 3)
-- Finished: 38개
+- Prepared: 16개 (P1: 5, P2: 8, P3: 3)
+- Finished: 40개
 
 > **넘버링 (2026-04-24 개편)**: `B{블록}-{순번}`
 > - B1: 자료 인벤토리 (WHAT HAVE)
@@ -27,9 +27,9 @@
 | B2 활용 전략 | 🟡 골격 작성 | `docs/blocks/02-usage/USAGE_STRATEGY.md` | 0 | 1 |
 | B3 배치 | 🟢 **완료** | `docs/blocks/03-layout/LAYOUT.md` §7 게이트 12/12 | 0 | 0 |
 | B4 디자인 | 🟢 **V3 완료** | V3 5섹션 홈·컴포넌트 7종·Nav N2 구현 완료 | 0 | 1 |
-| JD-Apple | 🔵 **진행 중** | Apple Reliability Engineer 지원 준비 (resume·cover·learning·study HTML 준비 완료, JD-A7 fact-check 1차 자료 대기) | 0 | 4 |
+| JD-Apple | 🔵 **진행 중** | resume·cover letter 완성. JD-A5(Phase2 인터뷰)·JD-A7(PDF 대기)·JD-A3(제출) 남음 | 0 | 3 |
 | JD-Near | 🔵 **면접 자료 완료** | `docs/jd/nearlab/` JD매핑·회사이해·기술학습 | 0 | 0 |
-| JD-xAI | 🔵 **준비 중** | `docs/jd/xai/` JD분석 완료. resume·CL 작성 예정 | 0 | 3 |
+| JD-xAI | ✅ **제출 완료** | 지원서 제출 완료 (2026-05-15) | 0 | 0 |
 | B5 부가 | 🟡 골격 작성 (3종) + 어학 점수 | RESUME/GITHUB_PROFILE/ENGLISH_VERSION | 0 | 4 |
 
 ## TODO (아이디어 / 미확정)
