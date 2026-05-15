@@ -3,7 +3,8 @@
 > 작성: 2026-05-04 | 포지션: Reliability Engineer, Core Technology Operations, Korea (Job ID 200656459-3631)
 > 목적: 지원서 제출 직전 셀프 어필 / 인터뷰 답변 사전 정렬용 매트릭스
 > v3 갱신: 표준명 사후 매핑 전면 제거 — RESUME.md SSOT 직접 인용만 (2026-05-04 fact-check pass)
-> 결론: **5개 필수 요건 중 4개 직접 매칭(O), 1개 방법론 매칭(△). 적극 지원 권장.**
+> v4 갱신: 2026-05-15 — ISO 25119 AgPL / Supplier Audit / OJT / APQP Full Lifecycle / AI/ML / SPC 반영
+> 결론: **5개 필수 요건 중 3 O / 2 △ + Preferred 4개 매칭. 적극 지원 권장.**
 
 ---
 
@@ -16,7 +17,7 @@
 | **필수 #3** | 소비자 제품 기반 기술·불량 분석 경험 | ⚠ △ | 산업용 root-cause analysis 4건, NCR 27건 closed-loop. 방법론 동일 / 소비자 가전 직접 경험 없음 |
 | **필수 #4** | 데이터 분석·해석 능력 | ✅ O | ALT 다중센서, Co-simulation 2,932포인트, PHM SoC, Damage Summation |
 | **필수 #5** | 신뢰성 테스트 실무 (ORT/ALT/DVT) | ✅ O | RBDO Lab 2년 + 시험체계 4종 자력 구축 + APQP Phase 2~3 |
-| **업무 #1** | 개발·양산 단계 신뢰성 시험 주도 (ORT) | ✅ O | 다이나모미터·팬벤치·범퍼 시험대 구축 + APQP Gate Review |
+| **업무 #1** | 개발·양산 단계 신뢰성 시험 주도 (ORT) | ✅ O | 다이나모미터·팬벤치·범퍼 시험대 구축 + APQP Phase 2–3 (primary) + Phase 1/4/5 supporting |
 | **업무 #2** | 컴포넌트·모듈 신뢰성 시험 연구 → 시스템 품질 개선 | ✅ O | IPMSM ALT(P-05) · PV 폴리머 ALT(P-04) · IGBT PCT(P-01 IEEE TIM 2024, 3rd author) |
 | **업무 #3** | ORT 이슈 식별·우선순위화 | ✅ O | DFMEA AP=H 5건 도출·RPN 우선순위화 |
 | **업무 #4** | FA(불량 분석) 주도 + 교차 기능 시정조치 조율 | ✅ O | root-cause analysis 4건, NCR 27건 closed-loop, PM 겸임 |
@@ -194,12 +195,13 @@ Apple 업무: FA 주도 + cross-functional corrective action
 
 ### 5.1 서류
 
-- [x] 영문 이력서 (`resume_en.md`) — 표준명 매핑 제거 + fact-check 완료 (v3 2026-05-04)
+- [x] 영문 이력서 (`resume_en.md`) — v4 갱신 (2026-05-15): APQP Phase 1/4/5 + ISO 25119 AgPL + Supplier Audit + OJT + SPC/PHM SoC/AI/ML 보강
 - [x] 카메라/VCM 자가학습 (`camera_vcm_reliability.md`) — 자가 도메인 갭 보완
-- [x] JD ↔ 이력 매핑 (이 문서) — v3 fact-check 갱신 완료 (2026-05-04)
-- [x] **커버레터 (`cover_letter.md`)** — 4단락 완성 (2026-05-04)
+- [x] JD ↔ 이력 매핑 (이 문서) — v4 갱신 (2026-05-15)
+- [x] **커버레터 (`cover_letter.md`)** — v2 갱신 (2026-05-15): AI/ML 단락 + SPC + ISO 25119 AgPL 추가
+- [x] **JD 원문 직접 확인** — jobs.apple.com 브라우저 접근 완료 (2026-05-15): 구미 근무지 확정, Preferred 3개 신규 발굴
 - [ ] LinkedIn 영문 프로필 최신화
-- [ ] 포트폴리오 V3 GitHub Pages 배포 (JD-A4)
+- [x] 포트폴리오 V3 GitHub Pages 배포 (JD-A4) — 완료
 
 ### 5.2 인터뷰 1주 전 학습 (우선순위 업데이트)
 

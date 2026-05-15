@@ -19,7 +19,7 @@
 
 Mechanical-design M.S. from Konkuk University's Reliability-Based Design Optimization (RBDO) Lab, with thesis research on IPMSM digital-twin fault diagnosis (Co-simulation of Ansys Maxwell FEM and a MATLAB/Simulink inverter model). Three peer-reviewed journal publications as co-author (IEEE Transactions on Instrumentation and Measurement · Solar Energy · Journal of Power Electronics, all 2024) and two Korean patents.
 
-Three years of industrial product development at GINT Corp.: led the GT-SS500 48 V autonomous speed sprayer through APQP Phase 2–3 to a first-article production plan of 16 units (plus 2 transport carts and 2 spares); authored DFMEA #201/#210 Step 1–7 with five high-priority risks closed before ramp; closed four root-cause analyses on real field issues; tracked 27 NCRs through closure; and built four custom test rigs in-house (dynamometer, fan bench, pump bench, bumper safety rig).
+Three years of industrial product development at GINT Corp.: led the GT-SS500 48 V autonomous speed sprayer through APQP Phase 2–3 (primary) with Phase 1/4/5 supporting scope across the full program lifecycle; authored DFMEA #201/#210 Step 1–7 with five high-priority risks closed before ramp; applied ISO 25119 AgPL d assessment to safety functions; closed four root-cause analyses on real field issues; tracked 27 NCRs through closure; led a supplier quality visit to the BMS vendor; and built four custom test rigs in-house (dynamometer, fan bench, pump bench, bumper safety rig).
 
 ---
 
@@ -29,19 +29,21 @@ Three years of industrial product development at GINT Corp.: led the GT-SS500 48
 **Senior Researcher** · Jan 2025 – Present
 
 **GT-SS500: 48 V Electric Autonomous Speed Sprayer — Full Lifecycle**
-- Led the program through **APQP Phase 2–3** from algorithm development to a first-article production plan of **16 units, plus 2 transport carts and 2 spares**, coordinating across six cross-functional teams
+- Led the program through **APQP Phase 2–3** (primary scope: design validation, DFMEA, IQC/OQC criteria, NCR closed-loop) with supporting contributions across **Phase 1** (reliability goal-setting — MTBF/B10 targets, VOC, special-characteristics identification), **Phase 4** (PPAP ROM sign-off, first-article plan of **16 units + 2 transport carts + 2 spares**), and **Phase 5** (60-item field-issue database + cascading-failure analysis of 61 issues from alpha prototypes), coordinating six cross-functional teams
 - Authored **DFMEA #201 and #210 (Step 1–7)**; five high-priority (AP=H) risks identified and resolved before production ramp
+- Applied **ISO 25119 AgPL** risk assessment to SS500 safety functions; rated over-charge protection at **AgPL d** (highest category for agricultural machinery functional safety)
 - Closed **four root-cause analyses** on real field issues:
-  - **MCB contact carbonization (#204)**: confirmed electrolytic corrosion mechanism; the breaker was replaced with an IEC 60947-2-grade part and re-qualified
+  - **MCB contact carbonization (#204)**: confirmed electrolytic corrosion mechanism; breaker replaced with IEC 60947-2-grade part and re-qualified
   - **LCD-mode state-machine bug (#79)**: undefined transitions removed; verified through validation runs
   - **Pump O-ring freeze failure**: O-ring redesigned and re-qualified for low-temperature operation
   - **Ground-bounce noise on the control bus**: countermeasure mapped back into the DFMEA
-- Operated **27 NCRs** through to closure as a closed-loop corrective action process (Failure → Reporting → Analysis → Corrective Action → System update)
+- Operated **27 NCRs** through to closure as a closed-loop corrective action process (Failure → Reporting → Analysis → Corrective Action → System update) with SPC-based Cpk/Ppk criteria applied at IQC/OQC gates
+- Led a **supplier quality visit** to BMS vendor (Hyundai Inverter Solutions) with a structured checklist covering 6 open issues — FW version verification, SOC anomaly root-cause confirmation, and relay-behavior validation
 - Built **four custom test rigs** in-house: **dynamometer torque control (nonlinearity 0.008%)**, **fan bench (airflow 7.9 → 12.4 m/s, +57%)**, **pump bench** (three-sample linearity characterization, nameplate-spec falsification), **bumper safety rig** (stop distance 0.082 m, peak current 308 A, settling time 467 ms at 3 km/h)
 - Designed a **5-node CAN distributed-control architecture** (VCU ↔ dual drive MC ↔ fan ESC ↔ pump DRV ↔ BMS); authored four DBC files; detected four breaking changes before integration through a three-pass consistency protocol
 - **BOM management** across 132 items; 23 items with insufficient stock surfaced ahead of ramp
-- Tracked **37+ field issues**, personally resolving 14 in the electrical-control scope
-- Represented the program at the Innovation-Product on-site audit (4 of 9 items handled)
+- Tracked **37+ field issues**, personally resolving 14 in the electrical-control scope; represented program at Innovation-Product on-site audit (4 of 9 items handled)
+- Mentoring a **junior engineer** in embedded control-system design — CAN protocol architecture, state-machine safety design, and DFMEA methodology (on-the-job)
 
 ---
 
