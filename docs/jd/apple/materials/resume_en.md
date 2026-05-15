@@ -120,10 +120,11 @@ Three years of industrial product development at GINT Corp.: led the GT-SS500 48
 - Dynamometer torque control · self-built fan / pump / bumper benches · CANoe · Vector VN1600 · SPICE · oscilloscope · NI DAQ (NI-9215)
 
 ### PHM & Signal Processing
-- Multi-sensor PHM (phase current · temperature · shaft displacement · vibration) · anomaly detection · multi-signal fusion
+- **Government-funded PHM SoC development** (MOTIE, 2021–2022): multi-sensor fault diagnosis + remaining-useful-life estimation for IPMSM drivetrain
+- Multi-sensor fusion (phase current · temperature · shaft displacement · vibration) · anomaly detection · field usage model → ALT stress-factor mapping
 
 ### Quality & PM Artifacts
-- APQP Phase 1–5 · DFMEA / PFMEA · DRBFM · boundary diagram · BOM management · IQC/OQC inspection guides · WBS · NCR closed-loop handling
+- APQP Phase 1–5 · DFMEA / PFMEA · DRBFM · boundary diagram · BOM management · IQC/OQC inspection guides with **SPC-based Cpk/Ppk criteria** · WBS · NCR closed-loop handling (FRACAS-equivalent)
 
 ### Software & AI Workflow
 - Python · C/C++ · Git · Linux
