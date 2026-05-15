@@ -1,127 +1,212 @@
 # JD 분석 — Apple · Reliability Engineer, Core Technology Operations, Korea
 
-> 분석일: 2026-05-04 (v3 — fact-check pass: 표준명 사후 매핑 제거, RESUME.md SSOT 직접 인용)
-> URL: https://www.wanted.co.kr/wd/356719
+> 분석일: 2026-05-04 (v3 초안) → **2026-05-15 v4 갱신** — jobs.apple.com 원문 직접 확인
+> URL: https://jobs.apple.com/en-us/details/200656459-3631/reliability-engineer-core-technology-operations-korea
+> Role Number: 200656459-3631 | Posted: 2026-04-08
 
 ---
 
-## 1. 공고 원문 요약
+## 1. 공고 원문 (jobs.apple.com 직접 확인, 2026-05-15)
 
-**회사**: Apple Korea · 서울 강남구 삼성동 아셈타워 3901호 (상시채용)
+**회사**: Apple Korea · Core Technology Operations Team
+**근무지**: **구미시(Gumi city), 경북** ← ⚠️ 기존 분석(서울 강남 아셈타워)과 다름. 실제 근무지 구미
+**Team**: Operations and Supply Chain
 
-### 주요 업무
-1. 개발·양산 단계 신뢰성 시험 주도 (ORT)
-2. 컴포넌트·모듈 신뢰성 시험 연구 및 구현 → 시스템 품질 개선
-3. ORT 이슈 식별 및 우선순위화
-4. FA(불량 분석) 주도 + 교차 기능 시정조치 조율
+### Summary (원문)
+> We have a wonderful opportunity for Reliability Engineer to be part of our Core Technology Operations Team in Korea. We are seeking the individual with skills to identify product reliability risks and figure out the corrective action affecting Apple product family to get high customer satisfaction. Through deep investigation and closely collaboration with Engineer, product development, Operations and component suppliers, we strive to provide customers an experience of enduring quality products which is so integral with our lives.
 
-### 자격요건 (필수)
-1. 기계공학 / 전기공학 / 이미지과학 전공
-2. 카메라·VCM·렌즈·반도체·진동기 등 모듈 신뢰성 테스트·디버깅·기능 검증 실무
-3. 소비자 제품 기반 기술·불량 분석 경험
-4. 데이터 분석·해석 능력
+### Description (원문)
+> The Reliability Engineer plays a critical role to drive operation reliability testing during product development and mass production of components of Apple products, figure out risks and collaboration with relative teams for issue closure.
+
+### Responsibilities (원문 4개)
+1. Leads operation reliability testing in development and sustaining stage
+2. Research and strategically implement component, module reliability testing to continuously improve system quality and **field product usage model** during mass production stage
+3. Strategic identification and prioritization of issues identified in ORT
+4. Lead failure analysis of issues identified in ORT and coordinate cross functions to drive corrective actions through deep FA
+
+### Minimum Qualifications (원문 4개)
+1. Mechanical Engineering / Electrical Engineering / Image Science, Photographic & Motion-Picture (or equivalent educational experience in fundamental imaging technologies)
+2. Hands on experience in reliability testing, debugging, functional verification of modular components (**camera, VCM, lens, semiconductor, vibrator**, etc.)
+3. Technical and failure analysis experience focus on **consuming product**
+4. Knowledgeable in data analysis and interpretation
+
+### Preferred Qualifications (원문 6개) ← v3에서 누락됨
+1. **CRE certification** ← 신규 확인
+2. **Knowledgeable in SPC and quality control skill** ← 신규 확인
+3. Business level fluency in English and Korean
+4. Excellent communications skills and leadership
+5. **AI or Machine learning experiences** ← 신규 확인 (강력한 강점)
+6. Primary working location is **Gumi city, Korea** ← 구미 재확인
 
 ---
 
-## 2. 포지션 본질
+## 2. v3 → v4 핵심 변경사항
 
-Apple Core Technology Operations의 신뢰성 엔지니어 — 카메라/광학 컴포넌트 중심이지만, JD 원문 "semiconductor, vibrator" 포함으로 더 넓은 컴포넌트 신뢰성 업무도 포함.
-
-**핵심 역량 3가지**: 시험 체계 설계 → 데이터 기반 FA → 교차 기능 조율
+| 항목 | v3 (wanted.co.kr) | v4 (jobs.apple.com 원문) | 영향 |
+|------|------------------|--------------------------|------|
+| 근무지 | 서울 강남 아셈타워 | **구미시(Gumi)** | ⚠️ 지원 결정 요소 |
+| Preferred: CRE | 누락 | **CRE certification** | 자격증 추후 취득 목표 |
+| Preferred: SPC | 언급 없음 | **SPC + quality control** | resume/CL에 Cpk/SPC 명시 필요 |
+| Preferred: AI/ML | 누락 | **AI or ML experience** | 황인혁 강점 — CL·resume 반드시 추가 |
+| Preferred: 영어+한국어 | 누락 | Business level EN+KR | TOEIC 920 어필 가능 |
+| field usage model | 언급 없음 | "field product usage model" | PHM/Damage Summation 연결 가능 |
 
 ---
 
-## 3. 황인혁 역량 매칭 (v2 — 대학원 배경 포함)
+## 3. 포지션 본질 (v4 재해석)
 
-### 3.1 대학원 신뢰성 배경 (초기 분석에서 누락)
+Apple Core Technology Operations — 양산 단계 컴포넌트 신뢰성 엔지니어.
+**구미 기반** = Apple Korea 부품 신뢰성 거점(서플라이 체인 허브).
 
-| 항목 | 내용 |
-|------|------|
-| **연구실** | 건국대 **신뢰성기반최적설계(RBDO) Lab** — 연구실 자체가 Reliability 전문 |
-| **PHM 연구** | 산업통상자원부 과제 — 전동화 차량 구동 전기모터 상태 진단 PHM SoC 개발 (2021~2022) |
-| **가속수명시험 (ALT)** | IPMSM ALT 관찰 참여 — phase current·온도·shaft displacement·진동 4중 센서 모니터링, failure mode 분류 (P-05 J.Power Electron. 2024, 6th author) |
-| **수명 예측** | PV 폴리머 damage summation 접근법 — 변동 환경하 수명 추정 (P-04 Solar Energy 2024, 4th author) |
-| **반도체 신뢰성** | IGBT 본드와이어 lift-off 결함 검출 (P-01 IEEE TIM 2024, 3rd author), 전원사이클 시험 (P-02 PCIM Asia 2022) |
-| **고장 진단** | 120kW IPMSM 다중 고장 모드(자석 감자·권선 단락) 시뮬레이션 → 실험 검증 (P-03, T-01) |
-| **수상** | 한국**신뢰성**학회 최우수발표 논문상 (2022) / 한국PHM학회 우수포스터상 (2021) |
+**핵심 역할 3가지**:
+- ORT 설계·운영 (개발→양산 전 과정)
+- 딥 FA 주도 + 교차 기능 시정조치 조율
+- field usage model 기반 신뢰성 시험 전략 수립
 
-### 3.2 필수 자격요건 매칭 (업데이트)
+---
+
+## 4. 황인혁 역량 매칭 (v4 갱신)
+
+### 4.1 Minimum Qualifications
 
 | # | 요구사항 | 매칭 | 근거 |
 |---|---------|:----:|------|
 | 1 | 기계공학 전공 | **O** | 건국대 기계설계학과 석사 (RBDO Lab) |
-| 2 | 신뢰성 테스트 실무 | **O** | 대학원 ALT 관찰 참여 + 실무 시험 체계 4종 자력 구축 |
-| 3 | 반도체 모듈 검증 | **△** | IGBT 신뢰성 검증 경험 (P-01/P-02). 카메라·렌즈·VCM 없음 |
-| 4 | 소비자 제품 FA | **△** | 산업용 시스템 FA 다수 (RCA 4건). 소비자 전자 경험 없음 |
-| 5 | 데이터 분석·해석 | **O** | ALT 다중 센서 데이터, Co-simulation, 2,932포인트 분석 |
+| 2 | 모듈 신뢰성 시험 실무 (카메라·VCM·반도체·진동기) | **△** | 반도체(IGBT PCT P-01 IEEE TIM 2024) + 시험체계 4종 자력 구축. 광학 없음 |
+| 3 | 소비자 제품 FA 경험 | **△** | 산업용 RCA 4건 + NCR 27건. 방법론 동일, 소비자 가전 직접 없음 |
+| 4 | 데이터 분석·해석 | **O** | ALT 다중센서, Co-simulation 2,932pt, PHM SoC, Damage Summation |
 
-### 3.3 업무 내용 매칭
+### 4.2 Preferred Qualifications ← 신규 분석
 
-| # | 업무 | 매칭 | 근거 |
-|---|------|:----:|------|
-| 1 | 신뢰성 시험 주도 | **O** | 대학원 ALT 관찰 참여 + 실무 시험대 자력 구축 4종, APQP Phase 2~3 |
-| 2 | ORT 이슈 식별·우선순위화 | **O** | DFMEA AP=H 5건 도출·우선순위화 |
-| 3 | FA 주도 + 교차 기능 조율 | **O** | MCB 전해부식·상태머신 버그·오링 동파 RCA, PM 겸임 |
-| 4 | 모듈 신뢰성 시험 연구 | **△** | 전동계통·반도체 가능. 광학 모듈(카메라/VCM/렌즈) 없음 |
+| # | 우대사항 | 매칭 | 근거 |
+|---|---------|:----:|------|
+| 1 | CRE 자격증 | **✗** | 미취득. 추후 목표 |
+| 2 | SPC + quality control | **△** | IQC/OQC 직접 운영. Cpk 개념 인지. "Six Sigma DMAIC" 명시 보강 필요 |
+| 3 | 영어+한국어 Business level | **O** | 한국어 원어민. TOEIC 920 (만료) / TS IH 140 |
+| 4 | 커뮤니케이션·리더십 | **O** | PM 겸임, 6팀 조율, NCR 27건 closed-loop |
+| 5 | **AI/ML 경험** | **O** ← 신규 강점 | PHM SoC(산자부 과제), 3-tier LLM 라우팅, Claude Code·MCP 구축, 8개 프로젝트 자동화 파이프라인 |
+| 6 | 구미 근무 가능 | 사용자 확인 필요 | — |
 
 ---
 
-## 4. 갭 분석
+## 5. 갭 분석 (v4)
 
-### 4.1 실제 갭 (재평가)
+### 5.1 실제 갭
 
 | 갭 | 심각도 | 설명 |
 |---|:---:|------|
-| 카메라·VCM·렌즈 경험 | ⚠ 중간 | JD에 명시된 컴포넌트 중 광학 파트만 없음. 반도체·진동기는 경험 있음 |
-| 소비자 전자제품 FA | ⚠ 중간 | 방법론은 동일. 대상 컴포넌트 지식 학습 필요 |
+| 카메라·VCM·렌즈 경험 | ⚠️ 중간 | 광학 파트만 없음. 반도체·진동기는 경험 있음 |
+| 소비자 전자 FA | ⚠️ 중간 | 방법론 동일. 컴포넌트 도메인 차이만 |
+| CRE 자격증 | ℹ️ 낮음 | Preferred(필수 아님). 추후 취득 목표 설정 가능 |
+| 구미 근무 | ❓ 확인 필요 | 거주지/통근 고려 |
 
-**초기 "치명적 갭"에서 "중간 갭"으로 재평가** — RBDO Lab, PHM, ALT, 반도체 신뢰성 배경이 방법론 측면의 갭을 크게 줄임.
-
-### 4.2 강점
+### 5.2 강점 (v4 추가 포함)
 
 | 강점 | 어필 포인트 |
 |---|---|
-| RBDO Lab 출신 | 신뢰성 공학이 석사 연구의 핵심 — Apple Reliability 팀과 직접 언어가 통함 |
-| ALT 관찰 참여 | 가속수명시험 설계·운용 관찰, 다중 센서 failure mode 분류 — 방법론 이전 가능 |
-| 수명 예측 경험 | damage summation으로 변동 환경 수명 추정 (P-04) |
-| 반도체 신뢰성 | IGBT 본드와이어 lift-off 검출 (P-01 IEEE TIM 2024, 3rd author) |
-| FA 구조화 역량 | root-cause analysis 4건, DFMEA 5건, 교차 기능 시정조치 — Apple FA 업무와 대응 |
-| 시험 인프라 구축 | 장비 없으면 만드는 엔지니어 — Apple 신뢰성 팀이 가장 선호하는 유형 |
+| RBDO Lab 출신 | "신뢰성이 학위 연구의 핵심" |
+| IGBT PCT + IEEE TIM 2024 | 반도체 신뢰성 직접 경험 |
+| IPMSM ALT 관찰 | dual sensor architecture, failure mode 분류 |
+| 4종 시험체계 자력 구축 | Apple이 선호하는 자기충족형 엔지니어 |
+| DFMEA 5건 + RCA 4건 | FA + corrective action 직접 경험 |
+| NCR 27건 closed-loop | FRACAS-equivalent 운영 |
+| Damage Summation (Miner's Rule) | field usage model 연결 가능 |
+| **PHM SoC + AI 자동화** | AI/ML Preferred 직접 매칭 — 현재 cover letter에 없음, 반드시 추가 |
+| **SPC/Cpk** 인지 | IQC/OQC 기준 정의 경험으로 연결 |
+| TOEIC 920 | 영어+한국어 Preferred 매칭 |
 
 ---
 
-## 5. 종합 평가
+## 6. "알아야 할 것들" — 학습 우선순위 (v4 갱신)
+
+### 6.1 ★★★ 인터뷰 필수 (답 못 하면 치명)
+
+| 개념 | 왜 필요한가 | 내 경험 연결 |
+|------|-----------|------------|
+| **ORT 설계 원리** | 업무 핵심 #1·#3 | APQP IQC/OQC = ORT 구조 동일. 명칭 매핑 |
+| **Deep FA 5단계** | 업무 #4 "deep FA" | RCA 4건 → 5단계(현상→고장모드→근본원인→설계변경→재현검증) 영문화 |
+| **FRACAS 영문 답변** | NCR 27건 = FRACAS-equivalent | "Failure→Reporting→Analysis→CA→System" 5단계 암기 |
+| **Stress-Strength Interference** | RBDO Lab 출신 확정 질문 | S-S overlap → 고장 확률 산출 직접 도출 연습 |
+| **Weibull β 해석 + B10 산식** | 시험 결과 해석 기본 | β<1/=1/>1 의미. MTTF=η·Γ(1+1/β). B10=η·(-ln0.9)^(1/β) |
+| **field usage model이란** | Responsibilities #2 원문 명시 | duty cycle 모델링 → ALT 스트레스 인자 설정. Damage Summation (P-04)으로 연결 |
+
+### 6.2 ★★ 자연스럽게 나오는 질문
+
+| 개념 | 준비 포인트 |
+|------|-----------|
+| **JESD47 핵심 7종** | HTOL/THB/TC/Power Cycling/ESD HBM·CDM/EM. PCT 직접 수행과 연결 |
+| **Coffin-Manson ↔ PCT 페어링** | PCT = 시험 프로토콜, CM = ΔT 수명 외삽 모델. 혼용 금지 |
+| **SPC + Cpk/Ppk** | "SPC preferred" 직접 명시. 공정능력 지수 산식 + IQC 적용 사례 연결 |
+| **MIL-STD-810 / IEC 60068 매핑** | 4종 시험체계 경험에 표준명 붙이기 |
+| **Camera/VCM 기본 구조** | OIS 메커니즘, VCM 고장모드 5종(camera_vcm_reliability.md 참조) |
+| **MTBF/MTTF 산식** | 기본 수명 지표 암기 |
+
+### 6.3 ★ 보너스 어필
+
+| 개념 | 연결 |
+|------|------|
+| **AI/ML → Reliability** | PHM SoC = AI-based fault diagnosis. 면접에서 적극 어필 |
+| Reliability Growth (Duane/AMSAA) | 개발 단계 고장률 감소 추적 |
+| Bayesian Reliability | 소표본 + 사전정보 통합 |
+| FMECA | FMEA + Criticality 수치화 |
+
+---
+
+## 7. Cover Letter + Resume 수정 포인트 (v4 신규)
+
+### 7.1 Cover Letter에 반드시 추가
+
+**AI/ML 단락** — 현재 커버레터에 전혀 없음. Preferred #5 직접 매칭.
+
+추가 위치: 3단락(반도체 신뢰성) 뒤, 4단락(광학 갭) 앞에 짧게 삽입.
+
+```
+초안:
+"On the AI side, I developed a government-funded PHM SoC for EV drivetrain fault 
+diagnosis (MOTIE, 2021–2022), applying multi-sensor signal fusion and remaining-
+useful-life estimation to an IPMSM drivetrain — an approach that maps directly onto 
+the field product usage modeling and prognostics work Apple's reliability team does. 
+Beyond the lab, I've built and operate a 13-skill automation pipeline across 8 active 
+projects using Claude Code, custom MCP servers, and LLM routing, which gives me 
+practical intuition for integrating ML-based diagnostics into engineering workflows."
+```
+
+**SPC 언급 추가**: "tracked 27 NCRs" 뒤에 "with Cpk-based IQC criteria" 추가.
+
+### 7.2 Resume 수정 포인트
+
+- `Quality & PM Artifacts` 섹션: "IQC/OQC inspection guides" → "IQC/OQC inspection guides with **SPC-based Cpk/Ppk criteria**" 로 변경
+- `Software & AI Workflow` 섹션: 이미 AI 자동화 내용 있음 → 첫 줄에 "**PHM SoC development** (government R&D, MOTIE 2021–2022)" 명시 추가
+
+### 7.3 구미 근무 확인
+
+면접 전 결정 필요. 지원서에는 별도 언급 불필요.
+
+---
+
+## 8. 종합 평가 (v4)
 
 ### 지원 권장 여부: **YES (적극 권장)**
 
-초기 분석에서 대학원 신뢰성 배경을 누락했습니다. 재평가 결과:
+- 필수 4개 중 2개 O, 2개 △ (방법론 갭, 도메인 갭 아님)
+- 우대 6개 중 **AI/ML·영어·커뮤니케이션·SPC 4개 매칭** ← v3에서 놓친 부분
+- RBDO Lab 출신 + IEEE TIM 2024 + 4종 시험체계 자력 구축 = 학계+양산 브릿지
 
-1. **연구실 자체가 Reliability** — RBDO Lab에서 2년간 PHM, ALT, 수명 예측, 고장 진단 연구. Apple Reliability Engineer JD의 핵심 역량과 학문적으로 직접 겹침.
+### 커버레터 전략 (v4 갱신)
 
-2. **반도체 신뢰성 경험 있음** — IGBT 본드와이어 열화 진단 (P-01 IEEE TIM 2024). JD가 요구하는 "semiconductor" 모듈 경험에 해당.
-
-3. **유일한 실질 갭은 광학 파트** — 카메라·VCM·렌즈만 없음. 이건 실무에서 on-the-job으로 충분히 커버 가능한 도메인 지식.
-
-### 커버레터 전략
-
-- **전면에 내세울 것**: "RBDO Lab 출신 — 신뢰성이 전공이다"
-- **방법론 이전 강조**: 전동계통 ALT → 광학 모듈 ALT, 같은 방법론 다른 대상
-- **구체적 사례**: IEEE TIM 2024 (IGBT PCT, 3rd author), 4종 시험체계 자력 구축, DFMEA 5건 root-cause analysis 4건
-
-### 지원 전 확인
-
-- 이 포지션이 카메라팀 전속인지, 더 넓은 컴포넌트 신뢰성팀인지 LinkedIn 내부자 확인
-- 카메라 모듈 기본 구조(VCM 작동 원리, OIS 메커니즘) 1주일 선행 학습 권장
+1. **단락 1**: RBDO Lab 학문적 배경 (유지)
+2. **단락 2**: APQP 양산 실행 + SPC/FRACAS 명시 (보강)
+3. **단락 3**: 반도체 신뢰성 (IGBT PCT·IEEE TIM) (유지)
+4. **단락 3.5**: **AI/ML 경험 추가** (신규)
+5. **단락 4**: 광학 갭 솔직 인정 + 학습 의지 (유지)
 
 ---
 
-## 6. 이력서/포트폴리오 매핑
+## 참조
 
-| Apple JD 요구 | 황인혁 매핑 포인트 |
-|---|---|
-| Reliability testing experience | RBDO Lab 2년 + 실무 시험체계 4종 |
-| Semiconductor module | IGBT 신뢰성 — P-01 IEEE TIM 2024 (3rd author) |
-| Data analysis | ALT 다중 센서, Co-simulation, PHM SoC |
-| FA + corrective action | RCA 4건, DFMEA AP=H, 교차 기능 조율 |
-| ORT design | 다이나모미터·범퍼 시험대 자력 구축 |
-| Mass production quality | APQP Phase 2~3, BOM 관리 |
+- `materials/jd_resume_match.md` — JD ↔ 이력 매핑 (v4 갱신 필요)
+- `materials/resume_en.md` — 영문 이력서 (SPC·PHM SoC 보강 필요)
+- `materials/cover_letter.md` — 커버레터 (AI/ML 단락 추가 필요)
+- `materials/reliability_competency.md` — 역량 인벤토리
+- `materials/camera_vcm_reliability.md` — 광학 도메인 자가학습
+- `APPLY.md` — 지원 절차
