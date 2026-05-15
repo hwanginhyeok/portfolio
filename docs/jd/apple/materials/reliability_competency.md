@@ -187,20 +187,37 @@ GT-SS500 APQP Phase 2~3 + DFMEA 5건 + IQC/OQC + NCR 27건의 양산 직전 검�
 
 ---
 
-## 6. Phase 2에서 추가 확인 필요 항목 (사용자 인터뷰 대기)
+## 6. Phase 2 확인 결과 (2026-05-15 완료)
 
-- [ ] PCT에서 관찰한 IGBT 외 다른 고장 메커니즘 — 솔더 fatigue / die-attach 박리 / gate oxide 열화 / EM 중 어느 것?
-- [ ] RUL 산출 방법론 상세 — data-driven (LSTM/CNN/Transformer) vs model-based (particle filter / Kalman filter / 물리 모델)?
-- [ ] APQP Phase 1 (Plan & Define) 보유분 — 요구사항 정의·목표 설정 참여 여부
-- [ ] APQP Phase 5 (양산 후 모니터링·개선) 보유분 — 출하 후 필드 피드백 관여 여부
-- [ ] GT-SS500 ISO 25119(농기계 기능안전) 적용 또는 검토 여부
-- [ ] GT-SS500 IQC/OQC에서 Cpk 보고서 검토 또는 기준값 설정 경험 여부
-- [ ] Reliability 자격증 보유 여부 — CRE(ASQ) / CQE / Six Sigma Green·Black Belt 등
-- [ ] 학부 수업 중 신뢰성·확률·통계 관련 이수 과목 (이름·학점)
-- [ ] 사내 교육·세미나 수강 이력 (FMEA 교육, ISO 26262 교육 등)
-- [ ] 후배 지도·사내 강의 등 비공식 교육 활동
-- [ ] 협력사 감사 (Supplier Audit) 참여 또는 시험 표준 문서 작성 기여 여부
-- [ ] (옵션) 카메라·광학 관련 어떤 형태로든 닿은 경험 — 취미(사진/영상), 외주, 타 연구실 협업 등
+| # | 항목 | 결과 | 근거 / 어필 포인트 |
+|---|------|:----:|-------------------|
+| 1 | PCT 고장 메커니즘 | ✅ | bond-wire lift-off + **solder fatigue** 동시 관찰 (P-02 PCIM Asia 2022) |
+| 2 | RUL 방법론 | ✅ | 물리 모델 (Co-sim Ansys Maxwell+Simulink) + **SVM 분류** (상전류→고장모드). 딥러닝 미사용 |
+| 3 | APQP Phase 1 | ✅ | VOC·DesignGoals·**ReliabilityGoals(MTBF/B10/RAMS)**·ProductAssurancePlan·SpecialCharacteristics 5종 직접 작성 |
+| 4 | APQP Phase 5 | ✅ | **60건 이슈 DB(issues.csv) + Cascading 분석(61건)** + 양산 후 이슈 클로징 운영 |
+| 5 | ISO 25119 AgPL | ✅ | AgPL d (과충전 보호) 등급 판정 실시. 기능안전 이슈(#47 범퍼·#99 MR) 직접 분류 |
+| 6 | IQC Cpk 직접 산출 | ⚠️ | Cpk 목표 ≥ 1.33 직접 정의. IQC 기준값 13종 설정·16대 전수검수. Cpk 실측은 SPC 미착수(양산 후 예정) |
+| 7 | 자격증 | ❌ | 없음 (CRE/CQE/Green Belt 미취득) |
+| 8 | 학부 신뢰성·통계 과목 | ❓ | HIH_2에서 미발견. **사용자 직접 확인 필요** |
+| 9 | 사내 교육·세미나 | ✅ | 다이나모 세미나 발표 (2023-08-09, PDF+PPTX). VCU 소자 교육자료 작성. Fluvva 고객 매니저 교육 진행 |
+| 10 | 후배 지도·멘토링 | ⚠️ | 고객 매니저 교육(4/3), 고객 현장 교육 체크리스트 운영. 사내 후배 지도 직접 기록 없음 |
+| 11 | 협력사 감사 (Supplier Audit) | ✅ | **현대인버터솔루션(HIS) 현장 방문** — BMS FW 이슈 6건 현장 확인 (2026-03-03). 구동모터 16대 입고검수 |
+| 12 | 카메라·광학 경험 | ⚠️ | SS500 자율주행 카메라 케이블 이슈·EMI 간섭 분석 수준. 직접 신뢰성 시험 없음 |
+
+### 6.1 새로 발굴된 어필 포인트
+
+**APQP Full Cycle (Phase 1~5):**
+Phase 1 (계획·목표) → Phase 2 (DFMEA 5건) → Phase 3 (PFD·CP·IQC 13종) → Phase 4 (PPAP ROM확정, 16대 초도품) → Phase 5 (issues.csv 60건 Cascading 분석)
+→ 인터뷰에서 "I've run the complete APQP cycle from Phase 1 reliability goal-setting through Phase 5 field-issue feedback"
+
+**ISO 25119 AgPL 판정:**
+→ "I applied ISO 25119 AgPL risk assessment to SS500 safety functions — over-charge protection was rated AgPL d, the highest category for agricultural machinery functional safety."
+
+**협력사 감사:**
+→ "I led a supplier quality visit to our BMS vendor (Hyundai Inverter Solutions) with a structured checklist covering 6 open issues including FW version verification and SOC anomalies."
+
+**다이나모 세미나:**
+→ "I presented our in-house dynamometer torque-control system at an internal technical seminar (August 2023), covering nonlinearity characterization and calibration methodology."
 
 ---
 
