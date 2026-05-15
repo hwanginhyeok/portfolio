@@ -42,7 +42,7 @@ GT-SS500 APQP Phase 2~3 + DFMEA 5건 + IQC/OQC + NCR 27건의 양산 직전 검�
 | 개념 | 등급 | 직접 경험 한 줄 | 학습 시급도 |
 |------|------|----------------|:-----------:|
 | **Weibull 분포** | ○+ | 개념 숙지. β(형상), η(척도), MTTF 산출 공식 인지. 플롯 해석 연습 필요 | ★★ |
-| **Arrhenius 모델** | △+ | PCT(Power Cycling Test) 직접 수행 — IGBT bond-wire lift-off 고장 + 추가 고장 메커니즘 동시 관찰 (P-01 IEEE TIM 2024 데이터). Ea 값 기반 가속 인자 개념 연결 | ★★ |
+| **Arrhenius 모델** | △+ | IGBT PCT 참여 — bond-wire lift-off + **solder fatigue 동시 관찰** (P-02 PCIM Asia 2022). P-01 IEEE TIM 2024는 검출·위치식별 알고리즘 (PCT 자체 아님). Ea 기반 가속 인자 개념 연결 | ★★ |
 | **Eyring / 다중 스트레스 모델** | ○ | 다중 스트레스 동시 인가 개념 이해. PCT = 온도+전류 동시 스트레스 | ★ |
 | **Coffin-Manson 모델** | △? | PCT와의 관계 헷갈림. 명확화: PCT는 시험 프로토콜, Coffin-Manson은 그 ΔT로 수명 외삽하는 모델. 인터뷰 혼용 시 위험 | ★★ |
 | **Miner's Rule / Damage Summation** | △ | P-04 PV 폴리머 변동환경 수명 추정에 직접 사용 (Solar Energy 2024). 변동 스트레스 이력 → 누적 손상 합산 → 수명 외삽 직접 수행 | ★ |
@@ -72,7 +72,7 @@ GT-SS500 APQP Phase 2~3 + DFMEA 5건 + IQC/OQC + NCR 27건의 양산 직전 검�
 | 개념 | 등급 | 직접 경험 한 줄 | 학습 시급도 |
 |------|------|----------------|:-----------:|
 | **PHM (Prognostics & Health Management)** | ✓ | 산자부 과제 직접 수행 — 전동화 차량 구동 전기모터 상태진단 PHM SoC 개발 (2021~2022). C-01 PHM학회 우수포스터상 | — |
-| **RUL (Remaining Useful Life)** | ✓ | "많이 함". IPMSM 고장 진단에서 RUL 산출 수행. data-driven vs model-based 디테일 = Phase 2 확인 예정 | — |
+| **RUL (Remaining Useful Life)** | ✓ | **물리 모델 기반** (Co-simulation: Ansys Maxwell FEM + MATLAB/Simulink). **SVM 분류** 사용 — 상전류 데이터 → 고장 모드 분류 (P-03 PHM Asia 2023, T-01 학위논문). Physics-informed + classical ML 혼합. 딥러닝(LSTM/CNN)은 미사용. | — |
 | **Reliability Growth (Duane / AMSAA)** | ✗ | 미인지. 개발 단계 고장률 감소 추적 모델 | ★ |
 | **FRACAS** | ✗→실은△ | 표준 명칭 미인지. 단 NCR 트래킹 27건 운영 = FRACAS 폐루프(Failure→Reporting→Analysis→Corrective Action→System) 사실상 수행 | ★★★ |
 | **CI / Bayesian Reliability** | ✗ | 미인지 | ★ |

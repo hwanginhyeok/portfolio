@@ -120,7 +120,7 @@ Three years of industrial product development at GINT Corp.: led the GT-SS500 48
 - Dynamometer torque control · self-built fan / pump / bumper benches · CANoe · Vector VN1600 · SPICE · oscilloscope · NI DAQ (NI-9215)
 
 ### PHM & Signal Processing
-- **Government-funded PHM SoC development** (MOTIE, 2021–2022): multi-sensor fault diagnosis + remaining-useful-life estimation for IPMSM drivetrain
+- **Government-funded PHM SoC development** (MOTIE, 2021–2022): physics-based co-simulation (Ansys Maxwell FEM + MATLAB/Simulink) + **SVM fault classification** on phase-current signatures — demagnetization & winding-fault diagnosis for 120 kW IPMSM
 - Multi-sensor fusion (phase current · temperature · shaft displacement · vibration) · anomaly detection · field usage model → ALT stress-factor mapping
 
 ### Quality & PM Artifacts
