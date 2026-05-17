@@ -1,0 +1,37 @@
+{
+  "_note": "세션마다 수동 갱신. 마지막 갱신: 2026-05-17",
+  "phase_count": 4,
+  "phases": [
+    {
+      "id": 1,
+      "label": "댓글봇",
+      "desc": "AI 댓글 생성 + 이웃 답방 자동화",
+      "status": "운영 중"
+    },
+    {
+      "id": 2,
+      "label": "발행봇",
+      "desc": "스마트에디터 게시물 자동 발행",
+      "status": "운영 중"
+    },
+    {
+      "id": 3,
+      "label": "Telegram 제어",
+      "desc": "텔레그램 봇 + Supabase 제어 평면",
+      "status": "운영 중"
+    },
+    {
+      "id": 4,
+      "label": "Chrome 확장",
+      "desc": "Playwright → 확장 전환으로 IP 문제 해결",
+      "status": "운영 중"
+    }
+  ],
+  "tech_stack": ["Python", "FastAPI", "Supabase", "Next.js", "Chrome Extension", "Playwright", "Claude API", "Telegram Bot API"],
+  "infra": "Vercel (이관 중) + 로컬 systemd",
+  "subscription": {
+    "basic": "₩4,900/월",
+    "pro": "₩9,900/월"
+  },
+  "current_status": "4-Phase 완료. Vercel 이관 진행 중. Chrome 웹스토어 제출 준비."
+}
