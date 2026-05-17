@@ -1,28 +1,15 @@
-# 취업용 포트폴리오 태스크
+# 포트폴리오 태스크
 
-> Current: [CURRENT_TASK.md](CURRENT_TASK.md) | Prepared: [PREPARED_TASK.md](Finished: [FINISHED_TASK.md](FINISHED_TASK.md)
-> 4블록 워크플로우: [docs/blocks/README.md](docs/blocks/README.md)
+> Current: [CURRENT_TASK.md](CURRENT_TASK.md) | Prepared: [PREPARED_TASK.md](PREPARED_TASK.md) | Finished: [FINISHED_TASK.md](FINISHED_TASK.md)
 
 ## 요약
 
-- Current: 3개 (blocked: 2)
-- Prepared: 11개 (P1: 1, P2: 7, P3: 3)
-- Finished: 38개
+- Current: 5개 (1 blocked)
+- Prepared: 0개 (P0: **0** / P1: **0** / P2: 0 / P3: 0)
+- Finished: 37개
+- 마지막 동기화: 1778833079.9763086
 
-> **넘버링 (2026-04-24 개편)**: `B{블록}-{순번}`
-> - B1: 자료 인벤토리 (WHAT HAVE)
-> - B2: 활용 전략 (HOW TO USE)
-> - B3: 배치 (WHERE TO PUT)
-> - B4: 디자인 (HOW IT LOOKS)
-> - B5: 부가자료 (4블록 외)
->
-> **아카이브**: [TASK_ARCHIVE/](TASK_ARCHIVE/)
-> 최종 수정: 2026-05-12 (PM 자동화 - 집/노트북 병합)
-
-## 블록별 진행 상태
-
-| 블록 | 상태 | 산출물 | Current | Prepared |
-|------|:----:|--------|:-------:|:--------:|
+------------|:----:|--------|:-------:|:--------:|
 | B1 인벤토리 | 🟢 게이트 통과 | `docs/blocks/01-inventory/INVENTORY.md` + PAPERS.md | 1 | 8 |
 | B2 활용 전략 | 🟡 골격 작성 | `docs/blocks/02-usage/USAGE_STRATEGY.md` | 0 | 1 |
 | B3 배치 | 🟢 **완료** | `docs/blocks/03-layout/LAYOUT.md` §7 게이트 12/12 | 0 | 0 |
