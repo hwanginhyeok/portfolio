@@ -4,6 +4,8 @@
 
 | # | 태스크 | 완료일 | 비고 |
 |---|--------|--------|------|
+| B4-03 | 인성이 블로그 자동화 케이스 페이지 신설 (`cases/insung-blog/`) | 2026-05-17 | 4단계 구축기 + 철학(반복 노동 제거 → 아날로그 집중) + SS500과의 연결. `block_diagram.png` 시스템 다이어그램 삽입. AINative 카드에 링크 추가. 팩트체크 전항목 완료(Claude Haiku/Playwright/FastAPI/Chrome MV3/가격). 디자인 개선 6건 적용(AI slop 제거, 칩 UI, blockquote). |
+| B4-04 | 인성이↔포트폴리오 자동 동기화 워크플로우 | 2026-05-17 | 방향1: `sync-insung-stats.yml`(주간 cron) + `update_insung_stats.py`(Supabase 5테이블 카운트). 방향2: `deploy.yml`에 `repository_dispatch` trigger + 인성이프로젝트에 `trigger-portfolio-rebuild.yml`. 가이드 `docs/automation/insung-sync.md`. |
 | JD-A5 | Reliability 역량 정리 + Phase 2 인터뷰 완료 | 2026-05-15 | 12개 항목 전부 확인. APQP 1~5/AgPL/Supplier Audit/SVM/solder fatigue 등 발굴. `reliability_competency.md` Phase 2 완료. |
 | JD-X3 | xAI 지원서 제출 (사용자 직접) | 2026-05-15 | greenhouse 폼. 사용자 직접 제출 완료. |
 | JD-A6 | Apple 커버레터 작성 (`materials/cover_letter.md`) | 2026-05-04 | 4단락 완성. RBDO Lab·반도체 신뢰성·광학 갭 솔직 인정 구조. ~430 words. |

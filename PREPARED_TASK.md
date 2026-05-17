@@ -23,11 +23,13 @@
 |---|--------|:--------:|---------|------|
 | B2-01 | 타겟 회사·JD 분석 + 핵심 메시지 3~5개 확정 + 자산 매트릭스 + 컷 리스트 | P1 | 사용자 입력 | `USAGE_STRATEGY.md` 골격 완료. §1 타겟 회사 / §2 메시지 확정 사용자 입력 대기 |
 
-## B4 — 디자인 (1개)
+## B4 — 디자인 (3개)
 
 | # | 태스크 | 우선순위 | depends | 비고 |
 |---|--------|:--------:|---------|------|
 | B4-02 | `/impact` 페이지 구현 | P2 | B4-01 완료 후 | LAYOUT.md §2.4 명세. Hero 4카드 확장판 + LifecycleHeatmap + 메시지별 정량표. nav 미노출, 이력서/LinkedIn 공유용 URL |
+| B4-05 | 인성이 자동 동기화 — GitHub Secrets 등록 (사용자 직접) | P1 | — | 포트폴리오 리포: `INSUNG_SUPABASE_URL`, `INSUNG_SUPABASE_SERVICE_ROLE_KEY`. 인성이 리포: `PORTFOLIO_DISPATCH_TOKEN`(Fine-grained PAT). 가이드: `docs/automation/insung-sync.md`. 등록 후 Actions → Sync Insung Stats → Run workflow 1회 실행해 첫 동기화 검증. |
+| B4-06 | `live_metrics` 케이스 페이지 노출 (Supabase 첫 sync 후) | P2 | B4-05 | `cases/insung-blog/index.astro`에 `{stats.live_metrics && ...}` 블록 추가. 댓글 수/이웃 수/페르소나 수 카드 표시 + `last_synced` 푸터. `docs/automation/insung-sync.md` 하단 스니펫 참조. |
 
 ## JD 지원 — Apple (4개)
 
