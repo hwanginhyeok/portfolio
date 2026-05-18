@@ -1,10 +1,11 @@
 # 인터뷰 60초 답변 스크립트 — Cheat Sheet
 
-> 작성: 2026-05-04 | 갱신: 2026-05-04 v2 (fact-check pass — RESUME.md SSOT 직접 인용)
+> 작성: 2026-05-04 | 갱신: 2026-05-18 v3 (3-round expert review 반영 — Round 1 SME 지적 + Round 2 SHM 통합)
 > Apple Reliability Engineer 면접 준비
 > 목적: Day 1~7 핵심을 60초 영문 답변으로 압축한 최종 cheat sheet
 > 기준: 60~120 단어, 자연스러운 회화 톤, 경험 기반 구체성
 > fact-check 원칙: 본인이 직접 수행한 사실만 단언. 표준명 사후 매핑 제거.
+> v3 추가: §A "v3 리뷰 신규 답변 패턴" — Q1(ORT)·Q2(field usage model)·Q4(SVM 디테일)·Deep FA 정직 답변
 
 ---
 
@@ -27,12 +28,14 @@
 
 ## Script 2 — "Tell me about your semiconductor reliability experience"
 
-> "My most direct semiconductor reliability work is Power Cycling Testing on IGBT
-> modules — I personally ran the test cycles, monitoring Vce-sat to detect bond-wire
-> lift-off as the dominant failure mode. The aluminum bond wire fatigues and
-> delaminates from the chip pad under repeated ΔTj cycling.
-> That work was co-authored for publication in IEEE Transactions on Instrumentation
-> and Measurement, 2024 — I was the third author.
+> "My most direct semiconductor reliability work is on IGBT Power Cycling — I
+> co-authored a programmable online bond-wire fault detection and location method
+> using inverter output parameters, where Vce-sat monitoring detects the dominant
+> bond-wire lift-off failure mode. The aluminum bond wire fatigues and delaminates
+> from the chip pad under repeated ΔTj cycling.
+> The work was published in IEEE Transactions on Instrumentation and Measurement,
+> 2024 — I was the third author, contributing to the detection algorithm and the
+> experimental validation.
 > To extrapolate PCT cycle life to field conditions, the Coffin-Manson model
 > applies: field life scales with test ΔT over field ΔT, raised to the n-th power —
 > n is typically 5 to 7 for aluminum bond wires."
@@ -254,3 +257,95 @@
 | #3 DFMEA | Step 1–7, 5 DFMEAs, AP=H 5건, 잔여 위험 0 |
 | #4 APQP | 132-item BOM, 27 NCRs, 6팀, 초도 16 units 생산계획 |
 | #5 Damage Sum | Miner's Rule, Σ(ni/Ni), Solar Energy 2024 (4th author) |
+
+---
+
+## §A. v3 리뷰 신규 답변 패턴 (2026-05-18 추가)
+
+> 3라운드 전문가 리뷰(HM/PhD-SME/Recruiter+ATS → 통합 SHM)에서 발굴된 면접 취약 질문 + 정직 답변 패턴.
+> 모두 RESUME.md SSOT 직접 인용 — 추정·과장 금지.
+
+### Script A1 — "Tell me about ORT design and operation you've done"
+> ⚠️ 함정 질문. APQP Phase 2-3은 DVT/PVT이지 정형 ORT 아님. 정직 답변:
+
+> "My closest hands-on experience is DVT/PVT-equivalent work within APQP Phase 2–3 —
+> design validation, IQC/OQC criteria, and NCR closed-loop on the GT-SS500 program.
+> The sustaining stage of ORT, monitoring after volume ramp, I touched through
+> APQP Phase 5 — tracking field issues and running cascading-failure analysis on
+> alpha-prototype data. Formal ORT protocol design — defining the test plan,
+> sample size, and pass criteria for ongoing monitoring after mass production —
+> is something I would build at Apple. I have the methodology foundation from
+> the RBDO Lab; the protocol framework I would learn on the job."
+
+단어: 105 / ~60s
+
+### Script A2 — "How would you define a field product usage model?"
+> ⚠️ JD R-2 원문 직접 매칭. P-04 Damage Summation은 4저자 위치 — "직접 정의" 주장 금지.
+
+> "I'm familiar with the methodology — co-authored a Solar Energy 2024 paper applying
+> damage summation under continuously varying environments to PV polymer lifetime.
+> Miner's Rule with D = Σ(ni/Ni) accumulates damage from variable stress profiles.
+> For consumer products, a field usage model would map duty cycle — charge cycles,
+> drop frequency, temperature excursions per day — into ALT stress factors with
+> acceleration models like Coffin-Manson for thermal cycling or Peck's for THB.
+> Apple's specific framework for defining usage profile inputs — that's what I'd
+> expect to learn on the team."
+
+단어: 95 / ~55s
+
+### Script A3 — "Walk me through the SVM you built in PHM SoC"
+> ⚠️ Q4 지뢰. SVM은 팀 산출물, 본인 기여는 co-simulation. 정직 답변 (resume_en.md v6 정합):
+
+> "I want to be precise about the team boundary. The team built an SVM fault classifier
+> on phase-current signatures for demagnetization and winding-fault diagnosis of a
+> 120 kW IPMSM. My contribution was the physics-based co-simulation — the Ansys
+> Maxwell FEM coupled with a MATLAB/Simulink inverter model — that generated the
+> labeled training data, plus the motor and fault models underneath it. The
+> classifier itself was developed by my colleagues. I can discuss the physics
+> side in depth — the kernel selection and hyperparameter tuning belong to the
+> teammates who built that layer."
+
+단어: 105 / ~60s
+
+### Script A4 — "What deep FA methodology have you used?"
+> resume v6 정합. Fishbone 명시 (사용자 결정 2026-05-18).
+
+> "Fishbone — Ishikawa cause-and-effect — across all four root-cause analyses on
+> GT-SS500. The MCB carbonization case for instance: I structured causes under
+> man-machine-material-method, isolated the electrolytic-corrosion mechanism on
+> the 48 V contact under high humidity, and the corrective action was a breaker
+> spec change to IEC 60947-2-grade with re-qualification testing. The Fishbone
+> framing helped surface that the issue was material-environment coupling, not
+> a control or operator issue. All four RCAs closed before production ramp,
+> with corrective actions mapped back into DFMEA."
+
+단어: 95 / ~55s
+
+### Script A5 — "JESD47 / AEC-Q100 — have you applied these directly?"
+> 정직 갭 인정. 학습 의지 + 브리지.
+
+> "Directly — no. My PCT work on IGBT modules used the conceptual stress framework
+> these JEDEC standards formalize, but the formal qualification protocol was not
+> the explicit reference document. I'm working through JESD47 categories — HTOL,
+> THB, TC, Power Cycling, ESD HBM/CDM, EM — as part of my interview preparation,
+> mapping each to failure mechanisms I've encountered. AEC-Q100 follows similar
+> structure with automotive temperature grades. For Apple Reliability work the
+> learning curve here is something I'd close in the first months."
+
+단어: 100 / ~58s
+
+---
+
+## §B. 면접 사전 준비 우선순위 (v3 발견 기반)
+
+| 우선순위 | 항목 | 1주 가능? |
+|:--:|------|:--:|
+| ★★★ | Script A3 SVM 정직 답변 암기 | ✅ |
+| ★★★ | Script A1 ORT vs DVT/PVT 구분 답변 | ✅ |
+| ★★★ | MCB #204 Fishbone 5분 즉석 재연 (Script A4 확장) | ✅ |
+| ★★ | JESD47 7종 + Coffin-Manson 계산 1건 | ✅ |
+| ★★ | Weibull β·η → B10 즉답 | ✅ |
+| ★ | camera_vcm_reliability.md 내재화 | ✅ |
+| 구조적 | camera/VCM/lens 직접 경험 | ❌ 불가능 |
+| 구조적 | CRE 자격증 | ❌ 일정상 불가 |
+| 구조적 | TOEIC 점수 갱신 | ❌ 1주 내 불가 |

@@ -72,7 +72,7 @@ GT-SS500 APQP Phase 2~3 + DFMEA 5건 + IQC/OQC + NCR 27건의 양산 직전 검�
 | 개념 | 등급 | 직접 경험 한 줄 | 학습 시급도 |
 |------|------|----------------|:-----------:|
 | **PHM (Prognostics & Health Management)** | ✓ | 산자부 과제 직접 수행 — 전동화 차량 구동 전기모터 상태진단 PHM SoC 개발 (2021~2022). C-01 PHM학회 우수포스터상 | — |
-| **RUL (Remaining Useful Life)** | ✓ | **물리 모델 기반** (Co-simulation: Ansys Maxwell FEM + MATLAB/Simulink). **SVM 분류** 사용 — 상전류 데이터 → 고장 모드 분류 (P-03 PHM Asia 2023, T-01 학위논문). Physics-informed + classical ML 혼합. 딥러닝(LSTM/CNN)은 미사용. | — |
+| **RUL (Remaining Useful Life)** | △ | **본인 기여**: 물리 모델 기반 Co-simulation (Ansys Maxwell FEM + MATLAB/Simulink) — 고장 모델링 + 학습 데이터 생성 (T-01 학위논문, P-03 PHM Asia 2023). **팀 산출물**: SVM 분류기 (상전류 → 고장 모드). Physics-informed + classical ML 혼합. 딥러닝(LSTM/CNN)은 미사용. **면접 시 SVM 디테일 질문은 팀 기여로 정직 답변.** | — |
 | **Reliability Growth (Duane / AMSAA)** | ✗ | 미인지. 개발 단계 고장률 감소 추적 모델 | ★ |
 | **FRACAS** | ✗→실은△ | 표준 명칭 미인지. 단 NCR 트래킹 27건 운영 = FRACAS 폐루프(Failure→Reporting→Analysis→Corrective Action→System) 사실상 수행 | ★★★ |
 | **CI / Bayesian Reliability** | ✗ | 미인지 | ★ |
@@ -192,9 +192,9 @@ GT-SS500 APQP Phase 2~3 + DFMEA 5건 + IQC/OQC + NCR 27건의 양산 직전 검�
 | # | 항목 | 결과 | 근거 / 어필 포인트 |
 |---|------|:----:|-------------------|
 | 1 | PCT 고장 메커니즘 | ✅ | bond-wire lift-off + **solder fatigue** 동시 관찰 (P-02 PCIM Asia 2022) |
-| 2 | RUL 방법론 | ✅ | 물리 모델 (Co-sim Ansys Maxwell+Simulink) + **SVM 분류** (상전류→고장모드). 딥러닝 미사용 |
+| 2 | RUL 방법론 | △ | 본인 기여: 물리 모델 (Co-sim Ansys Maxwell+Simulink) + 학습 데이터 생성. 팀 산출물: SVM 분류기 (상전류→고장모드). 딥러닝 미사용 |
 | 3 | APQP Phase 1 | ✅ | VOC·DesignGoals·**ReliabilityGoals(MTBF/B10/RAMS)**·ProductAssurancePlan·SpecialCharacteristics 5종 직접 작성 |
-| 4 | APQP Phase 5 | ✅ | **60건 이슈 DB(issues.csv) + Cascading 분석(61건)** + 양산 후 이슈 클로징 운영 |
+| 4 | APQP Phase 5 | ✅ | **이슈 DB 트래킹 (RESUME 기준 37+, alpha-prototype 전체 DB 60+)** + Cascading 분석(61건) + 양산 후 이슈 클로징 운영. resume_en.md는 SSOT(§5.1) 정합으로 37+ 표기 |
 | 5 | ISO 25119 AgPL | ✅ | AgPL d (과충전 보호) 등급 판정 실시. 기능안전 이슈(#47 범퍼·#99 MR) 직접 분류 |
 | 6 | IQC Cpk 직접 산출 | ⚠️ | Cpk 목표 ≥ 1.33 직접 정의. IQC 기준값 13종 설정·16대 전수검수. Cpk 실측은 SPC 미착수(양산 후 예정) |
 | 7 | 자격증 | ❌ | 없음 (CRE/CQE/Green Belt 미취득) |
