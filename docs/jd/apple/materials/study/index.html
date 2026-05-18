@@ -83,13 +83,15 @@ html{scroll-behavior:smooth}
   <a href="#d5">D5 · Bayesian + Cpk/Ppk</a>
   <a href="#d6">D6 · Camera/VCM 통합</a>
   <a href="#d7">D7 · STAR 영문 답변 5종</a>
+  <a href="#d8">D8 · v3 리뷰 함정 질문 ★</a>
   <div class="divider"></div>
   <a href="#quick">빠른 암기 카드</a>
+  <a href="#prep">면접 사전 우선순위</a>
 </nav>
 
 <main>
-<h1><span>Apple Reliability</span> 자가학습 D1~D7</h1>
-<p class="subtitle">작성: 2026-05-05 | 자가학습 전용 — 외부 제출 인용 금지 | figure = SVG 직접 제작 + Wikipedia Commons</p>
+<h1><span>Apple Reliability</span> 자가학습 D1~D8</h1>
+<p class="subtitle">작성: 2026-05-05 | 갱신: 2026-05-18 (D8 추가 — 3라운드 전문가 리뷰 발견) | 자가학습 전용 — 외부 제출 인용 금지</p>
 
 <!-- ===== D1 ===== -->
 <section id="d1">
@@ -640,6 +642,154 @@ B10 = 500,000 × (-ln 0.9)^(1/2.5)
   <div class="q">외울 1단락:</div>
   "I discretized the field stress history into bins — each a temperature-humidity combination with a measured duration. For each bin I computed N_i from the single-stress model, then accumulated the damage fraction n_i/N_i. When the sum reached 1.0, predicted end-of-life. The damage summation model aligned much more closely with field observations than worst-case constant-stress predictions. Published in Solar Energy, Elsevier, 2024. Directly applicable to smartphone camera modules exposed to daily temperature and humidity cycles."
 </div>
+</section>
+
+<!-- ===== D8 ===== -->
+<section id="d8">
+<h1><span>D8</span> · v3 리뷰 함정 질문 5종 ★ (2026-05-18 추가)</h1>
+
+<div class="card card-accent">
+  <strong>배경</strong>: 3라운드 전문가 리뷰(Apple HM · PhD SME · Recruiter/ATS → 통합 Senior HM)에서 발굴된 면접 취약 질문 5개. 모두 RESUME.md SSOT 직접 인용 — 추정·과장 금지. <strong>이 5개를 막지 못하면 1차 면접에서 무너진다.</strong>
+</div>
+
+<div class="chips">
+  <span class="chip accent">A1 ORT 함정</span>
+  <span class="chip accent">A2 field usage model</span>
+  <span class="chip accent">A3 SVM 지뢰 ★최우선</span>
+  <span class="chip accent">A4 Fishbone</span>
+  <span class="chip accent">A5 JESD47 갭</span>
+</div>
+
+<h2>A1 · "Tell me about ORT design and operation you've done"</h2>
+<div class="card card-yellow">
+  <strong>⚠️ 함정 질문</strong>: APQP Phase 2-3은 DVT/PVT이지 정형 ORT(Ongoing Reliability Testing, 양산 후 지속 모니터링)가 아님. "I led ORT"라고 답하면 첫 번째 후속 질문에 무너진다.
+</div>
+
+<table>
+  <tr><th>구분</th><th>황인혁 실제 경험</th></tr>
+  <tr><td>Development DVT/PVT-equivalent</td><td>APQP Phase 2-3 primary, 시험체계 4종 자가 구축</td></tr>
+  <tr><td>Sustaining (양산 후)</td><td>APQP Phase 5 supporting — 37+ field issue DB, cascading-failure analysis</td></tr>
+  <tr><td>정형 ORT 프로토콜 설계</td><td>경험 없음 — 학습 의지로 답변</td></tr>
+</table>
+
+<div class="answer-box">
+  <div class="q">A1 영문 답변 (~60s, 105 words):</div>
+  "My closest hands-on experience is DVT/PVT-equivalent work within APQP Phase 2–3 — design validation, IQC/OQC criteria, and NCR closed-loop on the GT-SS500 program. The sustaining stage of ORT, monitoring after volume ramp, I touched through APQP Phase 5 — tracking field issues and running cascading-failure analysis on alpha-prototype data. Formal ORT protocol design — defining the test plan, sample size, and pass criteria for ongoing monitoring after mass production — is something I would build at Apple. I have the methodology foundation from the RBDO Lab; the protocol framework I would learn on the job."
+</div>
+
+<h2>A2 · "How would you define a field product usage model?"</h2>
+<div class="card card-yellow">
+  <strong>⚠️ 4저자 함정</strong>: P-04 Solar Energy 2024 Damage Summation은 4저자 위치. "I defined the usage model"이라고 주장하면 면접관이 "구체적 기여는?"으로 파고든다. <strong>"방법론 친숙도"로 프레이밍.</strong>
+</div>
+
+<pre><code>Field usage model 구성 요소:
+1. Duty cycle matrix         (충방전·진동·열사이클 빈도)
+2. Mission profile           (실사용 환경 스펙트럼)
+3. Stress factor mapping     (사용 → ALT 가속인자)
+4. Acceleration model        (Coffin-Manson, Peck's, Arrhenius)
+
+Miner's Rule: D = Σ(n_i / N_i) → 1 = end-of-life
+P-04 적용: 변동 환경 → 폴리머 누적 손상 (PV module)</code></pre>
+
+<div class="answer-box">
+  <div class="q">A2 영문 답변 (~55s, 95 words):</div>
+  "I'm familiar with the methodology — co-authored a Solar Energy 2024 paper applying damage summation under continuously varying environments to PV polymer lifetime. Miner's Rule with D = Σ(ni/Ni) accumulates damage from variable stress profiles. For consumer products, a field usage model would map duty cycle — charge cycles, drop frequency, temperature excursions per day — into ALT stress factors with acceleration models like Coffin-Manson for thermal cycling or Peck's for THB. Apple's specific framework for defining usage profile inputs — that's what I'd expect to learn on the team."
+</div>
+
+<h2>A3 · "Walk me through the SVM you built in PHM SoC" ★최우선</h2>
+<div class="card card-accent">
+  <strong>🔴 Q4 지뢰 — 최우선 차단</strong>: RESUME §3.2에 SVM 직접 구현 명시 없음. 황인혁 역할은 모터 모델링 + Co-simulation + 학습 데이터 생성. SVM 알고리즘은 팀 산출물. 분리 답변 안 하면 kernel·feature 디테일 질문에서 즉시 무너진다.
+</div>
+
+<table>
+  <tr><th>레이어</th><th>담당</th><th>황인혁 답변 가능 깊이</th></tr>
+  <tr><td>SVM kernel / hyperparameter / feature selection</td><td>팀 (타 연구원)</td><td>개념 수준</td></tr>
+  <tr><td>Physics-based co-simulation (Ansys Maxwell + Simulink)</td><td><strong>황인혁</strong></td><td>심층</td></tr>
+  <tr><td>고장 모델링 (demagnetization, winding-fault)</td><td><strong>황인혁</strong></td><td>심층</td></tr>
+  <tr><td>학습 데이터 생성 (labeled training data)</td><td><strong>황인혁</strong></td><td>심층</td></tr>
+</table>
+
+<div class="answer-box">
+  <div class="q">A3 영문 답변 (~60s, 105 words):</div>
+  "I want to be precise about the team boundary. The team built an SVM fault classifier on phase-current signatures for demagnetization and winding-fault diagnosis of a 120 kW IPMSM. My contribution was the physics-based co-simulation — the Ansys Maxwell FEM coupled with a MATLAB/Simulink inverter model — that generated the labeled training data, plus the motor and fault models underneath it. The classifier itself was developed by my colleagues. I can discuss the physics side in depth — the kernel selection and hyperparameter tuning belong to the teammates who built that layer."
+</div>
+
+<details>
+  <summary>💡 왜 이 답이 강한가</summary>
+  <div class="content">
+  ① 정직성 시그널 (recruiter·HM이 가장 가산하는 항목) ② 본인 기여(co-simulation + 학습 데이터 생성)의 가치가 오히려 더 명확해짐 ③ kernel/feature 질문이 들어와도 "팀 영역"으로 자연스럽게 보냄 ④ 면접관이 "그럼 co-simulation 디테일은?" 으로 넘어오면 RESUME §3.2 기반 심층 답변 가능.
+  </div>
+</details>
+
+<h2>A4 · "What deep FA methodology have you used?"</h2>
+<div class="card card-green">
+  <strong>resume v6 정합</strong>: Fishbone (Ishikawa) cause-and-effect 명시 (사용자 결정 2026-05-18). RCA 4건 모두 4M(man-machine-material-method) 분류로 추적.
+</div>
+
+<div class="answer-box">
+  <div class="q">A4 영문 답변 (~55s, 95 words):</div>
+  "Fishbone — Ishikawa cause-and-effect — across all four root-cause analyses on GT-SS500. The MCB carbonization case for instance: I structured causes under man-machine-material-method, isolated the electrolytic-corrosion mechanism on the 48 V contact under high humidity, and the corrective action was a breaker spec change to IEC 60947-2-grade with re-qualification testing. The Fishbone framing helped surface that the issue was material-environment coupling, not a control or operator issue. All four RCAs closed before production ramp, with corrective actions mapped back into DFMEA."
+</div>
+
+<details>
+  <summary>MCB #204 Fishbone 4M 분해 (5분 즉석 재연용)</summary>
+  <div class="content">
+  <strong>Man</strong>: 정상 조작, 작업자 절차 위반 없음<br/>
+  <strong>Machine</strong>: MCB 48V·30A 사양 — 정격은 맞음<br/>
+  <strong>Material</strong>: ⚡ <span style="color:var(--accent)">접점 재질 + DC 전해 부식 메커니즘</span> (high humidity 환경)<br/>
+  <strong>Method</strong>: 시험 프로파일 정상, 사이클 200건 검증<br/>
+  → Material 카테고리 root cause 확정 → IEC 60947-2 등급 교체 → 재현 무재발
+  </div>
+</details>
+
+<h2>A5 · "JESD47 / AEC-Q100 — have you applied these directly?"</h2>
+<div class="card card-yellow">
+  <strong>⚠️ 표준 갭</strong>: RESUME에 JEDEC/AEC-Q 직접 적용 이력 없음. IGBT PCT가 JEDEC 개념과 유사하나 공식 reference document 아님. <strong>정직 갭 인정 + 학습 의지 + 브리지</strong>.
+</div>
+
+<div class="answer-box">
+  <div class="q">A5 영문 답변 (~58s, 100 words):</div>
+  "Directly — no. My PCT work on IGBT modules used the conceptual stress framework these JEDEC standards formalize, but the formal qualification protocol was not the explicit reference document. I'm working through JESD47 categories — HTOL, THB, TC, Power Cycling, ESD HBM/CDM, EM — as part of my interview preparation, mapping each to failure mechanisms I've encountered. AEC-Q100 follows similar structure with automotive temperature grades. For Apple Reliability work the learning curve here is something I'd close in the first months."
+</div>
+
+</section>
+
+<!-- ===== PREP ===== -->
+<section id="prep">
+<h1><span>면접 사전 준비</span> 우선순위 (v3 발견 기반)</h1>
+
+<div class="card card-green">
+  <strong>전략</strong>: 1주 보강 가능 항목 6개를 최대치로 끌어올린다. 구조적 불가 항목 3개는 솔직 인정으로 변환. 통합 SHM 추정 통과율: 서류 70-78% / 1차 면접 50-58% / 최종 25-32%.
+</div>
+
+<h2>1주 보강 가능 (액션 리스트)</h2>
+<table>
+  <tr><th>우선순위</th><th>항목</th><th>소요</th><th>상태</th></tr>
+  <tr><td>★★★</td><td>A3 SVM 정직 답변 암기 (Q4 지뢰 차단)</td><td>30분</td><td>resume v6 적용 완료</td></tr>
+  <tr><td>★★★</td><td>A1 ORT vs DVT/PVT 구분 답변</td><td>30분</td><td>resume v6 적용 완료</td></tr>
+  <tr><td>★★★</td><td>MCB #204 Fishbone 5분 즉석 재연 (A4 확장)</td><td>1시간</td><td>D8 카드 위 참조</td></tr>
+  <tr><td>★★</td><td>JESD47 7종 + Coffin-Manson 계산 1건</td><td>2시간</td><td>D2 참조</td></tr>
+  <tr><td>★★</td><td>Weibull β·η → B10 즉답</td><td>1시간</td><td>D1 참조</td></tr>
+  <tr><td>★</td><td>camera_vcm_reliability.md 내재화</td><td>2시간</td><td>D6 참조</td></tr>
+</table>
+
+<h2>구조적 불가 (솔직 인정으로 변환)</h2>
+<table>
+  <tr><th>항목</th><th>대응</th></tr>
+  <tr><td>camera/VCM/lens 직접 경험</td><td>광학 갭 솔직 인정 (Script 5 + cover letter Para 5)</td></tr>
+  <tr><td>CRE 자격증</td><td>"None currently — studying BoK" 답변하지 말 것 (HM 페르소나 권고: 강조 효과)</td></tr>
+  <tr><td>TOEIC 점수 갱신</td><td>"(expired)" 명시 + 영문 저널 3편 실증 (resume v6)</td></tr>
+</table>
+
+<h2>D-day 직전 체크리스트</h2>
+<table>
+  <tr><th>D-day</th><th>D8 액션</th></tr>
+  <tr><td>D-3</td><td>A3 (SVM) 영문 답변 녹음 — kernel 질문 차단 연습</td></tr>
+  <tr><td>D-2</td><td>A1 (ORT) + A2 (usage model) 연속 답변</td></tr>
+  <tr><td>D-1</td><td>A4 Fishbone + MCB #204 4M 분해 5분 즉석 재연</td></tr>
+  <tr><td>D-0</td><td>A5 JESD47 갭 답변만 1회 확인 (당황 방지)</td></tr>
+</table>
+
 </section>
 
 <!-- ===== QUICK ===== -->
