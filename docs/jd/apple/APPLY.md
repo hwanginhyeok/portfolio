@@ -3,6 +3,7 @@
 > 작성: 2026-05-04 | v2: 면접 준비 매핑 표 fact-check pass (2026-05-04)
 > 포지션: Reliability Engineer, Core Technology Operations, Korea
 > Job ID: **200656459-3631** (jobs.apple.com)
+> JD URL: https://jobs.apple.com/en-us/details/200656459-3631/reliability-engineer-core-technology-operations-korea?team=OPMFG
 
 ---
 
@@ -10,7 +11,7 @@
 
 **jobs.apple.com 직접 지원** — Wanted(356719)는 안내용. 실제 접수는 Apple 공식 포털.
 
-1. jobs.apple.com → 검색: "Reliability Engineer Korea" 또는 Job ID `200656459-3631`
+1. JD 페이지 직접 진입: https://jobs.apple.com/en-us/details/200656459-3631/reliability-engineer-core-technology-operations-korea?team=OPMFG
 2. Apple ID로 계정 생성 (없으면 신규)
 3. 영문 이력서 업로드 → Submit
 
