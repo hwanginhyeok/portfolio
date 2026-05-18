@@ -214,7 +214,7 @@ Phase 1 (계획·목표) → Phase 2 (DFMEA 5건) → Phase 3 (PFD·CP·IQC 13�
 → "I applied ISO 25119 AgPL risk assessment to SS500 safety functions — over-charge protection was rated AgPL d, the highest category for agricultural machinery functional safety."
 
 **협력사 감사:**
-→ "I led a supplier quality visit to our BMS vendor (Hyundai Inverter Solutions) with a structured checklist covering 6 open issues including FW version verification and SOC anomalies."
+→ "I led a supplier quality visit to our 48 V BMS supplier with a structured checklist covering 6 open issues including FW version verification and SOC anomalies."
 
 **다이나모 세미나:**
 → "I presented our in-house dynamometer torque-control system at an internal technical seminar (August 2023), covering nonlinearity characterization and calibration methodology."

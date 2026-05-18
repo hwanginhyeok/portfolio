@@ -19,7 +19,7 @@
 
 Mechanical-design M.S. from Konkuk University's Reliability-Based Design Optimization (RBDO) Lab, with thesis research on IPMSM digital-twin fault diagnosis (Co-simulation of Ansys Maxwell FEM and a MATLAB/Simulink inverter model). Three peer-reviewed journal publications as co-author (IEEE Transactions on Instrumentation and Measurement · Solar Energy · Journal of Power Electronics, all 2024) and two Korean patents.
 
-Three years of industrial product development at GINT Corp.: led the GT-SS500 48 V autonomous speed sprayer through APQP Phase 2–3 (primary) with Phase 1/4/5 supporting scope across the full program lifecycle; authored DFMEA #201/#210 Step 1–7 with five high-priority risks closed before ramp; applied ISO 25119 AgPL d assessment to safety functions; closed four root-cause analyses on real field issues; tracked 27 NCRs through closure; coordinated a structured BMS vendor quality review; and built four custom test rigs in-house (dynamometer, fan bench, pump bench, bumper safety rig).
+Three years of industrial product development at GINT Corp., leading the GT-SS500 48 V autonomous speed sprayer through APQP Phase 2–3 (primary) with Phase 1/4/5 supporting scope across the full program lifecycle. Authored DFMEA #201/#210 Step 1–7 with five high-priority risks closed before ramp, applied ISO 25119 AgPL d assessment to safety functions, closed four root-cause analyses on real field issues, and tracked 27 NCRs through closure. Built four custom test rigs in-house (dynamometer, fan bench, pump bench, bumper safety rig) and coordinated a structured 48 V BMS supplier quality review.
 
 ---
 
@@ -38,12 +38,12 @@ Three years of industrial product development at GINT Corp.: led the GT-SS500 48
   - **Pump O-ring freeze failure**: O-ring redesigned and re-qualified for low-temperature operation
   - **Ground-bounce noise on the control bus**: countermeasure mapped back into the DFMEA
 - Operated **27 NCRs** through to closure as a closed-loop corrective action process (Failure → Reporting → Analysis → Corrective Action → System update); defined IQC/OQC acceptance criteria with **Cpk ≥ 1.33 targets** for key characteristics
-- Managed a structured quality review when BMS vendor (Hyundai Inverter Solutions) visited our facility — 6-item agenda covering FW version verification, SOC anomaly root-cause, and relay-behavior confirmation
+- Managed a structured quality review when our 48 V BMS supplier visited our facility — 6-item agenda covering FW version verification, SOC anomaly root-cause, and relay-behavior confirmation
 - Currently mentoring a **junior engineer** in embedded control-system design — CAN protocol architecture, state-machine safety design, and DFMEA methodology
 - Built **four custom test rigs** in-house: **dynamometer torque control (nonlinearity 0.008%)**, **fan bench (airflow 7.9 → 12.4 m/s, +57%)**, **pump bench** (three-sample linearity characterization, nameplate-spec falsification), **bumper safety rig** (stop distance 0.082 m, peak current 308 A, settling time 467 ms at 3 km/h)
 - Designed a **5-node CAN distributed-control architecture** (VCU ↔ dual drive MC ↔ fan ESC ↔ pump DRV ↔ BMS); authored four DBC files; detected four breaking changes before integration through a three-pass consistency protocol
 - **BOM management** across 132 items; 23 items with insufficient stock surfaced ahead of ramp
-- Tracked **37+ field issues**, personally resolving 14 in the electrical-control scope; represented program at Innovation-Product on-site audit (4 of 9 items handled)
+- Personally resolved **14 field issues** in the electrical-control scope (subset of the Phase 5 database above); represented program at Innovation-Product on-site audit (4 of 9 items handled)
 
 ---
 
@@ -137,7 +137,7 @@ Three years of industrial product development at GINT Corp.: led the GT-SS500 48
 ### Languages
 - Korean: native
 - English: professional working proficiency
-- TOEIC 920 / TOEIC Speaking Lv. 6 (IH 140) — re-test scheduled
+- TOEIC 920 / TOEIC Speaking Lv. 6 (IH 140)
 
 ---
 
@@ -147,4 +147,7 @@ Three years of industrial product development at GINT Corp.: led the GT-SS500 48
 |------|-------|--------------|
 | 2022 | **Best Paper Award** (Spring Conference) — Predictive maintenance for EV drivetrain | Korean Society for Reliability (KSR) |
 | 2021 | **Best Poster Award** — IGBT open-fault diagnosis via system-level measurements | Korean PHM Society |
-| Internal | Internal seminar presentation — EOP 400 W dynamometer torque-control system (nonlinearity 0.008 %) | GINT Corp. |
+
+## INTERNAL PRESENTATIONS
+
+- EOP 400 W dynamometer torque-control system (nonlinearity 0.008 %) — GINT Corp. internal seminar

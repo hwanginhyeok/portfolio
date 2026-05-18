@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Inhyeok Hwang — Resume (Apple Reliability Engineer)</title>
+<style>
+@page { size: Letter; margin: 0.6in 0.7in; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: "Helvetica Neue", "Arial", "Noto Sans KR", sans-serif;
+  font-size: 10.2pt;
+  line-height: 1.38;
+  color: #111;
+  max-width: 7.4in;
+  margin: 0 auto;
+  padding: 0.4in 0.2in;
+}
+h1 {
+  font-size: 20pt;
+  margin: 0 0 4pt 0;
+  letter-spacing: 0.5px;
+  border-bottom: 1.5pt solid #111;
+  padding-bottom: 4pt;
+}
+h2 {
+  font-size: 11pt;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin: 14pt 0 4pt 0;
+  border-bottom: 0.5pt solid #888;
+  padding-bottom: 1pt;
+  color: #111;
+}
+h3 {
+  font-size: 10.8pt;
+  margin: 10pt 0 2pt 0;
+  color: #222;
+}
+h4 {
+  font-size: 10.2pt;
+  margin: 6pt 0 2pt 0;
+  font-weight: 700;
+}
+p { margin: 3pt 0; }
+ul { margin: 3pt 0 6pt 0; padding-left: 18pt; }
+li { margin: 1.5pt 0; }
+strong { color: #000; }
+em { color: #444; }
+table { width: 100%; border-collapse: collapse; margin: 4pt 0 8pt 0; font-size: 9.6pt; }
+th, td { border: 0.4pt solid #bbb; padding: 3pt 5pt; text-align: left; vertical-align: top; }
+th { background: #f3f3f3; }
+hr { border: 0; border-top: 0.5pt solid #ccc; margin: 8pt 0; }
+.contact { font-size: 10pt; color: #333; margin-bottom: 6pt; }
+.subtitle { font-size: 11pt; color: #444; margin: 0 0 4pt 0; font-weight: 600; }
+blockquote { display: none; }
+/* Tighten first item after heading */
+h2 + p, h3 + p { margin-top: 2pt; }
+</style>
+</head>
+<body>
+<h1>Resume — Inhyeok Hwang</h1>
+
+
+<hr/>
+
+<h2>INHYEOK HWANG</h2>
+
+<p><strong>Senior Researcher</strong> · Electrical Control & Product Development (Junior PM, concurrent)</p>
+<p><strong>Email</strong>: dlsgur5560@gmail.com</p>
+<p><strong>GitHub</strong>: github.com/hwanginhyeok</p>
+<p><strong>Portfolio</strong>: hwanginhyeok.github.io/portfolio</p>
+
+<hr/>
+
+<h2>SUMMARY</h2>
+
+<p>Mechanical-design M.S. from Konkuk University's Reliability-Based Design Optimization (RBDO) Lab, with thesis research on IPMSM digital-twin fault diagnosis (Co-simulation of Ansys Maxwell FEM and a MATLAB/Simulink inverter model). Three peer-reviewed journal publications as co-author (IEEE Transactions on Instrumentation and Measurement · Solar Energy · Journal of Power Electronics, all 2024) and two Korean patents.</p>
+
+<p>Three years of industrial product development at GINT Corp., leading the GT-SS500 48 V autonomous speed sprayer through APQP Phase 2–3 (primary) with Phase 1/4/5 supporting scope across the full program lifecycle. Authored DFMEA #201/#210 Step 1–7 with five high-priority risks closed before ramp, applied ISO 25119 AgPL d assessment to safety functions, closed four root-cause analyses on real field issues, and tracked 27 NCRs through closure. Built four custom test rigs in-house (dynamometer, fan bench, pump bench, bumper safety rig) and coordinated a structured 48 V BMS supplier quality review.</p>
+
+<hr/>
+
+<h2>EXPERIENCE</h2>
+
+<h3>GINT Corp. — Electrical Control R&D + Product Development (Junior PM, concurrent)</h3>
+<p><strong>Senior Researcher</strong> · Jan 2025 – Present</p>
+
+<p><strong>GT-SS500: 48 V Electric Autonomous Speed Sprayer — Full Lifecycle</strong></p>
+<ul>
+<li>Led <strong>APQP Phase 2–3</strong> (primary scope: design validation, DFMEA, IQC/OQC criteria, NCR closed-loop) for GT-SS500, coordinating six cross-functional teams from algorithm development to a first-article production plan of <strong>16 units + 2 transport carts + 2 spares</strong></li>
+<li>Supporting scope across the full program lifecycle: <strong>Phase 1</strong> (MTBF/B10 reliability goals, VOC, special-characteristics identification), <strong>Phase 4</strong> (PPAP ROM sign-off), <strong>Phase 5</strong> (60+ field-issue database; cascading-failure analysis identified six failure chains across alpha-prototype issues)</li>
+<li>Authored <strong>DFMEA #201 and #210 (Step 1–7)</strong> and applied <strong>ISO 25119 AgPL</strong> risk assessment — over-charge protection rated <strong>AgPL d</strong> (highest category for agricultural machinery functional safety); five high-priority (AP=H) risks resolved before production ramp</li>
+<li>Closed <strong>four root-cause analyses</strong> on real field issues:</li>
+<li><strong>MCB contact carbonization (#204)</strong>: confirmed electrolytic corrosion mechanism; breaker replaced with IEC 60947-2-grade part and re-qualified</li>
+<li><strong>LCD-mode state-machine bug (#79)</strong>: undefined transitions removed; verified through validation runs</li>
+<li><strong>Pump O-ring freeze failure</strong>: O-ring redesigned and re-qualified for low-temperature operation</li>
+<li><strong>Ground-bounce noise on the control bus</strong>: countermeasure mapped back into the DFMEA</li>
+<li>Operated <strong>27 NCRs</strong> through to closure as a closed-loop corrective action process (Failure → Reporting → Analysis → Corrective Action → System update); defined IQC/OQC acceptance criteria with <strong>Cpk ≥ 1.33 targets</strong> for key characteristics</li>
+<li>Managed a structured quality review when our 48 V BMS supplier visited our facility — 6-item agenda covering FW version verification, SOC anomaly root-cause, and relay-behavior confirmation</li>
+<li>Currently mentoring a <strong>junior engineer</strong> in embedded control-system design — CAN protocol architecture, state-machine safety design, and DFMEA methodology</li>
+<li>Built <strong>four custom test rigs</strong> in-house: <strong>dynamometer torque control (nonlinearity 0.008%)</strong>, <strong>fan bench (airflow 7.9 → 12.4 m/s, +57%)</strong>, <strong>pump bench</strong> (three-sample linearity characterization, nameplate-spec falsification), <strong>bumper safety rig</strong> (stop distance 0.082 m, peak current 308 A, settling time 467 ms at 3 km/h)</li>
+<li>Designed a <strong>5-node CAN distributed-control architecture</strong> (VCU ↔ dual drive MC ↔ fan ESC ↔ pump DRV ↔ BMS); authored four DBC files; detected four breaking changes before integration through a three-pass consistency protocol</li>
+<li><strong>BOM management</strong> across 132 items; 23 items with insufficient stock surfaced ahead of ramp</li>
+<li>Personally resolved <strong>14 field issues</strong> in the electrical-control scope (subset of the Phase 5 database above); represented program at Innovation-Product on-site audit (4 of 9 items handled)</li>
+</ul>
+
+<hr/>
+
+<h3>GINT Corp. — Electrical Control R&D</h3>
+<p><strong>Junior Researcher</strong> · Feb 2023 – Dec 2024</p>
+
+<p><strong>EOP 400 W: Automotive BLDC Motor Control (Government R&D Project, NXP MC9S12ZVMC)</strong></p>
+<ul>
+<li>Co-authored a programmable online bond-wire fault detection and location method for IGBT modules using inverter output parameters — published in <em>IEEE Transactions on Instrumentation and Measurement</em> (2024, third author, DOI 10.1109/TIM.2024.3472910)</li>
+<li><strong>SVPWM/DPWM switching strategy</strong>: FET temperature reduced 1–6 °C, input power reduced 1–3.8 % (validated across 2,932 data points)</li>
+<li><strong>Cryogenic start test</strong>: cold-start time reduced from 300 s to 100 s at −40 °C</li>
+<li><strong>CAN Sleep/Wakeup</strong>: quiescent-current-compliant bus management (five revision cycles)</li>
+<li>Built a <strong>dynamometer torque-control system</strong> with nonlinearity 0.008 %; presented at internal seminar</li>
+<li>Two Korean patent contributions (see Patents)</li>
+</ul>
+
+<hr/>
+
+<h2>EDUCATION</h2>
+
+<h3>Konkuk University — M.S. in Mechanical Design (RBDO Lab)</h3>
+<p><strong>Mar 2021 – Feb 2023</strong> · 27 major credits · Major GPA 3.77/4.5 · Advisor: Prof. Namsu Kim</p>
+
+<p><strong>Thesis</strong>: <em>Fault Diagnosis Simulation of Interior Permanent Magnet Synchronous Motor using Electromagnetic Analysis</em> (49 pp., RISS f678963f23f2e418ffe0bdc3ef48d419)</p>
+
+<ul>
+<li>Built an IPMSM digital twin: flux-state variable model + Ansys Maxwell FEM, co-simulated with a MATLAB/Simulink inverter model and validated against experimental data across multiple operating conditions</li>
+<li>Participated in a government-funded PHM SoC development project (MOTIE, 2021–2022); contributed to multi-sensor fault diagnosis and remaining-useful-life estimation work for the IPMSM drivetrain</li>
+<li>Observed an IPMSM accelerated-life-test program (eccentricity-fault characterization with load-factor stress and FTA-driven test design); the resulting work was later published as <em>Identification of failure modes in IPMSM under accelerated life test based on dual sensor architecture</em> (J. Power Electronics, 2024, sixth author)</li>
+</ul>
+
+<h3>Konkuk University — B.S. in Mechanical Design</h3>
+<p><strong>Mar 2015 – Feb 2021</strong> · 79 major credits · Major GPA 3.24/4.5</p>
+
+<hr/>
+
+<h2>PUBLICATIONS & PATENTS</h2>
+
+<h3>Peer-Reviewed Journals (3, co-authored)</h3>
+
+<table>
+<thead><tr><th>Year</th><th>Journal</th><th>Title</th><th>Author position</th></tr></thead>
+<tbody>
+<tr><td>2024</td><td><strong>IEEE Trans. on Instrumentation and Measurement</strong>, Vol. 73, Art. 10726721</td><td>Programmable Online Bond-Wire Fault Detection and Location Method for IGBT Using Inverter Output Parameters (DOI 10.1109/TIM.2024.3472910)</td><td>3rd author</td></tr>
+<tr><td>2024</td><td><strong>Solar Energy</strong> (Elsevier), Vol. 276, Art. 112645</td><td>Lifetime prediction of polymeric materials in PV module under continuously varying environments based on damage summation approach (DOI 10.1016/j.solener.2024.112645)</td><td>4th author</td></tr>
+<tr><td>2024</td><td><strong>Journal of Power Electronics</strong>, Vol. 24(5), pp. 822–831</td><td>Identification of failure modes in IPMSM under accelerated life test based on dual sensor architecture (DOI 10.1007/s43236-024-00810-8)</td><td>6th author</td></tr>
+</tbody></table>
+
+<h3>Conference Presentations (4)</h3>
+
+<table>
+<thead><tr><th>Year</th><th>Conference</th><th>Topic</th><th>Award</th></tr></thead>
+<tbody>
+<tr><td>2023</td><td>PHM Society Asia-Pacific Conference (DOI 10.36001/phmap.2023.v4i1.3780)</td><td>120 kW IPMSM system-level fault diagnosis</td><td>—</td></tr>
+<tr><td>2022</td><td>PCIM Asia</td><td>IGBT IPM power cycling — bond-wire / solder degradation</td><td>—</td></tr>
+<tr><td>2022</td><td>Korean Society for Reliability — Spring Conference</td><td>Predictive maintenance for EV drivetrain</td><td><strong>Best Paper Award</strong></td></tr>
+<tr><td>2021</td><td>Korean PHM Society Annual Conference</td><td>IGBT open-fault diagnosis via system-level measurements</td><td><strong>Best Poster Award</strong></td></tr>
+</tbody></table>
+
+<h3>Patents (2 — honest disclosure)</h3>
+
+<ul>
+<li><strong>Patent #1</strong> — Motor initial position detection (co-inventor) · KR App. PN231067KR (2023, filed via The Wave IP) · detection time 1.0 s → <strong>0.56 s</strong> · prior-art screen of 1 paper and 10 patents</li>
+<li><strong>Patent #2</strong> — <em>Method for preventing step-out of rotor of motor in low temperature and apparatus thereof</em> · KR App. <strong>10-2023-0175484</strong> (filed 2023-12-06) · Reg. <strong>10-2654562</strong> (granted 2024-04-01) · Applicant: GINT Inc. · IPC H02P 29/032 · <strong>Development contributor</strong> (experimental validation of −40 °C cold start, 300 s → 100 s; not on the inventor list — inventors of record: Je Jeong-mun, Kim Eun-tae)</li>
+</ul>
+
+<hr/>
+
+<h2>SKILLS</h2>
+
+<h3>Motor Control & Power Electronics</h3>
+<ul>
+<li>BLDC · IPMSM · PMSM control · FOC · SVPWM/DPWM switching · sensorless initial-position estimation · BEMF observer · cryogenic start</li>
+<li>Inverter gate-signal diagnosis · IGBT bond-wire lift-off detection (IEEE TIM 2024)</li>
+</ul>
+
+<h3>Embedded & Firmware</h3>
+<ul>
+<li>STM32 · NXP MC9S12ZVMC · Infineon TC23x · RTOS · multi-mode state machines (RC / LCD / autonomous) · motor-controller firmware code review</li>
+</ul>
+
+<h3>Communication & System Design</h3>
+<ul>
+<li>CAN · CAN-FD · CAN Sleep/Wakeup · DBC authoring (4 files) · CAN BusLoad analysis · 5-node distributed control topology</li>
+<li>Reading-level familiarity with ISO 13849 and functional-safety mapping</li>
+</ul>
+
+<h3>Simulation & Analysis</h3>
+<ul>
+<li>Ansys Maxwell (FEM, transient) · MATLAB/Simulink · Co-simulation (Sim2Real precursor) · MIL/SIL/HIL concepts</li>
+</ul>
+
+<h3>Test & Measurement</h3>
+<ul>
+<li>Dynamometer torque control · self-built fan / pump / bumper benches · CANoe · Vector VN1600 · SPICE · oscilloscope · NI DAQ (NI-9215)</li>
+</ul>
+
+<h3>PHM & Signal Processing</h3>
+<ul>
+<li><strong>Government-funded PHM SoC development</strong> (MOTIE, 2021–2022): physics-based co-simulation (Ansys Maxwell FEM + MATLAB/Simulink) + <strong>SVM fault classification</strong> on phase-current signatures — demagnetization & winding-fault diagnosis for 120 kW IPMSM</li>
+<li>Multi-sensor fusion (phase current · temperature · shaft displacement · vibration) · anomaly detection · field usage model → ALT stress-factor mapping</li>
+</ul>
+
+<h3>Quality & PM Artifacts</h3>
+<ul>
+<li>APQP Phase 2–3 (primary) + Phase 1/4/5 supporting · DFMEA / PFMEA · DRBFM · boundary diagram · BOM management · IQC/OQC inspection guides with <strong>Cpk ≥ 1.33 acceptance criteria</strong> · WBS · NCR closed-loop handling (FRACAS-equivalent)</li>
+</ul>
+
+<h3>Software & AI Workflow</h3>
+<ul>
+<li>Python · C/C++ · Git · Linux</li>
+<li>Three-tier LLM routing (Opus / GLM / Ollama) · Claude Code · MCP · Obsidian + Dataview</li>
+<li>PM-orchestrator workflow across 8 internal projects · 13-skill automation library (<code>hih-skills</code>) · cron-driven overnight execution</li>
+<li>Learning / applying: PyTorch · LangChain · Docker</li>
+</ul>
+
+<h3>Languages</h3>
+<ul>
+<li>Korean: native</li>
+<li>English: professional working proficiency</li>
+<li>TOEIC 920 / TOEIC Speaking Lv. 6 (IH 140)</li>
+</ul>
+
+<hr/>
+
+<h2>AWARDS</h2>
+
+<table>
+<thead><tr><th>Year</th><th>Award</th><th>Issuing Body</th></tr></thead>
+<tbody>
+<tr><td>2022</td><td><strong>Best Paper Award</strong> (Spring Conference) — Predictive maintenance for EV drivetrain</td><td>Korean Society for Reliability (KSR)</td></tr>
+<tr><td>2021</td><td><strong>Best Poster Award</strong> — IGBT open-fault diagnosis via system-level measurements</td><td>Korean PHM Society</td></tr>
+</tbody></table>
+
+<h2>INTERNAL PRESENTATIONS</h2>
+
+<ul>
+<li>EOP 400 W dynamometer torque-control system (nonlinearity 0.008 %) — GINT Corp. internal seminar</li>
+</ul>
+</body>
+</html>

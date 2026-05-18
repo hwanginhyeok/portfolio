@@ -4,9 +4,9 @@
 
 ## 요약
 
-- Current: 4개 (blocked: 2)
+- Current: 3개 (blocked: 2)
 - Prepared: 16개 (P1: 5, P2: 8, P3: 3)
-- Finished: 44개
+- Finished: 45개
 
 ------------|:----:|--------|:-------:|:--------:|
 | B1 인벤토리 | 🟢 게이트 통과 | `docs/blocks/01-inventory/INVENTORY.md` + PAPERS.md | 1 | 8 |
