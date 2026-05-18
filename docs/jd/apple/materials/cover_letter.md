@@ -1,7 +1,7 @@
 # Cover Letter — Inhyeok Hwang
 # Apple Korea · Reliability Engineer, Core Technology Operations (Job ID 200656459-3631)
 
-> Version: 2026-05-15 v3 (Para 2 압축 + P-01 수정 + Claude Code 제거 + Why Apple 추가 + 팩트 리스크 3개 수정)
+> Version: 2026-05-18 v4 (3-round expert review: SVM 주체 분리 + machine learning 키워드 명시 + LLM 자동화 흔적 정리)
 > Word count: ~460 words (body)
 
 ---
@@ -14,7 +14,7 @@ What distinguishes my profile is the bridge between that academic foundation and
 
 On the semiconductor side, I co-authored (third author) a programmable online bond-wire fault detection and location method for IGBT modules using inverter output parameters, published in IEEE Transactions on Instrumentation and Measurement (2024, DOI 10.1109/TIM.2024.3472910). My collaboration on identifying failure modes in IPMSM under accelerated life testing through a dual-sensor architecture appeared in the Journal of Power Electronics (2024, sixth author, DOI 10.1007/s43236-024-00810-8). Both projects relied on the same core practice — instrumenting multi-sensor signals to locate degradation modes before they manifest as failures — which is the practice I would bring to component-reliability work at Apple.
 
-A connected strength: I have direct experience applying machine learning to reliability problems. My thesis and the associated government-funded PHM SoC project (MOTIE, 2021–2022) combined physics-based simulation — a co-simulated digital twin of a 120 kW IPMSM using Ansys Maxwell FEM and MATLAB/Simulink — with SVM-based fault classification on phase-current signatures to diagnose demagnetization and winding-fault modes. The approach is physics-informed ML: use the physical model to understand failure modes, then train a classifier to track deviation from it in real sensor streams. That is the same methodology that applies to field usage modeling and prognostics at Apple's scale.
+A connected strength: I have direct experience contributing to a machine learning pipeline for reliability problems. My thesis and the associated government-funded PHM SoC project (MOTIE, 2021–2022) combined physics-based simulation — a co-simulated digital twin of a 120 kW IPMSM using Ansys Maxwell FEM and MATLAB/Simulink — with an SVM-based fault classifier on phase-current signatures to diagnose demagnetization and winding-fault modes. The team built the SVM classifier; my contribution was the co-simulation that generated the labeled training data and the underlying motor and fault models. The approach is physics-informed ML: use the physical model to understand failure modes, then train a classifier to track deviation from it in real sensor streams. That is the methodology I would bring to field-usage-model and prognostics work at Apple's scale.
 
 The optics domain is the real gap in my background, and I want to be direct about it. I have not worked on cameras, VCMs, or lens assemblies; what I bring is graduate research in reliability and three years of production-stage execution on different components, and the working assumption that the same methodology — DFMEA, root-cause analysis, ALT, multi-sensor signal processing, NCR close-out — is what carries between domains. Apple's Core Technology Operations team works at a scale and rigor of failure-analysis feedback loops that is unlike anything in my current industry. That is exactly where I want to work, and I would welcome the chance to discuss how my background fits.
 
