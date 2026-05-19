@@ -35,7 +35,7 @@
 
 | # | 태스크 | 우선순위 | depends | 비고 |
 |---|--------|:--------:|---------|------|
-| JD-A3 | Apple 지원서 최종 제출 (사용자 직접) | P1 | JD-A7, JD-A8 | jobs.apple.com Job ID 200656459-3631. resume v5.1 + cover letter v3 완성. **제출은 사용자 직접 수행** |
+| JD-A3 | Apple 지원서 최종 제출 (사용자 직접) | P1 | JD-A7 | jobs.apple.com Job ID 200656459-3631 (직링크: `docs/jd/apple/APPLY.md`). resume v6 + cover letter v4 + factcheck_match v2 + study/index.html D8 — 3라운드 전문가 리뷰(HM/PhD-SME/Recruiter+ATS → Senior HM) 반영 완료. PDF 변환만 남음(`pdf_draft/*.html` 브라우저 Ctrl+P). **제출은 사용자 직접 수행** |
 | JD-A7 | 학습자료 fact-check 정정 — 1차 자료(P-01·P-02·T-01) 수령 후 | P1 | 사용자 PDF 제공 | FACTCHECK_bondwire.md §6~9 참조. 정정 대상: D1 §3, D2, D6, reliability_competency Block2 Arrhenius, index.html |
 | JD-A9 | Apple 인터뷰 학습 Day 1~7 | P2 | — | reliability_competency.md §5.2 7일 코스. ★★★: Stress-Strength / JESD47 / FRACAS. STAR 영문 5종 준비. 추후 진행 예정 |
 

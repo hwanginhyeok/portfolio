@@ -1,65 +1,68 @@
-# Handoff — 2026-05-17
+# Handoff — 2026-05-19
 
-## 이번 세션 한 일
+## 작업 중이던 것
 
-1. **인성이 블로그 자동화 케이스 페이지 신설** (`cases/insung-blog/`)
-   - 4단계 구축기 + 철학(반복 노동 제거 → 아날로그 집중) + SS500과의 연결
-   - `block_diagram.png` 시스템 다이어그램 삽입
-   - AINative 카드에 링크 추가
-   - 디자인 개선 6건 (AI slop 제거, 칩 UI, blockquote 등)
-   - 팩트체크 전항목 통과 (Claude Haiku / Playwright / FastAPI / Chrome MV3 / 가격)
+**JD-A3 (Apple Reliability Engineer 지원서 최종 제출)** — 사용자 직접 수행 대기
+- 자료 v3 완성 (resume v6 + cover letter v4 + factcheck_match v2 + study/index.html D8)
+- PDF 변환만 남음: `docs/jd/apple/materials/pdf_draft/resume_en.html`, `cover_letter.html` → 브라우저 Ctrl+P
+- JD 직링크: https://jobs.apple.com/en-us/details/200656459-3631/reliability-engineer-core-technology-operations-korea?team=OPMFG
 
-2. **자동 동기화 시스템 (포트폴리오↔인성이)**
-   - 방향1: 주간 Supabase 동기화 (`sync-insung-stats.yml` + `update_insung_stats.py`)
-   - 방향2: 인성이 push → 포트폴리오 자동 재배포 (`repository_dispatch`)
-   - 가이드: `docs/automation/insung-sync.md`
+## 이번 세션 한 일 (커밋 5건)
 
-## 다음 세션 첫 액션 (사용자 직접 필요)
+1. **JD-A8 완료** (`9d48071`) — Apple 지원자료 1차 리뷰. 영문 이력서 5건 수정 (BMS 익명화 / TOEIC 재응시 표기 제거 / 60+/37+ 중복 해소 / Awards 분리 / SUMMARY 분할) + PDF 초안 HTML 생성
+2. **JD 직링크 SSOT 등록** (`3636792`) — `docs/jd/apple/APPLY.md`에 jobs.apple.com 직링크 명시
+3. **3라운드 전문가 리뷰 + v3 자료** (`6c4355b`) — resume v5→v6, CL v3→v4. factcheck_match v1/v2 생성. Round 1 (HM/SME/ATS 병렬) → Round 2 (Senior HM 통합) → Round 3 (사용자 결정 4건 적용)
+4. **학습 자료 v3 정합화** (`21c6f40`) — reliability_competency.md SVM 주체 분리, interview_60sec_scripts.md §A v3 답변 패턴 5종 + §B 우선순위 추가
+5. **study/index.html D8 신규 섹션** (`9e8e581`) — 함정 질문 5종(A1~A5) + D-day 체크리스트, nav 갱신
 
-**B4-05 — GitHub Secrets 등록** (필수, 자동 동기화 활성화 전제):
+## 컨텍스트 (사용자 결정)
 
-1. 포트폴리오 리포 (`hwanginhyeok/portfolio`) Secrets:
-   - `INSUNG_SUPABASE_URL`
-   - `INSUNG_SUPABASE_SERVICE_ROLE_KEY`
+- Deep FA 방법론: **Fishbone (Ishikawa)** (RCA 4건 4M 분류)
+- TOEIC 만료 표기: **"(expired)"** (재응시 언급 없이)
+- 구미 근무 의향: 이력서/CL 침묵, 면접 단계 명시
+- SSOT 불일치 3건: 전부 정직 정리 (60+→37+ / AIAG-VDA 미사용 / SVM 주체 분리)
 
-2. 인성이 리포 (`hwanginhyeok/insung_blog`) Secrets:
-   - `PORTFOLIO_DISPATCH_TOKEN` — Fine-grained PAT, 발급법은 `docs/automation/insung-sync.md` 참조
+## 통과 가능성 (Senior HM 페르소나 추정)
 
-3. 등록 후 검증:
-   - GitHub → 포트폴리오 → Actions → "Sync Insung Stats" → Run workflow
-   - 성공하면 `src/data/insung_stats.json` 에 `live_metrics` 섹션 자동 추가됨
+| 단계 | % |
+|------|:-:|
+| 서류 통과 | 70-78% |
+| 1차 면접 | 50-58% |
+| 최종 합격 | 25-32% |
 
-**B4-06 — live_metrics 케이스 페이지 노출** (B4-05 검증 후):
-- `cases/insung-blog/index.astro` 에 `{stats.live_metrics && ...}` 블록 추가
-- 댓글 수/이웃 수/페르소나 수 카드 + `last_synced` 푸터
-- 스니펫: `docs/automation/insung-sync.md` 하단
+**구조적 미해결 갭**: camera/VCM/lens 직접 경험 X (자가학습으로 보완)
 
-## 컨텍스트 (사용자 결정 사항)
+## 다음 세션 첫 액션
 
-- **자동화 프레임**: "풀스택 자동화 SaaS" 같은 기술 중심 표현 금지. "사람을 본질에 집중시키는 자동화" 톤 유지.
-- **인성이프로젝트 미션**: 네이버 블로그 체험단 생태계에 더 좋은 글이 나오도록 기여. 자기만족 + 경제 활동 둘 다.
-- **케이스 페이지 위치**: T-5 "엔지니어의 뿌리" 섹션의 AINative 카드 → 케이스 페이지 링크.
+1. **사용자가 PDF 변환** (`pdf_draft/*.html` → 브라우저 Ctrl+P, Letter, 헤더/푸터 끄기)
+2. **jobs.apple.com 직링크 제출** (Job ID 200656459-3631)
+3. **면접 사전 준비** (study/index.html §D8 + §면접 사전 우선순위):
+   - ★★★ A3 SVM 정직 답변 암기 (Q4 지뢰 차단 — 최우선)
+   - ★★★ A1 ORT vs DVT/PVT 구분 답변
+   - ★★★ MCB #204 Fishbone 4M 분해 5분 즉석 재연
+   - ★★ JESD47 7종 + Coffin-Manson 계산
+   - ★★ Weibull β·η → B10 즉답
+   - ★ camera_vcm_reliability.md 내재화
+4. (선택) JD-A7 fact-check — P-01·P-02·T-01 PDF 1차 자료 수령 후
 
-## 변경 파일 요약
+## 참고 자료 위치
 
-**포트폴리오:**
-- `src/pages/cases/insung-blog/index.astro` (신규)
-- `src/data/insung_stats.json` (신규)
-- `src/components/AINative.astro` (수정)
-- `public/images/cases/insung-blog/block_diagram.png` (신규)
-- `scripts/update_insung_stats.py` (신규)
-- `.github/workflows/sync-insung-stats.yml` (신규)
-- `.github/workflows/deploy.yml` (수정: dispatch trigger 추가)
-- `docs/automation/insung-sync.md` (신규)
+| 자료 | 경로 |
+|------|------|
+| 매트릭스 SSOT | `docs/jd/apple/materials/factcheck_match_v2.md` |
+| 영문 이력서 v6 | `docs/jd/apple/materials/resume_en.md` |
+| 커버레터 v4 | `docs/jd/apple/materials/cover_letter.md` |
+| 면접 60초 스크립트 | `docs/jd/apple/materials/interview_60sec_scripts.md` (§A v3 5종) |
+| 학습 HTML | `docs/jd/apple/materials/study/index.html` (D1~D8 + 면접 사전 우선순위) |
+| PDF 초안 | `docs/jd/apple/materials/pdf_draft/` |
+| 지원 가이드 | `docs/jd/apple/APPLY.md` (JD 직링크 + 절차) |
 
-**인성이프로젝트:**
-- `.github/workflows/trigger-portfolio-rebuild.yml` (신규)
+## 메모리 갱신
+
+- `project_portfolio_apple.md` — v3 완성 상태 반영, 3라운드 리뷰 핵심 발견 + 면접 준비 키 5건 명시
+- `feedback_factcheck_submission_sync.md` (신규) — 팩트체크 매트릭스 ≠ 제출본 동기화 필수 패턴
+- `MEMORY.md` 인덱스 갱신 (2건)
 
 ## 잔여 이슈
 
-- 인성이프로젝트 루트에 untracked 2건 (`apps/web/data/`, `docs/프로젝트/_portfolio_assets.md`) — 이번 세션 무관. 다음 세션에서 정체 확인 필요.
-
-## 메모리 추가
-
-- `feedback_automation_philosophy.md` — 자동화 프레임 톤
-- `reference_portfolio_insung_sync.md` — 동기화 시스템 레퍼런스
+CURRENT 3건 그대로 유지 (B1-01 인벤토리 / 4-5 SVPWM 노트북 블록 / 4-7 범퍼 사진 블록). 둘 다 환경 제약으로 PC/노트북 작업 필요.
