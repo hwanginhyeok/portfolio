@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "default_context_files": [
+    "AGENTS.md",
+    "HANDOFF.md",
+    "DECISIONS.md",
+    "REVIEW.md",
+    "TEST_LOG.md",
+    "LLM_BUDGET.md",
+    "WORK_LOG.md"
+  ],
+  "include_git_diff": true,
+  "routing_policy": {
+    "default": "cheapest_first",
+    "notes": "Lower priority runs first. Put flat-rate or underused subscriptions at lower priority."
+  },
+  "run_levels": {
+    "quick": ["glm"],
+    "normal": ["glm", "codex"],
+    "hard": ["glm", "codex", "claude"]
+  },
+  "providers": {
+    "codex": {
+      "enabled": true,
+      "kind": "command",
+      "priority": 20,
+      "budget": "subscription",
+      "monthly_limit": "OpenAI subscription or API quota",
+      "preferred_for": [
+        "implementation",
+        "repo-aware review",
+        "test failure analysis"
+      ],
+      "notes": "OpenAI Codex CLI. Good for implementation, code review, repo-aware checks.",
+      "timeout_sec": 600,
+      "stdin": true,
+      "command": [
+        "codex",
+        "exec",
+        "--skip-git-repo-check",
+        "--sandbox",
+        "read-only",
+        "-C",
+        "{project_dir}",
+        "-"
+      ]
+    },
+    "claude": {
+      "enabled": true,
+      "kind": "command",
+      "priority": 30,
+      "budget": "subscription",
+      "monthly_limit": "Claude subscription",
+      "preferred_for": [
+        "architecture",
+        "product reasoning",
+        "adversarial critique"
+      ],
+      "notes": "Claude Code CLI. Good for architecture, product reasoning, and adversarial review.",
+      "timeout_sec": 600,
+      "stdin": true,
+      "command": [
+        "claude",
+        "-p",
+        "--permission-mode",
+        "plan",
+        "--add-dir",
+        "{project_dir}"
+      ]
+    },
+    "glm": {
+      "enabled": true,
+      "kind": "glm_client",
+      "priority": 10,
+      "budget": "flat-rate",
+      "monthly_limit": "Z.ai Pro flat-rate or configured API allowance",
+      "preferred_for": [
+        "cheap-first second opinion",
+        "broad critique",
+        "fast triage"
+      ],
+      "notes": "Z.ai/GLM via project-manager glm_client.py. Prefer when GLM quota is effectively cheaper.",
+      "timeout_sec": 180,
+      "scripts_dir": "/home/gint_pcd/projects/프로젝트관리자/scripts"
+    }
+  }
+}
