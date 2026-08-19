@@ -1109,8 +1109,26 @@ def main() -> int:
 
     # ---- phase 2: write new posting files (skip everything the ledger knows) --
     written: list[dict] = []
+    backfilled = 0
     for posting in kept:
         if posting["key"] in seen:
+            # A Workday posting is first written before its JD is hydrated, and
+            # after that the ledger keeps skipping it — so the archived file
+            # keeps the empty body it was born with, for exactly the Korea rows
+            # that matter most. Rewrite it once the body arrives.
+            if posting.get("body") and not posting.get("no_jd"):
+                path = INBOX_DIR / f"{posting['slug']}-{posting['job_id']}.md"
+                try:
+                    if path.exists() and len(path.read_text(encoding="utf-8")) < len(
+                            posting["body"]):
+                        posting["first_seen"] = seen[posting["key"]].get("first_seen", today)
+                        path.write_text(
+                            render_markdown(posting,
+                                            [m["term"] for m in posting["matched"]]),
+                            encoding="utf-8")
+                        backfilled += 1
+                except OSError as e:
+                    log(f"    [backfill {posting['key']}] ERROR {e}")
             continue
         if args.limit is not None and len(written) >= args.limit:
             break
@@ -1134,6 +1152,9 @@ def main() -> int:
         }
         log(f"[write] {filename} — {posting['title']} @ {posting['company']} "
             f"(score {posting['score']}, {posting['eligibility']})")
+
+    if backfilled:
+        log(f"[backfill] rewrote {backfilled} posting files with their hydrated JD")
 
     # Refresh the mutable fields of postings already in the ledger. `first_seen`
     # is the one immutable field — it is what dedup and "new today" rest on.
