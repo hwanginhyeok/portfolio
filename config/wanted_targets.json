@@ -1,0 +1,9 @@
+{
+  "keywords": ["제조 AI", "프로젝트 매니저", "자율제조", "생산관리", "AI 엔지니어",
+               "Product Manager", "기술 PM", "PMO", "스마트팩토리"],
+  "company_watchlist": ["현대자동차", "현대자동차(남양연구소)", "현대모비스", "현대오토에버",
+                        "기아", "삼성전자", "SK하이닉스", "SK", "LG전자"],
+  "exclude_title_patterns": ["인턴", "계약직", "아르바이트"],
+  "per_keyword_cap": 100,
+  "request_delay_seconds": 1.0
+}

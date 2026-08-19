@@ -1,0 +1,3917 @@
+{
+  "seen": {
+    "greenhouse:waymo:8042365": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Automotive HVAC Systems Engineer",
+      "score": 22,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:7625366": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Automotive Testing Lead, Japan",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:7435977": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Charging Automation Lead",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:7490278": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Electrical Engineer, Design Validation ",
+      "score": 30,
+      "eligibility": "korea-apac"
+    },
+    "greenhouse:waymo:7848797": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Electrical Engineer, Sensors ",
+      "score": 27,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:7361509": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Embedded Software Technical Lead & Manager, Simulation",
+      "score": 36,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:8078276": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Full Vehicle Platform Architect",
+      "score": 15,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:7808260": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Hardware Engineer, LIDAR Performance Validation",
+      "score": 38,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:8116188": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Lead Noise, Vibration, and Harshness (NVH) Engineer",
+      "score": 24,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:8029672": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Lead Technical Program Manager, Simulation ",
+      "score": 20,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:7409556": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Mechanical Engineer, Vehicle Engineering",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:7684041": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Product Quality Engineer",
+      "score": 35,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:8077778": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Regional Fleet Readiness Manager - EAST",
+      "score": 20,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:7851847": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": " Regional Fleet Readiness Manager - WEST",
+      "score": 20,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:7964147": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Senior Field Quality Engineer",
+      "score": 28,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:7490150": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Senior Motion Systems Engineer, Actuators",
+      "score": 29,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:7510368": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Senior Software Engineer, Inertial Navigation",
+      "score": 23,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:7822756": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Senior Software Engineer, Vehicle Platforms C++",
+      "score": 30,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:7981535": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Senior Systems Engineer,  Vehicle Body Control Systems",
+      "score": 20,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:7974252": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Senior Systems Engineer, Vehicle Security",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:7599912": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Senior System Test Engineer, Perception",
+      "score": 25,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:8026543": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Senior Technical Program Manager, Simulation ",
+      "score": 23,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:7786381": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Senior Vehicle Dynamics Simulation Engineer",
+      "score": 28,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:8131378": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Senior Vehicle Structures Engineer",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:8004234": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Silicon Emulation Engineer",
+      "score": 15,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:8056411": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Silicon Validation Manager ",
+      "score": 29,
+      "eligibility": "korea-apac"
+    },
+    "greenhouse:waymo:8018436": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Software Engineer, System-on-Chip (SoC) Testing",
+      "score": 15,
+      "eligibility": "korea-apac"
+    },
+    "greenhouse:waymo:7429873": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Software Engineer, Vehicle Platforms C++",
+      "score": 30,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:7658914": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Software Technical Lead Manager, Infrastructure",
+      "score": 22,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:7438645": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Sr Software Engineer, Telematics",
+      "score": 15,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:8113098": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Structured Testing Vendor Engineering Lead",
+      "score": 21,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:7773691": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Systems Test Engineer, Pipeline and Test Health",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:7669316": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Systems Test Engineer, Sensing",
+      "score": 30,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:7403855": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Technical Program Manager, Onboard Systems",
+      "score": 21,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:7733791": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Technical Program Manager, Systems Engineering",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:8109523": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Technical Program Manager, Vehicle Security",
+      "score": 26,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:8047527": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Validation Manager (Platforms)",
+      "score": 21,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:waymo:8049630": {
+      "first_seen": "2026-08-19",
+      "company": "Waymo",
+      "title": "Vehicle Systems Safety",
+      "score": 20,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:anthropic:5227415008": {
+      "first_seen": "2026-08-19",
+      "company": "Anthropic",
+      "title": "Data Center Electrical Engineer",
+      "score": 18,
+      "eligibility": "korea-apac"
+    },
+    "greenhouse:anthropic:5378092008": {
+      "first_seen": "2026-08-19",
+      "company": "Anthropic",
+      "title": "Hardware Lab Manager",
+      "score": 18,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:anthropic:5286362008": {
+      "first_seen": "2026-08-19",
+      "company": "Anthropic",
+      "title": "Hardware Systems Architect",
+      "score": 15,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:anthropic:5256303008": {
+      "first_seen": "2026-08-19",
+      "company": "Anthropic",
+      "title": "Technical Program Manager, API Platform",
+      "score": 21,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:anthropic:5251609008": {
+      "first_seen": "2026-08-19",
+      "company": "Anthropic",
+      "title": "Technical Program Manager, Apps Platform",
+      "score": 21,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:anthropic:5201264008": {
+      "first_seen": "2026-08-19",
+      "company": "Anthropic",
+      "title": "Technical Program Manager, Cloud Inference",
+      "score": 19,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:anthropic:5138044008": {
+      "first_seen": "2026-08-19",
+      "company": "Anthropic",
+      "title": "Technical Program Manager, Compute ",
+      "score": 25,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:anthropic:5251612008": {
+      "first_seen": "2026-08-19",
+      "company": "Anthropic",
+      "title": "Technical Program Manager, Databases",
+      "score": 18,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:anthropic:5013743008": {
+      "first_seen": "2026-08-19",
+      "company": "Anthropic",
+      "title": "Technical Program Manager, Data Center Infrastructure",
+      "score": 18,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:anthropic:5301958008": {
+      "first_seen": "2026-08-19",
+      "company": "Anthropic",
+      "title": "Technical Program Manager, Enterprise Commerce",
+      "score": 18,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:anthropic:5368023008": {
+      "first_seen": "2026-08-19",
+      "company": "Anthropic",
+      "title": "Technical Program Manager, GTM Systems",
+      "score": 18,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:anthropic:5380379008": {
+      "first_seen": "2026-08-19",
+      "company": "Anthropic",
+      "title": "Technical Program Manager, Hardware Systems",
+      "score": 39,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:anthropic:5111783008": {
+      "first_seen": "2026-08-19",
+      "company": "Anthropic",
+      "title": "Technical Program Manager, Infrastructure",
+      "score": 21,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:anthropic:5208193008": {
+      "first_seen": "2026-08-19",
+      "company": "Anthropic",
+      "title": "Technical Program Manager, Launches  ",
+      "score": 22,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:anthropic:5298359008": {
+      "first_seen": "2026-08-19",
+      "company": "Anthropic",
+      "title": "Technical Program Manager, Recruiting Technology",
+      "score": 21,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:anthropic:5203545008": {
+      "first_seen": "2026-08-19",
+      "company": "Anthropic",
+      "title": "Technical Program Manager, Research",
+      "score": 18,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:anthropic:5380327008": {
+      "first_seen": "2026-08-19",
+      "company": "Anthropic",
+      "title": "Technical Program Manager, RL Research",
+      "score": 22,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:anthropic:5108695008": {
+      "first_seen": "2026-08-19",
+      "company": "Anthropic",
+      "title": "Technical Program Manager, Safeguards (Infrastructure & Evals)",
+      "score": 22,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:anthropic:4989788008": {
+      "first_seen": "2026-08-19",
+      "company": "Anthropic",
+      "title": "Technical Program Manager, Security",
+      "score": 18,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:anthropic:5380377008": {
+      "first_seen": "2026-08-19",
+      "company": "Anthropic",
+      "title": "Technical Program Manager, Silicon",
+      "score": 26,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:lucidmotors:5175805007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Field Quality Engineer, Customer Warranty",
+      "score": 24,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:5196241007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Global Supply Manager",
+      "score": 20,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:5198147007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Government Regulations & Product Safety Compliance Coordinator",
+      "score": 28,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:5205389007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Incoming Quality Sr. Supervisor ",
+      "score": 16,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:4839165007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Maintenance Automation Sr. Engineer",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:5178935007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Maintenance Manager ",
+      "score": 23,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:5125974007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Maintenance Planner ",
+      "score": 19,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:5189707007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Material Planning Manager - Launch & Powertrain",
+      "score": 44,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:5205385007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "NPI Manager",
+      "score": 22,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:5175127007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "NPI Project Engineer II",
+      "score": 32,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:5142027007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Process Engineer",
+      "score": 22,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:4975699007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Purple Teaming Engineer - Embedded Security ",
+      "score": 29,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:5200884007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Quality Operations Manager ",
+      "score": 28,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:4963850007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Senior Engineer, Motion Planning and Controls, Autonomous Driving",
+      "score": 23,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:5130478007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Senior Motion Planning and Controls Engineer",
+      "score": 31,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:4915778007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Senior SQA and Test Infrastructure Development Engineer",
+      "score": 43,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:4867164007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Senior SQA and Test Infrastructure Development Engineer",
+      "score": 43,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:5125366007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Senior Technical Program Manager - ADAS/AD Systems Engineering ",
+      "score": 28,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:5202054007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Software Developer",
+      "score": 28,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:5051296007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Sr ADAS Software Integration Engineer",
+      "score": 31,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:5139139007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Sr. Field Quality Engineer, ADAS",
+      "score": 52,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:5199695007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Sr. Field Quality Engineer, Closures",
+      "score": 30,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:5175123007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Sr. Field Quality Engineer, PWT Drive Units",
+      "score": 49,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:5197576007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Sr. Field Quality Engineer, Software",
+      "score": 29,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:5197940007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Sr. Global Supply Manager, Battery Enclosure",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:5137281007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Sr. Global Supply Manager, Powertrain Capex",
+      "score": 33,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:4839447007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Sr. Maintenance Supervisor, Stamping",
+      "score": 15,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:5172197007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Sr. Manager, Quality Management Systems",
+      "score": 19,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:5188407007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Sr. Manager, Service Technical Operations & Quality Europe",
+      "score": 16,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:4839211007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Sr. Manufacturing Test Engineer - Drive Unit",
+      "score": 60,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:4838465007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Sr. Robotics Maintenance Engineer",
+      "score": 33,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:5184984007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Sr. Service NPI Technical Program Manager",
+      "score": 35,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:5125996007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Sr. Supervisor – Powertrain Drive Unit Production",
+      "score": 49,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:5109621007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Sr. Supplier Industrialization Engineer – Chassis Systems",
+      "score": 31,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:5139142007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Sr. SW Quality Technical Validation & Data Systems ",
+      "score": 41,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:5175746007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Sr. Technical Quality Engineering Specialist",
+      "score": 31,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:5175735007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Sr. Technical Quality Engineering Specialist (Chassis and Safety Restraints)",
+      "score": 28,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:lucidmotors:5177759007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Sr. Test Engineer (Inverter)",
+      "score": 72,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:scaleai:4712678005": {
+      "first_seen": "2026-08-19",
+      "company": "Scale AI",
+      "title": "Senior Technical Program Manager, Robotics",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:scaleai:4693449005": {
+      "first_seen": "2026-08-19",
+      "company": "Scale AI",
+      "title": "Technical Program Manager, Gen AI Operations Planning",
+      "score": 17,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:scaleai:4711995005": {
+      "first_seen": "2026-08-19",
+      "company": "Scale AI",
+      "title": "Technical Program Manager, Platform",
+      "score": 19,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:scaleai:4703275005": {
+      "first_seen": "2026-08-19",
+      "company": "Scale AI",
+      "title": "Technical Program Manager, Platform ",
+      "score": 19,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:figureai:4680643006": {
+      "first_seen": "2026-08-19",
+      "company": "Figure AI",
+      "title": "Connector & Interconnect Design Engineer",
+      "score": 23,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:figureai:4699238006": {
+      "first_seen": "2026-08-19",
+      "company": "Figure AI",
+      "title": "Demand Planner",
+      "score": 16,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:figureai:4688381006": {
+      "first_seen": "2026-08-19",
+      "company": "Figure AI",
+      "title": "Electrical Engineer, Actuator Systems",
+      "score": 77,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:figureai:4313470006": {
+      "first_seen": "2026-08-19",
+      "company": "Figure AI",
+      "title": "Electrical Engineer (All Levels)",
+      "score": 25,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:figureai:4615252006": {
+      "first_seen": "2026-08-19",
+      "company": "Figure AI",
+      "title": "Electrical Validation Engineer – Hand Subsystem",
+      "score": 62,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:figureai:4654891006": {
+      "first_seen": "2026-08-19",
+      "company": "Figure AI",
+      "title": "Firmware Engineer",
+      "score": 24,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:figureai:4698860006": {
+      "first_seen": "2026-08-19",
+      "company": "Figure AI",
+      "title": "Firmware Integration Engineer, Asia",
+      "score": 32,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:figureai:4697354006": {
+      "first_seen": "2026-08-19",
+      "company": "Figure AI",
+      "title": "Global Supply Manager, Battery ",
+      "score": 20,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:figureai:4573670006": {
+      "first_seen": "2026-08-19",
+      "company": "Figure AI",
+      "title": "Manufacturing Electrical Test Engineer",
+      "score": 33,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:figureai:4375064006": {
+      "first_seen": "2026-08-19",
+      "company": "Figure AI",
+      "title": "Manufacturing Engineer",
+      "score": 21,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:figureai:4414646006": {
+      "first_seen": "2026-08-19",
+      "company": "Figure AI",
+      "title": "Manufacturing Software Test Engineer",
+      "score": 30,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:figureai:4574399006": {
+      "first_seen": "2026-08-19",
+      "company": "Figure AI",
+      "title": "Manufacturing Test Engineer, PCBA",
+      "score": 42,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:figureai:4410831006": {
+      "first_seen": "2026-08-19",
+      "company": "Figure AI",
+      "title": "Mechanical Engineer - All Levels",
+      "score": 19,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:figureai:4643612006": {
+      "first_seen": "2026-08-19",
+      "company": "Figure AI",
+      "title": "Mechanical Engineer - Hands",
+      "score": 32,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:figureai:4685814006": {
+      "first_seen": "2026-08-19",
+      "company": "Figure AI",
+      "title": "Mechanical Engineer - Hands (Compliant Elements)",
+      "score": 30,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:figureai:4672013006": {
+      "first_seen": "2026-08-19",
+      "company": "Figure AI",
+      "title": "Mechanical Engineer - Integration & Test",
+      "score": 28,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:figureai:4596418006": {
+      "first_seen": "2026-08-19",
+      "company": "Figure AI",
+      "title": "Mechanical Engineer, Robot Ecosystem",
+      "score": 25,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:figureai:4596421006": {
+      "first_seen": "2026-08-19",
+      "company": "Figure AI",
+      "title": "Mechanical Engineer, Softgoods/Plastics",
+      "score": 15,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:figureai:4679601006": {
+      "first_seen": "2026-08-19",
+      "company": "Figure AI",
+      "title": "Mechanical Engineer, Structures - Robot Hands",
+      "score": 37,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:figureai:4627386006": {
+      "first_seen": "2026-08-19",
+      "company": "Figure AI",
+      "title": "NPI Engineer",
+      "score": 15,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:figureai:4333397006": {
+      "first_seen": "2026-08-19",
+      "company": "Figure AI",
+      "title": "Power Electronics Engineer, Charging",
+      "score": 26,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:figureai:4315521006": {
+      "first_seen": "2026-08-19",
+      "company": "Figure AI",
+      "title": "Product Compliance Engineer",
+      "score": 17,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:figureai:4626806006": {
+      "first_seen": "2026-08-19",
+      "company": "Figure AI",
+      "title": "Quality Engineer, Metrology",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:figureai:4705588006": {
+      "first_seen": "2026-08-19",
+      "company": "Figure AI",
+      "title": "Senior Gear Design Engineer",
+      "score": 32,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:figureai:4432449006": {
+      "first_seen": "2026-08-19",
+      "company": "Figure AI",
+      "title": "Senior Mechanical Engineer, Charging Systems",
+      "score": 16,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:figureai:4660300006": {
+      "first_seen": "2026-08-19",
+      "company": "Figure AI",
+      "title": "Supplier Quality Engineer, BotQ",
+      "score": 34,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:figureai:4626247006": {
+      "first_seen": "2026-08-19",
+      "company": "Figure AI",
+      "title": "Systems Integration Engineer - Actuation Systems",
+      "score": 51,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:figureai:4612612006": {
+      "first_seen": "2026-08-19",
+      "company": "Figure AI",
+      "title": "Systems Integration Engineer - Hand Subsystem",
+      "score": 38,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:figureai:4703944006": {
+      "first_seen": "2026-08-19",
+      "company": "Figure AI",
+      "title": "Test Development Engineer — Actuation Systems",
+      "score": 72,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:wayve:8478666002": {
+      "first_seen": "2026-08-19",
+      "company": "Wayve",
+      "title": "Application Software Engineer -  Embedded Software C++",
+      "score": 23,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:wayve:8449034002": {
+      "first_seen": "2026-08-19",
+      "company": "Wayve",
+      "title": "Application Software Engineer - Embedded Software C++",
+      "score": 23,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:wayve:8585251002": {
+      "first_seen": "2026-08-19",
+      "company": "Wayve",
+      "title": "Embedded Automotive Platforms Software Engineer",
+      "score": 29,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:wayve:8594608002": {
+      "first_seen": "2026-08-19",
+      "company": "Wayve",
+      "title": "Embedded Software Engineer, Onboard Test Automation",
+      "score": 30,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:wayve:8568363002": {
+      "first_seen": "2026-08-19",
+      "company": "Wayve",
+      "title": "Engineering Manager, App SW - Embedded ",
+      "score": 23,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:wayve:8571217002": {
+      "first_seen": "2026-08-19",
+      "company": "Wayve",
+      "title": "Engineering Manager, App SW - Embedded ",
+      "score": 23,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:wayve:8554492002": {
+      "first_seen": "2026-08-19",
+      "company": "Wayve",
+      "title": "Engineering Manager, Embedded Automotive Platform ",
+      "score": 25,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:wayve:8708581002": {
+      "first_seen": "2026-08-19",
+      "company": "Wayve",
+      "title": "Engineering Manager, Runtime Platform, Robot Software",
+      "score": 20,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:wayve:8483422002": {
+      "first_seen": "2026-08-19",
+      "company": "Wayve",
+      "title": "Hardware Engineer",
+      "score": 30,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:wayve:8625514002": {
+      "first_seen": "2026-08-19",
+      "company": "Wayve",
+      "title": "Lead Technical Program Manager, Data ",
+      "score": 21,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:wayve:8545468002": {
+      "first_seen": "2026-08-19",
+      "company": "Wayve",
+      "title": "NPI Engineer",
+      "score": 24,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:wayve:8697184002": {
+      "first_seen": "2026-08-19",
+      "company": "Wayve",
+      "title": "Senior Software Engineer - Sensor Systems, Robot Software",
+      "score": 23,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:wayve:8627776002": {
+      "first_seen": "2026-08-19",
+      "company": "Wayve",
+      "title": "Supply Chain Manager (Vehicle Programs)",
+      "score": 17,
+      "eligibility": "korea-apac"
+    },
+    "greenhouse:wayve:8637714002": {
+      "first_seen": "2026-08-19",
+      "company": "Wayve",
+      "title": "System Integration Engineer",
+      "score": 22,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:wayve:8567734002": {
+      "first_seen": "2026-08-19",
+      "company": "Wayve",
+      "title": "System Integration Engineer",
+      "score": 19,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:wayve:8542296002": {
+      "first_seen": "2026-08-19",
+      "company": "Wayve",
+      "title": "Systems Engineer, AI Validation ",
+      "score": 21,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:wayve:8555774002": {
+      "first_seen": "2026-08-19",
+      "company": "Wayve",
+      "title": "System Test Automation Engineer, HIL",
+      "score": 33,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:wayve:8638825002": {
+      "first_seen": "2026-08-19",
+      "company": "Wayve",
+      "title": "Technical Program Manager",
+      "score": 21,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:wayve:8602921002": {
+      "first_seen": "2026-08-19",
+      "company": "Wayve",
+      "title": "Technical Program Manager",
+      "score": 21,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:wayve:8602889002": {
+      "first_seen": "2026-08-19",
+      "company": "Wayve",
+      "title": "Technical Program Manager, Evaluation & Validation",
+      "score": 32,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:nuro:7384555": {
+      "first_seen": "2026-08-19",
+      "company": "Nuro",
+      "title": "AV Hardware Mechanical Design, Lead",
+      "score": 20,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:nuro:8051418": {
+      "first_seen": "2026-08-19",
+      "company": "Nuro",
+      "title": "NPI Engineer",
+      "score": 31,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:nuro:8010934": {
+      "first_seen": "2026-08-19",
+      "company": "Nuro",
+      "title": "Senior Electrical Engineer - AV Modules",
+      "score": 29,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:nuro:7979749": {
+      "first_seen": "2026-08-19",
+      "company": "Nuro",
+      "title": "Senior Software Engineer, Devices Platform",
+      "score": 16,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:nuro:7701096": {
+      "first_seen": "2026-08-19",
+      "company": "Nuro",
+      "title": "Senior Software Engineer, Onboard Autonomy",
+      "score": 21,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:nuro:8017590": {
+      "first_seen": "2026-08-19",
+      "company": "Nuro",
+      "title": "Senior Software Engineer, Sensor Platform",
+      "score": 16,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:nuro:7736044": {
+      "first_seen": "2026-08-19",
+      "company": "Nuro",
+      "title": "Senior Systems Test Engineer, Autonomy Behavior",
+      "score": 23,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:nuro:7998328": {
+      "first_seen": "2026-08-19",
+      "company": "Nuro",
+      "title": "Software Engineer, Onboard Platform",
+      "score": 16,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:nuro:8017598": {
+      "first_seen": "2026-08-19",
+      "company": "Nuro",
+      "title": "Software Engineer, Sensor Platform",
+      "score": 16,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:nuro:8082658": {
+      "first_seen": "2026-08-19",
+      "company": "Nuro",
+      "title": "Test Validation Engineer",
+      "score": 42,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:5780398004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Electrical Engineer",
+      "score": 26,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:6107174004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Firmware Engineer - Actuation ",
+      "score": 88,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:6016652004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Hardware Integration Engineer - Dexterity",
+      "score": 36,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:5997414004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Hardware Test Engineer – Dexterity",
+      "score": 38,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:6142284004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Lead Software Engineer - Dexterous Manipulation",
+      "score": 19,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:5825048004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Lead Software Engineer - Dexterous Manipulation",
+      "score": 19,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:5809796004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Manufacturing Engineer (Supply Chain) - Electromechanical",
+      "score": 53,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:6142944004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Operations Senior Technical Program Manager",
+      "score": 22,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:5791008004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Product Quality Manager",
+      "score": 20,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:5988482004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Robotics Test Engineer",
+      "score": 35,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:5813642004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Robot Platform Software Engineer",
+      "score": 17,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:5780473004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Senior Electrical Engineer",
+      "score": 29,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:6131831004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Senior Electrical Engineer - Apollo 2",
+      "score": 26,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:5996176004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Senior Electrical Engineer - HRI",
+      "score": 28,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:6144117004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Senior Electrical Engineer - Sensor FPGA and PCB (Aggregator)",
+      "score": 24,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:6145685004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Senior Electrical Engineer - Sensor FPGA and PCB (Aggregator)",
+      "score": 24,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:6015655004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Senior Hardware Test Engineer",
+      "score": 58,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:5842352004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Senior Hardware Test Engineer - Actuation",
+      "score": 62,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:6013426004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Senior Manager, Hardware Connectivity ",
+      "score": 22,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:5800433004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Senior Manager of Electrical Engineering, Compute & Sensing",
+      "score": 36,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:5828347004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Senior Manufacturing Engineer - Assembly",
+      "score": 28,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:5766164004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Senior Mechanical Engineer",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:5968696004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Senior Mechanical Engineer - Continuous Improvement",
+      "score": 16,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:5979250004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Senior NPI Buyer",
+      "score": 23,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:6145262004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Senior Perception Hardware Engineer ",
+      "score": 24,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:5678268004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Senior Perception Learning Engineer ",
+      "score": 15,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:6134490004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Senior Product Manager, Hardware Platform",
+      "score": 16,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:6085871004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Senior Simulation Engineer - Core Simulation Platform",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:5988362004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Senior Wire Harness Engineer",
+      "score": 17,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:6135687004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Software Engineer - Dexterous Manipulation",
+      "score": 24,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:6105900004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Sr. Software Engineer – Real-Time Controls",
+      "score": 23,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:6007624004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Sr. Software Engineer – Real-Time Controls",
+      "score": 23,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:apptronik:5977981004": {
+      "first_seen": "2026-08-19",
+      "company": "Apptronik",
+      "title": "Sr. Software Engineer - Wheeled Controls",
+      "score": 22,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:neuralink:5663491003": {
+      "first_seen": "2026-08-19",
+      "company": "Neuralink",
+      "title": "Digital IC Design Engineer",
+      "score": 16,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:neuralink:7750309003": {
+      "first_seen": "2026-08-19",
+      "company": "Neuralink",
+      "title": "Electrical Engineer, Compute Architecture",
+      "score": 42,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:neuralink:7702524003": {
+      "first_seen": "2026-08-19",
+      "company": "Neuralink",
+      "title": "Electrical Engineer, Implant Embedded Systems",
+      "score": 41,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:neuralink:7813024003": {
+      "first_seen": "2026-08-19",
+      "company": "Neuralink",
+      "title": "Electrical Engineer, Robotics",
+      "score": 35,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:neuralink:6550259003": {
+      "first_seen": "2026-08-19",
+      "company": "Neuralink",
+      "title": "Embedded Software Engineer, Implant Embedded Systems",
+      "score": 24,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:neuralink:6021322003": {
+      "first_seen": "2026-08-19",
+      "company": "Neuralink",
+      "title": "Firmware Engineer, Robotics and Surgery Engineering",
+      "score": 32,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:neuralink:7637700003": {
+      "first_seen": "2026-08-19",
+      "company": "Neuralink",
+      "title": "Hardware/ Software Co-Design Engineer",
+      "score": 19,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:neuralink:7668502003": {
+      "first_seen": "2026-08-19",
+      "company": "Neuralink",
+      "title": "Manufacturing Engineer",
+      "score": 24,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:neuralink:6304285003": {
+      "first_seen": "2026-08-19",
+      "company": "Neuralink",
+      "title": "Mechanical Engineer, Implant",
+      "score": 17,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:neuralink:6587719003": {
+      "first_seen": "2026-08-19",
+      "company": "Neuralink",
+      "title": "Mechanical Engineer, Robotics (CONVOY)",
+      "score": 16,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:neuralink:7751605003": {
+      "first_seen": "2026-08-19",
+      "company": "Neuralink",
+      "title": "Mechanical Engineer, Surgery & Robotics",
+      "score": 15,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:neuralink:7799088003": {
+      "first_seen": "2026-08-19",
+      "company": "Neuralink",
+      "title": "Neurosurgical Robot Operator",
+      "score": 19,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:neuralink:7772049003": {
+      "first_seen": "2026-08-19",
+      "company": "Neuralink",
+      "title": "Neurosurgical Robot Operator (Part-Time)",
+      "score": 16,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:neuralink:6510680003": {
+      "first_seen": "2026-08-19",
+      "company": "Neuralink",
+      "title": "Optical Engineer",
+      "score": 15,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:neuralink:6681863003": {
+      "first_seen": "2026-08-19",
+      "company": "Neuralink",
+      "title": "Signal Processing Engineer",
+      "score": 20,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:neuralink:7886503003": {
+      "first_seen": "2026-08-19",
+      "company": "Neuralink",
+      "title": "Software Design Quality Engineer",
+      "score": 21,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:neuralink:7743089003": {
+      "first_seen": "2026-08-19",
+      "company": "Neuralink",
+      "title": "Software Engineer, CI/CD",
+      "score": 17,
+      "eligibility": "visa-needed"
+    },
+    "greenhouse:agilityrobotics:6017803004": {
+      "first_seen": "2026-08-19",
+      "company": "Agility Robotics",
+      "title": "Manager, Robot Diagnostics & Analysis",
+      "score": 22,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:agilityrobotics:5986750004": {
+      "first_seen": "2026-08-19",
+      "company": "Agility Robotics",
+      "title": "Mechanical Engineer",
+      "score": 23,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:agilityrobotics:6103178004": {
+      "first_seen": "2026-08-19",
+      "company": "Agility Robotics",
+      "title": "Senior Electrical Engineer",
+      "score": 45,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:agilityrobotics:6019178004": {
+      "first_seen": "2026-08-19",
+      "company": "Agility Robotics",
+      "title": "Senior Hardware Test Engineer",
+      "score": 36,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:agilityrobotics:6002917004": {
+      "first_seen": "2026-08-19",
+      "company": "Agility Robotics",
+      "title": "Senior Hardware Test Engineer - Torso",
+      "score": 40,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:agilityrobotics:5815589004": {
+      "first_seen": "2026-08-19",
+      "company": "Agility Robotics",
+      "title": "Senior Manager, AI Innovation",
+      "score": 20,
+      "eligibility": "remote"
+    },
+    "greenhouse:agilityrobotics:6139687004": {
+      "first_seen": "2026-08-19",
+      "company": "Agility Robotics",
+      "title": "Senior Manager, Field Quality",
+      "score": 29,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:agilityrobotics:6113706004": {
+      "first_seen": "2026-08-19",
+      "company": "Agility Robotics",
+      "title": "Senior Manager, SQE",
+      "score": 26,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:agilityrobotics:6131189004": {
+      "first_seen": "2026-08-19",
+      "company": "Agility Robotics",
+      "title": "Senior Manufacturing Engineer, Electrical",
+      "score": 34,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:agilityrobotics:6113669004": {
+      "first_seen": "2026-08-19",
+      "company": "Agility Robotics",
+      "title": "Senior Manufacturing Test Engineer",
+      "score": 54,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:agilityrobotics:6008696004": {
+      "first_seen": "2026-08-19",
+      "company": "Agility Robotics",
+      "title": "Senior Robotics Mechanical Engineer",
+      "score": 27,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:agilityrobotics:5830827004": {
+      "first_seen": "2026-08-19",
+      "company": "Agility Robotics",
+      "title": "Senior Robot Software Triage & RCA Engineer",
+      "score": 25,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:agilityrobotics:5833390004": {
+      "first_seen": "2026-08-19",
+      "company": "Agility Robotics",
+      "title": "Senior Systems Engineer",
+      "score": 21,
+      "eligibility": "sponsorship-likely"
+    },
+    "greenhouse:agilityrobotics:6127703004": {
+      "first_seen": "2026-08-19",
+      "company": "Agility Robotics",
+      "title": "Senior Technical Program Manager, Robot Skills Development",
+      "score": 36,
+      "eligibility": "remote"
+    },
+    "greenhouse:agilityrobotics:5973865004": {
+      "first_seen": "2026-08-19",
+      "company": "Agility Robotics",
+      "title": "Sr. Supplier Quality Engineer",
+      "score": 46,
+      "eligibility": "sponsorship-likely"
+    },
+    "ashby:openai:8fb1615c-34bf-47c4-a1d1-b7b2f836bbd3": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Technical Program Manager, Compute Infrastructure",
+      "score": 25,
+      "eligibility": "sponsorship-likely"
+    },
+    "ashby:openai:004ae8f4-245b-4aad-8903-9daabdb58bb9": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Technical Program Manager, Custom Silicon Development",
+      "score": 22,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:openai:3f99bfef-5b1a-48ea-aed0-2dbd57b12722": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Firmware Engineer, Robotics",
+      "score": 32,
+      "eligibility": "sponsorship-likely"
+    },
+    "ashby:openai:cb9280db-df39-4c88-b411-5fdf149a6e52": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Product Manufacturing Engineer",
+      "score": 21,
+      "eligibility": "korea-apac"
+    },
+    "ashby:openai:e602cd50-002d-4ace-bb30-19db0afcf635": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Data Center Infrastructure Electrical Engineer",
+      "score": 24,
+      "eligibility": "remote"
+    },
+    "ashby:openai:1ba666a4-0be2-4bd0-ad51-39ed7164c241": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Software Engineer, Quality & Developer Tools | Consumer Devices",
+      "score": 21,
+      "eligibility": "sponsorship-likely"
+    },
+    "ashby:openai:8eaa92fb-b908-4624-9b34-1ec7b5aa03d6": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Electrical Engineer, Robotics",
+      "score": 34,
+      "eligibility": "visa-needed"
+    },
+    "ashby:openai:b9a4a809-a965-4dbe-aeef-6ce1593903dd": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Hardware Operations Engineer",
+      "score": 22,
+      "eligibility": "remote"
+    },
+    "ashby:openai:fff7b15d-a1a0-441f-90f1-5efcae7f0051": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Quality Engineer - Rack Infrastructure & Site Operations - Stargate",
+      "score": 28,
+      "eligibility": "remote"
+    },
+    "ashby:openai:2710d0c7-8f1c-4e1a-bf7a-4000fc5a8d68": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Firmware Engineer, RTOS, Consumer Devices",
+      "score": 31,
+      "eligibility": "remote"
+    },
+    "ashby:openai:1dc05fc7-ceb7-4827-a905-9d1beb77a4a0": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Camera Software Engineer, Consumer Devices",
+      "score": 16,
+      "eligibility": "sponsorship-likely"
+    },
+    "ashby:openai:e4ef18a1-f2f7-4920-a53c-aeadd184d124": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "ASIC Firmware Engineer, Modeling",
+      "score": 20,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:openai:2c9d0566-69b1-435e-bd8f-4eefc04dd076": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Component and Product Quality Engineer, Interconnects",
+      "score": 29,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:openai:7eb1ac08-5168-4eff-a96c-90ce0bfd3fde": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Technical Program Manager, Robotics Data Acquisition",
+      "score": 18,
+      "eligibility": "remote"
+    },
+    "ashby:openai:f6b9903c-9034-436b-a4ec-4c8643a6d0dd": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Networking Operating System Firmware Engineer",
+      "score": 20,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:openai:21229750-8bd1-4134-a20e-2a8922b88806": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Systems Software Engineer, Management Plane",
+      "score": 21,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:openai:713a9469-fb35-49db-809e-36f67c920880": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Technical Program Manager, Rack Delivery",
+      "score": 16,
+      "eligibility": "remote"
+    },
+    "ashby:openai:5b75027a-a5eb-4d28-a608-aa6bebcb079f": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Actuator Design Engineer",
+      "score": 54,
+      "eligibility": "remote"
+    },
+    "ashby:openai:94172ebc-2219-40b4-ae04-c10be0fd2158": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Manufacturing Test Engineer",
+      "score": 40,
+      "eligibility": "korea-apac"
+    },
+    "ashby:openai:cffa3a8d-918a-4e91-a1c6-3fa84a454408": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Technical Program Manager, Applied API & Product ",
+      "score": 19,
+      "eligibility": "remote"
+    },
+    "ashby:openai:1c48f39f-60ea-4636-87ed-8b4b4f5243e5": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Systems Software Engineer, Security, First Party Hardware",
+      "score": 18,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:openai:3124e8f0-e9e7-4c8b-8541-13cbbc5d1f4a": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "System Power Engineer, Consumer Devices",
+      "score": 16,
+      "eligibility": "remote"
+    },
+    "ashby:openai:6d545b2c-5697-4f38-affc-aaa309f5bb26": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Advanced Packaging Reliability Engineer",
+      "score": 24,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:openai:ee047eec-ae79-474b-9f1b-764242bc3c63": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Technical Program Manager, Strategic Initiatives",
+      "score": 23,
+      "eligibility": "sponsorship-likely"
+    },
+    "ashby:openai:cebd0a1e-2724-4beb-8ed0-d9c7934d1222": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Lead Thermal Simulation Engineer",
+      "score": 23,
+      "eligibility": "sponsorship-likely"
+    },
+    "ashby:openai:a547274b-246c-41a0-8590-a874fcc6f28b": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "PCBA Manufacturing Engineer",
+      "score": 31,
+      "eligibility": "korea-apac"
+    },
+    "ashby:openai:db993e24-ce4f-4f55-9187-403726bcb957": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Technical Program Manager, Cloud AI Partnerships",
+      "score": 20,
+      "eligibility": "sponsorship-likely"
+    },
+    "ashby:openai:fb8d253c-b0e9-48c3-870e-2c8e2d655a0d": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Supply Chain Manager, Industrial Compute",
+      "score": 17,
+      "eligibility": "remote"
+    },
+    "ashby:openai:f0d51f11-0f35-4e10-b8bb-d24191ba26f3": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Technical Program Manager, Infrastructure Strategy & Delivery Operations",
+      "score": 20,
+      "eligibility": "remote"
+    },
+    "ashby:openai:0fae998b-5295-4567-b4b5-b20cf0346da3": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Hardware Technical Program Manager, Infrastructure Partner Operations",
+      "score": 22,
+      "eligibility": "visa-needed"
+    },
+    "ashby:openai:4d0b1eb5-ea5d-460b-8fe6-23c45b0703f5": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Electrical Commissioning Lead",
+      "score": 17,
+      "eligibility": "visa-needed"
+    },
+    "ashby:openai:66edf931-b48d-4912-a16d-e7e8e1799d66": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Actuator Electromagnetic Design Engineer",
+      "score": 56,
+      "eligibility": "visa-needed"
+    },
+    "ashby:openai:4560b828-7624-414b-9670-6cc9bf0008ad": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Actuator Gear Design Engineer",
+      "score": 51,
+      "eligibility": "visa-needed"
+    },
+    "ashby:openai:94456c6c-2826-47f9-b5a9-0471fb8b7b96": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Technical Program Manager, AI Accelerator Software",
+      "score": 20,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:openai:3a05c5d7-fdd9-4e0e-823a-2ae08b59958b": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Technical Program Manager, AI Safety & Safeguards",
+      "score": 23,
+      "eligibility": "sponsorship-likely"
+    },
+    "ashby:openai:a4981ed2-331a-4927-a95f-fabb64c9c799": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Technical Program Manager, Enterprise",
+      "score": 23,
+      "eligibility": "sponsorship-likely"
+    },
+    "ashby:shield-ai:76e3efc7-7b66-4eff-aee0-6a25ec364ef9": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Technical Program Manager, Mission Autonomy (R5052)",
+      "score": 19,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:a339d686-fc92-408b-8f46-303401f5bcd8": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Propulsion Test Engineer (R4640)",
+      "score": 28,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:8750505c-7f5a-44e5-9f7b-732640c82e89": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Engineer, Flight Test (R5371)",
+      "score": 15,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:1b1120c2-0a10-40eb-bb47-1fa5dfa7a4b0": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Systems Test Engineer (R5243)",
+      "score": 25,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:9396faae-4bd7-44df-874a-17d885e2704c": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Engineer II, Flight Controls - X-BAT (R4816)",
+      "score": 17,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:1b197484-45f1-4dc4-b72e-cccf3f5b5fcc": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Power Electronics - Electrical Engineer I",
+      "score": 35,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:b2660259-a5db-4530-95e6-20e48a41068d": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Electrical Engineer I (SD)",
+      "score": 23,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:8938d698-9b51-441b-b2d6-023a1f04968b": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Electrical Engineer",
+      "score": 24,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:dbcd59b0-c179-4f96-ba28-382dd40279d1": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Engineer II, Mechanical Test (R4935)",
+      "score": 32,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:894e6648-990d-4673-9200-a31b9a8ea46d": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Engineer II, Structural Analysis (R4952)",
+      "score": 16,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:93a73661-dcd8-4406-b229-04f19ef1e89f": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Engineer, Automated Test (R4461)",
+      "score": 21,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:e9a64349-ba55-45b6-92b7-7080294e5855": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Engineer II, Mechanical Design (R4922)",
+      "score": 17,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:39c3a9c6-20be-407e-8b6b-35340a2758ee": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Manager of Engineering - Autonomous Pilot Integration - Emerging Domains (R5176)",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:88fb99dc-26b8-4937-92a9-b8d13ce4e0f0": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Electrical Engineer I (BOS) (R5046)",
+      "score": 23,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:cb8e8e27-20b0-4845-885f-b9ebf4165ecb": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Software Engineer, Autonomous Pilot Integration – Expeditionary (R5208)",
+      "score": 15,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:447d193e-3bfc-463d-be0e-b50ad251840c": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Engineer, Software - Autonomous Aircraft Integration (R5200)",
+      "score": 20,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:57ca1f98-28e8-436f-8847-ba51d9a2155d": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Engineer, Sensor Integration (R5128)",
+      "score": 22,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:b5c04c3f-3d08-40ab-9a7d-e274648e9b3b": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Manager of Engineering - Autonomous Pilot Integration - Expeditionary (R5175)",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:755b73f4-2e34-4bb7-8dc2-fc7b2c598c6d": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Strategic Sourcing Manager (R4766)",
+      "score": 15,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:af5c8cfb-1990-45d6-bd43-95fb4f70ce26": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Software Test and Automation Engineer (R4472)",
+      "score": 17,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:278bdf33-85f0-49ab-a448-567e7e362ca2": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Engineer I, Electrical Integration & Test (R5136)",
+      "score": 24,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:17129b78-ff3a-4aa5-84f4-cda8a787378b": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Manager, Quality – Development Programs (R5315)",
+      "score": 21,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:e893aa87-f6b4-4257-b899-e41c1f79bc2f": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Technical Program Manager, Manufacturing (R4741)",
+      "score": 20,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:025db103-0164-4d43-8168-6436c01cc702": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Software Engineer, Autonomous Pilot Integration – Weapons (R5427)",
+      "score": 15,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:2a68a56f-6b77-4abe-a43d-b5dc68f783c7": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Hardware Reliability Engineer II (R4675)",
+      "score": 28,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:b2a9e79b-e260-4620-9718-6ae58000d2da": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Engineer, Systems Test (R5038)",
+      "score": 19,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:1e8c01c4-9362-4889-b4f1-ff8baf9d2a2d": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Lead Mechanical Engineer, Hardware Test (X-BAT) (R5271)",
+      "score": 23,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:c8106e18-3f0e-4005-afe1-8fcdf3d7791f": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Engineer II, Thermal Design and Analysis (R4934)",
+      "score": 25,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:7990d2bf-d608-4f43-9336-7f49572463a0": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Power Electronics - Electrical Engineer II",
+      "score": 34,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:4a1db44e-1f00-4267-9eab-876adbde6a61": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Manager of Engineering - Autonomous Pilot Integration (R5153)",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:c509de1d-5289-4960-827d-f342be38f691": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Autonomy Integration Engineer",
+      "score": 20,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:da559383-b23e-4ad1-9ce7-bd1abbc3347b": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Vibrations Test Engineer (R5091)",
+      "score": 31,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:1da93c4d-a552-4ba7-a8a1-6c8d2d6eb543": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Engineer, GNC - Sensor Integration (R4601)",
+      "score": 22,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:5c414d80-5314-4bac-b1b5-0952b7fa4222": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Engineer II, Hydraulics (R4936)",
+      "score": 16,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:8688fcf0-152d-4fbb-aad7-07faf42e4d21": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Associate Engineer, Manufacturing",
+      "score": 15,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:8d47ff88-99aa-432b-bf11-fe763c5500cb": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Manager, Propulsion (Engine) (R5086)",
+      "score": 15,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:3ca9ee26-d6f5-4d7b-b508-c5661138f089": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Electrical Engineer, Hardware Test (R5154)",
+      "score": 31,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:c10666dc-7f9c-4026-85da-1d6f32bfeaf9": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Engineer, Manufacturing",
+      "score": 15,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:9b9c9726-86c2-425e-8069-cd88e5a5e417": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Engineer, Software Embedded Applications (R5071)",
+      "score": 34,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:d68a63a0-2d57-4fca-8201-5fb539ac9f89": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Software Engineer, Autonomous Pilot Integration – Emerging Domains (R5423)",
+      "score": 15,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:dfbb54db-03ac-4ce1-8ee1-b67675bf3680": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Engineer, Mechanical Test (R5207)",
+      "score": 29,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:38287367-55ad-4142-aa7e-eb7e3f7c3eff": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Electrical Integration - Electrical Engineer II (R4627)",
+      "score": 20,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:632c140b-f26f-4afe-90a9-86cf6dc6b5fb": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Engineer, Structural Analysis (R5173)",
+      "score": 16,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:6c2dc925-1f1b-4ec6-8fe0-f4e4e2085b5d": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Engineer, Software Test (R4878)",
+      "score": 24,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:ade81f9b-1b20-4b69-b8fa-e57d5829a0c4": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Software Engineer, Hardware Test (R4978)",
+      "score": 26,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:c72d4505-fa03-43d9-8f31-c87402d8d38d": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Electronics Failure Analysis Engineer (R5258)",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:6d47a056-8e71-4ffc-80d1-2ac8206325f1": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Software Engineer II, Autonomy Behaviors (R5202)",
+      "score": 18,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:f06fc4a3-180e-4b92-afd6-93257b619cb9": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Manager, Propulsion (Test) (R5089)",
+      "score": 15,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:b548505a-2963-4336-8dca-08fdac49bf42": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Software Engineer, Autonomous Pilot Integration (R5200)",
+      "score": 19,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:50dd0db1-2674-4540-92bb-84de8789216e": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Propulsion Test Engineer (R4380)",
+      "score": 17,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:4abd60c3-04fa-4168-bed7-bc63707e1d0a": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Electrical Engineer I (TX)",
+      "score": 23,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:9a9b8c07-1d96-4bcc-a29c-079b94516936": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Flight Test Engineer (R5006)",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:f9ceb9c3-9b56-4e6b-8c0b-80686379731f": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Software Engineer, Autonomy Behaviors (R4588)",
+      "score": 18,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:f82f8a4e-cfeb-44e0-953e-ce9566dd072e": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Supplier Development Engineer - Electronics (R5480)",
+      "score": 17,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:1ee361f2-d7c9-4df3-a8cb-b0bf2fdb88a2": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Engineer II, Systems Test (R5038)",
+      "score": 16,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:98ad219b-d2e2-4362-8179-2eebfec68501": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Autonomy & Perception Integration Engineer - Flight Test (R5441)",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:394ce193-bfda-4465-9d79-a438863957be": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Manager, Software Test & Autonomation (R5461)",
+      "score": 16,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:75bb06e0-acb7-4317-a481-a12f12de9d26": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Engineer, Software Embedded Applications (R5070)",
+      "score": 34,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:f3f68517-521c-45c4-96ac-ea3988409eb3": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Engineer II, Electrical (R5111)",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:03fb62a1-d6a6-4a70-8f54-926ae7f72458": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Manager, Mechanisms Engineering (R4858)",
+      "score": 17,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:bfcbc220-0905-4f72-9ac9-3734014e1a5b": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Autonomy Integration Engineer (R5245)",
+      "score": 20,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:7d7a5df2-1d05-4a64-b108-dacac4377a6c": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Engineer, Flight Controls - X-BAT (R4814)",
+      "score": 17,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:60b7ae50-ffbc-4b2e-95cd-e0b58d26006d": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Engineer II, Software Embedded Applications (R5069)",
+      "score": 28,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:bc9e0e7c-c073-47c1-8fe7-a9c38edfaa41": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Engineer II, Structural Analysis (R5166)",
+      "score": 16,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:e1f2c3b8-0f3f-472c-9f51-6a5d89c21427": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Power Electronics - Thermal Engineer I (R4842)",
+      "score": 18,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:ebc34730-6961-4fba-a632-b4023dd13ba4": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Engineer, Autonomy Software Integration & Test (R5225)",
+      "score": 21,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:930af011-b761-441e-b29e-64b7d1c046a9": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Engineer, Software Integration Engineer (R5462)",
+      "score": 16,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:4a4b8bda-e117-4ed5-a996-60746c6c2ad2": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Engineer, Architecture and Infrastructure Test (R5485)",
+      "score": 16,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:shield-ai:b7faa95e-b7bc-4d69-b981-f05d5c828381": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Electrical Engineer, Test Equipment Design",
+      "score": 28,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:16b044e7-02e2-4657-9b87-782a76b127b1": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Electrical Engineer, Hardware Test (R5099)",
+      "score": 33,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:c9344bba-d17d-4601-b6af-ebc4d4385a05": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Electrical Engineer, Test Equipment Design",
+      "score": 30,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:d18a250e-5deb-4f72-a805-ad6aea14b705": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Electrical Engineer, Test Equipment Design",
+      "score": 28,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:e1b1f554-3e9a-4d87-b0d3-d7eb77af002d": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Senior Electrical Engineer, Hardware Test (R5099)",
+      "score": 31,
+      "eligibility": "visa-needed"
+    },
+    "ashby:shield-ai:2e85ddaa-add3-40f3-821f-38d5ad7167dd": {
+      "first_seen": "2026-08-19",
+      "company": "Shield AI",
+      "title": "Engineering Manager, Air Vehicle Mechanical Systems (R5391)",
+      "score": 19,
+      "eligibility": "visa-needed"
+    },
+    "ashby:1x:d718036a-530c-40cd-bfed-63ce8e64dc75": {
+      "first_seen": "2026-08-19",
+      "company": "1X",
+      "title": "Robot Operations Manager PM ",
+      "score": 20,
+      "eligibility": "visa-needed"
+    },
+    "ashby:1x:1fc6f14f-2ecc-4ceb-a988-5d5f7ca041d1": {
+      "first_seen": "2026-08-19",
+      "company": "1X",
+      "title": "Quality Engineer Manufacturing ",
+      "score": 43,
+      "eligibility": "visa-needed"
+    },
+    "ashby:1x:e883e6b4-e193-4fd8-ae4f-cdaeb66b29b3": {
+      "first_seen": "2026-08-19",
+      "company": "1X",
+      "title": "Manufacturing Engineer",
+      "score": 27,
+      "eligibility": "visa-needed"
+    },
+    "ashby:1x:0eb854f8-97f7-43a0-8818-f138178586f8": {
+      "first_seen": "2026-08-19",
+      "company": "1X",
+      "title": "Test & Validation Engineer - Motors and Actuators",
+      "score": 84,
+      "eligibility": "visa-needed"
+    },
+    "ashby:1x:985b1bc5-afee-4ab6-b73e-ea867d83a6df": {
+      "first_seen": "2026-08-19",
+      "company": "1X",
+      "title": "Supplier Development Engineer - Diecasting",
+      "score": 16,
+      "eligibility": "visa-needed"
+    },
+    "ashby:1x:e28952a1-8abc-489d-b213-a3011e5fe87d": {
+      "first_seen": "2026-08-19",
+      "company": "1X",
+      "title": "Tactile Sensing Research Engineer",
+      "score": 21,
+      "eligibility": "visa-needed"
+    },
+    "ashby:1x:1859f30c-34c9-441b-abd3-f2ec9658bdb8": {
+      "first_seen": "2026-08-19",
+      "company": "1X",
+      "title": "Simulation Engineer",
+      "score": 31,
+      "eligibility": "visa-needed"
+    },
+    "ashby:1x:873f836f-a4b6-4ef8-9500-b960cb1198f9": {
+      "first_seen": "2026-08-19",
+      "company": "1X",
+      "title": "Senior Harness Manufacturing Engineer",
+      "score": 28,
+      "eligibility": "visa-needed"
+    },
+    "ashby:1x:5a93bffa-fdc6-4059-b76e-e7c7acc29bbb": {
+      "first_seen": "2026-08-19",
+      "company": "1X",
+      "title": "Materials and Process Innovation Engineer",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "ashby:1x:fe98f703-bceb-4477-acc3-da7124c3fb87": {
+      "first_seen": "2026-08-19",
+      "company": "1X",
+      "title": "Global Supply Manager, Motors & Magnets",
+      "score": 33,
+      "eligibility": "visa-needed"
+    },
+    "ashby:1x:cecfbda7-3180-49eb-8df0-d08348714e3a": {
+      "first_seen": "2026-08-19",
+      "company": "1X",
+      "title": "Sr Materials and Battery Compliance Engineer",
+      "score": 20,
+      "eligibility": "visa-needed"
+    },
+    "ashby:1x:3398e992-b02a-4d39-aabe-f4ac2bb6591d": {
+      "first_seen": "2026-08-19",
+      "company": "1X",
+      "title": "Mechanical Engineer ",
+      "score": 28,
+      "eligibility": "visa-needed"
+    },
+    "ashby:1x:a9c41bfd-5b06-4fb4-ae4e-50d82c3dbf7a": {
+      "first_seen": "2026-08-19",
+      "company": "1X",
+      "title": "Software Engineer - Operating Systems",
+      "score": 15,
+      "eligibility": "visa-needed"
+    },
+    "ashby:1x:664d3be4-5805-4062-b191-aa9b80f914af": {
+      "first_seen": "2026-08-19",
+      "company": "1X",
+      "title": "Software Engineer - Core",
+      "score": 26,
+      "eligibility": "visa-needed"
+    },
+    "ashby:1x:edd41b07-52fa-43c6-a251-e92d07caedee": {
+      "first_seen": "2026-08-19",
+      "company": "1X",
+      "title": "Supplier Development Engineer- Motors and Magnets",
+      "score": 50,
+      "eligibility": "visa-needed"
+    },
+    "ashby:1x:81d4cbda-951d-4675-9650-9f62d6c21055": {
+      "first_seen": "2026-08-19",
+      "company": "1X",
+      "title": "Battery Test Engineer",
+      "score": 56,
+      "eligibility": "visa-needed"
+    },
+    "ashby:1x:114faf79-0ab9-4810-86f4-3b41c3b1b15a": {
+      "first_seen": "2026-08-19",
+      "company": "1X",
+      "title": "Electrical Engineer - Actuators and Drives",
+      "score": 59,
+      "eligibility": "visa-needed"
+    },
+    "ashby:1x:fbe6dc39-da2e-4d64-a660-f9a38454a93e": {
+      "first_seen": "2026-08-19",
+      "company": "1X",
+      "title": "Audio Systems Engineer, Robot Head",
+      "score": 36,
+      "eligibility": "visa-needed"
+    },
+    "ashby:1x:a02d07dc-851d-4246-bc1d-1f50412015c0": {
+      "first_seen": "2026-08-19",
+      "company": "1X",
+      "title": "Software Engineer - Robotic Controls",
+      "score": 20,
+      "eligibility": "visa-needed"
+    },
+    "ashby:1x:fe801c98-3344-47d0-8b8f-3958fc453fc0": {
+      "first_seen": "2026-08-19",
+      "company": "1X",
+      "title": "Mechanical Engineer - Actuators",
+      "score": 40,
+      "eligibility": "visa-needed"
+    },
+    "ashby:1x:1547c5c1-fbe3-4c0d-b6c4-4366c5c606c7": {
+      "first_seen": "2026-08-19",
+      "company": "1X",
+      "title": "Senior Test Development Engineer",
+      "score": 32,
+      "eligibility": "visa-needed"
+    },
+    "ashby:1x:06f50940-79db-4505-8bcd-ddc2b739fb81": {
+      "first_seen": "2026-08-19",
+      "company": "1X",
+      "title": "Senior Build Engineer, Automated Build & Release",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "ashby:1x:12bd4be7-4b9d-4bae-8239-e1a9df11b19d": {
+      "first_seen": "2026-08-19",
+      "company": "1X",
+      "title": "Software Engineer - NEO Reliability",
+      "score": 23,
+      "eligibility": "visa-needed"
+    },
+    "ashby:1x:4d79b1a6-b405-455f-b2c5-13ca5df20638": {
+      "first_seen": "2026-08-19",
+      "company": "1X",
+      "title": "Lead of Core - Systems Software",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "ashby:1x:99980e95-f006-46bf-9ecb-d37161291a92": {
+      "first_seen": "2026-08-19",
+      "company": "1X",
+      "title": "Camera Hardware Engineer, Robot Head",
+      "score": 43,
+      "eligibility": "visa-needed"
+    },
+    "ashby:1x:137de94e-88c7-425c-aa67-a12342ba15ff": {
+      "first_seen": "2026-08-19",
+      "company": "1X",
+      "title": "Test and Validation Supervisor ",
+      "score": 35,
+      "eligibility": "visa-needed"
+    },
+    "ashby:1x:7d93444c-01f5-485c-89ef-24164f30441d": {
+      "first_seen": "2026-08-19",
+      "company": "1X",
+      "title": "Internship - Manufacturing Engineering (Fall)",
+      "score": 24,
+      "eligibility": "visa-needed"
+    },
+    "ashby:1x:0651ab56-3763-4e51-9bd8-35653ffad62c": {
+      "first_seen": "2026-08-19",
+      "company": "1X",
+      "title": "Coatings and Materials Manufacturing Engineer ",
+      "score": 37,
+      "eligibility": "visa-needed"
+    },
+    "ashby:1x:14a3f92c-24ec-4722-8754-d0d1366c9ed7": {
+      "first_seen": "2026-08-19",
+      "company": "1X",
+      "title": "Electrical Engineer, Hands ",
+      "score": 51,
+      "eligibility": "visa-needed"
+    },
+    "ashby:physicalintelligence:77a8ca93-7344-43ed-b215-98ecd95ecf9b": {
+      "first_seen": "2026-08-19",
+      "company": "Physical Intelligence",
+      "title": "Manufacturing Engineer",
+      "score": 26,
+      "eligibility": "visa-needed"
+    },
+    "ashby:physicalintelligence:404111a6-3a18-4a7c-a249-dd787f975188": {
+      "first_seen": "2026-08-19",
+      "company": "Physical Intelligence",
+      "title": "NPI Technical Program Manager",
+      "score": 32,
+      "eligibility": "visa-needed"
+    },
+    "ashby:physicalintelligence:c8f9e9aa-8801-4916-9b1f-2c0bd5f072f9": {
+      "first_seen": "2026-08-19",
+      "company": "Physical Intelligence",
+      "title": "Controls Engineer",
+      "score": 15,
+      "eligibility": "visa-needed"
+    },
+    "ashby:physicalintelligence:58e5a454-47db-41b2-9c5d-c8e34c55159e": {
+      "first_seen": "2026-08-19",
+      "company": "Physical Intelligence",
+      "title": "Mechanical Design Engineer",
+      "score": 31,
+      "eligibility": "visa-needed"
+    },
+    "ashby:physicalintelligence:8e9830f4-89ba-46e6-ab73-648c550aaf3c": {
+      "first_seen": "2026-08-19",
+      "company": "Physical Intelligence",
+      "title": "Robot Integration Engineer",
+      "score": 21,
+      "eligibility": "visa-needed"
+    },
+    "ashby:physicalintelligence:45cf0996-6cdd-42ba-b810-1e5ce1e36cd7": {
+      "first_seen": "2026-08-19",
+      "company": "Physical Intelligence",
+      "title": "Supply Chain Lead",
+      "score": 17,
+      "eligibility": "visa-needed"
+    },
+    "ashby:physicalintelligence:81d1eb25-ada9-40fd-8708-e1e42ecb2b7e": {
+      "first_seen": "2026-08-19",
+      "company": "Physical Intelligence",
+      "title": "Production Test Engineer",
+      "score": 27,
+      "eligibility": "visa-needed"
+    },
+    "ashby:physicalintelligence:17107519-0e50-430a-b742-200f08388d29": {
+      "first_seen": "2026-08-19",
+      "company": "Physical Intelligence",
+      "title": "Prototype Engineer",
+      "score": 23,
+      "eligibility": "visa-needed"
+    },
+    "ashby:gecko-robotics:9b97856e-39ba-40bb-b598-1f1529e7d047": {
+      "first_seen": "2026-08-19",
+      "company": "Gecko Robotics",
+      "title": "Software Development Engineer in Test",
+      "score": 18,
+      "eligibility": "remote"
+    },
+    "ashby:gecko-robotics:db56ca17-13fe-4b59-81b4-b07149023e05": {
+      "first_seen": "2026-08-19",
+      "company": "Gecko Robotics",
+      "title": "Robot Field Operator",
+      "score": 16,
+      "eligibility": "remote"
+    },
+    "ashby:gecko-robotics:c01ae887-a93b-49e0-8185-71226fd6b86c": {
+      "first_seen": "2026-08-19",
+      "company": "Gecko Robotics",
+      "title": "Robot Operations Manager ",
+      "score": 18,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:gecko-robotics:5ff40755-edc3-4cdb-9d04-bc3eddce4102": {
+      "first_seen": "2026-08-19",
+      "company": "Gecko Robotics",
+      "title": "Quality Engineer",
+      "score": 26,
+      "eligibility": "blocked-itar"
+    },
+    "ashby:gecko-robotics:b34a57a4-9385-4edb-8f10-63c743cc0294": {
+      "first_seen": "2026-08-19",
+      "company": "Gecko Robotics",
+      "title": "Robotics Software Engineer",
+      "score": 18,
+      "eligibility": "remote"
+    },
+    "lever:zoox:f4746da4-8eb8-43e2-b7ce-bf3c7cf9640d": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Autonomy System Test Engineer",
+      "score": 19,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:c794f77e-c39d-44f2-9309-8bc904e0f868": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Contract Student Worker System Test Engineer (Full-time)",
+      "score": 17,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:0dd5de4b-4e98-4808-85fd-e739e7fc5bba": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Embedded Software Engineer",
+      "score": 23,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:082ed20c-b8e1-4b1c-9c22-4738ad94055d": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Embedded Software Engineer - Battery Management Systems",
+      "score": 24,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:46c23963-2be1-4037-8f1a-ce87bdccde6d": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Embedded Software Engineer - Body Systems",
+      "score": 21,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:4c16c18c-18c0-433c-bc21-8bd72824a1d9": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Embedded Software Engineer - MCU Platforms",
+      "score": 17,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:b1bba11f-2b04-4a4a-8095-752c04182af1": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Embedded Software Engineer - Power Systems",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:46336705-25a7-4e33-b008-680ad0117dd8": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Engineering Manager, Autonomy Systems Verification and Validation",
+      "score": 16,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:4b00bf61-6547-4c50-be83-5d659176090b": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Firmware Validation Engineer",
+      "score": 43,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:8c037577-5728-4a7d-bbd4-bd83a3e44614": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Firmware Validation Engineer - Battery Management Systems",
+      "score": 49,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:6fbd5497-3958-40f2-adbf-fe2218d04c28": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Manager, Software Core Firmware Validation",
+      "score": 29,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:b5134a16-5bdc-449e-9665-745bb1e7239f": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Manager, Systems Verification & Validation, Platform Safety Assurance",
+      "score": 20,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:adf2fdd1-d5ca-46f6-aa97-16e4bedf2423": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Manager, Technical Program Management - Artificial Intelligence",
+      "score": 15,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:e0d46302-6fa2-45a7-927d-cd11ccf1843e": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Manufacturing Test Engineer",
+      "score": 19,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:d1f4e09e-90c5-444f-a880-7ce17f281e41": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Senior Chassis Engineer - Actuators, Brakes, & Steering",
+      "score": 19,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:99113e00-d810-47e5-bb31-997eb6d9afaa": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Senior Manufacturing Test Engineer",
+      "score": 19,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:ffb6c8ea-a939-4440-819c-c737737ae6de": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Senior Platform System Vehicle Test Engineer",
+      "score": 22,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:ec7c3f40-ec58-445e-ad01-8cc3d639680c": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Senior Quality Engineer, Advanced Hardware Manufacturing",
+      "score": 20,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:5de4079e-3365-479b-99ca-4bc0371cb63c": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Senior Signal Integrity and EMC Engineer",
+      "score": 16,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:e1c1b82a-db3f-451e-840d-383d87b4515c": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Senior Software Development Engineer in Test - Verification And Validation",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:a3925dc8-29ee-48c5-a9e4-c100818ef247": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Senior Systems Integration Engineer, Body",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:c21467f4-690b-4100-95e5-040b040044b8": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Senior Systems Integration Engineer, Brakes",
+      "score": 17,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:72726d6b-6fe4-48f2-9b1f-4e69c1d0263a": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Senior Systems Integration Engineer, Thermal",
+      "score": 17,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:e93ca4b5-b327-40f1-886b-a72a251c33e2": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Senior Technical Program Manager - Compute and Sensors",
+      "score": 15,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:379f39ea-d01b-4112-ad65-a148b8a24fa9": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Senior Technical Program Manager - NPI (Test & Diagnostics)",
+      "score": 34,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:5c373b68-b18b-45ef-b69e-7c0f8e578b57": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Senior Technical Program Manager - Product Software",
+      "score": 15,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:306e97e2-1036-4edc-b14d-161279ffa8ec": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Senior Technical Program Manager - Vehicle Attributes",
+      "score": 21,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:a8a99e08-ac9d-4cfd-98cb-50eae1e96675": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Senior Technical Program Manager - Vehicle Platform & Autonomy Integration",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:ab24fad1-bc66-4b58-bd8d-e65f558acff1": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Senior Technical Program Manager - Vehicle System Integration",
+      "score": 30,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:90ee9fbc-f0e4-4b47-a337-09493ecf4902": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Senior Technical Program Manager, Manufacturing Integration",
+      "score": 23,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:93936b92-3aa4-4461-9b50-8b0397dcdf29": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Senior Technical Program Manager, Manufacturing Test Solutions",
+      "score": 25,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:aa87cd88-dc3f-4c54-accf-e4e9c9b9a2ba": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Senior Technical Program Manager, Operational Excellence",
+      "score": 20,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:7d9de9c0-14e0-47ed-aa8e-b86caffe57f2": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Senior Technical Program Manager, Service Engineering",
+      "score": 16,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:4f4ff749-8f88-428d-bd14-2f15d84c492c": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Senior Technical Program Manager, Systems and Business Process Review",
+      "score": 17,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:6d975a67-c0ec-4eb5-99b5-5ba4a455e5bd": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Senior Vehicle SW Deployment Engineer: Robot Software Infrastructure",
+      "score": 17,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:ee3d224f-fb03-4b28-ae55-aef094ea26b2": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Supplier Quality Engineer",
+      "score": 20,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:ec1de483-ebd5-4b87-96b7-d749f077aefb": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "System Test Engineer",
+      "score": 22,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:fe41af48-f0ec-46ec-b840-00f9d9f872de": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "System Verification and Validation Engineer - Fail Operational Systems",
+      "score": 22,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:c8924164-2a47-4700-9686-c0783fa6dc25": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Systems Test Engineer, System Behavior Analysis",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "lever:zoox:0a22d356-f7f7-4374-b393-55637772edda": {
+      "first_seen": "2026-08-19",
+      "company": "Zoox",
+      "title": "Technical Program Manager, PMO - Test Fleet Program (Contract)",
+      "score": 19,
+      "eligibility": "visa-needed"
+    },
+    "lever:dexterity:b797d144-159f-4467-a54e-b88da612d244": {
+      "first_seen": "2026-08-19",
+      "company": "Dexterity",
+      "title": "Contract / Jr. Test Manufacturing Engineer",
+      "score": 25,
+      "eligibility": "visa-needed"
+    },
+    "lever:dexterity:fc2356ec-35b9-470f-af00-a4286e275161": {
+      "first_seen": "2026-08-19",
+      "company": "Dexterity",
+      "title": "Controls Engineer",
+      "score": 16,
+      "eligibility": "visa-needed"
+    },
+    "lever:dexterity:f64ee685-10c0-4b47-932f-13a01d878388": {
+      "first_seen": "2026-08-19",
+      "company": "Dexterity",
+      "title": "Manufacturing Engineer, Document Control",
+      "score": 15,
+      "eligibility": "visa-needed"
+    },
+    "lever:dexterity:0ef47e26-322e-4dd8-95e5-983f61c34edb": {
+      "first_seen": "2026-08-19",
+      "company": "Dexterity",
+      "title": "Senior Electrical Engineer",
+      "score": 16,
+      "eligibility": "visa-needed"
+    },
+    "workday:amat:2625810": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "Metrology Algorithm Developer for R&D TCT Korea",
+      "score": 8,
+      "eligibility": "korea"
+    },
+    "workday:amat:2617517": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "Korea Lab Facilities Engineer (Electrical, Mechanical, Gas & Chemical)",
+      "score": 9,
+      "eligibility": "korea"
+    },
+    "workday:amat:2624445": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "Korea Installation Planner (Non-Tech Project/Program Management)",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:amat:2625620": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "MesoVision Algorithm Developer (Algorithm Engineering) for TCT Korea",
+      "score": 10,
+      "eligibility": "korea"
+    },
+    "workday:amat:2619889": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "Optical Wafer Inspection(OPWI) Systems Engineer  for TCT Korea",
+      "score": 9,
+      "eligibility": "korea"
+    },
+    "workday:amat:2622467": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "Regional Employee Relations Specialist – APAC",
+      "score": 1,
+      "eligibility": "korea"
+    },
+    "workday:amat:2621131": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "EPI Systems Engineer for Upgrade/Refurb Project",
+      "score": 6,
+      "eligibility": "korea"
+    },
+    "workday:amat:2625305": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "Display Supplier Engineer",
+      "score": 9,
+      "eligibility": "korea"
+    },
+    "workday:amat:2621604": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "Senior Communication and Public Relations(PR) Specialist",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:amat:2622841": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "Technical Project/Program Management IV",
+      "score": 1,
+      "eligibility": "korea"
+    },
+    "workday:amat:2519323": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "Ion Implant(VSE) Customer Engineer",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:amat:2615160": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "[경력] Installation Team Customer Engineer 채용 - 반도체 장비 엔지니어 (경력 1년 이상)",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:amat:2616562": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "Epitaxy Module Process Engineer",
+      "score": 9,
+      "eligibility": "korea"
+    },
+    "workday:amat:2619663": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "ETCH Customer Engineer",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:amat:2620421": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "Application Engineer (ETCH)",
+      "score": 5,
+      "eligibility": "korea"
+    },
+    "workday:amat:1701089": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "Regional Planner",
+      "score": 1,
+      "eligibility": "korea"
+    },
+    "workday:amat:2621378": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "MDP Customer Engineer",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:amat:2621017": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "FEP/EPI Customer Engineer",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:amat:2621968": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "FEP(Epitaxy/RTP) Customer Engineer",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:amat:2622349": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "PDC(SEMVision) Customer Engineer",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:amat:2622503": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "Ion Implant Installation Customer Engineer",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:amat:2623035": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "Technical Project/Program Management",
+      "score": 3,
+      "eligibility": "korea"
+    },
+    "workday:amat:2623711": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "MDP Installation Customer Engineer",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:amat:2623715": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "EPI Installation Customer Engineer",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:amat:2623714": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "PPC Installation Customer Engineer",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:amat:2622443": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "Thin Film (CVD / ALD / PVD / Epitaxy) Module Process Engineer",
+      "score": 9,
+      "eligibility": "korea"
+    },
+    "workday:amat:2622858": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "EPI/CMP SmartStart Install Automation Engineer",
+      "score": 9,
+      "eligibility": "korea"
+    },
+    "workday:amat:2623684": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "ETCH Module Process Engineer(Fab Consulting)",
+      "score": 7,
+      "eligibility": "korea"
+    },
+    "workday:amat:2624570": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "ETCH Customer Engineer",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:amat:2624566": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "CMP Customer Engineer",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:amat:2624580": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "Manager, MDP Installation Customer Engineer",
+      "score": 4,
+      "eligibility": "korea"
+    },
+    "workday:amat:2624117": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "CMP Customer Engineer",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:amat:2624113": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "Epitaxy Customer Engineer",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:amat:2625074": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "Ion Implant Customer Engineer",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:amat:2625073": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "FEP/Epitaxy R&D Customer Engineer",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:amat:2624107": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "ETCH Customer Engineer",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:amat:2624119": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "VSE(Ion Implant) Customer Engineer",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:amat:2625343": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "RTP Customer Engineer",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:amat:2625346": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "MDP R&D Customer Engineer",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:amat:2625397": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "DDP/Epitaxy Module Process Engineer",
+      "score": 9,
+      "eligibility": "korea"
+    },
+    "workday:amat:2625603": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "PDC(Metrology and Inspection) Installation Customer Engineer",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:amat:2625828": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "DDP Customer Engineer",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:amat:2626181": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "[IT Customer Engineer] Tool Computing & Server Infrastructure for PDC",
+      "score": 7,
+      "eligibility": "korea"
+    },
+    "workday:amat:2620070": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "Motion control engineer",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "workday:amat:2418795": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "Manufacturing Test Engineer",
+      "score": 15,
+      "eligibility": "korea-apac"
+    },
+    "workday:amat:2517856": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "Validation Engineer",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "workday:amat:2624985": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "Supplier Quality Engineer V",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "workday:amat:2622317": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "Validation Engineer Tech Lead",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "workday:amat:2616490": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "Supplier Quality Engineer",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "workday:amat:2616596": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "Supplier Quality Engineer (m/f/d) - semiconductor industry",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "workday:amat:2624770": {
+      "first_seen": "2026-08-19",
+      "company": "Applied Materials",
+      "title": "Junior Supplier Quality Engineer (m/f/d) - for semiconductor industry",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "workday:kla:2637575": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "Korea Procurement Lead",
+      "score": 11,
+      "eligibility": "korea"
+    },
+    "workday:kla:2638161": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "CI Customer Engagement Application Engineer for Korea",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:kla:2634048": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "Division SPTS Sr. Technical Engagement Manager",
+      "score": 4,
+      "eligibility": "korea"
+    },
+    "workday:kla:2109608": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "Product Installation Engineer (인재DB등록)",
+      "score": 10,
+      "eligibility": "korea"
+    },
+    "workday:kla:2532272": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "Division MACH Product Development Applications Engineer (석/박사 신입)",
+      "score": 7,
+      "eligibility": "korea"
+    },
+    "workday:kla:2635584": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "Division MACH Software Applications Engineer",
+      "score": 7,
+      "eligibility": "korea"
+    },
+    "workday:kla:5884": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "KLAS LKS CPG Technical Instructor",
+      "score": 11,
+      "eligibility": "korea"
+    },
+    "workday:kla:2636332": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "SKBU LS/SWIFT Customer Engagement Applications Engineer (경력)",
+      "score": 4,
+      "eligibility": "korea"
+    },
+    "workday:kla:2634826": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "KLAS FaST Product Install Engineer",
+      "score": 9,
+      "eligibility": "korea"
+    },
+    "workday:kla:2637714": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "SBU RAPID Customer Engagement Applications Engineer (경력 Only)",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:kla:2638383": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "Division MACH Product Development Applications Engineer (석/박사 신입)",
+      "score": 7,
+      "eligibility": "korea"
+    },
+    "workday:kla:2638324": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "Division FaST Regional Development Applications Engineer (박사 신입 가능)",
+      "score": 4,
+      "eligibility": "korea"
+    },
+    "workday:kla:2638803": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "Samsung BU ECI Account Mananger",
+      "score": 4,
+      "eligibility": "korea"
+    },
+    "workday:kla:2638217": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "Division Regional Development Applications Engineer (경력)",
+      "score": 4,
+      "eligibility": "korea"
+    },
+    "workday:kla:2637966": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "Engr, Cust Supp 3",
+      "score": 9,
+      "eligibility": "korea"
+    },
+    "workday:kla:2638267": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "Division Product Development System engineer",
+      "score": 15,
+      "eligibility": "korea"
+    },
+    "workday:kla:2638147": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "Service Operations Specialist",
+      "score": 8,
+      "eligibility": "korea"
+    },
+    "workday:kla:2638882": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "KLAS SWIFT Product Installation Engineer (학사신입가능)",
+      "score": 9,
+      "eligibility": "korea"
+    },
+    "workday:kla:2637528": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "Product Installation Engineer - ECI",
+      "score": 9,
+      "eligibility": "korea"
+    },
+    "workday:kla:2637531": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "Product Installation Engineer - ECI",
+      "score": 9,
+      "eligibility": "korea"
+    },
+    "workday:kla:2638881": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "KLAS SWIFT Product Installation Engineer (학사신입가능)",
+      "score": 9,
+      "eligibility": "korea"
+    },
+    "workday:kla:2637921": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "KLAS SFS Relocation Engineer",
+      "score": 11,
+      "eligibility": "korea"
+    },
+    "workday:kla:2639081": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "SBU Common Spec Engineer",
+      "score": 9,
+      "eligibility": "korea"
+    },
+    "workday:kla:2635637": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "Division MACH Regional Development Applications Engineer",
+      "score": 7,
+      "eligibility": "korea"
+    },
+    "workday:kla:2636148": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "SKBU LS/SWIFT Field service manager",
+      "score": 9,
+      "eligibility": "korea"
+    },
+    "workday:kla:2637920": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "SKBU BBP Customer Engagement Applications Engineer (경력)",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:kla:2637401": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "SKBU FaST Customer Engagement Applications Engineer",
+      "score": 4,
+      "eligibility": "korea"
+    },
+    "workday:kla:2637402": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "SKBU FaST Customer Engagement Applications Engineer (경력)",
+      "score": 4,
+      "eligibility": "korea"
+    },
+    "workday:kla:2637142": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "SKBU LS/SWIFT Customer Engagement Applications Engineer",
+      "score": 4,
+      "eligibility": "korea"
+    },
+    "workday:kla:2637398": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "SKBU Customer Engagement Applications Engineer",
+      "score": 4,
+      "eligibility": "korea"
+    },
+    "workday:kla:2637932": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "SKBU BBP Customer Engagement Applications Engineer (경력)",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:kla:2633922": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "GSS FaST Product Installation Engineer",
+      "score": 9,
+      "eligibility": "korea"
+    },
+    "workday:kla:2636746": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "KLAS RAPID Product Installation Engineer",
+      "score": 9,
+      "eligibility": "korea"
+    },
+    "workday:kla:2638970": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "KLAS RAPID Product Installation Engineer",
+      "score": 9,
+      "eligibility": "korea"
+    },
+    "workday:kla:2638972": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "OMD Product Installation Engineer",
+      "score": 9,
+      "eligibility": "korea"
+    },
+    "workday:kla:2636131": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "KLAS LS/SWIFT Product Installation Engineer (학사신입가능)",
+      "score": 9,
+      "eligibility": "korea"
+    },
+    "workday:kla:2635999": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "KLAS BBP Product Installation Engineer",
+      "score": 9,
+      "eligibility": "korea"
+    },
+    "workday:kla:2639039": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "KLAS BBP Product Installation Engineer",
+      "score": 9,
+      "eligibility": "korea"
+    },
+    "workday:kla:2639037": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "KLAS BBP Product Installation Engineer",
+      "score": 9,
+      "eligibility": "korea"
+    },
+    "workday:kla:2639038": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "KLAS BBP Product Installation Engineer",
+      "score": 9,
+      "eligibility": "korea"
+    },
+    "workday:kla:2639036": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "KLAS BBP Product Installation Engineer",
+      "score": 9,
+      "eligibility": "korea"
+    },
+    "workday:kla:2636138": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "KLAS SWIFT Product Install Engineer",
+      "score": 9,
+      "eligibility": "korea"
+    },
+    "workday:kla:2636139": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "KLAS EBI Product Install Engineer",
+      "score": 9,
+      "eligibility": "korea"
+    },
+    "workday:kla:2636088": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "GSS FaST Product Relocation engineer",
+      "score": 8,
+      "eligibility": "korea"
+    },
+    "workday:kla:2636531": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "KLAS LKS EBI Technical Instructor",
+      "score": 14,
+      "eligibility": "korea"
+    },
+    "workday:kla:2636129": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "KLAS LS Product Install Engineer",
+      "score": 9,
+      "eligibility": "korea"
+    },
+    "workday:kla:2636133": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "KLAS LS Product Install Engineer",
+      "score": 9,
+      "eligibility": "korea"
+    },
+    "workday:kla:2636229": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "KLAS BBP Product Install Engineer (학사신입가능)",
+      "score": 10,
+      "eligibility": "korea"
+    },
+    "workday:kla:2637980": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "KLAS SFS Product Installation Engineer",
+      "score": 11,
+      "eligibility": "korea"
+    },
+    "workday:kla:2637919": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "KLAS SFS Product Installation Engineer",
+      "score": 11,
+      "eligibility": "korea"
+    },
+    "workday:kla:2635212": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "Motion Control Engineer",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "workday:kla:2639078": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "Motion Control Student",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "workday:kla:2639518": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "R&D Motion Control Engineer",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "workday:kla:2532511": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "Senior Mechatronics Engineer (Motion Control)",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "workday:kla:2635154": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "Senior Mechatronics Engineer (Motion Control)",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "workday:kla:2639063": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "Sr. Systems Design Engineer (Optics, Opto-Mechanics, Motion Control Systems)",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "workday:kla:2638465": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "Sr. Electrical Design Engineer (Linux, Firmware, Embedded, C++)",
+      "score": 21,
+      "eligibility": "visa-needed"
+    },
+    "workday:kla:2639860": {
+      "first_seen": "2026-08-19",
+      "company": "KLA",
+      "title": "Global Supplier Quality Engineer",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "workday:aptiv:000701586": {
+      "first_seen": "2026-08-19",
+      "company": "Aptiv",
+      "title": "PE Manager",
+      "score": 4,
+      "eligibility": "korea"
+    },
+    "workday:aptiv:000701603": {
+      "first_seen": "2026-08-19",
+      "company": "Aptiv",
+      "title": "Program Manager",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:aptiv:000700675": {
+      "first_seen": "2026-08-19",
+      "company": "Aptiv",
+      "title": "Line Quality Supervisor",
+      "score": 4,
+      "eligibility": "korea"
+    },
+    "workday:aptiv:000699670": {
+      "first_seen": "2026-08-19",
+      "company": "Aptiv",
+      "title": "CC Mfg. Engineer",
+      "score": 11,
+      "eligibility": "korea"
+    },
+    "workday:aptiv:000690680": {
+      "first_seen": "2026-08-19",
+      "company": "Aptiv",
+      "title": "Customer Demanding Planner",
+      "score": 1,
+      "eligibility": "korea"
+    },
+    "workday:aptiv:000686482": {
+      "first_seen": "2026-08-19",
+      "company": "Aptiv",
+      "title": "Equipment Maintenance Engineer",
+      "score": 5,
+      "eligibility": "korea"
+    },
+    "workday:aptiv:000687233": {
+      "first_seen": "2026-08-19",
+      "company": "Aptiv",
+      "title": "CJ Assembly Mfg. Supervisor",
+      "score": 1,
+      "eligibility": "korea"
+    },
+    "workday:aptiv:000686485": {
+      "first_seen": "2026-08-19",
+      "company": "Aptiv",
+      "title": "Customer Demanding Planner",
+      "score": 1,
+      "eligibility": "korea"
+    },
+    "workday:aptiv:000683055": {
+      "first_seen": "2026-08-19",
+      "company": "Aptiv",
+      "title": "ME Engineer",
+      "score": 7,
+      "eligibility": "korea"
+    },
+    "workday:aptiv:000682752": {
+      "first_seen": "2026-08-19",
+      "company": "Aptiv",
+      "title": "Sample Delivery-1",
+      "score": 1,
+      "eligibility": "korea"
+    },
+    "workday:aptiv:000679240": {
+      "first_seen": "2026-08-19",
+      "company": "Aptiv",
+      "title": "HV Product Engineer",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:aptiv:000678600": {
+      "first_seen": "2026-08-19",
+      "company": "Aptiv",
+      "title": "KCC Material Planner",
+      "score": 1,
+      "eligibility": "korea"
+    },
+    "workday:aptiv:000671161": {
+      "first_seen": "2026-08-19",
+      "company": "Aptiv",
+      "title": "SCM Buyer",
+      "score": 1,
+      "eligibility": "korea"
+    },
+    "workday:aptiv:000666213": {
+      "first_seen": "2026-08-19",
+      "company": "Aptiv",
+      "title": "Manufacturing Engineering Engineer",
+      "score": 15,
+      "eligibility": "korea"
+    },
+    "workday:aptiv:000657922": {
+      "first_seen": "2026-08-19",
+      "company": "Aptiv",
+      "title": "Test Lab Engineer",
+      "score": 8,
+      "eligibility": "korea"
+    },
+    "workday:aptiv:000663386": {
+      "first_seen": "2026-08-19",
+      "company": "Aptiv",
+      "title": "Assembly Operator",
+      "score": 0,
+      "eligibility": "korea"
+    },
+    "workday:aptiv:000657921": {
+      "first_seen": "2026-08-19",
+      "company": "Aptiv",
+      "title": "HMC Guest Engineer",
+      "score": 1,
+      "eligibility": "korea"
+    },
+    "workday:aptiv:000657913": {
+      "first_seen": "2026-08-19",
+      "company": "Aptiv",
+      "title": "Quality Inspector",
+      "score": 4,
+      "eligibility": "korea"
+    },
+    "workday:aptiv:000650330": {
+      "first_seen": "2026-08-19",
+      "company": "Aptiv",
+      "title": "Warehouse keeper",
+      "score": 0,
+      "eligibility": "korea"
+    },
+    "workday:aptiv:000645975": {
+      "first_seen": "2026-08-19",
+      "company": "Aptiv",
+      "title": "Consumer Connectivity  Engineer",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "workday:aptiv:000645972": {
+      "first_seen": "2026-08-19",
+      "company": "Aptiv",
+      "title": "NY Administration Coordinator",
+      "score": 0,
+      "eligibility": "korea"
+    },
+    "workday:aptiv:000700210": {
+      "first_seen": "2026-08-19",
+      "company": "Aptiv",
+      "title": "Manufacturing Process Engineer - NPI",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "workday:aptiv:000699321": {
+      "first_seen": "2026-08-19",
+      "company": "Aptiv",
+      "title": "Embedded Software Engineer – Wind River Next RTOS",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "workday:aptiv:000699330": {
+      "first_seen": "2026-08-19",
+      "company": "Aptiv",
+      "title": "Senior Embedded Software Engineer – Wind River Next RTOS",
+      "score": 18,
+      "eligibility": "visa-needed"
+    },
+    "workday:aptiv:000696900": {
+      "first_seen": "2026-08-19",
+      "company": "Aptiv",
+      "title": "Functional safety_Embedded SW Engineer",
+      "score": 15,
+      "eligibility": "korea-apac"
+    },
+    "greenhouse:anthropic:5385557008": {
+      "first_seen": "2026-08-19",
+      "company": "Anthropic",
+      "title": "Compute Country Lead, Korea",
+      "score": 0,
+      "eligibility": "korea"
+    },
+    "ashby:openai:ad06299f-d4e2-4de6-a925-b2e94b3c1d0b": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Applied AI Architect",
+      "score": 1,
+      "eligibility": "korea"
+    },
+    "ashby:openai:04435c05-7a05-4802-894d-c173327fbac8": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Applied AI Engineer",
+      "score": 5,
+      "eligibility": "korea"
+    },
+    "ashby:openai:14994645-e453-478c-be65-511dc156a961": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Developer Experience Engineer",
+      "score": 2,
+      "eligibility": "korea"
+    },
+    "ashby:openai:b43339a1-e830-4761-a193-3438f34f9ebb": {
+      "first_seen": "2026-08-19",
+      "company": "OpenAI",
+      "title": "Forward Deployed Engineer - Seoul",
+      "score": 2,
+      "eligibility": "korea"
+    }
+  }
+}

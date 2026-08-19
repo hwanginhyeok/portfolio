@@ -1,0 +1,23 @@
+---
+company: "Physical Intelligence"
+ats: "ashby"
+job_id: "77a8ca93-7344-43ed-b215-98ecd95ecf9b"
+title: "Manufacturing Engineer"
+location: "Fremont"
+country: "United States"
+region: "americas"
+eligibility: "visa-needed"
+score: 26
+matched_keywords: ["DFMEA/PFMEA", "NPI", "manufacturing engineer", "robot", "electronics", "hardware", "manufacturing", "quality", "testing", "vehicle/automotive"]
+url: "https://jobs.ashbyhq.com/physicalintelligence/77a8ca93-7344-43ed-b215-98ecd95ecf9b"
+first_seen: "2026-08-19"
+---
+
+# Manufacturing Engineer — Physical Intelligence
+
+- 지원 자격: **비자 필요 (스폰서 미확인)** (visa-needed) · 점수 26
+- 위치: Fremont (United States)
+
+## JD 본문
+
+Physical Intelligence is bringing general-purpose AI into the physical world. We are a team of engineers, scientists, roboticists, and company builders developing foundation models and learning algorithms to power the robots of today and the physically-actuated devices of the future. We're looking for a Manufacturing Lead who can scale our robotic systems from prototype to production. You'll own the processes, tooling, and systems that enable us to build robots reliably and efficiently. You'll bridge the gap between R&D and production, working closely with design engineers to ensure our robots are manufacturable at scale while maintaining the quality and consistency needed to advance research. You will design assembly and test fixtures, manage the assembly and test flows, BOMs, and work closely with the supply chain team to ensure parts arrive on time and are assembled and tested consistently at scale. In this role you will - Design and optimize manufacturing processes for robotic systems, including assembly sequences, work instructions, and cycle-time improvements. - Collaborate with design engineers to provide DFM/DFA feedback and drive design iterations. - Develop fixtures, jigs, and tooling from the ground up for novel processes to ensure build quality and efficiency for complex robotic assemblies. - Establish and maintain Bills of Materials (BOMs), build instructions, assembly flow and all manufacturing documentation. - Lead the transition of robot designs at various levels of maturity from prototype, to pilot production, to eventually scale. - Conduct root-cause analysis (RCCA) and failure mode analysis (FMEA) to drive continuous improvement. - Define and track manufacturing KPIs including yield, throughput, and cost per unit. - Implement quality control systems including inspection criteria, test protocols, and acceptance standards. What we hope you'll bring - Bachelor's degree in Mechanical Engineering, Manufacturing Engineering, Industrial Engineering, or a related field. - 5+ years of experience in manufacturing engineering, preferably in robotics, automotive, aerospace, or consumer electronics. - Experience with NPI is required. - Proficiency in CAD software (SolidWorks, NX, or Onshape) and GD&T. - Experience with manufacturing processes: machining, sheet metal, injection molding, 3D printing, PCB assembly. - Strong understanding of lean manufacturing principles and continuous improvement methodologies. - Familiarity with ERP/MRP systems and production planning. - Experience with quality systems (ISO 9001) and statistical process control. - Hands-on ability to build and troubleshoot electromechanical systems. - Excellent project management and cross-functional collaboration skills. Pursuant to the San Francisco Fair Chance Ordinance, we will consider for employment qualified applicants with arrest and conviction records.

@@ -23,3 +23,10 @@ site/
 
 # Claude Code 로컬 설정
 .claude/settings.local.json
+
+# 파이썬
+__pycache__/
+*.pyc
+
+# 채용 리포트 HTML — 매일 재생성되고 비서봇으로 전달된다. 원본은 state.json + 공고 md.
+docs/jd/_inbox/*/report/

@@ -1,0 +1,567 @@
+{
+  "_doc": "Targets for scripts/global_collect.py (global boards via Greenhouse/Ashby/Lever + Korea-hiring companies via Workday). profile_keywords/negative_keywords terms are regexes matched case-insensitive with word boundaries. korea_location_terms are the same kind of regex-free match terms for the 'korea' eligibility bucket. Weights derived from docs/blocks/05-extra/RESUME.md §5/§7 + cases/E01_pm_experience.md.",
+  "companies": [
+    {
+      "name": "Waymo",
+      "ats": "greenhouse",
+      "slug": "waymo",
+      "category": "av"
+    },
+    {
+      "name": "Anthropic",
+      "ats": "greenhouse",
+      "slug": "anthropic",
+      "category": "ai-lab"
+    },
+    {
+      "name": "Lucid Motors",
+      "ats": "greenhouse",
+      "slug": "lucidmotors",
+      "category": "ev-mobility"
+    },
+    {
+      "name": "Scale AI",
+      "ats": "greenhouse",
+      "slug": "scaleai",
+      "category": "ai-lab"
+    },
+    {
+      "name": "Figure AI",
+      "ats": "greenhouse",
+      "slug": "figureai",
+      "category": "robotics"
+    },
+    {
+      "name": "Wayve",
+      "ats": "greenhouse",
+      "slug": "wayve",
+      "category": "av"
+    },
+    {
+      "name": "Nuro",
+      "ats": "greenhouse",
+      "slug": "nuro",
+      "category": "av"
+    },
+    {
+      "name": "Apptronik",
+      "ats": "greenhouse",
+      "slug": "apptronik",
+      "category": "robotics"
+    },
+    {
+      "name": "Neuralink",
+      "ats": "greenhouse",
+      "slug": "neuralink",
+      "category": "ai-lab"
+    },
+    {
+      "name": "Agility Robotics",
+      "ats": "greenhouse",
+      "slug": "agilityrobotics",
+      "category": "robotics"
+    },
+    {
+      "name": "Archer Aviation",
+      "ats": "greenhouse",
+      "slug": "archer",
+      "category": "ev-mobility"
+    },
+    {
+      "name": "OpenAI",
+      "ats": "ashby",
+      "slug": "openai",
+      "category": "ai-lab"
+    },
+    {
+      "name": "Shield AI",
+      "ats": "ashby",
+      "slug": "shield-ai",
+      "category": "defense"
+    },
+    {
+      "name": "1X",
+      "ats": "ashby",
+      "slug": "1x",
+      "category": "robotics"
+    },
+    {
+      "name": "Physical Intelligence",
+      "ats": "ashby",
+      "slug": "physicalintelligence",
+      "category": "robotics"
+    },
+    {
+      "name": "Gecko Robotics",
+      "ats": "ashby",
+      "slug": "gecko-robotics",
+      "category": "defense"
+    },
+    {
+      "name": "Zoox",
+      "ats": "lever",
+      "slug": "zoox",
+      "category": "av"
+    },
+    {
+      "name": "Dexterity",
+      "ats": "lever",
+      "slug": "dexterity",
+      "category": "robotics"
+    }
+  ],
+  "workday": [
+    {
+      "name": "Applied Materials",
+      "tenant": "amat",
+      "wd": 1,
+      "site": "External",
+      "category": "semiconductor-equipment"
+    },
+    {
+      "name": "KLA",
+      "tenant": "kla",
+      "wd": 1,
+      "site": "Search",
+      "category": "semiconductor-equipment"
+    },
+    {
+      "name": "Aptiv",
+      "tenant": "aptiv",
+      "wd": 5,
+      "site": "Aptiv_Careers",
+      "category": "ev-mobility"
+    },
+    {
+      "name": "Micron",
+      "tenant": "micron",
+      "wd": 1,
+      "site": "External",
+      "category": "semiconductor-memory"
+    }
+  ],
+  "korea_location_terms": [
+    "Korea",
+    "KOR",
+    "Seoul",
+    "Suwon",
+    "Hwaseong",
+    "Icheon",
+    "Cheonan",
+    "Pyeongtaek",
+    "Bundang",
+    "Dongtan",
+    "Gunpo",
+    "Ulsan",
+    "Choongju",
+    "Youngchun",
+    "Asan",
+    "Gyeonggi",
+    "Incheon",
+    "Busan"
+  ],
+  "workday_search_terms": [
+    "Korea",
+    "motor",
+    "test engineer",
+    "program manager",
+    "equipment",
+    "quality"
+  ],
+  "workday_page_limit": 15,
+  "request_delay_seconds": 1.0,
+  "title_weight": 3,
+  "department_weight": 2,
+  "body_weight": 1,
+  "min_score": 15,
+  "profile_keywords": [
+    {
+      "term": "motor control",
+      "weight": 6
+    },
+    {
+      "term": "motor drive",
+      "pattern": "motor driv(e|er)",
+      "weight": 6
+    },
+    {
+      "term": "BLDC",
+      "pattern": "bldc|brushless dc",
+      "weight": 6
+    },
+    {
+      "term": "PMSM",
+      "pattern": "pmsm",
+      "weight": 6
+    },
+    {
+      "term": "IPMSM / permanent magnet",
+      "pattern": "ipmsm|permanent[- ]magnet",
+      "weight": 6
+    },
+    {
+      "term": "FOC",
+      "pattern": "\\bfoc\\b|field[- ]oriented control",
+      "weight": 6
+    },
+    {
+      "term": "SVPWM",
+      "pattern": "svpwm|space vector",
+      "weight": 6
+    },
+    {
+      "term": "inverter",
+      "weight": 6
+    },
+    {
+      "term": "power electronics",
+      "pattern": "power electronic",
+      "weight": 6
+    },
+    {
+      "term": "actuator",
+      "pattern": "actuat(e|or|ion)",
+      "weight": 6
+    },
+    {
+      "term": "powertrain",
+      "weight": 6
+    },
+    {
+      "term": "drivetrain",
+      "weight": 6
+    },
+    {
+      "term": "traction",
+      "weight": 6
+    },
+    {
+      "term": "electric motor",
+      "pattern": "electric motor|e-?motor",
+      "weight": 6
+    },
+    {
+      "term": "motor design",
+      "weight": 6
+    },
+    {
+      "term": "motion control",
+      "weight": 6
+    },
+    {
+      "term": "gate driver",
+      "pattern": "gate driv(e|er)",
+      "weight": 6
+    },
+    {
+      "term": "PWM",
+      "pattern": "\\bpwm\\b",
+      "weight": 4
+    },
+    {
+      "term": "e-axle / eDrive",
+      "pattern": "e-?axle|e-?drive",
+      "weight": 6
+    },
+    {
+      "term": "motor",
+      "pattern": "motors?",
+      "weight": 3
+    },
+    {
+      "term": "embedded",
+      "weight": 3
+    },
+    {
+      "term": "firmware",
+      "weight": 3
+    },
+    {
+      "term": "STM32",
+      "pattern": "stm32|stmicro",
+      "weight": 3
+    },
+    {
+      "term": "RTOS",
+      "pattern": "\\brtos\\b|freertos|zephyr",
+      "weight": 3
+    },
+    {
+      "term": "CAN bus/FD",
+      "pattern": "can[ -]?(bus|fd)|controller area network|\\bcanoe\\b|\\bdbc\\b|j1939",
+      "weight": 3
+    },
+    {
+      "term": "state machine",
+      "weight": 3
+    },
+    {
+      "term": "mechatronics",
+      "pattern": "mechatronic",
+      "weight": 3
+    },
+    {
+      "term": "HIL/MIL/SIL",
+      "pattern": "hardware[- ]in[- ]the[- ]loop|\\bhil\\b|\\bmil\\b|\\bsil\\b|model[- ]in[- ]the[- ]loop",
+      "weight": 3
+    },
+    {
+      "term": "Simulink/MATLAB",
+      "pattern": "simulink|matlab",
+      "weight": 3
+    },
+    {
+      "term": "FEA / Maxwell",
+      "pattern": "\\bfea\\b|finite[- ]element|\\bansys\\b|\\bmaxwell\\b",
+      "weight": 3
+    },
+    {
+      "term": "reliability",
+      "weight": 3
+    },
+    {
+      "term": "validation",
+      "weight": 3
+    },
+    {
+      "term": "test engineer",
+      "pattern": "test engineer|test engineering|validation engineer",
+      "weight": 3
+    },
+    {
+      "term": "DFMEA/PFMEA",
+      "pattern": "\\b(dfmea|pfmea|fmea)\\b",
+      "weight": 3
+    },
+    {
+      "term": "APQP/PPAP",
+      "pattern": "\\bapqp\\b|\\bppap\\b|production part approval",
+      "weight": 3
+    },
+    {
+      "term": "PHM / prognostics",
+      "pattern": "\\bphm\\b|prognostic|health management|condition monitoring",
+      "weight": 3
+    },
+    {
+      "term": "digital twin",
+      "weight": 3
+    },
+    {
+      "term": "durability",
+      "weight": 3
+    },
+    {
+      "term": "qualification test",
+      "pattern": "qualification (test|testing|lab)|environmental (test|testing|chamber)",
+      "weight": 3
+    },
+    {
+      "term": "hardware TPM",
+      "pattern": "technical program manag|hardware program manag|technical project manag",
+      "weight": 3
+    },
+    {
+      "term": "TPM",
+      "pattern": "\\btpm\\b",
+      "weight": 3
+    },
+    {
+      "term": "NPI",
+      "pattern": "\\bnpi\\b|new product introduction",
+      "weight": 3
+    },
+    {
+      "term": "EVT/DVT/PVT",
+      "pattern": "\\b(evt|dvt|pvt)\\b",
+      "weight": 3
+    },
+    {
+      "term": "supplier quality",
+      "weight": 3
+    },
+    {
+      "term": "robot",
+      "pattern": "robot",
+      "weight": 2
+    },
+    {
+      "term": "servo",
+      "pattern": "\\bservo\\b",
+      "weight": 2
+    },
+    {
+      "term": "battery/BMS",
+      "pattern": "batter(y|ies)|\\bbms\\b",
+      "weight": 2
+    },
+    {
+      "term": "functional safety",
+      "pattern": "functional safety|26262|\\basil\\d?\\b",
+      "weight": 2
+    },
+    {
+      "term": "sensor fusion",
+      "weight": 2
+    },
+    {
+      "term": "anomaly detection",
+      "pattern": "anomaly detection",
+      "weight": 2
+    },
+    {
+      "term": "hardware/electrical engineer",
+      "pattern": "hardware engineer|electrical engineer|electronics engineer",
+      "weight": 2
+    },
+    {
+      "term": "manufacturing engineer",
+      "pattern": "manufacturing engineer|process engineer",
+      "weight": 2
+    },
+    {
+      "term": "quality engineer",
+      "weight": 2
+    },
+    {
+      "term": "dynamometer",
+      "pattern": "dynamometer|\\bdyno\\b",
+      "weight": 2
+    },
+    {
+      "term": "signal processing",
+      "weight": 2
+    },
+    {
+      "term": "electromechanical",
+      "pattern": "electro[- ]?mechanic",
+      "weight": 2
+    },
+    {
+      "term": "thermal management",
+      "pattern": "thermal (management|design|simulation)",
+      "weight": 2
+    },
+    {
+      "term": "bench test",
+      "pattern": "bench (test|testing)",
+      "weight": 2
+    },
+    {
+      "term": "electric vehicle",
+      "pattern": "electric vehicle|electrified|\\bevs?\\b|\\bhev\\b",
+      "weight": 2
+    },
+    {
+      "term": "hardware",
+      "weight": 1
+    },
+    {
+      "term": "electrical",
+      "weight": 1
+    },
+    {
+      "term": "electronics",
+      "weight": 1
+    },
+    {
+      "term": "manufacturing",
+      "weight": 1
+    },
+    {
+      "term": "quality",
+      "weight": 1
+    },
+    {
+      "term": "prototype",
+      "pattern": "prototyp",
+      "weight": 1
+    },
+    {
+      "term": "diagnostics",
+      "pattern": "diagnos",
+      "weight": 1
+    },
+    {
+      "term": "testing",
+      "pattern": "\\btest(ing|s)?\\b",
+      "weight": 1
+    },
+    {
+      "term": "vehicle/automotive",
+      "pattern": "vehicle|automotive|automobile",
+      "weight": 1
+    }
+  ],
+  "negative_keywords": [
+    "front[- ]?end",
+    "back[- ]?end",
+    "full[ -]?stack",
+    "fullstack",
+    "\\bweb\\b",
+    "webflow",
+    "recruit",
+    "talent",
+    "people operations",
+    "human resources",
+    "\\bhr\\b",
+    "\\bsales\\b",
+    "account executive",
+    "business development",
+    "marketing",
+    "\\bgrowth\\b",
+    "\\bbrand\\b",
+    "\\bseo\\b",
+    "demand generation",
+    "copywriter",
+    "content writer",
+    "content strateg",
+    "communications",
+    "counsel",
+    "\\blegal\\b",
+    "paralegal",
+    "attorney",
+    "lawyer",
+    "accountant",
+    "accounting",
+    "\\bfinance\\b",
+    "financial",
+    "payroll",
+    "treasury",
+    "customer success",
+    "customer support",
+    "customer experience",
+    "\\bsupport\\b",
+    "site reliability",
+    "\\bsre\\b",
+    "software reliability",
+    "\\btechnician\\b",
+    "\\bdesigner\\b",
+    "technical writer",
+    "documentation specialist",
+    "developer relations",
+    "developer advocate",
+    "\\bdevrel\\b",
+    "solutions? architect",
+    "public policy",
+    "government (affairs|relations)",
+    "\\bpolicy\\b",
+    "intern",
+    "apprentice",
+    "\\bco-?op\\b"
+  ],
+  "negative_unless_core": [
+    "data scientist"
+  ],
+  "seniority_exclude": [
+    "\\bdirector\\b",
+    "\\bvp\\b",
+    "vice president",
+    "head of",
+    "\\bprincipal\\b",
+    "\\bchief\\b",
+    "\\bstaff\\b",
+    "\\bdistinguished\\b"
+  ],
+  "workday_stall_pages": 3
+}
