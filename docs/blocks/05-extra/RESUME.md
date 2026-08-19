@@ -316,6 +316,15 @@ Systems · CAN-based Motor Control · End-to-end Productization · AI-Augmented 
 > 양산 BOM(132 항목) → 대외 인증(혁신제품 실사) → 양산 출하까지 7단계 Lifecycle을 끝까지 수행.
 > 6개팀 Cross-functional facilitation, 이슈 37건+ 트래킹, NCR 27건, DFMEA AP=H 5건 도출.
 
+### 옵션 E — 제조기술 / 공정 톤 (자동차 Tier-1 제조기술 · 반도체 장비)
+
+> 제품을 양산 라인으로 넘겨본 개발자. GT-SS500에서 APQP Phase 2~3을 운영해
+> DFMEA Step 1~7로 AP=H 5건을 도출하고, BOM 132항목 중 재고 미확보 23건을 일정이
+> 깨지기 전에 잡아냈다. 현장 이슈 37건 중 14건을 직접 처리(NCR 27건)했고 근본원인
+> 추적 4건은 설계변경까지 갔다. 시험 장비는 사지 않고 직접 설계했다 —
+> 다이나모 토크제어 비선형성 0.008%, 팬 벤치 +57%, 범퍼 정지거리 0.082 m.
+> 직전에는 12V 400W 차량용 전동오일펌프(열관리 액추에이터)를 국책과제로 완료했다.
+
 ### 옵션 D — 스타트업 풀스택 빌더 톤
 
 > Full-stack Hardware · 0→1 Builder · AI-Augmented.
@@ -368,6 +377,40 @@ Systems · CAN-based Motor Control · End-to-end Productization · AI-Augmented 
 **키워드 매칭**: APQP · DFMEA · PFMEA · DRBFM · BOM · NCR · IQC · OQC · Boundary Diagram · WBS · Cross-functional · 양산 · 풀사이클 · 인증 · 혁신제품.
 
 **컷 항목**: §7.9 로보틱스 컷 · §10.1 OSS 1줄로 축약.
+
+---
+
+## §A.35 모듈 E — 제조기술 / 공정 (자동차 Tier-1 · 반도체 장비)
+
+> 모듈 B(제품개발 PM)의 자산을 쓰되 **프레이밍이 다르다.** 상대가 찾는 건 PM이 아니라
+> 라인을 책임질 엔지니어다. "관리했다"가 아니라 "라인에 넘겼고 터진 걸 고쳤다"로 쓴다.
+
+**§2 Summary 교체**: §A.1 옵션 E 사용.
+
+**§4 표기 톤**: "주니어 PM 겸임"은 **유지하되 앞세우지 않는다.** 직함보다 산출물
+(DFMEA·NCR·BOM·시험체계)이 먼저 오게 배치.
+
+**§5 강조 순서**: 5.1 GT-SS500(양산 이관 측면) → **5.2 EOP 400W** → 5.3 시험 기획 7종.
+> 모듈 B와 다른 점: EOP를 2순위로 올린다. 자동차 Tier-1 상대에는 **차량 부품 양산
+> 경험**이 농기계보다 먼저 읽힌다. 열관리 모듈(Hanon·TMED 계열) 라인이면 특히.
+
+**§5 추가 1줄 카피**: "양산 이관 — DFMEA Step 1~7(AP=H 5건) · BOM 132(리스크 23건 선식별) ·
+NCR 27건 · 시험체계 4종 자가 설계."
+
+**§7 강조 순서**: 7.7 품질/PM → 7.5 시험·분석 → 7.1 모터제어 → 7.3 통신 →
+7.2 임베디드 → 7.4 시뮬레이션 → 7.6 PHM.
+
+**컷 항목**: §7.9 로보틱스 컷 · §7.8 AI 워크플로우 1줄 축약(제조기술 면접에서 노이즈) ·
+§10.1 OSS 1줄 축약.
+
+**⚠️ 갭 — 이 모듈을 쓸 때 반드시 확인**: 제조기술 JD는 대체로 **SPC · 공정능력(Cp/Cpk) ·
+Control Plan**을 요구하는데 현재 포트폴리오에 **근거가 없다.** PFMEA도 `CONTENT_V2`의
+`P-15 노이즈 경로` 1건뿐이고 실제 강점은 DFMEA다. 보유한 것처럼 쓰지 말 것 —
+갭으로 적고 데이터 기반 판단 이력(2,932 포인트 검증 등)으로 학습 속도를 주장한다.
+실사용 예: `docs/jd/aptiv/JD_매핑_Aptiv.md §4`.
+
+**키워드 매칭**: 양산 이관 · SOP · production readiness · APQP · DFMEA · NCR · BOM ·
+IQC/OQC · 공정 검증 · 설계변경 · 트러블슈팅 · RCA · 지속개선 · Cross-functional · 자동차.
 
 ---
 
