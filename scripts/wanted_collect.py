@@ -338,6 +338,8 @@ MAX_SKILL_CHIPS = 8
 EXCERPT_MAX_CHARS = 220
 
 REPORT_CSS = """
+.chip-new{font-size:10px;font-weight:700;letter-spacing:.06em;padding:2px 6px;border-radius:4px;background:#0B6B6B;color:#fff;margin-left:8px;vertical-align:middle}
+
 :root{--bg:#f4f5f7;--panel:#ffffff;--panel2:#eef0f3;--ink:#1c212b;--dim:#59637a;
 --faint:#8b94a8;--line:#e2e5eb;--accent:#2a63e7;--accent-ink:#ffffff;
 --alert-bg:#fdecec;--alert-border:#f2b8b5;--alert-ink:#9c1c1c;--alert-dim:#8a3030;
@@ -488,8 +490,31 @@ def report_card(posting: dict, core: bool) -> str:
     return "".join(parts)
 
 
+def global_postings(seen: dict, names: list[str]) -> list[dict]:
+    """Standing inventory of global-company postings in the ledger.
+
+    Matching is EXACT on the company name, never substring: '메타' pulls in
+    메타파머스, '인텔' pulls in 에임인텔리전스, 'ST' pulls in 이스트소프트. The
+    config lists company names exactly as Wanted spells them, and a company
+    that renames itself simply stops matching until the config is updated —
+    a visible miss beats a silent false positive.
+
+    Unlike the rest of the report this is not limited to today: these postings
+    sit in the archive across days, and the point is to keep them visible
+    rather than let them sink under the daily churn.
+    """
+    wanted = {n.strip().casefold() for n in names}
+    rows = []
+    for job_id, row in seen.items():
+        if (row.get("company") or "").strip().casefold() in wanted:
+            rows.append({**row, "id": job_id})
+    rows.sort(key=lambda r: (r.get("first_seen") or "", r.get("company") or ""),
+              reverse=True)
+    return rows
+
+
 def render_html_report(today: str, watchlist: dict, fresh: list[dict],
-                       total_seen: int) -> str:
+                       total_seen: int, globals_: list[dict] | None = None) -> str:
     """Self-contained daily report page: watchlist first, then core-first cards.
 
     The same `fresh` set the markdown digest lists — on a quiet day it is empty
@@ -547,6 +572,20 @@ def render_html_report(today: str, watchlist: dict, fresh: list[dict],
                  + ").")
         body.append(f'<p class="quiet">{quiet}</p>')
 
+    if globals_:
+        body.append(f"<h2>글로벌 기업 · 한국 채용 {len(globals_)}건</h2>")
+        body.append('<p class="quiet">원티드에 올라온 외국계·글로벌 기업 공고. '
+                    "오늘 신규가 아니어도 계속 보이도록 원장 전체에서 뽑는다.</p>")
+        for row in globals_:
+            fresh_tag = ('<span class="chip-new">NEW</span>'
+                         if row.get("first_seen") == today else "")
+            body.append(
+                '<article class="card">'
+                f'<div class="card-h"><a class="card-t" href="https://www.wanted.co.kr/wd/{esc(row["id"])}"'
+                f' target="_blank" rel="noopener">{esc(row.get("position"))}</a>{fresh_tag}</div>'
+                f'<p class="card-m">{esc(row.get("company"))} · 최초 수집 {esc(row.get("first_seen"))}</p>'
+                "</article>")
+
     body.append("<h2>신규 공고</h2>")
     if not posts:
         body.append('<p class="quiet">오늘 새로 수집된 공고는 없습니다. (dedup 정상 동작)</p>')
@@ -575,11 +614,14 @@ def render_html_report(today: str, watchlist: dict, fresh: list[dict],
 
 
 def build_caption(today: str, watchlist: dict, n_new: int, n_core: int,
-                  total_seen: int) -> str:
+                  total_seen: int, n_global: int = 0) -> str:
     alerts = " · ".join(f"{name} {count}건" for name, count in watchlist.items() if count)
-    return (f"📋 원티드 채용 리포트 {today}\n"
-            f"신규 {n_new}건 (핵심 {n_core}건) · 누적 {total_seen}건\n"
-            f"⚠️ 워치리스트: {alerts if alerts else '대기업 신규 없음'}")
+    lines = [f"📋 원티드 채용 리포트 {today}",
+             f"신규 {n_new}건 (핵심 {n_core}건) · 누적 {total_seen}건"]
+    if n_global:
+        lines.append(f"🌍 글로벌 기업 한국 채용 {n_global}건")
+    lines.append(f"⚠️ 워치리스트: {alerts if alerts else '대기업 신규 없음'}")
+    return "\n".join(lines)
 
 
 def telegram_creds(env_path: Path) -> tuple[str, str] | None:
@@ -781,11 +823,13 @@ def main() -> int:
 
         # ---- phase 5: HTML report + optional Telegram delivery ---------------
         report_path: Path | None = None
+        globals_ = global_postings(seen, config.get("global_companies", []))
         if args.html:
             REPORT_DIR.mkdir(parents=True, exist_ok=True)
             report_path = REPORT_DIR / f"{today}.html"
             report_path.write_text(
-                render_html_report(today, watch_counts, fresh_today, len(seen)),
+                render_html_report(today, watch_counts, fresh_today, len(seen),
+                                   globals_),
                 encoding="utf-8")
             log(f"[report] {report_path.relative_to(REPO_ROOT)} "
                 f"({report_path.stat().st_size:,} bytes)")
@@ -796,7 +840,7 @@ def main() -> int:
             else:
                 n_core = sum(1 for p in fresh_today if is_core_position(p["position"]))
                 caption = build_caption(today, watch_counts, len(fresh_today),
-                                        n_core, len(seen))
+                                        n_core, len(seen), len(globals_))
                 if send_report_via_telegram(report_path, caption, args.env):
                     log("[telegram] report delivered to the PM bot")
     else:
