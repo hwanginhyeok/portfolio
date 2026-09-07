@@ -1,0 +1,37 @@
+---
+// Chapter-style section header — added 2026-09-07 design pass.
+// One visual grammar for every home section: track tag + numeral, title, one-line thesis.
+interface Props {
+  tag: string;      // e.g. 'T1'
+  label: string;    // e.g. '현장 설계'
+  title: string;
+  thesis?: string;
+  note?: string;
+  tone?: 'red' | 'blue' | 'green' | 'amber' | 'violet' | 'ink';
+}
+const { tag, label, title, thesis, note, tone = 'blue' } = Astro.props;
+const tones: Record<string, string> = {
+  red: 'bg-red-50 text-red-700 border-red-200',
+  blue: 'bg-blue-50 text-blue-700 border-blue-200',
+  green: 'bg-green-50 text-green-700 border-green-200',
+  amber: 'bg-amber-50 text-amber-700 border-amber-200',
+  violet: 'bg-violet-50 text-violet-700 border-violet-200',
+  ink: 'bg-ink-100 text-ink-700 border-ink-300',
+};
+const bar: Record<string, string> = {
+  red: 'bg-red-500', blue: 'bg-accent', green: 'bg-green-500', amber: 'bg-amber-500', violet: 'bg-violet-500', ink: 'bg-ink-500',
+};
+---
+
+<header class="mb-8">
+  <div class="flex items-center gap-3 mb-3">
+    <span class={`inline-flex items-center gap-1.5 text-[11px] font-mono font-semibold tracking-wider px-2 py-0.5 rounded border ${tones[tone]}`}>
+      <span class={`w-1.5 h-1.5 rounded-full ${bar[tone]}`}></span>{tag}
+    </span>
+    <span class="text-xs text-ink-500 tracking-wide">{label}</span>
+    <span class="flex-1 h-px bg-ink-100"></span>
+  </div>
+  <h2 class="text-2xl md:text-[28px] font-black text-primary leading-tight">{title}</h2>
+  {thesis && <p class="text-[15px] text-ink-700 mt-2 max-w-2xl">{thesis}</p>}
+  {note && <p class="text-xs text-ink-500 mt-1">{note}</p>}
+</header>

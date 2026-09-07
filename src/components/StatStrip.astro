@@ -1,0 +1,30 @@
+---
+// Hard-number strip under the hero — added 2026-09-07 design pass.
+// Every figure is on the site elsewhere with its source; this row is the 5-second scan.
+const stats = [
+  { n: '5', unit: '노드', label: 'CAN 분산 제어', sub: 'DBC 4종 · BREAKING 4건 사전 검출', href: '#t3-system' },
+  { n: '7', unit: '종', label: '시험 장비 자력 구축', sub: '다이나모 0.008% · 범퍼 0.082 m', href: '#t2-test' },
+  { n: '4', unit: '건', label: '현장 RCA → DFMEA', sub: 'MCB 탄화 · 상태머신 · 동파 · GND', href: '#t1-dfmea' },
+  { n: '5', unit: '페이즈', label: 'MBD 시뮬 파이프라인', sub: 'MCB −37 A를 측정 전에', href: 'cases/ss500-mbd/' },
+  { n: '497', unit: '', label: '자동 테스트 · CI', sub: 'RS500 자율주행 시뮬 스택', href: 'cases/autonomy-stack/' },
+];
+const base = import.meta.env.BASE_URL;
+const link = (h: string) => (h.startsWith('#') ? `${base}${h}` : `${base}${h}`);
+---
+
+<div class="border-b border-ink-100 bg-white">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="grid grid-cols-2 md:grid-cols-5 divide-y md:divide-y-0 md:divide-x divide-ink-100">
+      {stats.map((s) => (
+        <a href={link(s.href)} class="group py-5 md:px-5 first:md:pl-0 last:md:pr-0 block hover:bg-ink-50/60 transition-colors">
+          <div class="flex items-baseline gap-1">
+            <span class="font-display text-3xl font-black text-primary group-hover:text-accent transition-colors">{s.n}</span>
+            {s.unit && <span class="text-xs text-ink-500">{s.unit}</span>}
+          </div>
+          <div class="text-sm font-semibold text-primary mt-0.5">{s.label}</div>
+          <div class="text-[11px] text-ink-500 mt-0.5 leading-snug">{s.sub}</div>
+        </a>
+      ))}
+    </div>
+  </div>
+</div>

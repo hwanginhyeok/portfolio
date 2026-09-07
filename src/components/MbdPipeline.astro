@@ -1,0 +1,52 @@
+---
+// Inline SVG: the five-phase MBD pipeline with its two outputs (findings, SIL scenarios).
+// Added 2026-09-07. Pure SVG so it scales, prints, and needs no image request.
+interface Props { compact?: boolean }
+const { compact = false } = Astro.props;
+const phases = [
+  { k: 'P0', t: 'BOM × 파라미터', s: '오매핑 10건 수정' },
+  { k: '전기①', t: '전력 흐름', s: '모드 5종 버짓' },
+  { k: '전기②', t: 'Traction PID', s: 'PM 96.5°' },
+  { k: 'P3', t: 'FW → Python SIL', s: '상태머신 12개' },
+  { k: 'P4', t: '통합 시뮬 ×4', s: 'CAN 고장 주입' },
+];
+const W = 790, H = compact ? 150 : 210, bw = 128, gap = 30, x0 = 12, y0 = 22, bh = 64;
+---
+
+<svg viewBox={`0 0 ${W} ${H}`} class="w-full h-auto" role="img" aria-label="MBD 파이프라인 — BOM 검증에서 통합 시뮬레이션까지 5페이즈">
+  <defs>
+    <marker id="mbd-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8" />
+    </marker>
+  </defs>
+  <!-- source lane -->
+  <text x={x0} y="12" font-size="10" fill="#64748b" font-family="JetBrains Mono, monospace">params_ssot.yaml · 출처 태그 FW / DS / MEAS / CALC / reasoned / 없음</text>
+  {phases.map((p, i) => {
+    const x = x0 + i * (bw + gap);
+    return (
+      <g>
+        <rect x={x} y={y0} width={bw} height={bh} rx="8" fill="#ffffff" stroke="#cbd5e1" />
+        <rect x={x} y={y0} width="4" height={bh} rx="2" fill="#0066ff" />
+        <text x={x + 14} y={y0 + 20} font-size="10" fill="#0066ff" font-family="JetBrains Mono, monospace" font-weight="700">{p.k}</text>
+        <text x={x + 14} y={y0 + 38} font-size="12.5" fill="#1a1a2e" font-weight="700">{p.t}</text>
+        <text x={x + 14} y={y0 + 54} font-size="10.5" fill="#64748b">{p.s}</text>
+        {i < phases.length - 1 && (
+          <line x1={x + bw + 3} y1={y0 + bh / 2} x2={x + bw + gap - 3} y2={y0 + bh / 2} stroke="#94a3b8" stroke-width="1.5" marker-end="url(#mbd-arrow)" />
+        )}
+      </g>
+    );
+  })}
+  {!compact && (
+    <g>
+      <!-- outputs -->
+      <line x1={x0 + 2 * (bw + gap) + bw / 2} y1={y0 + bh} x2={x0 + 2 * (bw + gap) + bw / 2} y2={y0 + bh + 26} stroke="#94a3b8" stroke-width="1.5" marker-end="url(#mbd-arrow)" />
+      <rect x={x0 + bw + gap} y={y0 + bh + 30} width={bw * 2 + gap} height="44" rx="8" fill="#f0fdf4" stroke="#bbf7d0" />
+      <text x={x0 + bw + gap + 12} y={y0 + bh + 48} font-size="11" fill="#166534" font-weight="700">모델이 먼저 짚은 것</text>
+      <text x={x0 + bw + gap + 12} y={y0 + bh + 64} font-size="10.5" fill="#166534">MCB 100 A vs 방제 137 A · DCDC 마진 70.8 % · 실부하 ~20 A</text>
+      <line x1={x0 + 4 * (bw + gap) + bw / 2} y1={y0 + bh} x2={x0 + 4 * (bw + gap) + bw / 2} y2={y0 + bh + 26} stroke="#94a3b8" stroke-width="1.5" marker-end="url(#mbd-arrow)" />
+      <rect x={x0 + 3 * (bw + gap) + bw + 12} y={y0 + bh + 30} width={bw + 6} height="44" rx="8" fill="#fef2f2" stroke="#fecaca" />
+      <text x={x0 + 3 * (bw + gap) + bw + 24} y={y0 + bh + 48} font-size="11" fill="#991b1b" font-weight="700">고장 시나리오 재현</text>
+      <text x={x0 + 3 * (bw + gap) + bw + 24} y={y0 + bh + 64} font-size="10.5" fill="#991b1b">FORWARD → FAULT → 복구</text>
+    </g>
+  )}
+</svg>

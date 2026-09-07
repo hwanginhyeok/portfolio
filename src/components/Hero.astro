@@ -1,52 +1,77 @@
 ---
-// 히어로 v4: 전시회 제품 사진 추가 — 텍스트 좌 / 이미지 우
+// Hero v5 (2026-09-07 design pass): subtle grid backdrop, stat cards with glyphs,
+// track chips as a table of contents. Copy unchanged from v4 — the headline is the user's identity line.
 const base = import.meta.env.BASE_URL;
+const tracks = [
+  { h: '#t1-dfmea', t: 'T1 현장 설계', c: 'bg-red-400' },
+  { h: '#t2-test', t: 'T2 시험 증명', c: 'bg-blue-400' },
+  { h: '#t3-system', t: 'T3 시스템', c: 'bg-green-400' },
+  { h: '#t4-apqp', t: 'T4 양산 체계', c: 'bg-amber-400' },
+  { h: '#t5-roots', t: 'T5 뿌리', c: 'bg-violet-400' },
+];
 ---
 
-<section class="bg-primary text-white overflow-hidden">
-  <div class="max-w-5xl mx-auto px-6 py-16 md:py-20">
+<section class="relative bg-primary text-white overflow-hidden">
+  <!-- backdrop: fine grid + radial glow -->
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+    <div class="absolute inset-0 opacity-[0.07]" style="background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:32px 32px;"></div>
+    <div class="absolute -top-32 -right-32 w-[520px] h-[520px] rounded-full" style="background:radial-gradient(closest-side,rgba(0,102,255,.35),transparent);"></div>
+  </div>
+
+  <div class="relative max-w-5xl mx-auto px-6 pt-16 pb-12 md:pt-20 md:pb-14">
     <div class="grid md:grid-cols-5 gap-8 items-center">
-      <!-- 좌: 텍스트 (3/5) -->
       <div class="md:col-span-3">
         <p class="text-sm tracking-widest text-gray-400 uppercase mb-4">전력제어 · 임베디드 HW · 주니어 PM</p>
         <h1 class="font-display text-3xl md:text-5xl font-black leading-tight mb-6">
           분야를 막론하고 —<br />
           문제가 있으면 해결한다
         </h1>
-
-        <p class="text-lg text-gray-300 max-w-xl mb-10">
+        <p class="text-lg text-gray-300 max-w-xl mb-8">
           코드·HW·기구·전력·SW. 경계 없이 엔지니어링 관점에서<br class="hidden md:block" />
           원인을 찾고, 시험으로 증명하고, 양산까지 끌고 간다.
         </p>
 
-        <div class="grid grid-cols-3 gap-4">
-          <div>
-            <div class="text-2xl font-black text-white">-40°C</div>
+        <div class="grid grid-cols-3 gap-2 md:gap-3">
+          <div class="rounded-lg border border-white/10 bg-white/5 p-2.5 md:p-3.5">
+            <svg class="w-4 h-4 text-accent mb-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v18M5 10l7-7 7 7"/><path d="M4 21h16" opacity=".4"/></svg>
+            <div class="text-xl md:text-2xl font-black text-white whitespace-nowrap">-40°C</div>
             <div class="text-xs text-gray-400 mt-0.5 leading-snug">극저온 기동<br/>300→100초</div>
           </div>
-          <div>
-            <div class="text-2xl font-black text-white">특허 2건</div>
+          <div class="rounded-lg border border-white/10 bg-white/5 p-2.5 md:p-3.5">
+            <svg class="w-4 h-4 text-accent mb-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 16.5 6.5 19.5l1-6.3L3 8.9 9 8z"/></svg>
+            <div class="text-xl md:text-2xl font-black text-white whitespace-nowrap">특허 2건</div>
             <div class="text-xs text-gray-400 mt-0.5 leading-snug">공동 1·기여 1<br/>공저 저널 3·학회 4</div>
           </div>
-          <div>
-            <div class="text-2xl font-black text-white">양산 1호기</div>
+          <div class="rounded-lg border border-white/10 bg-white/5 p-2.5 md:p-3.5">
+            <svg class="w-4 h-4 text-accent mb-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 17l4-8 4 5 3-3 7 6"/><path d="M3 21h18" opacity=".4"/></svg>
+            <div class="text-xl md:text-2xl font-black text-white whitespace-nowrap">양산 1호기</div>
             <div class="text-xs text-gray-400 mt-0.5 leading-snug">GT-SS500 0→1 완주<br/>고객 시연 2회 Pass</div>
           </div>
         </div>
       </div>
 
-      <!-- 우: 제품 사진 (2/5) -->
       <div class="md:col-span-2 relative">
+        <div class="absolute -inset-2 rounded-xl bg-accent/20 blur-2xl" aria-hidden="true"></div>
         <img
           src={`${base}images/hero/product-front.webp`}
           alt="PLUVA FRIEND GT-SS500 — 농업용 전동 자율주행 Speed Sprayer"
-          class="rounded-lg shadow-2xl w-full object-cover"
+          class="relative rounded-lg shadow-2xl w-full object-cover ring-1 ring-white/10"
           loading="eager"
           width="640"
           height="480"
         />
-        <p class="text-xs text-muted mt-2 text-center">PLUVA FRIEND GT-SS500</p>
+        <p class="relative text-xs text-gray-400 mt-2 text-center">PLUVA FRIEND GT-SS500 · 48 V 전동 자율주행 방제기</p>
       </div>
     </div>
+
+    <!-- track chips: the five chapters below -->
+    <nav class="mt-10 flex flex-wrap gap-2" aria-label="섹션 바로가기">
+      {tracks.map((t) => (
+        <a href={`${base}${t.h}`} class="inline-flex items-center gap-2 text-xs text-gray-300 hover:text-white border border-white/10 hover:border-white/30 rounded-full px-3 py-1.5 transition-colors">
+          <span class={`w-1.5 h-1.5 rounded-full ${t.c}`}></span>{t.t}
+        </a>
+      ))}
+      <span class="inline-flex items-center text-xs text-gray-500 px-2">↓ 스크롤</span>
+    </nav>
   </div>
 </section>

@@ -4,6 +4,7 @@
 // FINISHED_TASK C-143/C-144/C-145/C-182/C-183/C-184. Numbers are the model's own outputs;
 // parameters tagged "reasoned" in the SSOT are called out as such below.
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import MbdPipeline from '../../../components/MbdPipeline.astro';
 const base = import.meta.env.BASE_URL;
 
 const phases = [
@@ -68,6 +69,7 @@ const findings = [
 
       <div class="border rounded-xl p-6 space-y-4">
         <h2 class="text-lg font-bold text-primary">파이프라인 — 5 페이즈</h2>
+        <div class="rounded-lg border border-ink-100 bg-ink-50/40 p-3"><MbdPipeline /></div>
         <div class="space-y-3">
           {phases.map(([tag, title, detail]) => (
             <div class="flex gap-3 text-sm">

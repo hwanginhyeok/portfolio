@@ -29,3 +29,27 @@
     font-family: 'JetBrains Mono', Pretendard, monospace;
   }
 }
+
+/* 2026-09-07 design pass — shared card grammar with a track-colored accent edge */
+@layer components {
+  .card {
+    @apply relative rounded-lg border border-ink-300 bg-white p-5 transition-all duration-150;
+  }
+  .card-link {
+    @apply hover:shadow-md hover:border-accent/50 hover:-translate-y-0.5;
+  }
+  .card-accent::before {
+    content: '';
+    @apply absolute left-0 top-4 bottom-4 w-1 rounded-r bg-accent;
+  }
+  .card-accent-red::before { @apply bg-red-500; }
+  .card-accent-green::before { @apply bg-green-500; }
+  .card-accent-amber::before { @apply bg-amber-500; }
+  .card-accent-violet::before { @apply bg-violet-500; }
+  .eyebrow {
+    @apply text-[11px] tracking-widest uppercase text-ink-500;
+  }
+  .kpi {
+    @apply font-display font-black text-accent leading-none;
+  }
+}
