@@ -1,20 +1,20 @@
 ---
-// T-5: AI-Native 워크플로우
-// SSOT: CONTENT_V2 §8
+// T-5: AI-Native engineering operations
+// SSOT: CONTENT_V2 §8 · numbers re-measured 2026-09-06 (docs/blocks/01-inventory/ACTIVITY_INVENTORY.md §3)
 const base = import.meta.env.BASE_URL;
 const items = [
-  { label: '3계층 LLM 라우팅', detail: '의사결정(Opus) / 실무 / 배치(Ollama)' },
-  { label: 'PM 오케스트레이터', detail: '8개 프로젝트 git · 태스크 · cron · 디스크 통합 모니터링' },
-  { label: '자동화 스킬 13개', detail: 'hih-skills 레포로 모듈화' },
-  { label: '야간 무인 실행', detail: 'cron 00:00 → tonight_prompt → 아침 브리핑' },
+  { label: '작업 위임 런타임', detail: '다중 LLM 프로바이더 라우팅 + 선언 경로 영수증 검증 — 5주간 3,058 태스크 · 97 프로젝트 루트' },
+  { label: '상시 운영 자동화', detail: 'cron 86건 · systemd 유닛 37개, manifest 대조 드리프트 감시 + 헬스 모니터' },
+  { label: '자동화 스킬 23개', detail: 'hih-skills 레포로 모듈화 — 리서치·배포·스케줄·리뷰·세션 복구' },
+  { label: '문서 의미 검색', detail: '26개 저장소 마크다운 임베딩 색인, 골든셋 26문항으로 MRR 0.44 실측' },
   { label: '블로그 자동화 SaaS', detail: '반복 노동 제거 → 블로거가 체험·글쓰기에 집중하게' },
 ];
 ---
 
-<div class="rounded-lg border border-ink-300 bg-white p-5">
+<div class="rounded-lg border border-ink-300 bg-white p-5 md:col-span-2">
   <div class="mb-4">
     <h4 class="font-bold text-primary">AI 워크플로우 설계자</h4>
-    <p class="text-sm text-ink-500 mt-1">Claude Code를 단순 코딩 보조가 아닌 개발 프로세스에 통합.</p>
+    <p class="text-sm text-ink-500 mt-1">도구를 쓰는 수준이 아니라, 운영 시스템을 설계하고 계측하는 수준으로.</p>
   </div>
   <div class="space-y-2.5">
     {items.map((item) => (
@@ -28,8 +28,8 @@ const items = [
     ))}
   </div>
   <p class="text-xs text-ink-500 mt-4 pt-4 border-t border-ink-100">
-    "AI를 사용하는 수준"이 아닌 "AI 워크플로우를 설계하는 수준"으로.
-    자동화의 목적은 사람이 해야 할 것에 집중하게 하는 것이다.
+    라우팅에 쿼터 예비율을 두고, 산출물을 영수증으로 검증하고, 검색 품질을 숫자로 재는 태도 —
+    시험 엔지니어가 벤치에서 하는 일과 같다. 자동화의 목적은 사람이 해야 할 것에 집중하게 하는 것이다.
   </p>
   <a href={`${base}cases/insung-blog/`} class="mt-3 inline-block text-xs text-accent hover:underline">블로그 자동화 케이스 →</a>
 </div>

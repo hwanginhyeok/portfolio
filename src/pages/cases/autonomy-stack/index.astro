@@ -1,0 +1,190 @@
+---
+// New case 2026-09-07: RS500 autonomy stack — the "cases/autonomy-stack" page the
+// 2026-04-26 expert review asked for (Physical AI / robotics gap). Facts from
+// ~/physical_AI_rs500 README, docs/프로젝트/task/C49, C50 and the test tree, measured 2026-09-06.
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+const repo = 'https://github.com/hwanginhyeok/physical_AI_rs500';
+
+const core = [
+  ['skid_steer_model', 'ICR 기반 스키드 스티어 운동학'],
+  ['vehicle_dynamics', '뉴턴 동역학 — 질량·관성·하중 전이·경사'],
+  ['drivetrain_model', '모터 + 감속기 1차 지연, MD2K SS/SD 가감속'],
+  ['motor_protection', 'MD2K 보호기능 — STALL · 과전류 · 과온 · 과전압'],
+  ['md2k_codec', 'MD2K CAN 코덱 (Tx/Rx encode·decode)'],
+  ['track_terrain_interaction', 'Bekker 지면 상호작용 — 침하·슬립'],
+  ['sensor_noise_model', 'GPS / IMU 노이즈'],
+  ['sensor_fusion', 'Dual-EKF 센서 퓨전'],
+  ['pure_pursuit', 'Pure Pursuit 경로 추종'],
+  ['coverage_planner', 'Fields2Cover 커버리지 경로 계획'],
+  ['crop_row_detector', '과수원 작물 행 인식 (Classical CV)'],
+  ['lidar_processor · camera_detector', 'LiDAR 장애물 · YOLO 객체 탐지'],
+];
+
+const tests = [
+  ['ad_core', 331], ['ad_perception', 72], ['ad_planning', 44],
+  ['ad_control', 26], ['ad_can_bridge', 24],
+];
+const totalTests = tests.reduce((n, [, c]) => n + (c as number), 0);
+---
+
+<BaseLayout
+  title="RS500 자율주행 시뮬레이션 스택 — 실차 파라미터로 만든 Sim2Real 기반"
+  description="SS500 실차 파라미터(DB130-48 3kW×2 · MD2K · 48V LiFePO4)로 만든 Level-2 물리 시뮬레이션 + ROS2 7패키지. 테스트 497개 · CI · 실차 36항목 교차검증."
+>
+  <main class="max-w-3xl mx-auto px-6 py-16">
+    <a href={base} class="text-sm text-accent hover:underline mb-8 inline-block">← 홈으로</a>
+
+    <span class="text-xs bg-cyan-100 text-cyan-700 px-2 py-0.5 rounded-full">사이드 프로젝트 · 자율주행 · Sim2Real</span>
+    <h1 class="text-3xl font-black text-primary mt-2 mb-2">하드웨어 시간을 쓰기 전에, 시뮬레이션이 먼저 깨진다</h1>
+    <p class="text-muted mb-2">RS500 — SS500 실차 파라미터로 만든 궤도형 자율주행 물리 시뮬레이션 + ROS2 제어 스택</p>
+    <p class="text-xs text-muted mb-8">
+      2026.02 ~ 2026.08 · 개인 · Python / ROS2 Jazzy / Gazebo Harmonic ·
+      <a href={repo} target="_blank" rel="noopener" class="text-accent hover:underline">GitHub 공개 저장소 →</a>
+    </p>
+
+    <!-- 핵심 수치 -->
+    <div class="grid grid-cols-3 gap-4 mb-10">
+      <div class="rounded-lg border border-ink-300 bg-white p-4">
+        <div class="text-2xl font-black text-accent">{totalTests}</div>
+        <div class="text-xs text-ink-500 mt-0.5">자동 테스트 · GitHub Actions CI</div>
+      </div>
+      <div class="rounded-lg border border-ink-300 bg-white p-4">
+        <div class="text-2xl font-black text-accent">7</div>
+        <div class="text-xs text-ink-500 mt-0.5">ROS2 패키지 (bringup: Gazebo + Nav2 + Foxglove)</div>
+      </div>
+      <div class="rounded-lg border border-ink-300 bg-white p-4">
+        <div class="text-2xl font-black text-accent">3 × 5</div>
+        <div class="text-xs text-ink-500 mt-0.5">미션 프로파일 × 지형 배치 시나리오</div>
+      </div>
+    </div>
+
+    <section class="space-y-10">
+      <!-- 왜 만들었나 -->
+      <div class="border-2 border-accent rounded-xl p-6 space-y-4">
+        <h2 class="text-lg font-bold text-primary">문제</h2>
+        <p class="text-sm text-gray-600">
+          GT-SS500은 실차가 한 대뿐이고 벤치 시간이 곧 양산 일정이다. 제어 로직·보호 기능·경로 추종을
+          바꿀 때마다 실차를 돌리면 검증이 개발을 막는다. 회사 업무 밖에서, 같은 차량 클래스를 그대로
+          모델링한 시뮬레이터를 만들어 <strong>실차에 올리기 전에 깨질 것을 먼저 깨뜨리는</strong> 환경을 갖추려 했다.
+        </p>
+        <h2 class="text-lg font-bold text-primary">역할</h2>
+        <p class="text-sm text-gray-600">
+          전 구간 단독 — 물리 모델 · MD2K CAN 코덱 · 보호로직 · 센서 퓨전 · 경로 계획 · ROS2 패키지 · 테스트 · CI.
+        </p>
+        <h2 class="text-lg font-bold text-primary">결과</h2>
+        <div class="bg-green-50 border border-green-200 rounded-lg p-3 text-sm space-y-1">
+          <p class="text-gray-700">Level-2 물리 시뮬레이션(뉴턴 역학 + Bekker 지면 + 센서 노이즈) 위에 <strong class="text-accent">테스트 {totalTests}개</strong>가 매 커밋마다 돈다</p>
+          <p class="text-gray-700">모터 드라이버 보호기능 4종을 <strong class="text-accent">고장모드로 모델링</strong>해 시나리오에서 재현</p>
+          <p class="text-gray-700">실차(SS500) 데이터시트·CAN DBC와 <strong class="text-accent">36항목 교차검증</strong> — 일치·근사·미반영·미확보를 구분해 기록</p>
+        </div>
+      </div>
+
+      <!-- 아키텍처 -->
+      <div class="border rounded-xl p-6 space-y-4">
+        <h2 class="text-lg font-bold text-primary">아키텍처 — 순수 Python 코어 위에 ROS2</h2>
+        <p class="text-sm text-gray-600">
+          알고리즘은 <code class="text-xs">ad_core</code>에 ROS2 비의존 순수 Python으로 두고, ROS2 패키지는 그 위의 얇은 어댑터다.
+          그래서 코어 테스트 331개는 ROS2 없이 CI에서 돌고, Gazebo·Nav2 통합은 로컬에서만 검증한다.
+        </p>
+        <div class="grid md:grid-cols-2 gap-x-6 gap-y-1.5 text-sm">
+          {core.map(([mod, desc]) => (
+            <div class="flex gap-2">
+              <code class="text-xs text-accent shrink-0 pt-0.5">{mod}</code>
+              <span class="text-gray-600">{desc}</span>
+            </div>
+          ))}
+        </div>
+        <div class="flex flex-wrap gap-2 text-xs pt-2">
+          {['ad_core', 'ad_can_bridge', 'ad_control', 'ad_planning', 'ad_perception', 'ad_bringup', 'ad_interfaces'].map((p) => (
+            <span class="bg-surface px-2 py-0.5 rounded-full text-muted">{p}</span>
+          ))}
+        </div>
+      </div>
+
+      <!-- 보호기능 = 고장모드 -->
+      <div class="border rounded-xl p-6 space-y-4">
+        <h2 class="text-lg font-bold text-primary">보호기능을 고장모드로 모델링한다</h2>
+        <p class="text-sm text-gray-600">
+          MD2K 드라이버의 소프트 퓨즈(정격 78 A)와 열 보호(65 °C)를 그대로 시뮬레이션에 넣었다.
+          과부하 95 A 구간에서 퓨즈가 먼저 트립하고, 온도는 그 뒤에도 관성으로 72 °C까지 오른 뒤 식는다 —
+          <strong>"전류를 끊었는데 왜 온도 알람이 뒤늦게 뜨나"</strong>를 실차에서 겪기 전에 시뮬레이션이 먼저 보여준다.
+        </p>
+        <div class="grid md:grid-cols-2 gap-3">
+          <figure>
+            <img src={`${base}images/cases/autonomy-stack/motor-protection.webp`} alt="C50 모터 보호 시뮬레이션 — 전류·온도·fault 플래그" class="rounded-lg border bg-white w-full" loading="lazy" />
+            <figcaption class="text-xs text-muted mt-1">소프트 퓨즈 + 열 모델 — 정격 초과 → 트립 → 냉각 → 재기동</figcaption>
+          </figure>
+          <figure>
+            <img src={`${base}images/cases/autonomy-stack/safety-states.webp`} alt="C50 안전 상태 시뮬레이션 — e-stop·수동 모드·fault 플래그와 속도" class="rounded-lg border bg-white w-full" loading="lazy" />
+            <figcaption class="text-xs text-muted mt-1">E-Stop · 수동 전환 · fault 상태에서 속도 프로파일이 어떻게 죽고 살아나는가</figcaption>
+          </figure>
+        </div>
+        <figure>
+          <img src={`${base}images/cases/autonomy-stack/sssd-comparison.webp`} alt="MD2K SS/SD 가감속 프로파일 비교" class="rounded-lg border bg-white w-full" loading="lazy" />
+          <figcaption class="text-xs text-muted mt-1">MD2K SS/SD 가감속 파라미터에 따른 속도·토크 프로파일 비교</figcaption>
+        </figure>
+      </div>
+
+      <!-- 사용 모델 기반 배치 시험 -->
+      <div class="border rounded-xl p-6 space-y-4">
+        <h2 class="text-lg font-bold text-primary">시나리오 스윕 — 어떤 스트레스 인자가 중요한지 먼저 가려낸다</h2>
+        <p class="text-sm text-gray-600">
+          <code class="text-xs">scenario_runner</code>가 직진·S커브·급선회 3개 미션을 5개 지형(마른 흙·젖은 흙·자갈·경사 등)에서
+          자동 실행해 CTE·슬립·정착 시간을 비교하고, <code class="text-xs">module_test_report</code>가 구동계·지면·동역학·센서 노이즈 블록별로
+          파라미터 감도를 스윕해 Markdown 리포트로 낸다. 가속 시험을 설계할 때 스트레스 인자를 고르는 것과 같은 논리 —
+          <strong>스윕으로 민감한 인자를 찾고, 실차 시간은 거기에만 쓴다.</strong>
+        </p>
+      </div>
+
+      <!-- 실차 교차검증 — 정직 기재 -->
+      <div class="border rounded-xl p-6 space-y-4">
+        <h2 class="text-lg font-bold text-primary">실차와 얼마나 맞는가 — 36항목 교차검증</h2>
+        <p class="text-sm text-gray-600">
+          SS500 데이터시트(DB130-48 · SCK75-20 · MD2K)와 CAN DBC(61 메시지 · 285 신호)를 기준으로 시뮬레이션 파라미터를 항목별로 대조했다.
+          맞는 것만 세지 않고 <strong>네 칸으로 나눠 적었다.</strong>
+        </p>
+        <div class="grid grid-cols-4 gap-2 text-center text-sm">
+          <div class="rounded-lg bg-green-50 border border-green-200 p-3"><div class="text-xl font-black text-success">8</div><div class="text-xs text-ink-500">확인 일치</div></div>
+          <div class="rounded-lg bg-blue-50 border border-blue-200 p-3"><div class="text-xl font-black text-info">7</div><div class="text-xs text-ink-500">근사 일치</div></div>
+          <div class="rounded-lg bg-orange-50 border border-orange-200 p-3"><div class="text-xl font-black text-warning">—</div><div class="text-xs text-ink-500">미반영</div></div>
+          <div class="rounded-lg bg-surface border border-ink-300 p-3"><div class="text-xl font-black text-muted">—</div><div class="text-xs text-ink-500">데이터 미확보</div></div>
+        </div>
+        <ul class="text-sm text-gray-600 space-y-1 list-disc pl-5">
+          <li>일치: 모터 형식(BLDC 8극) · 정격 2000 rpm · 감속비 20:1 · 모터 토크 14.32 Nm · 최대 속도 4 km/h · IMU 노이즈 밀도 · STALL 15% 판정</li>
+          <li>미반영으로 남긴 것: 엔코더 16,384 PPR · 차체 높이(팬 시스템 포함) · LiDAR는 CAN에 없어 ADT 직결로 추정</li>
+        </ul>
+        <p class="text-xs text-muted">시뮬레이션이 실차를 대신한다고 말하지 않는다. 대신하지 못하는 항목을 알고 있다는 것이 이 표의 목적이다.</p>
+      </div>
+
+      <!-- 테스트 -->
+      <div class="border rounded-xl p-6 space-y-4">
+        <h2 class="text-lg font-bold text-primary">검증 — 테스트 {totalTests}개, 매 커밋마다</h2>
+        <div class="grid grid-cols-5 gap-2 text-center">
+          {tests.map(([pkg, n]) => (
+            <div class="rounded-lg bg-surface p-3">
+              <div class="text-lg font-black text-primary">{n}</div>
+              <div class="text-[11px] text-ink-500 font-mono">{pkg}</div>
+            </div>
+          ))}
+        </div>
+        <p class="text-xs text-muted">순수 Python 테스트는 GitHub Actions에서, ROS2 통합(colcon test · Gazebo 런치)은 로컬 Jazzy 환경에서.</p>
+      </div>
+    </section>
+
+    <!-- 연결 -->
+    <div class="bg-surface rounded-lg p-6 mt-10">
+      <h3 class="font-bold text-primary mb-2">회사 업무와의 관계</h3>
+      <p class="text-sm text-gray-600">
+        GT-SS500의 CAN 5노드 분산 제어와 MD2K 드라이버를 실무에서 다루면서 생긴 질문 — "이 보호로직이 어느 조건에서 먼저 걸리는가" —
+        을 회사 데이터 없이 공개 데이터시트와 공개 저장소만으로 답하려고 만든 프로젝트다.
+        다이나모미터 벤치가 모터 한 축의 HIL이라면, 이 시뮬레이터는 차량 한 대의 SIL이다.
+      </p>
+    </div>
+
+    <div class="mt-12 flex justify-between">
+      <a href={`${base}cases/ss500-state-machine/`} class="text-sm text-accent hover:underline">← GT-SS500 양산</a>
+      <a href={base} class="text-sm text-accent hover:underline">홈으로 →</a>
+    </div>
+  </main>
+</BaseLayout>
