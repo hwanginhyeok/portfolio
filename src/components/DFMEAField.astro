@@ -38,6 +38,25 @@ const episodes = [
     fix: 'SYS FM-4/FM-6 DFMEA 반영 · 쉴드·접지 대책 현장 적용',
     verify: '현장 실측 확인 (C-122)',
   },
+  // Added 2026-09-07 — field issues closed May 2026 (HIH_2 FINISHED_TASK C-193/C-209/C-DFMEA)
+  {
+    id: 'A-5',
+    title: '솔밸브 과압 · 정격 초과 운용',
+    sub: '보호로직이 FW에서 꺼져 있었다',
+    fm: 'Issue #240 과압 · #245 솔밸브 2.2 MPa > 정격 1.6 MPa (S=9, AP=H)',
+    cause: 'FW 헤더의 DOWNPRESSURE_LOGIC_ON 주석 처리 확인 — 의도적 비활성 상태로 양산 진입',
+    fix: '재활성화 + 검증 태스크 등록 · 양산 차량 잠재 결함으로 상향 (C-210)',
+    verify: '소스 라인 단위로 원인 특정 (PowerTrain_Control.h) · DFMEA WP 반영',
+  },
+  {
+    id: 'A-6',
+    title: '후가공 결함 → 문제 재정의',
+    sub: '도면 결함이 아니라 부품 식별 부재',
+    fm: 'Issue #246 라벨 영역 후가공 결함 · FM-CBA-WP-07 (KC/규제 인증, S=8)',
+    cause: '1차 가공은 정상, 조립사 후가공 단계에서 발생 — 가공 흐름을 업체별로 추적해 확정',
+    fix: 'WP 본질을 "도면 결함"에서 "부품 식별 부재 + 후가공 작업 결함"으로 재정의 · AP L→H',
+    verify: '가공 흐름 2사 분담 확인 (C-209) · 5월 WP 정밀 분석 5건 중 1건',
+  },
 ];
 ---
 

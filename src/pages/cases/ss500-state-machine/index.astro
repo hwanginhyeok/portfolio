@@ -406,6 +406,50 @@ const base = import.meta.env.BASE_URL;
       </ul>
     </section>
 
+    <!-- ─── 7. 2026 진행 — added 2026-09-07 (HIH_2 FINISHED_TASK Apr–Sep 2026) ─── -->
+    <section class="space-y-6 mb-16">
+      <h2 class="text-xl font-black text-primary border-b pb-2">7. 양산 1호기 이후 — 2026년 4월~9월</h2>
+      <p class="text-sm text-gray-600">알파 호기에서 양산 1호기로 넘어간 뒤의 일은 "고치는 일"에서 "예측하고 관제하는 일"로 바뀌었다.</p>
+
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="border rounded-xl p-5 space-y-2">
+          <p class="text-xs text-ink-500">양산 · 시연</p>
+          <h3 class="font-bold text-primary">양산 1호기 완성, 고객 시연 2회 Pass</h3>
+          <p class="text-sm text-gray-600">5월 양산 1호기로 시연 2회(쌍구노즐 + Flow Plate). 알파 2호기 LCD 물샘 점검 병행. 7월 시연회 리뷰와 시연장 개선안까지 문서화.</p>
+        </div>
+        <div class="border rounded-xl p-5 space-y-2">
+          <p class="text-xs text-ink-500">모델 기반 설계</p>
+          <h3 class="font-bold text-primary">MBD 파이프라인 5페이즈</h3>
+          <p class="text-sm text-gray-600">BOM×파라미터 검증 → 전력 흐름 → Traction PID → VCU FW Python SIL(상태머신 12개) → 통합 시뮬 4종. MCB 정격 −37 A를 측정 전에 모델이 짚었다.
+            <a href={`${base}cases/ss500-mbd/`} class="text-accent hover:underline">케이스 →</a></p>
+        </div>
+        <div class="border rounded-xl p-5 space-y-2">
+          <p class="text-xs text-ink-500">인터페이스 통제</p>
+          <h3 class="font-bold text-primary">CAN ICD V0.3-r3 — 산출물 8종 동기 개정</h3>
+          <p class="text-sm text-gray-600">메시지 ID 정정 · LCD/ADT 신규 시그널 · 경고 코드 전수 대조 · UART 36B payload. Excel과 FW가 다르면 <strong>FW가 우선</strong>이라는 원칙을 이때 세웠다.</p>
+        </div>
+        <div class="border rounded-xl p-5 space-y-2">
+          <p class="text-xs text-ink-500">DFMEA 심화</p>
+          <h3 class="font-bold text-primary">WP 정밀 분석 5건 · 잠재 결함 2건 발견</h3>
+          <p class="text-sm text-gray-600">솔밸브 정격 초과(2.2 &gt; 1.6 MPa, S=9)와 FW에서 주석 처리된 과압 보호로직을 소스 라인 단위로 특정. 후가공 결함은 "도면"이 아니라 "부품 식별 부재"로 재정의. 후속 태스크 12건 파생.</p>
+        </div>
+        <div class="border rounded-xl p-5 space-y-2">
+          <p class="text-xs text-ink-500">운영 데이터</p>
+          <h3 class="font-bold text-primary">호기 관제 — 수집 파이프라인 + Fleet Ops</h3>
+          <p class="text-sm text-gray-600">현장 폼 → CSV SSOT → Notion 미러 → Fleet 사이트. 호기 카드·예약·납품 상태·방제 동행 회차, 텔레메트리 SSOT 30분/2시간 갱신, CAN DB 결함 코드 디코딩. 위치는 지역 단위만 노출.</p>
+        </div>
+        <div class="border rounded-xl p-5 space-y-2">
+          <p class="text-xs text-ink-500">분석 도구</p>
+          <h3 class="font-bold text-primary">CAN 로그 뷰어 · PM 대시보드</h3>
+          <p class="text-sm text-gray-600">70만 샘플 단일 패스, 이상 구간 밴드, GPS 궤적 동기. 대시보드 10패널에 DFMEA S×O 매트릭스와 APQP 게이트 체크리스트(G3 78 % · G4 71 %).</p>
+        </div>
+      </div>
+
+      <div class="bg-surface rounded-lg p-4 text-sm text-gray-600">
+        <strong class="text-primary">자동화로 묶은 것</strong> — 슬랙 채널 시간별 다이제스트 → 이슈·마일스톤 제안 → 승인 반영, 이슈보고 Notion 페이지 자동 생성(게시 게이트), 주간 Notion ↔ 로컬 미러. 사람이 결정하는 지점만 남기고 나머지는 봇이 돌린다.
+      </div>
+    </section>
+
     <!-- ─── 핵심 메시지 ─── -->
     <section class="bg-primary text-white rounded-lg p-6 mb-12">
       <h2 class="font-bold mb-3">전력제어 개발자가 하는 일</h2>

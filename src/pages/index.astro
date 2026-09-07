@@ -69,6 +69,15 @@ const skills = [
       <p class="text-sm text-ink-500 mb-2">통신이 깨지면 제품이 죽는다. Breaking Change 4건을 사전에 잡아낸 것은 체크리스트가 있었기 때문이다.</p>
       <p class="text-xs text-ink-500 mb-6">CAN 5노드 + DBC 4종 + BusLoad 분석 · 단일 노드에서 분산 시스템으로.</p>
       <CanNetworkDiagram />
+
+      <!-- MBD card — added 2026-09-07 -->
+      <a href={`${base}cases/ss500-mbd/`} class="mt-6 block rounded-lg border border-ink-300 bg-white p-5 hover:shadow-md hover:border-accent/50 transition-all duration-150">
+        <p class="text-xs text-ink-500 mb-1">모델 기반 설계 · 2026.04~05</p>
+        <h4 class="font-bold text-primary">SS500 MBD — 오실로스코프를 대기 전에 모델이 먼저 답한다</h4>
+        <p class="text-sm text-ink-700 mt-2">BOM 검증 → 전력 흐름 → Traction PID → VCU FW Python SIL → 통합 시뮬 4종(CAN 고장 주입). MCB 정격 −37 A, DCDC 마진 70.8 %, PM 96.5°를 측정 전에 정량화.</p>
+        <span class="mt-3 inline-block text-xs text-accent">케이스 보기 →</span>
+      </a>
+
       <NextGen />
     </section>
 
@@ -143,6 +152,7 @@ const skills = [
           <ul class="space-y-2 text-sm text-ink-700">
             <li><strong>전력제어개발팀 · 선임연구원</strong> — 모터제어, 전력설계, 시험검증</li>
             <li><strong>제품개발팀 · 주니어 PM 겸임</strong> — 이슈 37건+ 트래킹 (전력제어 담당 14건), BOM 132개 항목, APQP Phase 2~3</li>
+            <li><strong>2026 진행</strong> — 양산 1호기 고객 시연 2회 · MBD 5페이즈 · CAN ICD 개정 · 호기 관제 파이프라인 + Fleet Ops 사이트</li>
           </ul>
 
           <h3 class="font-bold text-lg mt-6 mb-2">학력</h3>

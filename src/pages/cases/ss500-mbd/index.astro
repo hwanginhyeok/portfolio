@@ -1,0 +1,140 @@
+---
+// New case 2026-09-07: SS500 Model-Based Design pipeline (company work, Apr–May 2026).
+// Facts from HIH_2/HIH_Claude/MBD (README, power_flow_report, c184_report) and
+// FINISHED_TASK C-143/C-144/C-145/C-182/C-183/C-184. Numbers are the model's own outputs;
+// parameters tagged "reasoned" in the SSOT are called out as such below.
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+
+const phases = [
+  ['Phase 0', 'BOM × ParameterSet 교차 검증', '132항목 BOM과 모델 파라미터를 대조 — belongs_to 오매핑 10건 수정, MCB 실물 교체 반영, TBD 24→20'],
+  ['전기 ①', '파워트레인 전력 흐름 모델', 'Layer 0 운전모드 5종 에너지 버짓 · Layer 1 SOC 소모 · Layer 1.5 MR 돌입전류 RLC'],
+  ['전기 ②', 'Traction PID 제어 모델', '모터 TF + PI 제어기 · Bode · 램프 추종 · RK4 서브스텝으로 τ_m < dt 발산 해결'],
+  ['Phase 3', 'VCU FW → Python SIL', '제어 루프·램프·상태머신 12개·전류 제한·스톨 감지·팬 제어를 FW 소스에서 1:1 포팅 (628줄)'],
+  ['Phase 4', '통합 시뮬레이션 4종 (Plant + SIL)', 'S1 정상주행 · S2 급가속/정지 · S3 RC 조향 · S4 CAN 고장 주입 → FAULT → 복구'],
+];
+
+const findings = [
+  ['MCB 100 A vs 방제 운전 137 A', '정격 여유 −37 A, 최대 부하 200 A에서 트립 위험 — 모델이 먼저 짚은 설계 확인 항목'],
+  ['DCDC 마진 70.8 %', '12 V 계 105 W / 정격 360 W. 버스 최악 37.5 V에서도 V_in_min 36 V 위 — 여유 확인'],
+  ['방제 운전 6,593 W', '구동 45.5 % · 팬 30.3 % · 펌프 22.4 % · 12 V 1.8 % — 운용시간 추정 3.3 h'],
+  ['Traction PID: PM 96.5°, 오버슈트 0 %', '상승시간 1.74 s · 정상 3.0 km/h · 정상 전류 5.4 A · duty 86 % — 튜닝 여유 정량화'],
+  ['실부하 전류 ~20 A', 'T_load 1.16 N·m 기준 무부하 8 A → 방제 주행 20.3 A. 오실로 측정 전 레인지 예측'],
+];
+---
+
+<BaseLayout
+  title="SS500 MBD — 실차 파라미터로 만든 전력·제어 시뮬레이션 파이프라인"
+  description="BOM 검증 → 전력 흐름 모델 → Traction PID → VCU FW Python SIL → 통합 시뮬 4종. MCB 정격 부족과 DCDC 마진을 실차 측정 전에 모델이 먼저 짚었다."
+>
+  <main class="max-w-3xl mx-auto px-6 py-16">
+    <a href={base} class="text-sm text-accent hover:underline mb-8 inline-block">← 홈으로</a>
+
+    <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">GT-SS500 · Model-Based Design · 2026.04~05</span>
+    <h1 class="text-3xl font-black text-primary mt-2 mb-2">오실로스코프를 대기 전에, 모델이 먼저 답한다</h1>
+    <p class="text-muted mb-2">SS500 전력·제어 시스템의 수학 모델 — 에너지 버짓, 사양 마진, DFMEA 고장 시나리오 재현, 제어기 튜닝 예측</p>
+    <p class="text-xs text-muted mb-8">Python · python-control · scipy · VCU FW 소스 1:1 매핑 · 파라미터 SSOT(yaml)에 출처 태그 필수</p>
+
+    <div class="grid grid-cols-3 gap-4 mb-10">
+      <div class="rounded-lg border border-ink-300 bg-white p-4">
+        <div class="text-2xl font-black text-accent">5</div>
+        <div class="text-xs text-ink-500 mt-0.5">모델링 페이즈 (BOM 검증 → 통합 SIL)</div>
+      </div>
+      <div class="rounded-lg border border-ink-300 bg-white p-4">
+        <div class="text-2xl font-black text-accent">12</div>
+        <div class="text-xs text-ink-500 mt-0.5">FW에서 포팅한 상태머신 상태</div>
+      </div>
+      <div class="rounded-lg border border-ink-300 bg-white p-4">
+        <div class="text-2xl font-black text-accent">−37 A</div>
+        <div class="text-xs text-ink-500 mt-0.5">모델이 먼저 짚은 MCB 정격 여유</div>
+      </div>
+    </div>
+
+    <section class="space-y-10">
+      <div class="border-2 border-accent rounded-xl p-6 space-y-4">
+        <h2 class="text-lg font-bold text-primary">문제</h2>
+        <p class="text-sm text-gray-600">
+          양산 진입 단계에서 "이 사양이 충분한가"를 묻는 질문이 매주 나온다 — DCDC가 버티나, MCB가 트립하나, PID를 건드리면 어떻게 되나.
+          실차는 한 대이고 측정은 일정을 잡아먹는다. <strong>측정하기 전에 범위를 예측하고, 측정은 확인용으로만 쓰는</strong> 구조가 필요했다.
+        </p>
+        <h2 class="text-lg font-bold text-primary">원칙</h2>
+        <ul class="text-sm text-gray-600 list-disc pl-5 space-y-1">
+          <li><strong>레이어드 충실도</strong> — Layer 0 에너지 수지(대수식) → 1 블록 I/O + 1차 지연 → 1.5 축소 동역학(2차 ODE) → 2 등가회로. 검증 가능한 파라미터만 올린다</li>
+          <li><strong>Plant / Controller 분리</strong> — 제어 로직은 VCU FW 소스와 1:1로 매핑한 별도 블록</li>
+          <li><strong>파라미터 출처 태그 필수</strong> — <code class="text-xs">FW / DS / MEAS / CALC / reasoned / 없음</code>. "없음"은 숨기지 않고 명기하고, reasoned는 선정 근거 한 문단을 붙인다</li>
+          <li><strong>검증 방법과 허용 오차를 먼저 적는다</strong> — 실측이 없는 블록은 범위 스윕(bounded estimation)</li>
+        </ul>
+      </div>
+
+      <div class="border rounded-xl p-6 space-y-4">
+        <h2 class="text-lg font-bold text-primary">파이프라인 — 5 페이즈</h2>
+        <div class="space-y-3">
+          {phases.map(([tag, title, detail]) => (
+            <div class="flex gap-3 text-sm">
+              <span class="font-mono text-xs text-accent shrink-0 pt-0.5 w-14">{tag}</span>
+              <div>
+                <p class="font-semibold text-primary">{title}</p>
+                <p class="text-gray-600">{detail}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="border rounded-xl p-6 space-y-4">
+        <h2 class="text-lg font-bold text-primary">모델이 먼저 짚은 것</h2>
+        <div class="space-y-2">
+          {findings.map(([head, detail]) => (
+            <div class="bg-green-50 border border-green-200 rounded-lg p-3 text-sm">
+              <p class="font-semibold text-primary">{head}</p>
+              <p class="text-gray-600">{detail}</p>
+            </div>
+          ))}
+        </div>
+        <p class="text-xs text-muted">DCDC 효율·팬 전력·내부저항 일부는 데이터시트 미입수로 <code>reasoned</code> 태그 — 모델 결과는 그 가정 범위 안에서의 예측이다.</p>
+      </div>
+
+      <div class="border rounded-xl p-6 space-y-4">
+        <h2 class="text-lg font-bold text-primary">전력 흐름 — 운전 모드별 버짓과 SOC·버스 전압</h2>
+        <figure>
+          <img src={`${base}images/cases/ss500-mbd/power-flow.webp`} alt="SS500 전력 흐름 모델 — 모드별 전력 버짓, 운용시간, SOC 소모, 버스 전압 sag, MR 돌입전류" class="rounded-lg border bg-white w-full" loading="lazy" />
+          <figcaption class="text-xs text-muted mt-1">Layer 0+1 — 방제 운전이 MCB 100 A 선을 넘는 것이 모드 버짓에서 바로 보인다 · MR ON 돌입전류는 RLC 1.5층에서 재현</figcaption>
+        </figure>
+      </div>
+
+      <div class="border rounded-xl p-6 space-y-4">
+        <h2 class="text-lg font-bold text-primary">Traction PID — 튜닝 전에 여유를 재다</h2>
+        <figure>
+          <img src={`${base}images/cases/ss500-mbd/traction-pid.webp`} alt="SS500 Traction PID 모델 — 스텝 응답, Bode, 램프 추종, 감속, 전류·duty" class="rounded-lg border bg-white w-full" loading="lazy" />
+          <figcaption class="text-xs text-muted mt-1">Kp 0.05 · Ki 0.60 · 램프 1,250 rpm/s — PM 96.5°, 오버슈트 0 %, 3.0 km/h 도달. Ra/La/Ke는 실측 후 SSOT 갱신(2026-06)</figcaption>
+        </figure>
+      </div>
+
+      <div class="border rounded-xl p-6 space-y-4">
+        <h2 class="text-lg font-bold text-primary">통합 SIL — FW 상태머신이 고장 주입에 어떻게 반응하는가</h2>
+        <p class="text-sm text-gray-600">
+          VCU FW를 Python으로 포팅한 SIL 위에 Plant를 붙여 4개 시나리오를 돌렸다. S4에서 CAN 고장을 주입하면 상태머신이 FORWARD → FAULT로 떨어지고
+          RESET을 거쳐 복구되는 경로가 재현된다 — DFMEA에 적어둔 고장 시나리오를 실차 없이 확인하는 방법.
+        </p>
+        <figure>
+          <img src={`${base}images/cases/ss500-mbd/integrated-sil.webp`} alt="SS500 통합 시뮬레이션 4종 — 속도, PWM duty, 모터 전류, 상태머신 전이 (CAN 고장 주입 포함)" class="rounded-lg border bg-white w-full" loading="lazy" />
+          <figcaption class="text-xs text-muted mt-1">S1 정상주행 · S2 급가속/정지 · S3 RC 차동 조향 · S4 CAN 고장 주입 → FAULT → 복구</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <div class="bg-surface rounded-lg p-6 mt-10">
+      <h3 class="font-bold text-primary mb-2">두 시뮬레이터의 관계</h3>
+      <p class="text-sm text-gray-600">
+        이 MBD는 회사 프로젝트 안에서 전력·제어 사양을 검증하는 도구이고,
+        <a href={`${base}cases/autonomy-stack/`} class="text-accent hover:underline">RS500 자율주행 시뮬 스택</a>은 회사 밖에서 같은 차량 클래스의 주행·인지·안전 로직을 다루는 개인 프로젝트다.
+        전자는 "이 부품이 버티는가", 후자는 "이 로직이 살아남는가"를 묻는다. 둘 다 실차 시간을 아끼기 위해 만들었다.
+      </p>
+    </div>
+
+    <div class="mt-12 flex justify-between">
+      <a href={`${base}cases/ss500-state-machine/`} class="text-sm text-accent hover:underline">← GT-SS500 양산</a>
+      <a href={`${base}cases/autonomy-stack/`} class="text-sm text-accent hover:underline">RS500 시뮬 스택 →</a>
+    </div>
+  </main>
+</BaseLayout>
