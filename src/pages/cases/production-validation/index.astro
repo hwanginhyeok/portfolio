@@ -1,0 +1,256 @@
+---
+// New case 2026-09-07: GT-SS500 production validation — DVP&R, QC gates, test records,
+// rigs, field acceptance. Facts from the HIH_2 test-evidence inventory (2026-09-07):
+// TR_260220 fan, TR_260225 pump, TR_260320 CAN, TR_260328 fan 14-pt, TR_260330 KGAT-site DVP,
+// DVP master matrix V01 (2026-05-04), CP master process / IQC / LQC / EOL / OQC standards,
+// C-231 patternator jig, FFR 2026-06-12, demo FFR 2026-06-26 / 07-06, C-66/67/68 FW reviews.
+// Customers, suppliers, part numbers, people and certificate numbers are deliberately omitted.
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+
+const dvp = [
+  { cat: '전장 (E)', n: 12, done: 0, prog: 2, todo: 10, note: 'CAN Bus-Off·SP 통일·페라이트·절연 ≥1 MΩ·본딩 ≤100 mΩ·4 h SOC ≥10 %·−10 ℃' },
+  { cat: '주행 (D)', n: 5, done: 0, prog: 0, todo: 5, note: '차속 1.5~3 km/h · 등판 ≥12° · 6 h 주행 · 좌우 전류편차 <10 %' },
+  { cat: '분사·팬 (W)', n: 12, done: 6, prog: 1, todo: 1, moved: 4, note: 'FAN +42.9 % · 좌우 15.2 % · 환수 드롭 · 타워 압력 — 4건은 차세대 이관' },
+  { cat: '안전 (S)', n: 5, done: 1, prog: 0, todo: 4, note: '장애물 감지 설계검토 ✅ · 반응 <200 ms · E-Stop 1 s · 범퍼 스트로크' },
+  { cat: '자율주행 (A)', n: 5, done: 0, prog: 0, todo: 5, note: 'RTK ±5 cm(100회) · Heading <0.5° · DR 30 s · 경로추종 ≤10 cm · 야간' },
+  { cat: '환경 (ENV)', n: 7, done: 0, prog: 0, todo: 7, note: 'IP55/65 · IEC 60068-2-64 진동 · −10~+50 ℃ · EMC 방출/내성 · ESD ±4/±8 kV' },
+  { cat: '사용성 (U)', n: 5, done: 0, prog: 0, todo: 5, note: 'RF 50 m · 4 h 연속 · 소음 ≤75 dBA @5 m · 교반기 저수위 OFF' },
+];
+const dvpTotal = { n: 35, done: 9, prog: 4, todo: 22, moved: 4 };
+
+const gates = [
+  { k: '업체 출하검사', who: '공급사', scope: '부품 11종', detail: '성적서 4 · 미진행 4 · 미정 2 — 단품 성능은 업체 몫이라는 경계 원칙' },
+  { k: 'IQC 수입검사', who: '조립사 / 당사', scope: '부품 13종 (전력제어 관할 28종)', detail: '벤치 6종 B1~B6 명세 · 구동모터 벤치 사이클 타임 ~17분/EA' },
+  { k: 'LQC 공정검사', who: '조립사', scope: '모듈 10종 · 전수', detail: 'CBA0 FCT 12항목 · 12 V 판정 11.4~12.6 V · 2회 연속 FAIL → 분해·수리' },
+  { k: 'EOL 최종검사', who: '조립사 / 당사', scope: '완성차 · 전수', detail: '17항목 (전력제어 관여 12 = 71 %) · AGING 10분 주행 + Full 방제 · SOC ≥80 %' },
+  { k: 'OQC 출하검사', who: '당사', scope: '완성차 · 전수', detail: '외장 4 · 식별 2 · 구성품 · 4면 + 명판 사진 기록' },
+];
+
+const trs = [
+  {
+    id: 'TR-1', name: '팬 슈라우드 개선 성능 평가', date: '2026-02', verdict: '조건부 Pass',
+    purpose: '프로펠러–슈라우드 tip clearance 축소와 프로펠러 대형화가 풍속·효율에 미치는 효과 정량화',
+    method: '디지털 풍속계, 슈라우드 출구 30 cm 1점, VCU DAC duty(13 bit) 직접 주입, 조건당 3회 반복, 야외 자연풍 ~2.5 m/s',
+    criteria: '개선 후 > 개선 전 · 기계식 최고/아이들 대비 ≥80 % · 전력효율 저하 없음',
+    result: 'gap 45 → 9 mm (−80 %) · 프로펠러 22 → 24 in · 풍속 7.9 → 12.4 m/s (+57 %) · 동일 duty +43 % · 전력효율 +19.8 % · 기계식 최고 대비 86.1 %',
+    followup: '정격 대비 duty 0.82 = 103.6 % 초과 확인 → 양산 운용 상한 전류 30 A(정격 77.7 %) 확정',
+  },
+  {
+    id: 'TR-2', name: '팬 14포인트 풍속 정밀 분석', date: '2026-03', verdict: '조건부 Pass',
+    purpose: '개선 전/후 분포 균일성과 사각지대 — 평균값 하나로는 답이 안 나오는 질문',
+    method: '슈라우드 출구 L1~L7 / R1~R7 14점 × 팬 1·2·3단 · 1회 측정 (R&R 미확보를 보고서에 명기)',
+    criteria: '14점 평균 향상 · 사각지대 수 감소 · 좌우 평균차 <20 % · 전 위치 ≥1.5 m/s · 편차 <50 %',
+    result: '3단 평균 2.38 → 3.40 m/s (+42.9 %) · 1단 +52.8 % · 최대 4.6 → 7.0 m/s · 좌우 편차 15.2 % · 사각지대 5 → 2 · 중풍 이상 커버리지 14.3 → 57.1 %',
+    followup: '표준편차 1.74 = 평균의 51 % → 균일성 Fail. 원인 추정 flow starvation / swirl 비대칭 → 가이드 베인·CFD·3회 반복 권고',
+  },
+  {
+    id: 'TR-3', name: '농업기술 시험장 DVP 6종 (A~F)', date: '2026-03-26~27', verdict: '5/6 완료',
+    purpose: '노즐·팬·펌프·환수·타워를 통제 환경에서 구성요소별로 분리 평가',
+    method: '기관 실내 시험장 1박 2일 · 분무 특성 / 토출량 / 환수 / 14점 풍속 / 통합 / 타워 · 기획서 V0.1 → V0.5 (tip-clearance 이론 근거 포함) · 데이터 기록 양식 동반',
+    criteria: '시험별 판정표 사전 정의',
+    result: 'A·C·D·E·F 완료 · B 토출량은 장비 미확보로 이월 → 차세대 이관',
+    followup: '환수 압력 드롭 최대 −2 bar (기준 ≤3) Pass · 타워 18노즐은 1단 23 → 6 bar, 5단 7.5 → 0 bar — ISO 5167 오리피스 환산 필요유량 15.5 → 31.9 L/min(2.06배) vs 공급 ~21.3 → 부족 10.7 L/min → 타워 운용 불가 확정, 설계 분기',
+  },
+  {
+    id: 'TR-4', name: '펌프 성능 시험 — IQC 기준 수립', date: '2026-02', verdict: '조건부 OK',
+    purpose: '양산 입고 펌프의 유량·압력·효율 기준선 확보',
+    method: '자체 순환 벤치 (탱크 → 여과기 → 펌프 → 유량계 · 압력계) · 오실로 3 ch(전압/전류/압력) · VCU DAC → 인버터 오픈루프 · 시료 3대 × 10/20/30 bar × 3회 = 27 관측',
+    criteria: '무부하 스펙 부합 · 시료 간 편차로 IQC 판정 범위 도출',
+    result: '30 bar: 27.0 A · 20.7 L/min · 효율 73.2 % · 10 → 30 bar 유량 감소 7.6 % · 시료 간 전류 편차 최대 ±15 %, 유량 6.1 %',
+    followup: '판정 기준 수립을 위해 N=5~10 확대 · 신규 시료 −42 % 이상 → 7단계 원인 규명(상순서·인버터 튜닝·RPM 환산) → 역회전 아님, 상저항 동급, 매니폴드 구경은 주원인 아님',
+  },
+  {
+    id: 'TR-5', name: 'CAN Bus-Off 원인 규명', date: '2026-03', verdict: '해소',
+    purpose: '솔레노이드 ON/OFF 시 Bus-Off + Main Relay 반복 ON/OFF — 7건의 이력(2025.07~2026.03)을 끝내는 것',
+    method: '오실로 CAN 파형 · 종단저항 실측 · VCU 비트타이밍 역산 · 깨진 ID 비트 패턴 분석 · 노드별 Sample Point 조사',
+    criteria: '재현 조건에서 Bus-Off 0',
+    result: '종단 60 Ω 정상 · VCU 15 TQ @ 500 kbps SP 80.0 % vs 외부 PC 87.5 % (1 bit 2 µs 중 150 ns 차이) · 깨진 ID 두 건의 비트 오염 위치 특정 · 코드 버그 위치 특정(MR OFF 시 timeout 자동 클리어 → 무한 반복)',
+    followup: '외부 PC SP 87.5 → 80.0 % 통일 → Bus-Off 해소 확인 · 잔여 P0: 페라이트 코어 조달, timeout 코드 수정',
+  },
+  {
+    id: 'TR-6', name: '노즐 Cd 측정 재계산', date: '2026-09', verdict: '판정 유보',
+    purpose: '원본 워크북의 32개 관측값을 전수 재계산해 유량계수와 소요 동력을 다시 본다',
+    method: 'Cd · 24노즐 환산유량 · 수동력 · 축동력 · 750 rpm 토크 재계산 (ρ=1000, 펌프효율 0.645, 기계효율 0.97 가정)',
+    criteria: '—',
+    result: 'O 그룹 Cd 0.725~0.823 (그룹 내 CV 0.4~0.7 %) · 1.0 계열 20 bar에서 2.79~3.13 kW로 3 kW 근접 · 워크북 환산유량 열의 배율 오류 발견(×4 → ×8, 표시값이 실제의 50 %)',
+    followup: '시험일·장비·교정·반복수·합격기준이 확인되지 않아 공식 판정 안 함 — 원본 SHA-256을 기록해 추적성만 확보',
+  },
+];
+---
+
+<BaseLayout
+  title="GT-SS500 양산 검증 — DVP&R 35항목 · QC 5게이트 · 시험 기록"
+  description="계획서·판정표·시험 기록·장비 설계·현장 인수까지, 양산 검증을 문서로 남긴 방식. 미착수 22건과 R&R 미확보까지 그대로 적었다."
+>
+  <main class="max-w-3xl mx-auto px-6 py-16">
+    <a href={base} class="text-sm text-accent hover:underline mb-8 inline-block">← 홈으로</a>
+
+    <span class="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">GT-SS500 · 양산 검증 · 2026.02~09</span>
+    <h1 class="text-3xl font-black text-primary mt-2 mb-2">검증은 판정표를 먼저 쓰는 데서 시작한다</h1>
+    <p class="text-muted mb-2">DVP&R 마스터 매트릭스 · QC 5게이트 · 시험 기록 6건 · 시험 장비 설계 · 현장 인수 시험</p>
+    <p class="text-xs text-muted mb-8">시험 담당 35/35 · 판정 기준은 시험 전에 문서로 · 못 잰 것은 못 쟀다고 적는다</p>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
+      <div class="rounded-lg border border-ink-300 bg-white p-4"><div class="text-2xl font-black text-accent">35</div><div class="text-xs text-ink-500 mt-0.5">DVP&R 항목 · 7 카테고리</div></div>
+      <div class="rounded-lg border border-ink-300 bg-white p-4"><div class="text-2xl font-black text-accent">5</div><div class="text-xs text-ink-500 mt-0.5">QC 게이트 · FCT 12 · EOL 17</div></div>
+      <div class="rounded-lg border border-ink-300 bg-white p-4"><div class="text-2xl font-black text-accent">6</div><div class="text-xs text-ink-500 mt-0.5">시험 기록(TR) · 각각 판정표 동반</div></div>
+      <div class="rounded-lg border border-ink-300 bg-white p-4"><div class="text-2xl font-black text-accent">15 h</div><div class="text-xs text-ink-500 mt-0.5">현장 인수 시험 · 4,500평 자율 방제</div></div>
+    </div>
+
+    <section class="space-y-10">
+
+      <!-- 1. DVP&R -->
+      <div class="border-2 border-accent rounded-xl p-6 space-y-4">
+        <h2 class="text-lg font-bold text-primary">1. DVP&R 마스터 매트릭스 — 35항목, 그리고 미착수 22건</h2>
+        <p class="text-sm text-gray-600">
+          설계 목표(DesignGoals) 14건에서 시험 항목 35건을 끌어내고, 각 항목에 합격 기준·방법·담당·상태를 붙였다.
+          완료 9 · 진행 4 · <strong>미착수 22</strong> · 차세대 이관 4. 미착수를 숨기지 않는 이유는 단순하다 — 이 표가 다음 분기의 시험 계획이기 때문이다.
+        </p>
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs">
+            <thead class="bg-ink-50 text-ink-700"><tr><th class="text-left p-2">카테고리</th><th class="p-2">항목</th><th class="p-2 text-success">완료</th><th class="p-2 text-info">진행</th><th class="p-2 text-error">미착수</th><th class="text-left p-2">대표 항목</th></tr></thead>
+            <tbody class="divide-y divide-ink-100">
+              {dvp.map((r) => (
+                <tr>
+                  <td class="p-2 font-semibold text-primary whitespace-nowrap">{r.cat}</td>
+                  <td class="p-2 text-center">{r.n}</td>
+                  <td class="p-2 text-center text-success font-bold">{r.done || '—'}</td>
+                  <td class="p-2 text-center text-info">{r.prog || '—'}</td>
+                  <td class="p-2 text-center text-error">{r.todo || '—'}{r.moved ? ` (+이관 ${r.moved})` : ''}</td>
+                  <td class="p-2 text-gray-600">{r.note}</td>
+                </tr>
+              ))}
+              <tr class="bg-ink-50 font-semibold"><td class="p-2">합계</td><td class="p-2 text-center">{dvpTotal.n}</td><td class="p-2 text-center text-success">{dvpTotal.done}</td><td class="p-2 text-center text-info">{dvpTotal.prog}</td><td class="p-2 text-center text-error">{dvpTotal.todo}</td><td class="p-2 text-gray-600">차세대 이관 {dvpTotal.moved} · 트레이서빌리티 8 · DesignGoals 매핑 14</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-muted">환경시험 7건은 IP55/IP65 · IEC 60068-2-64 진동(21.3 m/s², 3축 각 2 h) · −10~+50 ℃ · EMC · ESD ±4/±8 kV로 규격을 매핑해 둔 상태다. 시험은 아직이다.</p>
+      </div>
+
+      <!-- 2. QC gates -->
+      <div class="border rounded-xl p-6 space-y-4">
+        <h2 class="text-lg font-bold text-primary">2. QC 5게이트 — 누가, 무엇을, 어디까지</h2>
+        <p class="text-sm text-gray-600">경계 원칙 네 줄이 먼저다: 업체 출하검사와 중복하지 않는다 · 단품 성능은 업체 몫 · 시스템 연동은 EOL에서 · LQC는 체결·배선·통전까지.</p>
+        <div class="relative">
+          <div class="absolute left-4 top-2 bottom-2 w-px bg-ink-200" aria-hidden="true"></div>
+          <ol class="space-y-3">
+            {gates.map((g, i) => (
+              <li class="relative pl-10">
+                <span class="absolute left-1.5 top-1 w-5 h-5 rounded-full bg-accent text-white text-[10px] font-bold flex items-center justify-center">{i + 1}</span>
+                <div class="text-sm"><span class="font-bold text-primary">{g.k}</span> <span class="text-xs text-ink-500">· {g.who} · {g.scope}</span></div>
+                <p class="text-xs text-gray-600 mt-0.5">{g.detail}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+        <div class="grid md:grid-cols-2 gap-3 text-xs">
+          <div class="bg-surface rounded-lg p-3"><span class="font-semibold text-primary">FCT 38항목</span> — VCU 보드 단품, 목표 10분/대. 전원 6 · CAN 5 · GPIO 8 · ADC 4 · DAC 2 · S-Bus 2 · UART 2 · LED/Buzzer 4 · EEPROM 3 · FW 2</div>
+          <div class="bg-surface rounded-lg p-3"><span class="font-semibold text-primary">EOL 52항목</span> — 완성차, 목표 30분/대. AGING = 10분 주행 + Full 방제, 30 m × 30 m, 경고·Fault 0, 비정상 소음·진동 0, 구동부 발열 촉수 확인</div>
+        </div>
+        <p class="text-xs text-muted">FCT 항목 T-05의 CAN ID는 실차 FW 헤더 기준으로 두 차례 정정했다(r1 → r2, 2026-06). Excel과 FW가 다르면 FW가 맞다 — CAN ICD 개정 때 세운 원칙을 검사 표준서에도 그대로 적용했다.</p>
+      </div>
+
+      <!-- 3. Test records -->
+      <div class="border rounded-xl p-6 space-y-5">
+        <h2 class="text-lg font-bold text-primary">3. 시험 기록 — 목적 · 방법 · 판정 기준 · 결과 · 후속</h2>
+        <p class="text-sm text-gray-600">모든 TR은 같은 뼈대로 쓴다. "조건부 Pass"가 많은 것은 판정표를 먼저 썼기 때문이다 — 기준 없이 재면 전부 Pass다.</p>
+        {trs.map((t) => (
+          <div class="rounded-lg border border-ink-300 overflow-hidden">
+            <div class="flex items-center justify-between gap-2 bg-ink-50 px-4 py-2.5 border-b border-ink-300">
+              <div class="flex items-center gap-2"><span class="font-mono text-[11px] text-accent">{t.id}</span><span class="font-bold text-primary text-sm">{t.name}</span></div>
+              <div class="flex items-center gap-2 text-[11px]"><span class="text-ink-500">{t.date}</span><span class={`px-2 py-0.5 rounded-full font-semibold ${t.verdict.includes('Pass') || t.verdict.includes('해소') || t.verdict.includes('OK') ? 'bg-green-100 text-green-700' : t.verdict.includes('유보') ? 'bg-ink-100 text-ink-700' : 'bg-blue-100 text-blue-700'}`}>{t.verdict}</span></div>
+            </div>
+            <dl class="grid grid-cols-[4.5rem_1fr] gap-x-3 gap-y-1.5 px-4 py-3 text-xs">
+              <dt class="text-ink-500">목적</dt><dd class="text-gray-700">{t.purpose}</dd>
+              <dt class="text-ink-500">방법</dt><dd class="text-gray-700">{t.method}</dd>
+              <dt class="text-ink-500">판정 기준</dt><dd class="text-gray-700">{t.criteria}</dd>
+              <dt class="text-ink-500">결과</dt><dd class="text-gray-800 font-medium">{t.result}</dd>
+              <dt class="text-ink-500">후속</dt><dd class="text-gray-700">{t.followup}</dd>
+            </dl>
+          </div>
+        ))}
+      </div>
+
+      <!-- 4. Rigs -->
+      <div class="border rounded-xl p-6 space-y-4">
+        <h2 class="text-lg font-bold text-primary">4. 시험 장비 설계 — 수직 패터네이터 지그</h2>
+        <p class="text-sm text-gray-600">
+          분사 수직 분포를 사내에서 비교하려면 포집 장치가 필요한데 시판품이 없다. 요구 → 포집 → 배수 → 계량 → 구조 → 지지 → 위치 순서로 요소를 하나씩 확정하고 CAD V01~V07을 돌렸다.
+        </p>
+        <div class="grid md:grid-cols-2 gap-4 items-start">
+          <figure>
+            <img src={`${base}images/cases/production-validation/patternator-iso.webp`} alt="수직 패터네이터 시험지그 CAD V07 등각 렌더" class="rounded-lg border bg-white w-full" loading="lazy" />
+            <figcaption class="text-xs text-muted mt-1">V07 정본 — 부품 140, 부유 부품 0. 루버 40 → 솔리드 패널 8 (DFMA)</figcaption>
+          </figure>
+          <ul class="text-xs text-gray-700 space-y-1.5">
+            <li><strong>측정 범위</strong> 0~4.0 m · 수직 피치 200 mm → 20셀/열 · 포집면 폭 ~300 mm(투영 1.2 m²) · 이격 2.0 m</li>
+            <li><strong>포집</strong> 무경사 수직 패널 + 전방 캐치립(d60·h40·V8°) · 셀 하단 슬로프 7° · 250 mL 컵 × 20 · 저울 0.01 g · 데드볼륨 &lt;1 %</li>
+            <li><strong>측정 절차</strong> 단일벽 + 차량 180° 회전으로 2회 측정 — 양면 벽 대신 회전으로 비용을 반으로</li>
+            <li><strong>구조 계산</strong> 풍하중 q = ½ρV² · 구조 질량 55 kg · 전도 안전율: 밸러스트 0 kg에서 15 m/s SF 0.69 ✗ → <strong>전방 81 kg로 변경 → SF 1.98 (15 m/s) / 4.45 (10 m/s)</strong></li>
+            <li><strong>마스트 처짐</strong> 10 m/s 베어 캔틸레버 69 mm → 가이라인 + X 보강으로 10 mm = 이격의 0.52 %</li>
+            <li><strong>근거 데이터</strong> 팬 실측 30 cm 11~12 m/s · 노즐 14개 · 최대 높이 1,700 mm · 펌프 21 L/min @30 bar · 학술 선례 1~4 m 측정</li>
+            <li><strong>잔여</strong> 셀당 포집량, 이격 2 m 지점 풍속 실측 — 제작 후 재검증 2건</li>
+          </ul>
+        </div>
+        <figure>
+          <img src={`${base}images/cases/production-validation/patternator-sheet.webp`} alt="패터네이터 설계 보고 시트 V07 — 요소 1~7별 설계 의도와 반영, 구조 계산" class="rounded-lg border bg-white w-full" loading="lazy" />
+          <figcaption class="text-xs text-muted mt-1">설계 보고 시트 V07 — 포집 · 배수 · 계량 · 구조 · 지지 · 위치, 요소별 "의도 → 반영" 한 장. 검증: 부유 부품 0 · 데드볼륨 &lt;1 % · 전도 SF 2.0 @15 m/s · 처짐 10 mm</figcaption>
+        </figure>
+        <div class="grid md:grid-cols-3 gap-3 text-xs">
+          <div class="bg-surface rounded-lg p-3"><span class="font-semibold text-primary">펌프 성능 벤치</span> — 순환배관 + 유량계 + 압력계(0~10 V, 환산식 보정) + 오실로 3 ch + VCU DAC 오픈루프. TR-4의 27 관측이 여기서 나왔다</div>
+          <div class="bg-surface rounded-lg p-3"><span class="font-semibold text-primary">IQC 벤치 6종 명세</span> — B1~B6, B1·B2 = P0. 필수 장비 8종 중 미확보 5종을 명세에 적었다. 자동화 경계: 체결·배선 수동 / 시퀀스·판정·리포트 자동</div>
+          <div class="bg-surface rounded-lg p-3"><span class="font-semibold text-primary">펌프 내구 CANoe 리그</span> — 전용 DBC + 패널, 32 bit 카운터 6종(펌프·MR 동작/에러) 모니터링. 진행 중, 완료 시점 미정</div>
+        </div>
+      </div>
+
+      <!-- 5. Field -->
+      <div class="border rounded-xl p-6 space-y-4">
+        <h2 class="text-lg font-bold text-primary">5. 현장 인수 시험과 시연 — 실패 한 번, 재검증 한 번</h2>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="rounded-lg bg-green-50 border border-green-200 p-4 text-sm space-y-1.5">
+            <p class="font-bold text-primary">과수원 인수 시험 (FFR) · 2026-06</p>
+            <p class="text-gray-700">2일 15 h — 1일차 4,500평 학습 + 노즐 세팅, 2일차 주행 평가 → <strong>4,500평 자율 방제 완료, 고객 인수</strong></p>
+            <p class="text-gray-700">LTE 끊김 · GNSS Float · CAN 노이즈 · 제어권 상실 · 고스트 터치 · 원인불명 정지 — <strong>전부 무발생</strong></p>
+            <p class="text-gray-700">이슈 11건 도출 → 신규 5(복귀 경로 30~50 cm 안쪽 shift, 직진 오실레이션, 사다리 오인식, 재기동 시 SOC 저하 등) · 개선 완료 2</p>
+          </div>
+          <div class="rounded-lg bg-surface border border-ink-300 p-4 text-sm space-y-1.5">
+            <p class="font-bold text-primary">시연 · 2026-06-26 실패 → 07-06 성공</p>
+            <p class="text-gray-700"><strong>실패</strong>: 통신사 회선 우선순위 저하 → RTK Fix·통신 완전 단절 → 자율주행 시연 불가</p>
+            <p class="text-gray-700"><strong>조치</strong>: USIM 교체 + 통신사 우선순위 이슈 등록</p>
+            <p class="text-gray-700"><strong>재검증</strong>: 같은 장소에서 통신 정상, RTK Fix 유지, 자율주행 정상 — 조치 유효성이 현장 재현으로 확인</p>
+            <p class="text-xs text-muted">공백도 적었다: 두 번째 시연의 모니터링은 GNSS뿐, CAN 로그·영상 미확보</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. FW review -->
+      <div class="border rounded-xl p-6 space-y-3">
+        <h2 class="text-lg font-bold text-primary">6. VCU FW 3계층 검증 — "ROM FIX 전 양산 부적합"</h2>
+        <p class="text-sm text-gray-600">부품 → 시스템 → 제품 순서로 소스코드를 정적 추적했다.</p>
+        <div class="grid grid-cols-3 gap-3 text-center text-xs">
+          <div class="rounded-lg bg-surface p-3"><div class="text-lg font-black text-primary">24 모듈 · 12,584줄</div><div class="text-ink-500">부품 단위 — CRITICAL 8 (33 %) / 중요 10 / 경미 5</div></div>
+          <div class="rounded-lg bg-surface p-3"><div class="text-lg font-black text-primary">36건</div><div class="text-ink-500">시스템 단위 — 전력 시퀀스 · CAN · 제어권 · ADT E2E 4축, CRITICAL 10</div></div>
+          <div class="rounded-lg bg-surface p-3"><div class="text-lg font-black text-primary">51건 · P0 15</div><div class="text-ink-500">제품 단위 — 캐스케이딩 체인 7, 사용자 시나리오 5 중 3 불합격</div></div>
+        </div>
+        <p class="text-xs text-gray-600">판정: P0 수정 후 조건부 양산 가능. 4일 ROM FIX 계획(Day 1 10건 ~22줄 → Day 2 구조 3건 → Day 3 상태머신 2건 → Day 4 통합 테스트)으로 전환, 핵심 수정 3건 완료 확인.</p>
+      </div>
+
+      <!-- 7. Honesty -->
+      <div class="bg-surface rounded-lg p-6 space-y-2">
+        <h3 class="font-bold text-primary">못 잰 것, 못 정한 것</h3>
+        <ul class="text-sm text-gray-600 list-disc pl-5 space-y-1">
+          <li>팬 14점 풍속은 <strong>1회 측정</strong>이고 R&R을 확보하지 못했다 — 보고서에 그렇게 적었다</li>
+          <li>DVP&R 35건 중 <strong>22건이 미착수</strong>다. 환경·자율주행·주행 카테고리는 규격 매핑까지만 되어 있다</li>
+          <li>궤도 내구는 사진과 소견만 있고 시간·거리·사이클 수치가 <strong>없다</strong>. IQC 기준도 아직 없다</li>
+          <li>노즐 Cd 재계산은 시험 조건이 확인되지 않아 <strong>판정을 유보</strong>했다 — 대신 원본 해시로 추적성만 남겼다</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="mt-12 flex justify-between">
+      <a href={`${base}cases/test-engineering/`} class="text-sm text-accent hover:underline">← 시험 기획 7종</a>
+      <a href={`${base}cases/ss500-state-machine/`} class="text-sm text-accent hover:underline">GT-SS500 양산 →</a>
+    </div>
+  </main>
+</BaseLayout>

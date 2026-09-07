@@ -17,7 +17,7 @@ const tiles = [
 <div class="mt-8">
   <div class="flex items-baseline justify-between mb-3">
     <p class="eyebrow">Evidence · 직접 설계한 시험 환경</p>
-    <a href={`${base}cases/test-engineering/`} class="text-xs text-accent hover:underline">시험 7종 상세 →</a>
+    <span class="text-xs"><a href={`${base}cases/test-engineering/`} class="text-accent hover:underline">시험 7종 상세 →</a> · <a href={`${base}cases/production-validation/`} class="text-accent hover:underline">양산 검증 →</a></span>
   </div>
   <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
     {tiles.map((x) => (

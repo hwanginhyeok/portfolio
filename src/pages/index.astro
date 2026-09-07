@@ -103,6 +103,23 @@ const skills = [
     <section id="t4-apqp" class="py-12 border-t border-ink-100 scroll-mt-16">
       <SectionHead tag="T4" label="양산 체계" tone="amber" title="양산 체계 — 양산은 문서로 굴러간다" thesis="DFMEA가 없으면 엔지니어의 직감이 사라졌을 때 품질이 무너진다." note="APQP Phase 2~3 직접 수행 · 양산 1호기 · 고객 시연 2회 · 납품 호기 관제." />
       <APQPSystem />
+
+      <!-- Production validation card — added 2026-09-07 -->
+      <a href={`${base}cases/production-validation/`} class="mt-6 block card card-link card-accent card-accent-amber">
+        <div class="grid md:grid-cols-[1fr_auto] gap-4 items-start">
+          <div>
+            <p class="text-xs text-ink-500 mb-1">양산 검증 · 2026.02~09</p>
+            <h4 class="font-bold text-primary">검증은 판정표를 먼저 쓰는 데서 시작한다</h4>
+            <p class="text-sm text-ink-700 mt-2">DVP&R 35항목(완료 9 · 미착수 22를 그대로) · QC 5게이트 (FCT 12 · EOL 17항목, 전력제어 관여 71 %) · 시험 기록 6건 · 수직 패터네이터 지그 설계(V07, 전도 SF 0.69 → 1.98) · 과수원 인수 시험 15 h 4,500평 · 시연 실패 → 조치 → 재검증.</p>
+            <span class="mt-3 inline-block text-xs text-accent">케이스 보기 →</span>
+          </div>
+          <div class="hidden md:flex flex-col gap-1.5 text-[11px] w-44">
+            {['업체 출하검사','IQC 수입검사','LQC 공정검사','EOL 최종검사','OQC 출하검사'].map((g,i) => (
+              <div class="flex items-center gap-2"><span class="w-4 h-4 rounded-full bg-amber-500 text-white text-[9px] font-bold flex items-center justify-center shrink-0">{i+1}</span><span class="text-ink-700">{g}</span></div>
+            ))}
+          </div>
+        </div>
+      </a>
     </section>
 
     <!-- #t5-roots: T-5 엔지니어의 뿌리 -->
