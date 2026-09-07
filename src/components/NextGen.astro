@@ -1,5 +1,5 @@
 ---
-// T-3: 차세대 SS1000 기획
+// T-3: next-generation planning. Successor naming changed from SS1000 to SS600 (2026-08); kept generic here.
 // SSOT: CONTENT_V2 §7C
 const items = [
   {
@@ -9,30 +9,30 @@ const items = [
   },
   {
     id: 'E-2',
-    title: 'SS1000 장애물 감지 2-layer 설계',
+    title: '차세대 장애물 감지 2-layer 설계',
     detail: '카메라 + YOLO + RS485 초음파. 센서 이원화 (C-110)',
   },
   {
     id: 'E-3',
-    title: 'SS1000 팬시스템 POC Option A',
+    title: '차세대 팬시스템 POC Option A',
     detail: 'SS500 팬 벤치 데이터 → 차세대 사양 도출 (C-111)',
   },
   // Added 2026-09-07
   {
     id: 'E-4',
     title: '차세대 신규제품 옵션 아키텍처 검토',
-    detail: '분사 옵션 bottom-up 아키텍처 · LTE 안테나 하네스 · 600L 공칭/가용 경계 결정 (C-269, 8월)',
+    detail: '분사 옵션 bottom-up 아키텍처 · 카메라/LTE 배선 경로 재설계 · 600 L급 확정, 공칭/가용 용량 경계는 미결 (C-269, 8월)',
   },
   {
     id: 'E-5',
     title: '48V 펌프 구동 심층 리서치 + 공급사 3사 비교',
-    detail: '3단계 리서치(수집→감사→종합) · 모터 샘플 소싱 견적 · 3사 비교 리포트 (8월)',
+    detail: '3단계 리서치(수집→감사→종합) · 모터 샘플 소싱 · 3사 비교 리포트 (8~9월)',
   },
 ];
 ---
 
 <div class="mt-6 rounded-lg border border-ink-300 bg-ink-50 p-5">
-  <p class="text-xs font-semibold text-ink-500 uppercase tracking-wide mb-3">차세대 — SS500의 경험이 SS1000으로</p>
+  <p class="text-xs font-semibold text-ink-500 uppercase tracking-wide mb-3">차세대 — SS500의 경험이 다음 기종으로</p>
   <div class="space-y-3">
     {items.map((item) => (
       <div class="flex gap-3 items-start">

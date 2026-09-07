@@ -49,9 +49,9 @@ const episodes: Array<Record<string, string>> = [
     title: '솔밸브 과압 · 정격 초과 운용',
     sub: '보호로직이 FW에서 꺼져 있었다',
     fm: 'Issue #240 과압 · #245 솔밸브 2.2 MPa > 정격 1.6 MPa — WP 판정 S=9, AP=H',
-    cause: 'FW 헤더의 DOWNPRESSURE_LOGIC_ON 주석 처리 확인 — 의도적 비활성 상태로 양산 진입',
+    cause: 'FW에서 과압 보호 로직이 컴파일 타임에 비활성화되어 있음을 확인 — 그 상태로 양산 진입',
     fix: '재활성화 + 검증 태스크 등록 · 양산 차량 잠재 결함으로 상향 (C-210)',
-    verify: '소스 라인 단위로 원인 특정 (PowerTrain_Control.h) · DFMEA WP 반영',
+    verify: '소스 라인 단위로 원인 특정 · DFMEA WP 반영',
     kpi: 'S=9 · AP=H', kpiLabel: '잠재 결함 상향',
   },
   {

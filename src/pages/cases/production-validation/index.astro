@@ -1,10 +1,7 @@
 ---
-// New case 2026-09-07: GT-SS500 production validation — DVP&R, QC gates, test records,
-// rigs, field acceptance. Facts from the HIH_2 test-evidence inventory (2026-09-07):
-// TR_260220 fan, TR_260225 pump, TR_260320 CAN, TR_260328 fan 14-pt, TR_260330 KGAT-site DVP,
-// DVP master matrix V01 (2026-05-04), CP master process / IQC / LQC / EOL / OQC standards,
-// C-231 patternator jig, FFR 2026-06-12, demo FFR 2026-06-26 / 07-06, C-66/67/68 FW reviews.
-// Customers, suppliers, part numbers, people and certificate numbers are deliberately omitted.
+// Case added 2026-09-07: GT-SS500 production validation. Figures come from the project's
+// own test reports, DVP&R matrix, QC standards and field acceptance records (Feb–Sep 2026);
+// customers, suppliers, part numbers, people and certificate numbers are deliberately omitted.
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 const base = import.meta.env.BASE_URL;
 
@@ -17,10 +14,10 @@ const dvp = [
   { cat: '환경 (ENV)', n: 7, done: 0, prog: 0, todo: 7, note: 'IP55/65 · IEC 60068-2-64 진동 · −10~+50 ℃ · EMC 방출/내성 · ESD ±4/±8 kV' },
   { cat: '사용성 (U)', n: 5, done: 0, prog: 0, todo: 5, note: 'RF 50 m · 4 h 연속 · 소음 ≤75 dBA @5 m · 교반기 저수위 OFF' },
 ];
-const dvpTotal = { n: 35, done: 9, prog: 4, todo: 22, moved: 4 };
+const dvpTotal = { n: 51, done: 7, prog: 3, todo: 37, moved: 4 };
 
 const gates = [
-  { k: '업체 출하검사', who: '공급사', scope: '부품 11종', detail: '성적서 4 · 미진행 4 · 미정 2 — 단품 성능은 업체 몫이라는 경계 원칙' },
+  { k: '업체 출하검사', who: '공급사', scope: '부품 11종', detail: '성적서 5 · 미진행 4 · 미정 2 — 단품 성능은 업체 몫이라는 경계 원칙' },
   { k: 'IQC 수입검사', who: '조립사 / 당사', scope: '부품 13종 (전력제어 관할 28종)', detail: '벤치 6종 B1~B6 명세 · 구동모터 벤치 사이클 타임 ~17분/EA' },
   { k: 'LQC 공정검사', who: '조립사', scope: '모듈 10종 · 전수', detail: '제어함 조립체(CBA0) FCT 검사표준서 12항목 · 12 V 판정 11.4~12.6 V · 2회 연속 FAIL → 분해·수리. 별도로 VCU 보드 단품 FCT 38항목을 정의(목표 10분/대)' },
   { k: 'EOL 최종검사', who: '조립사 / 당사', scope: '완성차 · 전수', detail: '검사표준서 17항목(그중 전력제어 작성 12) · AGING 10분 주행 + Full 방제 · SOC ≥80 %. 별도로 완성차 EOL 52항목을 정의(목표 30분/대)' },
@@ -33,15 +30,15 @@ const trs = [
     purpose: '프로펠러–슈라우드 tip clearance 축소와 프로펠러 대형화가 풍속·효율에 미치는 효과 정량화',
     method: '디지털 풍속계, 슈라우드 출구 30 cm 1점, VCU DAC duty(13 bit) 직접 주입, 조건당 3회 반복, 야외 자연풍 ~2.5 m/s',
     criteria: '개선 후 > 개선 전 · 기계식 최고/아이들 대비 ≥80 % · 전력효율 저하 없음',
-    result: 'gap 45 → 9 mm (−80 %) · 프로펠러 22 → 24 in · 풍속 7.9 → 12.4 m/s (+57 %) · 동일 duty +43 % · 전력효율 +19.8 % · 기계식 최고 대비 86.1 %',
-    followup: '조건: 기계식 최고 대비 86.1 %로 기준 충족이나 duty 0.82에서 모터 정격 103.6 % 초과 → 운용 상한 30 A(정격 77.7 %) 적용 시 유효. 해제 조건: 30 A 상한 FW 반영 확인',
+    result: 'gap 45 → 9 mm (−80 %) · 프로펠러 22 → 24 in · 풍속 7.9 → 12.4 m/s (+57 %) · 동일 duty +43 % · 전력효율 +19.8 % · 기계식 아이들 대비 86.1 % (Pass) · 기계식 최고 대비 47.1 % (Fail)',
+    followup: '조건: 기준 4개 중 기계식 최고 대비 ≥80 %는 미달(47.1 %), 나머지 3개 충족 → 아이들 대비 기준으로 조건부. duty 0.82에서 모터 정격 103.6 % 초과 → 운용 상한 30 A(정격 77.7 %) 확정. 해제 조건: 30 A 상한 FW 반영 확인',
   },
   {
     id: 'TR-2', name: '팬 14포인트 풍속 정밀 분석', date: '2026-03', verdict: 'Pass / Not Judged',
     purpose: '개선 전/후 분포 균일성과 사각지대 — 평균값 하나로는 답이 안 나오는 질문',
     method: '슈라우드 출구 L1~L7 / R1~R7 14점 × 팬 1·2·3단 · 1회 측정 (R&R 미확보를 보고서에 명기)',
     criteria: '14점 평균 향상 · 사각지대 수 감소 · 좌우 평균차 <20 % · 전 위치 ≥1.5 m/s · 편차 <50 %',
-    result: '3단 평균 2.38 → 3.40 m/s (+42.9 %) · 1단 +52.8 % · 최대 4.6 → 7.0 m/s · 좌우 편차 15.2 % · 사각지대 5 → 2 · 중풍 이상 커버리지 14.3 → 57.1 %',
+    result: '3단 평균 2.38 → 3.40 m/s (+42.9 %) · 1단 +52.8 % · 최대 4.9 → 7.0 m/s (R3 4.6 → 7.0) · 좌우 편차 15.2 % · 사각지대 5 → 2 · 중풍 이상 커버리지 14.3 → 57.1 %',
     followup: '평균·커버리지·좌우편차: Pass. 균일성: 표준편차/평균 51 % vs 기준 50 % — n=1이라 반복성·불확도 미평가, 1 %p 차이는 불확도 안 → 판정 유보(Not Judged). 3회 반복 후 재판정. 원인 가설 flow starvation / swirl 비대칭 → 가이드 베인·CFD',
   },
   {
@@ -73,15 +70,15 @@ const trs = [
     purpose: '원본 워크북의 32개 관측값을 전수 재계산해 유량계수와 소요 동력을 다시 본다',
     method: 'Cd · 24노즐 환산유량 · 수동력 · 축동력 · 750 rpm 토크 재계산 (ρ=1000, 펌프효율 0.645, 기계효율 0.97 가정)',
     criteria: '—',
-    result: 'O 그룹 Cd 0.725~0.823 (그룹 내 CV 0.4~0.7 %) · 1.0 계열 20 bar에서 2.79~3.13 kW로 3 kW 근접 · 워크북 환산유량 열의 배율 오류 발견(×4 → ×8, 표시값이 실제의 50 %)',
+    result: 'O 그룹 Cd 0.725~0.823 (그룹 내 CV 0.4~0.7 %) · 1.0 계열 20 bar에서 2.79~3.13 kW — 3 kW 정격 근접, 최대 +4.4 % 초과 · 워크북 환산유량 열의 배율 오류 발견(×4 → ×8, 표시값이 실제의 50 %)',
     followup: '시험일·장비·교정·반복수·합격기준이 확인되지 않아 공식 판정 안 함 — 원본 SHA-256을 기록해 추적성만 확보',
   },
 ];
 ---
 
 <BaseLayout
-  title="GT-SS500 양산 검증 — DVP&R 35항목 · QC 5게이트 · 시험 기록"
-  description="계획서·판정표·시험 기록·장비 설계·현장 인수까지, 양산 검증을 문서로 남긴 방식. 미착수 22건과 R&R 미확보까지 그대로 적었다."
+  title="GT-SS500 양산 검증 — DVP&R 51항목 · QC 5게이트 · 시험 기록"
+  description="계획서·판정표·시험 기록·장비 설계·현장 인수까지, 양산 검증을 문서로 남긴 방식. 미착수 37건과 반복 측정 미확보까지 그대로 적었다."
 >
   <main class="max-w-3xl mx-auto px-6 py-16">
     <a href={base} class="text-sm text-accent hover:underline mb-8 inline-block">← 홈으로</a>
@@ -89,10 +86,10 @@ const trs = [
     <span class="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">GT-SS500 · 양산 검증 · 2026.02~09</span>
     <h1 class="text-3xl font-black text-primary mt-2 mb-2">검증은 판정표를 먼저 쓰는 데서 시작한다</h1>
     <p class="text-muted mb-2">DVP&R 마스터 매트릭스 · QC 5게이트 · 시험 기록 6건 · 시험 장비 설계 · 현장 인수 시험</p>
-    <p class="text-xs text-muted mb-8">시험 담당 35/35 · 판정 기준은 시험 전에 문서로 · 못 잰 것은 못 쟀다고 적는다</p>
+    <p class="text-xs text-muted mb-8">시험 담당 51/51 · 판정 기준은 시험 전에 문서로 · 못 잰 것은 못 쟀다고 적는다</p>
 
     <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
-      <div class="rounded-lg border border-ink-300 bg-white p-4"><div class="text-2xl font-black text-amber-600">35</div><div class="text-xs text-ink-500 mt-0.5">DVP&R 항목 · 7 카테고리</div></div>
+      <div class="rounded-lg border border-ink-300 bg-white p-4"><div class="text-2xl font-black text-amber-600">51</div><div class="text-xs text-ink-500 mt-0.5">DVP&R 항목 · 7 카테고리</div></div>
       <div class="rounded-lg border border-ink-300 bg-white p-4"><div class="text-2xl font-black text-amber-600">5</div><div class="text-xs text-ink-500 mt-0.5">QC 게이트 · 검사표준서 FCT 12 · EOL 17</div></div>
       <div class="rounded-lg border border-ink-300 bg-white p-4"><div class="text-2xl font-black text-amber-600">6</div><div class="text-xs text-ink-500 mt-0.5">시험 기록(TR) · 각각 판정표 동반</div></div>
       <div class="rounded-lg border border-ink-300 bg-white p-4"><div class="text-2xl font-black text-amber-600">15 h</div><div class="text-xs text-ink-500 mt-0.5">현장 인수 시험 · 4,500평 자율 방제</div></div>
@@ -102,10 +99,10 @@ const trs = [
 
       <!-- 1. DVP&R -->
       <div class="border-2 border-amber-300 rounded-xl p-6 space-y-4">
-        <h2 class="text-lg font-bold text-primary">1. DVP&R 마스터 매트릭스 — 35항목, 그리고 미착수 22건</h2>
+        <h2 class="text-lg font-bold text-primary">1. DVP&R 마스터 매트릭스 — 51항목, 그리고 미착수 37건</h2>
         <p class="text-sm text-gray-600">
-          설계 목표(DesignGoals) 14건에서 시험 항목 35건을 끌어내고, 각 항목에 합격 기준·방법·담당·상태를 붙였다.
-          완료 9 · 진행 4 · <strong>미착수 22</strong> · 차세대 이관 4. 미착수를 숨기지 않는 이유는 단순하다 — 이 표가 다음 분기의 시험 계획이기 때문이다.
+          설계 목표(DesignGoals) 14건에서 시험 항목 51건을 끌어내고, 각 항목에 합격 기준·방법·담당·상태를 붙였다.
+          완료 7 · 진행 3 · <strong>미착수 37</strong> · 차세대 이관 4 (2026-05 작성, 2026-09 기준 상태). 미착수를 숨기지 않는 이유는 단순하다 — 이 표가 다음 분기의 시험 계획이기 때문이다.
         </p>
         <p class="text-[11px] text-ink-500 sm:hidden">← 표는 좌우로 스크롤</p>
         <div class="overflow-x-auto">
@@ -167,7 +164,7 @@ const trs = [
           <div class="bg-surface rounded-lg p-3"><span class="font-semibold text-primary">FCT — 두 개의 숫자</span> — 검사표준서(제어함 조립체) 12항목 vs 정의서(VCU 보드 단품) 38항목: 전원 6 · CAN 5 · GPIO 8 · ADC 4 · DAC 2 · S-Bus 2 · UART 2 · LED/Buzzer 4 · EEPROM 3 · FW 2. 범위가 다르다 — 보드 단품 정의는 아직 표준서로 승격 전</div>
           <div class="bg-surface rounded-lg p-3"><span class="font-semibold text-primary">EOL — 두 개의 숫자</span> — 검사표준서 17항목(SW 2 · 센서 3 · 주행 2 · 분무 3 · FAN 2 · 자율주행 2 · AGING 3) vs 완성차 정의서 52항목. AGING = 10분 주행 + Full 방제, 30 m × 30 m, 경고·Fault 0, 비정상 소음·진동 0, 구동부 발열 촉수 확인</div>
         </div>
-        <p class="text-xs text-muted">FCT 항목 T-05의 CAN ID는 실차 FW 헤더 기준으로 두 차례 정정했다(r1 → r2, 2026-06). Excel과 FW가 다르면 FW가 맞다 — CAN ICD 개정 때 세운 원칙을 검사 표준서에도 그대로 적용했다.</p>
+        <p class="text-xs text-muted">FCT 항목 T-05의 CAN ID는 두 차례 정정했다 — r1(2026-05)은 CAN 규격 기준, r2(2026-06)는 실차 FW 헤더 기준. Excel과 FW가 다르면 FW가 맞다 — CAN ICD 개정 때 세운 원칙을 검사 표준서에도 그대로 적용했다.</p>
       </div>
 
       <!-- 3. Test records -->
@@ -200,7 +197,7 @@ const trs = [
         <div class="grid md:grid-cols-2 gap-4 items-start">
           <figure>
             <img src={`${base}images/cases/production-validation/patternator-iso.webp`} alt="수직 패터네이터 시험지그 CAD V07 등각 렌더" class="rounded-lg border bg-white w-full" loading="lazy" />
-            <figcaption class="text-xs text-muted mt-1">V07 정본 — 부품 140, 부유 부품 0. 루버 40 → 솔리드 패널 8 (DFMA)</figcaption>
+            <figcaption class="text-xs text-muted mt-1">V07 정본 — 부품 140, 부유 부품 0. 초기 루버안(40매)을 폐기하고 솔리드 패널 8매로 리베이스 (DFMA)</figcaption>
           </figure>
           <ul class="text-xs text-gray-700 space-y-1.5">
             <li><strong>측정 범위</strong> 0~4.0 m · 수직 피치 200 mm → 20셀/열 · 포집면 폭 ~300 mm(투영 1.2 m²) · 이격 2.0 m</li>
@@ -263,7 +260,7 @@ const trs = [
           <thead class="bg-ink-50 text-ink-700"><tr><th class="text-left p-2">항목</th><th class="text-left p-2">미확보 사유</th><th class="text-left p-2">잔여 리스크</th><th class="text-left p-2">조치</th><th class="text-left p-2">게이트</th></tr></thead>
           <tbody class="divide-y divide-ink-100">
             <tr><td class="p-2 font-semibold">팬 14점 풍속 균일성</td><td class="p-2">n=1, 반복성·불확도 미평가</td><td class="p-2">균일성 판정 불가</td><td class="p-2">3회 반복 측정 + 가이드 베인 CFD</td><td class="p-2">DVP W-03</td></tr>
-            <tr><td class="p-2 font-semibold">DVP&R 미착수 22건</td><td class="p-2">환경·자율주행·주행은 규격 매핑까지</td><td class="p-2">인증·필드 신뢰성 미증명</td><td class="p-2">카테고리별 시험 계획 → 외부 시험소 일정</td><td class="p-2">ENV/A/D 전부</td></tr>
+            <tr><td class="p-2 font-semibold">DVP&R 미착수 37건</td><td class="p-2">환경·자율주행·주행은 규격 매핑까지</td><td class="p-2">인증·필드 신뢰성 미증명</td><td class="p-2">카테고리별 시험 계획 → 외부 시험소 일정</td><td class="p-2">ENV/A/D 전부</td></tr>
             <tr><td class="p-2 font-semibold">궤도 내구</td><td class="p-2">시간·거리·사이클 수치 없음, IQC 기준 없음</td><td class="p-2">마모 수명 미정량</td><td class="p-2">필드 주행 로그로 km 누적 집계 → 마모 측정 절차 수립</td><td class="p-2">IQC / 신뢰성</td></tr>
             <tr><td class="p-2 font-semibold">노즐 Cd 시험 조건</td><td class="p-2">시험일·장비·교정·반복수 미확인</td><td class="p-2">공식 판정 불가</td><td class="p-2">원본 해시로 추적성 확보 → 조건 확인 후 재판정</td><td class="p-2">TR-6</td></tr>
             <tr><td class="p-2 font-semibold">계측기 교정 추적성</td><td class="p-2">풍속계·유량계·압력계·저울의 교정일·정확도 등급 미기재</td><td class="p-2">수치의 불확도 미정</td><td class="p-2">교정 성적서 수집 → TR 양식에 교정 필드 추가</td><td class="p-2">전 TR</td></tr>

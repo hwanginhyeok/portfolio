@@ -1,7 +1,5 @@
 ---
-// New case 2026-09-07: RS500 autonomy stack — the "cases/autonomy-stack" page the
-// 2026-04-26 expert review asked for (Physical AI / robotics gap). Facts from
-// ~/physical_AI_rs500 README, docs/프로젝트/task/C49, C50 and the test tree, measured 2026-09-06.
+// Case added 2026-09-07: RS500 autonomy stack (personal project). Test counts measured 2026-09-06.
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 const base = import.meta.env.BASE_URL;
 const repo = 'https://github.com/hwanginhyeok/physical_AI_rs500';
@@ -147,12 +145,12 @@ const totalTests = tests.reduce((n, [, c]) => n + (c as number), 0);
         <div class="grid grid-cols-4 gap-2 text-center text-sm">
           <div class="rounded-lg bg-green-50 border border-green-200 p-3"><div class="text-xl font-black text-success">8</div><div class="text-xs text-ink-500">확인 일치</div></div>
           <div class="rounded-lg bg-blue-50 border border-blue-200 p-3"><div class="text-xl font-black text-info">7</div><div class="text-xs text-ink-500">근사 일치</div></div>
-          <div class="rounded-lg bg-orange-50 border border-orange-200 p-3"><div class="text-xl font-black text-warning">—</div><div class="text-xs text-ink-500">미반영</div></div>
-          <div class="rounded-lg bg-surface border border-ink-300 p-3"><div class="text-xl font-black text-muted">—</div><div class="text-xs text-ink-500">데이터 미확보</div></div>
+          <div class="rounded-lg bg-orange-50 border border-orange-200 p-3"><div class="text-xl font-black text-warning">12</div><div class="text-xs text-ink-500">미반영</div></div>
+          <div class="rounded-lg bg-surface border border-ink-300 p-3"><div class="text-xl font-black text-muted">9</div><div class="text-xs text-ink-500">데이터 미확보</div></div>
         </div>
         <ul class="text-sm text-gray-600 space-y-1 list-disc pl-5">
           <li>일치: 모터 형식(BLDC 8극) · 정격 2000 rpm · 감속비 20:1 · 모터 토크 14.32 Nm · 최대 속도 4 km/h · IMU 노이즈 밀도 · STALL 15% 판정</li>
-          <li>미반영으로 남긴 것: 엔코더 16,384 PPR · 차체 높이(팬 시스템 포함) · LiDAR는 CAN에 없어 ADT 직결로 추정</li>
+          <li>미반영 12건 중 대표: 엔코더 16,384 PPR · 불일치 가능: 차체 높이(팬 시스템 포함) · 근사: LiDAR는 CAN에 없어 ADT 직결로 추정 · 미확보 9건은 실차 데이터 파싱 대기</li>
         </ul>
         <p class="text-xs text-muted">시뮬레이션이 실차를 대신한다고 말하지 않는다. 대신하지 못하는 항목을 알고 있다는 것이 이 표의 목적이다.</p>
       </div>
@@ -177,7 +175,7 @@ const totalTests = tests.reduce((n, [, c]) => n + (c as number), 0);
       <h3 class="font-bold text-primary mb-2">회사 업무와의 관계</h3>
       <p class="text-sm text-gray-600">
         GT-SS500의 CAN 5노드 분산 제어와 MD2K 드라이버를 실무에서 다루면서 생긴 질문 — "이 보호로직이 어느 조건에서 먼저 걸리는가" —
-        을 회사 데이터 없이 공개 데이터시트와 공개 저장소만으로 답하려고 만든 프로젝트다.
+        을 부품 데이터시트와 실차 CAN DBC를 기준 삼아 개인 시간에 답하려고 만든 프로젝트다. 코드는 개인 저장소에 공개했고, 회사 문서 자체는 포함하지 않는다.
         다이나모미터 벤치가 모터 단품의 실물 시험대라면, 이 시뮬레이터는 차량 한 대의 오프라인 모델 검증 환경이다.
       </p>
     </div>

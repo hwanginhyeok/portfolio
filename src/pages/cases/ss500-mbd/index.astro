@@ -1,14 +1,12 @@
 ---
-// New case 2026-09-07: SS500 Model-Based Design pipeline (company work, Apr–May 2026).
-// Facts from HIH_2/HIH_Claude/MBD (README, power_flow_report, c184_report) and
-// FINISHED_TASK C-143/C-144/C-145/C-182/C-183/C-184. Numbers are the model's own outputs;
-// parameters tagged "reasoned" in the SSOT are called out as such below.
+// Case added 2026-09-07: SS500 Model-Based Design pipeline (company work, Apr–May 2026).
+// Numbers are the model's own outputs; parameters tagged "reasoned" are called out as such.
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import MbdPipeline from '../../../components/MbdPipeline.astro';
 const base = import.meta.env.BASE_URL;
 
 const phases = [
-  ['Phase 0', 'BOM × ParameterSet 교차 검증', '132항목 BOM과 모델 파라미터를 대조 — belongs_to 오매핑 10건 수정, MCB 실물 교체 반영, TBD 24→20'],
+  ['Phase 0', 'BOM × ParameterSet 교차 검증', 'BOM 전 항목과 모델 파라미터를 대조 — belongs_to 오매핑 10건 수정, MCB 실물 교체 반영, TBD 24→20'],
   ['전기 ①', '파워트레인 전력 흐름 모델', 'Layer 0 운전모드 5종 에너지 버짓 · Layer 1 SOC 소모 · Layer 1.5 MR 돌입전류 RLC'],
   ['전기 ②', 'Traction PID 제어 모델', '모터 TF + PI 제어기 · Bode · 램프 추종 · RK4 서브스텝으로 τ_m < dt 발산 해결'],
   ['Phase 3', 'VCU FW → Python 재구현 모델 (MIL 상당)', '제어 루프·램프·상태머신 12개·전류 제한·스톨 감지·팬 제어를 FW 소스와 1:1 대조하며 Python으로 재구현 (628줄). 실제 C 오브젝트를 구동하는 SIL은 다음 단계 — 재구현 오차 자체가 리스크'],
@@ -19,7 +17,7 @@ const findings = [
   ['MCB 100 A vs 방제 연속 운전 137 A (1.37 In)', '여유 −37 A. 즉시 트립보다 열적 누적이 리스크 — 트립 시간은 특성곡선 미입수로 미확정. 최대 부하 200 A(2.0 In)는 곡선 확보 후 판정. 조치 후보: 곡선 입수 또는 150 A급 검토'],
   ['DCDC 마진 70.8 %', '12 V 계 105 W / 정격 360 W. 버스 최악 37.5 V에서도 V_in_min 36 V 위 — 여유 확인'],
   ['방제 운전 6,593 W', '구동 45.5 % · 팬 30.3 % · 펌프 22.4 % · 12 V 1.8 % — 운용시간 추정 3.3 h'],
-  ['Traction PID: PM 96.5°, 오버슈트 0 %', '상승시간 1.74 s · 정상 3.0 km/h · 정상 전류 5.4 A · duty 86 %. 요구 PM이 정의되지 않은 상태에서 안정 여유는 과다, 대역폭 여유가 남아 응답 개선 여지 — 튜닝 방향을 숫자로'],
+  ['Traction PID: PM 96.5°, 오버슈트 0 %', '상승시간 1.74 s · 정상 3.0 km/h · 정상 전류 5.4 A · duty 86 % (2026-06 실측 파라미터 반영 후 모델 실행값; 5월 초기 모델 PM 96.3°). 요구 PM이 정의되지 않은 상태에서 안정 여유는 과다, 대역폭 여유가 남아 응답 개선 여지 — 튜닝 방향을 숫자로'],
   ['실부하 전류 ~20 A', 'T_load 1.16 N·m 기준 무부하 8 A → 방제 주행 20.3 A. 오실로 측정 전 레인지 예측'],
 ];
 ---
