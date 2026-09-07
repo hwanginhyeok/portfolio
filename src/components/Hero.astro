@@ -32,20 +32,20 @@ const tracks = [
         </p>
 
         <div class="grid grid-cols-3 gap-2 md:gap-3">
-          <div class="rounded-lg border border-white/10 bg-white/5 p-2.5 md:p-3.5">
-            <svg class="w-4 h-4 text-accent mb-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v18M5 10l7-7 7 7"/><path d="M4 21h16" opacity=".4"/></svg>
-            <div class="text-xl md:text-2xl font-black text-white whitespace-nowrap">-40°C</div>
+          <div class="min-w-0 rounded-lg border border-white/10 bg-white/5 p-2.5 md:p-3.5">
+            <svg class="w-4 h-4 text-accent-dark mb-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v18M5 10l7-7 7 7"/><path d="M4 21h16" opacity=".4"/></svg>
+            <div class="text-lg sm:text-xl md:text-2xl font-black text-white">-40°C</div>
             <div class="text-xs text-gray-400 mt-0.5 leading-snug">극저온 기동<br/>300→100초</div>
           </div>
-          <div class="rounded-lg border border-white/10 bg-white/5 p-2.5 md:p-3.5">
-            <svg class="w-4 h-4 text-accent mb-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 16.5 6.5 19.5l1-6.3L3 8.9 9 8z"/></svg>
-            <div class="text-xl md:text-2xl font-black text-white whitespace-nowrap">특허 2건</div>
+          <div class="min-w-0 rounded-lg border border-white/10 bg-white/5 p-2.5 md:p-3.5">
+            <svg class="w-4 h-4 text-accent-dark mb-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 16.5 6.5 19.5l1-6.3L3 8.9 9 8z"/></svg>
+            <div class="text-lg sm:text-xl md:text-2xl font-black text-white">특허 2건</div>
             <div class="text-xs text-gray-400 mt-0.5 leading-snug">공동 1·기여 1<br/>공저 저널 3·학회 4</div>
           </div>
-          <div class="rounded-lg border border-white/10 bg-white/5 p-2.5 md:p-3.5">
-            <svg class="w-4 h-4 text-accent mb-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 17l4-8 4 5 3-3 7 6"/><path d="M3 21h18" opacity=".4"/></svg>
-            <div class="text-xl md:text-2xl font-black text-white whitespace-nowrap">양산 1호기</div>
-            <div class="text-xs text-gray-400 mt-0.5 leading-snug">GT-SS500 0→1 완주<br/>고객 시연 2회 Pass</div>
+          <div class="min-w-0 rounded-lg border border-white/10 bg-white/5 p-2.5 md:p-3.5">
+            <svg class="w-4 h-4 text-accent-dark mb-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 17l4-8 4 5 3-3 7 6"/><path d="M3 21h18" opacity=".4"/></svg>
+            <div class="text-lg sm:text-xl md:text-2xl font-black text-white">양산 1호기</div>
+            <div class="text-xs text-gray-400 mt-0.5 leading-snug">고객 시연 4회 · 3 Pass 1 Fail<br/>조치 후 재검증 Pass</div>
           </div>
         </div>
       </div>
@@ -71,7 +71,7 @@ const tracks = [
           <span class={`w-1.5 h-1.5 rounded-full ${t.c}`}></span>{t.t}
         </a>
       ))}
-      <span class="inline-flex items-center text-xs text-gray-500 px-2">↓ 스크롤</span>
+      <span class="inline-flex items-center text-xs text-gray-400 px-2">↓ 스크롤</span>
     </nav>
   </div>
 </section>

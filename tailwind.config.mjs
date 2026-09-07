@@ -11,6 +11,7 @@ export default {
       colors: {
         primary: '#1a1a2e',
         accent:  '#0066ff',
+        'accent-dark': '#7ab8ff',
         surface: '#f8f9fa',
         muted:   '#6b7280',
         ink: {

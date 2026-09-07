@@ -5,12 +5,12 @@
 const base = import.meta.env.BASE_URL;
 const t = `${base}images/cases/test-engineering/`;
 const tiles = [
-  { src: `${t}fan-bench-setup.webp`, alt: '팬 벤치 — 정면 L1~L7 / R1~R7 풍속 측정 격자', cap: '팬 벤치 · 14점 풍속 격자', span: 'md:col-span-2', pos: 'object-right', ratio: 'aspect-[16/9]' },
-  { src: `${t}pump-bench-1.webp`, alt: '펌프 벤치 — 3피스톤 펌프 + 감속기 + 유량·압력계', cap: '펌프 벤치 · 유량·압력 동시 계측', span: '', pos: 'object-center', ratio: 'aspect-square' },
-  { src: `${t}spray-test-1.webp`, alt: '분사 패턴 시험 — 터널 내 분사 플룸과 줄자', cap: '분사 패턴 · 도달 거리 실측', span: '', pos: 'object-bottom', ratio: 'aspect-square' },
-  { src: `${t}durability-test.webp`, alt: '궤도 내구 시험 — 사이클 후 고무 트랙 마모', cap: '궤도 내구 · 사이클 후 마모 확인', span: 'md:col-span-2', pos: 'object-center', ratio: 'aspect-[16/9]' },
-  { src: `${base}images/cases/state-machine/control-box-external.webp`, alt: 'GT-SS500 전장함 내부 — MCB, 모터 드라이버 3기, VCU', cap: '전장함 · MCB · 드라이버 ×3 · VCU', span: '', pos: 'object-center', ratio: 'aspect-square' },
-  { src: `${t}nozzle-test-1.webp`, alt: '노즐 레일 분사 시험', cap: '노즐 레일 · 분사 상태 확인', span: '', pos: 'object-center', ratio: 'aspect-square' },
+  { src: `${t}fan-bench-setup.webp`, alt: '팬 벤치 — 정면 L1~L7 / R1~R7 풍속 측정 격자', cap: '팬 벤치 · 14점 풍속 격자', span: 'md:col-span-2', pos: 'object-right', ratio: 'aspect-[4/3] md:aspect-[16/9]' },
+  { src: `${t}pump-bench-1.webp`, alt: '펌프 벤치 — 3피스톤 펌프 + 감속기 + 유량·압력계', cap: '펌프 벤치 · 유량·압력 동시 계측', span: '', pos: 'object-center', ratio: 'aspect-[4/3] md:aspect-square' },
+  { src: `${t}spray-test-1.webp`, alt: '분사 패턴 시험 — 터널 내 분사 플룸과 줄자', cap: '분사 패턴 · 도달 거리 실측', span: '', pos: 'object-bottom', ratio: 'aspect-[4/3] md:aspect-square' },
+  { src: `${t}durability-test.webp`, alt: '궤도 내구 시험 — 사이클 후 고무 트랙 마모', cap: '궤도 내구 · 사이클 후 마모 확인', span: 'md:col-span-2', pos: 'object-center', ratio: 'aspect-[4/3] md:aspect-[16/9]' },
+  { src: `${base}images/cases/state-machine/control-box-external.webp`, alt: 'GT-SS500 전장함 내부 — MCB, 모터 드라이버 3기, VCU', cap: '전장함 · MCB · 드라이버 ×3 · VCU', span: '', pos: 'object-center', ratio: 'aspect-[4/3] md:aspect-square' },
+  { src: `${t}nozzle-test-1.webp`, alt: '노즐 레일 분사 시험', cap: '노즐 레일 · 분사 상태 확인', span: '', pos: 'object-center', ratio: 'aspect-[4/3] md:aspect-square' },
 ];
 ---
 
@@ -19,7 +19,7 @@ const tiles = [
     <p class="eyebrow">Evidence · 직접 설계한 시험 환경</p>
     <span class="text-xs"><a href={`${base}cases/test-engineering/`} class="text-accent hover:underline">시험 7종 상세 →</a> · <a href={`${base}cases/production-validation/`} class="text-accent hover:underline">양산 검증 →</a></span>
   </div>
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
     {tiles.map((x) => (
       <figure class={`group relative overflow-hidden rounded-lg bg-ink-100 ${x.span} ${x.ratio}`}>
         <img src={x.src} alt={x.alt} loading="lazy" class={`absolute inset-0 w-full h-full object-cover ${x.pos} transition-transform duration-300 group-hover:scale-[1.03]`} />

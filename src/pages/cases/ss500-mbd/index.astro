@@ -11,22 +11,22 @@ const phases = [
   ['Phase 0', 'BOM × ParameterSet 교차 검증', '132항목 BOM과 모델 파라미터를 대조 — belongs_to 오매핑 10건 수정, MCB 실물 교체 반영, TBD 24→20'],
   ['전기 ①', '파워트레인 전력 흐름 모델', 'Layer 0 운전모드 5종 에너지 버짓 · Layer 1 SOC 소모 · Layer 1.5 MR 돌입전류 RLC'],
   ['전기 ②', 'Traction PID 제어 모델', '모터 TF + PI 제어기 · Bode · 램프 추종 · RK4 서브스텝으로 τ_m < dt 발산 해결'],
-  ['Phase 3', 'VCU FW → Python SIL', '제어 루프·램프·상태머신 12개·전류 제한·스톨 감지·팬 제어를 FW 소스에서 1:1 포팅 (628줄)'],
-  ['Phase 4', '통합 시뮬레이션 4종 (Plant + SIL)', 'S1 정상주행 · S2 급가속/정지 · S3 RC 조향 · S4 CAN 고장 주입 → FAULT → 복구'],
+  ['Phase 3', 'VCU FW → Python 재구현 모델 (MIL 상당)', '제어 루프·램프·상태머신 12개·전류 제한·스톨 감지·팬 제어를 FW 소스와 1:1 대조하며 Python으로 재구현 (628줄). 실제 C 오브젝트를 구동하는 SIL은 다음 단계 — 재구현 오차 자체가 리스크'],
+  ['Phase 4', '통합 시뮬레이션 4종 (Plant + 재구현 제어기)', 'S1 정상주행 · S2 급가속/정지 · S3 RC 조향 · S4 CAN 고장 주입 → FAULT → 복구'],
 ];
 
 const findings = [
-  ['MCB 100 A vs 방제 운전 137 A', '정격 여유 −37 A, 최대 부하 200 A에서 트립 위험 — 모델이 먼저 짚은 설계 확인 항목'],
+  ['MCB 100 A vs 방제 연속 운전 137 A (1.37 In)', '여유 −37 A. 즉시 트립보다 열적 누적이 리스크 — 트립 시간은 특성곡선 미입수로 미확정. 최대 부하 200 A(2.0 In)는 곡선 확보 후 판정. 조치 후보: 곡선 입수 또는 150 A급 검토'],
   ['DCDC 마진 70.8 %', '12 V 계 105 W / 정격 360 W. 버스 최악 37.5 V에서도 V_in_min 36 V 위 — 여유 확인'],
   ['방제 운전 6,593 W', '구동 45.5 % · 팬 30.3 % · 펌프 22.4 % · 12 V 1.8 % — 운용시간 추정 3.3 h'],
-  ['Traction PID: PM 96.5°, 오버슈트 0 %', '상승시간 1.74 s · 정상 3.0 km/h · 정상 전류 5.4 A · duty 86 % — 튜닝 여유 정량화'],
+  ['Traction PID: PM 96.5°, 오버슈트 0 %', '상승시간 1.74 s · 정상 3.0 km/h · 정상 전류 5.4 A · duty 86 %. 요구 PM이 정의되지 않은 상태에서 안정 여유는 과다, 대역폭 여유가 남아 응답 개선 여지 — 튜닝 방향을 숫자로'],
   ['실부하 전류 ~20 A', 'T_load 1.16 N·m 기준 무부하 8 A → 방제 주행 20.3 A. 오실로 측정 전 레인지 예측'],
 ];
 ---
 
 <BaseLayout
   title="SS500 MBD — 실차 파라미터로 만든 전력·제어 시뮬레이션 파이프라인"
-  description="BOM 검증 → 전력 흐름 모델 → Traction PID → VCU FW Python SIL → 통합 시뮬 4종. MCB 정격 부족과 DCDC 마진을 실차 측정 전에 모델이 먼저 짚었다."
+  description="BOM 검증 → 전력 흐름 모델 → Traction PID → VCU FW 재구현 모델 → 통합 시뮬 4종. MCB 여유 −37 A와 DCDC 마진 70.8 %를 실차 측정 전에 모델이 먼저 짚었다. 실측 대조는 미결."
 >
   <main class="max-w-3xl mx-auto px-6 py-16">
     <a href={base} class="text-sm text-accent hover:underline mb-8 inline-block">← 홈으로</a>
@@ -36,23 +36,23 @@ const findings = [
     <p class="text-muted mb-2">SS500 전력·제어 시스템의 수학 모델 — 에너지 버짓, 사양 마진, DFMEA 고장 시나리오 재현, 제어기 튜닝 예측</p>
     <p class="text-xs text-muted mb-8">Python · python-control · scipy · VCU FW 소스 1:1 매핑 · 파라미터 SSOT(yaml)에 출처 태그 필수</p>
 
-    <div class="grid grid-cols-3 gap-4 mb-10">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-10">
       <div class="rounded-lg border border-ink-300 bg-white p-4">
-        <div class="text-2xl font-black text-accent">5</div>
+        <div class="text-2xl font-black text-green-600">5</div>
         <div class="text-xs text-ink-500 mt-0.5">모델링 페이즈 (BOM 검증 → 통합 SIL)</div>
       </div>
       <div class="rounded-lg border border-ink-300 bg-white p-4">
-        <div class="text-2xl font-black text-accent">12</div>
+        <div class="text-2xl font-black text-green-600">12</div>
         <div class="text-xs text-ink-500 mt-0.5">FW에서 포팅한 상태머신 상태</div>
       </div>
       <div class="rounded-lg border border-ink-300 bg-white p-4">
-        <div class="text-2xl font-black text-accent">−37 A</div>
-        <div class="text-xs text-ink-500 mt-0.5">모델이 먼저 짚은 MCB 정격 여유</div>
+        <div class="text-2xl font-black text-green-600">−37 A</div>
+        <div class="text-xs text-ink-500 mt-0.5">MCB 100 A 대비 방제 연속 137 A — 모델이 먼저 짚은 여유</div>
       </div>
     </div>
 
     <section class="space-y-10">
-      <div class="border-2 border-accent rounded-xl p-6 space-y-4">
+      <div class="border-2 border-green-300 rounded-xl p-6 space-y-4">
         <h2 class="text-lg font-bold text-primary">문제</h2>
         <p class="text-sm text-gray-600">
           양산 진입 단계에서 "이 사양이 충분한가"를 묻는 질문이 매주 나온다 — DCDC가 버티나, MCB가 트립하나, PID를 건드리면 어떻게 되나.
@@ -113,9 +113,9 @@ const findings = [
       </div>
 
       <div class="border rounded-xl p-6 space-y-4">
-        <h2 class="text-lg font-bold text-primary">통합 SIL — FW 상태머신이 고장 주입에 어떻게 반응하는가</h2>
+        <h2 class="text-lg font-bold text-primary">통합 시뮬 — 재구현한 FW 상태머신이 고장 주입에 어떻게 반응하는가</h2>
         <p class="text-sm text-gray-600">
-          VCU FW를 Python으로 포팅한 SIL 위에 Plant를 붙여 4개 시나리오를 돌렸다. S4에서 CAN 고장을 주입하면 상태머신이 FORWARD → FAULT로 떨어지고
+          VCU FW 로직을 Python으로 재구현한 제어기 위에 Plant를 붙여 4개 시나리오를 돌렸다. S4에서 CAN 고장을 주입하면 상태머신이 FORWARD → FAULT로 떨어지고
           RESET을 거쳐 복구되는 경로가 재현된다 — DFMEA에 적어둔 고장 시나리오를 실차 없이 확인하는 방법.
         </p>
         <figure>
@@ -125,7 +125,22 @@ const findings = [
       </div>
     </section>
 
-    <div class="bg-surface rounded-lg p-6 mt-10">
+    <div class="border border-amber-300 bg-amber-50/40 rounded-xl p-6 mt-10 space-y-3">
+      <h2 class="text-lg font-bold text-primary">검증 루프 — 예측 vs 실측 (Open Items, 2026-09 기준)</h2>
+      <p class="text-sm text-gray-600">"측정 전에 모델이 답한다"는 실측과 맞춰봐야 증명된다. 닫힌 것과 안 닫힌 것을 나눠 적는다.</p>
+      <div class="overflow-x-auto"><table class="min-w-[560px] w-full text-xs">
+        <thead class="bg-ink-50 text-ink-700"><tr><th class="text-left p-2">항목</th><th class="text-left p-2">예측</th><th class="text-left p-2">실측</th><th class="text-left p-2">상태</th></tr></thead>
+        <tbody class="divide-y divide-ink-100">
+          <tr><td class="p-2">모터 Ra / La / Ke</td><td class="p-2">추정 0.12 Ω / 0.8 mH / 0.193 (reasoned)</td><td class="p-2">실측 반영 → SSOT 갱신 (2026-06)</td><td class="p-2 text-success font-semibold">닫힘</td></tr>
+          <tr><td class="p-2">방제 주행 모터 전류</td><td class="p-2">~20.3 A (T_load 1.16 N·m)</td><td class="p-2">미측정</td><td class="p-2 text-error font-semibold">미결</td></tr>
+          <tr><td class="p-2">DCDC 마진 / 버스 sag</td><td class="p-2">70.8 % · 최악 37.5 V</td><td class="p-2">미측정 (효율 곡선 DS 미입수)</td><td class="p-2 text-error font-semibold">미결</td></tr>
+          <tr><td class="p-2">MCB 트립 시간 @137 A / 200 A</td><td class="p-2">1.37 In / 2.0 In</td><td class="p-2">특성곡선 미입수</td><td class="p-2 text-error font-semibold">미결</td></tr>
+          <tr><td class="p-2">Traction 스텝 응답</td><td class="p-2">상승 1.74 s · 오버슈트 0</td><td class="p-2">미측정</td><td class="p-2 text-error font-semibold">미결</td></tr>
+        </tbody></table></div>
+      <p class="text-xs text-muted">허용 오차와 측정 방법은 각 항목의 실측 계획에 붙인다. 4건 미결은 이 페이지가 아직 "예측 페이지"라는 뜻이다.</p>
+    </div>
+
+    <div class="bg-surface rounded-lg p-6 mt-6">
       <h3 class="font-bold text-primary mb-2">두 시뮬레이터의 관계</h3>
       <p class="text-sm text-gray-600">
         이 MBD는 회사 프로젝트 안에서 전력·제어 사양을 검증하는 도구이고,

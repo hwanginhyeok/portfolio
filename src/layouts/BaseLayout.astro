@@ -49,6 +49,7 @@ const person = {
     <script type="application/ld+json" set:html={JSON.stringify(person)} />
   </head>
   <body class="min-h-screen">
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:bg-white focus:text-primary focus:px-3 focus:py-2 focus:rounded">본문으로 건너뛰기</a>
     <!-- Nav N2: T1~T5 직접 노출, 모바일 햄버거 -->
     <nav class="fixed top-0 w-full bg-primary/95 backdrop-blur-sm z-40 border-b border-white/10">
       <div class="max-w-5xl mx-auto px-6 flex items-center justify-between h-14">
@@ -59,9 +60,9 @@ const person = {
           <a href={`${base}#t3-system`} class="text-gray-300 hover:text-white transition-colors duration-150">시스템</a>
           <a href={`${base}#t4-apqp`} class="text-gray-300 hover:text-white transition-colors duration-150">양산 체계</a>
           <a href={`${base}#t5-roots`} class="text-gray-300 hover:text-white transition-colors duration-150">엔지니어의 뿌리</a>
-          <a href="https://github.com/hwanginhyeok" target="_blank" rel="noopener" class="text-accent hover:text-white transition-colors duration-150">GitHub</a>
+          <a href="https://github.com/hwanginhyeok" target="_blank" rel="noopener" class="text-accent-dark hover:text-white transition-colors duration-150">GitHub</a>
         </div>
-        <button id="nav-toggle" class="md:hidden text-gray-300 hover:text-white p-1" aria-label="메뉴 열기">
+        <button id="nav-toggle" class="md:hidden text-gray-300 hover:text-white p-1" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav-menu">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
@@ -73,28 +74,45 @@ const person = {
         <a href={`${base}#t3-system`} class="block text-sm text-gray-300 hover:text-white">T3 — 시스템 아키텍처</a>
         <a href={`${base}#t4-apqp`} class="block text-sm text-gray-300 hover:text-white">T4 — 양산 체계</a>
         <a href={`${base}#t5-roots`} class="block text-sm text-gray-300 hover:text-white">T5 — 엔지니어의 뿌리</a>
-        <a href="https://github.com/hwanginhyeok" target="_blank" rel="noopener" class="block text-sm text-accent hover:text-white">GitHub</a>
+        <a href="https://github.com/hwanginhyeok" target="_blank" rel="noopener" class="block text-sm text-accent-dark hover:text-white">GitHub</a>
       </div>
     </nav>
     <slot />
 
     <!-- Lightbox -->
-    <div id="lightbox" class="fixed inset-0 z-50 bg-black/80 hidden items-center justify-center p-4 cursor-zoom-out" onclick="this.classList.add('hidden');this.classList.remove('flex')">
+    <div id="lightbox" role="dialog" aria-modal="true" aria-label="이미지 확대" tabindex="-1" class="fixed inset-0 z-50 bg-black/80 hidden items-center justify-center p-4 cursor-zoom-out">
       <img id="lightbox-img" alt="" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl" />
     </div>
     <script is:inline>
+      const lb = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lightbox-img');
+      let lastFocus = null;
+      const openLightbox = (img) => {
+        lbImg.src = img.src; lbImg.alt = img.alt || '';
+        lastFocus = document.activeElement;
+        lb.classList.remove('hidden'); lb.classList.add('flex'); lb.focus();
+      };
+      const closeLightbox = () => {
+        lb.classList.add('hidden'); lb.classList.remove('flex');
+        if (lastFocus && lastFocus.focus) lastFocus.focus();
+      };
+      lb.addEventListener('click', closeLightbox);
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !lb.classList.contains('hidden')) closeLightbox(); });
+      document.querySelectorAll('figure img').forEach((img) => {
+        img.setAttribute('tabindex', '0'); img.setAttribute('role', 'button');
+        img.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(img); } });
+      });
       document.addEventListener('click', (e) => {
         const img = e.target.closest('figure img');
-        if (!img) return;
-        const lb = document.getElementById('lightbox');
-        document.getElementById('lightbox-img').src = img.src;
-        lb.classList.remove('hidden');
-        lb.classList.add('flex');
+        if (img) openLightbox(img);
       });
       const toggle = document.getElementById('nav-toggle');
       const menu = document.getElementById('nav-menu');
       if (toggle && menu) {
-        toggle.addEventListener('click', () => menu.classList.toggle('hidden'));
+        toggle.addEventListener('click', () => {
+          const open = menu.classList.toggle('hidden') === false;
+          toggle.setAttribute('aria-expanded', String(open));
+        });
       }
     </script>
   </body>

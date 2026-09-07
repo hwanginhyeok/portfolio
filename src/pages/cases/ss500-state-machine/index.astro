@@ -414,13 +414,13 @@ const base = import.meta.env.BASE_URL;
       <div class="grid md:grid-cols-2 gap-4">
         <div class="border rounded-xl p-5 space-y-2">
           <p class="text-xs text-ink-500">양산 · 시연</p>
-          <h3 class="font-bold text-primary">양산 1호기 완성, 고객 시연 2회 Pass</h3>
-          <p class="text-sm text-gray-600">5월 양산 1호기로 시연 2회(쌍구노즐 + Flow Plate). 알파 2호기 LCD 물샘 점검 병행. 7월 시연회 리뷰와 시연장 개선안까지 문서화.</p>
+          <h3 class="font-bold text-primary">양산 1호기 완성, 고객 시연 4회 — 3 Pass · 1 Fail → 재검증 Pass</h3>
+          <p class="text-sm text-gray-600">5월 양산 1호기로 시연 2회 Pass(쌍구노즐 + Flow Plate). 6월 시연은 통신 회선 우선순위 저하로 RTK 단절 → 실패. USIM 교체 후 7월 같은 장소에서 재검증 Pass — 조치 유효성을 현장에서 닫았다. 7월 시연회 리뷰와 시연장 개선안 문서화.</p>
         </div>
         <div class="border rounded-xl p-5 space-y-2">
           <p class="text-xs text-ink-500">모델 기반 설계</p>
           <h3 class="font-bold text-primary">MBD 파이프라인 5페이즈</h3>
-          <p class="text-sm text-gray-600">BOM×파라미터 검증 → 전력 흐름 → Traction PID → VCU FW Python SIL(상태머신 12개) → 통합 시뮬 4종. MCB 정격 −37 A를 측정 전에 모델이 짚었다.
+          <p class="text-sm text-gray-600">BOM×파라미터 검증 → 전력 흐름 → Traction PID → VCU FW 재구현 모델(MIL 상당, 상태머신 12개) → 통합 시뮬 4종. MCB 100 A 대비 방제 연속 137 A를 측정 전에 모델이 짚었다.
             <a href={`${base}cases/ss500-mbd/`} class="text-accent hover:underline">케이스 →</a></p>
         </div>
         <div class="border rounded-xl p-5 space-y-2">
