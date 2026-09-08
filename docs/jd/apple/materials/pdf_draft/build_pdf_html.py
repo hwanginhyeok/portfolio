@@ -12,21 +12,21 @@ BASE = Path(__file__).resolve().parent.parent
 OUT = Path(__file__).resolve().parent
 
 CSS = """
-@page { size: Letter; margin: 0.6in 0.7in; }
+@page { size: Letter; margin: 0.5in 0.6in; }
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 body {
   font-family: "Helvetica Neue", "Arial", "Noto Sans KR", sans-serif;
-  font-size: 10.2pt;
-  line-height: 1.38;
+  font-size: 9.6pt;
+  line-height: 1.3;
   color: #111;
-  max-width: 7.4in;
+  max-width: 7.6in;
   margin: 0 auto;
-  padding: 0.4in 0.2in;
+  padding: 0;
 }
 h1 {
-  font-size: 20pt;
-  margin: 0 0 4pt 0;
+  font-size: 17pt;
+  margin: 0 0 3pt 0;
   letter-spacing: 0.5px;
   border-bottom: 1.5pt solid #111;
   padding-bottom: 4pt;
@@ -35,30 +35,30 @@ h2 {
   font-size: 11pt;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  margin: 14pt 0 4pt 0;
+  margin: 9pt 0 3pt 0;
   border-bottom: 0.5pt solid #888;
   padding-bottom: 1pt;
   color: #111;
 }
 h3 {
-  font-size: 10.8pt;
-  margin: 10pt 0 2pt 0;
+  font-size: 10.2pt;
+  margin: 6pt 0 1pt 0;
   color: #222;
 }
 h4 {
-  font-size: 10.2pt;
-  margin: 6pt 0 2pt 0;
+  font-size: 9.6pt;
+  margin: 4pt 0 1pt 0;
   font-weight: 700;
 }
 p { margin: 3pt 0; }
-ul { margin: 3pt 0 6pt 0; padding-left: 18pt; }
-li { margin: 1.5pt 0; }
+ul { margin: 2pt 0 3pt 0; padding-left: 15pt; }
+li { margin: 0.5pt 0; }
 strong { color: #000; }
 em { color: #444; }
-table { width: 100%; border-collapse: collapse; margin: 4pt 0 8pt 0; font-size: 9.6pt; }
-th, td { border: 0.4pt solid #bbb; padding: 3pt 5pt; text-align: left; vertical-align: top; }
+table { width: 100%; border-collapse: collapse; margin: 3pt 0 5pt 0; font-size: 9pt; }
+th, td { border: 0.4pt solid #bbb; padding: 2pt 4pt; text-align: left; vertical-align: top; }
 th { background: #f3f3f3; }
-hr { border: 0; border-top: 0.5pt solid #ccc; margin: 8pt 0; }
+hr { border: 0; border-top: 0.5pt solid #ccc; margin: 4pt 0; }
 .contact { font-size: 10pt; color: #333; margin-bottom: 6pt; }
 .subtitle { font-size: 11pt; color: #444; margin: 0 0 4pt 0; font-weight: 600; }
 blockquote { display: none; }

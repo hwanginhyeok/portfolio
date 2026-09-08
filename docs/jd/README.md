@@ -35,12 +35,24 @@ JD 분석, 자산 매핑, 면접 준비, 지원 트래킹은 **해당 디렉토�
 
 → 메인 사이트가 특정 회사 JD에 끌려다니면 다른 회사에 어필할 때 일관성이 깨진다.
 
+## 지원 이력 SSOT
+
+지원 여부·지원일·다음 행동은 **[`applications.json`](applications.json)** 하나에서만 관리한다.
+사람이 읽는 표는 [`APPLICATIONS.md`](APPLICATIONS.md)이며 `scripts/applications_report.py`가
+자동 생성한다 — 직접 고치지 말 것. 매일 11:47 비서봇으로 같은 내용이 전송된다.
+
+각 회사 디렉토리의 `APPLY.md`는 **그 회사의 지원 절차와 서류**를 담고, 상태 값은 담지 않는다.
+
 ## 현재 지원 디렉토리
 
 | 회사 | 포지션 | 상태 |
 |------|--------|:----:|
 | [apple/](apple/) | Reliability Engineer, Core Technology Operations | 🔵 지원서 준비 완료 (JD-A3 제출 대기) |
+| [aptiv/](aptiv/) | Manufacturing Engineering Engineer (아산) / CC Mfg. Engineer (울산) | 🟡 국문 이력서 완료, 근무지 결정 대기 |
+| [tesla/](tesla/) | Field Support Engineer, Dongtan | 🔵 매핑·이력서 초안 완료, 제출 결정 대기 |
+| [nvidia/](nvidia/) | Senior Automotive Software Program Manager | 🟠 매핑 완료 — 필수 요건 미달, 보류 권고 |
 | [nearlab/](nearlab/) | 임베디드/전장 엔지니어 | 🟡 JD URL 미확보, 면접 자료 완료 |
+| [xai/](xai/) | Mechanical Engineering Tutor | ✅ 제출 완료 (2026-05-15) |
 
 ## 신규 회사 추가 방법
 

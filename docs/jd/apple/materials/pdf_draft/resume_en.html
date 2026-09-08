@@ -4,21 +4,21 @@
 <meta charset="utf-8">
 <title>Inhyeok Hwang — Resume (Apple Reliability Engineer)</title>
 <style>
-@page { size: Letter; margin: 0.6in 0.7in; }
+@page { size: Letter; margin: 0.5in 0.6in; }
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 body {
   font-family: "Helvetica Neue", "Arial", "Noto Sans KR", sans-serif;
-  font-size: 10.2pt;
-  line-height: 1.38;
+  font-size: 9.6pt;
+  line-height: 1.3;
   color: #111;
-  max-width: 7.4in;
+  max-width: 7.6in;
   margin: 0 auto;
-  padding: 0.4in 0.2in;
+  padding: 0;
 }
 h1 {
-  font-size: 20pt;
-  margin: 0 0 4pt 0;
+  font-size: 17pt;
+  margin: 0 0 3pt 0;
   letter-spacing: 0.5px;
   border-bottom: 1.5pt solid #111;
   padding-bottom: 4pt;
@@ -27,30 +27,30 @@ h2 {
   font-size: 11pt;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  margin: 14pt 0 4pt 0;
+  margin: 9pt 0 3pt 0;
   border-bottom: 0.5pt solid #888;
   padding-bottom: 1pt;
   color: #111;
 }
 h3 {
-  font-size: 10.8pt;
-  margin: 10pt 0 2pt 0;
+  font-size: 10.2pt;
+  margin: 6pt 0 1pt 0;
   color: #222;
 }
 h4 {
-  font-size: 10.2pt;
-  margin: 6pt 0 2pt 0;
+  font-size: 9.6pt;
+  margin: 4pt 0 1pt 0;
   font-weight: 700;
 }
 p { margin: 3pt 0; }
-ul { margin: 3pt 0 6pt 0; padding-left: 18pt; }
-li { margin: 1.5pt 0; }
+ul { margin: 2pt 0 3pt 0; padding-left: 15pt; }
+li { margin: 0.5pt 0; }
 strong { color: #000; }
 em { color: #444; }
-table { width: 100%; border-collapse: collapse; margin: 4pt 0 8pt 0; font-size: 9.6pt; }
-th, td { border: 0.4pt solid #bbb; padding: 3pt 5pt; text-align: left; vertical-align: top; }
+table { width: 100%; border-collapse: collapse; margin: 3pt 0 5pt 0; font-size: 9pt; }
+th, td { border: 0.4pt solid #bbb; padding: 2pt 4pt; text-align: left; vertical-align: top; }
 th { background: #f3f3f3; }
-hr { border: 0; border-top: 0.5pt solid #ccc; margin: 8pt 0; }
+hr { border: 0; border-top: 0.5pt solid #ccc; margin: 4pt 0; }
 .contact { font-size: 10pt; color: #333; margin-bottom: 6pt; }
 .subtitle { font-size: 11pt; color: #444; margin: 0 0 4pt 0; font-weight: 600; }
 blockquote { display: none; }
@@ -77,7 +77,9 @@ h2 + p, h3 + p { margin-top: 2pt; }
 
 <p>Reliability-focused mechanical engineer — M.S. from Konkuk University's Reliability-Based Design Optimization (RBDO) Lab, where reliability was the thesis topic, not a side topic. Thesis research on IPMSM digital-twin fault diagnosis (Co-simulation of Ansys Maxwell FEM and a MATLAB/Simulink inverter model). Three peer-reviewed journal publications as co-author (IEEE Transactions on Instrumentation and Measurement · Solar Energy · Journal of Power Electronics, all 2024) and two Korean patents.</p>
 
-<p>Three years of industrial product development at GINT Corp., leading reliability testing (DVT/PVT-equivalent within APQP Phase 2–3) for the GT-SS500 48 V autonomous speed sprayer, with Phase 1/4/5 supporting scope across the full program lifecycle. Authored DFMEA #201/#210 Step 1–7 with five high-priority risks closed before ramp, applied ISO 25119 AgPL d assessment to safety functions, led deep failure analysis on four real field issues (Fishbone-driven root-cause analysis), and tracked 27 NCRs through closure. Built four custom test rigs in-house (dynamometer, fan bench, pump bench, bumper safety rig) and coordinated a structured 48 V BMS supplier quality review.</p>
+<p>Three and a half years of industrial product development at GINT Corp., leading reliability testing (DVT/PVT-equivalent within APQP Phase 2–3) for the GT-SS500 48 V autonomous speed sprayer, with Phase 1/4/5 supporting scope across the full program lifecycle. Authored DFMEA #201/#210 Step 1–7 with five high-priority risks closed before ramp, applied ISO 25119 AgPL d assessment to safety functions, led deep failure analysis on four real field issues (Fishbone-driven root-cause analysis), and tracked 27 NCRs through closure. Built four custom test rigs in-house (dynamometer, fan bench, pump bench, bumper safety rig) and coordinated a structured 48 V BMS supplier quality review.</p>
+
+<p>Independently built a physics-based simulation and test-automation stack for the same vehicle class — 497 automated tests under CI — to exercise field-usage scenarios and protection-logic failure modes ahead of physical testing.</p>
 
 <hr/>
 
@@ -122,6 +124,22 @@ h2 + p, h3 + p { margin-top: 2pt; }
 
 <hr/>
 
+<h2>SELECTED INDEPENDENT PROJECT</h2>
+
+<h3>RS500 — Physics Simulation & Test-Automation Stack for a Tracked Autonomous Vehicle</h3>
+<p><strong>Feb 2026 – Aug 2026</strong> · open source: github.com/hwanginhyeok/physical_AI_rs500 · Python / ROS 2 / Gazebo</p>
+
+<p>Built, outside work, a Level-2 physics simulation of the SS500 vehicle class (dual 3 kW BLDC, dual-channel motor driver, 48 V LiFePO4) so that usage scenarios and protection-logic failure modes could be exercised before hardware time.</p>
+
+<ul>
+<li><strong>Vehicle & drivetrain model</strong>: skid-steer kinematics (ICR), Newtonian dynamics with load transfer and grade, motor + reducer first-order lag with driver acceleration/deceleration limits, <strong>motor-driver protection modeled as failure modes (stall, over-current, over-temperature, over-voltage)</strong>, CAN codec for the driver protocol</li>
+<li><strong>Environment & sensing</strong>: Bekker terramechanics for track–soil interaction, GPS/IMU noise model, dual-EKF sensor fusion, LiDAR obstacle detection and camera object detection</li>
+<li><strong>Usage-model-driven batch testing</strong>: scenario runner sweeping <strong>3 mission profiles × 5 terrain types</strong>, and a module-level <strong>parameter-sensitivity report generator</strong> for drivetrain, terrain, dynamics and sensor-noise blocks — the same stress-factor screening logic used to size accelerated tests</li>
+<li><strong>Verification</strong>: <strong>497 automated tests</strong> across six packages (core physics 331, perception 72, planning 44, control 26, CAN bridge 24), run under GitHub Actions CI on every commit; ROS 2 bring-up with Gazebo, Nav2 and Foxglove</li>
+</ul>
+
+<hr/>
+
 <h2>EDUCATION</h2>
 
 <h3>Konkuk University — M.S. in Mechanical Design (RBDO Lab)</h3>
@@ -144,24 +162,20 @@ h2 + p, h3 + p { margin-top: 2pt; }
 
 <h3>Peer-Reviewed Journals (3, co-authored)</h3>
 
-<table>
-<thead><tr><th>Year</th><th>Journal</th><th>Title</th><th>Author position</th></tr></thead>
-<tbody>
-<tr><td>2024</td><td><strong>IEEE Trans. on Instrumentation and Measurement</strong>, Vol. 73, Art. 10726721</td><td>Programmable Online Bond-Wire Fault Detection and Location Method for IGBT Using Inverter Output Parameters (DOI 10.1109/TIM.2024.3472910)</td><td>3rd author</td></tr>
-<tr><td>2024</td><td><strong>Solar Energy</strong> (Elsevier), Vol. 276, Art. 112645</td><td>Lifetime prediction of polymeric materials in PV module under continuously varying environments based on damage summation approach (DOI 10.1016/j.solener.2024.112645)</td><td>4th author</td></tr>
-<tr><td>2024</td><td><strong>Journal of Power Electronics</strong>, Vol. 24(5), pp. 822–831</td><td>Identification of failure modes in IPMSM under accelerated life test based on dual sensor architecture (DOI 10.1007/s43236-024-00810-8)</td><td>6th author</td></tr>
-</tbody></table>
+<ul>
+<li><strong>IEEE Trans. on Instrumentation and Measurement</strong> 73 (2024), Art. 10726721 — <em>Programmable Online Bond-Wire Fault Detection and Location Method for IGBT Using Inverter Output Parameters</em> · DOI 10.1109/TIM.2024.3472910 · <strong>3rd author</strong></li>
+<li><strong>Solar Energy</strong> 276 (2024), Art. 112645 — <em>Lifetime prediction of polymeric materials in PV module under continuously varying environments based on damage summation approach</em> · DOI 10.1016/j.solener.2024.112645 · 4th author</li>
+<li><strong>Journal of Power Electronics</strong> 24(5) (2024), 822–831 — <em>Identification of failure modes in IPMSM under accelerated life test based on dual sensor architecture</em> · DOI 10.1007/s43236-024-00810-8 · 6th author</li>
+</ul>
 
 <h3>Conference Presentations (4)</h3>
 
-<table>
-<thead><tr><th>Year</th><th>Conference</th><th>Topic</th><th>Award</th></tr></thead>
-<tbody>
-<tr><td>2023</td><td>PHM Society Asia-Pacific Conference (DOI 10.36001/phmap.2023.v4i1.3780)</td><td>120 kW IPMSM system-level fault diagnosis</td><td>—</td></tr>
-<tr><td>2022</td><td>PCIM Asia</td><td>IGBT IPM power cycling — bond-wire / solder degradation</td><td>—</td></tr>
-<tr><td>2022</td><td>Korean Society for Reliability — Spring Conference</td><td>Predictive maintenance for EV drivetrain</td><td><strong>Best Paper Award</strong></td></tr>
-<tr><td>2021</td><td>Korean PHM Society Annual Conference</td><td>IGBT open-fault diagnosis via system-level measurements</td><td><strong>Best Poster Award</strong></td></tr>
-</tbody></table>
+<ul>
+<li>2023 · PHM Society Asia-Pacific Conference — 120 kW IPMSM system-level fault diagnosis (DOI 10.36001/phmap.2023.v4i1.3780)</li>
+<li>2022 · PCIM Asia — IGBT IPM power cycling: bond-wire / solder degradation</li>
+<li>2022 · Korean Society for Reliability, Spring Conference — Predictive maintenance for EV drivetrain · <strong>Best Paper Award</strong></li>
+<li>2021 · Korean PHM Society Annual Conference — IGBT open-fault diagnosis via system-level measurements · <strong>Best Poster Award</strong></li>
+</ul>
 
 <h3>Patents (2)</h3>
 
@@ -194,11 +208,13 @@ h2 + p, h3 + p { margin-top: 2pt; }
 <h3>Simulation & Analysis</h3>
 <ul>
 <li>Ansys Maxwell (FEM, transient) · MATLAB/Simulink · Co-simulation (Sim2Real precursor) · MIL/SIL/HIL concepts</li>
+<li>Vehicle-level physics simulation in Python (dynamics, terramechanics, sensor-noise, protection-logic failure modes) · ROS 2 / Gazebo / Nav2 · batch scenario and parameter-sensitivity tooling (RS500 project)</li>
 </ul>
 
 <h3>Test & Measurement</h3>
 <ul>
 <li>Dynamometer torque control · self-built fan / pump / bumper benches · CANoe · Vector VN1600 · SPICE · oscilloscope · NI DAQ (NI-9215)</li>
+<li>Test automation: pytest suites under CI (497 tests, RS500) · scenario sweeps as usage-model stress screening</li>
 </ul>
 
 <h3>PHM & Signal Processing (Machine Learning for Reliability)</h3>
@@ -212,10 +228,16 @@ h2 + p, h3 + p { margin-top: 2pt; }
 <li>APQP Phase 2–3 (primary) + Phase 1/4/5 supporting · DFMEA / PFMEA · DRBFM · boundary diagram · BOM management · IQC/OQC inspection guides with <strong>Cpk ≥ 1.33 acceptance criteria</strong> · WBS · NCR closed-loop handling (FRACAS-equivalent)</li>
 </ul>
 
-<h3>Software</h3>
+<h3>Software & Engineering Automation</h3>
 <ul>
-<li>Python · C/C++ · Git · Linux</li>
+<li>Python · C/C++ · Git · Linux · pytest / GitHub Actions CI</li>
+<li>Built and operate a personal engineering-automation fleet with the same verification discipline as test work: 86 scheduled jobs and 37 service units under drift monitoring; a task runtime that verifies delivered artifacts against declared scope (3,058 tasks, Aug–Sep 2026); a document index with measured retrieval quality (MRR 0.44, 26-question golden set)</li>
 <li>Learning / applying: PyTorch · scikit-learn · Docker</li>
+</ul>
+
+<h3>Domain Study</h3>
+<ul>
+<li>Maintain a structured engineering knowledge base — 119 notes across control, electrical, mechanical, automotive quality, robotics and physics (concept → equation → applied case), 46 of them cross-checked against primary sources</li>
 </ul>
 
 <h3>Languages</h3>
@@ -229,17 +251,9 @@ h2 + p, h3 + p { margin-top: 2pt; }
 
 <h2>AWARDS</h2>
 
-<table>
-<thead><tr><th>Year</th><th>Award</th><th>Issuing Body</th></tr></thead>
-<tbody>
-<tr><td>2022</td><td><strong>Best Paper Award</strong> (Spring Conference) — Predictive maintenance for EV drivetrain</td><td>Korean Society for Reliability (KSR)</td></tr>
-<tr><td>2021</td><td><strong>Best Poster Award</strong> — IGBT open-fault diagnosis via system-level measurements</td><td>Korean PHM Society</td></tr>
-</tbody></table>
-
-<h2>INTERNAL PRESENTATIONS</h2>
-
 <ul>
-<li>EOP 400 W dynamometer torque-control system (nonlinearity 0.008 %) — GINT Corp. internal seminar</li>
+<li><strong>Best Paper Award</strong>, Korean Society for Reliability — Spring Conference 2022 (predictive maintenance for EV drivetrain)</li>
+<li><strong>Best Poster Award</strong>, Korean PHM Society — Annual Conference 2021 (IGBT open-fault diagnosis via system-level measurements)</li>
 </ul>
 </body>
 </html>

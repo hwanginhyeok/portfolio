@@ -4,11 +4,15 @@
 
 ## 요약
 
-- Current: 3개 (blocked: 2)
-- Prepared: 16개 (P1: 5, P2: 8, P3: 3)
+- Current: 5개 (1 blocked)
+- Prepared: 19개 (P0: **0** / P1: **5** / P2: 11 / P3: 3)
 - Finished: 45개
+- 마지막 동기화: 2026-09-08 12:42
 
-------------|:----:|--------|:-------:|:--------:|
+## 블록 현황
+
+| 블록 | 상태 | SSOT | Current | Prepared |
+|------|:----:|--------|:-------:|:--------:|
 | B1 인벤토리 | 🟢 게이트 통과 | `docs/blocks/01-inventory/INVENTORY.md` + PAPERS.md | 1 | 8 |
 | B2 활용 전략 | 🟡 골격 작성 | `docs/blocks/02-usage/USAGE_STRATEGY.md` | 0 | 1 |
 | B3 배치 | 🟢 **완료** | `docs/blocks/03-layout/LAYOUT.md` §7 게이트 12/12 | 0 | 0 |

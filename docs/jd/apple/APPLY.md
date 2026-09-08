@@ -21,8 +21,8 @@
 
 | 서류 | 필수 | 상태 |
 |------|:---:|------|
-| 영문 이력서 (Resume) | ✅ | 미작성 → `materials/resume_en.md` |
-| 커버레터 (Cover Letter) | 선택 | 강력 권장 → `materials/cover_letter.md` |
+| 영문 이력서 (Resume) | ✅ | ✅ v7 (2026-09-07, 갱신 토대 반영) → `materials/resume_en.md` · PDF `materials/pdf_draft/resume_en.pdf` |
+| 커버레터 (Cover Letter) | 선택 | ✅ v5 (2026-09-07) → `materials/cover_letter.md` · PDF `materials/pdf_draft/cover_letter.pdf` |
 | 포트폴리오 URL | 선택 | 사이트 URL 제출 가능 |
 
 ---
@@ -73,8 +73,8 @@
 ## 5. 준비 체크리스트
 
 ### 서류 준비
-- [ ] 영문 이력서 작성 (`materials/resume_en.md`)
-- [ ] 커버레터 초안 작성 (`materials/cover_letter.md`)
+- [x] 영문 이력서 작성 (`materials/resume_en.md`) — v7 2026-09-07
+- [x] 커버레터 초안 작성 (`materials/cover_letter.md`) — v5 2026-09-07
 - [ ] LinkedIn 프로필 정비 (영문, 최신화)
 - [ ] 포트폴리오 사이트 URL 확인
 

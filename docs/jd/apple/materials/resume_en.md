@@ -1,8 +1,8 @@
 # Resume — Inhyeok Hwang
 
 > Target: Apple Korea · Reliability Engineer, Core Technology Operations
-> Version: 2026-05-18 v6 (3-round expert review: SVM 주체 분리 + LLM 노이즈 제거 + ORT/semiconductor/SPC/ML/failure-analysis/field-product-usage-model 키워드 보강 + TOEIC expired 명시 + Fishbone 명시 + 37+ SSOT 정합 + FTA 표현 정리)
-> Source SSOT: `docs/blocks/05-extra/RESUME.md`
+> Version: 2026-09-07 v7.1 (print-fit: tables → lists, internal-presentations section folded into EOP bullet; content otherwise v7 — rebuilt on the updated foundation — `docs/blocks/01-inventory/ACTIVITY_INVENTORY.md` / `02-usage/EXPERIENCE_SORT.md`: tenure 3 → 3.5 years, RS500 simulation stack promoted from "learning" to a project section with test/CI evidence, engineering-automation line added as measurement discipline, knowledge-base line added. All v6 review decisions kept: SVM attribution split, no LLM branding, ORT/SPC/FA keywords, TOEIC expired stated.)
+> Source SSOT: `docs/blocks/05-extra/RESUME.md` · facts not in the SSOT are cited to their repository
 
 ---
 
@@ -19,7 +19,9 @@
 
 Reliability-focused mechanical engineer — M.S. from Konkuk University's Reliability-Based Design Optimization (RBDO) Lab, where reliability was the thesis topic, not a side topic. Thesis research on IPMSM digital-twin fault diagnosis (Co-simulation of Ansys Maxwell FEM and a MATLAB/Simulink inverter model). Three peer-reviewed journal publications as co-author (IEEE Transactions on Instrumentation and Measurement · Solar Energy · Journal of Power Electronics, all 2024) and two Korean patents.
 
-Three years of industrial product development at GINT Corp., leading reliability testing (DVT/PVT-equivalent within APQP Phase 2–3) for the GT-SS500 48 V autonomous speed sprayer, with Phase 1/4/5 supporting scope across the full program lifecycle. Authored DFMEA #201/#210 Step 1–7 with five high-priority risks closed before ramp, applied ISO 25119 AgPL d assessment to safety functions, led deep failure analysis on four real field issues (Fishbone-driven root-cause analysis), and tracked 27 NCRs through closure. Built four custom test rigs in-house (dynamometer, fan bench, pump bench, bumper safety rig) and coordinated a structured 48 V BMS supplier quality review.
+Three and a half years of industrial product development at GINT Corp., leading reliability testing (DVT/PVT-equivalent within APQP Phase 2–3) for the GT-SS500 48 V autonomous speed sprayer, with Phase 1/4/5 supporting scope across the full program lifecycle. Authored DFMEA #201/#210 Step 1–7 with five high-priority risks closed before ramp, applied ISO 25119 AgPL d assessment to safety functions, led deep failure analysis on four real field issues (Fishbone-driven root-cause analysis), and tracked 27 NCRs through closure. Built four custom test rigs in-house (dynamometer, fan bench, pump bench, bumper safety rig) and coordinated a structured 48 V BMS supplier quality review.
+
+Independently built a physics-based simulation and test-automation stack for the same vehicle class — 497 automated tests under CI — to exercise field-usage scenarios and protection-logic failure modes ahead of physical testing.
 
 ---
 
@@ -60,6 +62,20 @@ Three years of industrial product development at GINT Corp., leading reliability
 
 ---
 
+## SELECTED INDEPENDENT PROJECT
+
+### RS500 — Physics Simulation & Test-Automation Stack for a Tracked Autonomous Vehicle
+**Feb 2026 – Aug 2026** · open source: github.com/hwanginhyeok/physical_AI_rs500 · Python / ROS 2 / Gazebo
+
+Built, outside work, a Level-2 physics simulation of the SS500 vehicle class (dual 3 kW BLDC, dual-channel motor driver, 48 V LiFePO4) so that usage scenarios and protection-logic failure modes could be exercised before hardware time.
+
+- **Vehicle & drivetrain model**: skid-steer kinematics (ICR), Newtonian dynamics with load transfer and grade, motor + reducer first-order lag with driver acceleration/deceleration limits, **motor-driver protection modeled as failure modes (stall, over-current, over-temperature, over-voltage)**, CAN codec for the driver protocol
+- **Environment & sensing**: Bekker terramechanics for track–soil interaction, GPS/IMU noise model, dual-EKF sensor fusion, LiDAR obstacle detection and camera object detection
+- **Usage-model-driven batch testing**: scenario runner sweeping **3 mission profiles × 5 terrain types**, and a module-level **parameter-sensitivity report generator** for drivetrain, terrain, dynamics and sensor-noise blocks — the same stress-factor screening logic used to size accelerated tests
+- **Verification**: **497 automated tests** across six packages (core physics 331, perception 72, planning 44, control 26, CAN bridge 24), run under GitHub Actions CI on every commit; ROS 2 bring-up with Gazebo, Nav2 and Foxglove
+
+---
+
 ## EDUCATION
 
 ### Konkuk University — M.S. in Mechanical Design (RBDO Lab)
@@ -80,20 +96,16 @@ Three years of industrial product development at GINT Corp., leading reliability
 
 ### Peer-Reviewed Journals (3, co-authored)
 
-| Year | Journal | Title | Author position |
-|------|---------|-------|-----------------|
-| 2024 | **IEEE Trans. on Instrumentation and Measurement**, Vol. 73, Art. 10726721 | Programmable Online Bond-Wire Fault Detection and Location Method for IGBT Using Inverter Output Parameters (DOI 10.1109/TIM.2024.3472910) | 3rd author |
-| 2024 | **Solar Energy** (Elsevier), Vol. 276, Art. 112645 | Lifetime prediction of polymeric materials in PV module under continuously varying environments based on damage summation approach (DOI 10.1016/j.solener.2024.112645) | 4th author |
-| 2024 | **Journal of Power Electronics**, Vol. 24(5), pp. 822–831 | Identification of failure modes in IPMSM under accelerated life test based on dual sensor architecture (DOI 10.1007/s43236-024-00810-8) | 6th author |
+- **IEEE Trans. on Instrumentation and Measurement** 73 (2024), Art. 10726721 — *Programmable Online Bond-Wire Fault Detection and Location Method for IGBT Using Inverter Output Parameters* · DOI 10.1109/TIM.2024.3472910 · **3rd author**
+- **Solar Energy** 276 (2024), Art. 112645 — *Lifetime prediction of polymeric materials in PV module under continuously varying environments based on damage summation approach* · DOI 10.1016/j.solener.2024.112645 · 4th author
+- **Journal of Power Electronics** 24(5) (2024), 822–831 — *Identification of failure modes in IPMSM under accelerated life test based on dual sensor architecture* · DOI 10.1007/s43236-024-00810-8 · 6th author
 
 ### Conference Presentations (4)
 
-| Year | Conference | Topic | Award |
-|------|------------|-------|-------|
-| 2023 | PHM Society Asia-Pacific Conference (DOI 10.36001/phmap.2023.v4i1.3780) | 120 kW IPMSM system-level fault diagnosis | — |
-| 2022 | PCIM Asia | IGBT IPM power cycling — bond-wire / solder degradation | — |
-| 2022 | Korean Society for Reliability — Spring Conference | Predictive maintenance for EV drivetrain | **Best Paper Award** |
-| 2021 | Korean PHM Society Annual Conference | IGBT open-fault diagnosis via system-level measurements | **Best Poster Award** |
+- 2023 · PHM Society Asia-Pacific Conference — 120 kW IPMSM system-level fault diagnosis (DOI 10.36001/phmap.2023.v4i1.3780)
+- 2022 · PCIM Asia — IGBT IPM power cycling: bond-wire / solder degradation
+- 2022 · Korean Society for Reliability, Spring Conference — Predictive maintenance for EV drivetrain · **Best Paper Award**
+- 2021 · Korean PHM Society Annual Conference — IGBT open-fault diagnosis via system-level measurements · **Best Poster Award**
 
 ### Patents (2)
 
@@ -117,9 +129,11 @@ Three years of industrial product development at GINT Corp., leading reliability
 
 ### Simulation & Analysis
 - Ansys Maxwell (FEM, transient) · MATLAB/Simulink · Co-simulation (Sim2Real precursor) · MIL/SIL/HIL concepts
+- Vehicle-level physics simulation in Python (dynamics, terramechanics, sensor-noise, protection-logic failure modes) · ROS 2 / Gazebo / Nav2 · batch scenario and parameter-sensitivity tooling (RS500 project)
 
 ### Test & Measurement
 - Dynamometer torque control · self-built fan / pump / bumper benches · CANoe · Vector VN1600 · SPICE · oscilloscope · NI DAQ (NI-9215)
+- Test automation: pytest suites under CI (497 tests, RS500) · scenario sweeps as usage-model stress screening
 
 ### PHM & Signal Processing (Machine Learning for Reliability)
 - **Government-funded PHM SoC development** (MOTIE, 2021–2022): the team built an SVM fault classifier on phase-current signatures for demagnetization & winding-fault diagnosis of a 120 kW IPMSM. **My contribution**: the physics-based co-simulation (Ansys Maxwell FEM + MATLAB/Simulink) that generated the labeled training data, and the motor / fault modeling underneath it
@@ -128,9 +142,13 @@ Three years of industrial product development at GINT Corp., leading reliability
 ### Quality & PM Artifacts
 - APQP Phase 2–3 (primary) + Phase 1/4/5 supporting · DFMEA / PFMEA · DRBFM · boundary diagram · BOM management · IQC/OQC inspection guides with **Cpk ≥ 1.33 acceptance criteria** · WBS · NCR closed-loop handling (FRACAS-equivalent)
 
-### Software
-- Python · C/C++ · Git · Linux
+### Software & Engineering Automation
+- Python · C/C++ · Git · Linux · pytest / GitHub Actions CI
+- Built and operate a personal engineering-automation fleet with the same verification discipline as test work: 86 scheduled jobs and 37 service units under drift monitoring; a task runtime that verifies delivered artifacts against declared scope (3,058 tasks, Aug–Sep 2026); a document index with measured retrieval quality (MRR 0.44, 26-question golden set)
 - Learning / applying: PyTorch · scikit-learn · Docker
+
+### Domain Study
+- Maintain a structured engineering knowledge base — 119 notes across control, electrical, mechanical, automotive quality, robotics and physics (concept → equation → applied case), 46 of them cross-checked against primary sources
 
 ### Languages
 - Korean: native
@@ -141,11 +159,5 @@ Three years of industrial product development at GINT Corp., leading reliability
 
 ## AWARDS
 
-| Year | Award | Issuing Body |
-|------|-------|--------------|
-| 2022 | **Best Paper Award** (Spring Conference) — Predictive maintenance for EV drivetrain | Korean Society for Reliability (KSR) |
-| 2021 | **Best Poster Award** — IGBT open-fault diagnosis via system-level measurements | Korean PHM Society |
-
-## INTERNAL PRESENTATIONS
-
-- EOP 400 W dynamometer torque-control system (nonlinearity 0.008 %) — GINT Corp. internal seminar
+- **Best Paper Award**, Korean Society for Reliability — Spring Conference 2022 (predictive maintenance for EV drivetrain)
+- **Best Poster Award**, Korean PHM Society — Annual Conference 2021 (IGBT open-fault diagnosis via system-level measurements)
