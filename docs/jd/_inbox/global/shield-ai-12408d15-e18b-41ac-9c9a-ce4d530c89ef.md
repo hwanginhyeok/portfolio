@@ -1,0 +1,27 @@
+---
+company: "Shield AI"
+ats: "ashby"
+job_id: "12408d15-e18b-41ac-9c9a-ce4d530c89ef"
+title: "Manager, Propulsion (Fuel System) (R5088)"
+location: "Dallas, Texas"
+country: "United States"
+region: "americas"
+eligibility: "blocked-itar"
+track: "ai-native"
+search_lane: "ai-native"
+search_lanes: ["ai-native", "core"]
+score: 16
+matched_keywords: ["simulation engineering", "FEA / Maxwell", "validation", "thermal management", "hardware", "manufacturing", "testing", "vehicle/automotive"]
+url: "https://jobs.ashbyhq.com/shield-ai/12408d15-e18b-41ac-9c9a-ce4d530c89ef"
+first_seen: "2026-08-24"
+---
+
+# Manager, Propulsion (Fuel System) (R5088) — Shield AI
+
+- 지원 자격: **지원 불가 (ITAR/미국인 요건)** (blocked-itar) · 점수 16
+- Track: **AI-native / Physical AI** (ai-native)
+- 위치: Dallas, Texas (United States)
+
+## JD 본문
+
+Shield AI is a venture-backed defense-tech company with the mission of protecting service members and civilians with intelligent systems. Its products include Hivemind autonomy software, V-BAT and X-BAT aircraft, and Aechelon simulation and synthetic reality technologies. With offices and facilities across the U.S., Europe, the Middle East, and Asia-Pacific, Shield AI’s technology actively supports operations worldwide. For more information, visit www.shield.ai https://shield.ai/. Follow Shield AI on LinkedIn https://www.linkedin.com/company/shield-ai, X https://x.com/shieldaitech, Instagram https://www.instagram.com/shield_ai, and YouTube https://www.youtube.com/@Shield_AI. JOB DESCRIPTION: We are seeking a Manager of Propulsion to lead fuel system development and integration for the X-BAT vehicle, powered by a fighter-class, afterburning jet engine. This role oversees the architecture, integration, testing, and operational support of flight-critical fuel systems operating across demanding thermal environments, aggressive maneuvering conditions, and mission-critical operating profiles. You will lead engineers and technicians responsible for fuel tanks, fuel delivery systems, venting, pressurization, level sensing, and associated propulsion fluid systems. This role requires deep technical understanding, strong execution leadership, and close coordination across propulsion, flight test, manufacturing, and vehicle integration teams. What you'll do: - - Lead fuel system development activities from architecture through testing and flight operations. - Support and mentor fuel system REs responsible for fuel tanks, pumps, valves, vent systems, and associated propulsion hardware. - Drive system integration efforts considering elevated-G maneuvers, transient operation, vapor ingestion, cavitation, thermal effects, and fault tolerance. - Guide teams through fuel system thermodynamic and fluid dynamic trade studies involving heat soak, vapor pressure behavior, venting, and transient flow response. - Coordinate testing activities, instrumentation planning, and performance validation efforts. - Support failure investigations, root cause analysis, and design iteration activities. - Ensure schedules, technical execution, and supplier activities remain aligned with program goals. - Collaborate closely with propulsion, airframe, mission systems, and manufacturing teams. Required qualifications: - - Bachelor’s degree in Aerospace Engineering, Mechanical Engineering, or related engineering discipline. - 7-10+ years of experience developing aerospace fuel or fluid systems. - Strong understanding of thermodynamics, fluid mechanics, heat transfer, and aerospace propulsion fundamentals. - Deep understanding of compressible and incompressible flow systems and aerospace fluid dynamics. - Experience with fuel system integration, testing, and operational support. - Experience leading engineering teams or major subsystem development activities. - U.S. Citizenship or ability to comply with ITAR requirements. Preferred qualifications: - - Experience with jet-powered UAVs, tactical aircraft, or aerospace fuel systems. - Familiarity with GFSSP, REFPROP, ANSYS, or fluid system modeling tools. - Experience with slosh dynamics, cavitation, vapor ingestion, venting, thermal management, and pressurization systems. - Background in rocket propulsion fluid systems. - Experience operating in test-driven aerospace development environments. - M.S. or Ph.D. in Aerospace Engineering or related discipline. - Ability to obtain a S//SAR level security clearance desired. #LI-MS1 #LD Full-time regular employee offer package: Pay within range listed + Bonus + Benefits + Equity Temporary employee offer package: Pay within range listed above + temporary benefits package (applicable after 60 days of employment) Salary compensation is influenced by a wide array of factors including but not limited to skill set, level of experience, licenses and certifications, and specific work location. All offers are contingent on a cleared background and possible reference check. Military fellows and part-time employees are not eligible for benefits. Please speak to your talent acquisition representative for more information. ### Shield AI is proud to be an equal opportunity workplace and is an affirmative action employer. We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, marital status, disability, gender identity or Veteran status. If you have a disability or special need that requires accommodation, please let us know.

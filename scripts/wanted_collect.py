@@ -32,6 +32,31 @@ from pathlib import Path
 
 import requests
 
+try:  # package import when tested; direct import when run as a script
+    from scripts.shortlist import (
+        TRACK_CORE,
+        TRACK_ORDER,
+        assess_shortlist,
+        normalize_track,
+        primary_track,
+        rank_actionable,
+        reason_label,
+        track_label,
+    )
+    from scripts.state_utils import atomic_write_json
+except ModuleNotFoundError:  # pragma: no cover - exercised by CLI execution
+    from shortlist import (
+        TRACK_CORE,
+        TRACK_ORDER,
+        assess_shortlist,
+        normalize_track,
+        primary_track,
+        rank_actionable,
+        reason_label,
+        track_label,
+    )
+    from state_utils import atomic_write_json
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_CONFIG = REPO_ROOT / "config" / "wanted_targets.json"
 INBOX_DIR = REPO_ROOT / "docs" / "jd" / "_inbox" / "wanted"
@@ -65,6 +90,41 @@ JD_SECTIONS = [
 
 def log(msg: str) -> None:
     print(msg, flush=True)
+
+
+def configured_search_lanes(config: dict) -> list[tuple[str, str]]:
+    """Return `(track, keyword)` pairs with a legacy flat-keyword fallback."""
+    raw_lanes = config.get("search_lanes")
+    pairs: list[tuple[str, str]] = []
+    seen: set[tuple[str, str]] = set()
+
+    if isinstance(raw_lanes, dict):
+        lane_items = [
+            {"track": track, "keywords": keywords}
+            for track, keywords in raw_lanes.items()
+        ]
+    elif isinstance(raw_lanes, list):
+        lane_items = raw_lanes
+    else:
+        lane_items = []
+
+    for lane in lane_items:
+        if not isinstance(lane, dict):
+            continue
+        track = normalize_track(lane.get("track") or lane.get("name"))
+        keywords = lane.get("keywords") or lane.get("terms") or []
+        if isinstance(keywords, str):
+            keywords = [keywords]
+        for keyword in keywords:
+            keyword = str(keyword).strip()
+            pair = (track, keyword)
+            if keyword and pair not in seen:
+                pairs.append(pair)
+                seen.add(pair)
+
+    if pairs:
+        return pairs
+    return [(TRACK_CORE, str(keyword)) for keyword in config.get("keywords", [])]
 
 
 class PoliteSession:
@@ -222,6 +282,16 @@ def render_markdown(job: dict, meta: dict) -> str:
     position = job.get("position") or meta["position"]
     detail = job.get("detail") or {}
     skills = skill_tag_titles(job.get("skill_tags"))
+    search_lanes = sorted(
+        {
+            normalize_track(lane)
+            for lane in (meta.get("search_lanes") or [meta.get("search_lane") or TRACK_CORE])
+            if lane
+        }
+    ) or [TRACK_CORE]
+    track = normalize_track(meta.get("track") or primary_track(search_lanes))
+    if track == TRACK_CORE and any(lane != TRACK_CORE for lane in search_lanes):
+        track = primary_track(search_lanes)
 
     lines = ["---"]
     lines.append(f"wanted_id: {yaml_value(job_id)}")
@@ -230,9 +300,12 @@ def render_markdown(job: dict, meta: dict) -> str:
     lines.append(f"url: {yaml_value(f'https://www.wanted.co.kr/wd/{job_id}')}")
     lines.append(f"location: {yaml_value(job_location(job, meta.get('location', '')))}")
     lines.append(f"skill_tags: {yaml_value(skills)}")
+    lines.append(f"track: {yaml_value(track)}")
+    lines.append(f"search_lane: {yaml_value(track)}")
+    lines.append(f"search_lanes: {yaml_value(search_lanes)}")
     lines.append(f"due_time: {yaml_value(job.get('due_time'))}")
     lines.append(f"first_seen: {yaml_value(meta['first_seen'])}")
-    lines.append(f"matched_keywords: {yaml_value(sorted(meta['matched_keywords']))}")
+    lines.append(f"matched_keywords: {yaml_value(sorted(meta.get('matched_keywords') or []))}")
     lines.append("---")
 
     for field, heading in JD_SECTIONS:
@@ -258,7 +331,9 @@ def load_state(path: Path) -> dict:
     except (ValueError, OSError) as e:
         log(f"ERROR: {path} unreadable ({e}); refusing to overwrite the dedup ledger.")
         raise SystemExit(2)
-    state.setdefault("seen", {})
+    if not isinstance(state, dict) or not isinstance(state.get("seen"), dict):
+        log(f"ERROR: {path} has no valid seen mapping; refusing to overwrite the dedup ledger.")
+        raise SystemExit(2)
     return state
 
 
@@ -284,8 +359,32 @@ def posting_file_location(jid: int) -> str:
     return ""
 
 
+def posting_file_text(jid: int) -> str:
+    """Return the locally collected JD text used by the shortlist layer."""
+    for path in INBOX_DIR.glob(f"{jid}-*.md"):
+        try:
+            return path.read_text(encoding="utf-8")
+        except OSError:
+            continue
+    return ""
+
+
+def classify_wanted_posting(posting: dict) -> dict:
+    """Attach fit evidence to a Wanted row without fetching anything."""
+    posting_id = int(posting["id"])
+    enriched = {
+        **posting,
+        "title": posting.get("position", ""),
+        "department": posting.get("department", ""),
+        "location_raw": posting.get("location") or posting_file_location(posting_id),
+        "body": posting_file_text(posting_id),
+    }
+    enriched.update(assess_shortlist(enriched))
+    return enriched
+
+
 def write_digest(digest_dir: Path, today: str, watchlist: dict, fresh: list[dict]) -> None:
-    """Daily digest: non-zero watchlist alert at the very top, then watchlist + new postings."""
+    """Write raw collection split into actionable and informational rows."""
     alerts = [f"{name} → {count}건" for name, count in watchlist.items() if count]
     lines = []
     if alerts:
@@ -302,18 +401,43 @@ def write_digest(digest_dir: Path, today: str, watchlist: dict, fresh: list[dict
         shown = f"{count}" if count is not None else "*(원티드 기업 매칭 없음)*"
         lines.append(f"| {name} | {shown} |")
     lines.append("")
-    lines.append(f"## 신규 공고 ({len(fresh)}건)")
-    lines.append("")
-    if fresh:
-        lines.append("| 회사 | 포지션 | 지역 | 링크 |")
-        lines.append("|---|---|---|---|")
-        for item in fresh:
-            lines.append(
-                f"| {item['company']} | {item['position']} | {item['location'] or '-'} "
-                f"| [#{item['id']}](https://www.wanted.co.kr/wd/{item['id']}) |"
-            )
-    else:
-        lines.append("오늘 새로 수집된 공고는 없습니다. (dedup 정상 동작)")
+    classified = [classify_wanted_posting(item) for item in fresh]
+    actionable = rank_actionable(classified)
+    informational = sorted(
+        [item for item in classified if not item["actionable"]],
+        key=lambda item: (item.get("reason", ""), -int(item.get("fit_score") or 0), str(item.get("id"))),
+    )
+
+    def append_table(title: str, rows: list[dict]) -> None:
+        lines.append(f"## {title} ({len(rows)}건)")
+        lines.append("")
+        if not rows:
+            lines.append("없음. (dedup 정상 동작이거나 해당일 신규 없음)")
+            lines.append("")
+            return
+        for track in TRACK_ORDER:
+            track_rows = [
+                item for item in rows
+                if normalize_track(item.get("track")) == track
+            ]
+            if not track_rows:
+                continue
+            lines.append(f"### {track_label(track)} ({len(track_rows)}건)")
+            lines.append("")
+            lines.append("| Track | 판정 | 회사 | 포지션 | 지역 | 링크 |")
+            lines.append("|---|---|---|---|---|---|")
+            for item in track_rows:
+                lines.append(
+                    f"| {track_label(item.get('track'))} "
+                    f"| {reason_label(str(item.get('reason', '')))} · fit {item.get('fit_score', 0)} "
+                    f"| {item.get('company', '')} | {item.get('position', '')} "
+                    f"| {item.get('location') or '-'} "
+                    f"| [#{item['id']}](https://www.wanted.co.kr/wd/{item['id']}) |"
+                )
+            lines.append("")
+
+    append_table("Actionable high-fit shortlist", actionable)
+    append_table("Informational / ineligible raw collection", informational)
     lines.append("")
     digest_dir.mkdir(parents=True, exist_ok=True)
     (digest_dir / f"{today}.md").write_text("\n".join(lines), encoding="utf-8")
@@ -481,6 +605,11 @@ def report_card(posting: dict, core: bool) -> str:
     parts = [f'<article class="card{" core" if core else ""}">']
     parts.append(f'<h3 class="pos">{esc(posting["position"])}</h3>')
     parts.append(f'<p class="co">{meta}</p>')
+    decision = reason_label(str(posting.get("reason", "actionable")))
+    fit = posting.get("fit_score", 0)
+    parts.append(f'<div class="chips"><span class="chip">{esc(track_label(posting.get("track")))}</span>'
+                 f'<span class="chip">{esc(decision)}</span>'
+                 f'<span class="chip">fit {esc(fit)}</span></div>')
     parts.append(skill_chips(posting.get("skills") or []))
     if posting.get("excerpt"):
         parts.append(f'<p class="req">{esc(posting["excerpt"])}</p>')
@@ -515,20 +644,35 @@ def global_postings(seen: dict, names: list[str]) -> list[dict]:
 
 def render_html_report(today: str, watchlist: dict, fresh: list[dict],
                        total_seen: int, globals_: list[dict] | None = None) -> str:
-    """Self-contained daily report page: watchlist first, then core-first cards.
-
-    The same `fresh` set the markdown digest lists — on a quiet day it is empty
-    and the page still renders, watchlist included.
-    """
+    """Render a report with an explicit shortlist and an unfiltered raw deck."""
     posts = []
     for p in fresh:
+        enriched = classify_wanted_posting(p)
         skills, excerpt = read_posting_extras(p["id"])
-        posts.append({**p, "skills": skills, "excerpt": excerpt})
-    core = [p for p in posts if is_core_position(p["position"])]
-    total_misc = sum(1 for p in posts if not is_core_position(p["position"]))
-    omitted = max(0, total_misc - MAX_MISC_CARDS)
-    misc = [p for p in posts if not is_core_position(p["position"])][:MAX_MISC_CARDS]
+        enriched.update({"skills": skills, "excerpt": excerpt})
+        posts.append(enriched)
+    actionable = rank_actionable(posts)
+    informational = sorted(
+        [p for p in posts if not p["actionable"]],
+        key=lambda p: (str(p.get("reason", "")), -int(p.get("fit_score") or 0), str(p.get("id"))),
+    )
+    korea_actionable = [p for p in actionable if p.get("feasibility") == "korea"]
+    other_actionable = [p for p in actionable if p.get("feasibility") != "korea"]
     alerts = [(name, count) for name, count in watchlist.items() if count]
+
+    def append_track_cards(rows: list[dict], core: bool) -> None:
+        for track in TRACK_ORDER:
+            track_rows = [
+                row for row in rows
+                if normalize_track(row.get("track")) == track
+            ]
+            if not track_rows:
+                continue
+            body.append(
+                f'<h4 class="group">{esc(track_label(track))} '
+                f'({len(track_rows)}건)</h4>'
+            )
+            body.extend(report_card(row, core) for row in track_rows)
 
     body: list[str] = []
     if alerts:
@@ -544,8 +688,8 @@ def render_html_report(today: str, watchlist: dict, fresh: list[dict],
     body.append(
         '<div class="stats">'
         f'<div class="stat"><span class="k">신규</span><span class="v">{len(posts)}건</span></div>'
-        f'<div class="stat core"><span class="k">핵심</span>'
-        f'<span class="v">{len(core)}건</span></div>'
+        f'<div class="stat core"><span class="k">Actionable high-fit</span>'
+        f'<span class="v">{len(actionable)}건</span></div>'
         f'<div class="stat"><span class="k">누적</span>'
         f'<span class="v">{total_seen}건</span></div>'
         "</div>")
@@ -573,9 +717,9 @@ def render_html_report(today: str, watchlist: dict, fresh: list[dict],
         body.append(f'<p class="quiet">{quiet}</p>')
 
     if globals_:
-        body.append(f"<h2>글로벌 기업 · 한국 채용 {len(globals_)}건</h2>")
-        body.append('<p class="quiet">원티드에 올라온 외국계·글로벌 기업 공고. '
-                    "오늘 신규가 아니어도 계속 보이도록 원장 전체에서 뽑는다.</p>")
+        body.append(f"<h2>글로벌 기업 · 한국 채용 원장(정보성) {len(globals_)}건</h2>")
+        body.append('<p class="quiet">원티드에 올라온 외국계·글로벌 기업 공고의 원장 전체다. '
+                    "Actionable high-fit shortlist와 별도로 보존하며, 지원 판단은 위 shortlist 판정을 따른다.</p>")
         for row in globals_:
             fresh_tag = ('<span class="chip-new">NEW</span>'
                          if row.get("first_seen") == today else "")
@@ -583,25 +727,32 @@ def render_html_report(today: str, watchlist: dict, fresh: list[dict],
                 '<article class="card">'
                 f'<div class="card-h"><a class="card-t" href="https://www.wanted.co.kr/wd/{esc(row["id"])}"'
                 f' target="_blank" rel="noopener">{esc(row.get("position"))}</a>{fresh_tag}</div>'
-                f'<p class="card-m">{esc(row.get("company"))} · 최초 수집 {esc(row.get("first_seen"))}</p>'
+                f'<p class="card-m">{esc(row.get("company"))} · '
+                f'{esc(track_label(row.get("track")))} · 최초 수집 {esc(row.get("first_seen"))}</p>'
                 "</article>")
 
-    body.append("<h2>신규 공고</h2>")
-    if not posts:
-        body.append('<p class="quiet">오늘 새로 수집된 공고는 없습니다. (dedup 정상 동작)</p>')
+    body.append(f"<h2>Actionable high-fit shortlist ({len(actionable)}건)</h2>")
+    body.append('<p class="group">한국 근무를 우선하고, 그 안에서 fit 점수순으로 정렬했습니다. '
+                "수집 원문과 분리된 지원 검토 목록입니다.</p>")
+    if korea_actionable:
+        body.append(f'<h3 class="group">🇰🇷 한국 근무 {len(korea_actionable)}건</h3>')
+        append_track_cards(korea_actionable, True)
+    if other_actionable:
+        body.append(f'<h3 class="group">기타 실행 가능 구간 {len(other_actionable)}건</h3>')
+        append_track_cards(other_actionable, True)
+    if not actionable:
+        body.append('<p class="quiet">오늘 신규 중 실행 가능한 high-fit 공고가 없습니다.</p>')
+
+    body.append(f"<h2>Raw collection · informational / ineligible ({len(informational)}건)</h2>")
+    body.append('<p class="group">원시 수집 결과를 숨기지 않고, 비자·ITAR·미국 전용 원격·프로필 밖 역할을 '
+                "지원 검토 목록과 분리했습니다.</p>")
+    if informational:
+        body.append('<details class="more" open><summary>정보성/지원 불가 원문 전체 '
+                    f'{len(informational)}건</summary><div class="details-body">')
+        append_track_cards(informational, False)
+        body.append("</div></details>")
     else:
-        if core:
-            body.append(f'<h3 class="group">핵심 {len(core)}건</h3>')
-            body.extend(report_card(p, True) for p in core)
-        if misc:
-            omitted_note = f" · {omitted}건 생략" if omitted else ""
-            body.append(f"<details class=\"more\"><summary>기타 신규 공고 "
-                        f"{total_misc}건{omitted_note}</summary><div class=\"details-body\">")
-            body.extend(report_card(p, False) for p in misc)
-            if omitted:
-                body.append(f'<p class="quiet">리포트 크기 상한(기타 {MAX_MISC_CARDS}건)으로 '
-                            f"{omitted}건은 표시에서 뺐습니다. 전체 목록은 digest를 참고하세요.</p>")
-            body.append("</div></details>")
+        body.append('<p class="quiet">정보성/지원 불가 공고가 없습니다.</p>')
     body.append(f'<footer class="foot">scripts/wanted_collect.py 자동 생성 · '
                 f"누적 {total_seen}공고 추적 중 · {datetime.now().strftime('%H:%M')} 생성</footer>")
     body.append("</main>")
@@ -701,7 +852,7 @@ def main() -> int:
         args.html = True  # --telegram implies --html; never send without a file
 
     config = json.loads(args.config.read_text(encoding="utf-8"))
-    keywords = config["keywords"]
+    search_lanes = configured_search_lanes(config)
     watchlist_names = config["company_watchlist"]
     exclude_patterns = [re.compile(p) for p in config["exclude_title_patterns"]]
     cap = int(config["per_keyword_cap"])
@@ -718,11 +869,11 @@ def main() -> int:
     # ---- phase 1: keyword searches -> union by job id -----------------------
     union: dict[int, dict] = {}
     failed_keywords: list[str] = []
-    for kw in keywords:
+    for track, kw in search_lanes:
         items, total = search_positions(sess, kw, cap)
         if items is None:
             failed_keywords.append(kw)
-            log(f"[search] {kw!r}: FAILED")
+            log(f"[search:{track}] {kw!r}: FAILED")
             continue
         for item in items:
             jid = item["id"]
@@ -732,19 +883,36 @@ def main() -> int:
                 "company": (item.get("company") or {}).get("name", ""),
                 "location": (item.get("address") or {}).get("location", ""),
                 "matched_keywords": set(),
+                "search_lanes": set(),
             })
             entry["matched_keywords"].add(kw)
-        log(f"[search] {kw!r}: total={total} fetched={len(items)} "
+            entry["search_lanes"].add(track)
+        log(f"[search:{track}] {kw!r}: total={total} fetched={len(items)} "
             f"(union now {len(union)})")
 
-    if len(failed_keywords) == len(keywords):
+    if len(failed_keywords) == len(search_lanes):
         log("ERROR: every keyword search failed - API down or response shape changed.")
         return 1
     if failed_keywords:
         log(f"NOTE: searches failed for keywords (skipped): {failed_keywords}")
 
+    for entry in union.values():
+        lanes = sorted(entry.get("search_lanes") or [])
+        entry["search_lanes"] = lanes
+        entry["track"] = primary_track(lanes)
+        entry["search_lane"] = entry["track"]
+
     # ---- filter: already seen, then excluded titles --------------------------
     seen = state["seen"]
+    # Backfill lane metadata only for rows encountered in the current search;
+    # legacy rows that are not returned remain untouched and still read as core.
+    for jid, entry in union.items():
+        row = seen.get(str(jid))
+        if row is None:
+            continue
+        row.setdefault("track", entry["track"])
+        row.setdefault("search_lane", entry["search_lane"])
+        row.setdefault("search_lanes", entry["search_lanes"])
     fresh_ids = [jid for jid in union if str(jid) not in seen]
     excluded = {jid: entry for jid, entry in union.items()
                 if any(p.search(entry["position"] or "") for p in exclude_patterns)}
@@ -788,6 +956,9 @@ def main() -> int:
                 "first_seen": today,
                 "company": written[-1]["company"],
                 "position": written[-1]["position"],
+                "track": meta["track"],
+                "search_lane": meta["search_lane"],
+                "search_lanes": sorted(meta["search_lanes"]),
             }
             log(f"[write] {filename} — {written[-1]['position']} @ {written[-1]['company']}")
 
@@ -806,8 +977,11 @@ def main() -> int:
     # ---- phase 4: persist state + digest --------------------------------------
     if not args.dry_run:
         postings_dir.mkdir(parents=True, exist_ok=True)
-        state_path.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n",
-                              encoding="utf-8")
+        try:
+            atomic_write_json(state_path, state)
+        except (OSError, TypeError, ValueError) as e:
+            log(f"ERROR: atomic state persistence failed for {state_path}: {e}")
+            return 1
         # postings first seen today (covers re-runs within the same day)
         fresh_today = []
         for k, v in seen.items():
@@ -838,7 +1012,8 @@ def main() -> int:
                 log("WARNING: --telegram requested but no rendered report exists; "
                     "nothing sent.")
             else:
-                n_core = sum(1 for p in fresh_today if is_core_position(p["position"]))
+                n_core = sum(1 for p in (classify_wanted_posting(item) for item in fresh_today)
+                             if p["actionable"])
                 caption = build_caption(today, watch_counts, len(fresh_today),
                                         n_core, len(seen), len(globals_))
                 if send_report_via_telegram(report_path, caption, args.env):

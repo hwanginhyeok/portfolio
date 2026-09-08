@@ -1,0 +1,27 @@
+---
+company: "Shield AI"
+ats: "ashby"
+job_id: "292bea74-c7ca-4641-821e-abff6eddde8b"
+title: "Senior Engineer, XBAT Simulation Modeling (R4546) (TX/SD/BOS)"
+location: "Dallas, Texas"
+country: "United States"
+region: "americas"
+eligibility: "blocked-itar"
+track: "ai-native"
+search_lane: "ai-native"
+search_lanes: ["ai-native", "core"]
+score: 35
+matched_keywords: ["robotics / industrial automation", "simulation engineering", "embedded", "qualification test", "test engineer", "validation", "hardware", "testing"]
+url: "https://jobs.ashbyhq.com/shield-ai/292bea74-c7ca-4641-821e-abff6eddde8b"
+first_seen: "2026-08-24"
+---
+
+# Senior Engineer, XBAT Simulation Modeling (R4546) (TX/SD/BOS) — Shield AI
+
+- 지원 자격: **지원 불가 (ITAR/미국인 요건)** (blocked-itar) · 점수 35
+- Track: **AI-native / Physical AI** (ai-native)
+- 위치: Dallas, Texas (United States)
+
+## JD 본문
+
+Shield AI is a venture-backed defense-tech company with the mission of protecting service members and civilians with intelligent systems. Its products include Hivemind autonomy software, V-BAT and X-BAT aircraft, and Aechelon simulation and synthetic reality technologies. With offices and facilities across the U.S., Europe, the Middle East, and Asia-Pacific, Shield AI’s technology actively supports operations worldwide. For more information, visit www.shield.ai https://shield.ai/. Follow Shield AI on LinkedIn https://www.linkedin.com/company/shield-ai, X https://x.com/shieldaitech, Instagram https://www.instagram.com/shield_ai, and YouTube https://www.youtube.com/@Shield_AI. JOB DESCRIPTION: The Aircraft Simulation team turns frontier autonomy into mission-ready aircraft. We own the commit-to-flight pipeline—deterministic aircraft and mission simulation, HITL/SITL integration, CI/CD, and tooling for automated flight qualification testing. Our goal is simple: make AI fly—safely, reliably, and fast. As a Senior Modeling & Simulation Engineer, you will be dedicated to Shield AI’s next-generation aircraft program, contributing to our modeling and simulation tooling pipeline. You’ll design, build, and scale novel aircraft subsystem models, develop infrastructure that enables automated testing for our XBAT product line, and perform verification and validation of simulation pipelines. You will also conduct system performance analysis to evaluate expected and actual flight and mission performance using simulation tools and publish results for consumption by customers. What You'll Do - - Develop models and infrastructure for the integrated simulation pipeline in C++ - Design deterministic, high-performance simulation tools capable of faster-than-real-time execution for development, testing, and release. - Implement test scenarios and write unit, system, and regression tests. - Collaborate across autonomy, embedded, GNC, and test engineering to ensure the simulation mirrors real aircraft behavior and mission scenarios. - Contribute to platform-agnostic simulation tooling to accelerate future development efforts - Perform verification and validation (V&V) analysis activities on model tools. - Conduct system performance analysis and generate reports and visualizations. - Utilize best practices in C++, simulation architecture, and performance engineering. Required Qualifications - - BS or MS in Computer Science, Aerospace, Robotics, or related field. - 5+ years of experience in software development, with emphasis on modern C++ (C++17 or later) and performance optimization. - Strong understanding of rigid-body dynamics, kinematics, and basic flight and sensor mechanics. - Proven experience developing or integrating simulation systems for robotics, aerospace, or autonomous systems. - Ability to debug complex build and runtime environments (CMake, CPM, package management, logging, & profiling tools). - Experience with software testing tools (GTest, etc.) - Experience with model V&V. - Strong collaboration and communication skills across software, hardware, and systems disciplines. - Ability to obtain a S//SAR level security clearance desired. Preferred Qualifications - - Grasp of real-time and deterministic software design, including multi-threading, synchronization, and memory management. - Experience with DevOps-integrated simulation workflows, including CI/CD and automated hardware testing environments. - Working knowledge of Python for data analysis, test automation, or simulation orchestration. - Familiarity with aircraft and flight physics modeling. #LI-SM1 Full-time regular employee offer package: Pay within range listed + Bonus + Benefits + Equity Temporary employee offer package: Pay within range listed above + temporary benefits package (applicable after 60 days of employment) Salary compensation is influenced by a wide array of factors including but not limited to skill set, level of experience, licenses and certifications, and specific work location. All offers are contingent on a cleared background and possible reference check. Military fellows and part-time employees are not eligible for benefits. Please speak to your talent acquisition representative for more information. ### Shield AI is proud to be an equal opportunity workplace and is an affirmative action employer. We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, marital status, disability, gender identity or Veteran status. If you have a disability or special need that requires accommodation, please let us know.

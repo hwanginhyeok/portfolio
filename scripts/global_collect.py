@@ -50,6 +50,33 @@ from pathlib import Path
 
 import requests
 
+try:  # package import when tested; direct import when run as a script
+    from scripts.shortlist import (
+        KOREAN_ADMINISTRATIVE_ADDRESS_PATTERN,
+        TRACK_CORE,
+        TRACK_ORDER,
+        annotate_shortlist,
+        rank_actionable,
+        reason_label,
+        normalize_track,
+        primary_track,
+        track_label,
+    )
+    from scripts.state_utils import atomic_write_json
+except ModuleNotFoundError:  # pragma: no cover - exercised by CLI execution
+    from shortlist import (
+        KOREAN_ADMINISTRATIVE_ADDRESS_PATTERN,
+        TRACK_CORE,
+        TRACK_ORDER,
+        annotate_shortlist,
+        rank_actionable,
+        reason_label,
+        normalize_track,
+        primary_track,
+        track_label,
+    )
+    from state_utils import atomic_write_json
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_CONFIG = REPO_ROOT / "config" / "global_targets.json"
 INBOX_DIR = REPO_ROOT / "docs" / "jd" / "_inbox" / "global"
@@ -534,24 +561,28 @@ US_STATE_SUFFIX = re.compile(r",\s*[A-Z]{2}\s*,?\s*(?:USA)?\s*$")
 APAC_COUNTRIES = {"Japan", "Singapore", "China", "Taiwan", "Hong Kong",
                   "India", "Australia", "New Zealand", "Vietnam", "Malaysia",
                   "Indonesia", "Philippines", "Thailand"}
-# Populated from config korea_location_terms in main() (the config is the SSOT).
-KOREA_LOCATION_PATTERNS: list[re.Pattern] = [compile_term(t)
-                                             for t in DEFAULT_KOREA_LOCATION_TERMS]
+# Populated from config korea_location_terms in main() (the config is the SSOT),
+# with the bounded Korean administrative-address rule always retained.
+KOREA_LOCATION_PATTERNS: list[re.Pattern] = [
+    *(compile_term(t) for t in DEFAULT_KOREA_LOCATION_TERMS),
+    KOREAN_ADMINISTRATIVE_ADDRESS_PATTERN,
+]
 
 # 'clearance' alone is deliberately absent (mechanical 'gear clearance' false
 # positives); the phrases below only appear in export-control contexts.
 ITAR_PATTERNS = [compile_term(p) for p in [
     r"\bitar\b", "international traffic in arms", "export[- ]control",
     "export(ed)?[- ]controlled", "ear (export administration|regulation)",
-    r"u\.?s\. person", "united states person", r"u\.?s\. citizen",
-    "united states citizen", "american citizen",
+    r"u\.?s\.?[- ]person", "united states[- ]person", r"u\.?s\.?[- ]citizen",
+    "united states[- ]citizen", "american citizen", r"u\.?s\.? citizens? only",
     "security clearance", "top[- ]secret", r"ts/?sci", "clearance (check|requirement|to work)",
     r"obtain (a |an )?(u\.?s\.? )?(security )?clearance", "clearable",
 ]]
 SPONSORSHIP_PATTERNS = [compile_term(p) for p in [
-    "visa sponsorship", r"sponsor(s|ing|ed)? (work )?visas?", r"\bwe sponsor\b",
-    "sponsorship (is )?(available|offered|provided)", r"h-?1b", r"\bopt\b|\bcpt\b",
-    "relocation (support|package|assistance|benefit|stipend)",
+    "visa sponsorship (is )?(available|offered|provided)",
+    r"(we|the company) sponsor(s)? (work )?visas?",
+    r"sponsor(s|ing|ed)? (a )?(work )?visas?",
+    "sponsorship (is )?(available|offered|provided)",
 ]]
 ANTI_SPONSORSHIP_PATTERNS = [compile_term(p) for p in [
     r"(do(es)? not|cannot|can't|unable to|will not|won't) (offer |provide )?(visa |work )?(sponsor|sponsorship)",
@@ -566,7 +597,10 @@ REMOTE_STRONG_PATTERNS = [compile_term(p) for p in [
     "remote (position|opportunity|role|job)", "distributed (team|company)",
 ]]
 
-APPLICABLE_BUCKETS = ("korea", "sponsorship-likely", "remote", "korea-apac")
+# `korea-apac` is a location bucket, not Korean work authorization. It remains
+# visible in the raw eligibility distribution, but shortlist actionability
+# requires affirmative sponsorship evidence and is counted from the classifier.
+APPLICABLE_BUCKETS = ("korea", "sponsorship-likely", "remote")
 # Single ordering used for ranking inside the report, for the distribution
 # table rows, and for the caption: korea outranks everything, blocked-itar last.
 BUCKET_PRIORITY = ("korea", "sponsorship-likely", "remote", "korea-apac",
@@ -596,18 +630,15 @@ def normalize_location(location_raw: str, country_hint: str = "") -> tuple[str, 
 
 
 def eligibility(posting: dict) -> tuple[str, str, str]:
-    """Derive (eligibility, country, region). Precedence: korea first — the
-    owner lives and works in Korea, so a Korea-located posting outranks every
-    other concern (including an ITAR clause); then blocked-itar, then the other
-    applicable buckets, then visa-needed as the fallback."""
+    """Derive (eligibility, country, region), with ITAR always blocking first."""
     haystack = " ".join([posting.get("title") or "", posting.get("body") or ""])
     country, region = normalize_location(posting.get("location_raw") or "",
                                          posting.get("country_hint") or "")
+    if matches_any(ITAR_PATTERNS, haystack):
+        return "blocked-itar", country, region
     if matches_any(KOREA_LOCATION_PATTERNS,
                    f"{posting.get('location_raw') or ''} {posting.get('country_hint') or ''}"):
         return "korea", "South Korea", "apac"
-    if matches_any(ITAR_PATTERNS, haystack):
-        return "blocked-itar", country, region
     if country in APAC_COUNTRIES:
         return "korea-apac", country, region
     remote = posting.get("remote_flag") or matches_any(REMOTE_STRONG_PATTERNS, haystack)
@@ -621,12 +652,17 @@ def eligibility(posting: dict) -> tuple[str, str, str]:
 
 def filter_and_score(postings: list[dict], keyword_rules, negative_patterns,
                      negative_unless_core, seniority_patterns, weights,
-                     min_score: int) -> tuple[list[dict], int, int]:
+                     min_score: int, keyword_tracks: dict[str, str] | None = None
+                     ) -> tuple[list[dict], int, int]:
     """Shared keep-filter + scoring pass over one source's normalized postings
     (identical for every ATS). Returns (kept, n_negative, n_seniority); kept
-    postings gain score/matched/eligibility/country/region/excerpt in place."""
+    postings gain score/matched/eligibility/country/region/excerpt and explicit
+    search-lane metadata in place. `keyword_tracks` is optional for callers
+    using the legacy three-column keyword rule shape.
+    """
     kept: list[dict] = []
     n_neg = n_sen = 0
+    keyword_tracks = keyword_tracks or {}
     for posting in postings:
         title_dept = f"{posting['title']} {posting['department']}"
         if matches_any(seniority_patterns, posting["title"]):
@@ -652,8 +688,17 @@ def filter_and_score(postings: list[dict], keyword_rules, negative_patterns,
         if core_weight < 5 and matches_any(negative_unless_core, title_dept):
             n_neg += 1
             continue
+        search_lanes = sorted(
+            {
+                normalize_track(keyword_tracks.get(match["term"], TRACK_CORE))
+                for match in matched
+            }
+        ) or [TRACK_CORE]
         posting.update(score=score, matched=matched, eligibility=bucket,
                        country=country, region=region,
+                       track=primary_track(search_lanes),
+                       search_lane=primary_track(search_lanes),
+                       search_lanes=search_lanes,
                        excerpt=make_excerpt(posting["body"]))
         kept.append(posting)
     return kept, n_neg, n_sen
@@ -671,6 +716,16 @@ def render_markdown(posting: dict, matched_terms: list[str]) -> str:
     truncated = len(body) > BODY_MAX_CHARS
     if truncated:
         body = body[:BODY_MAX_CHARS].rstrip() + "\n\n[... 이하 생략 — 본문 길이 제한]"
+    search_lanes = sorted(
+        {
+            normalize_track(lane)
+            for lane in (posting.get("search_lanes") or [posting.get("search_lane") or TRACK_CORE])
+            if lane
+        }
+    ) or [TRACK_CORE]
+    track = normalize_track(posting.get("track") or primary_track(search_lanes))
+    if track == TRACK_CORE and any(lane != TRACK_CORE for lane in search_lanes):
+        track = primary_track(search_lanes)
     lines = ["---"]
     lines.append(f"company: {yaml_value(posting['company'])}")
     lines.append(f"ats: {yaml_value(posting['ats'])}")
@@ -680,6 +735,9 @@ def render_markdown(posting: dict, matched_terms: list[str]) -> str:
     lines.append(f"country: {yaml_value(posting['country'])}")
     lines.append(f"region: {yaml_value(posting['region'])}")
     lines.append(f"eligibility: {yaml_value(posting['eligibility'])}")
+    lines.append(f"track: {yaml_value(track)}")
+    lines.append(f"search_lane: {yaml_value(track)}")
+    lines.append(f"search_lanes: {yaml_value(search_lanes)}")
     lines.append(f"score: {posting['score']}")
     lines.append(f"matched_keywords: {yaml_value(matched_terms)}")
     lines.append(f"url: {yaml_value(posting['url'])}")
@@ -690,6 +748,7 @@ def render_markdown(posting: dict, matched_terms: list[str]) -> str:
     lines.append("")
     lines.append(f"- 지원 자격: **{BUCKET_LABELS[posting['eligibility']]}** "
                  f"({posting['eligibility']}) · 점수 {posting['score']}")
+    lines.append(f"- Track: **{track_label(track)}** ({track})")
     lines.append(f"- 위치: {posting['location_raw']}"
                  + (f" ({posting['country']})" if posting['country'] else ""))
     lines.append("")
@@ -715,7 +774,9 @@ def load_state(path: Path) -> dict:
     except (ValueError, OSError) as e:
         log(f"ERROR: {path} unreadable ({e}); refusing to overwrite the dedup ledger.")
         raise SystemExit(2)
-    state.setdefault("seen", {})
+    if not isinstance(state, dict) or not isinstance(state.get("seen"), dict):
+        log(f"ERROR: {path} has no valid seen mapping; refusing to overwrite the dedup ledger.")
+        raise SystemExit(2)
     return state
 
 
@@ -812,7 +873,7 @@ def keyword_chips(score: int, matched: list[dict]) -> str:
 
 def report_card(posting: dict) -> str:
     blocked = posting["eligibility"] == "blocked-itar"
-    core = posting["eligibility"] in APPLICABLE_BUCKETS and not blocked
+    core = bool(posting.get("actionable")) and not blocked
     classes = ["card"]
     if core:
         classes.append("core")
@@ -824,7 +885,12 @@ def report_card(posting: dict) -> str:
     parts = [f'<article class="{" ".join(classes)}">']
     parts.append(f'<h3 class="pos">{esc(posting["title"])}</h3>')
     parts.append(f'<p class="co">{meta}</p>')
-    parts.append(f'<div class="chips">{eligibility_chip(posting["eligibility"])}</div>')
+    decision = reason_label(str(posting.get("reason", "actionable")))
+    fit = posting.get("fit_score", 0)
+    parts.append(f'<div class="chips"><span class="chip">{esc(track_label(posting.get("track")))}</span>'
+                 f'{eligibility_chip(posting["eligibility"])}'
+                 f'<span class="chip">{esc(decision)}</span>'
+                 f'<span class="chip">fit {esc(fit)}</span></div>')
     parts.append(keyword_chips(posting["score"], posting["matched"]))
     if posting.get("no_jd"):
         # the list API gave no description — say so instead of an empty excerpt
@@ -846,7 +912,19 @@ def render_deck(postings: list[dict], max_cards: int, label: str) -> list[str]:
     note = f" · {omitted}건 표시 생략" if omitted else ""
     parts = [f'<details class="more"><summary>{esc(label)} {len(postings)}건'
              f'{esc(note)}</summary><div class="details-body">']
-    parts += [report_card(p) for p in postings[:max_cards]]
+    visible = postings[:max_cards]
+    for track in TRACK_ORDER:
+        track_rows = [
+            posting for posting in visible
+            if normalize_track(posting.get("track")) == track
+        ]
+        if not track_rows:
+            continue
+        parts.append(
+            f'<h4 class="group">{esc(track_label(track))} '
+            f'({len(track_rows)}건)</h4>'
+        )
+        parts += [report_card(posting) for posting in track_rows]
     if omitted:
         parts.append(f'<p class="quiet">리포트 크기 상한({max_cards}건)으로 {omitted}건은 '
                      "표시에서 뺐습니다. 전체 목록은 state.json / 공고 파일을 참고하세요.</p>")
@@ -856,24 +934,37 @@ def render_deck(postings: list[dict], max_cards: int, label: str) -> list[str]:
 
 def render_html_report(today: str, fresh: list[dict], bucket_counts: dict,
                        n_companies: int, total_seen: int) -> str:
-    """Self-contained mobile report, Korea first: the 🇰🇷 한국 근무 section sits
-    above every other section with one full card per korea posting (uncapped;
-    a one-line notice — never a hidden section — when there are none), then the
-    applicable deck (ranked by bucket priority, then score), then collapsed
-    visa-needed, then a collapsed, muted, clearly-labelled blocked-itar deck
-    that never ranks among the applicable ones."""
+    """Render actionable high-fit roles separately from the complete raw set."""
+    annotate_shortlist(fresh)
+    actionable = rank_actionable(fresh)
+    informational = sorted(
+        [p for p in fresh if not p["actionable"]],
+        key=lambda p: (
+            str(p.get("reason", "")),
+            -int(p.get("fit_score") or 0),
+            str(p.get("company") or "").casefold(),
+            str(p.get("title") or "").casefold(),
+        ),
+    )
+    korea = [p for p in actionable if p.get("feasibility") == "korea"]
+    other_actionable = [p for p in actionable if p.get("feasibility") != "korea"]
+    n_applicable = len(actionable)
 
-    def rank_key(p: dict) -> tuple:
-        return (BUCKET_PRIORITY.index(p["eligibility"]), -p["score"],
-                p["company"], p["title"])
-
-    korea = sorted([p for p in fresh if p["eligibility"] == "korea"], key=rank_key)
-    applicable = sorted(
-        [p for p in fresh if p["eligibility"] in APPLICABLE_BUCKETS
-         and p["eligibility"] != "korea"], key=rank_key)
-    visa = sorted([p for p in fresh if p["eligibility"] == "visa-needed"], key=rank_key)
-    blocked = sorted([p for p in fresh if p["eligibility"] == "blocked-itar"], key=rank_key)
-    n_applicable = len(korea) + len(applicable)
+    def append_track_cards(rows: list[dict]) -> list[str]:
+        parts: list[str] = []
+        for track in TRACK_ORDER:
+            track_rows = [
+                row for row in rows
+                if normalize_track(row.get("track")) == track
+            ]
+            if not track_rows:
+                continue
+            parts.append(
+                f'<h4 class="group">{esc(track_label(track))} '
+                f'({len(track_rows)}건)</h4>'
+            )
+            parts.extend(report_card(row) for row in track_rows)
+        return parts
 
     body: list[str] = ['<main class="wrap">']
     body.append("<h1>글로벌 채용 리포트</h1>")
@@ -890,15 +981,6 @@ def render_html_report(today: str, fresh: list[dict], bucket_counts: dict,
         f'<span class="v">{total_seen}건</span></div>'
         "</div>")
 
-    body.append("<h2>🇰🇷 한국 근무</h2>")
-    body.append('<p class="group">한국 현지 근무 공고 — 점수순 · 전건 표시 · '
-                "본문 미제공(Workday) 공고는 낮은 점수가 정상</p>")
-    if korea:
-        body += [report_card(p) for p in korea]
-    else:
-        body.append('<p class="quiet">한국 근무 공고는 오늘 기준 0건입니다 '
-                    "(Workday 4개 테넌트 + 전체 글로벌 보드에서 한국 위치 매칭 없음).</p>")
-
     body.append("<h2>지원 자격 분포 (오늘 신규 기준)</h2>")
     rows = []
     for bucket in BUCKET_PRIORITY:
@@ -909,24 +991,26 @@ def render_html_report(today: str, fresh: list[dict], bucket_counts: dict,
                 f'<th class="num">공고 수</th></tr></thead>'
                 f'<tbody>{"".join(rows)}</tbody></table></div>')
 
-    body.append("<h2>지원 가능</h2>")
-    body.append('<p class="group">비자 스폰서 가능 · 원격 · 한국 외 APAC — '
-                "자격 구간순 + 점수순</p>")
-    if applicable:
-        omitted = max(0, len(applicable) - MAX_APPLICABLE_CARDS)
-        body += [report_card(p) for p in applicable[:MAX_APPLICABLE_CARDS]]
-        if omitted:
-            body.append(f'<p class="quiet">지원 가능 {len(applicable)}건 중 상위 '
-                        f"{MAX_APPLICABLE_CARDS}건만 표시했습니다 ({omitted}건 생략).</p>")
-    else:
-        body.append('<p class="quiet">오늘 신규 중 지원 가능 공고는 없습니다. '
-                    "(dedup 정상 동작이거나 해당일 신규 없음)</p>")
+    body.append(f"<h2>Actionable high-fit shortlist ({len(actionable)}건)</h2>")
+    body.append('<p class="group">한국 근무를 우선하고, 이후 한국 외 APAC·명시적 글로벌 원격·'
+                "근거가 있는 스폰서 가능 역할을 fit 점수순으로 정렬했습니다.</p>")
+    if korea:
+        body.append(f'<h3 class="group">🇰🇷 한국 근무 {len(korea)}건</h3>')
+        body += append_track_cards(korea)
+    if other_actionable:
+        body.append(f'<h3 class="group">기타 실행 가능 구간 {len(other_actionable)}건</h3>')
+        body += append_track_cards(other_actionable)
+    if not actionable:
+        body.append('<p class="quiet">오늘 신규 중 실행 가능한 high-fit 공고가 없습니다.</p>')
 
-    if visa:
-        body += render_deck(visa, MAX_COLLAPSED_CARDS, "비자 필요 (스폰서 미확인)")
-    if blocked:
-        body += render_deck(blocked, MAX_COLLAPSED_CARDS,
-                            "지원 불가 · ITAR/미국인 요건 (한국 국적 지원 차단)")
+    body.append(f"<h2>Raw collection · informational / ineligible ({len(informational)}건)</h2>")
+    body.append('<p class="group">원시 수집 결과를 숨기지 않고, 비자·ITAR·미국 전용 원격·프로필 밖 역할을 '
+                "지원 검토 목록과 분리했습니다. 각 카드의 판정 칩이 제외 사유입니다.</p>")
+    if informational:
+        body += render_deck(informational, len(informational),
+                            "정보성 / 지원 불가 원문 전체")
+    else:
+        body.append('<p class="quiet">정보성/지원 불가 공고가 없습니다.</p>')
 
     body.append('<footer class="foot">scripts/global_collect.py 자동 생성 · '
                 f"누적 {total_seen}공고 추적 중 · {datetime.now().strftime('%H:%M')} 생성 · "
@@ -1023,15 +1107,21 @@ def main() -> int:
     companies = config["companies"]
     workday_companies = config.get("workday", [])
     # config is the SSOT for the korea bucket terms and the Workday search plan
-    KOREA_LOCATION_PATTERNS[:] = [compile_term(t)
-                                  for t in (config.get("korea_location_terms")
-                                            or DEFAULT_KOREA_LOCATION_TERMS)]
+    KOREA_LOCATION_PATTERNS[:] = [
+        *(compile_term(t) for t in (config.get("korea_location_terms")
+                                    or DEFAULT_KOREA_LOCATION_TERMS)),
+        KOREAN_ADMINISTRATIVE_ADDRESS_PATTERN,
+    ]
     workday_search_terms = (config.get("workday_search_terms")
                             or DEFAULT_WORKDAY_SEARCH_TERMS)
     workday_page_limit = int(config.get("workday_page_limit", WORKDAY_PAGE_LIMIT))
     workday_stall_pages = int(config.get("workday_stall_pages", WORKDAY_STALL_PAGES))
     keyword_rules = [(kw["term"], compile_term(kw.get("pattern") or kw["term"]), int(kw["weight"]))
                      for kw in config["profile_keywords"]]
+    keyword_tracks = {
+        kw["term"]: normalize_track(kw.get("track", TRACK_CORE))
+        for kw in config["profile_keywords"]
+    }
     negative_patterns = [compile_term(t) for t in config["negative_keywords"]]
     negative_unless_core = [compile_term(t) for t in config["negative_unless_core"]]
     seniority_patterns = [compile_term(t) for t in config["seniority_exclude"]]
@@ -1060,7 +1150,7 @@ def main() -> int:
         fetched_total += len(postings)
         kept_here, n_neg, n_sen = filter_and_score(
             postings, keyword_rules, negative_patterns, negative_unless_core,
-            seniority_patterns, weights, min_score)
+            seniority_patterns, weights, min_score, keyword_tracks)
         kept.extend(kept_here)
         log(f"[board] {company['name']}: fetched={len(postings)} kept={len(kept_here)} "
             f"negatives={n_neg} seniority={n_sen}")
@@ -1078,7 +1168,7 @@ def main() -> int:
         hydrate_workday_korea(sess, company, postings, KOREA_LOCATION_PATTERNS)
         kept_here, n_neg, n_sen = filter_and_score(
             postings, keyword_rules, negative_patterns, negative_unless_core,
-            seniority_patterns, weights, min_score)
+            seniority_patterns, weights, min_score, keyword_tracks)
         kept.extend(kept_here)
         n_korea_here = sum(1 for p in kept_here if p["eligibility"] == "korea")
         log(f"[workday] {company['name']}: fetched={len(postings)} kept={len(kept_here)} "
@@ -1098,7 +1188,11 @@ def main() -> int:
     for p in kept:
         p["key"] = f"{p['ats']}:{p['slug']}:{p['job_id']}"
         bucket_counts[p["eligibility"]] += 1
+    annotate_shortlist(kept)
     log("[eligibility] " + " · ".join(f"{b}={bucket_counts[b]}" for b in BUCKET_LABELS))
+    n_actionable = sum(1 for p in kept if p["actionable"])
+    log(f"[shortlist] actionable_high_fit={n_actionable} informational_or_ineligible="
+        f"{len(kept) - n_actionable}")
 
     if args.dry_run:
         log(f"[dry-run] would write {sum(1 for p in kept if p['key'] not in seen)} posting "
@@ -1149,6 +1243,14 @@ def main() -> int:
             "title": posting["title"],
             "score": posting["score"],
             "eligibility": posting["eligibility"],
+            "track": posting["track"],
+            "search_lane": posting["search_lane"],
+            "search_lanes": posting["search_lanes"],
+            "fit_score": posting["fit_score"],
+            "actionable": posting["actionable"],
+            "fit_evidence": posting["fit_evidence"],
+            "technical_signal_evidence": posting["technical_signal_evidence"],
+            "owner_domain_evidence": posting["owner_domain_evidence"],
         }
         log(f"[write] {filename} — {posting['title']} @ {posting['company']} "
             f"(score {posting['score']}, {posting['eligibility']})")
@@ -1168,18 +1270,39 @@ def main() -> int:
         if row is None or posting in written:
             continue
         if (row.get("score") != posting["score"]
-                or row.get("eligibility") != posting["eligibility"]):
+                or row.get("eligibility") != posting["eligibility"]
+                or row.get("track") != posting["track"]
+                or row.get("search_lane") != posting["search_lane"]
+                or row.get("search_lanes") != posting["search_lanes"]
+                or row.get("fit_score") != posting["fit_score"]
+                or row.get("actionable") != posting["actionable"]
+                or row.get("fit_evidence") != posting["fit_evidence"]
+                or row.get("technical_signal_evidence")
+                != posting["technical_signal_evidence"]
+                or row.get("owner_domain_evidence")
+                != posting["owner_domain_evidence"]):
             row["score"] = posting["score"]
             row["eligibility"] = posting["eligibility"]
             row["title"] = posting["title"]
+            row["track"] = posting["track"]
+            row["search_lane"] = posting["search_lane"]
+            row["search_lanes"] = posting["search_lanes"]
+            row["fit_score"] = posting["fit_score"]
+            row["actionable"] = posting["actionable"]
+            row["fit_evidence"] = posting["fit_evidence"]
+            row["technical_signal_evidence"] = posting["technical_signal_evidence"]
+            row["owner_domain_evidence"] = posting["owner_domain_evidence"]
             n_refreshed += 1
     if n_refreshed:
         log(f"[state] refreshed score/eligibility on {n_refreshed} known postings")
 
     # ---- phase 3: persist state ----------------------------------------------
     INBOX_DIR.mkdir(parents=True, exist_ok=True)
-    state_path.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n",
-                          encoding="utf-8")
+    try:
+        atomic_write_json(state_path, state)
+    except (OSError, TypeError, ValueError) as e:
+        log(f"ERROR: atomic state persistence failed for {state_path}: {e}")
+        return 1
 
     # today's set: covers re-runs within the same day (files come from `kept`,
     # which re-scores every board each run, so cards stay complete on re-render)
@@ -1189,7 +1312,7 @@ def main() -> int:
     for p in fresh_today:
         fresh_counts[p["eligibility"]] += 1
     n_new = len(fresh_today)
-    n_applicable = sum(fresh_counts[b] for b in APPLICABLE_BUCKETS)
+    n_applicable = sum(1 for p in fresh_today if p.get("actionable"))
     log(f"[done] written: {len(written)} | new today: {n_new} "
         f"(한국 {fresh_counts['korea']} · 지원가능 {n_applicable}) | "
         f"state: {len(seen)} postings seen")

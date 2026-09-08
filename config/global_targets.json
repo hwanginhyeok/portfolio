@@ -1,5 +1,5 @@
 {
-  "_doc": "Targets for scripts/global_collect.py (global boards via Greenhouse/Ashby/Lever + Korea-hiring companies via Workday). profile_keywords/negative_keywords terms are regexes matched case-insensitive with word boundaries. korea_location_terms are the same kind of regex-free match terms for the 'korea' eligibility bucket. Weights derived from docs/blocks/05-extra/RESUME.md §5/§7 + cases/E01_pm_experience.md.",
+  "_doc": "Targets for scripts/global_collect.py (global boards via Greenhouse/Ashby/Lever + Korea-hiring companies via Workday). profile_keywords/negative_keywords terms are regexes matched case-insensitive with word boundaries; profile_keywords may carry an optional track for lane metadata. korea_location_terms are the same kind of regex-free match terms for the 'korea' eligibility bucket. Weights derived from docs/blocks/05-extra/RESUME.md §5/§7 + cases/E01_pm_experience.md.",
   "companies": [
     {
       "name": "Waymo",
@@ -166,7 +166,16 @@
     "test engineer",
     "program manager",
     "equipment",
-    "quality"
+    "quality",
+    "industrial AI",
+    "Physical AI",
+    "robotics automation",
+    "digital twin",
+    "forward-deployed engineer",
+    "technical consultant",
+    "solutions architect",
+    "solutions engineer",
+    "engineering transformation"
   ],
   "workday_page_limit": 15,
   "request_delay_seconds": 1.0,
@@ -345,7 +354,8 @@
     },
     {
       "term": "digital twin",
-      "weight": 3
+      "weight": 3,
+      "track": "ai-native"
     },
     {
       "term": "durability",
@@ -383,7 +393,8 @@
     {
       "term": "robot",
       "pattern": "robot",
-      "weight": 2
+      "weight": 2,
+      "track": "ai-native"
     },
     {
       "term": "servo",
@@ -491,6 +502,60 @@
       "term": "vehicle/automotive",
       "pattern": "vehicle|automotive|automobile",
       "weight": 1
+    },
+    {
+      "term": "industrial AI",
+      "pattern": "industrial\\s+(?:ai|artificial intelligence)|(?:ai|artificial intelligence)\\s+(?:for\\s+)?(?:manufacturing|industrial|factory|robotics?)",
+      "weight": 6,
+      "track": "ai-native"
+    },
+    {
+      "term": "Physical AI",
+      "pattern": "physical\\s+(?:ai|intelligence)|피지컬\\s*AI|물리\\s*AI",
+      "weight": 6,
+      "track": "ai-native"
+    },
+    {
+      "term": "robotics / industrial automation",
+      "pattern": "robot(?:ics)?|industrial\\s+automation|automation\\s+(?:engineer|engineering|architect|consultant)",
+      "weight": 5,
+      "track": "ai-native"
+    },
+    {
+      "term": "simulation engineering",
+      "pattern": "\\bsimulation\\b|simulink|model[- ]based\\s+(?:design|engineering|simulation)|시뮬레이션",
+      "weight": 4,
+      "track": "ai-native"
+    },
+    {
+      "term": "forward-deployed engineering",
+      "pattern": "forward[- ]deployed\\s+(?:engineering|engineer|robotics?)",
+      "weight": 6,
+      "track": "ai-native"
+    },
+    {
+      "term": "technical consultant",
+      "pattern": "technical\\s+consultant|engineering\\s+consultant|기술\\s*컨설턴트|엔지니어링\\s*컨설턴트",
+      "weight": 5,
+      "track": "engineering-consulting"
+    },
+    {
+      "term": "solutions architect / engineer",
+      "pattern": "solutions?\\s+(?:architect|engineer)",
+      "weight": 5,
+      "track": "engineering-consulting"
+    },
+    {
+      "term": "AI product / technical PM",
+      "pattern": "\\bai\\s+(?:product|technical|program|project)\\s+manag|ai\\s*(?:product|기술)?\\s*(?:pm|피엠)",
+      "weight": 5,
+      "track": "ai-native"
+    },
+    {
+      "term": "manufacturing / engineering transformation",
+      "pattern": "(?:manufacturing|engineering|industrial)\\s+transformation|transformation\\s+(?:consultant|architect|engineer)|제조\\s*(?:혁신|전환|트랜스포메이션)|엔지니어링\\s*(?:혁신|전환|트랜스포메이션)",
+      "weight": 5,
+      "track": "engineering-consulting"
     }
   ],
   "negative_keywords": [
@@ -542,7 +607,6 @@
     "developer relations",
     "developer advocate",
     "\\bdevrel\\b",
-    "solutions? architect",
     "public policy",
     "government (affairs|relations)",
     "\\bpolicy\\b",

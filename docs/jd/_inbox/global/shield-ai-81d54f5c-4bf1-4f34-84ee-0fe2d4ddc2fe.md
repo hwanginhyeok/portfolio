@@ -1,0 +1,27 @@
+---
+company: "Shield AI"
+ats: "ashby"
+job_id: "81d54f5c-4bf1-4f34-84ee-0fe2d4ddc2fe"
+title: "Engineer II, Mechanical (R5310)"
+location: "Dallas, Texas"
+country: "United States"
+region: "americas"
+eligibility: "visa-needed"
+track: "ai-native"
+search_lane: "ai-native"
+search_lanes: ["ai-native", "core"]
+score: 17
+matched_keywords: ["simulation engineering", "FEA / Maxwell", "HIL/MIL/SIL", "qualification test", "hardware", "manufacturing", "quality", "testing"]
+url: "https://jobs.ashbyhq.com/shield-ai/81d54f5c-4bf1-4f34-84ee-0fe2d4ddc2fe"
+first_seen: "2026-08-24"
+---
+
+# Engineer II, Mechanical (R5310) — Shield AI
+
+- 지원 자격: **비자 필요 (스폰서 미확인)** (visa-needed) · 점수 17
+- Track: **AI-native / Physical AI** (ai-native)
+- 위치: Dallas, Texas (United States)
+
+## JD 본문
+
+Shield AI is a venture-backed defense-tech company with the mission of protecting service members and civilians with intelligent systems. Its products include Hivemind autonomy software, V-BAT and X-BAT aircraft, and Aechelon simulation and synthetic reality technologies. With offices and facilities across the U.S., Europe, the Middle East, and Asia-Pacific, Shield AI’s technology actively supports operations worldwide. For more information, visit www.shield.ai https://shield.ai/. Follow Shield AI on LinkedIn https://www.linkedin.com/company/shield-ai, X https://x.com/shieldaitech, Instagram https://www.instagram.com/shield_ai, and YouTube https://www.youtube.com/@Shield_AI. JOB DESCRIPTION: Help bring advanced aerospace systems to life through hands-on mechanical design and real-world problem solving. In this role, you’ll contribute to the development and integration of complex hardware from concept through production, working closely with cross-functional teams to deliver reliable, high-performance systems. In a fast-paced environment, you’ll turn ideas into tangible solutions, support testing and field operations, and play a key role in building mission-ready technology What you'll do: - - Directly contribute to the design, analysis, and integration of mechanical systems and subsystems for V-BAT aircraft and ground support equipment, including payload integrations, avionics packaging, harnessing and connector selection, transport structures, and launch & recovery systems. - Own mechanical engineering deliverables across the product lifecycle—from early concept and prototyping through test, production, and field support—with a bias toward execution and delivery. - Partner closely with Engineering, Manufacturing, Supply Chain, Quality, Program Management, and Flight Operations to ensure designs are buildable, testable, and reliable in real-world environments. - Provide hands-on technical support during ground and flight testing, demos, and field operations; rapidly troubleshoot and implement design fixes under tight timelines. Required qualifications: - - Bachelor’s degree in Mechanical Engineering or closely related field from an accredited institution. - 2-3 years of hands-on mechanical design experience in aerospace, ground support equipment, or related ruggedized hardware systems. - Proficiency in 3D CAD software (SolidWorks, NX, CATIA, or similar) with demonstrated ability to create detailed drawings, assemblies, and GD&T-compliant documentation - Strong foundation in structural design, material selection, and manufacturing processes. - Experience performing engineering calculations (stress, thermal, tolerance stack-up, fatigue, FEA as applicable) to validate design integrity - Cross-functional collaboration experience with Manufacturing, Quality, Supply Chain, and Program Management. Preferred qualifications: - - Root cause analysis and structured problem-solving capability to resolve mechanical failures. - Familiarity with industry standards (ASME, ISO, ASTM, or industry-specific regulatory requirements). - Familiarity with MIL-STD requirements and environmental qualification testing. - Familiarity to power distribution, hydraulics, or aerospace support systems. - Experience working with external suppliers or contract manufacturers. #LI-MS1 #LB Full-time regular employee offer package: Pay within range listed + Bonus + Benefits + Equity Temporary employee offer package: Pay within range listed above + temporary benefits package (applicable after 60 days of employment) Salary compensation is influenced by a wide array of factors including but not limited to skill set, level of experience, licenses and certifications, and specific work location. All offers are contingent on a cleared background and possible reference check. Military fellows and part-time employees are not eligible for benefits. Please speak to your talent acquisition representative for more information. ### Shield AI is proud to be an equal opportunity workplace and is an affirmative action employer. We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, marital status, disability, gender identity or Veteran status. If you have a disability or special need that requires accommodation, please let us know.

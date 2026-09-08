@@ -1,0 +1,27 @@
+---
+company: "Physical Intelligence"
+ats: "ashby"
+job_id: "3806333f-ecf5-4f65-b404-e9418ba26b87"
+title: "Strategic Project Lead"
+location: "San Francisco"
+country: "United States"
+region: "americas"
+eligibility: "visa-needed"
+track: "ai-native"
+search_lane: "ai-native"
+search_lanes: ["ai-native", "core"]
+score: 15
+matched_keywords: ["Physical AI", "robotics / industrial automation", "robot", "hardware", "quality"]
+url: "https://jobs.ashbyhq.com/physicalintelligence/3806333f-ecf5-4f65-b404-e9418ba26b87"
+first_seen: "2026-08-24"
+---
+
+# Strategic Project Lead — Physical Intelligence
+
+- 지원 자격: **비자 필요 (스폰서 미확인)** (visa-needed) · 점수 15
+- Track: **AI-native / Physical AI** (ai-native)
+- 위치: San Francisco (United States)
+
+## JD 본문
+
+Who We Are Physical Intelligence is bringing general-purpose AI into the physical world. We are a group of engineers, scientists, roboticists, and company builders developing foundation models and learning algorithms to power the robots of today and the physically-actuated devices of the future. High-quality data is the fuel for that mission. As our research and deployment efforts scale, coordinating people, robots, scenes, evaluation, annotation, and operational capacity becomes increasingly complex. Strategic Project Leads ensure the most important work is prioritized, resourced, and delivered successfully. The Team The Strategic Project Lead owns the delivery of a set of high-priority research and deployment projects. They partner with teams across the company to define goals, build practical plans, align resources, manage risks and dependencies, and drive projects through completion. This role requires sound judgment, clear communication, and a strong sense of ownership. The SPL creates clarity where it is needed, helps teams make informed tradeoffs, and keeps everyone aligned around the desired outcome. In This Role You Will - Own delivery of assigned research and deployment initiatives from intake through completion. - Partner with researchers and stakeholders to define scope, success criteria, timelines, and operational requirements. - Prioritize work and allocate resources across competing projects based on impact, urgency, and available capacity. - Build execution plans that define staffing, robot allocation, dependencies, milestones, and delivery timelines. - Direct project execution across Research Associates, Production Operations, and partner teams. - Identify and resolve risks, bottlenecks, staffing gaps, and dependency conflicts before they impact delivery. - Drive project reviews, stakeholder communication, escalations, and delivery decisions. - Improve planning, prioritization, and operational systems as the organization scales. What We Hope You’ll Bring This role sits at the intersection of program management, operations leadership, and research enablement. We’re looking for someone who can create clarity from ambiguity, coordinate complex work across teams, and consistently deliver results in fast-moving environments. - 2+ years of experience in program management, operations, technical project management, consulting, startup operations, or similar roles. - Experience leading complex cross-functional initiatives involving multiple stakeholders and competing priorities. - Strong track record of translating ambiguous goals into executable plans and successful outcomes. - Experience balancing competing priorities and making thoughtful resource-allocation decisions. - Ability to quickly understand technical goals, operational constraints, and execution tradeoffs. - Experience communicating effectively with both technical and non-technical stakeholders. Bonus Points - Experience supporting AI, robotics, hardware, or research organizations. - Experience managing data collection, evaluation, annotation, or operational programs. - Familiarity with robotics workflows and teleoperation environments. - Experience building operational processes and scaling teams. - Experience working directly with researchers, engineers, or technical product teams. Pursuant to the San Francisco Fair Chance Ordinance, we will consider for employment qualified applicants with arrest and conviction records.

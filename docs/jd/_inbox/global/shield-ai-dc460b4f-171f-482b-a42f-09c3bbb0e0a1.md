@@ -1,0 +1,27 @@
+---
+company: "Shield AI"
+ats: "ashby"
+job_id: "dc460b4f-171f-482b-a42f-09c3bbb0e0a1"
+title: "Senior Engineer, VBAT Software Test Automation (Hiring Multiple Levels)"
+location: "Dallas, Texas"
+country: "United States"
+region: "americas"
+eligibility: "visa-needed"
+track: "ai-native"
+search_lane: "ai-native"
+search_lanes: ["ai-native", "core"]
+score: 16
+matched_keywords: ["simulation engineering", "embedded", "firmware", "hardware", "testing", "vehicle/automotive"]
+url: "https://jobs.ashbyhq.com/shield-ai/dc460b4f-171f-482b-a42f-09c3bbb0e0a1"
+first_seen: "2026-08-24"
+---
+
+# Senior Engineer, VBAT Software Test Automation (Hiring Multiple Levels) — Shield AI
+
+- 지원 자격: **비자 필요 (스폰서 미확인)** (visa-needed) · 점수 16
+- Track: **AI-native / Physical AI** (ai-native)
+- 위치: Dallas, Texas (United States)
+
+## JD 본문
+
+Shield AI is a venture-backed defense-tech company with the mission of protecting service members and civilians with intelligent systems. Its products include Hivemind autonomy software, V-BAT and X-BAT aircraft, and Aechelon simulation and synthetic reality technologies. With offices and facilities across the U.S., Europe, the Middle East, and Asia-Pacific, Shield AI’s technology actively supports operations worldwide. For more information, visit www.shield.ai https://shield.ai/. Follow Shield AI on LinkedIn https://www.linkedin.com/company/shield-ai, X https://x.com/shieldaitech, Instagram https://www.instagram.com/shield_ai, and YouTube https://www.youtube.com/@Shield_AI. Shield AI has been redefining autonomous aviation with cutting-edge AI and GPS/RF-denied navigation technologies for the past few years. We’re looking for a software engineer, well versed in development and testing, to help continue building V-BAT's test operations, specifically automation capabilities and tools used to test software components ranging from autonomy, embedded systems, ground control applications, and more – you will gather requirements and write software to automate them. This is an opportunity to build and solve problems defense primes are unwilling to. You http://to.You’ll be supported by world-class engineers, but you’re expected to learn on the job and deliver weekly – you’ll need to be hungry and motivated to grow! WHAT YOU'LL DO: - - Work directly with our GNC and Embedded teams daily to build software that leverages simulation, avionics, and/or custom hardware to automate testing - Define test cases to verify and validate embedded or GNC software at a system level, automating them to run continuously - Implement software interfaces and drivers to orchestrate simulation environments, hardware devices, and test equipment – enabling real-world behaviors, failure injection, and hardware manipulation for various test scenarios - Quickly prototype solutions using software & hardware to unblock testing, harden your prototype into scalable products for continuous release testing - Support release test planning and execution leading up to flight test events and major product milestones REQUIRED QUALIFICATIONS: - - 2+ years of related experience with a Bachelor’s degree (CE, CS, EE); or some industry experience (intern, startup, self-projects) with a Master’s or PhD degree - Strong C++ or Python skills, basic proficiency in the other - Familiarity with common version control (git) and build/packaging systems (CMake, Poetry, etc) - Passion for growth, fast-paced environments, and holding self to a high standard of excellence PREFERRED QUALIFICATIONS - - 5+ years of related experience building automated test solutions - Experience building automated test solutions for aircraft of autonomous vehicles - Experience in automated testing, bare-metal firmware development, or simulation tooling #LI-SM1 Full-time regular employee offer package: Pay within range listed + Bonus + Benefits + Equity Temporary employee offer package: Pay within range listed above + temporary benefits package (applicable after 60 days of employment) Salary compensation is influenced by a wide array of factors including but not limited to skill set, level of experience, licenses and certifications, and specific work location. All offers are contingent on a cleared background and possible reference check. Military fellows and part-time employees are not eligible for benefits. Please speak to your talent acquisition representative for more information. ### Shield AI is proud to be an equal opportunity workplace and is an affirmative action employer. We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, marital status, disability, gender identity or Veteran status. If you have a disability or special need that requires accommodation, please let us know.

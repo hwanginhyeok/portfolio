@@ -1,14 +1,88 @@
 {
   "keywords": [
-    "제조 AI",
-    "프로젝트 매니저",
-    "자율제조",
-    "생산관리",
-    "AI 엔지니어",
-    "Product Manager",
-    "기술 PM",
-    "PMO",
-    "스마트팩토리"
+  "제조 AI",
+  "프로젝트 매니저",
+  "자율제조",
+  "생산관리",
+  "AI 엔지니어",
+  "Product Manager",
+  "기술 PM",
+  "PMO",
+  "스마트팩토리",
+  "산업 AI",
+  "Industrial AI",
+  "Physical AI",
+  "physical intelligence",
+  "로보틱스",
+  "Robotics Engineer",
+  "산업 자동화",
+  "industrial automation",
+  "digital twin",
+  "디지털 트윈",
+  "simulation engineer",
+  "Forward-Deployed Engineer",
+  "Forward-Deployed Robotics",
+  "AI Product Manager",
+  "AI Technical PM",
+  "제조 혁신",
+  "Technical Consultant",
+  "기술 컨설턴트",
+  "Engineering Consultant",
+  "Solutions Architect",
+  "Solutions Engineer",
+  "Forward-Deployed Engineering",
+  "Manufacturing Transformation",
+  "Engineering Transformation"
+  ],
+  "search_lanes": [
+    {
+      "track": "core",
+      "keywords": [
+        "제조 AI",
+        "프로젝트 매니저",
+        "자율제조",
+        "생산관리",
+        "AI 엔지니어",
+        "Product Manager",
+        "기술 PM",
+        "PMO",
+        "스마트팩토리"
+      ]
+    },
+    {
+      "track": "ai-native",
+      "keywords": [
+        "산업 AI",
+        "Industrial AI",
+        "Physical AI",
+        "physical intelligence",
+        "로보틱스",
+        "Robotics Engineer",
+        "산업 자동화",
+        "industrial automation",
+        "digital twin",
+        "디지털 트윈",
+        "simulation engineer",
+        "Forward-Deployed Engineer",
+        "Forward-Deployed Robotics",
+        "AI Product Manager",
+        "AI Technical PM",
+        "제조 혁신"
+      ]
+    },
+    {
+      "track": "engineering-consulting",
+      "keywords": [
+        "Technical Consultant",
+        "기술 컨설턴트",
+        "Engineering Consultant",
+        "Solutions Architect",
+        "Solutions Engineer",
+        "Forward-Deployed Engineering",
+        "Manufacturing Transformation",
+        "Engineering Transformation"
+      ]
+    }
   ],
   "company_watchlist": [
     "현대자동차",

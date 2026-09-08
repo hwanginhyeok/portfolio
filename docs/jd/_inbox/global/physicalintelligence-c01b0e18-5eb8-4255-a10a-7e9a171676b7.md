@@ -1,0 +1,27 @@
+---
+company: "Physical Intelligence"
+ats: "ashby"
+job_id: "c01b0e18-5eb8-4255-a10a-7e9a171676b7"
+title: "Product Engineer"
+location: "San Francisco"
+country: "United States"
+region: "americas"
+eligibility: "visa-needed"
+track: "ai-native"
+search_lane: "ai-native"
+search_lanes: ["ai-native", "core"]
+score: 27
+matched_keywords: ["Physical AI", "robotics / industrial automation", "validation", "robot", "quality"]
+url: "https://jobs.ashbyhq.com/physicalintelligence/c01b0e18-5eb8-4255-a10a-7e9a171676b7"
+first_seen: "2026-08-24"
+---
+
+# Product Engineer — Physical Intelligence
+
+- 지원 자격: **비자 필요 (스폰서 미확인)** (visa-needed) · 점수 27
+- Track: **AI-native / Physical AI** (ai-native)
+- 위치: San Francisco (United States)
+
+## JD 본문
+
+Physical Intelligence is bringing general-purpose AI into the physical world. We are a group of engineers, scientists, roboticists, and company builders developing learning algorithms to create a model that will control any robot to do any task. The Team Training robot foundation models takes enormous amounts of multimodal data, much of it collected by third-party vendors and partners around the world. The Data Operations team makes sure that data is high quality, well understood, and safe to train on. This role owns quality assurance and audit for externally sourced data, working closely with the researchers who consume it and the teams who create it. In This Role You Will - Own external data QA & audit: Build and run the end-to-end QA process for multimodal data ingested from third-party vendors and partners — sampling strategy, review workflows, pass/fail decisions, and audit trails — so data is verified before it reaches training. - Define quality standards: Partner with researchers to translate what "good data" means into concrete, measurable rubrics and acceptance criteria; keep them versioned and current as research needs evolve. - Build the system: Build the software interfaces, tooling, and infrastructure scale the system in an automated way - correctly sampling the right data for QA, internal QA checks, tracking dips in data quality from vendors and exposing those insights back to the vendors. - Manage vendor quality loops: Deliver structured, actionable feedback to vendors; coach them on standing up QA checks on their own side; iterate until vendor-side and internal QA agree; enforce standards through review and acceptance processes. What you'll bring - ~5 years of experience across building customer facing software. - Vendor management experience: working directly with third-party data providers, delivering actionable feedback, and measurably improving the quality of their output. - Strong ops acumen and drive — a bias to instrument, measure, and iterate quickly rather than crank hours at a broken process. - Comfort being hands-on in the data: reviewing samples yourself, writing and refining rubrics, and spot-checking your own program's output. - Clear written and verbal communication across researchers, operations teams, and external partners. Nice to have - Experience with robotics, egocentric video, or other multimodal sensor data. - Experience defining requirements for QA/validation tooling or working with engineers on automated data quality checks. Pursuant to the San Francisco Fair Chance Ordinance, we will consider for employment qualified applicants with arrest and conviction records.

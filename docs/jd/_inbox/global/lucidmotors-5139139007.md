@@ -7,6 +7,9 @@ location: "Coolidge, AZ"
 country: "United States"
 region: "americas"
 eligibility: "visa-needed"
+track: "core"
+search_lane: "core"
+search_lanes: ["core"]
 score: 52
 matched_keywords: ["powertrain", "APQP/PPAP", "DFMEA/PFMEA", "NPI", "motor", "reliability", "supplier quality", "validation", "electric vehicle", "hardware/electrical engineer", "manufacturing engineer", "quality engineer", "electrical", "hardware", "manufacturing", "quality", "testing", "vehicle/automotive"]
 url: "https://job-boards.greenhouse.io/lucidmotors/jobs/5139139007"
@@ -16,6 +19,7 @@ first_seen: "2026-08-19"
 # Sr. Field Quality Engineer, ADAS — Lucid Motors
 
 - 지원 자격: **비자 필요 (스폰서 미확인)** (visa-needed) · 점수 52
+- Track: **Core manufacturing / test / electrical** (core)
 - 위치: Coolidge, AZ (United States)
 
 ## JD 본문
