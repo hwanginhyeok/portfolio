@@ -13,6 +13,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import re
 import sys
@@ -121,6 +122,7 @@ def render_markdown(
         or posting.get("experienced_positions")
         or []
     )
+    matched_sub_positions = posting.get("matched_sub_positions") or []
 
     frontmatter["id"] = pid
     frontmatter["company"] = company
@@ -135,6 +137,8 @@ def render_markdown(
     frontmatter["apply_url"] = apply_url
     frontmatter["sub_positions"] = sub_positions
     frontmatter["experienced_positions"] = sub_positions
+    if matched_sub_positions:
+        frontmatter["matched_sub_positions"] = matched_sub_positions
 
     if "first_seen" not in frontmatter and "first_seen" in posting:
         frontmatter["first_seen"] = posting["first_seen"]
@@ -153,6 +157,7 @@ def render_markdown(
         "apply_url",
         "sub_positions",
         "experienced_positions",
+        "matched_sub_positions",
         "first_seen",
     ]
 
@@ -175,6 +180,8 @@ def render_markdown(
     lines.append(f"- 공고 링크: [{url}]({url})")
     if apply_url:
         lines.append(f"- 접수 링크: [{apply_url}]({apply_url})")
+    if matched_sub_positions and matched_sub_positions != sub_positions:
+        lines.append(f"- 적합 모집 분야: {', '.join(matched_sub_positions)}")
     if sub_positions:
         lines.append(f"- 모집 분야 (경력): {', '.join(sub_positions)}")
     lines.append("")
@@ -311,44 +318,37 @@ def is_experienced_announcement(announcement: dict[str, Any]) -> bool:
     )
 
 
-def assess_announcement(
-    announcement: dict[str, Any],
-    exclude_patterns: list[re.Pattern[str]] | None = None,
-    score_threshold: int = 26,
-) -> dict[str, Any]:
-    """Filter stage 2: score announcement with assess_shortlist and return assessment dict."""
-    title = str(announcement.get("title") or "")
-    company = str(announcement.get("name") or "")
+TAG_RE = re.compile(r"<[^>]+>")
+WS_RE = re.compile(r"\s+")
 
-    if exclude_patterns:
-        for pat in exclude_patterns:
-            if pat.search(title):
-                return {
-                    "actionable": False,
-                    "reason": "excluded-by-title-pattern",
-                    "fit_score": 0,
-                    "track": TRACK_CORE,
-                }
 
-    posting_for_shortlist = {
-        "title": title,
-        "company": company,
-        "department": "",
-        "location_raw": "한국",
-        "eligibility": "korea",
-        "country": "South Korea",
-        "body": "",
-    }
-    shortlist_result = assess_shortlist(posting_for_shortlist)
-    fit_score = int(shortlist_result.get("fit_score", 0))
-    actionable = bool(shortlist_result.get("actionable")) and (fit_score >= score_threshold)
+def strip_html(escaped_html: str | None) -> str:
+    """Strip HTML tags and collapse whitespace."""
+    if not escaped_html:
+        return ""
+    text = html.unescape(escaped_html)
+    text = (
+        text.replace("</li>", "\n")
+        .replace("</p>", "\n")
+        .replace("<br>", "\n")
+        .replace("<br/>", "\n")
+        .replace("<br />", "\n")
+    )
+    text = TAG_RE.sub(" ", text)
+    return WS_RE.sub(" ", text).strip()
 
-    return {
-        "actionable": actionable,
-        "reason": str(shortlist_result.get("reason", "")),
-        "fit_score": fit_score,
-        "track": normalize_track(shortlist_result.get("track", TRACK_CORE)),
-    }
+
+def extract_experienced_sub_positions(detail_data: dict[str, Any]) -> list[str]:
+    """Keep only the sub-positions whose division is 2 and return their titles."""
+    sub_employments = detail_data.get("employments") or []
+    titles: list[str] = []
+    for sub in sub_employments:
+        if isinstance(sub, dict) and sub.get("division") == 2:
+            title = sub.get("field") or sub.get("title") or ""
+            title = str(title).strip()
+            if title and title not in titles:
+                titles.append(title)
+    return titles
 
 
 def fetch_detail(
@@ -364,17 +364,176 @@ def fetch_detail(
     return data, None
 
 
-def extract_experienced_sub_positions(detail_data: dict[str, Any]) -> list[str]:
-    """Keep only the sub-positions whose division is 2 and return their titles."""
-    sub_employments = detail_data.get("employments") or []
-    titles: list[str] = []
-    for sub in sub_employments:
-        if isinstance(sub, dict) and sub.get("division") == 2:
-            title = sub.get("field") or sub.get("title") or ""
-            title = str(title).strip()
-            if title and title not in titles:
-                titles.append(title)
-    return titles
+def get_or_fetch_detail(
+    sess: PoliteSession,
+    ann_id: int,
+    end_time: str | None,
+    cache_dir: Path,
+) -> tuple[dict[str, Any] | None, str | None, bool]:
+    """Load detail from disk cache if valid, otherwise fetch via PoliteSession and cache on disk.
+
+    Returns (detail_data, error_message, from_cache).
+    """
+    cache_file = cache_dir / f"{ann_id}.json"
+    if cache_file.exists():
+        try:
+            cached = json.loads(cache_file.read_text(encoding="utf-8"))
+            if isinstance(cached, dict) and cached.get("end_time") == end_time:
+                detail = cached.get("detail")
+                if isinstance(detail, dict):
+                    return detail, None, True
+        except (ValueError, OSError):
+            pass
+
+    data, err = fetch_detail(sess, ann_id)
+    if data is None:
+        return None, err, False
+
+    try:
+        cache_dir.mkdir(parents=True, exist_ok=True)
+        payload = {"id": ann_id, "end_time": end_time, "detail": data}
+        atomic_write_json(cache_file, payload)
+    except OSError as exc:
+        log(f"    [cache {ann_id}] Warning: failed to write cache: {exc}")
+
+    return data, None, False
+
+
+def assess_announcement(
+    announcement: dict[str, Any],
+    detail_data: dict[str, Any] | None = None,
+    exclude_patterns: list[re.Pattern[str]] | None = None,
+    score_threshold: int = 28,
+) -> dict[str, Any]:
+    """Score announcement using assess_shortlist on experienced sub-positions, body, and company.
+
+    Returns assessment dict with actionable, reason, fit_score, track, and matched_sub_positions.
+    """
+    title = str(
+        (detail_data.get("title") if detail_data else None)
+        or announcement.get("title")
+        or ""
+    )
+    company = str(
+        (detail_data.get("name") if detail_data else None)
+        or announcement.get("name")
+        or ""
+    )
+
+    if exclude_patterns:
+        for pat in exclude_patterns:
+            if pat.search(title):
+                return {
+                    "actionable": False,
+                    "reason": "excluded-by-title-pattern",
+                    "fit_score": 0,
+                    "track": TRACK_CORE,
+                    "matched_sub_positions": [],
+                }
+
+    if not detail_data:
+        # Fallback when detail is not available (e.g. offline dry-run test)
+        posting_for_shortlist = {
+            "title": title,
+            "company": company,
+            "department": "",
+            "location_raw": "한국",
+            "eligibility": "korea",
+            "country": "South Korea",
+            "body": "",
+        }
+        shortlist_result = assess_shortlist(posting_for_shortlist)
+        fit_score = int(shortlist_result.get("fit_score", 0))
+        actionable = bool(shortlist_result.get("actionable")) and (
+            fit_score >= score_threshold
+        )
+        return {
+            "actionable": actionable,
+            "reason": str(shortlist_result.get("reason", "")),
+            "fit_score": fit_score,
+            "track": normalize_track(shortlist_result.get("track", TRACK_CORE)),
+            "matched_sub_positions": [],
+        }
+
+    experienced_subs = extract_experienced_sub_positions(detail_data)
+    if not experienced_subs:
+        return {
+            "actionable": False,
+            "reason": "no-experienced-positions",
+            "fit_score": 0,
+            "track": TRACK_CORE,
+            "matched_sub_positions": [],
+        }
+
+    body_text = strip_html(detail_data.get("content"))
+
+    # Stage A: Check joined experienced sub-positions
+    posting_all = {
+        "title": ", ".join(experienced_subs),
+        "company": company,
+        "department": f"{body_text} {company}".strip(),
+        "body": title,
+        "location_raw": "한국",
+        "eligibility": "korea",
+        "country": "South Korea",
+    }
+    r_all = assess_shortlist(posting_all)
+
+    # Stage B: Check each sub-position individually to isolate matched roles
+    matched_subs: list[str] = []
+    for sub in experienced_subs:
+        r_sub = assess_shortlist({
+            "title": sub,
+            "company": company,
+            "department": f"{body_text} {company}".strip(),
+            "body": title,
+            "location_raw": "한국",
+            "eligibility": "korea",
+            "country": "South Korea",
+        })
+        if r_sub["actionable"]:
+            matched_subs.append(sub)
+
+    if r_all["actionable"] and int(r_all.get("fit_score", 0)) >= score_threshold:
+        return {
+            "actionable": True,
+            "reason": str(r_all.get("reason", "actionable")),
+            "fit_score": int(r_all.get("fit_score", 0)),
+            "track": normalize_track(r_all.get("track", TRACK_CORE)),
+            "matched_sub_positions": matched_subs if matched_subs else experienced_subs,
+        }
+
+    if matched_subs:
+        # Score joined matched sub-positions to avoid generic role interference (e.g. sales in mixed campaign)
+        posting_matched = {
+            "title": ", ".join(matched_subs),
+            "company": company,
+            "department": f"{body_text} {company}".strip(),
+            "body": title,
+            "location_raw": "한국",
+            "eligibility": "korea",
+            "country": "South Korea",
+        }
+        r_matched = assess_shortlist(posting_matched)
+        fit_score = int(r_matched.get("fit_score", 0))
+        actionable = bool(r_matched.get("actionable")) and (
+            fit_score >= score_threshold
+        )
+        return {
+            "actionable": actionable,
+            "reason": str(r_matched.get("reason", "")),
+            "fit_score": fit_score,
+            "track": normalize_track(r_matched.get("track", TRACK_CORE)),
+            "matched_sub_positions": matched_subs,
+        }
+
+    return {
+        "actionable": False,
+        "reason": str(r_all.get("reason", "")),
+        "fit_score": int(r_all.get("fit_score", 0)),
+        "track": normalize_track(r_all.get("track", TRACK_CORE)),
+        "matched_sub_positions": [],
+    }
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -407,7 +566,7 @@ def main(argv: list[str] | None = None) -> int:
         config = {}
 
     lookahead_days = int(config.get("lookahead_days", config.get("days", 60)))
-    score_threshold = int(config.get("score_threshold", config.get("min_score", 26)))
+    score_threshold = int(config.get("score_threshold", config.get("min_score", 28)))
     exclude_patterns = [
         re.compile(p, re.IGNORECASE) for p in config.get("exclude_title_patterns", [])
     ]
@@ -451,35 +610,86 @@ def main(argv: list[str] | None = None) -> int:
     ]
     n_experienced = len(experienced_items)
 
-    # ---- Phase 3: Stage 2 filter & scoring (assess_shortlist) ----------------
-    actionable_candidates: list[tuple[dict[str, Any], dict[str, Any]]] = []
-    for item in experienced_items:
-        assessment = assess_announcement(item, exclude_patterns, score_threshold)
-        if assessment["actionable"]:
-            actionable_candidates.append((item, assessment))
-    n_actionable = len(actionable_candidates)
+    # ---- Phase 3: Detail fetch & disk cache ----------------------------------
+    cache_dir = inbox_dir / ".cache"
+    cache_dir.mkdir(parents=True, exist_ok=True)
 
+    announcements_with_detail: list[tuple[dict[str, Any], dict[str, Any]]] = []
+    n_cached = 0
+    n_fetched_detail = 0
+
+    emit(f"[detail] gathering details for {n_experienced} experienced announcements...")
+    for idx, item in enumerate(experienced_items, 1):
+        ann_id = int(item["id"])
+        item_end_time = item.get("end_time")
+
+        if args.dry_run and not (cache_dir / f"{ann_id}.json").exists():
+            continue
+
+        detail_data, err, from_cache = get_or_fetch_detail(
+            sess, ann_id, item_end_time, cache_dir
+        )
+        if detail_data is None:
+            err_msg = f"Detail fetch failed for {ann_id}: {err}"
+            failures.append(err_msg)
+            emit(f"    [detail {idx}/{n_experienced}] id={ann_id} WARNING: {err} (skipped)")
+            continue
+
+        if from_cache:
+            n_cached += 1
+        else:
+            n_fetched_detail += 1
+            emit(f"    [detail {idx}/{n_experienced}] id={ann_id} ({item.get('name')}) fetched")
+
+        announcements_with_detail.append((item, detail_data))
+
+    emit(
+        f"[detail] completed: {len(announcements_with_detail)}/{n_experienced} ready "
+        f"({n_cached} cached, {n_fetched_detail} fetched, {len(failures)} skipped)"
+    )
+
+    # ---- Phase 4: Stage 2 filter & scoring (assess_shortlist) ----------------
+    actionable_candidates: list[
+        tuple[dict[str, Any], dict[str, Any], dict[str, Any]]
+    ] = []
+
+    if announcements_with_detail:
+        for item, detail_data in announcements_with_detail:
+            assessment = assess_announcement(
+                item, detail_data, exclude_patterns, score_threshold
+            )
+            if assessment["actionable"]:
+                actionable_candidates.append((item, detail_data, assessment))
+    elif args.dry_run:
+        for item in experienced_items:
+            assessment = assess_announcement(
+                item, None, exclude_patterns, score_threshold
+            )
+            if assessment["actionable"]:
+                actionable_candidates.append((item, {}, assessment))
+
+    n_actionable = len(actionable_candidates)
     emit(f"[filter] fetched={n_fetched} experienced={n_experienced} actionable={n_actionable}")
 
     # Watchlist check
-    for item, _ in actionable_candidates:
+    for item, _, _ in actionable_candidates:
         co = str(item.get("name") or "")
         if co in watchlist_companies:
             emit(f"  [watchlist] 🚨 Watchlist company announcement detected: {co} - {item.get('title')}")
 
     # Identify which actionable postings need fetching / updating
     today_str = datetime.now(timezone(timedelta(hours=9))).strftime("%Y-%m-%d")
-    todo: list[tuple[dict[str, Any], dict[str, Any], bool]] = []  # (item, assess, is_new)
+    todo: list[tuple[dict[str, Any], dict[str, Any], dict[str, Any], bool]] = []  # (item, detail, assess, is_new)
 
-    for item, assess in actionable_candidates:
+    for item, detail_data, assess in actionable_candidates:
         jid = str(item["id"])
         item_end_time = item.get("end_time")
         if jid not in seen:
-            todo.append((item, assess, True))
+            todo.append((item, detail_data, assess, True))
         else:
             prev_end_time = seen[jid].get("end_time")
             if item_end_time != prev_end_time:
-                todo.append((item, assess, False))
+                todo.append((item, detail_data, assess, False))
 
     if args.limit is not None:
         todo = todo[: args.limit]
@@ -487,24 +697,21 @@ def main(argv: list[str] | None = None) -> int:
     n_new = 0
     n_refreshed = 0
 
+    write_failures: list[str] = []
     if args.dry_run:
-        # In dry run, count how many would be new
-        n_new = sum(1 for _, _, is_new in todo if is_new)
-        n_refreshed = sum(1 for _, _, is_new in todo if not is_new)
-        emit(f"[dry-run] actionable={n_actionable} would_fetch_or_update={len(todo)} "
-             f"(new={n_new}, refreshed={n_refreshed}); no files written.")
+        n_new = sum(1 for _, _, _, is_new in todo if is_new)
+        n_refreshed = sum(1 for _, _, _, is_new in todo if not is_new)
+        emit(
+            f"[dry-run] actionable={n_actionable} would_write_or_update={len(todo)} "
+            f"(new={n_new}, refreshed={n_refreshed}); no files written."
+        )
     else:
-        for item, assess, is_new in todo:
+        for item, detail_data, assess, is_new in todo:
             ann_id = int(item["id"])
             jid_str = str(ann_id)
-            detail_data, detail_err = fetch_detail(sess, ann_id)
-            if detail_data is None:
-                err_msg = f"Detail fetch failed for {ann_id}: {detail_err}"
-                emit(f"    [detail {ann_id}] ERROR: {detail_err}")
-                failures.append(err_msg)
-                continue
 
             sub_titles = extract_experienced_sub_positions(detail_data)
+            matched_subs = assess.get("matched_sub_positions") or sub_titles
             content_body = str(detail_data.get("content") or "")
             apply_url = str(detail_data.get("employment_page_url") or "")
 
@@ -521,6 +728,7 @@ def main(argv: list[str] | None = None) -> int:
                 "apply_url": apply_url,
                 "sub_positions": sub_titles,
                 "experienced_positions": sub_titles,
+                "matched_sub_positions": matched_subs,
                 "first_seen": seen.get(jid_str, {}).get("first_seen", today_str),
             }
 
@@ -537,6 +745,7 @@ def main(argv: list[str] | None = None) -> int:
             except OSError as exc:
                 err_msg = f"Failed writing {md_path}: {exc}"
                 emit(f"    [write {ann_id}] ERROR: {exc}")
+                write_failures.append(err_msg)
                 failures.append(err_msg)
                 continue
 
@@ -549,6 +758,7 @@ def main(argv: list[str] | None = None) -> int:
                 "score": posting_record["score"],
                 "verdict": posting_record["verdict"],
                 "sub_positions": sub_titles,
+                "matched_sub_positions": matched_subs,
             }
 
             if is_new:
@@ -583,8 +793,19 @@ def main(argv: list[str] | None = None) -> int:
             emit(f"[summary] failures encountered ({len(failures)}):")
             for f in failures:
                 emit(f"  - {f}")
+        if actionable_candidates:
+            emit("[actionable postings]")
+            for item, detail_data, assess in actionable_candidates:
+                co = str(detail_data.get("name") or item.get("name") or "")
+                ti = str(detail_data.get("title") or item.get("title") or "")
+                sc = assess["fit_score"]
+                dl = item.get("end_time") or detail_data.get("end_time") or ""
+                m_subs = assess.get("matched_sub_positions") or []
+                emit(f"  - [{item['id']}] {co} | {ti} | score={sc} | deadline={dl}")
+                if m_subs:
+                    emit(f"      matched: {', '.join(m_subs)}")
 
-    if failures and len(failures) == len(todo) and len(todo) > 0:
+    if write_failures and len(write_failures) == len(todo) and len(todo) > 0:
         return 1
     return 0
 

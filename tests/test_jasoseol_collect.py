@@ -451,6 +451,212 @@ class JasoseolCollectTests(unittest.TestCase):
             )
         self.assertEqual(fm["url"], "https://jasoseol.com/recruit/12345")
 
+    def test_announcement_without_title_keywords_scores_on_sub_positions_and_passes(
+        self,
+    ) -> None:
+        ann = {
+            "id": 9101,
+            "name": "현대모비스",
+            "title": "2026 하반기 로보틱스 집중 채용",  # Title itself has score 0
+        }
+        detail = {
+            "id": 9101,
+            "name": "현대모비스",
+            "title": "2026 하반기 로보틱스 집중 채용",
+            "content": "",
+            "employments": [
+                {
+                    "id": 1,
+                    "division": 2,
+                    "field": "연구직_로보틱스 모터 설계(경력)",
+                },
+                {
+                    "id": 2,
+                    "division": 2,
+                    "field": "연구직_액추에이터 시스템/기구 설계(경력)",
+                },
+                {
+                    "id": 3,
+                    "division": 2,
+                    "field": "관리직_로보틱스 생산기술(경력)",
+                },
+            ],
+        }
+        # Scored on announcement title alone: score is 0 and fails
+        res_without_detail = jasoseol_collect.assess_announcement(
+            ann, detail_data=None, score_threshold=28
+        )
+        self.assertFalse(res_without_detail["actionable"])
+        self.assertEqual(res_without_detail["fit_score"], 0)
+
+        # Scored with detail sub-positions: passes!
+        res_with_detail = jasoseol_collect.assess_announcement(
+            ann, detail_data=detail, score_threshold=28
+        )
+        self.assertTrue(res_with_detail["actionable"])
+        self.assertGreaterEqual(res_with_detail["fit_score"], 28)
+        self.assertIn(
+            "연구직_로보틱스 모터 설계(경력)",
+            res_with_detail["matched_sub_positions"],
+        )
+
+    def test_entry_level_only_sub_positions_do_not_contribute_to_score(
+        self,
+    ) -> None:
+        ann = {
+            "id": 9102,
+            "name": "한국상사",
+            "title": "2026년 하반기 채용",
+        }
+        # detail has high-keyword division 1 (신입) sub-position,
+        # but only irrelevant division 2 (경력) sub-position
+        detail = {
+            "id": 9102,
+            "name": "한국상사",
+            "title": "2026년 하반기 채용",
+            "content": "",
+            "employments": [
+                {
+                    "id": 1,
+                    "division": 1,  # 신입
+                    "field": "연구직_로보틱스 모터 설계(신입)",
+                },
+                {
+                    "id": 2,
+                    "division": 2,  # 경력
+                    "field": "7급_전국_경력경쟁채용_취업지원직",
+                },
+            ],
+        }
+        res = jasoseol_collect.assess_announcement(
+            ann, detail_data=detail, score_threshold=28
+        )
+        self.assertFalse(res["actionable"])
+        self.assertEqual(res["fit_score"], 0)
+        self.assertEqual(res["matched_sub_positions"], [])
+
+    def test_detail_cache_prevents_second_fetch(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            cache_dir = Path(tmpdir) / ".cache"
+            cache_dir.mkdir(parents=True, exist_ok=True)
+            cached_payload = {
+                "id": 9103,
+                "end_time": "2026-10-31T23:59:00.000+09:00",
+                "detail": {
+                    "id": 9103,
+                    "name": "Cached Corp",
+                    "title": "Cached Title",
+                    "employments": [
+                        {"division": 2, "field": "로봇 제어(경력)"}
+                    ],
+                },
+            }
+            (cache_dir / "9103.json").write_text(
+                json.dumps(cached_payload), encoding="utf-8"
+            )
+
+            sess = jasoseol_collect.PoliteSession(delay=0.0)
+            with patch.object(
+                jasoseol_collect, "fetch_detail"
+            ) as mock_fetch:
+                detail, err, from_cache = jasoseol_collect.get_or_fetch_detail(
+                    sess,
+                    ann_id=9103,
+                    end_time="2026-10-31T23:59:00.000+09:00",
+                    cache_dir=cache_dir,
+                )
+                self.assertTrue(from_cache)
+                self.assertIsNotNone(detail)
+                self.assertIsNone(err)
+                mock_fetch.assert_not_called()
+
+    def test_detail_fetch_failure_skips_only_that_announcement(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            inbox_dir = Path(tmpdir)
+            config_file = inbox_dir / "config.json"
+            config_file.write_text(
+                json.dumps(
+                    {
+                        "lookahead_days": 60,
+                        "score_threshold": 26,
+                        "request_delay_seconds": 0.0,
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            calendar_data = [
+                {
+                    "id": 3001,
+                    "name": "Failing Corp",
+                    "title": "Failing Role",
+                    "start_time": "2026-09-01T09:00:00.000+09:00",
+                    "end_time": "2026-09-30T18:00:00.000+09:00",
+                    "employments": [{"id": 1, "division": 2}],
+                },
+                {
+                    "id": 3002,
+                    "name": "Success Corp",
+                    "title": "Success Role",
+                    "start_time": "2026-09-01T09:00:00.000+09:00",
+                    "end_time": "2026-09-30T18:00:00.000+09:00",
+                    "employments": [{"id": 2, "division": 2}],
+                },
+            ]
+
+            success_detail = {
+                "id": 3002,
+                "name": "Success Corp",
+                "title": "Success Role",
+                "content": "",
+                "employments": [
+                    {
+                        "id": 2,
+                        "division": 2,
+                        "field": "자율제조 로봇 제어 엔지니어(경력)",
+                    }
+                ],
+            }
+
+            def fake_fetch_calendar(_sess, _start, _end):
+                return copy.deepcopy(calendar_data), None
+
+            def fake_fetch_detail(_sess, ann_id):
+                if ann_id == 3001:
+                    return None, "HTTP 500 Internal Server Error"
+                if ann_id == 3002:
+                    return copy.deepcopy(success_detail), None
+                return None, f"Not found {ann_id}"
+
+            with patch.object(
+                jasoseol_collect, "fetch_calendar_list", side_effect=fake_fetch_calendar
+            ), patch.object(
+                jasoseol_collect, "fetch_detail", side_effect=fake_fetch_detail
+            ):
+                stdout = io.StringIO()
+                with patch("sys.stdout", stdout):
+                    code = jasoseol_collect.main(
+                        [
+                            "--config",
+                            str(config_file),
+                            "--inbox-dir",
+                            str(inbox_dir),
+                            "--json",
+                        ]
+                    )
+
+            self.assertEqual(code, 0)
+            res = json.loads(stdout.getvalue())
+            self.assertEqual(res["experienced"], 2)
+            self.assertEqual(res["actionable"], 1)
+            self.assertEqual(res["new"], 1)
+            # Only announcement 3001 had detail failure
+            self.assertEqual(len(res["failures"]), 1)
+            self.assertIn("3001", res["failures"][0])
+            # Only 3002.md was written
+            self.assertTrue((inbox_dir / "3002.md").exists())
+            self.assertFalse((inbox_dir / "3001.md").exists())
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,6 +1,6 @@
 {
   "lookahead_days": 60,
-  "score_threshold": 26,
+  "score_threshold": 28,
   "exclude_title_patterns": [
     "인턴",
     "계약직",
