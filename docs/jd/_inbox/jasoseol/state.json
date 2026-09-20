@@ -1,0 +1,68 @@
+{
+  "seen": {
+    "105605": {
+      "first_seen": "2026-09-20",
+      "company": "NHN",
+      "title": "데이터센터 구축(전기)",
+      "end_time": "2026-10-10T23:59:00.000+09:00",
+      "track": "core",
+      "score": 26,
+      "verdict": "actionable",
+      "sub_positions": [
+        "데이터센터 구축(전기)"
+      ]
+    },
+    "105782": {
+      "first_seen": "2026-09-20",
+      "company": "밀도",
+      "title": "품질 담당자",
+      "end_time": "2026-09-30T23:59:00.000+09:00",
+      "track": "core",
+      "score": 28,
+      "verdict": "actionable",
+      "sub_positions": [
+        "품질 담당자"
+      ]
+    },
+    "105998": {
+      "first_seen": "2026-09-20",
+      "company": "NHN",
+      "title": "데이터센터 구축 (기계/자동제어 설비)",
+      "end_time": "2026-11-01T23:59:00.000+09:00",
+      "track": "core",
+      "score": 26,
+      "verdict": "actionable",
+      "sub_positions": [
+        "데이터센터 구축 (기계/자동제어 설비)"
+      ]
+    },
+    "106243": {
+      "first_seen": "2026-09-20",
+      "company": "한국법무보호복지공단",
+      "title": "2026년  신입직원 공개(경력)경쟁채용시험 공고",
+      "end_time": "2026-09-30T15:00:00.000+09:00",
+      "track": "core",
+      "score": 30,
+      "verdict": "actionable",
+      "sub_positions": [
+        "7급_전국_경력경쟁채용_취업지원직",
+        "7급_권역별_전라권_심리상담직"
+      ]
+    },
+    "106287": {
+      "first_seen": "2026-09-20",
+      "company": "린데코리아",
+      "title": "제조운영부문 Project Management Team / Project Engineering Team 정규직 채용",
+      "end_time": "2026-09-30T23:59:00.000+09:00",
+      "track": "core",
+      "score": 30,
+      "verdict": "actionable",
+      "sub_positions": [
+        "Project Management Team_Project Engineer",
+        "Project Management Team_Project Manager",
+        "Project Management Team_Project Safety Manager",
+        "Project Engineering Team_Instrument Engineer"
+      ]
+    }
+  }
+}
