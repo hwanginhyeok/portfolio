@@ -6,6 +6,121 @@
     "계약직",
     "아르바이트"
   ],
+  "excluded_duty_families": [
+    {
+      "name": "warehouse_and_logistics",
+      "comment": "warehouse and logistics center operation, distribution and delivery (물류센터 운영관리, 배송 및 유통, 창고관리, 입출고)",
+      "patterns": [
+        "물류센터",
+        "물류.*운영",
+        "물류.*관리",
+        "창고",
+        "입출고",
+        "배송",
+        "유통",
+        "warehouse",
+        "logistics",
+        "물류"
+      ]
+    },
+    {
+      "name": "packaging",
+      "comment": "packaging and 포장",
+      "patterns": [
+        "포장",
+        "패키징",
+        "packaging"
+      ]
+    },
+    {
+      "name": "plain_production_operator",
+      "comment": "plain 제조 or 생산 operator work with no design, test, automation, control or process-engineering content (단순 생산/제조 오퍼레이터 및 생산관리)",
+      "patterns": [
+        "^생산\\s*(\\(.*?\\))?$",
+        "^제조\\s*(\\(.*?\\))?$",
+        "생산관리",
+        "제조관리",
+        "생산직",
+        "제조직",
+        "오퍼레이터",
+        "operator",
+        "생산운영",
+        "제조운영"
+      ]
+    },
+    {
+      "name": "food_and_beverage_production",
+      "comment": "food and beverage production (식품 및 음료 생산/제조/가공)",
+      "patterns": [
+        "식품.*(생산|제조|가공)",
+        "음료.*(생산|제조)",
+        "제과",
+        "제빵",
+        "F&B.*(생산|제조)"
+      ]
+    },
+    {
+      "name": "pharmaceutical_manufacturing",
+      "comment": "pharmaceutical manufacturing and 제조/포장 (의약품/제약 제조, 제조/포장, 제제 생산)",
+      "patterns": [
+        "제조/포장",
+        "제조\\s*및\\s*포장",
+        "의약품.*제조",
+        "제약.*제조",
+        "GMP.*제조",
+        "GMP.*생산",
+        "제제.*제조",
+        "제제.*생산"
+      ]
+    },
+    {
+      "name": "plain_quality_control",
+      "comment": "plain 품질관리 of consumer or chemical materials with no measurement, reliability or validation engineering content (소비재/화학 소재 단순 품질관리)",
+      "patterns": [
+        "품질관리\\s*\\(.*(전지소재|화학|소재|원자재|식품|소비재).*\\)",
+        "^품질관리\\s*(\\(.*?\\))?$"
+      ]
+    }
+  ],
+  "engineering_keep_patterns": [
+    "design",
+    "설계",
+    "제어",
+    "control",
+    "자동화",
+    "automation",
+    "시험",
+    "test",
+    "검증",
+    "validation",
+    "신뢰성",
+    "reliability",
+    "공정\\s*엔지니어링",
+    "공정엔지니어링",
+    "공정\\s*개발",
+    "공정\\s*설계",
+    "생산기술",
+    "manufacturing\\s*technology",
+    "로보틱스",
+    "robotics",
+    "로봇",
+    "robot",
+    "전력",
+    "power",
+    "모터",
+    "motor",
+    "측정",
+    "계측",
+    "measurement",
+    "전기",
+    "전자",
+    "기구",
+    "회로",
+    "하드웨어",
+    "HW",
+    "품질보증",
+    "QA"
+  ],
   "company_watchlist": [
     "현대자동차",
     "현대자동차(남양연구소)",

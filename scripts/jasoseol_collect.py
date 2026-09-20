@@ -59,6 +59,196 @@ HEADERS = {
 }
 HTTP_TIMEOUT = 20
 
+DEFAULT_EXCLUDED_DUTY_FAMILIES = [
+    {
+        "name": "warehouse_and_logistics",
+        "comment": "warehouse and logistics center operation, distribution and delivery (물류센터 운영관리, 배송 및 유통, 창고관리, 입출고)",
+        "patterns": [
+            r"물류센터",
+            r"물류.*운영",
+            r"물류.*관리",
+            r"창고",
+            r"입출고",
+            r"배송",
+            r"유통",
+            r"warehouse",
+            r"logistics",
+            r"물류",
+        ],
+    },
+    {
+        "name": "packaging",
+        "comment": "packaging and 포장",
+        "patterns": [
+            r"포장",
+            r"패키징",
+            r"packaging",
+        ],
+    },
+    {
+        "name": "plain_production_operator",
+        "comment": "plain 제조 or 생산 operator work with no design, test, automation, control or process-engineering content (단순 생산/제조 오퍼레이터 및 생산관리)",
+        "patterns": [
+            r"^생산\s*(\(.*?\))?$",
+            r"^제조\s*(\(.*?\))?$",
+            r"생산관리",
+            r"제조관리",
+            r"생산직",
+            r"제조직",
+            r"오퍼레이터",
+            r"operator",
+            r"생산운영",
+            r"제조운영",
+        ],
+    },
+    {
+        "name": "food_and_beverage_production",
+        "comment": "food and beverage production (식품 및 음료 생산/제조/가공)",
+        "patterns": [
+            r"식품.*(생산|제조|가공)",
+            r"음료.*(생산|제조)",
+            r"제과",
+            r"제빵",
+            r"F&B.*(생산|제조)",
+        ],
+    },
+    {
+        "name": "pharmaceutical_manufacturing",
+        "comment": "pharmaceutical manufacturing and 제조/포장 (의약품/제약 제조, 제조/포장, 제제 생산)",
+        "patterns": [
+            r"제조/포장",
+            r"제조\s*및\s*포장",
+            r"의약품.*제조",
+            r"제약.*제조",
+            r"GMP.*제조",
+            r"GMP.*생산",
+            r"제제.*제조",
+            r"제제.*생산",
+        ],
+    },
+    {
+        "name": "plain_quality_control",
+        "comment": "plain 품질관리 of consumer or chemical materials with no measurement, reliability or validation engineering content (소비재/화학 소재 단순 품질관리)",
+        "patterns": [
+            r"품질관리\s*\(.*(전지소재|화학|소재|원자재|식품|소비재).*\)",
+            r"^품질관리\s*(\(.*?\))?$",
+        ],
+    },
+]
+
+DEFAULT_ENGINEERING_KEEP_PATTERNS = [
+    r"design",
+    r"설계",
+    r"제어",
+    r"control",
+    r"자동화",
+    r"automation",
+    r"시험",
+    r"test",
+    r"검증",
+    r"validation",
+    r"신뢰성",
+    r"reliability",
+    r"공정\s*엔지니어링",
+    r"공정엔지니어링",
+    r"공정\s*개발",
+    r"공정\s*설계",
+    r"생산기술",
+    r"manufacturing\s*technology",
+    r"로보틱스",
+    r"robotics",
+    r"로봇",
+    r"robot",
+    r"전력",
+    r"power",
+    r"모터",
+    r"motor",
+    r"측정",
+    r"계측",
+    r"measurement",
+    r"전기",
+    r"전자",
+    r"기구",
+    r"회로",
+    r"하드웨어",
+    r"HW",
+    r"품질보증",
+    r"QA",
+]
+
+
+def compile_keep_patterns(
+    patterns: list[str | re.Pattern[str]] | None,
+) -> list[re.Pattern[str]]:
+    if not patterns:
+        patterns = DEFAULT_ENGINEERING_KEEP_PATTERNS
+    compiled: list[re.Pattern[str]] = []
+    for p in patterns:
+        if isinstance(p, re.Pattern):
+            compiled.append(p)
+        else:
+            compiled.append(re.compile(p, re.IGNORECASE))
+    return compiled
+
+
+def compile_duty_families(
+    families: list[dict[str, Any]] | None,
+) -> list[dict[str, Any]]:
+    if families is None:
+        families = DEFAULT_EXCLUDED_DUTY_FAMILIES
+    compiled_families = []
+    for f in families:
+        fam_copy = dict(f)
+        fam_copy["_compiled"] = [
+            re.compile(p, re.IGNORECASE) if isinstance(p, str) else p
+            for p in f.get("patterns", [])
+        ]
+        compiled_families.append(fam_copy)
+    return compiled_families
+
+
+def is_duty_family_excluded(
+    sub_title: str,
+    content_body: str = "",
+    duty_families: list[dict[str, Any]] | None = None,
+    keep_patterns: list[re.Pattern[str]] | None = None,
+) -> tuple[bool, str]:
+    """Check if a sub-position matches an excluded duty family without engineering content.
+
+    Returns (is_excluded, matched_family_name).
+    """
+    if keep_patterns is None:
+        keep_patterns = compile_keep_patterns(None)
+
+    for kp in keep_patterns:
+        if kp.search(sub_title):
+            return False, ""
+
+    if duty_families is None:
+        duty_families = compile_duty_families(None)
+
+    for fam in duty_families:
+        patterns = fam.get("_compiled")
+        if patterns is None:
+            patterns = [
+                re.compile(p, re.IGNORECASE) if isinstance(p, str) else p
+                for p in fam.get("patterns", [])
+            ]
+            fam["_compiled"] = patterns
+
+        for pat in patterns:
+            if pat.search(sub_title):
+                if content_body and fam.get("name") in (
+                    "plain_production_operator",
+                    "plain_quality_control",
+                ):
+                    if any(kp.search(content_body) for kp in keep_patterns):
+                        return False, ""
+                return True, fam.get("name", "excluded-duty-family")
+
+    return False, ""
+
+
 
 def log(msg: str, to_stderr: bool = False) -> None:
     stream = sys.stderr if to_stderr else sys.stdout
@@ -166,6 +356,7 @@ def render_markdown(
         "track",
         "score",
         "verdict",
+        "reason",
         "actionable",
         "career_type",
         "start_time",
@@ -229,6 +420,7 @@ def demote_markdown(
     fm = read_frontmatter(md_path)
     fm["score"] = current_score
     fm["verdict"] = "not_actionable"
+    fm["reason"] = reason
     fm["actionable"] = False
     fm["dropped_out"] = today_str
     fm["threshold"] = threshold
@@ -244,6 +436,7 @@ def demote_markdown(
         "track",
         "score",
         "verdict",
+        "reason",
         "actionable",
         "career_type",
         "start_time",
@@ -482,6 +675,8 @@ def assess_announcement(
     detail_data: dict[str, Any] | None = None,
     exclude_patterns: list[re.Pattern[str]] | None = None,
     score_threshold: int = 28,
+    duty_families: list[dict[str, Any]] | None = None,
+    keep_patterns: list[re.Pattern[str]] | None = None,
 ) -> dict[str, Any]:
     """Score announcement using assess_shortlist on experienced sub-positions, body, and company.
 
@@ -507,9 +702,22 @@ def assess_announcement(
                     "fit_score": 0,
                     "track": TRACK_CORE,
                     "matched_sub_positions": [],
+                    "surviving_sub_positions": [],
                 }
 
     if not detail_data:
+        # Check duty family exclusion on title when detail is absent
+        is_exc, _ = is_duty_family_excluded(title, "", duty_families, keep_patterns)
+        if is_exc:
+            return {
+                "actionable": False,
+                "reason": "excluded-duty-family",
+                "fit_score": 0,
+                "track": TRACK_CORE,
+                "matched_sub_positions": [],
+                "surviving_sub_positions": [],
+            }
+
         # Fallback when detail is not available (e.g. offline dry-run test)
         posting_for_shortlist = {
             "title": title,
@@ -525,12 +733,16 @@ def assess_announcement(
         actionable = bool(shortlist_result.get("actionable")) and (
             fit_score >= score_threshold
         )
+        reason = str(shortlist_result.get("reason", ""))
+        if bool(shortlist_result.get("actionable")) and fit_score < score_threshold:
+            reason = "below-threshold"
         return {
             "actionable": actionable,
-            "reason": str(shortlist_result.get("reason", "")),
+            "reason": reason,
             "fit_score": fit_score,
             "track": normalize_track(shortlist_result.get("track", TRACK_CORE)),
             "matched_sub_positions": [],
+            "surviving_sub_positions": [],
         }
 
     experienced_subs = extract_experienced_sub_positions(detail_data)
@@ -541,13 +753,35 @@ def assess_announcement(
             "fit_score": 0,
             "track": TRACK_CORE,
             "matched_sub_positions": [],
+            "surviving_sub_positions": [],
         }
 
     body_text = strip_html(detail_data.get("content"))
 
-    # Stage A: Check joined experienced sub-positions
+    surviving_subs: list[str] = []
+    excluded_subs: list[tuple[str, str]] = []
+    for sub in experienced_subs:
+        is_exc, why = is_duty_family_excluded(
+            sub, body_text, duty_families, keep_patterns
+        )
+        if is_exc:
+            excluded_subs.append((sub, why))
+        else:
+            surviving_subs.append(sub)
+
+    if not surviving_subs:
+        return {
+            "actionable": False,
+            "reason": "excluded-duty-family",
+            "fit_score": 0,
+            "track": TRACK_CORE,
+            "matched_sub_positions": [],
+            "surviving_sub_positions": [],
+        }
+
+    # Stage A: Check joined surviving sub-positions
     posting_all = {
-        "title": ", ".join(experienced_subs),
+        "title": ", ".join(surviving_subs),
         "company": company,
         "department": f"{body_text} {company}".strip(),
         "body": title,
@@ -557,9 +791,9 @@ def assess_announcement(
     }
     r_all = assess_shortlist(posting_all)
 
-    # Stage B: Check each sub-position individually to isolate matched roles
+    # Stage B: Check each surviving sub-position individually to isolate matched roles
     matched_subs: list[str] = []
-    for sub in experienced_subs:
+    for sub in surviving_subs:
         r_sub = assess_shortlist({
             "title": sub,
             "company": company,
@@ -578,7 +812,8 @@ def assess_announcement(
             "reason": str(r_all.get("reason", "actionable")),
             "fit_score": int(r_all.get("fit_score", 0)),
             "track": normalize_track(r_all.get("track", TRACK_CORE)),
-            "matched_sub_positions": matched_subs if matched_subs else experienced_subs,
+            "matched_sub_positions": matched_subs if matched_subs else surviving_subs,
+            "surviving_sub_positions": surviving_subs,
         }
 
     if matched_subs:
@@ -597,20 +832,32 @@ def assess_announcement(
         actionable = bool(r_matched.get("actionable")) and (
             fit_score >= score_threshold
         )
+        reason = str(r_matched.get("reason", ""))
+        if bool(r_matched.get("actionable")) and fit_score < score_threshold:
+            reason = "below-threshold"
         return {
             "actionable": actionable,
-            "reason": str(r_matched.get("reason", "")),
+            "reason": reason,
             "fit_score": fit_score,
             "track": normalize_track(r_matched.get("track", TRACK_CORE)),
             "matched_sub_positions": matched_subs,
+            "surviving_sub_positions": surviving_subs,
         }
+
+    fit_score = int(r_all.get("fit_score", 0))
+    reason = str(r_all.get("reason", ""))
+    if excluded_subs and (fit_score == 0 or not r_all.get("actionable")):
+        reason = "excluded-duty-family"
+    elif bool(r_all.get("actionable")) and fit_score < score_threshold:
+        reason = "below-threshold"
 
     return {
         "actionable": False,
-        "reason": str(r_all.get("reason", "")),
-        "fit_score": int(r_all.get("fit_score", 0)),
+        "reason": reason,
+        "fit_score": fit_score,
         "track": normalize_track(r_all.get("track", TRACK_CORE)),
         "matched_sub_positions": [],
+        "surviving_sub_positions": surviving_subs,
     }
 
 
@@ -649,6 +896,8 @@ def main(argv: list[str] | None = None) -> int:
         re.compile(p, re.IGNORECASE) for p in config.get("exclude_title_patterns", [])
     ]
     watchlist_companies = set(config.get("company_watchlist", []))
+    duty_families = compile_duty_families(config.get("excluded_duty_families"))
+    keep_patterns = compile_keep_patterns(config.get("engineering_keep_patterns"))
     delay = float(config.get("request_delay_seconds", 1.0))
 
     inbox_dir = args.inbox_dir
@@ -669,6 +918,7 @@ def main(argv: list[str] | None = None) -> int:
         summary = {
             "fetched": 0,
             "experienced": 0,
+            "excluded": 0,
             "actionable": 0,
             "new": 0,
             "refreshed": 0,
@@ -678,7 +928,7 @@ def main(argv: list[str] | None = None) -> int:
         if args.json:
             print(json.dumps(summary, ensure_ascii=False, indent=2))
         else:
-            emit(f"[summary] fetched=0 experienced=0 actionable=0 new=0 refreshed=0 demoted=0 failures={len(failures)}")
+            emit(f"[summary] fetched=0 experienced=0 excluded=0 actionable=0 new=0 refreshed=0 demoted=0 failures={len(failures)}")
         return 1
 
     n_fetched = len(calendar_items)
@@ -735,14 +985,22 @@ def main(argv: list[str] | None = None) -> int:
     demoted_candidates: list[
         tuple[int, Path, dict[str, Any], dict[str, Any]]
     ] = []  # (ann_id, md_path, assessment, existing_fm)
+    n_excluded = 0
 
     if announcements_with_detail:
         for item, detail_data in announcements_with_detail:
             ann_id = int(item["id"])
             evaluated_ids.add(ann_id)
             assessment = assess_announcement(
-                item, detail_data, exclude_patterns, score_threshold
+                item,
+                detail_data,
+                exclude_patterns,
+                score_threshold,
+                duty_families,
+                keep_patterns,
             )
+            if assessment.get("reason") in ("excluded-duty-family", "excluded-by-title-pattern"):
+                n_excluded += 1
             if assessment["actionable"]:
                 actionable_candidates.append((item, detail_data, assessment))
             else:
@@ -756,8 +1014,15 @@ def main(argv: list[str] | None = None) -> int:
             ann_id = int(item["id"])
             evaluated_ids.add(ann_id)
             assessment = assess_announcement(
-                item, None, exclude_patterns, score_threshold
+                item,
+                None,
+                exclude_patterns,
+                score_threshold,
+                duty_families,
+                keep_patterns,
             )
+            if assessment.get("reason") in ("excluded-duty-family", "excluded-by-title-pattern"):
+                n_excluded += 1
             if assessment["actionable"]:
                 actionable_candidates.append((item, {}, assessment))
             else:
@@ -793,13 +1058,22 @@ def main(argv: list[str] | None = None) -> int:
             "end_time": existing_fm.get("end_time"),
             "start_time": existing_fm.get("start_time"),
         }
-        assessment = assess_announcement(item, detail_data, exclude_patterns, score_threshold)
+        assessment = assess_announcement(
+            item,
+            detail_data,
+            exclude_patterns,
+            score_threshold,
+            duty_families,
+            keep_patterns,
+        )
+        if assessment.get("reason") in ("excluded-duty-family", "excluded-by-title-pattern"):
+            n_excluded += 1
         if not assessment["actionable"]:
             demoted_candidates.append((ann_id, md_path, assessment, existing_fm))
 
     n_actionable = len(actionable_candidates)
     n_demoted = len(demoted_candidates)
-    emit(f"[filter] fetched={n_fetched} experienced={n_experienced} actionable={n_actionable} demoted={n_demoted}")
+    emit(f"[filter] fetched={n_fetched} experienced={n_experienced} excluded={n_excluded} actionable={n_actionable} demoted={n_demoted}")
 
     # Watchlist check
     for item, _, _ in actionable_candidates:
@@ -816,17 +1090,22 @@ def main(argv: list[str] | None = None) -> int:
         item_end_time = item.get("end_time")
         md_path = inbox_dir / f"{jid}.md"
         fm = read_frontmatter(md_path) if md_path.exists() else {}
+        surviving_subs = assess.get("surviving_sub_positions")
+        if surviving_subs is None:
+            surviving_subs = extract_experienced_sub_positions(detail_data)
         if jid not in seen or not md_path.exists():
             todo.append((item, detail_data, assess, True))
         else:
             prev_end_time = seen[jid].get("end_time")
             prev_version = fm.get("scoring_version")
             prev_thresh = fm.get("threshold")
+            prev_subs = fm.get("sub_positions")
             if (
                 item_end_time != prev_end_time
                 or prev_version != CURRENT_SCORING_VERSION
                 or prev_thresh != score_threshold
                 or fm.get("actionable") is not True
+                or prev_subs != surviving_subs
             ):
                 todo.append((item, detail_data, assess, False))
 
@@ -841,25 +1120,30 @@ def main(argv: list[str] | None = None) -> int:
         n_new = sum(1 for _, _, _, is_new in todo if is_new)
         n_refreshed = sum(1 for _, _, _, is_new in todo if not is_new)
         emit(
-            f"[dry-run] actionable={n_actionable} demoted={n_demoted} would_write_or_update={len(todo)} "
+            f"[dry-run] actionable={n_actionable} excluded={n_excluded} demoted={n_demoted} would_write_or_update={len(todo)} "
             f"(new={n_new}, refreshed={n_refreshed}); no files written."
         )
     else:
         # Write demoted files
         for ann_id, md_path, assess, existing_fm in demoted_candidates:
+            demote_reason = assess.get("reason", "not_actionable")
             new_content = demote_markdown(
                 md_path,
                 current_score=assess["fit_score"],
                 threshold=score_threshold,
                 scoring_version=CURRENT_SCORING_VERSION,
                 today_str=today_str,
-                reason=assess.get("reason", "not_actionable"),
+                reason=demote_reason,
             )
             try:
                 atomic_write_text(md_path, new_content)
+                if assess["fit_score"] < score_threshold and demote_reason in ("actionable", "below-threshold"):
+                    log_detail = f"score={assess['fit_score']} (threshold={score_threshold})"
+                else:
+                    log_detail = f"reason={demote_reason} score={assess['fit_score']}"
                 emit(
-                    f"[write:demoted] {ann_id}.md — score={assess['fit_score']} "
-                    f"(threshold={score_threshold}) verdict=not_actionable dropped_out={today_str}"
+                    f"[write:demoted] {ann_id}.md — {log_detail} "
+                    f"verdict=not_actionable dropped_out={today_str}"
                 )
             except OSError as exc:
                 err_msg = f"Failed writing demoted {md_path}: {exc}"
@@ -876,13 +1160,16 @@ def main(argv: list[str] | None = None) -> int:
                 seen[jid_str]["threshold"] = score_threshold
                 seen[jid_str]["scoring_version"] = CURRENT_SCORING_VERSION
                 seen[jid_str]["dropped_out"] = today_str
+                seen[jid_str]["reason"] = demote_reason
 
         # Write actionable files
         for item, detail_data, assess, is_new in todo:
             ann_id = int(item["id"])
             jid_str = str(ann_id)
 
-            sub_titles = extract_experienced_sub_positions(detail_data)
+            sub_titles = assess.get("surviving_sub_positions")
+            if sub_titles is None:
+                sub_titles = extract_experienced_sub_positions(detail_data)
             matched_subs = assess.get("matched_sub_positions") or sub_titles
             content_body = str(detail_data.get("content") or "")
             apply_url = str(detail_data.get("employment_page_url") or "")
@@ -957,6 +1244,7 @@ def main(argv: list[str] | None = None) -> int:
     summary = {
         "fetched": n_fetched,
         "experienced": n_experienced,
+        "excluded": n_excluded,
         "actionable": n_actionable,
         "new": n_new,
         "refreshed": n_refreshed,
@@ -967,7 +1255,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.json:
         print(json.dumps(summary, ensure_ascii=False, indent=2))
     else:
-        emit(f"[summary] fetched={n_fetched} experienced={n_experienced} actionable={n_actionable} new={n_new} refreshed={n_refreshed} demoted={n_demoted}")
+        emit(f"[summary] fetched={n_fetched} experienced={n_experienced} excluded={n_excluded} actionable={n_actionable} new={n_new} refreshed={n_refreshed} demoted={n_demoted}")
         if failures:
             emit(f"[summary] failures encountered ({len(failures)}):")
             for f in failures:

@@ -79,19 +79,17 @@
       "title": "2026년 3분기 수시채용",
       "end_time": "2026-09-20T23:59:00.000+09:00",
       "track": "core",
-      "score": 58,
+      "score": 28,
       "verdict": "actionable",
       "actionable": true,
       "threshold": 28,
       "scoring_version": 2,
       "sub_positions": [
         "품질 (QA)",
-        "생산혁신 (물류)",
         "TKG디벨롭먼트-산업단지 운영관리 (주재원)"
       ],
       "matched_sub_positions": [
-        "품질 (QA)",
-        "생산혁신 (물류)"
+        "품질 (QA)"
       ]
     },
     "106134": {
@@ -100,9 +98,9 @@
       "title": "9월 수시채용",
       "end_time": "2026-09-20T23:59:00.000+09:00",
       "track": "core",
-      "score": 30,
-      "verdict": "actionable",
-      "actionable": true,
+      "score": 0,
+      "verdict": "not_actionable",
+      "actionable": false,
       "threshold": 28,
       "scoring_version": 2,
       "sub_positions": [
@@ -119,7 +117,9 @@
       ],
       "matched_sub_positions": [
         "제조/포장"
-      ]
+      ],
+      "dropped_out": "2026-09-20",
+      "reason": "excluded-duty-family"
     },
     "106135": {
       "first_seen": "2026-09-20",
@@ -127,9 +127,9 @@
       "title": "물류센터 운영관리 담당자",
       "end_time": "2026-09-30T23:59:00.000+09:00",
       "track": "core",
-      "score": 30,
-      "verdict": "actionable",
-      "actionable": true,
+      "score": 0,
+      "verdict": "not_actionable",
+      "actionable": false,
       "threshold": 28,
       "scoring_version": 2,
       "sub_positions": [
@@ -137,7 +137,9 @@
       ],
       "matched_sub_positions": [
         "수면밀도 물류센터 운영관리 담당자"
-      ]
+      ],
+      "dropped_out": "2026-09-20",
+      "reason": "excluded-duty-family"
     },
     "106170": {
       "first_seen": "2026-09-20",
@@ -268,7 +270,6 @@
       "threshold": 28,
       "scoring_version": 2,
       "sub_positions": [
-        "생산관리 (경력)",
         "설비관리 (전기) (경력)",
         "품질보증 (경력)"
       ],
@@ -283,9 +284,9 @@
       "title": "2026년 농심그룹 부문별 신입/경력 공개채용",
       "end_time": "2026-10-01T23:00:00.000+09:00",
       "track": "core",
-      "score": 28,
-      "verdict": "actionable",
-      "actionable": true,
+      "score": 0,
+      "verdict": "not_actionable",
+      "actionable": false,
       "threshold": 28,
       "scoring_version": 2,
       "sub_positions": [
@@ -296,7 +297,9 @@
       ],
       "matched_sub_positions": [
         "품질관리(전지소재)"
-      ]
+      ],
+      "dropped_out": "2026-09-20",
+      "reason": "excluded-duty-family"
     },
     "106319": {
       "first_seen": "2026-09-20",
@@ -304,9 +307,9 @@
       "title": "2026 하반기 신입/경력사원 수시채용",
       "end_time": "2026-09-27T23:59:00.000+09:00",
       "track": "core",
-      "score": 30,
-      "verdict": "actionable",
-      "actionable": true,
+      "score": 0,
+      "verdict": "not_actionable",
+      "actionable": false,
       "threshold": 28,
       "scoring_version": 2,
       "sub_positions": [
@@ -316,7 +319,9 @@
       ],
       "matched_sub_positions": [
         "생산 (울산)"
-      ]
+      ],
+      "dropped_out": "2026-09-20",
+      "reason": "excluded-duty-family"
     }
   }
 }

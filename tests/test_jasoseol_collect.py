@@ -788,6 +788,198 @@ class JasoseolCollectTests(unittest.TestCase):
             self.assertEqual(fm_after["verdict"], "not_actionable")
             self.assertEqual(fm_after["custom_field"], "must_be_preserved")
 
+    def test_logistics_only_posting_is_excluded(self) -> None:
+        ann = {
+            "id": 8001,
+            "name": "물류스타트업",
+            "title": "물류센터 운영관리 담당자 채용",
+        }
+        detail = {
+            "id": 8001,
+            "name": "물류스타트업",
+            "title": "물류센터 운영관리 담당자 채용",
+            "content": "<p>입출고 및 창고 재고 관리</p>",
+            "employments": [
+                {
+                    "id": 1,
+                    "division": 2,
+                    "field": "수면밀도 물류센터 운영관리 담당자",
+                }
+            ],
+        }
+        res = jasoseol_collect.assess_announcement(
+            ann, detail_data=detail, score_threshold=28
+        )
+        self.assertFalse(res["actionable"])
+        self.assertEqual(res["reason"], "excluded-duty-family")
+        self.assertEqual(res["surviving_sub_positions"], [])
+
+    def test_mixed_posting_keeps_only_engineering_sub_positions(self) -> None:
+        ann = {
+            "id": 8002,
+            "name": "하이브리드 로보틱스",
+            "title": "2026 수시 채용",
+        }
+        detail = {
+            "id": 8002,
+            "name": "하이브리드 로보틱스",
+            "title": "2026 수시 채용",
+            "content": "",
+            "employments": [
+                {
+                    "id": 1,
+                    "division": 2,
+                    "field": "물류센터 운영관리",
+                },
+                {
+                    "id": 2,
+                    "division": 2,
+                    "field": "자율제조 로봇 제어 엔지니어(경력)",
+                },
+                {
+                    "id": 3,
+                    "division": 2,
+                    "field": "단순 제조/포장",
+                },
+            ],
+        }
+        res = jasoseol_collect.assess_announcement(
+            ann, detail_data=detail, score_threshold=28
+        )
+        self.assertTrue(res["actionable"])
+        self.assertEqual(
+            res["surviving_sub_positions"],
+            ["자율제조 로봇 제어 엔지니어(경력)"],
+        )
+        self.assertNotIn("물류센터 운영관리", res["surviving_sub_positions"])
+        self.assertNotIn("단순 제조/포장", res["surviving_sub_positions"])
+        self.assertIn(
+            "자율제조 로봇 제어 엔지니어(경력)", res["matched_sub_positions"]
+        )
+
+    def test_excluded_posting_already_on_disk_is_demoted_with_exclusion_as_reason(
+        self,
+    ) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            inbox_dir = Path(tmpdir)
+            file_path = inbox_dir / "8003.md"
+            initial_content = (
+                "---\n"
+                "id: 8003\n"
+                'company: "물류로지스틱스"\n'
+                'title: "물류센터 운영 총괄"\n'
+                'track: "core"\n'
+                "score: 30\n"
+                'verdict: "actionable"\n'
+                "actionable: true\n"
+                'career_type: "경력"\n'
+                'start_time: "2026-09-01T00:00:00.000+09:00"\n'
+                'end_time: "2026-09-30T23:59:00.000+09:00"\n'
+                'url: "https://jasoseol.com/recruit/8003"\n'
+                'sub_positions: ["물류센터 운영관리"]\n'
+                "---\n\n"
+                "# 물류센터 운영 총괄\n"
+            )
+            file_path.write_text(initial_content, encoding="utf-8")
+
+            config_file = inbox_dir / "config.json"
+            config_file.write_text(
+                json.dumps(
+                    {
+                        "lookahead_days": 60,
+                        "score_threshold": 28,
+                        "request_delay_seconds": 0.0,
+                    }
+                ),
+                encoding="utf-8",
+            )
+            calendar_data = [
+                {
+                    "id": 8003,
+                    "name": "물류로지스틱스",
+                    "title": "물류센터 운영 총괄",
+                    "start_time": "2026-09-01T00:00:00.000+09:00",
+                    "end_time": "2026-09-30T23:59:00.000+09:00",
+                    "employments": [{"id": 1, "division": 2}],
+                }
+            ]
+            detail_8003 = {
+                "id": 8003,
+                "name": "물류로지스틱스",
+                "title": "물류센터 운영 총괄",
+                "content": "창고 입출고 및 배송 운영",
+                "employments": [
+                    {
+                        "id": 1,
+                        "division": 2,
+                        "field": "물류센터 운영관리",
+                    }
+                ],
+            }
+
+            with patch.object(
+                jasoseol_collect,
+                "fetch_calendar_list",
+                return_value=(calendar_data, None),
+            ), patch.object(
+                jasoseol_collect,
+                "fetch_detail",
+                return_value=(detail_8003, None),
+            ):
+                stdout = io.StringIO()
+                with patch("sys.stdout", stdout):
+                    code = jasoseol_collect.main(
+                        [
+                            "--config",
+                            str(config_file),
+                            "--inbox-dir",
+                            str(inbox_dir),
+                            "--json",
+                        ]
+                    )
+                self.assertEqual(code, 0)
+                res = json.loads(stdout.getvalue())
+                self.assertEqual(res["actionable"], 0)
+                self.assertEqual(res["demoted"], 1)
+                self.assertEqual(res["excluded"], 1)
+
+            fm = jasoseol_collect.read_frontmatter(file_path)
+            self.assertFalse(fm["actionable"])
+            self.assertEqual(fm["verdict"], "not_actionable")
+            self.assertEqual(fm["reason"], "excluded-duty-family")
+
+    def test_engineering_posting_with_low_score_excluded_only_by_threshold(
+        self,
+    ) -> None:
+        ann = {
+            "id": 8004,
+            "name": "NHN",
+            "title": "데이터센터 구축(전기)",
+        }
+        detail = {
+            "id": 8004,
+            "name": "NHN",
+            "title": "데이터센터 구축(전기)",
+            "content": "",
+            "employments": [
+                {
+                    "id": 1,
+                    "division": 2,
+                    "field": "데이터센터 구축(전기)",
+                }
+            ],
+        }
+        res = jasoseol_collect.assess_announcement(
+            ann, detail_data=detail, score_threshold=28
+        )
+        self.assertFalse(res["actionable"])
+        self.assertEqual(res["fit_score"], 26)
+        self.assertEqual(res["reason"], "below-threshold")
+        self.assertNotEqual(res["reason"], "excluded-duty-family")
+        self.assertEqual(
+            res["surviving_sub_positions"], ["데이터센터 구축(전기)"]
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
