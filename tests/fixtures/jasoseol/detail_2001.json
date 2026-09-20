@@ -1,0 +1,27 @@
+{
+  "ret": 1,
+  "id": 2001,
+  "name": "Acme Industrial AI",
+  "title": "Industrial AI Solutions Architect",
+  "employment_page_url": "https://careers.acme.com/recruits/2001",
+  "start_time": "2026-09-01T09:00:00.000+09:00",
+  "end_time": "2026-09-30T18:00:00.000+09:00",
+  "content": "<div><p>Lead industrial AI solutions for smart factories.</p></div>",
+  "employments": [
+    {
+      "id": 101,
+      "division": 1,
+      "field": "Industrial AI 신입"
+    },
+    {
+      "id": 102,
+      "division": 2,
+      "field": "Industrial AI Solutions Architect (경력)"
+    },
+    {
+      "id": 103,
+      "division": 4,
+      "field": "계약직 테스터"
+    }
+  ]
+}

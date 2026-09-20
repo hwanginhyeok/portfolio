@@ -1,0 +1,21 @@
+{
+  "lookahead_days": 60,
+  "score_threshold": 26,
+  "exclude_title_patterns": [
+    "인턴",
+    "계약직",
+    "아르바이트"
+  ],
+  "company_watchlist": [
+    "현대자동차",
+    "현대자동차(남양연구소)",
+    "현대모비스",
+    "현대오토에버",
+    "기아",
+    "삼성전자",
+    "SK하이닉스",
+    "SK",
+    "LG전자"
+  ],
+  "request_delay_seconds": 1.0
+}

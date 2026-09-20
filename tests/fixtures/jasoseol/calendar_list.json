@@ -1,0 +1,55 @@
+{
+  "employment": [
+    {
+      "id": 2001,
+      "name": "Acme Industrial AI",
+      "title": "Industrial AI Solutions Architect",
+      "start_time": "2026-09-01T09:00:00.000+09:00",
+      "end_time": "2026-09-30T18:00:00.000+09:00",
+      "employments": [
+        {"id": 101, "division": 1},
+        {"id": 102, "division": 2}
+      ]
+    },
+    {
+      "id": 2002,
+      "name": "Beta AI",
+      "title": "Industrial AI 신입 엔지니어",
+      "start_time": "2026-09-01T09:00:00.000+09:00",
+      "end_time": "2026-09-30T18:00:00.000+09:00",
+      "employments": [
+        {"id": 201, "division": 1}
+      ]
+    },
+    {
+      "id": 2003,
+      "name": "Gamma Corp",
+      "title": "인턴 채용",
+      "start_time": "2026-09-01T09:00:00.000+09:00",
+      "end_time": "2026-09-30T18:00:00.000+09:00",
+      "employments": [
+        {"id": 301, "division": 3}
+      ]
+    },
+    {
+      "id": 2004,
+      "name": "Delta Design",
+      "title": "웹디자이너 경력 채용",
+      "start_time": "2026-09-01T09:00:00.000+09:00",
+      "end_time": "2026-09-30T18:00:00.000+09:00",
+      "employments": [
+        {"id": 401, "division": 2}
+      ]
+    },
+    {
+      "id": 2005,
+      "name": "RoboTech Korea",
+      "title": "자율제조 로봇 제어 엔지니어",
+      "start_time": "2026-09-01T09:00:00.000+09:00",
+      "end_time": "2026-10-15T23:59:00.000+09:00",
+      "employments": [
+        {"id": 501, "division": 2}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ret": 1,
+  "id": 2005,
+  "name": "RoboTech Korea",
+  "title": "자율제조 로봇 제어 엔지니어",
+  "employment_page_url": "https://careers.robotech.com/recruits/2005",
+  "start_time": "2026-09-01T09:00:00.000+09:00",
+  "end_time": "2026-10-15T23:59:00.000+09:00",
+  "content": "<div><p>Autonomous manufacturing robot control development.</p></div>",
+  "employments": [
+    {
+      "id": 501,
+      "division": 2,
+      "field": "로봇 제어 알고리즘 개발"
+    }
+  ]
+}
