@@ -74,6 +74,9 @@ except ModuleNotFoundError:
 DEFAULT_LEDGER_PATH = DEFAULT_INBOX_DIR / "calendar_events.json"
 DEFAULT_SCHEDULE_CLI = Path("/home/window11/hih-skills/hih-schedule/scripts/hih_schedule.py")
 CALENDAR_ACCOUNT = "personal"
+CALENDAR_LOOKBACK_DAYS = 30
+CALENDAR_LOOKAHEAD_DAYS = 365
+JASOSEOL_MARKER_PATTERN = re.compile(r"\[jasoseol:([^\]\s]+)\]")
 
 _JOB_PREFIX_PATTERN = re.compile(
     r"^(?:연구직|관리직|전문직|기술직|생산직|영업직|사무직|일반직|기능직|지원직)_+"
@@ -206,6 +209,102 @@ def build_event_description(
 def get_stable_marker(announcement_id: str | int) -> str:
     """Return the stable marker derived from the announcement ID."""
     return f"jasoseol:{announcement_id}"
+
+
+def extract_jasoseol_markers(description: Any) -> list[str]:
+    """Return stable Jasoseol announcement IDs found in an event description."""
+    if not isinstance(description, str):
+        return []
+    return JASOSEOL_MARKER_PATTERN.findall(description)
+
+
+def build_list_cli_args(account: str, start_date: str, end_date: str) -> list[str]:
+    """Build CLI arguments for listing a calendar date window."""
+    return [
+        "list",
+        "--account", account,
+        "--from", start_date,
+        "--to", end_date,
+    ]
+
+
+def list_calendar_events(
+    start_date: str,
+    end_date: str,
+    cli_path: Path = DEFAULT_SCHEDULE_CLI,
+) -> list[dict[str, Any]]:
+    """List calendar events in the sync window through hih-schedule."""
+    result = run_schedule_cli(
+        build_list_cli_args(CALENDAR_ACCOUNT, start_date, end_date),
+        cli_path=cli_path,
+    )
+    events = result.get("events", [])
+    if not isinstance(events, list):
+        raise RuntimeError(f"hih-schedule list returned invalid events: {result}")
+    return [event for event in events if isinstance(event, dict)]
+
+
+def find_orphan_events(
+    calendar_events: list[dict[str, Any]],
+    ledger: dict[str, Any],
+) -> list[dict[str, Any]]:
+    """Find marked calendar events whose Jasoseol ID is absent from the ledger."""
+    known_ids = {str(announcement_id) for announcement_id in ledger}
+    orphans: list[dict[str, Any]] = []
+
+    for event in calendar_events:
+        event_id = str(event.get("id") or "").strip()
+        if not event_id:
+            continue
+        marker_ids = extract_jasoseol_markers(event.get("description"))
+        orphan_id = next((marker_id for marker_id in marker_ids if marker_id not in known_ids), None)
+        if orphan_id is None:
+            continue
+        orphans.append({
+            "id": orphan_id,
+            "event_id": event_id,
+            "title": str(event.get("summary") or f"공고 {orphan_id}"),
+            "marker": get_stable_marker(orphan_id),
+            "reason": "orphan_marker",
+        })
+
+    return orphans
+
+
+def parse_reference_date(value: str | date | None) -> date:
+    """Parse the sync reference date in KST, defaulting to today."""
+    if value is None:
+        return datetime.now(KST).date()
+    if isinstance(value, date):
+        return value
+    return date.fromisoformat(str(value)[:10])
+
+
+def build_calendar_window(
+    reference_date: date,
+    actionable_postings: list[dict[str, Any]],
+    ledger: dict[str, Any],
+) -> tuple[str, str]:
+    """Return a bounded calendar window covering recent and upcoming sync events."""
+    first_day = reference_date - timedelta(days=CALENDAR_LOOKBACK_DAYS)
+    last_day = reference_date + timedelta(days=CALENDAR_LOOKAHEAD_DAYS)
+
+    deadline_values = [posting.get("end_time") for posting in actionable_postings]
+    deadline_values.extend(
+        entry.get("end_time")
+        for entry in ledger.values()
+        if isinstance(entry, dict)
+    )
+    for end_time in deadline_values:
+        deadline_date = extract_deadline_date(end_time)
+        if not deadline_date:
+            continue
+        try:
+            last_day = max(last_day, date.fromisoformat(deadline_date))
+        except ValueError:
+            continue
+
+    return first_day.isoformat(), last_day.isoformat()
 
 
 def compute_event_timing(end_time: str | None) -> dict[str, Any]:
@@ -384,10 +483,11 @@ def plan_calendar_sync(
     actionable_postings: list[dict[str, Any]],
     ledger: dict[str, Any],
     inbox_dir: Path,
+    calendar_events: list[dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
     """Compute the diff between currently actionable postings and the ledger.
 
-    Returns dict with keys: 'create', 'update', 'delete', 'untouched'.
+    Returns dict with keys: 'create', 'update', 'delete', 'orphan_delete', 'untouched'.
     """
     active_by_id: dict[str, dict[str, Any]] = {}
     for p in actionable_postings:
@@ -454,10 +554,14 @@ def plan_calendar_sync(
                     "reason": "demoted_or_passed_deadline",
                 })
 
+    orphan_delete = find_orphan_events(calendar_events or [], ledger)
+    to_delete.extend(orphan_delete)
+
     return {
         "create": to_create,
         "update": to_update,
         "delete": to_delete,
+        "orphan_delete": orphan_delete,
         "untouched": untouched,
     }
 
@@ -474,6 +578,8 @@ def execute_sync(
     to_create = plan["create"]
     to_update = plan["update"]
     to_delete = plan["delete"]
+    orphan_delete = plan.get("orphan_delete", [])
+    regular_delete = [item for item in to_delete if item.get("reason") != "orphan_marker"]
     untouched = plan["untouched"]
 
     if not apply:
@@ -481,7 +587,11 @@ def execute_sync(
         print("=" * 70)
         print("Jasoseol Calendar Sync Plan (DRY-RUN)")
         print(f"Total Actionable: {len(to_create) + len(untouched) + len(to_update)}")
-        print(f"Plan: {len(to_create)} to create, {len(to_update)} to update, {len(to_delete)} to delete, {len(untouched)} untouched.")
+        print(
+            f"Plan: {len(to_create)} to create, {len(to_update)} to update, "
+            f"{len(regular_delete)} to delete, {len(orphan_delete)} orphan(s) to delete, "
+            f"{len(untouched)} untouched."
+        )
         print("=" * 70)
 
         if to_create:
@@ -503,10 +613,17 @@ def execute_sync(
                 print(f"    New Deadline: {item['new_end_time']}")
                 print(f"    Timing: {item['timing']['display']}")
 
-        if to_delete:
+        if regular_delete:
             print("\n[TO DELETE - DEMOTED OR EXPIRED]")
-            for item in to_delete:
+            for item in regular_delete:
                 print(f"  - ID: {item['id']} (Event ID: {item['event_id']})")
+                print(f"    Title: {item['title']}")
+                print(f"    Reason: {item['reason']}")
+
+        if orphan_delete:
+            print("\n[TO DELETE - ORPHAN MARKERS]")
+            for item in orphan_delete:
+                print(f"  - Marker: [{item['marker']}] (Event ID: {item['event_id']})")
                 print(f"    Title: {item['title']}")
                 print(f"    Reason: {item['reason']}")
 
@@ -519,6 +636,7 @@ def execute_sync(
             "created": len(to_create),
             "updated": len(to_update),
             "deleted": len(to_delete),
+            "orphan_deleted": 0,
             "untouched": len(untouched),
             "created_event_ids": [],
         }
@@ -526,7 +644,10 @@ def execute_sync(
     # Apply mode: execute calendar CLI commands and update ledger
     print("=" * 70)
     print("Jasoseol Calendar Sync (APPLYING)")
-    print(f"Executing: {len(to_create)} to create, {len(to_update)} to update, {len(to_delete)} to delete.")
+    print(
+        f"Executing: {len(to_create)} to create, {len(to_update)} to update, "
+        f"{len(regular_delete)} to delete, {len(orphan_delete)} orphan(s) to delete."
+    )
     print("=" * 70)
 
     created_ids: list[str] = []
@@ -608,7 +729,8 @@ def execute_sync(
             event_id=event_id,
             apply=True,
         )
-        print(f"Deleting: {pid} (event {event_id}) | {item['title']}...")
+        label = "orphan" if item.get("reason") == "orphan_marker" else pid
+        print(f"Deleting: {label} (event {event_id}) | {item['title']}...")
         run_schedule_cli(delete_args, cli_path=cli_path)
         deleted_ids.append(event_id)
         new_ledger.pop(pid, None)
@@ -627,6 +749,7 @@ def execute_sync(
         "created": len(created_ids),
         "updated": len(updated_ids),
         "deleted": len(deleted_ids),
+        "orphan_deleted": len(orphan_delete),
         "untouched": len(untouched),
         "created_event_ids": created_ids,
         "updated_event_ids": updated_ids,
@@ -681,20 +804,31 @@ def main(argv: list[str] | None = None) -> int:
 
     args = parser.parse_args(argv)
     apply_mode = bool(args.apply)
+    reference_date = parse_reference_date(args.today)
 
     # Load currently actionable postings using jasoseol_report rules
     postings = load_postings(
         inbox_dir=args.inbox,
         config_path=args.config,
-        today=args.today,
+        today=reference_date,
         current_scoring_version=CURRENT_SCORING_VERSION,
     )
 
     # Load existing ledger
     ledger = load_ledger(args.ledger)
 
+    # Sweep the same bounded calendar window before planning mutations. This read is
+    # intentional in dry-run mode: it discovers interrupted creates without deleting.
+    window_start, window_end = build_calendar_window(reference_date, postings, ledger)
+    calendar_events = list_calendar_events(
+        start_date=window_start,
+        end_date=window_end,
+        cli_path=args.schedule_cli,
+    )
+    print(f"Calendar orphan sweep: listed {len(calendar_events)} events from {window_start} through {window_end}.")
+
     # Compute plan
-    plan = plan_calendar_sync(postings, ledger, args.inbox)
+    plan = plan_calendar_sync(postings, ledger, args.inbox, calendar_events=calendar_events)
 
     # Execute
     execute_sync(
