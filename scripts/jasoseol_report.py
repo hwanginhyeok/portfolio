@@ -48,10 +48,12 @@ except ModuleNotFoundError:
         track_label = lambda t: t or "core"
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+DEFAULT_CONFIG = REPO_ROOT / "config" / "jasoseol_targets.json"
 DEFAULT_INBOX_DIR = REPO_ROOT / "docs" / "jd" / "_inbox" / "jasoseol"
 DEFAULT_REPORT_DIR = REPO_ROOT / "docs" / "jd" / "report"
 DEFAULT_ENV = Path("/home/window11/project-manager/.env")
 RECRUIT_BASE_URL = "https://jasoseol.com/recruit"
+CURRENT_SCORING_VERSION = 2
 KST = timezone(timedelta(hours=9))
 TOKEN_IN_URL = re.compile(r"bot\d+:[A-Za-z0-9_-]+")
 
@@ -413,65 +415,6 @@ def read_frontmatter(path: Path) -> dict[str, Any]:
     return values
 
 
-def load_postings(inbox_dir: Path, min_score: int = 26) -> list[dict[str, Any]]:
-    """Load actionable postings from inbox directory.
-
-    Only postings that passed the shortlist threshold appear in the report.
-    """
-    if not inbox_dir.exists():
-        return []
-
-    postings: list[dict[str, Any]] = []
-    for md_file in sorted(inbox_dir.glob("*.md")):
-        fm = read_frontmatter(md_file)
-        if not fm:
-            continue
-
-        score = int(fm.get("score", 0) or 0)
-        verdict = str(fm.get("verdict", "")).strip().lower()
-        if verdict == "rejected":
-            continue
-        if score < min_score and verdict != "actionable":
-            continue
-
-        pid = str(fm.get("id") if fm.get("id") is not None else md_file.stem)
-        company = str(fm.get("company") or "").strip()
-        title = str(fm.get("title") or "").strip()
-        track = normalize_track(str(fm.get("track") or TRACK_CORE))
-        end_time = fm.get("end_time")
-        start_time = fm.get("start_time")
-        url = str(fm.get("url") or f"{RECRUIT_BASE_URL}/{pid}").strip()
-        apply_url = str(fm.get("apply_url") or "").strip()
-
-        sub_positions = (
-            fm.get("sub_positions")
-            or fm.get("experienced_positions")
-            or []
-        )
-        if isinstance(sub_positions, str):
-            sub_positions = [sub_positions]
-        sub_positions = [str(s).strip() for s in sub_positions if str(s).strip()]
-
-        postings.append({
-            "id": pid,
-            "company": company,
-            "title": title,
-            "track": track,
-            "score": score,
-            "verdict": verdict,
-            "career_type": fm.get("career_type", "경력"),
-            "start_time": start_time,
-            "end_time": end_time,
-            "url": url,
-            "apply_url": apply_url,
-            "sub_positions": sub_positions,
-            "experienced_positions": sub_positions,
-            "first_seen": fm.get("first_seen"),
-        })
-
-    return postings
-
-
 def extract_deadline_date(end_time: str | None) -> str | None:
     """Extract YYYY-MM-DD string from an end_time string."""
     if not end_time:
@@ -523,6 +466,159 @@ def parse_deadline_datetime(end_time: str | None) -> tuple[datetime, str]:
             return dt, s
         except Exception:
             return datetime.max.replace(tzinfo=KST), s
+
+
+def is_older_scoring_version(
+    version: Any, current_version: int = CURRENT_SCORING_VERSION
+) -> bool:
+    """Return True if version is missing or older than current_version."""
+    if version is None:
+        return True
+    try:
+        if isinstance(version, str) and version.lower().startswith("v"):
+            version = version[1:]
+        return int(version) < current_version
+    except (ValueError, TypeError):
+        return True
+
+
+def is_deadline_passed(
+    end_time: str | None,
+    now_or_today: datetime | date | None = None,
+) -> bool:
+    """Return True if deadline has already passed."""
+    if not end_time:
+        return False
+    dt, _ = parse_deadline_datetime(end_time)
+    if dt == datetime.max.replace(tzinfo=KST):
+        return False
+    if now_or_today is None:
+        ref_dt = datetime.now(KST)
+    elif isinstance(now_or_today, datetime):
+        ref_dt = now_or_today if now_or_today.tzinfo else now_or_today.replace(tzinfo=KST)
+    elif isinstance(now_or_today, date):
+        d_str = extract_deadline_date(end_time)
+        if d_str:
+            try:
+                d = datetime.strptime(d_str, "%Y-%m-%d").date()
+                if d < now_or_today:
+                    return True
+                if d > now_or_today:
+                    return False
+            except Exception:
+                pass
+        now_kst = datetime.now(KST)
+        if now_kst.date() == now_or_today:
+            return dt < now_kst
+        return False
+    else:
+        ref_dt = datetime.now(KST)
+    return dt < ref_dt
+
+
+def load_postings(
+    inbox_dir: Path,
+    min_score: int | None = None,
+    config_path: Path | None = None,
+    today: date | str | None = None,
+    current_scoring_version: int = CURRENT_SCORING_VERSION,
+) -> list[dict[str, Any]]:
+    """Load actionable postings from inbox directory.
+
+    Only postings that passed the shortlist threshold with a future deadline
+    and evaluated under the current scoring version appear in the report.
+    """
+    if not inbox_dir.exists():
+        return []
+
+    if min_score is None:
+        cfg_file = config_path or DEFAULT_CONFIG
+        if cfg_file.exists():
+            try:
+                cfg = json.loads(cfg_file.read_text(encoding="utf-8"))
+                min_score = int(cfg.get("score_threshold", 28))
+            except Exception:
+                min_score = 28
+        else:
+            min_score = 28
+
+    if today is None:
+        today_d = datetime.now(KST).date()
+    elif isinstance(today, str):
+        today_d = datetime.strptime(today[:10], "%Y-%m-%d").date()
+    else:
+        today_d = today
+
+    postings: list[dict[str, Any]] = []
+    stale_version_count = 0
+    passed_deadline_count = 0
+
+    for md_file in sorted(inbox_dir.glob("*.md")):
+        fm = read_frontmatter(md_file)
+        if not fm:
+            continue
+
+        # Check scoring version
+        version = fm.get("scoring_version")
+        if is_older_scoring_version(version, current_scoring_version):
+            stale_version_count += 1
+            continue
+
+        score = int(fm.get("score", 0) or 0)
+        verdict = str(fm.get("verdict", "")).strip().lower()
+        actionable_flag = fm.get("actionable")
+
+        if actionable_flag is False or verdict in ("rejected", "not_actionable"):
+            continue
+        if score < min_score:
+            continue
+        if actionable_flag is not True and verdict != "actionable":
+            continue
+
+        end_time = fm.get("end_time")
+        if is_deadline_passed(end_time, now_or_today=today_d):
+            passed_deadline_count += 1
+            continue
+
+        pid = str(fm.get("id") if fm.get("id") is not None else md_file.stem)
+        company = str(fm.get("company") or "").strip()
+        title = str(fm.get("title") or "").strip()
+        track = normalize_track(str(fm.get("track") or TRACK_CORE))
+        start_time = fm.get("start_time")
+        url = str(fm.get("url") or f"{RECRUIT_BASE_URL}/{pid}").strip()
+        apply_url = str(fm.get("apply_url") or "").strip()
+
+        sub_positions = (
+            fm.get("sub_positions")
+            or fm.get("experienced_positions")
+            or []
+        )
+        if isinstance(sub_positions, str):
+            sub_positions = [sub_positions]
+        sub_positions = [str(s).strip() for s in sub_positions if str(s).strip()]
+
+        postings.append({
+            "id": pid,
+            "company": company,
+            "title": title,
+            "track": track,
+            "score": score,
+            "verdict": verdict,
+            "career_type": fm.get("career_type", "경력"),
+            "start_time": start_time,
+            "end_time": end_time,
+            "url": url,
+            "apply_url": apply_url,
+            "sub_positions": sub_positions,
+            "experienced_positions": sub_positions,
+            "first_seen": fm.get("first_seen"),
+        })
+
+    if stale_version_count > 0:
+        log(f"WARNING: skipped {stale_version_count} posting(s) evaluated under older scoring version (< {current_scoring_version})")
+    log(f"[filter] skipped {passed_deadline_count} posting(s) whose deadline has already passed")
+
+    return postings
 
 
 def sort_by_deadline(postings: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -895,6 +991,8 @@ def send_report_via_telegram(path: Path, caption_text: str, env_path: Path) -> b
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Render Jasoseol actionable job postings report.")
+    parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG,
+                        help=f"targets config (default: {DEFAULT_CONFIG})")
     parser.add_argument("--inbox-dir", type=Path, default=DEFAULT_INBOX_DIR,
                         help=f"inbox directory (default: {DEFAULT_INBOX_DIR})")
     parser.add_argument("--report-dir", type=Path, default=DEFAULT_REPORT_DIR,
@@ -911,8 +1009,8 @@ def main(argv: list[str] | None = None) -> int:
                         help=f"env file for Telegram credentials (default: {DEFAULT_ENV})")
     parser.add_argument("--date", type=str, default=None,
                         help="override today's date (YYYY-MM-DD)")
-    parser.add_argument("--min-score", type=int, default=26,
-                        help="minimum score threshold (default: 26)")
+    parser.add_argument("--min-score", type=int, default=None,
+                        help="minimum score threshold (default: from config or 28)")
 
     args = parser.parse_args(argv)
 
@@ -925,7 +1023,12 @@ def main(argv: list[str] | None = None) -> int:
         today = datetime.now(KST).date()
     today_str = today.strftime("%Y-%m-%d")
 
-    postings = load_postings(args.inbox_dir, min_score=args.min_score)
+    postings = load_postings(
+        args.inbox_dir,
+        min_score=args.min_score,
+        config_path=args.config,
+        today=today,
+    )
 
     if not postings:
         log(f"[jasoseol_report] no actionable postings found in {args.inbox_dir}; report will not be generated or sent.")

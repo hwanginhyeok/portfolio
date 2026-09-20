@@ -44,6 +44,7 @@ except ModuleNotFoundError:  # pragma: no cover - exercised by CLI execution
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_CONFIG = REPO_ROOT / "config" / "jasoseol_targets.json"
 DEFAULT_INBOX_DIR = REPO_ROOT / "docs" / "jd" / "_inbox" / "jasoseol"
+CURRENT_SCORING_VERSION = 2
 
 CALENDAR_URL = "https://jasoseol.com/employment/calendar_list.json"
 DETAIL_URL = "https://jasoseol.com/employment/get.json"
@@ -140,6 +141,21 @@ def render_markdown(
     if matched_sub_positions:
         frontmatter["matched_sub_positions"] = matched_sub_positions
 
+    if "actionable" in posting:
+        frontmatter["actionable"] = bool(posting["actionable"])
+    elif "actionable" not in frontmatter:
+        frontmatter["actionable"] = True
+
+    if "threshold" in posting:
+        frontmatter["threshold"] = int(posting["threshold"])
+    if "scoring_version" in posting:
+        frontmatter["scoring_version"] = posting["scoring_version"]
+    elif "scoring_version" not in frontmatter:
+        frontmatter["scoring_version"] = CURRENT_SCORING_VERSION
+
+    if "dropped_out" in posting:
+        frontmatter["dropped_out"] = posting["dropped_out"]
+
     if "first_seen" not in frontmatter and "first_seen" in posting:
         frontmatter["first_seen"] = posting["first_seen"]
 
@@ -150,6 +166,7 @@ def render_markdown(
         "track",
         "score",
         "verdict",
+        "actionable",
         "career_type",
         "start_time",
         "end_time",
@@ -159,6 +176,9 @@ def render_markdown(
         "experienced_positions",
         "matched_sub_positions",
         "first_seen",
+        "threshold",
+        "scoring_version",
+        "dropped_out",
     ]
 
     lines = ["---"]
@@ -191,6 +211,64 @@ def render_markdown(
         lines.append(content_body.strip())
         lines.append("")
     return "\n".join(lines)
+
+
+def demote_markdown(
+    md_path: Path,
+    current_score: int,
+    threshold: int,
+    scoring_version: int,
+    today_str: str,
+    reason: str = "not_actionable",
+) -> str:
+    """Rewrite frontmatter of an existing markdown file to mark it not actionable.
+
+    Preserves existing frontmatter fields and body without deletion.
+    """
+    content = md_path.read_text(encoding="utf-8")
+    fm = read_frontmatter(md_path)
+    fm["score"] = current_score
+    fm["verdict"] = "not_actionable"
+    fm["actionable"] = False
+    fm["dropped_out"] = today_str
+    fm["threshold"] = threshold
+    fm["scoring_version"] = scoring_version
+
+    parts = content.split("---", 2)
+    body = parts[2] if len(parts) > 2 else ""
+
+    key_order = [
+        "id",
+        "company",
+        "title",
+        "track",
+        "score",
+        "verdict",
+        "actionable",
+        "career_type",
+        "start_time",
+        "end_time",
+        "url",
+        "apply_url",
+        "sub_positions",
+        "experienced_positions",
+        "matched_sub_positions",
+        "first_seen",
+        "threshold",
+        "scoring_version",
+        "dropped_out",
+    ]
+
+    lines = ["---"]
+    for k in key_order:
+        if k in fm:
+            lines.append(f"{k}: {yaml_value(fm[k])}")
+    for k, v in fm.items():
+        if k not in key_order:
+            lines.append(f"{k}: {yaml_value(v)}")
+    lines.append("---")
+    return "\n".join(lines) + body
+
 
 
 class PoliteSession:
@@ -594,12 +672,13 @@ def main(argv: list[str] | None = None) -> int:
             "actionable": 0,
             "new": 0,
             "refreshed": 0,
+            "demoted": 0,
             "failures": failures,
         }
         if args.json:
             print(json.dumps(summary, ensure_ascii=False, indent=2))
         else:
-            emit(f"[summary] fetched=0 experienced=0 actionable=0 new=0 failures={len(failures)}")
+            emit(f"[summary] fetched=0 experienced=0 actionable=0 new=0 refreshed=0 demoted=0 failures={len(failures)}")
         return 1
 
     n_fetched = len(calendar_items)
@@ -649,27 +728,78 @@ def main(argv: list[str] | None = None) -> int:
     )
 
     # ---- Phase 4: Stage 2 filter & scoring (assess_shortlist) ----------------
+    evaluated_ids: set[int] = set()
     actionable_candidates: list[
         tuple[dict[str, Any], dict[str, Any], dict[str, Any]]
     ] = []
+    demoted_candidates: list[
+        tuple[int, Path, dict[str, Any], dict[str, Any]]
+    ] = []  # (ann_id, md_path, assessment, existing_fm)
 
     if announcements_with_detail:
         for item, detail_data in announcements_with_detail:
+            ann_id = int(item["id"])
+            evaluated_ids.add(ann_id)
             assessment = assess_announcement(
                 item, detail_data, exclude_patterns, score_threshold
             )
             if assessment["actionable"]:
                 actionable_candidates.append((item, detail_data, assessment))
+            else:
+                md_path = inbox_dir / f"{ann_id}.md"
+                if md_path.exists():
+                    existing_fm = read_frontmatter(md_path)
+                    if existing_fm.get("actionable") is not False and existing_fm.get("verdict") == "actionable":
+                        demoted_candidates.append((ann_id, md_path, assessment, existing_fm))
     elif args.dry_run:
         for item in experienced_items:
+            ann_id = int(item["id"])
+            evaluated_ids.add(ann_id)
             assessment = assess_announcement(
                 item, None, exclude_patterns, score_threshold
             )
             if assessment["actionable"]:
                 actionable_candidates.append((item, {}, assessment))
+            else:
+                md_path = inbox_dir / f"{ann_id}.md"
+                if md_path.exists():
+                    existing_fm = read_frontmatter(md_path)
+                    if existing_fm.get("actionable") is not False and existing_fm.get("verdict") == "actionable":
+                        demoted_candidates.append((ann_id, md_path, assessment, existing_fm))
+
+    # Also check any .md on disk not evaluated via calendar
+    for md_path in sorted(inbox_dir.glob("*.md")):
+        try:
+            ann_id = int(md_path.stem)
+        except ValueError:
+            continue
+        if ann_id in evaluated_ids:
+            continue
+        existing_fm = read_frontmatter(md_path)
+        if existing_fm.get("actionable") is False or existing_fm.get("verdict") != "actionable":
+            continue
+        detail_data = None
+        cache_file = cache_dir / f"{ann_id}.json"
+        if cache_file.exists():
+            try:
+                cached = json.loads(cache_file.read_text(encoding="utf-8"))
+                detail_data = cached.get("detail")
+            except Exception:
+                pass
+        item = {
+            "id": ann_id,
+            "name": existing_fm.get("company", ""),
+            "title": existing_fm.get("title", ""),
+            "end_time": existing_fm.get("end_time"),
+            "start_time": existing_fm.get("start_time"),
+        }
+        assessment = assess_announcement(item, detail_data, exclude_patterns, score_threshold)
+        if not assessment["actionable"]:
+            demoted_candidates.append((ann_id, md_path, assessment, existing_fm))
 
     n_actionable = len(actionable_candidates)
-    emit(f"[filter] fetched={n_fetched} experienced={n_experienced} actionable={n_actionable}")
+    n_demoted = len(demoted_candidates)
+    emit(f"[filter] fetched={n_fetched} experienced={n_experienced} actionable={n_actionable} demoted={n_demoted}")
 
     # Watchlist check
     for item, _, _ in actionable_candidates:
@@ -684,11 +814,20 @@ def main(argv: list[str] | None = None) -> int:
     for item, detail_data, assess in actionable_candidates:
         jid = str(item["id"])
         item_end_time = item.get("end_time")
-        if jid not in seen:
+        md_path = inbox_dir / f"{jid}.md"
+        fm = read_frontmatter(md_path) if md_path.exists() else {}
+        if jid not in seen or not md_path.exists():
             todo.append((item, detail_data, assess, True))
         else:
             prev_end_time = seen[jid].get("end_time")
-            if item_end_time != prev_end_time:
+            prev_version = fm.get("scoring_version")
+            prev_thresh = fm.get("threshold")
+            if (
+                item_end_time != prev_end_time
+                or prev_version != CURRENT_SCORING_VERSION
+                or prev_thresh != score_threshold
+                or fm.get("actionable") is not True
+            ):
                 todo.append((item, detail_data, assess, False))
 
     if args.limit is not None:
@@ -702,10 +841,43 @@ def main(argv: list[str] | None = None) -> int:
         n_new = sum(1 for _, _, _, is_new in todo if is_new)
         n_refreshed = sum(1 for _, _, _, is_new in todo if not is_new)
         emit(
-            f"[dry-run] actionable={n_actionable} would_write_or_update={len(todo)} "
+            f"[dry-run] actionable={n_actionable} demoted={n_demoted} would_write_or_update={len(todo)} "
             f"(new={n_new}, refreshed={n_refreshed}); no files written."
         )
     else:
+        # Write demoted files
+        for ann_id, md_path, assess, existing_fm in demoted_candidates:
+            new_content = demote_markdown(
+                md_path,
+                current_score=assess["fit_score"],
+                threshold=score_threshold,
+                scoring_version=CURRENT_SCORING_VERSION,
+                today_str=today_str,
+                reason=assess.get("reason", "not_actionable"),
+            )
+            try:
+                atomic_write_text(md_path, new_content)
+                emit(
+                    f"[write:demoted] {ann_id}.md — score={assess['fit_score']} "
+                    f"(threshold={score_threshold}) verdict=not_actionable dropped_out={today_str}"
+                )
+            except OSError as exc:
+                err_msg = f"Failed writing demoted {md_path}: {exc}"
+                emit(f"    [demote {ann_id}] ERROR: {exc}")
+                write_failures.append(err_msg)
+                failures.append(err_msg)
+                continue
+
+            jid_str = str(ann_id)
+            if jid_str in seen:
+                seen[jid_str]["verdict"] = "not_actionable"
+                seen[jid_str]["actionable"] = False
+                seen[jid_str]["score"] = assess["fit_score"]
+                seen[jid_str]["threshold"] = score_threshold
+                seen[jid_str]["scoring_version"] = CURRENT_SCORING_VERSION
+                seen[jid_str]["dropped_out"] = today_str
+
+        # Write actionable files
         for item, detail_data, assess, is_new in todo:
             ann_id = int(item["id"])
             jid_str = str(ann_id)
@@ -722,6 +894,9 @@ def main(argv: list[str] | None = None) -> int:
                 "track": assess["track"],
                 "score": assess["fit_score"],
                 "verdict": assess["reason"],
+                "actionable": True,
+                "threshold": score_threshold,
+                "scoring_version": CURRENT_SCORING_VERSION,
                 "career_type": "경력",
                 "start_time": item.get("start_time") or detail_data.get("start_time"),
                 "end_time": item.get("end_time") or detail_data.get("end_time"),
@@ -757,6 +932,9 @@ def main(argv: list[str] | None = None) -> int:
                 "track": posting_record["track"],
                 "score": posting_record["score"],
                 "verdict": posting_record["verdict"],
+                "actionable": True,
+                "threshold": score_threshold,
+                "scoring_version": CURRENT_SCORING_VERSION,
                 "sub_positions": sub_titles,
                 "matched_sub_positions": matched_subs,
             }
@@ -766,7 +944,7 @@ def main(argv: list[str] | None = None) -> int:
                 emit(f"[write:new] {ann_id}.md — {posting_record['title']} @ {posting_record['company']}")
             else:
                 n_refreshed += 1
-                emit(f"[write:refreshed] {ann_id}.md (end_time updated) — {posting_record['title']} @ {posting_record['company']}")
+                emit(f"[write:refreshed] {ann_id}.md (updated) — {posting_record['title']} @ {posting_record['company']}")
 
         try:
             atomic_write_json(state_path, state)
@@ -782,13 +960,14 @@ def main(argv: list[str] | None = None) -> int:
         "actionable": n_actionable,
         "new": n_new,
         "refreshed": n_refreshed,
+        "demoted": n_demoted,
         "failures": failures,
     }
 
     if args.json:
         print(json.dumps(summary, ensure_ascii=False, indent=2))
     else:
-        emit(f"[summary] fetched={n_fetched} experienced={n_experienced} actionable={n_actionable} new={n_new} refreshed={n_refreshed}")
+        emit(f"[summary] fetched={n_fetched} experienced={n_experienced} actionable={n_actionable} new={n_new} refreshed={n_refreshed} demoted={n_demoted}")
         if failures:
             emit(f"[summary] failures encountered ({len(failures)}):")
             for f in failures:

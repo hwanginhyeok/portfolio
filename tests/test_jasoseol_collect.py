@@ -657,6 +657,137 @@ class JasoseolCollectTests(unittest.TestCase):
             self.assertTrue((inbox_dir / "3002.md").exists())
             self.assertFalse((inbox_dir / "3001.md").exists())
 
+    def test_demotion_rewrites_frontmatter_without_losing_other_fields(
+        self,
+    ) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            inbox_dir = Path(tmpdir)
+            file_path = inbox_dir / "106243.md"
+            initial_content = (
+                "---\n"
+                "id: 106243\n"
+                'company: "한국법무보호복지공단"\n'
+                'title: "2026년 신입직원 공개(경력)경쟁채용시험 공고"\n'
+                'track: "core"\n'
+                "score: 30\n"
+                'verdict: "actionable"\n'
+                "actionable: true\n"
+                'career_type: "경력"\n'
+                'start_time: "2026-09-21T00:00:00.000+09:00"\n'
+                'end_time: "2026-09-30T15:00:00.000+09:00"\n'
+                'url: "https://jasoseol.com/recruit/106243"\n'
+                'apply_url: "https://koreha.careerlink.kr/"\n'
+                'sub_positions: ["7급_전국_경력경쟁채용_취업지원직"]\n'
+                'custom_field: "must_be_preserved"\n'
+                "---\n\n"
+                "# 공고 본문 제목\n\n"
+                "- 채용 형태: 경력\n\n"
+                "## 상세 내용\n\n"
+                "공고 상세 본문 텍스트입니다.\n"
+            )
+            file_path.write_text(initial_content, encoding="utf-8")
+
+            # Demote
+            new_content = jasoseol_collect.demote_markdown(
+                file_path,
+                current_score=0,
+                threshold=28,
+                scoring_version=2,
+                today_str="2026-09-20",
+                reason="outside-profile",
+            )
+            file_path.write_text(new_content, encoding="utf-8")
+
+            fm = jasoseol_collect.read_frontmatter(file_path)
+            # Demoted verdict, score, status, drop date, threshold, version
+            self.assertFalse(fm["actionable"])
+            self.assertEqual(fm["verdict"], "not_actionable")
+            self.assertEqual(fm["score"], 0)
+            self.assertEqual(fm["threshold"], 28)
+            self.assertEqual(fm["scoring_version"], 2)
+            self.assertEqual(fm["dropped_out"], "2026-09-20")
+
+            # Preserved other fields
+            self.assertEqual(fm["id"], 106243)
+            self.assertEqual(fm["company"], "한국법무보호복지공단")
+            self.assertEqual(fm["title"], "2026년 신입직원 공개(경력)경쟁채용시험 공고")
+            self.assertEqual(fm["track"], "core")
+            self.assertEqual(fm["career_type"], "경력")
+            self.assertEqual(fm["custom_field"], "must_be_preserved")
+            self.assertEqual(fm["sub_positions"], ["7급_전국_경력경쟁채용_취업지원직"])
+
+            # Preserved body content
+            read_back = file_path.read_text(encoding="utf-8")
+            self.assertIn("# 공고 본문 제목", read_back)
+            self.assertIn("공고 상세 본문 텍스트입니다.", read_back)
+
+            # Integration test via main(): file demoted in run and counted in summary
+            config_file = inbox_dir / "config.json"
+            config_file.write_text(
+                json.dumps(
+                    {
+                        "lookahead_days": 60,
+                        "score_threshold": 28,
+                        "request_delay_seconds": 0.0,
+                    }
+                ),
+                encoding="utf-8",
+            )
+            # Reset file to actionable for main run test
+            file_path.write_text(initial_content, encoding="utf-8")
+            calendar_data = [
+                {
+                    "id": 106243,
+                    "name": "한국법무보호복지공단",
+                    "title": "2026년 신입직원 공개(경력)경쟁채용시험 공고",
+                    "start_time": "2026-09-21T00:00:00.000+09:00",
+                    "end_time": "2026-09-30T15:00:00.000+09:00",
+                    "employments": [{"id": 1, "division": 2}],
+                }
+            ]
+            detail_106243 = {
+                "id": 106243,
+                "name": "한국법무보호복지공단",
+                "title": "2026년 신입직원 공개(경력)경쟁채용시험 공고",
+                "content": "공고 상세",
+                "employments": [
+                    {
+                        "id": 1,
+                        "division": 2,
+                        "field": "7급_전국_경력경쟁채용_취업지원직",
+                    }
+                ],
+            }
+            with patch.object(
+                jasoseol_collect,
+                "fetch_calendar_list",
+                return_value=(calendar_data, None),
+            ), patch.object(
+                jasoseol_collect,
+                "fetch_detail",
+                return_value=(detail_106243, None),
+            ):
+                stdout = io.StringIO()
+                with patch("sys.stdout", stdout):
+                    code = jasoseol_collect.main(
+                        [
+                            "--config",
+                            str(config_file),
+                            "--inbox-dir",
+                            str(inbox_dir),
+                            "--json",
+                        ]
+                    )
+                self.assertEqual(code, 0)
+                res = json.loads(stdout.getvalue())
+                self.assertEqual(res["actionable"], 0)
+                self.assertEqual(res["demoted"], 1)
+
+            fm_after = jasoseol_collect.read_frontmatter(file_path)
+            self.assertFalse(fm_after["actionable"])
+            self.assertEqual(fm_after["verdict"], "not_actionable")
+            self.assertEqual(fm_after["custom_field"], "must_be_preserved")
+
 
 if __name__ == "__main__":
     unittest.main()

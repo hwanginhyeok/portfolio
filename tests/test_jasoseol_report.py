@@ -32,6 +32,8 @@ def make_posting(**overrides) -> dict:
         "track": "core",
         "score": 28,
         "verdict": "actionable",
+        "actionable": True,
+        "scoring_version": 2,
         "career_type": "경력",
         "start_time": "2026-09-01T00:00:00.000+09:00",
         "end_time": "2026-09-25T23:59:00.000+09:00",
@@ -266,6 +268,8 @@ def test_load_postings_filters_by_threshold(tmp_path):
         "title: 모터제어\n"
         "score: 28\n"
         "verdict: actionable\n"
+        "actionable: true\n"
+        "scoring_version: 2\n"
         "---\n",
         encoding="utf-8",
     )
@@ -277,6 +281,8 @@ def test_load_postings_filters_by_threshold(tmp_path):
         "title: 전력전자\n"
         "score: 26\n"
         "verdict: actionable\n"
+        "actionable: true\n"
+        "scoring_version: 2\n"
         "---\n",
         encoding="utf-8",
     )
@@ -288,6 +294,8 @@ def test_load_postings_filters_by_threshold(tmp_path):
         "title: 일반영업\n"
         "score: 18\n"
         "verdict: low-score\n"
+        "actionable: false\n"
+        "scoring_version: 2\n"
         "---\n",
         encoding="utf-8",
     )
@@ -299,6 +307,8 @@ def test_load_postings_filters_by_threshold(tmp_path):
         "title: 경비직\n"
         "score: 30\n"
         "verdict: rejected\n"
+        "actionable: false\n"
+        "scoring_version: 2\n"
         "---\n",
         encoding="utf-8",
     )
@@ -317,14 +327,14 @@ def test_live_inbox_loads_and_renders():
     for p in postings:
         assert p["company"], f"Missing company in {p['id']}"
         assert p["title"], f"Missing title in {p['id']}"
-        assert p["score"] >= 26, f"Posting {p['id']} score {p['score']} below threshold"
+        assert p["score"] >= 28, f"Posting {p['id']} score {p['score']} below threshold"
 
     html_out = jr.render_html(postings, today=date(2026, 9, 20))
     assert "<!doctype html>" in html_out
     assert "마감 캘린더" in html_out
     assert "추천 공고 목록" in html_out
-    assert "NHN" in html_out
-    assert "린데코리아" in html_out
+    assert "현대모비스" in html_out
+    assert "한국법무보호복지공단" not in html_out
 
 
 def test_cli_html_and_dry_run(tmp_path):
@@ -334,4 +344,140 @@ def test_cli_html_and_dry_run(tmp_path):
     assert out_file.exists()
     content = out_file.read_text(encoding="utf-8")
     assert "<!doctype html>" in content
+
+
+# ── 9. New scoring version, demotion, and deadline filtering ─────────────────
+
+def test_stale_record_with_old_scoring_version_is_skipped(tmp_path, capsys):
+    inbox = tmp_path / "inbox"
+    inbox.mkdir()
+
+    # Posting with old scoring version (v1)
+    (inbox / "101.md").write_text(
+        "---\n"
+        "id: 101\n"
+        "company: 과거기업\n"
+        "title: 과거직무\n"
+        "score: 30\n"
+        "verdict: actionable\n"
+        "actionable: true\n"
+        "scoring_version: 1\n"
+        "---\n",
+        encoding="utf-8",
+    )
+    # Posting with missing scoring version
+    (inbox / "102.md").write_text(
+        "---\n"
+        "id: 102\n"
+        "company: 구버전기업\n"
+        "title: 구버전직무\n"
+        "score: 30\n"
+        "verdict: actionable\n"
+        "actionable: true\n"
+        "---\n",
+        encoding="utf-8",
+    )
+    # Posting with current scoring version (v2)
+    (inbox / "103.md").write_text(
+        "---\n"
+        "id: 103\n"
+        "company: 현재기업\n"
+        "title: 현재직무\n"
+        "score: 30\n"
+        "verdict: actionable\n"
+        "actionable: true\n"
+        "scoring_version: 2\n"
+        "---\n",
+        encoding="utf-8",
+    )
+
+    loaded = jr.load_postings(inbox, min_score=28)
+    loaded_ids = {p["id"] for p in loaded}
+
+    assert loaded_ids == {"103"}
+    out = capsys.readouterr().out
+    assert "WARNING: skipped 2 posting(s) evaluated under older scoring version" in out
+
+
+def test_posting_demoted_below_threshold_is_excluded(tmp_path):
+    inbox = tmp_path / "inbox"
+    inbox.mkdir()
+
+    # Posting demoted below threshold
+    (inbox / "106243.md").write_text(
+        "---\n"
+        "id: 106243\n"
+        "company: 한국법무보호복지공단\n"
+        "title: 취업지원직\n"
+        "score: 0\n"
+        "verdict: not_actionable\n"
+        "actionable: false\n"
+        "scoring_version: 2\n"
+        "dropped_out: 2026-09-20\n"
+        "---\n",
+        encoding="utf-8",
+    )
+    # Actionable posting
+    (inbox / "106170.md").write_text(
+        "---\n"
+        "id: 106170\n"
+        "company: 현대모비스\n"
+        "title: 로보틱스\n"
+        "score: 86\n"
+        "verdict: actionable\n"
+        "actionable: true\n"
+        "scoring_version: 2\n"
+        "---\n",
+        encoding="utf-8",
+    )
+
+    loaded = jr.load_postings(inbox, min_score=28)
+    loaded_ids = {p["id"] for p in loaded}
+
+    assert loaded_ids == {"106170"}
+    assert "106243" not in loaded_ids
+
+
+def test_posting_whose_deadline_has_passed_is_excluded(tmp_path, capsys):
+    inbox = tmp_path / "inbox"
+    inbox.mkdir()
+
+    today = date(2026, 9, 20)
+    # Posting with deadline in the past
+    (inbox / "201.md").write_text(
+        "---\n"
+        "id: 201\n"
+        "company: 마감완료기업\n"
+        "title: 마감직무\n"
+        "score: 30\n"
+        "verdict: actionable\n"
+        "actionable: true\n"
+        "scoring_version: 2\n"
+        "end_time: 2026-09-19T23:59:00.000+09:00\n"
+        "---\n",
+        encoding="utf-8",
+    )
+    # Posting with future deadline
+    (inbox / "202.md").write_text(
+        "---\n"
+        "id: 202\n"
+        "company: 진행중기업\n"
+        "title: 진행직무\n"
+        "score: 30\n"
+        "verdict: actionable\n"
+        "actionable: true\n"
+        "scoring_version: 2\n"
+        "end_time: 2026-09-25T23:59:00.000+09:00\n"
+        "---\n",
+        encoding="utf-8",
+    )
+
+    loaded = jr.load_postings(inbox, min_score=28, today=today)
+    loaded_ids = {p["id"] for p in loaded}
+
+    assert loaded_ids == {"202"}
+    assert "201" not in loaded_ids
+    out = capsys.readouterr().out
+    assert "skipped 1 posting(s) whose deadline has already passed" in out
+
 
