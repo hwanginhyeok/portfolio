@@ -6,7 +6,8 @@ Covers:
   - Urgent marking window (deadlines within the next 3 days)
   - HTML escaping of hostile strings (XSS prevention in company/title/sub-positions/URLs)
   - Sorting actionable postings by deadline ascending (with missing deadlines last)
-  - The empty case that refuses to send and exits 0
+  - The empty case that sends a plain Telegram message without HTML
+  - The non-empty case that sends the HTML document without a plain message
   - Accurate caption counts for actionable postings and urgent deadlines
   - Shortlist threshold filtering
 """
@@ -16,6 +17,7 @@ from __future__ import annotations
 import json
 from datetime import date, datetime
 from pathlib import Path
+from urllib.parse import parse_qs
 from unittest.mock import MagicMock, patch
 
 import pytest
@@ -188,41 +190,113 @@ def test_table_renders_rows_sorted_by_deadline():
     assert early_idx < late_idx, "Early deadline must appear before late deadline in table"
 
 
-# ── 5. Empty case refuses to send ───────────────────────────────────────────
+# ── 5. Telegram delivery modes ──────────────────────────────────────────────
 
-def test_empty_inbox_refuses_to_send_and_exits_zero(tmp_path):
+def telegram_response() -> MagicMock:
+    response = MagicMock()
+    response.__enter__.return_value = response
+    response.read.return_value = b'{"ok": true}'
+    response.status = 200
+    return response
+
+
+def write_telegram_env(tmp_path: Path) -> Path:
+    env_path = tmp_path / "telegram.env"
+    env_path.write_text(
+        "PM_BOT_TOKEN=123:offline-test-token\nPM_BOT_CHAT_ID=456\n",
+        encoding="utf-8",
+    )
+    return env_path
+
+
+def test_empty_inbox_sends_plain_message_without_html(tmp_path):
     empty_inbox = tmp_path / "empty_inbox"
     empty_inbox.mkdir()
+    env_path = write_telegram_env(tmp_path)
+    report_dir = tmp_path / "report"
 
-    with patch("urllib.request.urlopen") as mock_urlopen:
-        exit_code = jr.main(["--inbox-dir", str(empty_inbox), "--telegram"])
-        assert exit_code == 0
-        # When empty, telegram send must NOT be attempted
-        mock_urlopen.assert_not_called()
+    with patch("scripts.jasoseol_report.urllib.request.urlopen", return_value=telegram_response()) as mock_urlopen:
+        exit_code = jr.main([
+            "--inbox-dir", str(empty_inbox), "--report-dir", str(report_dir),
+            "--env", str(env_path), "--telegram",
+        ])
+
+    assert exit_code == 0
+    mock_urlopen.assert_called_once()
+    request = mock_urlopen.call_args.args[0]
+    assert request.full_url.endswith("/sendMessage")
+    assert "sendDocument" not in request.full_url
+    body = parse_qs(request.data.decode("utf-8"))
+    assert body["chat_id"] == ["456"]
+    assert "오늘은 새로운 추천 공고가 없습니다." in body["text"][0]
+    assert "경력 공고 0건을 검토했고 0건을 필터링했습니다." in body["text"][0]
+    assert not report_dir.exists()
 
 
-def test_inbox_with_only_rejected_postings_refuses_to_send(tmp_path):
+def test_empty_inbox_message_includes_examined_and_filtered_counts(tmp_path):
     inbox = tmp_path / "rejected_inbox"
     inbox.mkdir()
+    env_path = write_telegram_env(tmp_path)
 
-    # Posting that scored below threshold and was rejected
-    file1 = inbox / "101.md"
-    file1.write_text(
+    for posting_id in ("101", "102"):
+        (inbox / f"{posting_id}.md").write_text(
+            "---\n"
+            f"id: {posting_id}\n"
+            "company: 탈락회사\n"
+            "title: 무관직무\n"
+            "score: 12\n"
+            "verdict: rejected\n"
+            "actionable: false\n"
+            "career_type: 경력\n"
+            "---\n"
+            "# 탈락공고\n",
+            encoding="utf-8",
+        )
+
+    with patch("scripts.jasoseol_report.urllib.request.urlopen", return_value=telegram_response()) as mock_urlopen:
+        exit_code = jr.main([
+            "--inbox-dir", str(inbox), "--env", str(env_path), "--telegram",
+        ])
+
+    assert exit_code == 0
+    request = mock_urlopen.call_args.args[0]
+    body = parse_qs(request.data.decode("utf-8"))
+    assert "경력 공고 2건을 검토했고 2건을 필터링했습니다." in body["text"][0]
+
+
+def test_non_empty_telegram_run_sends_document_without_plain_message(tmp_path):
+    inbox = tmp_path / "inbox"
+    inbox.mkdir()
+    env_path = write_telegram_env(tmp_path)
+    report_dir = tmp_path / "report"
+    (inbox / "101.md").write_text(
         "---\n"
         "id: 101\n"
-        "company: 탈락회사\n"
-        "title: 무관직무\n"
-        "score: 12\n"
-        "verdict: rejected\n"
-        "---\n"
-        "# 탈락공고\n",
+        "company: 추천회사\n"
+        "title: 임베디드 엔지니어\n"
+        "score: 30\n"
+        "verdict: actionable\n"
+        "actionable: true\n"
+        "career_type: 경력\n"
+        "scoring_version: 2\n"
+        "end_time: 2026-09-25T23:59:00.000+09:00\n"
+        "---\n",
         encoding="utf-8",
     )
 
-    with patch("urllib.request.urlopen") as mock_urlopen:
-        exit_code = jr.main(["--inbox-dir", str(inbox), "--telegram"])
-        assert exit_code == 0
-        mock_urlopen.assert_not_called()
+    with patch("scripts.jasoseol_report.urllib.request.urlopen", return_value=telegram_response()) as mock_urlopen:
+        exit_code = jr.main([
+            "--inbox-dir", str(inbox), "--report-dir", str(report_dir),
+            "--env", str(env_path), "--telegram",
+        ])
+
+    assert exit_code == 0
+    mock_urlopen.assert_called_once()
+    request = mock_urlopen.call_args.args[0]
+    assert request.full_url.endswith("/sendDocument")
+    assert "sendMessage" not in request.full_url
+    assert b'name="document"' in request.data
+    assert list(report_dir.glob("jasoseol-*.html"))
 
 
 # ── 6. Caption counts ───────────────────────────────────────────────────────
@@ -479,5 +553,3 @@ def test_posting_whose_deadline_has_passed_is_excluded(tmp_path, capsys):
     assert "201" not in loaded_ids
     out = capsys.readouterr().out
     assert "skipped 1 posting(s) whose deadline has already passed" in out
-
-

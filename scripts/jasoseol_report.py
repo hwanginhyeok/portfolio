@@ -28,6 +28,7 @@ import urllib.request
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlencode
 
 try:
     from scripts.shortlist import (
@@ -516,18 +517,31 @@ def is_deadline_passed(
     return dt < ref_dt
 
 
+def is_experienced_hire(frontmatter: dict[str, Any]) -> bool:
+    """Return whether a posting is marked as an experienced-hire announcement."""
+    career_type = str(frontmatter.get("career_type") or "").strip().lower()
+    return career_type in {"경력", "experienced", "experienced hire", "experienced_hire"}
+
+
 def load_postings(
     inbox_dir: Path,
     min_score: int | None = None,
     config_path: Path | None = None,
     today: date | str | None = None,
     current_scoring_version: int = CURRENT_SCORING_VERSION,
+    stats: dict[str, int] | None = None,
 ) -> list[dict[str, Any]]:
     """Load actionable postings from inbox directory.
 
     Only postings that passed the shortlist threshold with a future deadline
     and evaluated under the current scoring version appear in the report.
+    When ``stats`` is provided, it receives experienced-hire examined and
+    filtered counts for the run.
     """
+    if stats is not None:
+        stats.clear()
+        stats.update({"examined": 0, "filtered": 0})
+
     if not inbox_dir.exists():
         return []
 
@@ -557,11 +571,16 @@ def load_postings(
         fm = read_frontmatter(md_file)
         if not fm:
             continue
+        experienced_hire = is_experienced_hire(fm)
+        if stats is not None and experienced_hire:
+            stats["examined"] += 1
 
         # Check scoring version
         version = fm.get("scoring_version")
         if is_older_scoring_version(version, current_scoring_version):
             stale_version_count += 1
+            if stats is not None and experienced_hire:
+                stats["filtered"] += 1
             continue
 
         score = int(fm.get("score", 0) or 0)
@@ -569,15 +588,23 @@ def load_postings(
         actionable_flag = fm.get("actionable")
 
         if actionable_flag is False or verdict in ("rejected", "not_actionable"):
+            if stats is not None and experienced_hire:
+                stats["filtered"] += 1
             continue
         if score < min_score:
+            if stats is not None and experienced_hire:
+                stats["filtered"] += 1
             continue
         if actionable_flag is not True and verdict != "actionable":
+            if stats is not None and experienced_hire:
+                stats["filtered"] += 1
             continue
 
         end_time = fm.get("end_time")
         if is_deadline_passed(end_time, now_or_today=today_d):
             passed_deadline_count += 1
+            if stats is not None and experienced_hire:
+                stats["filtered"] += 1
             continue
 
         pid = str(fm.get("id") if fm.get("id") is not None else md_file.stem)
@@ -749,6 +776,14 @@ def make_caption(
             lines.append(f"  … 외 {len(ordered) - 5}건")
 
     return "\n".join(lines)
+
+
+def make_empty_message(examined_count: int, filtered_count: int) -> str:
+    """Generate the short Telegram message for a quiet recommendation day."""
+    return (
+        "오늘은 새로운 추천 공고가 없습니다. "
+        f"경력 공고 {examined_count}건을 검토했고 {filtered_count}건을 필터링했습니다."
+    )
 
 
 def render_html(
@@ -980,12 +1015,44 @@ def send_report_via_telegram(path: Path, caption_text: str, env_path: Path) -> b
     )
     try:
         with urllib.request.urlopen(req, timeout=60) as resp:
-            ok = bool(json.loads(resp.read()).get("ok"))
+            result = json.loads(resp.read())
+            ok = bool(result.get("ok"))
+            http_status = getattr(resp, "status", None)
+            status_text = str(http_status) if isinstance(http_status, int) else "unknown"
+            log(f"[telegram] sendDocument API response: HTTP {status_text}, ok={'true' if ok else 'false'}")
     except Exception as exc:
         log(f"WARNING: telegram sendDocument failed: {TOKEN_IN_URL.sub('bot***', str(exc))}")
         return False
     if not ok:
         log("WARNING: telegram sendDocument returned ok=false; report not confirmed sent")
+    return ok
+
+
+def send_message_via_telegram(message_text: str, env_path: Path) -> bool:
+    """Send a plain text message to the operator Telegram bot via sendMessage."""
+    creds = telegram_creds(env_path)
+    if creds is None:
+        log(f"WARNING: Telegram credentials not found in {env_path}; message not sent")
+        return False
+    token, chat = creds
+    body = urlencode({"chat_id": chat, "text": message_text}).encode("utf-8")
+    req = urllib.request.Request(
+        f"https://api.telegram.org/bot{token}/sendMessage",
+        data=body,
+        headers={"Content-Type": "application/x-www-form-urlencoded"},
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            result = json.loads(resp.read())
+            ok = bool(result.get("ok"))
+            http_status = getattr(resp, "status", None)
+            status_text = str(http_status) if isinstance(http_status, int) else "unknown"
+            log(f"[telegram] sendMessage API response: HTTP {status_text}, ok={'true' if ok else 'false'}")
+    except Exception as exc:
+        log(f"WARNING: telegram sendMessage failed: {TOKEN_IN_URL.sub('bot***', str(exc))}")
+        return False
+    if not ok:
+        log("WARNING: telegram sendMessage returned ok=false; message not confirmed sent")
     return ok
 
 
@@ -1023,15 +1090,30 @@ def main(argv: list[str] | None = None) -> int:
         today = datetime.now(KST).date()
     today_str = today.strftime("%Y-%m-%d")
 
+    load_stats: dict[str, int] = {}
     postings = load_postings(
         args.inbox_dir,
         min_score=args.min_score,
         config_path=args.config,
         today=today,
+        stats=load_stats,
     )
 
     if not postings:
-        log(f"[jasoseol_report] no actionable postings found in {args.inbox_dir}; report will not be generated or sent.")
+        log(
+            f"[jasoseol_report] no actionable postings found in {args.inbox_dir}; "
+            "report will not be generated."
+        )
+        if args.telegram:
+            empty_message = make_empty_message(
+                load_stats.get("examined", 0), load_stats.get("filtered", 0)
+            )
+            if args.dry_run:
+                log(f"[dry-run] telegram send skipped (--dry-run). Message: {empty_message}")
+            elif send_message_via_telegram(empty_message, args.env):
+                log("[telegram] empty-result message delivered to PM bot")
+            else:
+                log("[telegram] empty-result message delivery failed or not attempted")
         return 0
 
     html_content = render_html(postings, today=today)
