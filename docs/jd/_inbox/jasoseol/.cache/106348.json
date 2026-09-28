@@ -1,0 +1,384 @@
+{
+  "id": 106348,
+  "end_time": "2026-10-08T15:00:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106348,
+    "name": "한국선급",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/003/502/webp/data.webp?1684486284",
+    "employment_page_url": "https://krs.recruit-zone.co.kr/",
+    "start_time": "2026-09-24T10:00:00.000+09:00",
+    "end_time": "2026-10-08T15:00:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/370/131/webp/image.webp?1789714563\" alt=\"한국선급 2026년도 직원 채용 공고 (제2차)\"></div></body></html>\n",
+    "target": 0,
+    "created_at": "2026-09-18T15:56:06.000+09:00",
+    "recruit_type": 0,
+    "view_count": 4140,
+    "favorite_count": 125,
+    "homepage_count": 55,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 9838,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "2026년도 직원 채용 공고 (제2차)",
+    "resume_expose": false,
+    "company_group": {
+      "id": 3502,
+      "name": "한국선급",
+      "business_size": null,
+      "business_type": "public_institution",
+      "created_at": "2016-03-07T16:24:33.000+09:00",
+      "updated_at": "2023-05-19T17:51:24.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/003/502/original/data?1684486284",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 430619,
+        "field": "선체검사(조선)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          185,
+          189,
+          202,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 430620,
+        "field": "선체검사",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          185,
+          189,
+          202,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 430621,
+        "field": "기관검사",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          185,
+          189,
+          227,
+          183,
+          216
+        ],
+        "apply": null
+      },
+      {
+        "id": 430622,
+        "field": "잠수함/잠수장비 검사",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          185,
+          189,
+          202,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 430623,
+        "field": "선체/기본 도면 심사 및 승인",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          219,
+          226,
+          207,
+          216
+        ],
+        "apply": null
+      },
+      {
+        "id": 430624,
+        "field": "기관/배관 도면 심사 및 승인",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          219,
+          227,
+          207,
+          216
+        ],
+        "apply": null
+      },
+      {
+        "id": 430625,
+        "field": "기관분야 선급규칙 개발",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          227,
+          219,
+          113,
+          103,
+          216
+        ],
+        "apply": null
+      },
+      {
+        "id": 430626,
+        "field": "선박사이버보안 도면검토 및 승인",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          166,
+          220,
+          222
+        ],
+        "apply": null
+      },
+      {
+        "id": 430627,
+        "field": "재료/용접 기술검토 및 승인",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          223,
+          189,
+          219,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 430628,
+        "field": "함정 기본/전장 계산 및 도면승인",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          219,
+          220,
+          226,
+          216
+        ],
+        "apply": null
+      },
+      {
+        "id": 430629,
+        "field": "풍력인증(전기/지반)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          230,
+          220,
+          206,
+          217
+        ],
+        "apply": null
+      },
+      {
+        "id": 430630,
+        "field": "AI서비스 및 시뮬레이션 개발",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          167,
+          176,
+          171,
+          162
+        ],
+        "apply": null
+      },
+      {
+        "id": 430631,
+        "field": "기관시스템 CBM",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          167,
+          180,
+          227,
+          163,
+          216
+        ],
+        "apply": null
+      },
+      {
+        "id": 430632,
+        "field": "AI 개발(엔지니어링 소프트웨어)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          167,
+          176,
+          170,
+          162
+        ],
+        "apply": null
+      },
+      {
+        "id": 430633,
+        "field": "대체연료 기관/기자재 연구",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          227,
+          229,
+          230,
+          216,
+          217
+        ],
+        "apply": null
+      },
+      {
+        "id": 430634,
+        "field": "항해/전기전자/기관 연구개발",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          220,
+          227,
+          167,
+          216
+        ],
+        "apply": null
+      },
+      {
+        "id": 430635,
+        "field": "친환경선박 연구개발",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          226,
+          229,
+          231,
+          216,
+          217
+        ],
+        "apply": null
+      },
+      {
+        "id": 430636,
+        "field": "공정/원자력선박 위험도평가",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          226,
+          229,
+          191,
+          184,
+          216,
+          217
+        ],
+        "apply": null
+      },
+      {
+        "id": 430637,
+        "field": "선박/해양구조물/함정 구조 해석",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          226,
+          219,
+          227,
+          216
+        ],
+        "apply": null
+      },
+      {
+        "id": 430638,
+        "field": "ISO 인증심사 전문가",
+        "division": 4,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          189,
+          113,
+          255,
+          103,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 430639,
+        "field": "감사 전문가",
+        "division": 4,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          113,
+          108,
+          109,
+          103
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

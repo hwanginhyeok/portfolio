@@ -33,3 +33,4 @@ docs/jd/_inbox/*/report/
 
 # 지원현황 리포트 HTML — 매일 재생성되고 비서봇으로 전달된다. 원본은 applications.json.
 docs/jd/report/
+coordination/runtime-instructions/

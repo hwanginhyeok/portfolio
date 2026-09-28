@@ -1,0 +1,58 @@
+{
+  "id": 106413,
+  "end_time": "2026-10-05T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106413,
+    "name": "AXA손해보험",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/001/264/webp/AXA_Logo.webp?1684485388",
+    "employment_page_url": "https://axa.career.greetinghr.com/ko/o/238040",
+    "start_time": "2026-09-22T17:00:00.000+09:00",
+    "end_time": "2026-10-05T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div style=\"position:relative;\"><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/370/597/webp/%EC%9D%B8%EC%82%AC%EA%B8%B0%ED%9A%8D%ED%8C%80_%EB%85%B8%EB%AC%B4%28ER%29_%EB%8B%B4%EB%8B%B9%EC%9E%90_%EC%B1%84%EC%9A%A9.webp?1790063794\" alt=\"AXA손해보험 인사기획팀 노무(ER) 담당자 경력 채용\"></div></body></html>\n",
+    "target": 4,
+    "created_at": "2026-09-22T17:10:06.000+09:00",
+    "recruit_type": 0,
+    "view_count": 195,
+    "favorite_count": 2,
+    "homepage_count": 0,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 5155,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "인사기획팀 노무(ER) 담당자 경력 채용",
+    "resume_expose": true,
+    "company_group": {
+      "id": 1264,
+      "name": "AXA손해보험",
+      "business_size": "big_business",
+      "business_type": null,
+      "created_at": "2015-09-10T05:49:22.000+09:00",
+      "updated_at": "2023-05-19T17:36:29.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/001/264/original/AXA_Logo.png?1684485388",
+      "alternate_names": [
+        "악사손해보험"
+      ],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 431179,
+        "field": "노무(ER) 담당자",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          115,
+          116,
+          104
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

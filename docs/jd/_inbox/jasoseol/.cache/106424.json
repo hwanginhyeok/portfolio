@@ -1,0 +1,316 @@
+{
+  "id": 106424,
+  "end_time": "2026-10-06T10:00:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106424,
+    "name": "하나은행",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/000/242/webp/%ED%95%98%EB%82%98%EC%9D%80%ED%96%89_%EB%A1%9C%EA%B3%A0_%281%29.webp?1701312380",
+    "employment_page_url": "https://job.incruit.com/jobdb_info/popupjobpost.asp?job=2609220003343&inOut=In",
+    "start_time": "2026-09-22T00:00:00.000+09:00",
+    "end_time": "2026-10-06T10:00:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/370/691/webp/image.webp?1790127991\" alt=\"하나은행 2026년 하반기 NEXT CAREER 경력 정규직 채용\"></div></body></html>\n",
+    "target": 0,
+    "created_at": "2026-09-23T10:46:41.000+09:00",
+    "recruit_type": 0,
+    "view_count": 6707,
+    "favorite_count": 305,
+    "homepage_count": 67,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 4133,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "2026년 하반기 NEXT CAREER 경력 정규직 채용",
+    "resume_expose": true,
+    "company_group": {
+      "id": 242,
+      "name": "하나은행",
+      "business_size": "big_business",
+      "business_type": null,
+      "created_at": "2015-09-10T05:46:41.000+09:00",
+      "updated_at": "2023-11-30T11:46:21.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/000/242/original/%ED%95%98%EB%82%98%EC%9D%80%ED%96%89_%EB%A1%9C%EA%B3%A0_%281%29.png?1701312380",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 431216,
+        "field": "기업금융",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 12,
+        "end_time": null,
+        "duty_group_ids": [
+          194,
+          196,
+          213
+        ],
+        "apply": null
+      },
+      {
+        "id": 431217,
+        "field": "IB_투자금융 프로세스 운영",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 4,
+        "end_time": null,
+        "duty_group_ids": [
+          210,
+          211,
+          215
+        ],
+        "apply": null
+      },
+      {
+        "id": 431218,
+        "field": "연금/신탁_퇴직연금상품 개발 및 라인업 관리",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          138,
+          211,
+          137,
+          132
+        ],
+        "apply": null
+      },
+      {
+        "id": 431219,
+        "field": "연금/신탁_신탁상품 개발 및 운용",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          138,
+          211,
+          210,
+          132
+        ],
+        "apply": null
+      },
+      {
+        "id": 431220,
+        "field": "연금/신탁_시니어 상품기획 및 마케팅",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 6,
+        "end_time": null,
+        "duty_group_ids": [
+          138,
+          134,
+          137,
+          135,
+          132
+        ],
+        "apply": null
+      },
+      {
+        "id": 431221,
+        "field": "리스크_신용평가모형 개발",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 3,
+        "end_time": null,
+        "duty_group_ids": [
+          180,
+          167,
+          113,
+          103,
+          163
+        ],
+        "apply": null
+      },
+      {
+        "id": 431222,
+        "field": "리스크_자금운용 미들오피스",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          122,
+          125,
+          113,
+          103,
+          105
+        ],
+        "apply": null
+      },
+      {
+        "id": 431223,
+        "field": "리스크_리스크 검증",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          113,
+          180,
+          167,
+          103,
+          163
+        ],
+        "apply": null
+      },
+      {
+        "id": 431224,
+        "field": "자금_FX·자금 결제 및 정산",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          125,
+          122,
+          106,
+          105
+        ],
+        "apply": null
+      },
+      {
+        "id": 431225,
+        "field": "자금_채권운용",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          211,
+          210,
+          122,
+          105
+        ],
+        "apply": null
+      },
+      {
+        "id": 431226,
+        "field": "외환_외환·수출입 규정 및 상품서비스 개발",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 2,
+        "end_time": null,
+        "duty_group_ids": [
+          154,
+          155,
+          138,
+          132,
+          146
+        ],
+        "apply": null
+      },
+      {
+        "id": 431227,
+        "field": "여신관리_기업구조조정",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          213,
+          113,
+          256,
+          103
+        ],
+        "apply": null
+      },
+      {
+        "id": 431228,
+        "field": "글로벌_글로벌 전략기획",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 2,
+        "end_time": null,
+        "duty_group_ids": [
+          111,
+          112,
+          113,
+          154,
+          103,
+          146
+        ],
+        "apply": null
+      },
+      {
+        "id": 431229,
+        "field": "AI/ICT_AI 인프라 / 클라우드 / 아키텍처",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          166,
+          167,
+          164
+        ],
+        "apply": null
+      },
+      {
+        "id": 431230,
+        "field": "AI/ICT_AI·데이터 플랫폼 구축 및 운영",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 5,
+        "end_time": null,
+        "duty_group_ids": [
+          167,
+          179,
+          166,
+          163
+        ],
+        "apply": null
+      },
+      {
+        "id": 431231,
+        "field": "AI/ICT_정보보호 (AI·블록체인 보안)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          166,
+          167,
+          108
+        ],
+        "apply": null
+      },
+      {
+        "id": 431232,
+        "field": "AI/ICT_딜링룸 시스템 개발 및 운영",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 7,
+        "end_time": null,
+        "duty_group_ids": [
+          176,
+          164,
+          166,
+          162
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

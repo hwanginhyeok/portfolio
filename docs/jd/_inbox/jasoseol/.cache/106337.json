@@ -1,0 +1,273 @@
+{
+  "id": 106337,
+  "end_time": "2026-10-06T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106337,
+    "name": "팜스코",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/002/622/webp/data.webp?1684485945",
+    "employment_page_url": "https://harimcareers.com/harimholdings/page/user/farmsco/recruit_view?target=37702",
+    "start_time": "2026-09-21T00:00:00.000+09:00",
+    "end_time": "2026-10-06T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/370/051/webp/image.webp?1789705090\" alt=\"팜스코 2026년 신입/경력 공개채용\"></div></body></html>\n",
+    "target": 0,
+    "created_at": "2026-09-18T13:18:21.000+09:00",
+    "recruit_type": 0,
+    "view_count": 1928,
+    "favorite_count": 44,
+    "homepage_count": 15,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 6709,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "2026년 신입/경력 공개채용",
+    "resume_expose": true,
+    "company_group": {
+      "id": 2622,
+      "name": "팜스코",
+      "business_size": "big_business",
+      "business_type": null,
+      "created_at": "2015-09-16T14:13:44.000+09:00",
+      "updated_at": "2023-05-19T17:45:45.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/002/622/original/data?1684485945",
+      "alternate_names": [
+        "FARMSCO"
+      ],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 430528,
+        "field": "[팜스코] 사료사업_사료영업",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          194,
+          196,
+          201
+        ],
+        "apply": null
+      },
+      {
+        "id": 430529,
+        "field": "[팜스코] 사료사업_펫푸드영업",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          194,
+          196
+        ],
+        "apply": null
+      },
+      {
+        "id": 430530,
+        "field": "[팜스코] 사료사업_품질관리",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 2,
+        "end_time": null,
+        "duty_group_ids": [
+          189,
+          160,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 430531,
+        "field": "[팜스코] 사료사업_생산관리(설비)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          187,
+          185,
+          186,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 430532,
+        "field": "[팜스코] 사료사업_사료 배합설계",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          234,
+          235,
+          113,
+          103,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 430533,
+        "field": "[팜스코] 신선·육가공사업_신선정육영업",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          194,
+          196
+        ],
+        "apply": null
+      },
+      {
+        "id": 430534,
+        "field": "[팜스코] 신선·육가공사업_육가공영업",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          194,
+          196
+        ],
+        "apply": null
+      },
+      {
+        "id": 430535,
+        "field": "[팜스코] 신선·육가공사업_생산관리(설비)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          187,
+          185,
+          186,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 430536,
+        "field": "[팜스코] 신선·육가공사업_생산관리",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          187,
+          152,
+          145,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 430537,
+        "field": "[팜스코] 공통_공정거래 CP",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          108,
+          255
+        ],
+        "apply": null
+      },
+      {
+        "id": 430538,
+        "field": "[팜스코] 공통_AI 엔지니어",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          167,
+          176,
+          179,
+          162,
+          163
+        ],
+        "apply": null
+      },
+      {
+        "id": 430539,
+        "field": "[팜스코] 공통_시설환경컨설팅",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          202,
+          207,
+          113,
+          103
+        ],
+        "apply": null
+      },
+      {
+        "id": 430540,
+        "field": "[팜스코바이오인티] 계열화사업_농장관리",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          187,
+          180,
+          167,
+          163,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 430541,
+        "field": "[팜엔코] 계열화사업_수처리관리",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          192,
+          186,
+          184
+        ],
+        "apply": null
+      },
+      {
+        "id": 430542,
+        "field": "[팜엔코] 계열화사업_비료영업",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          194,
+          196
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

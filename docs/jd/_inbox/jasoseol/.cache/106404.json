@@ -1,0 +1,169 @@
+{
+  "id": 106404,
+  "end_time": "2026-10-12T18:00:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106404,
+    "name": "동서식품",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/002/729/webp/B67FslnhrbOFCkPXyZ4Cgwm0p4hBbwShguHjoQnrFyROsq1KqcP5fkmlab8zn8XC62F6fYV9Kayhl-_aqGzb8w.webp?1700177435",
+    "employment_page_url": "https://dsf.recruiter.co.kr/career/jobs/128460?utm_source=jasoseol&utm_medium=banner&utm_campaign=2609dsf",
+    "start_time": "2026-09-28T00:00:00.000+09:00",
+    "end_time": "2026-10-12T18:00:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/370/680/webp/%EB%8F%99%EC%84%9C%EC%8B%9D%ED%92%88_2026_F.webp?1790125958\" alt=\"동서식품 2026년 대졸 신입/경력사원 채용\"></div></body></html>\n",
+    "target": 0,
+    "created_at": "2026-09-22T14:40:11.000+09:00",
+    "recruit_type": 0,
+    "view_count": 2436,
+    "favorite_count": 309,
+    "homepage_count": 27,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 7278,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "2026년 대졸 신입/경력사원 채용",
+    "resume_expose": true,
+    "company_group": {
+      "id": 2729,
+      "name": "동서식품",
+      "business_size": "middle_market",
+      "business_type": null,
+      "created_at": "2015-10-05T14:15:37.000+09:00",
+      "updated_at": "2023-11-17T08:30:35.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/002/729/original/B67FslnhrbOFCkPXyZ4Cgwm0p4hBbwShguHjoQnrFyROsq1KqcP5fkmlab8zn8XC62F6fYV9Kayhl-_aqGzb8w.png?1700177435",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 430999,
+        "field": "영업",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 19,
+        "end_time": null,
+        "duty_group_ids": [
+          194,
+          196,
+          197
+        ],
+        "apply": null
+      },
+      {
+        "id": 431000,
+        "field": "일반관리",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 7,
+        "end_time": null,
+        "duty_group_ids": [
+          115,
+          108,
+          128,
+          127,
+          104,
+          107
+        ],
+        "apply": null
+      },
+      {
+        "id": 431001,
+        "field": "제조",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 10,
+        "end_time": null,
+        "duty_group_ids": [
+          187,
+          185,
+          191,
+          192,
+          183,
+          184
+        ],
+        "apply": null
+      },
+      {
+        "id": 431002,
+        "field": "연구",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 2,
+        "end_time": null,
+        "duty_group_ids": [
+          235,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 431003,
+        "field": "물류",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 8,
+        "end_time": null,
+        "duty_group_ids": [
+          150,
+          151,
+          145
+        ],
+        "apply": null
+      },
+      {
+        "id": 431004,
+        "field": "전산",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 6,
+        "end_time": null,
+        "duty_group_ids": [
+          167,
+          179,
+          180,
+          166,
+          163
+        ],
+        "apply": null
+      },
+      {
+        "id": 431005,
+        "field": "연구(QA)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          189,
+          160,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 431006,
+        "field": "디자인",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          241,
+          238,
+          243,
+          237
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": true
+  }
+}

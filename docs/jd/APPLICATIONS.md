@@ -1,6 +1,6 @@
 # 지원 이력 (APPLICATIONS)
 
-> 생성: 2026-09-08 · `scripts/applications_report.py` 자동 생성 — 직접 고치지 말 것.
+> 생성: 2026-09-28 · `scripts/applications_report.py` 자동 생성 — 직접 고치지 말 것.
 > SSOT: [`applications.json`](applications.json). 상태·날짜 수정은 그 파일에서.
 
 **7건** — 제출 1 · 준비완료 1 · 준비중 1 · 미지원 3 · 보류 1
@@ -9,7 +9,7 @@
 
 | | 회사 | 포지션 | 채널 | 지원일 | 다음 행동 |
 |---|---|---|---|---|---|
-| 📮 제출 | xAI | [Mechanical Engineering Tutor](https://job-boards.greenhouse.io/xai/jobs/4925848007) | Greenhouse | 2026-05-15 (D+116) | 회신 없음 — 종결 처리 검토 |
+| 📮 제출 | xAI | [Mechanical Engineering Tutor](https://job-boards.greenhouse.io/xai/jobs/4925848007) | Greenhouse | 2026-05-15 (D+136) | 회신 없음 — 종결 처리 검토 |
 | ✅ 준비완료 | Apple Korea | [Reliability Engineer, Core Technology Operations](https://jobs.apple.com/en-us/details/200656459-3631/reliability-engineer-core-technology-operations-korea) | jobs.apple.com (Apple ID 필요) | — | 제출 — resume v7 + cover letter v5 (2026-09-07 갱신 토대 반영) PDF 업로드. Apple ID 로그인 필요 |
 | 🛠 준비중 | Aptiv | [Manufacturing Engineering Engineer (아산, 1순위)](https://aptiv.wd5.myworkdayjobs.com/Aptiv_Careers/job/KOR-Asan--MFG/Manufacturing-Engineering-Engineer_J000666213) | Aptiv Workday | — | 근무지(아산) 수용 여부 결정 후 제출. 영문 이력서 요구 여부 확인 |
 | ⬜ 미지원 | NVIDIA | [Senior Automotive Software Program Manager](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Korea-Seoul/Senior-Automotive-Software-Program-Manager_JR2017800) | NVIDIA Workday | — | 지원 여부 결정 — 필수 요건 2건(automotive SW 6년+, ADAS/AV) 미충족. 매핑 §6 권고는 보류 |

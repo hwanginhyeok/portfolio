@@ -1,0 +1,61 @@
+{
+  "id": 106368,
+  "end_time": "2026-10-19T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106368,
+    "name": "밀버스",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/013/874/webp/jss_hashed_ab20b3c180e696224de9_20260210T175332_image_%2813%29.webp?1770713639",
+    "employment_page_url": "https://milvuskorea.career.greetinghr.com/ko/home",
+    "start_time": "2026-09-18T18:15:00.000+09:00",
+    "end_time": "2026-10-19T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div style=\"position:relative;\"><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/370/193/webp/CRM%282%EB%85%84%29-%EC%9E%90%EC%86%8C%EC%84%A4.webp?1789724806\" alt=\"밀버스 CRM마케터(2년 이상) 모집\"></div></body></html>\n",
+    "target": 4,
+    "created_at": "2026-09-21T10:30:54.000+09:00",
+    "recruit_type": 0,
+    "view_count": 222,
+    "favorite_count": 5,
+    "homepage_count": 1,
+    "is_receive_applicant": true,
+    "favorite": false,
+    "chat_id": 17268,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "CRM마케터(2년 이상) 모집",
+    "resume_expose": true,
+    "company_group": {
+      "id": 13874,
+      "name": "밀버스",
+      "business_size": null,
+      "business_type": null,
+      "created_at": "2022-07-25T14:37:55.000+09:00",
+      "updated_at": "2026-02-10T17:53:59.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/013/874/original/jss_hashed_ab20b3c180e696224de9_20260210T175332_image_%2813%29.png?1770713639",
+      "alternate_names": [
+        "MILVUS"
+      ],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 430751,
+        "field": "CRM마케터",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          136,
+          137,
+          139,
+          140,
+          132,
+          133
+        ],
+        "apply": "OPEN"
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

@@ -735,8 +735,8 @@
     "greenhouse:waymo:8047527": {
       "first_seen": "2026-08-19",
       "company": "Waymo",
-      "title": "Validation Manager (Platforms)",
-      "score": 30,
+      "title": "Senior Program Manager - New Platform Validation Operations",
+      "score": 27,
       "eligibility": "visa-needed",
       "track": "ai-native",
       "search_lane": "ai-native",
@@ -1876,8 +1876,32 @@
     "greenhouse:lucidmotors:5175746007": {
       "first_seen": "2026-08-19",
       "company": "Lucid Motors",
-      "title": "Sr. Technical Quality Engineering Specialist",
-      "score": 31,
+      "title": "Sr. Technical Quality Engineering Specialist (Advanced Vehicle Electronics)",
+      "score": 37,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 54,
+      "actionable": false,
+      "fit_evidence": [
+        "quality-supplier",
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility",
+        "embedded-electrical-hardware",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:lucidmotors:5175735007": {
+      "first_seen": "2026-08-19",
+      "company": "Lucid Motors",
+      "title": "Sr. Technical Quality Engineering Specialist (Chassis and Safety Restraints)",
+      "score": 28,
       "eligibility": "visa-needed",
       "track": "core",
       "search_lane": "core",
@@ -1893,13 +1917,6 @@
       "owner_domain_evidence": [
         "physical-product-test-validation-reliability-quality"
       ]
-    },
-    "greenhouse:lucidmotors:5175735007": {
-      "first_seen": "2026-08-19",
-      "company": "Lucid Motors",
-      "title": "Sr. Technical Quality Engineering Specialist (Chassis and Safety Restraints)",
-      "score": 28,
-      "eligibility": "visa-needed"
     },
     "greenhouse:lucidmotors:5177759007": {
       "first_seen": "2026-08-19",
@@ -3345,7 +3362,7 @@
       "first_seen": "2026-08-19",
       "company": "Apptronik",
       "title": "Hardware Test Engineer – Dexterity",
-      "score": 43,
+      "score": 49,
       "eligibility": "visa-needed",
       "track": "ai-native",
       "search_lane": "ai-native",
@@ -3470,7 +3487,7 @@
       "first_seen": "2026-08-19",
       "company": "Apptronik",
       "title": "Robotics Test Engineer",
-      "score": 55,
+      "score": 63,
       "eligibility": "visa-needed",
       "track": "ai-native",
       "search_lane": "ai-native",
@@ -3563,8 +3580,8 @@
     "greenhouse:apptronik:5996176004": {
       "first_seen": "2026-08-19",
       "company": "Apptronik",
-      "title": "Senior Electrical Engineer - HRI",
-      "score": 37,
+      "title": "Senior Electrical Engineer - HRI (Visuals)",
+      "score": 45,
       "eligibility": "visa-needed",
       "track": "ai-native",
       "search_lane": "ai-native",
@@ -3630,7 +3647,7 @@
       "first_seen": "2026-08-19",
       "company": "Apptronik",
       "title": "Senior Hardware Test Engineer",
-      "score": 63,
+      "score": 69,
       "eligibility": "visa-needed",
       "track": "ai-native",
       "search_lane": "ai-native",
@@ -4436,7 +4453,7 @@
     "greenhouse:agilityrobotics:6019178004": {
       "first_seen": "2026-08-19",
       "company": "Agility Robotics",
-      "title": "Senior Hardware Test Engineer",
+      "title": "Senior Hardware Test Engineer - Mechatronics",
       "score": 41,
       "eligibility": "visa-needed",
       "track": "ai-native",
@@ -4454,6 +4471,7 @@
       "technical_signal_evidence": [],
       "owner_domain_evidence": [
         "embedded-electrical-hardware",
+        "robotics-industrial-automation",
         "physical-product-test-validation-reliability-quality"
       ]
     },
@@ -7013,8 +7031,8 @@
     "ashby:1x:0eb854f8-97f7-43a0-8818-f138178586f8": {
       "first_seen": "2026-08-19",
       "company": "1X",
-      "title": "Test & Validation Engineer - Motors and Actuators",
-      "score": 89,
+      "title": "Mechanical Design Engineer, Hands Structures & Integration",
+      "score": 32,
       "eligibility": "visa-needed",
       "track": "ai-native",
       "search_lane": "ai-native",
@@ -7022,17 +7040,14 @@
         "ai-native",
         "core"
       ],
-      "fit_score": 56,
+      "fit_score": 26,
       "actionable": false,
       "fit_evidence": [
-        "test-validation",
         "electrical-hardware"
       ],
       "technical_signal_evidence": [],
       "owner_domain_evidence": [
-        "motor-power-electronics",
-        "embedded-electrical-hardware",
-        "physical-product-test-validation-reliability-quality"
+        "embedded-electrical-hardware"
       ]
     },
     "ashby:1x:985b1bc5-afee-4ab6-b73e-ea867d83a6df": {
@@ -7344,7 +7359,7 @@
       "first_seen": "2026-08-19",
       "company": "1X",
       "title": "Software Engineer - Robotic Controls",
-      "score": 40,
+      "score": 35,
       "eligibility": "visa-needed",
       "track": "ai-native",
       "search_lane": "ai-native",
@@ -7880,7 +7895,7 @@
       "first_seen": "2026-08-19",
       "company": "Zoox",
       "title": "Autonomy System Test Engineer",
-      "score": 24,
+      "score": 22,
       "eligibility": "visa-needed",
       "track": "ai-native",
       "search_lane": "ai-native",
@@ -7888,12 +7903,11 @@
         "ai-native",
         "core"
       ],
-      "fit_score": 88,
+      "fit_score": 60,
       "actionable": false,
       "fit_evidence": [
         "ai-native-consulting",
-        "test-validation",
-        "quality-supplier"
+        "test-validation"
       ],
       "technical_signal_evidence": [
         "robotics-automation"
@@ -8683,7 +8697,7 @@
       "first_seen": "2026-08-19",
       "company": "Zoox",
       "title": "System Test Engineer",
-      "score": 27,
+      "score": 25,
       "eligibility": "visa-needed",
       "track": "ai-native",
       "search_lane": "ai-native",
@@ -8691,11 +8705,10 @@
         "ai-native",
         "core"
       ],
-      "fit_score": 58,
+      "fit_score": 30,
       "actionable": false,
       "fit_evidence": [
-        "test-validation",
-        "quality-supplier"
+        "test-validation"
       ],
       "technical_signal_evidence": [],
       "owner_domain_evidence": [
@@ -11277,7 +11290,7 @@
       "first_seen": "2026-08-19",
       "company": "Applied Materials",
       "title": "Korea Regional Planner",
-      "score": 2,
+      "score": 1,
       "eligibility": "korea",
       "track": "core",
       "search_lane": "core",
@@ -11923,7 +11936,7 @@
       "company": "Waymo",
       "title": "Engineering & Hardware Category Manager",
       "score": 15,
-      "eligibility": "visa-needed",
+      "eligibility": "remote",
       "track": "ai-native",
       "search_lane": "ai-native",
       "search_lanes": [
@@ -13512,8 +13525,8 @@
     "greenhouse:scaleai:4720501005": {
       "first_seen": "2026-08-24",
       "company": "Scale AI",
-      "title": "Senior AI Product Manager, Code",
-      "score": 26,
+      "title": "Senior AI Product Manager",
+      "score": 25,
       "eligibility": "visa-needed",
       "track": "ai-native",
       "search_lane": "ai-native",
@@ -15418,8 +15431,8 @@
     "greenhouse:nuro:7838576": {
       "first_seen": "2026-08-24",
       "company": "Nuro",
-      "title": "Senior Program Manager, Eval Operations",
-      "score": 24,
+      "title": "Senior Program Manager, Validation Operations",
+      "score": 29,
       "eligibility": "visa-needed",
       "track": "ai-native",
       "search_lane": "ai-native",
@@ -15431,7 +15444,9 @@
       "actionable": false,
       "fit_evidence": [],
       "technical_signal_evidence": [],
-      "owner_domain_evidence": []
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
     },
     "greenhouse:nuro:7896065": {
       "first_seen": "2026-08-24",
@@ -16992,7 +17007,7 @@
       "company": "OpenAI",
       "title": "Manufacturing Quality Engineer – Datacenter Infrastructure",
       "score": 25,
-      "eligibility": "visa-needed",
+      "eligibility": "remote",
       "track": "core",
       "search_lane": "core",
       "search_lanes": [
@@ -17600,19 +17615,23 @@
     "ashby:shield-ai:dc460b4f-171f-482b-a42f-09c3bbb0e0a1": {
       "first_seen": "2026-08-24",
       "company": "Shield AI",
-      "title": "Senior Engineer, VBAT Software Test Automation (Hiring Multiple Levels)",
-      "score": 16,
-      "eligibility": "visa-needed",
+      "title": "Software Test Automation Engineer (R4719)",
+      "score": 31,
+      "eligibility": "blocked-itar",
       "track": "ai-native",
       "search_lane": "ai-native",
       "search_lanes": [
         "ai-native",
         "core"
       ],
-      "fit_score": 0,
+      "fit_score": 30,
       "actionable": false,
-      "fit_evidence": [],
-      "technical_signal_evidence": [],
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
       "owner_domain_evidence": [
         "robotics-industrial-automation"
       ]
@@ -17965,8 +17984,8 @@
     "ashby:1x:bd7452e9-1f5a-4e49-b468-2ad98c20e2c3": {
       "first_seen": "2026-08-24",
       "company": "1X",
-      "title": "Software Engineer - Simulation",
-      "score": 30,
+      "title": "Simulation Engineer - Physics Modeling",
+      "score": 32,
       "eligibility": "visa-needed",
       "track": "ai-native",
       "search_lane": "ai-native",
@@ -18349,7 +18368,7 @@
       "first_seen": "2026-08-24",
       "company": "Gecko Robotics",
       "title": "Forward Deployed Robotics Engineer ",
-      "score": 50,
+      "score": 58,
       "eligibility": "remote",
       "track": "ai-native",
       "search_lane": "ai-native",
@@ -18442,7 +18461,7 @@
       "first_seen": "2026-08-24",
       "company": "Zoox",
       "title": "Machine Learning Automation Engineer",
-      "score": 23,
+      "score": 21,
       "eligibility": "visa-needed",
       "track": "ai-native",
       "search_lane": "ai-native",
@@ -18450,19 +18469,17 @@
         "ai-native",
         "core"
       ],
-      "fit_score": 58,
+      "fit_score": 30,
       "actionable": false,
       "fit_evidence": [
-        "ai-native-consulting",
-        "quality-supplier"
+        "ai-native-consulting"
       ],
       "technical_signal_evidence": [
         "robotics-automation"
       ],
       "owner_domain_evidence": [
         "robotics-industrial-automation",
-        "machinery-equipment",
-        "physical-product-test-validation-reliability-quality"
+        "machinery-equipment"
       ]
     },
     "lever:zoox:55e51bf3-68ee-40d4-a1c5-5196e0e2d100": {
@@ -20179,8 +20196,8 @@
     "lever:zoox:15efc87a-f31b-40e0-967f-5927dae73b5d": {
       "first_seen": "2026-08-26",
       "company": "Zoox",
-      "title": "Program Timing Analyst",
-      "score": 22,
+      "title": "Technical Program Manager, Robot Platforms",
+      "score": 38,
       "eligibility": "visa-needed",
       "track": "ai-native",
       "search_lane": "ai-native",
@@ -20188,9 +20205,10 @@
         "ai-native",
         "core"
       ],
-      "fit_score": 30,
+      "fit_score": 62,
       "actionable": false,
       "fit_evidence": [
+        "technical-program",
         "ai-native-consulting"
       ],
       "technical_signal_evidence": [
@@ -23129,6 +23147,5531 @@
       "technical_signal_evidence": [
         "manufacturing-engineering-transformation"
       ],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:anthropic:5416829008": {
+      "first_seen": "2026-09-09",
+      "company": "Anthropic",
+      "title": "Business Systems Analyst, New Product Introduction",
+      "score": 16,
+      "eligibility": "sponsorship-likely",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 28,
+      "actionable": true,
+      "fit_evidence": [
+        "npi"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "technical-product-industrialization"
+      ]
+    },
+    "greenhouse:lucidmotors:4839333007": {
+      "first_seen": "2026-09-09",
+      "company": "Lucid Motors",
+      "title": "Quality Engineer II, Body Structures & Closures",
+      "score": 34,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 58,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process",
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:lucidmotors:4839348007": {
+      "first_seen": "2026-09-09",
+      "company": "Lucid Motors",
+      "title": "Sr. Quality Engineer, ADAS ",
+      "score": 34,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 58,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process",
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:lucidmotors:4839337007": {
+      "first_seen": "2026-09-09",
+      "company": "Lucid Motors",
+      "title": "Sr. Quality Engineer, Electronics and Vision Systems",
+      "score": 40,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 84,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process",
+        "quality-supplier",
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware",
+        "industrial-manufacturing-transformation",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:scaleai:4730990005": {
+      "first_seen": "2026-09-09",
+      "company": "Scale AI",
+      "title": "Technical Program Manager, Public Sector (Boston, MA)",
+      "score": 23,
+      "eligibility": "blocked-itar",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 32,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:scaleai:4731017005": {
+      "first_seen": "2026-09-09",
+      "company": "Scale AI",
+      "title": "Technical Program Manager, Public Sector (Dayton, OH)",
+      "score": 23,
+      "eligibility": "blocked-itar",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 32,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:wayve:8731884002": {
+      "first_seen": "2026-09-09",
+      "company": "Wayve",
+      "title": "Senior Software Engineer - OS, Robot Software",
+      "score": 40,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "automotive-mobility",
+        "robotics-industrial-automation"
+      ]
+    },
+    "greenhouse:wayve:8730007002": {
+      "first_seen": "2026-09-09",
+      "company": "Wayve",
+      "title": "Software Engineer - Runtime Platform, Robot Software",
+      "score": 32,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "automotive-mobility",
+        "robotics-industrial-automation"
+      ]
+    },
+    "greenhouse:wayve:8773442002": {
+      "first_seen": "2026-09-09",
+      "company": "Wayve",
+      "title": "Technical Lead Manager, Synthetic Data",
+      "score": 25,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:nuro:8180475": {
+      "first_seen": "2026-09-09",
+      "company": "Nuro",
+      "title": "Senior Technical Program Manager - AI Platform Performance & Reliability",
+      "score": 57,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 92,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program",
+        "ai-native-consulting",
+        "reliability-durability"
+      ],
+      "technical_signal_evidence": [
+        "ai-product-technical-pm"
+      ],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:apptronik:6183395004": {
+      "first_seen": "2026-09-09",
+      "company": "Apptronik",
+      "title": "Senior Robot Operator",
+      "score": 33,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "robotics-industrial-automation"
+      ]
+    },
+    "greenhouse:apptronik:6185663004": {
+      "first_seen": "2026-09-09",
+      "company": "Apptronik",
+      "title": "Senior Systems Engineer - Chassis",
+      "score": 49,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "ashby:openai:60573bf4-13ad-4933-aba7-729f428e9f69": {
+      "first_seen": "2026-09-09",
+      "company": "OpenAI",
+      "title": "Control Systems Software Engineer, Robotics",
+      "score": 42,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "robotics-industrial-automation"
+      ]
+    },
+    "ashby:openai:c0c70d7e-c450-4ca4-842a-dbc5e643c048": {
+      "first_seen": "2026-09-09",
+      "company": "OpenAI",
+      "title": "Technical Program Manager, Storage & Data Infrastructure",
+      "score": 29,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 32,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:openai:7ce64627-b273-48e1-b3bc-ef4be0444706": {
+      "first_seen": "2026-09-09",
+      "company": "OpenAI",
+      "title": "Forward Deployed Engineer - London (Spanish-speaking)",
+      "score": 38,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "forward-deployed-engineering"
+      ],
+      "owner_domain_evidence": []
+    },
+    "ashby:openai:14c5d693-7e85-4c26-8ca7-0b6f68fe6ace": {
+      "first_seen": "2026-09-09",
+      "company": "OpenAI",
+      "title": "Forward Deployed Engineer - Madrid (Spanish-speaking)",
+      "score": 38,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "forward-deployed-engineering"
+      ],
+      "owner_domain_evidence": []
+    },
+    "ashby:shield-ai:3ffccd57-5375-4711-911f-9b9ee6640884": {
+      "first_seen": "2026-09-09",
+      "company": "Shield AI",
+      "title": "Senior Engineer, Test (R5833)",
+      "score": 26,
+      "eligibility": "korea-apac",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:shield-ai:b84e640f-e105-4000-8052-5111d462862d": {
+      "first_seen": "2026-09-09",
+      "company": "Shield AI",
+      "title": "Configuration and Change Control Analyst (R5300)",
+      "score": 15,
+      "eligibility": "blocked-itar",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:shield-ai:f4a66871-6c0f-4b22-8a27-129195038ef4": {
+      "first_seen": "2026-09-09",
+      "company": "Shield AI",
+      "title": "Software Engineer C++ (R5716)",
+      "score": 20,
+      "eligibility": "blocked-itar",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:shield-ai:f36981f7-6130-4b27-bf8e-158551f0a26c": {
+      "first_seen": "2026-09-09",
+      "company": "Shield AI",
+      "title": "Senior Manager, Materials Planning & Logistics – Development Programs (R5252)",
+      "score": 18,
+      "eligibility": "blocked-itar",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:shield-ai:c84907ed-402c-4dda-8c94-53fd995da20c": {
+      "first_seen": "2026-09-09",
+      "company": "Shield AI",
+      "title": "Senior Engineer, Autonomy (R5685)",
+      "score": 17,
+      "eligibility": "korea-apac",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": []
+    },
+    "lever:zoox:ee4bcd02-44f2-483b-80ae-51b17abaae89": {
+      "first_seen": "2026-09-09",
+      "company": "Zoox",
+      "title": "Plant Supplier Quality Engineer",
+      "score": 33,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 28,
+      "actionable": false,
+      "fit_evidence": [
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "lever:zoox:f62f1083-acff-4862-984e-4d16d2a827a6": {
+      "first_seen": "2026-09-09",
+      "company": "Zoox",
+      "title": "Senior Software Engineer - Robot Software Infrastructure",
+      "score": 33,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "robotics-industrial-automation"
+      ]
+    },
+    "lever:zoox:6da52aa7-0ccb-48d0-af25-0889f41ddee5": {
+      "first_seen": "2026-09-09",
+      "company": "Zoox",
+      "title": "Software Engineer - Robot Software Infrastructure",
+      "score": 33,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "robotics-industrial-automation"
+      ]
+    },
+    "lever:zoox:83967e5c-bfb4-4b3d-974a-fd0fefe4a168": {
+      "first_seen": "2026-09-09",
+      "company": "Zoox",
+      "title": "Senior Technical Program Manager, EE Systems",
+      "score": 32,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 58,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program",
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "motor-power-electronics",
+        "embedded-electrical-hardware"
+      ]
+    },
+    "workday:amat:2627523": {
+      "first_seen": "2026-09-09",
+      "company": "Applied Materials",
+      "title": "Supplier Quality Engineer IV",
+      "score": 18,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 28,
+      "actionable": false,
+      "fit_evidence": [
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "workday:amat:2627515": {
+      "first_seen": "2026-09-09",
+      "company": "Applied Materials",
+      "title": "Automation & Technology Solutions Engineer",
+      "score": 15,
+      "eligibility": "visa-needed",
+      "track": "engineering-consulting",
+      "search_lane": "engineering-consulting",
+      "search_lanes": [
+        "engineering-consulting"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "technical-consulting"
+      ],
+      "owner_domain_evidence": [
+        "robotics-industrial-automation"
+      ]
+    },
+    "workday:micron:93935": {
+      "first_seen": "2026-09-09",
+      "company": "Micron",
+      "title": "IT Solution Architect - PLM & Master Data",
+      "score": 15,
+      "eligibility": "visa-needed",
+      "track": "engineering-consulting",
+      "search_lane": "engineering-consulting",
+      "search_lanes": [
+        "engineering-consulting"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "technical-consulting"
+      ],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:waymo:7429795": {
+      "first_seen": "2026-09-10",
+      "company": "Waymo",
+      "title": "Senior Software Engineer, Internal Tooling",
+      "score": 24,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "robotics-industrial-automation",
+        "machinery-equipment"
+      ]
+    },
+    "greenhouse:lucidmotors:4839267007": {
+      "first_seen": "2026-09-10",
+      "company": "Lucid Motors",
+      "title": "Automation Engineer, Powertrain",
+      "score": 89,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 60,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting",
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "motor-power-electronics",
+        "robotics-industrial-automation",
+        "industrial-manufacturing-transformation"
+      ]
+    },
+    "greenhouse:lucidmotors:5213583007": {
+      "first_seen": "2026-09-10",
+      "company": "Lucid Motors",
+      "title": "Engineer II, NVH",
+      "score": 16,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5212743007": {
+      "first_seen": "2026-09-10",
+      "company": "Lucid Motors",
+      "title": "Manager Body Structures, Closures, Harness",
+      "score": 25,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5228159007": {
+      "first_seen": "2026-09-10",
+      "company": "Lucid Motors",
+      "title": "Manufacturing Engineer I",
+      "score": 24,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation",
+        "technical-product-industrialization"
+      ]
+    },
+    "greenhouse:lucidmotors:5213765007": {
+      "first_seen": "2026-09-10",
+      "company": "Lucid Motors",
+      "title": "Mass Engineer II",
+      "score": 17,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "greenhouse:lucidmotors:5139144007": {
+      "first_seen": "2026-09-10",
+      "company": "Lucid Motors",
+      "title": "Plant Quality Engineer II  ",
+      "score": 37,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 58,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process",
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:lucidmotors:5215451007": {
+      "first_seen": "2026-09-10",
+      "company": "Lucid Motors",
+      "title": "Senior Automation Engineer – EV Access Controls",
+      "score": 50,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "automotive-mobility",
+        "robotics-industrial-automation"
+      ]
+    },
+    "greenhouse:lucidmotors:5212759007": {
+      "first_seen": "2026-09-10",
+      "company": "Lucid Motors",
+      "title": " Senior Engineer, Chassis Systems",
+      "score": 21,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5213732007": {
+      "first_seen": "2026-09-10",
+      "company": "Lucid Motors",
+      "title": "Senior Process Development Engineer",
+      "score": 22,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "motor-power-electronics",
+        "industrial-manufacturing-transformation"
+      ]
+    },
+    "greenhouse:lucidmotors:5220737007": {
+      "first_seen": "2026-09-10",
+      "company": "Lucid Motors",
+      "title": "Senior Supplier Industrialization Engineer, Interiors ",
+      "score": 32,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 58,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process",
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality",
+        "technical-product-industrialization"
+      ]
+    },
+    "greenhouse:lucidmotors:5212754007": {
+      "first_seen": "2026-09-10",
+      "company": "Lucid Motors",
+      "title": "Sr. Brakes and Steering Engineer",
+      "score": 23,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5212756007": {
+      "first_seen": "2026-09-10",
+      "company": "Lucid Motors",
+      "title": "Sr. Suspension Engineer",
+      "score": 21,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5213736007": {
+      "first_seen": "2026-09-10",
+      "company": "Lucid Motors",
+      "title": "Technical Specialist, Battery Safety",
+      "score": 28,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "motor-power-electronics"
+      ]
+    },
+    "greenhouse:lucidmotors:5213971007": {
+      "first_seen": "2026-09-10",
+      "company": "Lucid Motors",
+      "title": "Test Engineer II, Vehicle Efficiency Engineering",
+      "score": 49,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 56,
+      "actionable": false,
+      "fit_evidence": [
+        "test-validation",
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility",
+        "embedded-electrical-hardware",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:scaleai:4549048005": {
+      "first_seen": "2026-09-10",
+      "company": "Scale AI",
+      "title": "Forward Deployed Engineer, Gen AI",
+      "score": 26,
+      "eligibility": "korea-apac",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "forward-deployed-engineering"
+      ],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:wayve:8790740002": {
+      "first_seen": "2026-09-10",
+      "company": "Wayve",
+      "title": "Systems Engineer, Robotaxi",
+      "score": 27,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:wayve:8785780002": {
+      "first_seen": "2026-09-10",
+      "company": "Wayve",
+      "title": "Technical Program Manager, Robotaxi",
+      "score": 37,
+      "eligibility": "korea-apac",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 32,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:nuro:8187498": {
+      "first_seen": "2026-09-10",
+      "company": "Nuro",
+      "title": "AV Hardware Mechanical Engineer",
+      "score": 38,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "ashby:openai:23014bc8-37d4-4fd9-9a77-d95fdd33437f": {
+      "first_seen": "2026-09-10",
+      "company": "OpenAI",
+      "title": "Hardware Strategic Sourcing Manager, Optics",
+      "score": 17,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "ashby:openai:b71906c2-51a9-4ad7-a744-2390ccdc1ad8": {
+      "first_seen": "2026-09-10",
+      "company": "OpenAI",
+      "title": "Quality Engineer, Rack Infrastructure & Site Operations",
+      "score": 28,
+      "eligibility": "korea-apac",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 28,
+      "actionable": false,
+      "fit_evidence": [
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "ashby:openai:18d65004-a399-4a33-80bc-10f33bff2ed0": {
+      "first_seen": "2026-09-10",
+      "company": "OpenAI",
+      "title": "Physical Design Engineer, Forward Deployed Engineering",
+      "score": 39,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "forward-deployed-engineering"
+      ],
+      "owner_domain_evidence": []
+    },
+    "ashby:openai:0d8019ec-e034-49ad-8f6b-29abb459b98f": {
+      "first_seen": "2026-09-10",
+      "company": "OpenAI",
+      "title": "Technical Program Manager, Manufacturing Operations",
+      "score": 36,
+      "eligibility": "korea-apac",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 62,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program",
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation"
+      ]
+    },
+    "ashby:openai:099374c6-3cbb-4964-9a1d-31e6e5b5dcd2": {
+      "first_seen": "2026-09-10",
+      "company": "OpenAI",
+      "title": "Senior Manager, EHS - Robotics",
+      "score": 23,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "robotics-industrial-automation"
+      ]
+    },
+    "ashby:shield-ai:c191dc9a-0016-4c70-9613-ef894bd9a2ce": {
+      "first_seen": "2026-09-10",
+      "company": "Shield AI",
+      "title": "Senior Systems Engineer - Autonomy & Software",
+      "score": 18,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": []
+    },
+    "ashby:shield-ai:c2eec2ff-7b39-4b56-b461-07aebf157033": {
+      "first_seen": "2026-09-10",
+      "company": "Shield AI",
+      "title": "Senior DevSecOps Engineer",
+      "score": 18,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:shield-ai:cebc87bc-fbac-41d4-9164-3959853417cc": {
+      "first_seen": "2026-09-10",
+      "company": "Shield AI",
+      "title": "Senior Engineer, Modelling and Simulation (R5702)",
+      "score": 18,
+      "eligibility": "blocked-itar",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": []
+    },
+    "ashby:shield-ai:a7d858b9-b45a-41b7-a9de-6d6fecabfe6c": {
+      "first_seen": "2026-09-10",
+      "company": "Shield AI",
+      "title": "Engineer II, Autonomy (R5713)",
+      "score": 17,
+      "eligibility": "korea-apac",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": []
+    },
+    "ashby:shield-ai:3cf82899-32bb-43d0-8b70-635e5206eeca": {
+      "first_seen": "2026-09-10",
+      "company": "Shield AI",
+      "title": "Engineer II, Battery Test (R5954)",
+      "score": 32,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "motor-power-electronics"
+      ]
+    },
+    "lever:zoox:5fad000d-791f-4a0a-96da-65ca594160a9": {
+      "first_seen": "2026-09-10",
+      "company": "Zoox",
+      "title": "Contract Student Worker - Forward Deployed Automation Engineer (40 hrs/wk)",
+      "score": 21,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "robotics-industrial-automation"
+      ]
+    },
+    "lever:zoox:87877cf4-3ac8-45d5-90fb-2ef7f223c068": {
+      "first_seen": "2026-09-10",
+      "company": "Zoox",
+      "title": "Data Scientist - Perception Verification and Validation",
+      "score": 18,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "workday:micron:105575": {
+      "first_seen": "2026-09-10",
+      "company": "Micron",
+      "title": "PDE NPI PWF Process Engineer",
+      "score": 15,
+      "eligibility": "korea-apac",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 58,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process",
+        "npi"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation",
+        "technical-product-industrialization"
+      ]
+    },
+    "workday:micron:111132": {
+      "first_seen": "2026-09-10",
+      "company": "Micron",
+      "title": "TEST SOLUTIONS ENGINEER",
+      "score": 18,
+      "eligibility": "korea-apac",
+      "track": "engineering-consulting",
+      "search_lane": "engineering-consulting",
+      "search_lanes": [
+        "core",
+        "engineering-consulting"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "technical-consulting"
+      ],
+      "owner_domain_evidence": []
+    },
+    "workday:micron:111308": {
+      "first_seen": "2026-09-10",
+      "company": "Micron",
+      "title": "TEST SOLUTIONS ENGINEER",
+      "score": 18,
+      "eligibility": "korea-apac",
+      "track": "engineering-consulting",
+      "search_lane": "engineering-consulting",
+      "search_lanes": [
+        "core",
+        "engineering-consulting"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "technical-consulting"
+      ],
+      "owner_domain_evidence": []
+    },
+    "workday:micron:111309": {
+      "first_seen": "2026-09-10",
+      "company": "Micron",
+      "title": "TEST SOLUTIONS ENGINEER",
+      "score": 18,
+      "eligibility": "korea-apac",
+      "track": "engineering-consulting",
+      "search_lane": "engineering-consulting",
+      "search_lanes": [
+        "core",
+        "engineering-consulting"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "technical-consulting"
+      ],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5229013007": {
+      "first_seen": "2026-09-11",
+      "company": "Lucid Motors",
+      "title": "Launch Engineer",
+      "score": 16,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5226693007": {
+      "first_seen": "2026-09-11",
+      "company": "Lucid Motors",
+      "title": "Manufacturing Engineer I",
+      "score": 25,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation",
+        "technical-product-industrialization"
+      ]
+    },
+    "greenhouse:lucidmotors:5213739007": {
+      "first_seen": "2026-09-11",
+      "company": "Lucid Motors",
+      "title": " Senior Battery Reliability & Validation Engineer ",
+      "score": 64,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 60,
+      "actionable": false,
+      "fit_evidence": [
+        "test-validation",
+        "reliability-durability"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "motor-power-electronics",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:lucidmotors:5234094007": {
+      "first_seen": "2026-09-11",
+      "company": "Lucid Motors",
+      "title": "Sr. Engineer, Closures Mechanism",
+      "score": 27,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility"
+      ]
+    },
+    "greenhouse:lucidmotors:5234097007": {
+      "first_seen": "2026-09-11",
+      "company": "Lucid Motors",
+      "title": "Sr. Engineer, Closures Plastics",
+      "score": 26,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility"
+      ]
+    },
+    "greenhouse:lucidmotors:5121470007": {
+      "first_seen": "2026-09-11",
+      "company": "Lucid Motors",
+      "title": "Sr. Engineer, Vehicle Crash Test",
+      "score": 24,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility"
+      ]
+    },
+    "greenhouse:lucidmotors:5234910007": {
+      "first_seen": "2026-09-11",
+      "company": "Lucid Motors",
+      "title": "Sr. Global Supply Manager, Powertrain Capex",
+      "score": 38,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "motor-power-electronics"
+      ]
+    },
+    "greenhouse:lucidmotors:5226617007": {
+      "first_seen": "2026-09-11",
+      "company": "Lucid Motors",
+      "title": "Sr. Manufacturing Engineer, General Assembly",
+      "score": 26,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation",
+        "technical-product-industrialization"
+      ]
+    },
+    "greenhouse:lucidmotors:5227841007": {
+      "first_seen": "2026-09-11",
+      "company": "Lucid Motors",
+      "title": "Sr. Manufacturing Engineer, Rotor",
+      "score": 45,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation",
+        "technical-product-industrialization"
+      ]
+    },
+    "greenhouse:lucidmotors:5212731007": {
+      "first_seen": "2026-09-11",
+      "company": "Lucid Motors",
+      "title": "Sr. Mechanical Engineer, Stator/Rotor",
+      "score": 25,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5212467007": {
+      "first_seen": "2026-09-11",
+      "company": "Lucid Motors",
+      "title": "Technical Specialist, Chassis Structures and Architecture",
+      "score": 27,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility"
+      ]
+    },
+    "greenhouse:lucidmotors:5213750007": {
+      "first_seen": "2026-09-11",
+      "company": "Lucid Motors",
+      "title": "Test Engineer, Power Electronics Test & Validation",
+      "score": 50,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 56,
+      "actionable": false,
+      "fit_evidence": [
+        "test-validation",
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "motor-power-electronics",
+        "embedded-electrical-hardware",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:lucidmotors:5135848007": {
+      "first_seen": "2026-09-11",
+      "company": "Lucid Motors",
+      "title": "Vehicle Development Engineer",
+      "score": 16,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility"
+      ]
+    },
+    "ashby:openai:a8a421d1-c9bb-4e37-8418-4e4d6b2ba29d": {
+      "first_seen": "2026-09-11",
+      "company": "OpenAI",
+      "title": "Mechanical Design Engineer, Motor Design & Prototyping",
+      "score": 45,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "motor-power-electronics"
+      ]
+    },
+    "ashby:openai:2b87bb06-ba33-4cab-b950-0df12ca85dcf": {
+      "first_seen": "2026-09-11",
+      "company": "OpenAI",
+      "title": "Mechanical Engineer, Dynamometer and Actuator Testing Infrastructure",
+      "score": 57,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:openai:a525ada4-b02d-425e-b529-f74bd0b398a5": {
+      "first_seen": "2026-09-11",
+      "company": "OpenAI",
+      "title": "Technical Program Manager, AI Infrastructure Capacity Planning",
+      "score": 23,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 62,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program",
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "ai-product-technical-pm"
+      ],
+      "owner_domain_evidence": []
+    },
+    "ashby:shield-ai:990ea6c7-a9d7-4826-ab1d-59076c1fb225": {
+      "first_seen": "2026-09-11",
+      "company": "Shield AI",
+      "title": "Modeling & Simulation Engineer (R4869)",
+      "score": 35,
+      "eligibility": "blocked-itar",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": []
+    },
+    "ashby:shield-ai:bcd5e2df-a59f-4c32-b9fd-050cb9a2d2ea": {
+      "first_seen": "2026-09-11",
+      "company": "Shield AI",
+      "title": "Senior Production Planner, Development Programs (R5277)",
+      "score": 17,
+      "eligibility": "blocked-itar",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation"
+      ]
+    },
+    "ashby:shield-ai:b5125eae-226a-43c3-a516-ac11dc033c55": {
+      "first_seen": "2026-09-11",
+      "company": "Shield AI",
+      "title": "Senior Engineer, Mission Systems Software (R5891)",
+      "score": 25,
+      "eligibility": "blocked-itar",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "lever:zoox:0a46e434-d154-4ac1-8d56-1c75481b3e4b": {
+      "first_seen": "2026-09-11",
+      "company": "Zoox",
+      "title": "Team Lead, Readiness & Response",
+      "score": 16,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "lever:zoox:ddba8228-2215-48fd-bc4e-a633bca6b8e4": {
+      "first_seen": "2026-09-11",
+      "company": "Zoox",
+      "title": "Team Lead, Readiness & Response",
+      "score": 16,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "workday:kla:2640132": {
+      "first_seen": "2026-09-11",
+      "company": "KLA",
+      "title": "Environmental, Health, & Safety Engineer",
+      "score": 2,
+      "eligibility": "korea",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "workday:aptiv:000703702": {
+      "first_seen": "2026-09-11",
+      "company": "Aptiv",
+      "title": "Senior DevOps Engineer - Edge AI & Robotics",
+      "score": 15,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "robotics-industrial-automation"
+      ]
+    },
+    "workday:micron:111306": {
+      "first_seen": "2026-09-11",
+      "company": "Micron",
+      "title": "TEST SOLUTIONS ENGINEER",
+      "score": 18,
+      "eligibility": "korea-apac",
+      "track": "engineering-consulting",
+      "search_lane": "engineering-consulting",
+      "search_lanes": [
+        "core",
+        "engineering-consulting"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "technical-consulting"
+      ],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5227876007": {
+      "first_seen": "2026-09-12",
+      "company": "Lucid Motors",
+      "title": "Manufacturing Engineer II, Inverter",
+      "score": 75,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "motor-power-electronics",
+        "industrial-manufacturing-transformation",
+        "technical-product-industrialization"
+      ]
+    },
+    "greenhouse:lucidmotors:5227871007": {
+      "first_seen": "2026-09-12",
+      "company": "Lucid Motors",
+      "title": "Manufacturing Engineer II, Rotor",
+      "score": 57,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation",
+        "technical-product-industrialization"
+      ]
+    },
+    "greenhouse:lucidmotors:5213747007": {
+      "first_seen": "2026-09-12",
+      "company": "Lucid Motors",
+      "title": "Sr. Engineer, Interiors",
+      "score": 22,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility"
+      ]
+    },
+    "greenhouse:lucidmotors:5215453007": {
+      "first_seen": "2026-09-12",
+      "company": "Lucid Motors",
+      "title": "System Validation Engineer, Access Controls",
+      "score": 45,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "test-validation"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:lucidmotors:5213745007": {
+      "first_seen": "2026-09-12",
+      "company": "Lucid Motors",
+      "title": "Technical Specialist, Interior Door Trim",
+      "score": 23,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility"
+      ]
+    },
+    "greenhouse:apptronik:6188799004": {
+      "first_seen": "2026-09-12",
+      "company": "Apptronik",
+      "title": "Controls Engineer - Actuation",
+      "score": 55,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:apptronik:6118867004": {
+      "first_seen": "2026-09-12",
+      "company": "Apptronik",
+      "title": "Senior Electrical Engineer - Dexterity",
+      "score": 62,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "ashby:openai:7f4c5eef-37f9-4454-a1fb-ef1e66b075d9": {
+      "first_seen": "2026-09-12",
+      "company": "OpenAI",
+      "title": "Forward Deployed Engineer (FDE) - Seattle",
+      "score": 38,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "forward-deployed-engineering"
+      ],
+      "owner_domain_evidence": []
+    },
+    "ashby:openai:967f94aa-1706-4dba-ac89-bfbc2c38b688": {
+      "first_seen": "2026-09-12",
+      "company": "OpenAI",
+      "title": "Forward Deployed Engineer (FDE) - SF",
+      "score": 38,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "forward-deployed-engineering"
+      ],
+      "owner_domain_evidence": []
+    },
+    "ashby:openai:9471b38b-f65c-4a01-9626-bd33fca90f1d": {
+      "first_seen": "2026-09-12",
+      "company": "OpenAI",
+      "title": "Forward Deployed Engineer (FDE) - NYC",
+      "score": 38,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "forward-deployed-engineering"
+      ],
+      "owner_domain_evidence": []
+    },
+    "ashby:shield-ai:ad864afa-eb47-4f0e-8f0a-fea72f6b1fe3": {
+      "first_seen": "2026-09-12",
+      "company": "Shield AI",
+      "title": "Mission Systems Software Engineer (R5888)",
+      "score": 25,
+      "eligibility": "blocked-itar",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:shield-ai:9de11562-a827-4abb-87aa-3772996bc6af": {
+      "first_seen": "2026-09-12",
+      "company": "Shield AI",
+      "title": "Technical Program Manager (R5149)",
+      "score": 19,
+      "eligibility": "blocked-itar",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 32,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "workday:amat:2627760": {
+      "first_seen": "2026-09-12",
+      "company": "Applied Materials",
+      "title": "Manufacturing Test Quality Engineer IV",
+      "score": 15,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 58,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process",
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "workday:amat:2627524": {
+      "first_seen": "2026-09-12",
+      "company": "Applied Materials",
+      "title": "Supplier Quality Engineer IV",
+      "score": 18,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 28,
+      "actionable": false,
+      "fit_evidence": [
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "workday:amat:2628370": {
+      "first_seen": "2026-09-12",
+      "company": "Applied Materials",
+      "title": "Workday AI and Extend Solution Architect",
+      "score": 15,
+      "eligibility": "korea-apac",
+      "track": "engineering-consulting",
+      "search_lane": "engineering-consulting",
+      "search_lanes": [
+        "engineering-consulting"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "technical-consulting"
+      ],
+      "owner_domain_evidence": []
+    },
+    "workday:aptiv:000703237": {
+      "first_seen": "2026-09-12",
+      "company": "Aptiv",
+      "title": "Supplier Quality Engineer",
+      "score": 18,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 28,
+      "actionable": false,
+      "fit_evidence": [
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:waymo:8197721": {
+      "first_seen": "2026-09-14",
+      "company": "Waymo",
+      "title": "Mechanical Engineer, Product Development",
+      "score": 17,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:4839281007": {
+      "first_seen": "2026-09-14",
+      "company": "Lucid Motors",
+      "title": "Manager, Powertrain Production Operations ",
+      "score": 65,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "motor-power-electronics",
+        "industrial-manufacturing-transformation"
+      ]
+    },
+    "greenhouse:lucidmotors:4839283007": {
+      "first_seen": "2026-09-14",
+      "company": "Lucid Motors",
+      "title": "Process Engineering Manager",
+      "score": 59,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "motor-power-electronics",
+        "industrial-manufacturing-transformation",
+        "technical-product-industrialization"
+      ]
+    },
+    "ashby:openai:345bda68-5b8d-43e4-9c05-ecac06f03912": {
+      "first_seen": "2026-09-14",
+      "company": "OpenAI",
+      "title": "Strategy & Operations Lead — Korea",
+      "score": 1,
+      "eligibility": "korea",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:physicalintelligence:50f00992-a6c4-480b-a000-2efba5283379": {
+      "first_seen": "2026-09-14",
+      "company": "Physical Intelligence",
+      "title": "Embedded Engineer",
+      "score": 32,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "workday:amat:2622664": {
+      "first_seen": "2026-09-14",
+      "company": "Applied Materials",
+      "title": "Panel-level Advanced Packaging Process Engineer (PVD)",
+      "score": 8,
+      "eligibility": "korea",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": true,
+      "fit_evidence": [
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation",
+        "technical-product-industrialization"
+      ]
+    },
+    "workday:amat:2628568": {
+      "first_seen": "2026-09-14",
+      "company": "Applied Materials",
+      "title": "DDP Customer Engineer",
+      "score": 2,
+      "eligibility": "korea",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "workday:amat:2628567": {
+      "first_seen": "2026-09-14",
+      "company": "Applied Materials",
+      "title": "DDP Customer Engineer",
+      "score": 2,
+      "eligibility": "korea",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "workday:amat:2628242": {
+      "first_seen": "2026-09-14",
+      "company": "Applied Materials",
+      "title": "ETCH Installation Customer Engineer",
+      "score": 2,
+      "eligibility": "korea",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:waymo:8191170": {
+      "first_seen": "2026-09-15",
+      "company": "Waymo",
+      "title": "Charging Automation Lead",
+      "score": 29,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "robotics-industrial-automation"
+      ]
+    },
+    "greenhouse:anthropic:5423029008": {
+      "first_seen": "2026-09-15",
+      "company": "Anthropic",
+      "title": "Forward Deployed Engineer",
+      "score": 27,
+      "eligibility": "sponsorship-likely",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "forward-deployed-engineering"
+      ],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5236192007": {
+      "first_seen": "2026-09-15",
+      "company": "Lucid Motors",
+      "title": "Incoming Quality Engineer, Powertrain",
+      "score": 43,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 58,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process",
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "motor-power-electronics",
+        "industrial-manufacturing-transformation",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:lucidmotors:5236204007": {
+      "first_seen": "2026-09-15",
+      "company": "Lucid Motors",
+      "title": "Metrology Manager",
+      "score": 17,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 58,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process",
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:lucidmotors:5213752007": {
+      "first_seen": "2026-09-15",
+      "company": "Lucid Motors",
+      "title": "Sr. Engineer, Power Electronics Test & Validation",
+      "score": 54,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "motor-power-electronics",
+        "embedded-electrical-hardware",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:lucidmotors:5212735007": {
+      "first_seen": "2026-09-15",
+      "company": "Lucid Motors",
+      "title": "Sr. Hardware Engineer (Digital-LV)",
+      "score": 26,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "greenhouse:lucidmotors:5190636007": {
+      "first_seen": "2026-09-15",
+      "company": "Lucid Motors",
+      "title": "Sr. Manager, Resident Product Engineering",
+      "score": 18,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility"
+      ]
+    },
+    "greenhouse:lucidmotors:5236194007": {
+      "first_seen": "2026-09-15",
+      "company": "Lucid Motors",
+      "title": "Sr. MES Engineer",
+      "score": 20,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 58,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process",
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:lucidmotors:5201800007": {
+      "first_seen": "2026-09-15",
+      "company": "Lucid Motors",
+      "title": "Sr. Supplier Industrialization Engineer",
+      "score": 36,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 58,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process",
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality",
+        "technical-product-industrialization"
+      ]
+    },
+    "greenhouse:figureai:4595829006": {
+      "first_seen": "2026-09-15",
+      "company": "Figure AI",
+      "title": "Production Lead (Swing Shift) ",
+      "score": 17,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation"
+      ]
+    },
+    "greenhouse:wayve:8799311002": {
+      "first_seen": "2026-09-15",
+      "company": "Wayve",
+      "title": "Release Manager — AI Models",
+      "score": 15,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:shield-ai:257d81db-5eca-4f01-9ee1-e019a4d6a9f4": {
+      "first_seen": "2026-09-15",
+      "company": "Shield AI",
+      "title": "Senior Software Engineer, Embedded Linux Platform (R5718)",
+      "score": 27,
+      "eligibility": "korea-apac",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "ashby:shield-ai:100dfe48-c752-4af6-ac8d-ac7ed283b963": {
+      "first_seen": "2026-09-15",
+      "company": "Shield AI",
+      "title": "Senior Engineer, C++ Software (R5848)",
+      "score": 30,
+      "eligibility": "korea-apac",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:shield-ai:7f934954-2ef6-4ff6-bd55-982f5a27604a": {
+      "first_seen": "2026-09-15",
+      "company": "Shield AI",
+      "title": "Technical Program Manager",
+      "score": 23,
+      "eligibility": "korea-apac",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 62,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program",
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "ai-product-technical-pm"
+      ],
+      "owner_domain_evidence": []
+    },
+    "ashby:1x:a5ad1287-e0a0-471d-9a65-cc24c62b6664": {
+      "first_seen": "2026-09-15",
+      "company": "1X",
+      "title": "AI Researcher - Robot Learning",
+      "score": 35,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "robotics-industrial-automation"
+      ]
+    },
+    "ashby:1x:8065ae1f-697e-4b73-9ae2-cc55a5373991": {
+      "first_seen": "2026-09-15",
+      "company": "1X",
+      "title": "AI Researcher - Perception",
+      "score": 18,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:1x:d687b375-8136-4e6f-baa6-369b89366050": {
+      "first_seen": "2026-09-15",
+      "company": "1X",
+      "title": "Internship - Manufacturing Engineering",
+      "score": 29,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation",
+        "technical-product-industrialization"
+      ]
+    },
+    "lever:zoox:92aa7d9b-2a89-4e3e-b48e-7b2fc5fa1e9e": {
+      "first_seen": "2026-09-15",
+      "company": "Zoox",
+      "title": "Technical Program Manager - Body & Closures",
+      "score": 22,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 32,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "workday:amat:2628576": {
+      "first_seen": "2026-09-15",
+      "company": "Applied Materials",
+      "title": "DDP Installation Customer Engineer",
+      "score": 2,
+      "eligibility": "korea",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "workday:amat:2628660": {
+      "first_seen": "2026-09-15",
+      "company": "Applied Materials",
+      "title": "ETCH Customer Engineer",
+      "score": 2,
+      "eligibility": "korea",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "workday:kla:2640356": {
+      "first_seen": "2026-09-15",
+      "company": "KLA",
+      "title": "KLAS SPTS Customer Engagement Applications Engineer",
+      "score": 5,
+      "eligibility": "korea",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "workday:kla:2640189": {
+      "first_seen": "2026-09-15",
+      "company": "KLA",
+      "title": "Division Product Development Engineer",
+      "score": 3,
+      "eligibility": "korea",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "workday:aptiv:000704006": {
+      "first_seen": "2026-09-15",
+      "company": "Aptiv",
+      "title": "Validation Engineer",
+      "score": 18,
+      "eligibility": "korea-apac",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "test-validation"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:lucidmotors:5205387007": {
+      "first_seen": "2026-09-16",
+      "company": "Lucid Motors",
+      "title": " General Assembly Quality Manager",
+      "score": 20,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 58,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process",
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:lucidmotors:5215439007": {
+      "first_seen": "2026-09-16",
+      "company": "Lucid Motors",
+      "title": "Senior Controls Engineer, Vehicle Body and Access Systems",
+      "score": 32,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility"
+      ]
+    },
+    "greenhouse:lucidmotors:5215442007": {
+      "first_seen": "2026-09-16",
+      "company": "Lucid Motors",
+      "title": "Simulation and Development Engineer, Body Controls   ",
+      "score": 41,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5214042007": {
+      "first_seen": "2026-09-16",
+      "company": "Lucid Motors",
+      "title": "Sr. Electrical Engineer, Test Power Electronics ",
+      "score": 36,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "motor-power-electronics",
+        "embedded-electrical-hardware"
+      ]
+    },
+    "greenhouse:lucidmotors:5212471007": {
+      "first_seen": "2026-09-16",
+      "company": "Lucid Motors",
+      "title": "Sr Mechanical Engineer, HV Charging & Power Electronics",
+      "score": 49,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "motor-power-electronics",
+        "embedded-electrical-hardware"
+      ]
+    },
+    "greenhouse:lucidmotors:5234858007": {
+      "first_seen": "2026-09-16",
+      "company": "Lucid Motors",
+      "title": "Sr. Project Manager, Validation & Vehicle Operations",
+      "score": 26,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 28,
+      "actionable": false,
+      "fit_evidence": [
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:lucidmotors:5234593007": {
+      "first_seen": "2026-09-16",
+      "company": "Lucid Motors",
+      "title": "Sr. Software Quality Program Engineer",
+      "score": 27,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 28,
+      "actionable": false,
+      "fit_evidence": [
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5213997007": {
+      "first_seen": "2026-09-16",
+      "company": "Lucid Motors",
+      "title": "Sr. Technical Program Manager, Restraints",
+      "score": 24,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 32,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility"
+      ]
+    },
+    "greenhouse:nuro:8205545": {
+      "first_seen": "2026-09-16",
+      "company": "Nuro",
+      "title": "Technical Lead Manager, Motion Validation",
+      "score": 23,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "ashby:openai:3b08148d-085e-4835-9934-1b7f60e0fdce": {
+      "first_seen": "2026-09-16",
+      "company": "OpenAI",
+      "title": "Software Engineer, Manufacturing Infrastructure",
+      "score": 22,
+      "eligibility": "blocked-itar",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation"
+      ]
+    },
+    "ashby:openai:56aafd17-7db9-473a-b3b4-957b6d926cdf": {
+      "first_seen": "2026-09-16",
+      "company": "OpenAI",
+      "title": "Manufacturing Engineer, Motors & Actuators",
+      "score": 44,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "motor-power-electronics",
+        "industrial-manufacturing-transformation",
+        "technical-product-industrialization"
+      ]
+    },
+    "ashby:openai:65b255da-4fd9-414e-98d4-0bec4eecf8ff": {
+      "first_seen": "2026-09-16",
+      "company": "OpenAI",
+      "title": "Product Manufacturing & Quality Engineer ",
+      "score": 28,
+      "eligibility": "blocked-itar",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 58,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process",
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "ashby:shield-ai:904b73f6-9d64-4e67-aad1-522fab46681e": {
+      "first_seen": "2026-09-16",
+      "company": "Shield AI",
+      "title": "Software Integration & Test Manager",
+      "score": 26,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:shield-ai:46fa0fb2-e1c5-487d-9889-2eab0a9482ef": {
+      "first_seen": "2026-09-16",
+      "company": "Shield AI",
+      "title": "Senior V-BAT Air Vehicle Operator, Production Flight Test (R4844)",
+      "score": 20,
+      "eligibility": "blocked-itar",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility",
+        "industrial-manufacturing-transformation"
+      ]
+    },
+    "lever:zoox:300e20c4-8c4b-4325-90aa-473e7d4abe52": {
+      "first_seen": "2026-09-16",
+      "company": "Zoox",
+      "title": "Technical Program Manager, Manufacturing",
+      "score": 18,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 62,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program",
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation",
+        "technical-product-industrialization"
+      ]
+    },
+    "workday:amat:2628773": {
+      "first_seen": "2026-09-16",
+      "company": "Applied Materials",
+      "title": "ETCH Customer Engineer",
+      "score": 2,
+      "eligibility": "korea",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "workday:aptiv:000703991": {
+      "first_seen": "2026-09-16",
+      "company": "Aptiv",
+      "title": "Technical Lead Simulation Engineering_SIL/HIL, Cuda/Opencl",
+      "score": 21,
+      "eligibility": "korea-apac",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 60,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting",
+        "test-validation"
+      ],
+      "technical_signal_evidence": [
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": []
+    },
+    "workday:aptiv:000703989": {
+      "first_seen": "2026-09-16",
+      "company": "Aptiv",
+      "title": "Simulation Engineer_SIL/HIL, OpenCL/Cuda",
+      "score": 21,
+      "eligibility": "korea-apac",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 60,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting",
+        "test-validation"
+      ],
+      "technical_signal_evidence": [
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": []
+    },
+    "workday:aptiv:000703983": {
+      "first_seen": "2026-09-16",
+      "company": "Aptiv",
+      "title": "Simulation Architect_SIL/HIL",
+      "score": 21,
+      "eligibility": "korea-apac",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 60,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting",
+        "test-validation"
+      ],
+      "technical_signal_evidence": [
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:anthropic:5425724008": {
+      "first_seen": "2026-09-17",
+      "company": "Anthropic",
+      "title": "Associate Solutions Architect",
+      "score": 20,
+      "eligibility": "sponsorship-likely",
+      "track": "engineering-consulting",
+      "search_lane": "engineering-consulting",
+      "search_lanes": [
+        "engineering-consulting"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "technical-consulting"
+      ],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5228239007": {
+      "first_seen": "2026-09-17",
+      "company": "Lucid Motors",
+      "title": "Automation Engineer I",
+      "score": 40,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "robotics-industrial-automation"
+      ]
+    },
+    "greenhouse:lucidmotors:5233876007": {
+      "first_seen": "2026-09-17",
+      "company": "Lucid Motors",
+      "title": "Hardware Engineer",
+      "score": 23,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "greenhouse:lucidmotors:5239380007": {
+      "first_seen": "2026-09-17",
+      "company": "Lucid Motors",
+      "title": "Sr. Engineer, Seatbelts",
+      "score": 19,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility"
+      ]
+    },
+    "greenhouse:lucidmotors:5214375007": {
+      "first_seen": "2026-09-17",
+      "company": "Lucid Motors",
+      "title": "Sr. Engineer, Seatbelts",
+      "score": 19,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility"
+      ]
+    },
+    "greenhouse:figureai:4713838006": {
+      "first_seen": "2026-09-17",
+      "company": "Figure AI",
+      "title": "Software Engineer, Service & Operations",
+      "score": 15,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:wayve:8809617002": {
+      "first_seen": "2026-09-17",
+      "company": "Wayve",
+      "title": "Data Engineer, Data Quality & Provenance",
+      "score": 35,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 58,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting",
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:wayve:8814668002": {
+      "first_seen": "2026-09-17",
+      "company": "Wayve",
+      "title": "Senior Software Engineer - Platform Integration, Robot Software",
+      "score": 55,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "automotive-mobility",
+        "robotics-industrial-automation"
+      ]
+    },
+    "greenhouse:agilityrobotics:6193254004": {
+      "first_seen": "2026-09-17",
+      "company": "Agility Robotics",
+      "title": "Senior Product Manager, Perception & World Understanding Skills",
+      "score": 17,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:openai:eda4a2d1-682f-418e-8055-222eaf7c9abd": {
+      "first_seen": "2026-09-17",
+      "company": "OpenAI",
+      "title": "Mechanical Engineer, Hardware Systems",
+      "score": 23,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "ashby:shield-ai:9c3fc3a5-2c1c-4121-9105-fafa75a135f9": {
+      "first_seen": "2026-09-17",
+      "company": "Shield AI",
+      "title": "Senior Reliability and Maintainability Engineer (R5301)",
+      "score": 38,
+      "eligibility": "blocked-itar",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "reliability-durability"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "ashby:shield-ai:99cbfe81-e9df-4108-83e9-16a23be77e6c": {
+      "first_seen": "2026-09-17",
+      "company": "Shield AI",
+      "title": "Senior Systems Engineer (R5962)",
+      "score": 16,
+      "eligibility": "blocked-itar",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:shield-ai:fc4bea8c-58ea-4736-bfaa-bd15503a885e": {
+      "first_seen": "2026-09-17",
+      "company": "Shield AI",
+      "title": "Manager of Engineering, Autonomy Capabilities (R5412)",
+      "score": 25,
+      "eligibility": "blocked-itar",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": []
+    },
+    "ashby:shield-ai:71cf9dd0-2bb8-460e-943b-1c1927be71f2": {
+      "first_seen": "2026-09-17",
+      "company": "Shield AI",
+      "title": "Senior Systems Engineer (R5981)",
+      "score": 16,
+      "eligibility": "blocked-itar",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:shield-ai:d3b03404-fab9-4ff2-b4a1-89ad3d9af604": {
+      "first_seen": "2026-09-17",
+      "company": "Shield AI",
+      "title": "Electrical Engineer I (R4973)",
+      "score": 30,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "ashby:shield-ai:fb7d4503-6a8d-4116-a265-96c390864d30": {
+      "first_seen": "2026-09-17",
+      "company": "Shield AI",
+      "title": "Technical Program Manager, Maritime",
+      "score": 19,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 32,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:shield-ai:581df3ff-c922-4e0d-8438-033b3144217e": {
+      "first_seen": "2026-09-17",
+      "company": "Shield AI",
+      "title": "Embedded Software Engineer",
+      "score": 37,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "ashby:physicalintelligence:8a2bee0b-be32-4907-879d-f91957693e62": {
+      "first_seen": "2026-09-17",
+      "company": "Physical Intelligence",
+      "title": "Recruiter, Operations",
+      "score": 18,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "lever:zoox:e725749e-88f7-48e0-8e4c-8a4a3289b905": {
+      "first_seen": "2026-09-17",
+      "company": "Zoox",
+      "title": "Software Engineer - Planner Frameworks Pipeline",
+      "score": 16,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": []
+    },
+    "lever:zoox:a2e507b6-86b3-4a97-a9bd-63867adb0b1c": {
+      "first_seen": "2026-09-17",
+      "company": "Zoox",
+      "title": "Team Lead, Vehicle Operations (2nd Shift)",
+      "score": 16,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility"
+      ]
+    },
+    "lever:zoox:acbf0c0c-1f38-4454-bf38-b706778b1f69": {
+      "first_seen": "2026-09-17",
+      "company": "Zoox",
+      "title": "Team Lead, Vehicle Operations (2nd Shift)",
+      "score": 16,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility"
+      ]
+    },
+    "workday:amat:2628808": {
+      "first_seen": "2026-09-17",
+      "company": "Applied Materials",
+      "title": "Display Customer Engineer",
+      "score": 2,
+      "eligibility": "korea",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "workday:amat:2626080": {
+      "first_seen": "2026-09-17",
+      "company": "Applied Materials",
+      "title": "Senior Field Product Readiness Engineer",
+      "score": 17,
+      "eligibility": "korea",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "workday:aptiv:000702757": {
+      "first_seen": "2026-09-17",
+      "company": "Aptiv",
+      "title": "Product Engineer",
+      "score": 1,
+      "eligibility": "korea",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "workday:aptiv:000702996": {
+      "first_seen": "2026-09-17",
+      "company": "Aptiv",
+      "title": "AS Customer Quality Team Leader",
+      "score": 8,
+      "eligibility": "korea",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 28,
+      "actionable": false,
+      "fit_evidence": [
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:waymo:8204338": {
+      "first_seen": "2026-09-18",
+      "company": "Waymo",
+      "title": "Technical Program Manager - Onboard Systems, ML Modeling ",
+      "score": 25,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 32,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:anthropic:5427834008": {
+      "first_seen": "2026-09-18",
+      "company": "Anthropic",
+      "title": "Technical Program Manager, Public Sector",
+      "score": 18,
+      "eligibility": "blocked-itar",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 32,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5240746007": {
+      "first_seen": "2026-09-18",
+      "company": "Lucid Motors",
+      "title": "Maintenance Manager, Powertrain",
+      "score": 62,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "motor-power-electronics",
+        "industrial-manufacturing-transformation"
+      ]
+    },
+    "greenhouse:lucidmotors:5240780007": {
+      "first_seen": "2026-09-18",
+      "company": "Lucid Motors",
+      "title": "Maintenance Team Leader",
+      "score": 52,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "motor-power-electronics",
+        "industrial-manufacturing-transformation"
+      ]
+    },
+    "greenhouse:lucidmotors:5240646007": {
+      "first_seen": "2026-09-18",
+      "company": "Lucid Motors",
+      "title": "Sr. Launch Engineer",
+      "score": 16,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5227836007": {
+      "first_seen": "2026-09-18",
+      "company": "Lucid Motors",
+      "title": "Sr. Manufacturing Engineer",
+      "score": 20,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation",
+        "technical-product-industrialization"
+      ]
+    },
+    "greenhouse:lucidmotors:5132450007": {
+      "first_seen": "2026-09-18",
+      "company": "Lucid Motors",
+      "title": "Sr. Mechanical Engineer II, Vehicle HV Distribution",
+      "score": 39,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility",
+        "motor-power-electronics"
+      ]
+    },
+    "greenhouse:wayve:8816208002": {
+      "first_seen": "2026-09-18",
+      "company": "Wayve",
+      "title": "Software Engineer, Embedded Automotive Platform ",
+      "score": 37,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility",
+        "embedded-electrical-hardware"
+      ]
+    },
+    "ashby:openai:9b017213-6467-413f-b72c-59678c5d8bae": {
+      "first_seen": "2026-09-18",
+      "company": "OpenAI",
+      "title": "Technical Program Manager, Multimodal",
+      "score": 27,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 32,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:1x:d6c59043-7a78-48ba-8f35-6d47b987a871": {
+      "first_seen": "2026-09-18",
+      "company": "1X",
+      "title": "Mechanical Design Engineer, Hands Thermal Systems",
+      "score": 36,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "workday:amat:2628583": {
+      "first_seen": "2026-09-18",
+      "company": "Applied Materials",
+      "title": "ETCH Customer Engineer",
+      "score": 2,
+      "eligibility": "korea",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "workday:amat:2622925": {
+      "first_seen": "2026-09-18",
+      "company": "Applied Materials",
+      "title": "Supply Chain Solutions Architect (SAP MM)",
+      "score": 15,
+      "eligibility": "korea-apac",
+      "track": "engineering-consulting",
+      "search_lane": "engineering-consulting",
+      "search_lanes": [
+        "engineering-consulting"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "technical-consulting"
+      ],
+      "owner_domain_evidence": []
+    },
+    "workday:aptiv:000704019": {
+      "first_seen": "2026-09-18",
+      "company": "Aptiv",
+      "title": "Advanced Software Engineer- Automotive + CPP +  Simulation",
+      "score": 15,
+      "eligibility": "korea-apac",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": [
+        "automotive-mobility"
+      ]
+    },
+    "workday:aptiv:000703768": {
+      "first_seen": "2026-09-18",
+      "company": "Aptiv",
+      "title": "Validation Engineer",
+      "score": 18,
+      "eligibility": "korea-apac",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "test-validation"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "workday:micron:112446": {
+      "first_seen": "2026-09-18",
+      "company": "Micron",
+      "title": "Test Solutions Engineer",
+      "score": 18,
+      "eligibility": "korea-apac",
+      "track": "engineering-consulting",
+      "search_lane": "engineering-consulting",
+      "search_lanes": [
+        "core",
+        "engineering-consulting"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "technical-consulting"
+      ],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5148220007": {
+      "first_seen": "2026-09-19",
+      "company": "Lucid Motors",
+      "title": "Sr. Mechanical Engineer, HV Battery",
+      "score": 22,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "motor-power-electronics"
+      ]
+    },
+    "ashby:1x:ebc45d87-58d7-40d8-9e3d-5f3c8aa5eb48": {
+      "first_seen": "2026-09-19",
+      "company": "1X",
+      "title": "Internship - CNC Machine Park",
+      "score": 15,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation",
+        "machinery-equipment"
+      ]
+    },
+    "workday:amat:2628963": {
+      "first_seen": "2026-09-19",
+      "company": "Applied Materials",
+      "title": "PDC(SEMVision) Customer Engineer",
+      "score": 2,
+      "eligibility": "korea",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "workday:amat:2628622": {
+      "first_seen": "2026-09-19",
+      "company": "Applied Materials",
+      "title": "Manufacturing Test Engineer II - (E2)",
+      "score": 15,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 60,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process",
+        "test-validation"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:lucidmotors:5215459007": {
+      "first_seen": "2026-09-20",
+      "company": "Lucid Motors",
+      "title": "Senior Embedded Firmware Engineer - Battery Software",
+      "score": 55,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "motor-power-electronics",
+        "embedded-electrical-hardware"
+      ]
+    },
+    "greenhouse:lucidmotors:5215456007": {
+      "first_seen": "2026-09-20",
+      "company": "Lucid Motors",
+      "title": "Senior Engineer, Charging Software Testing",
+      "score": 46,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5236704007": {
+      "first_seen": "2026-09-20",
+      "company": "Lucid Motors",
+      "title": "Senior Systems Engineer, Vehicle Connectivity and OTA",
+      "score": 22,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility"
+      ]
+    },
+    "greenhouse:lucidmotors:5238281007": {
+      "first_seen": "2026-09-22",
+      "company": "Lucid Motors",
+      "title": "DevOps Automation Engineer",
+      "score": 41,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "robotics-industrial-automation"
+      ]
+    },
+    "greenhouse:lucidmotors:5212715007": {
+      "first_seen": "2026-09-22",
+      "company": "Lucid Motors",
+      "title": "Engineering Launch Manager",
+      "score": 16,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5213600007": {
+      "first_seen": "2026-09-22",
+      "company": "Lucid Motors",
+      "title": "HV Battery Integration Engineer II",
+      "score": 27,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "motor-power-electronics"
+      ]
+    },
+    "greenhouse:lucidmotors:5215437007": {
+      "first_seen": "2026-09-22",
+      "company": "Lucid Motors",
+      "title": "Senior Software QA Engineer, Vehicle Infotainment",
+      "score": 23,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility"
+      ]
+    },
+    "greenhouse:lucidmotors:5212752007": {
+      "first_seen": "2026-09-22",
+      "company": "Lucid Motors",
+      "title": "Sr. Launch Engineer - Interiors & Exteriors",
+      "score": 15,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5238592007": {
+      "first_seen": "2026-09-22",
+      "company": "Lucid Motors",
+      "title": "Sr. TPM Cybersecurity",
+      "score": 22,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 32,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5215449007": {
+      "first_seen": "2026-09-22",
+      "company": "Lucid Motors",
+      "title": "System Validation Engineer, Vehicle Access Controls",
+      "score": 48,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "test-validation"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:lucidmotors:5212718007": {
+      "first_seen": "2026-09-22",
+      "company": "Lucid Motors",
+      "title": "Technical Specialist Dimensional Engineering",
+      "score": 18,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:openai:d3d17f29-fbaf-4697-a6ed-aaa0055ecc5c": {
+      "first_seen": "2026-09-22",
+      "company": "OpenAI",
+      "title": "Solutions Engineer, Ads Solutions - San Francisco",
+      "score": 22,
+      "eligibility": "remote",
+      "track": "engineering-consulting",
+      "search_lane": "engineering-consulting",
+      "search_lanes": [
+        "core",
+        "engineering-consulting"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "technical-consulting"
+      ],
+      "owner_domain_evidence": []
+    },
+    "ashby:openai:bfd27251-5a50-4050-aa66-596a8db9a7a8": {
+      "first_seen": "2026-09-22",
+      "company": "OpenAI",
+      "title": "Solutions Engineer, Ads Solutions - Singapore",
+      "score": 22,
+      "eligibility": "korea-apac",
+      "track": "engineering-consulting",
+      "search_lane": "engineering-consulting",
+      "search_lanes": [
+        "core",
+        "engineering-consulting"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "technical-consulting"
+      ],
+      "owner_domain_evidence": []
+    },
+    "ashby:openai:6628eb95-ede3-49ab-a11f-3d5c44b16bbb": {
+      "first_seen": "2026-09-22",
+      "company": "OpenAI",
+      "title": "Partner Solutions Engineer, Ads Solutions - San Francisco",
+      "score": 22,
+      "eligibility": "visa-needed",
+      "track": "engineering-consulting",
+      "search_lane": "engineering-consulting",
+      "search_lanes": [
+        "core",
+        "engineering-consulting"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "technical-consulting"
+      ],
+      "owner_domain_evidence": []
+    },
+    "ashby:1x:a5cb058a-681c-4f72-8b4d-1429b154a182": {
+      "first_seen": "2026-09-22",
+      "company": "1X",
+      "title": "Senior Systems Engineer - Network",
+      "score": 31,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "lever:zoox:2a5ffe65-9b0a-4f0e-a2d4-d7875b5c6f24": {
+      "first_seen": "2026-09-22",
+      "company": "Zoox",
+      "title": "Engineering Manager, Middleware Transport",
+      "score": 18,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "workday:amat:2628436": {
+      "first_seen": "2026-09-22",
+      "company": "Applied Materials",
+      "title": "Forward Deployed Engineer",
+      "score": 18,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "forward-deployed-engineering"
+      ],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:waymo:8222061": {
+      "first_seen": "2026-09-23",
+      "company": "Waymo",
+      "title": "Vehicle Product Engineer",
+      "score": 34,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility"
+      ]
+    },
+    "greenhouse:anthropic:5430869008": {
+      "first_seen": "2026-09-23",
+      "company": "Anthropic",
+      "title": "Manager, Applied AI Architect",
+      "score": 3,
+      "eligibility": "korea",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5213763007": {
+      "first_seen": "2026-09-23",
+      "company": "Lucid Motors",
+      "title": "Sr. BMS Electrical Engineer, Power Electronics",
+      "score": 47,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "motor-power-electronics",
+        "embedded-electrical-hardware"
+      ]
+    },
+    "greenhouse:lucidmotors:5213754007": {
+      "first_seen": "2026-09-23",
+      "company": "Lucid Motors",
+      "title": "Sr. Camera Engineer",
+      "score": 28,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "greenhouse:lucidmotors:5239254007": {
+      "first_seen": "2026-09-23",
+      "company": "Lucid Motors",
+      "title": "Sr. Global Supply Manager",
+      "score": 18,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5238956007": {
+      "first_seen": "2026-09-23",
+      "company": "Lucid Motors",
+      "title": "Sr. Product Manager, Test Management Platform",
+      "score": 39,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5219664007": {
+      "first_seen": "2026-09-23",
+      "company": "Lucid Motors",
+      "title": "Sr. Technical Program Manager, Vehicle Closures Systems",
+      "score": 34,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 32,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility"
+      ]
+    },
+    "greenhouse:wayve:8827527002": {
+      "first_seen": "2026-09-23",
+      "company": "Wayve",
+      "title": "Vehicle Performance Modelling Engineer",
+      "score": 19,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility"
+      ]
+    },
+    "greenhouse:nuro:8180955": {
+      "first_seen": "2026-09-23",
+      "company": "Nuro",
+      "title": "Embedded Software Engineer",
+      "score": 46,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "lever:zoox:cc074dc6-e1a1-43cc-a02b-164b7b56da74": {
+      "first_seen": "2026-09-23",
+      "company": "Zoox",
+      "title": "Senior Sensor Hardware Functional Safety Engineer",
+      "score": 15,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "workday:kla:2641358": {
+      "first_seen": "2026-09-23",
+      "company": "KLA",
+      "title": "Robotics Software Engineer",
+      "score": 15,
+      "eligibility": "korea-apac",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "robotics-industrial-automation"
+      ]
+    },
+    "greenhouse:waymo:8213774": {
+      "first_seen": "2026-09-24",
+      "company": "Waymo",
+      "title": "System Safety Engineer, Strategic Programs & Integration",
+      "score": 22,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5214146007": {
+      "first_seen": "2026-09-24",
+      "company": "Lucid Motors",
+      "title": "Hardware Engineer, Low-Voltage ECUs ",
+      "score": 37,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "greenhouse:lucidmotors:5236706007": {
+      "first_seen": "2026-09-24",
+      "company": "Lucid Motors",
+      "title": "Senior Systems Engineer, Charging Systems",
+      "score": 25,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5242866007": {
+      "first_seen": "2026-09-24",
+      "company": "Lucid Motors",
+      "title": "Sr Automation Engineer, Test and Validation ",
+      "score": 56,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 56,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting",
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware",
+        "robotics-industrial-automation",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:lucidmotors:5238200007": {
+      "first_seen": "2026-09-24",
+      "company": "Lucid Motors",
+      "title": "Sr. Field Quality Engineer, Parts & Campaign Coordinator",
+      "score": 25,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 28,
+      "actionable": false,
+      "fit_evidence": [
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:lucidmotors:5238195007": {
+      "first_seen": "2026-09-24",
+      "company": "Lucid Motors",
+      "title": "Sr. Field Quality Engineer, Software Integration",
+      "score": 39,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 28,
+      "actionable": false,
+      "fit_evidence": [
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:lucidmotors:5238347007": {
+      "first_seen": "2026-09-24",
+      "company": "Lucid Motors",
+      "title": "Sr. Technical Program Manager, Controls ",
+      "score": 31,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 32,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:wayve:8721392002": {
+      "first_seen": "2026-09-24",
+      "company": "Wayve",
+      "title": "Senior Software Engineer - Runtime Platform, Robot Software",
+      "score": 35,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "automotive-mobility",
+        "robotics-industrial-automation"
+      ]
+    },
+    "greenhouse:nuro:8227399": {
+      "first_seen": "2026-09-24",
+      "company": "Nuro",
+      "title": "Software Engineer, Performance Tooling and Infrastructure New Grad",
+      "score": 29,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "machinery-equipment"
+      ]
+    },
+    "greenhouse:neuralink:7808355003": {
+      "first_seen": "2026-09-24",
+      "company": "Neuralink",
+      "title": "Security Engineer",
+      "score": 15,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:openai:d7d1bd40-d9d5-466b-9d21-39b9b423db40": {
+      "first_seen": "2026-09-24",
+      "company": "OpenAI",
+      "title": "Deployment Lead, Life Sciences- NYC",
+      "score": 23,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "forward-deployed-engineering"
+      ],
+      "owner_domain_evidence": []
+    },
+    "ashby:openai:9d56b6fe-880a-47e8-a5ea-42fc8a1a8edc": {
+      "first_seen": "2026-09-24",
+      "company": "OpenAI",
+      "title": "Rack Power Engineer",
+      "score": 18,
+      "eligibility": "blocked-itar",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "lever:zoox:e1f6143d-a18d-4d92-ad6c-fb2cd661609e": {
+      "first_seen": "2026-09-24",
+      "company": "Zoox",
+      "title": "Systems Test Engineer, System Behavior Analysis",
+      "score": 23,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "test-validation"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "workday:amat:2629174": {
+      "first_seen": "2026-09-24",
+      "company": "Applied Materials",
+      "title": "PDC(VeritySEM) Customer Engineer",
+      "score": 2,
+      "eligibility": "korea",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "workday:aptiv:000698902": {
+      "first_seen": "2026-09-24",
+      "company": "Aptiv",
+      "title": "Supplier Quality Engineer",
+      "score": 18,
+      "eligibility": "korea-apac",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 28,
+      "actionable": false,
+      "fit_evidence": [
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "workday:micron:113313": {
+      "first_seen": "2026-09-24",
+      "company": "Micron",
+      "title": "Sr Design Automation Engineer, Simulation",
+      "score": 27,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation",
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": [
+        "robotics-industrial-automation"
+      ]
+    },
+    "greenhouse:lucidmotors:5214138007": {
+      "first_seen": "2026-09-25",
+      "company": "Lucid Motors",
+      "title": "Homologation Engineer",
+      "score": 16,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5248377007": {
+      "first_seen": "2026-09-25",
+      "company": "Lucid Motors",
+      "title": "Sr. Global Supply Manager",
+      "score": 18,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5239693007": {
+      "first_seen": "2026-09-25",
+      "company": "Lucid Motors",
+      "title": "Technical Specialist, Design Quality, Craftsmanship",
+      "score": 17,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 28,
+      "actionable": false,
+      "fit_evidence": [
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility"
+      ]
+    },
+    "greenhouse:nuro:8227051": {
+      "first_seen": "2026-09-25",
+      "company": "Nuro",
+      "title": "Lead Technical Program Manager, AI Platform ",
+      "score": 47,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 62,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program",
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "ai-product-technical-pm"
+      ],
+      "owner_domain_evidence": []
+    },
+    "ashby:1x:841ac10b-3c0a-4f8c-89b3-1d168da160db": {
+      "first_seen": "2026-09-25",
+      "company": "1X",
+      "title": "Prototype Engineer - 3D Printing",
+      "score": 16,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation"
+      ]
+    },
+    "ashby:physicalintelligence:86237337-963a-4e0e-bcf7-82d366e5f0fc": {
+      "first_seen": "2026-09-25",
+      "company": "Physical Intelligence",
+      "title": "Software Engineer, Robot Interfaces ",
+      "score": 43,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "robotics-industrial-automation"
+      ]
+    },
+    "lever:zoox:3e06c948-94f4-4c16-bc2f-a84465868e3e": {
+      "first_seen": "2026-09-25",
+      "company": "Zoox",
+      "title": "Safety Test and Validation Engineer",
+      "score": 31,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "test-validation"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "lever:zoox:25fd2c27-0837-48fa-80c7-21e2e2bad024": {
+      "first_seen": "2026-09-25",
+      "company": "Zoox",
+      "title": "Validation Engineer, Feature Integration",
+      "score": 42,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "test-validation"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "lever:dexterity:0630d2f1-586c-4819-a111-a6188462af3b": {
+      "first_seen": "2026-09-25",
+      "company": "Dexterity",
+      "title": "Field Service Engineer",
+      "score": 17,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "workday:micron:111583": {
+      "first_seen": "2026-09-25",
+      "company": "Micron",
+      "title": "DRAM Design Validation Engineer",
+      "score": 18,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "test-validation"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:waymo:8231900": {
+      "first_seen": "2026-09-26",
+      "company": "Waymo",
+      "title": "Senior Systems Integration Engineer",
+      "score": 25,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:waymo:8232236": {
+      "first_seen": "2026-09-26",
+      "company": "Waymo",
+      "title": "Technical Lead Manager, Collision Avoidance Testing",
+      "score": 18,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:waymo:8232448": {
+      "first_seen": "2026-09-26",
+      "company": "Waymo",
+      "title": "Technical Lead Manager, Motion Control Test Engineering",
+      "score": 73,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "test-validation"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "robotics-industrial-automation",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:lucidmotors:5242880007": {
+      "first_seen": "2026-09-26",
+      "company": "Lucid Motors",
+      "title": "Perception Software Engineer, Autonomous Driving",
+      "score": 19,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "automotive-mobility"
+      ]
+    },
+    "greenhouse:lucidmotors:5247698007": {
+      "first_seen": "2026-09-26",
+      "company": "Lucid Motors",
+      "title": "Technical Program Manager, Infotainment",
+      "score": 25,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 32,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5242856007": {
+      "first_seen": "2026-09-26",
+      "company": "Lucid Motors",
+      "title": "Tech Specialist, Planning & Control, Dream Drive",
+      "score": 30,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "automotive-mobility"
+      ]
+    },
+    "greenhouse:nuro:8221208": {
+      "first_seen": "2026-09-26",
+      "company": "Nuro",
+      "title": "Software Engineer, Cloud Infrastructure and Observability",
+      "score": 19,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:neuralink:8005705003": {
+      "first_seen": "2026-09-26",
+      "company": "Neuralink",
+      "title": "Robotics Engineer",
+      "score": 34,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "robotics-industrial-automation"
+      ]
+    },
+    "greenhouse:neuralink:8005730003": {
+      "first_seen": "2026-09-26",
+      "company": "Neuralink",
+      "title": "Software Engineer - HIL",
+      "score": 26,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "test-validation"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:neuralink:8005762003": {
+      "first_seen": "2026-09-26",
+      "company": "Neuralink",
+      "title": "Software Engineer - Simulation",
+      "score": 29,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": []
+    },
+    "workday:kla:2641335": {
+      "first_seen": "2026-09-26",
+      "company": "KLA",
+      "title": "AI Solutions Engineer (NPI Function)",
+      "score": 24,
+      "eligibility": "visa-needed",
+      "track": "engineering-consulting",
+      "search_lane": "engineering-consulting",
+      "search_lanes": [
+        "core",
+        "engineering-consulting"
+      ],
+      "fit_score": 58,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting",
+        "npi"
+      ],
+      "technical_signal_evidence": [
+        "technical-consulting"
+      ],
+      "owner_domain_evidence": [
+        "technical-product-industrialization"
+      ]
+    },
+    "workday:aptiv:000704191": {
+      "first_seen": "2026-09-26",
+      "company": "Aptiv",
+      "title": "Senior Key Account Manager - Industrial Robotics & Defense (f/m/d)",
+      "score": 15,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "robotics-industrial-automation",
+        "industrial-manufacturing-transformation"
+      ]
+    },
+    "greenhouse:wayve:8766985002": {
+      "first_seen": "2026-09-27",
+      "company": "Wayve",
+      "title": "Senior Data Scientist",
+      "score": 16,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
       "owner_domain_evidence": []
     }
   }

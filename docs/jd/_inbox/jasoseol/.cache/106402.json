@@ -1,0 +1,58 @@
+{
+  "id": 106402,
+  "end_time": "2026-10-11T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106402,
+    "name": "SK바이오사이언스",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/006/770/webp/open-uri20220705-9327-15kiov5.webp?1684487448",
+    "employment_page_url": "https://www.skcareers.com/Recruit/DetailPreview?id=6498",
+    "start_time": "2026-09-21T00:00:00.000+09:00",
+    "end_time": "2026-10-11T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div style=\"position:relative;\"><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/370/530/webp/Junior_Talent_%EA%B3%B5%EA%B3%A0_v4.5_%281%29.webp?1790054408\" alt=\"SK바이오사이언스 2026년 하반기 Junior Talent 채용\"></div></body></html>\n",
+    "target": 4,
+    "created_at": "2026-09-22T14:21:54.000+09:00",
+    "recruit_type": 0,
+    "view_count": 1136,
+    "favorite_count": 10,
+    "homepage_count": 11,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 13167,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "2026년 하반기 Junior Talent 채용",
+    "resume_expose": true,
+    "company_group": {
+      "id": 6770,
+      "name": "SK바이오사이언스",
+      "business_size": "big_business",
+      "business_type": null,
+      "created_at": "2018-07-16T15:12:12.000+09:00",
+      "updated_at": "2023-05-19T18:10:48.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/006/770/original/open-uri20220705-9327-15kiov5?1684487448",
+      "alternate_names": [
+        "에스케이바이오사이언스"
+      ],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 430996,
+        "field": "Drug Substance (원액생산)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          187,
+          188,
+          183
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

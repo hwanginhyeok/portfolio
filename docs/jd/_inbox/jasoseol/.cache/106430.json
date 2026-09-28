@@ -1,0 +1,561 @@
+{
+  "id": 106430,
+  "end_time": "2026-10-18T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106430,
+    "name": "한미그룹",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/015/447/webp/%ED%95%9C%EB%AF%B8%EA%B7%B8%EB%A3%B9.webp?1727857814",
+    "employment_page_url": "https://2026recruitment.hanmi.co.kr/",
+    "start_time": "2026-09-28T00:00:00.000+09:00",
+    "end_time": "2026-10-18T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div style=\"position:relative;\">\n<div><a style=\"display:block;height:1.0046958610898766%;left:63.398689637209635%;position:absolute;text-decoration:none;top:97.23356704570274%;width:21.524064171122994%;z-index:1;\" href=\"https://youtu.be/ujUaYhE6PyI?si=NwckU83pSuWvF23U\" target=\"_blank\">   </a></div>\n<div><a style=\"display:block;height:1.0046958610898766%;left:39.46820835378718%;position:absolute;text-decoration:none;top:97.20080522414545%;width:21.524064171122994%;z-index:1;\" href=\"https://youtu.be/p9w_nBEAMXo?si=rwpLLyyi-YUe7xfx\" target=\"_blank\">   </a></div>\n<div><a style=\"display:block;height:1.0046958610898766%;left:15.002967712075952%;position:absolute;text-decoration:none;top:97.20080522414545%;width:21.92513368983957%;z-index:1;\" href=\"https://youtu.be/GZCjk1O3HSE?si=oTN90vW5BY4AJy59\" target=\"_blank\">   </a></div>\n<div><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/370/744/webp/image.webp?1790140094\" alt=\"한미그룹 2026년 하반기 공개채용\"></div>\n</div></body></html>\n",
+    "target": 0,
+    "created_at": "2026-09-23T14:08:22.000+09:00",
+    "recruit_type": 0,
+    "view_count": 2510,
+    "favorite_count": 180,
+    "homepage_count": 41,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 19985,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "2026년 하반기 공개채용",
+    "resume_expose": true,
+    "company_group": {
+      "id": 15447,
+      "name": "한미그룹",
+      "business_size": "middle_market",
+      "business_type": null,
+      "created_at": "2024-08-30T12:45:23.000+09:00",
+      "updated_at": "2024-11-04T14:39:15.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/015/447/original/%ED%95%9C%EB%AF%B8%EA%B7%B8%EB%A3%B9.png?1727857814",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 431238,
+        "field": "[한미약품] 제약영업 (MR)",
+        "division": 3,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 2,
+        "end_time": null,
+        "duty_group_ids": [
+          194,
+          201
+        ],
+        "apply": null
+      },
+      {
+        "id": 431239,
+        "field": "[한미약품] 구매",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          157,
+          147
+        ],
+        "apply": null
+      },
+      {
+        "id": 431240,
+        "field": "[한미약품] Pipeline Valuation (신약가치평가)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          113,
+          215,
+          103
+        ],
+        "apply": null
+      },
+      {
+        "id": 431241,
+        "field": "[한미약품] Market Intelligence (신약개발 전략분석)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          113,
+          253,
+          103
+        ],
+        "apply": null
+      },
+      {
+        "id": 431242,
+        "field": "[한미약품] Global Regulatory Affairs",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          108
+        ],
+        "apply": null
+      },
+      {
+        "id": 431243,
+        "field": "[한미약품] Data Management",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 3,
+        "end_time": null,
+        "duty_group_ids": [
+          180,
+          181,
+          163
+        ],
+        "apply": null
+      },
+      {
+        "id": 431244,
+        "field": "[한미약품] Biostatistician",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          180,
+          163
+        ],
+        "apply": null
+      },
+      {
+        "id": 431245,
+        "field": "[한미약품] 해외영업",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 7,
+        "end_time": null,
+        "duty_group_ids": [
+          154,
+          146
+        ],
+        "apply": null
+      },
+      {
+        "id": 431246,
+        "field": "[한미약품] NCE (New Chemical Entity)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          234,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 431247,
+        "field": "[한미약품] QS&F (Quality Science & Formulation)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          234,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 431248,
+        "field": "[한미약품] MST (Manufacturing Science Technology) ",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          234,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 431249,
+        "field": "[한미약품] TE (Toxicology Evaluation) ",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          234,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 431250,
+        "field": "[한미약품] DST (Drug Science & Technology)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          234,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 431251,
+        "field": "[한미약품] BSS (Biological & Structural Evaluation Science)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          234,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 431252,
+        "field": "[한미약품] 신제형연구 (전문연구요원)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          234,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 431253,
+        "field": "[한미약품] 제조 (팔탄제조센터)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          185
+        ],
+        "apply": null
+      },
+      {
+        "id": 431254,
+        "field": "[한미약품] 포장 (팔탄제조센터)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          185
+        ],
+        "apply": null
+      },
+      {
+        "id": 431255,
+        "field": "[한미약품] 품질관리 (팔탄제조센터)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 4,
+        "end_time": null,
+        "duty_group_ids": [
+          189,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 431256,
+        "field": "[한미약품] 기술지원 (팔탄제조센터)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 5,
+        "end_time": null,
+        "duty_group_ids": [
+          186
+        ],
+        "apply": null
+      },
+      {
+        "id": 431257,
+        "field": "DS생산 (평택제조센터) ",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          185
+        ],
+        "apply": null
+      },
+      {
+        "id": 431258,
+        "field": "[한미약품] DS생산 (평택제조센터)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          185
+        ],
+        "apply": null
+      },
+      {
+        "id": 431259,
+        "field": "[한미사이언스] IT솔루션영업",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          195
+        ],
+        "apply": null
+      },
+      {
+        "id": 431260,
+        "field": "[한미사이언스] Licensing",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          110,
+          112,
+          103
+        ],
+        "apply": null
+      },
+      {
+        "id": 431261,
+        "field": "[한미사이언스] 국내법무",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          108
+        ],
+        "apply": null
+      },
+      {
+        "id": 431262,
+        "field": "[한미사이언스] 특허",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          255
+        ],
+        "apply": null
+      },
+      {
+        "id": 431263,
+        "field": "[한미사이언스] 안전관리",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 2,
+        "end_time": null,
+        "duty_group_ids": [
+          191,
+          184
+        ],
+        "apply": null
+      },
+      {
+        "id": 431264,
+        "field": "[한미사이언스] 식품영업 (헬스케어사업)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          194,
+          196
+        ],
+        "apply": null
+      },
+      {
+        "id": 431265,
+        "field": "[한미사이언스] 식품커머스운영 (헬스케어사업)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          136,
+          151,
+          132,
+          145
+        ],
+        "apply": null
+      },
+      {
+        "id": 431266,
+        "field": "[한미사이언스] 화장품 커머스사업기획 (헬스케어사업)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          110,
+          151,
+          103,
+          145
+        ],
+        "apply": null
+      },
+      {
+        "id": 431267,
+        "field": "[한미사이언스] 화장품 상품기획 (헬스케어사업)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          138,
+          149,
+          132
+        ],
+        "apply": null
+      },
+      {
+        "id": 431268,
+        "field": "[한미사이언스] 화장품 홈쇼핑영업/운영 (헬스케어사업)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          194
+        ],
+        "apply": null
+      },
+      {
+        "id": 431269,
+        "field": "[한미사이언스] 화장품 국내영업 (헬스케어사업)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          194,
+          196
+        ],
+        "apply": null
+      },
+      {
+        "id": 431270,
+        "field": "[한미사이언스] 화장품 해외영업 (헬스케어사업)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          154,
+          146
+        ],
+        "apply": null
+      },
+      {
+        "id": 431271,
+        "field": "[한미사이언스] 화장품 글로벌마케팅 (헬스케어사업)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          136,
+          142,
+          132,
+          133
+        ],
+        "apply": null
+      },
+      {
+        "id": 431272,
+        "field": "[한미사이언스] 해외이커머스운영 (헬스케어사업)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          151,
+          145
+        ],
+        "apply": null
+      },
+      {
+        "id": 431273,
+        "field": "[한미사이언스] 의료기기영업 (헬스케어사업)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          194
+        ],
+        "apply": null
+      },
+      {
+        "id": 431274,
+        "field": "[한미사이언스] 인사총무 (계약직)",
+        "division": 4,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 5,
+        "end_time": null,
+        "duty_group_ids": [
+          115,
+          128,
+          104,
+          107
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": 106379,
+  "end_time": "2026-11-20T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106379,
+    "name": "NHN Enterprise",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/015/775/webp/jss_hashed_5fe9e9bef5d979239389_20251215T172749_NHN_ENTERPRISE_Black.webp?1765787269",
+    "employment_page_url": "https://careers.nhn.com/recruits/4377674079511025954?utm_source=jasoseol&utm_medium=jobposting&utm_campaign=NHN%20Enterprise_Tech",
+    "start_time": "2026-09-21T00:00:00.000+09:00",
+    "end_time": "2026-11-20T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div style=\"position:relative;\"><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/370/341/webp/NHNEnterprise_AgenticAI_%EC%84%9C%EB%B9%84%EC%8A%A4_%EA%B8%B0%ED%9A%8D.webp?1789971528\" alt=\"NHN Enterprise AgenticAI 서비스 기획\"></div></body></html>\n",
+    "target": 4,
+    "created_at": "2026-09-21T15:26:01.000+09:00",
+    "recruit_type": 1,
+    "view_count": 498,
+    "favorite_count": 9,
+    "homepage_count": 1,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 20549,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "AgenticAI 서비스 기획",
+    "resume_expose": true,
+    "company_group": {
+      "id": 15775,
+      "name": "NHN Enterprise",
+      "business_size": "middle_market",
+      "business_type": null,
+      "created_at": "2025-10-23T13:01:42.000+09:00",
+      "updated_at": "2025-12-15T17:27:50.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/015/775/original/jss_hashed_5fe9e9bef5d979239389_20251215T172749_NHN_ENTERPRISE_Black.png?1765787269",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 430812,
+        "field": "AgenticAI 서비스 기획",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          171
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

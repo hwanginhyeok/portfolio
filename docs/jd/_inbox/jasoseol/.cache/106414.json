@@ -1,0 +1,61 @@
+{
+  "id": 106414,
+  "end_time": "2026-10-05T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106414,
+    "name": "AXA손해보험",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/001/264/webp/AXA_Logo.webp?1684485388",
+    "employment_page_url": "https://axa.career.greetinghr.com/ko/o/238023",
+    "start_time": "2026-09-22T17:00:00.000+09:00",
+    "end_time": "2026-10-05T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div style=\"position:relative;\"><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/370/599/webp/CoE_TF%ED%8C%80_Business_Analyst_%EC%B1%84%EC%9A%A9.webp?1790064147\" alt=\"AXA손해보험 CoE TF팀 Business Analyst 채용 (경력)\"></div></body></html>\n",
+    "target": 4,
+    "created_at": "2026-09-22T17:11:45.000+09:00",
+    "recruit_type": 0,
+    "view_count": 480,
+    "favorite_count": 1,
+    "homepage_count": 2,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 5155,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "CoE TF팀 Business Analyst 채용 (경력)",
+    "resume_expose": true,
+    "company_group": {
+      "id": 1264,
+      "name": "AXA손해보험",
+      "business_size": "big_business",
+      "business_type": null,
+      "created_at": "2015-09-10T05:49:22.000+09:00",
+      "updated_at": "2023-05-19T17:36:29.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/001/264/original/AXA_Logo.png?1684485388",
+      "alternate_names": [
+        "악사손해보험"
+      ],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 431180,
+        "field": "Business Analyst",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          110,
+          113,
+          180,
+          197,
+          103,
+          163
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

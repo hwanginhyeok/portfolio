@@ -1,0 +1,55 @@
+{
+  "id": 106398,
+  "end_time": "2026-10-12T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106398,
+    "name": "신원",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/000/959/webp/JK_Co_swinsa-1.webp?1684485295",
+    "employment_page_url": "https://shinwon.career.greetinghr.com/ko/o/209691",
+    "start_time": "2026-09-22T00:00:00.000+09:00",
+    "end_time": "2026-10-12T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div style=\"position:relative;\"><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/370/432/webp/%E2%97%8F_2026_%EC%B5%9C%EC%8B%A0%EA%B8%B0%EC%A4%80_%EC%B1%84%EC%9A%A9_%EA%B3%B5%EA%B3%A0_%EC%96%91%EC%8B%9D_KNIT_%ED%95%B4%EC%99%B8%EC%98%81%EC%97%85%28%EB%8B%B4%EB%8B%B9_%EB%B0%94%EC%9D%B4%EC%96%B4_%EB%AF%B8%EC%A0%95%29_%EA%B2%BD%EB%A0%A5_%28%EB%B2%A0%ED%8A%B8%EB%82%A8_%ED%8C%8C%EA%B2%ACX%29.webp?1790033811\" alt=\"신원 KNIT 해외영업(담당 바이어 미정) 경력 채용\"></div></body></html>\n",
+    "target": 4,
+    "created_at": "2026-09-22T10:33:57.000+09:00",
+    "recruit_type": 0,
+    "view_count": 96,
+    "favorite_count": 1,
+    "homepage_count": 0,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 4850,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "KNIT 해외영업(담당 바이어 미정) 경력 채용",
+    "resume_expose": true,
+    "company_group": {
+      "id": 959,
+      "name": "신원",
+      "business_size": "middle_market",
+      "business_type": null,
+      "created_at": "2015-09-10T05:48:34.000+09:00",
+      "updated_at": "2023-05-19T17:34:56.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/000/959/original/JK_Co_swinsa-1.png?1684485295",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 430985,
+        "field": "KNIT 해외영업(담당 바이어 미정)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          154,
+          146
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

@@ -7,46 +7,6 @@
     "timing": "2026-09-29 09:30 ~ 10:00 KST (30m timed)",
     "updated_at": "2026-09-20T21:49:42.423203+09:00"
   },
-  "105769": {
-    "event_id": "6381j2409gdq3b1rop42acvkpo",
-    "end_time": "2026-09-20T23:59:00.000+09:00",
-    "title": "마감 · 현대로템 생산기지 시스템 설계 총괄",
-    "marker": "jasoseol:105769",
-    "timing": "2026-09-20 (all-day)",
-    "updated_at": "2026-09-20T21:49:42.481158+09:00"
-  },
-  "106021": {
-    "event_id": "e7ik7pu2t3obfbbavu8q9sina0",
-    "end_time": "2026-09-20T23:59:00.000+09:00",
-    "title": "마감 · 효성그룹 [효성화학] 생산기술(외곽 공정, 신규 필름 양산화 추진)",
-    "marker": "jasoseol:106021",
-    "timing": "2026-09-20 (all-day)",
-    "updated_at": "2026-09-20T21:49:42.770627+09:00"
-  },
-  "106063": {
-    "event_id": "n5kiii6o6musmabri8rd8un9gc",
-    "end_time": "2026-09-20T23:59:00.000+09:00",
-    "title": "마감 · TKG태광 품질 (QA)",
-    "marker": "jasoseol:106063",
-    "timing": "2026-09-20 (all-day)",
-    "updated_at": "2026-09-20T21:49:43.129617+09:00"
-  },
-  "106175": {
-    "event_id": "vtr63h6ogdcifjntut45it2ha0",
-    "end_time": "2026-09-20T23:59:00.000+09:00",
-    "title": "마감 · AJ네트웍스 로봇SI (경력)",
-    "marker": "jasoseol:106175",
-    "timing": "2026-09-20 (all-day)",
-    "updated_at": "2026-09-20T21:49:46.353009+09:00"
-  },
-  "106200": {
-    "event_id": "9rukdt98vcvlklkruqu73sa8rk",
-    "end_time": "2026-09-25T23:59:00.000+09:00",
-    "title": "마감 · 한국항공우주산업 무인기 생산기술",
-    "marker": "jasoseol:106200",
-    "timing": "2026-09-25 (all-day)",
-    "updated_at": "2026-09-20T21:49:46.918189+09:00"
-  },
   "106286": {
     "event_id": "80a066sqqaoj1tf8g3ht183vds",
     "end_time": "2026-09-28T17:00:00.000+09:00",
@@ -62,5 +22,37 @@
     "marker": "jasoseol:106263",
     "timing": "2026-09-28 (all-day)",
     "updated_at": "2026-09-20T21:49:47.031311+09:00"
+  },
+  "106348": {
+    "event_id": "fr4do68p0ij17fjv6jdas3f4vo",
+    "end_time": "2026-10-08T15:00:00.000+09:00",
+    "title": "마감 · 한국선급 함정 기본/전장 계산 및 도면승인",
+    "marker": "jasoseol:106348",
+    "timing": "2026-10-08 14:30 ~ 15:00 KST (30m timed)",
+    "updated_at": "2026-09-22T08:34:11.927818+09:00"
+  },
+  "106402": {
+    "event_id": "qaihpgcmgehd8ef0015qgkgfg8",
+    "end_time": "2026-10-11T23:59:00.000+09:00",
+    "title": "마감 · SK바이오사이언스 Drug Substance (원액생산)",
+    "marker": "jasoseol:106402",
+    "timing": "2026-10-11 (all-day)",
+    "updated_at": "2026-09-23T08:34:08.701104+09:00"
+  },
+  "106424": {
+    "event_id": "eqq9mmah0ef1ksmdhmsr4fp2fo",
+    "end_time": "2026-10-06T10:00:00.000+09:00",
+    "title": "마감 · 하나은행 리스크_리스크 검증",
+    "marker": "jasoseol:106424",
+    "timing": "2026-10-06 09:30 ~ 10:00 KST (30m timed)",
+    "updated_at": "2026-09-24T08:34:11.103624+09:00"
+  },
+  "106405": {
+    "event_id": "mvem4i95cghcvqtmgg4fg04a7c",
+    "end_time": "2026-10-11T23:59:00.000+09:00",
+    "title": "마감 · 호반그룹 [호반건설] 시공_전기(주니어프로)",
+    "marker": "jasoseol:106405",
+    "timing": "2026-10-11 (all-day)",
+    "updated_at": "2026-09-24T08:34:11.288896+09:00"
   }
 }

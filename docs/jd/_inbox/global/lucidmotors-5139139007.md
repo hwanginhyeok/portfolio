@@ -12,7 +12,7 @@ search_lane: "core"
 search_lanes: ["core"]
 score: 52
 matched_keywords: ["powertrain", "APQP/PPAP", "DFMEA/PFMEA", "NPI", "motor", "reliability", "supplier quality", "validation", "electric vehicle", "hardware/electrical engineer", "manufacturing engineer", "quality engineer", "electrical", "hardware", "manufacturing", "quality", "testing", "vehicle/automotive"]
-url: "https://job-boards.greenhouse.io/lucidmotors/jobs/5139139007"
+url: "https://lucidmotors.com/careers/search/5139139007?gh_jid=5139139007"
 first_seen: "2026-08-19"
 ---
 

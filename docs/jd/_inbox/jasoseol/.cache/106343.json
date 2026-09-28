@@ -1,0 +1,278 @@
+{
+  "id": 106343,
+  "end_time": "2026-10-11T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106343,
+    "name": "우성그룹",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/004/234/webp/jss_hashed_e94fe78a348f6e160fac_20250916T164307_%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-removebg-preview.webp?1758008591",
+    "employment_page_url": "https://woosung.recruiter.co.kr/career/job",
+    "start_time": "2026-09-21T10:00:00.000+09:00",
+    "end_time": "2026-10-11T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/370/087/webp/image.webp?1789710634\" alt=\"우성그룹 2026 신입 / 경력 모집\"></div></body></html>\n",
+    "target": 0,
+    "created_at": "2026-09-18T14:50:46.000+09:00",
+    "recruit_type": 0,
+    "view_count": 13013,
+    "favorite_count": 673,
+    "homepage_count": 277,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 10571,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "2026 신입 / 경력 모집",
+    "resume_expose": true,
+    "company_group": {
+      "id": 4234,
+      "name": "우성그룹",
+      "business_size": "middle_market",
+      "business_type": null,
+      "created_at": "2016-09-12T13:09:17.000+09:00",
+      "updated_at": "2025-09-16T16:43:11.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/004/234/original/jss_hashed_e94fe78a348f6e160fac_20250916T164307_%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-removebg-preview.png?1758008591",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 430575,
+        "field": "[우성] 인사/총무",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 37,
+        "end_time": null,
+        "duty_group_ids": [
+          115,
+          116,
+          128,
+          104,
+          107
+        ],
+        "apply": null
+      },
+      {
+        "id": 430576,
+        "field": "[우성] 재무/회계/자금",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 33,
+        "end_time": null,
+        "duty_group_ids": [
+          106,
+          122,
+          123,
+          125,
+          105
+        ],
+        "apply": null
+      },
+      {
+        "id": 430577,
+        "field": "[우성] IT/AX",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 46,
+        "end_time": null,
+        "duty_group_ids": [
+          166,
+          167,
+          170
+        ],
+        "apply": null
+      },
+      {
+        "id": 430578,
+        "field": "[우성] 제품전략",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 3,
+        "end_time": null,
+        "duty_group_ids": [
+          110,
+          112,
+          150,
+          151,
+          103,
+          145
+        ],
+        "apply": null
+      },
+      {
+        "id": 430579,
+        "field": "[우성사료] 구매",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 13,
+        "end_time": null,
+        "duty_group_ids": [
+          157,
+          147
+        ],
+        "apply": null
+      },
+      {
+        "id": 430580,
+        "field": "[우성사료] 영업(양축사료)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          194,
+          196
+        ],
+        "apply": null
+      },
+      {
+        "id": 430581,
+        "field": "[우성사료] 품질관리",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          189,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 430582,
+        "field": "[우성사료] 품질분석",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 9,
+        "end_time": null,
+        "duty_group_ids": [
+          189,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 430583,
+        "field": "[우성사료] 배합비",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 2,
+        "end_time": null,
+        "duty_group_ids": [
+          235,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 430584,
+        "field": "[우성유통] 영업팀",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 7,
+        "end_time": null,
+        "duty_group_ids": [
+          194,
+          196,
+          197
+        ],
+        "apply": null
+      },
+      {
+        "id": 430585,
+        "field": "[우성유통] 계열화 사업팀",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          113,
+          194,
+          103
+        ],
+        "apply": null
+      },
+      {
+        "id": 430586,
+        "field": "[우성] IT/AX(Full-Stack 개발 엔지니어)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 3,
+        "end_time": null,
+        "duty_group_ids": [
+          175,
+          176,
+          162
+        ],
+        "apply": null
+      },
+      {
+        "id": 430587,
+        "field": "[우성] IT/AX(정보보안 담당)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          166
+        ],
+        "apply": null
+      },
+      {
+        "id": 430588,
+        "field": "[우성사료] 배합비",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          235,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 430589,
+        "field": "[우성사료] 안전보건관리자",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          191,
+          184
+        ],
+        "apply": null
+      },
+      {
+        "id": 430590,
+        "field": "[우성양행] 영업(동물약품)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          194,
+          196
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": true
+  }
+}

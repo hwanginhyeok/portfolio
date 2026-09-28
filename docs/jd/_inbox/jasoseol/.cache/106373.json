@@ -1,0 +1,140 @@
+{
+  "id": 106373,
+  "end_time": "2026-10-06T16:00:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106373,
+    "name": "농업정책보험금융원(APFS)",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/000/591/webp/%EA%B8%B0%EA%B4%80ci.webp?1684484739",
+    "employment_page_url": "https://job.incruit.com/jobdb_info/jobpost.asp?job=2609210000421&handle=3A2683D8BA1583A06182F96BB68CE61AD3FAE2968C39BD80C5756F001FABE149",
+    "start_time": "2026-09-21T16:00:00.000+09:00",
+    "end_time": "2026-10-06T16:00:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div style=\"position:relative;\"><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/370/311/webp/%EB%86%8D%EC%97%85%EC%A0%95%EC%B1%85%EB%B3%B4%ED%97%98%EA%B8%88%EC%9C%B5%EC%9B%90_0921.webp?1789964037\" alt=\"농업정책보험금융원(APFS) 2026년 신입/경력/인턴 공개채용\"></div></body></html>\n",
+    "target": 4,
+    "created_at": "2026-09-21T13:24:50.000+09:00",
+    "recruit_type": 0,
+    "view_count": 2625,
+    "favorite_count": 318,
+    "homepage_count": 51,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 4482,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "2026년 신입/경력/인턴 공개채용",
+    "resume_expose": true,
+    "company_group": {
+      "id": 591,
+      "name": "농업정책보험금융원(APFS)",
+      "business_size": null,
+      "business_type": "public_institution",
+      "created_at": "2015-09-10T05:47:37.000+09:00",
+      "updated_at": "2024-07-12T14:53:47.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/000/591/original/%EA%B8%B0%EA%B4%80ci.jpg?1684484739",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 430759,
+        "field": "전산",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 22,
+        "end_time": null,
+        "duty_group_ids": [
+          170,
+          166
+        ],
+        "apply": null
+      },
+      {
+        "id": 430760,
+        "field": "행정사무 (정책금융)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 32,
+        "end_time": null,
+        "duty_group_ids": [
+          109,
+          115,
+          122,
+          128,
+          103,
+          104,
+          105,
+          107
+        ],
+        "apply": null
+      },
+      {
+        "id": 430761,
+        "field": "행정사무 (농어업재해보험관리)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 5,
+        "end_time": null,
+        "duty_group_ids": [
+          127,
+          131,
+          107
+        ],
+        "apply": null
+      },
+      {
+        "id": 430762,
+        "field": "행정사무 (정책금융) * 운전관리 및 사무보조",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          127,
+          130,
+          107
+        ],
+        "apply": null
+      },
+      {
+        "id": 430763,
+        "field": "행정사무 (정책금융)",
+        "division": 3,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 3,
+        "end_time": null,
+        "duty_group_ids": [
+          109,
+          115,
+          122,
+          128,
+          103,
+          104,
+          105,
+          107
+        ],
+        "apply": null
+      },
+      {
+        "id": 430764,
+        "field": "행정사무 (농어업재해보험관리)",
+        "division": 3,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 2,
+        "end_time": null,
+        "duty_group_ids": [
+          127,
+          131,
+          107
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": true
+  }
+}
