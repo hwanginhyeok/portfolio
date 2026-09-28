@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  hih.portfolio.applications-report — Daily job application pipeline report and Telegram dispatch, 11:47 Asia/Seoul.
+
+  DRAFT ONLY: NOT INSTALLED / NOT LOADED by the migration.
+  To be installed on macOS by PM upon operational cutover:
+
+      cp launchd/hih.portfolio.applications-report.plist ~/Library/LaunchAgents/
+      launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/hih.portfolio.applications-report.plist
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>hih.portfolio.applications-report</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/zsh</string>
+        <string>-lc</string>
+        <string>cd ~/Workspace/projects/portfolio &amp;&amp; exec uv run python3 scripts/applications_report.py --html --telegram</string>
+    </array>
+
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>11</integer>
+        <key>Minute</key>
+        <integer>47</integer>
+    </dict>
+
+    <key>LimitLoadToSessionType</key>
+    <string>Aqua</string>
+
+    <key>StandardOutPath</key>
+    <string>/Users/hwang-inhyeok/Library/Logs/hih/portfolio_applications_report.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/hwang-inhyeok/Library/Logs/hih/portfolio_applications_report.log</string>
+</dict>
+</plist>

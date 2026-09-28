@@ -1,0 +1,19 @@
+#!/bin/sh
+# Rebuild site/index.html from features/ and ops/ops.yaml before commit.
+set -e
+
+ROOT="$(git rev-parse --show-toplevel)"
+if [ -f "$ROOT/.venv/bin/python" ]; then
+  PYTHON="$ROOT/.venv/bin/python"
+elif command -v uv >/dev/null 2>&1; then
+  PYTHON="uv run python3"
+else
+  PYTHON="python3"
+fi
+
+$PYTHON "$ROOT/scripts/generate_site.py" >/dev/null
+
+if ! git diff --quiet -- site/index.html || ! git diff --cached --quiet -- site/index.html; then
+  git add site/index.html
+  echo "pre-commit: rebuilt and staged site/index.html"
+fi

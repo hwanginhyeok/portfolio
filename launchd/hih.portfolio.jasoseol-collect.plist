@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  hih.portfolio.jasoseol-collect — Daily Jasoseol recruitment calendar crawl, 08:30 Asia/Seoul.
+
+  DRAFT ONLY: NOT INSTALLED / NOT LOADED by the migration.
+  To be installed on macOS by PM upon operational cutover:
+
+      cp launchd/hih.portfolio.jasoseol-collect.plist ~/Library/LaunchAgents/
+      launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/hih.portfolio.jasoseol-collect.plist
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>hih.portfolio.jasoseol-collect</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/zsh</string>
+        <string>-lc</string>
+        <string>cd ~/Workspace/projects/portfolio &amp;&amp; exec uv run python3 scripts/jasoseol_collect.py</string>
+    </array>
+
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>8</integer>
+        <key>Minute</key>
+        <integer>30</integer>
+    </dict>
+
+    <key>LimitLoadToSessionType</key>
+    <string>Aqua</string>
+
+    <key>StandardOutPath</key>
+    <string>/Users/hwang-inhyeok/Library/Logs/hih/portfolio_jasoseol_collect.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/hwang-inhyeok/Library/Logs/hih/portfolio_jasoseol_collect.log</string>
+</dict>
+</plist>

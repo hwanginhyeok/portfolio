@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio & 채용 수집 파이프라인 운영 개요</title>
+  <style>
+    :root { color-scheme: light; font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #202938; background: #f5f7fa; }
+    body { max-width: 1040px; margin: 2rem auto; padding: 0 1rem 3rem; }
+    h1, h2, h3 { line-height: 1.25; color: #0f172a; }
+    section { margin: 2rem 0; padding: 1.25rem 1.5rem; background: white; border: 1px solid #dbe2ea; border-radius: 12px; }
+    table { width: 100%; border-collapse: collapse; text-align: left; margin-top: 0.5rem; }
+    th, td { padding: .65rem .75rem; border-bottom: 1px solid #e4e9ef; vertical-align: top; }
+    th { background: #f8fafc; font-weight: 600; }
+    code { background: #eef2f6; padding: 0.15rem 0.35rem; border-radius: 4px; font-size: 0.9em; }
+    .meta { color: #536174; font-size: 0.95rem; }
+    .notice { border-left: 5px solid #0284c7; background: #f0f9ff; }
+    .badge { display: inline-block; padding: 0.2rem 0.5rem; border-radius: 6px; font-size: 0.8rem; font-weight: 600; background: #dbeafe; color: #1e40af; }
+    .status-ok { color: #15803d; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Portfolio & 채용 인텔리전스 파이프라인 운영 개요</h1>
+    <p>Astro 기반 엔지니어링 포트폴리오 웹사이트 + 자동화 채용 공고 수집, 캘린더 동기화 및 텔레그램 일일 브리핑 파이프라인.</p>
+    <p class="meta">운영 노드: <strong>server-pc</strong> · 기준일: <strong>2026-09-28</strong> · 시간대: Asia/Seoul</p>
+  </header>
+
+  <section class="notice">
+    <h2>운영 상태 및 안내</h2>
+    <p><strong>server-pc 운영 유지 중</strong>: 6개의 채용 수집 및 리포트 크론 작업이 server-pc에서 정상 작동 중이며, Mac 작업트리는 서버 작업을 일체 중단하거나 변경하지 않습니다.</p>
+    <ul><li>Production job collection and reporting runs on server-pc via crontab.</li>
+<li>Do NOT alter, stop, or restart crontab jobs on server-pc.</li>
+<li>Draft LaunchAgents in launchd/ are templates and not loaded during migration.</li>
+<li>Astro static site builds locally on macOS.</li></ul>
+  </section>
+
+  <section>
+    <h2>주요 기능 (8)</h2>
+    <table>
+      <thead><tr><th>기능</th><th>문서 링크</th></tr></thead>
+      <tbody>
+        <tr><th scope="row"><a href="../features/applications-ledger.md">지원 파이프라인 원장 &amp; 현황 (applications-ledger)</a></th><td><code>features/applications-ledger.md</code></td></tr>
+<tr><th scope="row"><a href="../features/astro-portfolio.md">Astro 포트폴리오 웹사이트 (astro-portfolio)</a></th><td><code>features/astro-portfolio.md</code></td></tr>
+<tr><th scope="row"><a href="../features/global-collector.md">글로벌 ATS 기업공고 수집 (global-collector)</a></th><td><code>features/global-collector.md</code></td></tr>
+<tr><th scope="row"><a href="../features/jasoseol-calendar.md">캘린더 마감일정 동기화 (jasoseol-calendar)</a></th><td><code>features/jasoseol-calendar.md</code></td></tr>
+<tr><th scope="row"><a href="../features/jasoseol-collector.md">자소설닷컴 공고 수집 엔진 (jasoseol-collector)</a></th><td><code>features/jasoseol-collector.md</code></td></tr>
+<tr><th scope="row"><a href="../features/jasoseol-report.md">자소설닷컴 일일 리포트 &amp; 텔레그램 (jasoseol-report)</a></th><td><code>features/jasoseol-report.md</code></td></tr>
+<tr><th scope="row"><a href="../features/presentation-builder.md">대학원 포트폴리오 PPT 생성기 (presentation-builder)</a></th><td><code>features/presentation-builder.md</code></td></tr>
+<tr><th scope="row"><a href="../features/wanted-collector.md">원티드 채용공고 수집 &amp; 상태관리 (wanted-collector)</a></th><td><code>features/wanted-collector.md</code></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>상시 서비스 (0)</h2>
+    <table>
+      <thead><tr><th>식별자</th><th>역할</th><th>단위 / 명령어</th><th>노드 (상태)</th><th>필요 시크릿</th></tr></thead>
+      <tbody>
+        <tr><td colspan="5" style="text-align: center; color: #64748b;">상시 데몬 없음 (배치 크론 작업 기반)</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>예약 작업 (6)</h2>
+    <table>
+      <thead><tr><th>식별자</th><th>작업 내용</th><th>일정</th><th>노드 (상태)</th><th>필요 시크릿</th></tr></thead>
+      <tbody>
+        <tr><td>cron:jasoseol-collect</td><td>Pulls experienced job announcements from Jasoseol calendar API</td><td><code>30 8 * * *</code></td><td>server-pc (active)</td><td>없음</td></tr>
+<tr><td>cron:jasoseol-calendar</td><td>Synchronizes actionable Jasoseol application deadlines to Google Calendar</td><td><code>34 8 * * *</code></td><td>server-pc (active)</td><td>없음</td></tr>
+<tr><td>cron:jasoseol-report</td><td>Generates daily Jasoseol HTML report and sends via Telegram</td><td><code>36 8 * * *</code></td><td>server-pc (active)</td><td>PM_BOT_TOKEN, PM_BOT_CHAT_ID</td></tr>
+<tr><td>cron:wanted-collect</td><td>Pulls matching Korean tech postings from Wanted API</td><td><code>40 11 * * *</code></td><td>server-pc (active)</td><td>없음</td></tr>
+<tr><td>cron:applications-report</td><td>Generates daily job application pipeline report and sends via Telegram</td><td><code>47 11 * * *</code></td><td>server-pc (active)</td><td>PM_BOT_TOKEN, PM_BOT_CHAT_ID</td></tr>
+<tr><td>cron:global-collect</td><td>Pulls matching postings from global ATS APIs and sends report via Telegram</td><td><code>50 11 * * *</code></td><td>server-pc (active)</td><td>PM_BOT_TOKEN, PM_BOT_CHAT_ID</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>최신 건전성 및 검증 상태</h2>
+    <p class="status-ok">상태: ok (확인 시각: 2026-09-28T16:22:20+09:00)</p>
+    <p>All 90 hermetic tests passing on macOS (Python 3.12); Astro site builds cleanly (10 static routes).</p>
+    <h3>정기 확인 항목</h3>
+    <ul><li><code>uv run pytest tests/ (90 hermetic unit tests)</code></li>
+<li><code>npm run build (Astro static site compilation)</code></li>
+<li><code>uv run python3 scripts/wanted_state_repair.py (Wanted state ledger integrity check)</code></li></ul>
+  </section>
+
+  <section>
+    <h2>상태 및 저장소 경로</h2>
+    <ul><li><code>docs/jd/_inbox/jasoseol/state.json</code></li>
+<li><code>docs/jd/_inbox/jasoseol/calendar_events.json</code></li>
+<li><code>docs/jd/_inbox/wanted/state.json</code></li>
+<li><code>docs/jd/_inbox/global/state.json</code></li>
+<li><code>docs/jd/applications.json</code></li>
+<li><code>dist/</code></li></ul>
+  </section>
+
+  <section>
+    <h2>시크릿 카탈로그 (키체인 명칭 전용)</h2>
+    <p><code>PM_BOT_TOKEN</code>, <code>PM_BOT_CHAT_ID</code></p>
+  </section>
+
+  <section>
+    <h2>외부 연동 및 의존성</h2>
+    <h3>의존성</h3>
+    <ul><li><code>Node.js &amp; npm (Astro build &amp; dependencies)</code></li>
+<li><code>Python 3.12 &amp; uv (Collector runtime &amp; test suite)</code></li>
+<li><code>Jasoseol public calendar API</code></li>
+<li><code>Wanted public search API</code></li>
+<li><code>Enterprise ATS endpoints (Workday, Greenhouse, Lever, Ashby)</code></li>
+<li><code>Google Calendar via hih-schedule CLI</code></li>
+<li><code>Telegram Bot API</code></li></ul>
+    <h3>외부 사이트</h3>
+    <ul><li><a href="https://jasoseol.com">https://jasoseol.com</a></li>
+<li><a href="https://www.wanted.co.kr">https://www.wanted.co.kr</a></li>
+<li><a href="https://api.telegram.org">https://api.telegram.org</a></li></ul>
+  </section>
+</body>
+</html>
