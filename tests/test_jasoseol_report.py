@@ -287,7 +287,7 @@ def test_non_empty_telegram_run_sends_document_without_plain_message(tmp_path):
     with patch("scripts.jasoseol_report.urllib.request.urlopen", return_value=telegram_response()) as mock_urlopen:
         exit_code = jr.main([
             "--inbox-dir", str(inbox), "--report-dir", str(report_dir),
-            "--env", str(env_path), "--telegram",
+            "--env", str(env_path), "--telegram", "--date", "2026-09-25",
         ])
 
     assert exit_code == 0

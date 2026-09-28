@@ -19,6 +19,7 @@ from __future__ import annotations
 import argparse
 import concurrent.futures
 import json
+import os
 import re
 import subprocess
 import sys
@@ -72,7 +73,7 @@ except ModuleNotFoundError:
     from state_utils import atomic_write_json
 
 DEFAULT_LEDGER_PATH = DEFAULT_INBOX_DIR / "calendar_events.json"
-DEFAULT_SCHEDULE_CLI = Path("/home/window11/hih-skills/hih-schedule/scripts/hih_schedule.py")
+DEFAULT_SCHEDULE_CLI = Path(os.environ.get("HIH_SCHEDULE_CLI", "/home/window11/hih-skills/hih-schedule/scripts/hih_schedule.py"))
 CALENDAR_ACCOUNT = "personal"
 CALENDAR_LOOKBACK_DAYS = 30
 CALENDAR_LOOKAHEAD_DAYS = 365

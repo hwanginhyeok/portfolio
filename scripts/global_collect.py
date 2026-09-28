@@ -41,6 +41,7 @@ import argparse
 import hashlib
 import html
 import json
+import os
 import re
 import sys
 import time
@@ -81,7 +82,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_CONFIG = REPO_ROOT / "config" / "global_targets.json"
 INBOX_DIR = REPO_ROOT / "docs" / "jd" / "_inbox" / "global"
 REPORT_DIR = INBOX_DIR / "report"
-PM_ENV = Path("/home/window11/project-manager/.env")
+PM_ENV = Path(os.environ.get("PORTFOLIO_PM_ENV", os.environ.get("PM_ENV_PATH", "/home/window11/project-manager/.env")))
 
 GREENHOUSE_URL = "https://boards-api.greenhouse.io/v1/boards/{slug}/jobs"
 ASHBY_URL = "https://api.ashbyhq.com/posting-api/job-board/{slug}"

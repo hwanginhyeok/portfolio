@@ -22,6 +22,7 @@ from __future__ import annotations
 import argparse
 import html
 import json
+import os
 import re
 import sys
 import urllib.request
@@ -52,7 +53,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_CONFIG = REPO_ROOT / "config" / "jasoseol_targets.json"
 DEFAULT_INBOX_DIR = REPO_ROOT / "docs" / "jd" / "_inbox" / "jasoseol"
 DEFAULT_REPORT_DIR = REPO_ROOT / "docs" / "jd" / "report"
-DEFAULT_ENV = Path("/home/window11/project-manager/.env")
+DEFAULT_ENV = Path(os.environ.get("PORTFOLIO_PM_ENV", os.environ.get("PM_ENV_PATH", "/home/window11/project-manager/.env")))
 RECRUIT_BASE_URL = "https://jasoseol.com/recruit"
 CURRENT_SCORING_VERSION = 2
 KST = timezone(timedelta(hours=9))

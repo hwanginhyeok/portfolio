@@ -23,6 +23,7 @@ Usage:
 import argparse
 import html
 import json
+import os
 import re
 import sys
 import time
@@ -61,7 +62,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_CONFIG = REPO_ROOT / "config" / "wanted_targets.json"
 INBOX_DIR = REPO_ROOT / "docs" / "jd" / "_inbox" / "wanted"
 REPORT_DIR = INBOX_DIR / "report"
-PM_ENV = Path("/home/window11/project-manager/.env")
+PM_ENV = Path(os.environ.get("PORTFOLIO_PM_ENV", os.environ.get("PM_ENV_PATH", "/home/window11/project-manager/.env")))
 
 BASE = "https://www.wanted.co.kr"
 RESULTS_URL = BASE + "/api/chaos/search/v1/results"

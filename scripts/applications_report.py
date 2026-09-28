@@ -22,6 +22,7 @@ from __future__ import annotations
 import argparse
 import html
 import json
+import os
 import re
 import sys
 import urllib.request
@@ -32,7 +33,7 @@ REPO = Path(__file__).resolve().parent.parent
 LEDGER = REPO / "docs" / "jd" / "applications.json"
 MARKDOWN = REPO / "docs" / "jd" / "APPLICATIONS.md"
 REPORT_DIR = REPO / "docs" / "jd" / "report"
-DEFAULT_ENV = Path("/home/window11/project-manager/.env")  # same file wanted_collect.py reads
+DEFAULT_ENV = Path(os.environ.get("PORTFOLIO_PM_ENV", os.environ.get("PM_ENV_PATH", "/home/window11/project-manager/.env")))  # same file wanted_collect.py reads
 KST = timezone(timedelta(hours=9))
 
 # Order the report by what the user has to do next, not alphabetically.
