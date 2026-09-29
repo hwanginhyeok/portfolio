@@ -20,12 +20,12 @@ Crawls tech job postings from the Wanted API, assesses candidate profile fit wit
 
 - Repository data: `docs/jd/_inbox/wanted/`, `config/wanted_targets.json`
 - External state: Wanted public API
-- Secrets: None for crawl; `PM_BOT_TOKEN`, `PM_BOT_CHAT_ID` if `--telegram` flag used
+- Secrets: none (the `--telegram` path notifies through the harness ops bot)
 
 ## Tests
 
-- `uv run pytest tests/test_job_collectors.py` (27 tests covering scoring, address pattern, false-positive exclusion, and state repair)
+- `.venv/bin/python -m pytest tests/test_job_collectors.py` (scoring, address pattern, false-positive exclusion, and state repair)
 
 ## Status
 
-live on server-pc via cron (`40 11 * * *`); draft LaunchAgent prepared in `launchd/hih.portfolio.wanted-collect.plist`.
+live on server-pc via cron (`40 11 * * *`); prepared macOS LaunchAgent (absolute paths, not loaded); server cron still runs until the per-job cutover (`docs/cutover.md`).

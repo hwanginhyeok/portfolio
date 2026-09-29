@@ -115,7 +115,7 @@ cron:
     status: active
     secrets: []
   - id: cron:jasoseol-report
-    what: Generates daily Jasoseol HTML report and sends via Telegram
+    what: Generates daily Jasoseol HTML report and notifies via the harness ops bot
     command: python3 scripts/jasoseol_report.py --html --telegram
     schedule: "36 8 * * *"
     node: server-pc
@@ -129,14 +129,14 @@ cron:
     status: active
     secrets: []
   - id: cron:applications-report
-    what: Generates daily job application pipeline report and sends via Telegram
+    what: Generates daily job application pipeline report and notifies via the harness ops bot
     command: python3 scripts/applications_report.py --html --telegram
     schedule: "47 11 * * *"
     node: server-pc
     status: active
     secrets: []
   - id: cron:global-collect
-    what: Pulls matching postings from global ATS APIs and sends report via Telegram
+    what: Pulls matching postings from global ATS APIs and notifies via the harness ops bot
     command: python3 scripts/global_collect.py --html --telegram
     schedule: "50 11 * * *"
     node: server-pc

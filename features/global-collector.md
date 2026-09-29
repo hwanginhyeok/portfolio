@@ -20,12 +20,12 @@ Crawls career boards of global technology firms (Aptiv, Tesla, Apple, Applied Ma
 
 - Repository data: `docs/jd/_inbox/global/`, `config/global_targets.json`
 - External state: Enterprise ATS endpoints
-- Secrets: `PM_BOT_TOKEN`, `PM_BOT_CHAT_ID`
+- Secrets: none (the report notifies through the harness ops bot)
 
 ## Tests
 
-- `uv run pytest tests/test_job_collectors.py` (includes global ATS corpus tests and eligibility gates)
+- `.venv/bin/python -m pytest tests/test_job_collectors.py` (includes global ATS corpus tests and eligibility gates)
 
 ## Status
 
-live on server-pc via cron (`50 11 * * *`); draft LaunchAgent prepared in `launchd/hih.portfolio.global-collect.plist`.
+live on server-pc via cron (`50 11 * * *`); prepared macOS LaunchAgent (absolute paths, not loaded); server cron still runs until the per-job cutover (`docs/cutover.md`).

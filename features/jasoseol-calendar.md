@@ -18,13 +18,13 @@ Synchronizes actionable Jasoseol application deadlines directly to the operator'
 ## Data and state
 
 - Repository data: `docs/jd/_inbox/jasoseol/calendar_events.json`
-- External state: Google Calendar API via `hih-schedule` CLI
+- External state: Google Calendar API via the `hih-schedule` CLI (invoked directly on macOS)
 - Secrets: Google Calendar OAuth token managed by harness
 
 ## Tests
 
-- `uv run pytest tests/test_jasoseol_calendar.py` (9 tests covering event planning, idempotency, updates, and CLI parsing)
+- `.venv/bin/python -m pytest tests/test_jasoseol_calendar.py` (event planning, idempotency, updates, CLI parsing, and direct CLI exec)
 
 ## Status
 
-live on server-pc via cron (`34 8 * * *`); draft LaunchAgent prepared in `launchd/hih.portfolio.jasoseol-calendar.plist`.
+live on server-pc via cron (`34 8 * * *`); prepared macOS LaunchAgent (absolute paths, not loaded); server cron still runs until the per-job cutover (`docs/cutover.md`).

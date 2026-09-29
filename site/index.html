@@ -22,7 +22,7 @@
 <body>
   <header>
     <h1>Portfolio & 채용 인텔리전스 파이프라인 운영 개요</h1>
-    <p>Astro 기반 엔지니어링 포트폴리오 웹사이트 + 자동화 채용 공고 수집, 캘린더 동기화 및 텔레그램 일일 브리핑 파이프라인.</p>
+    <p>Astro 기반 엔지니어링 포트폴리오 웹사이트 + 자동화 채용 공고 수집, 캘린더 동기화 및 운영 봇 일일 브리핑 파이프라인.</p>
     <p class="meta">운영 노드: <strong>server-pc</strong> · 기준일: <strong>2026-09-29</strong> · 시간대: Asia/Seoul</p>
   </header>
 
@@ -47,7 +47,7 @@
 <tr><th scope="row"><a href="../features/harness-scheduling.md">macOS 예약 작업 &amp; 하네스 연동 (harness-scheduling)</a></th><td><code>features/harness-scheduling.md</code></td></tr>
 <tr><th scope="row"><a href="../features/jasoseol-calendar.md">캘린더 마감일정 동기화 (jasoseol-calendar)</a></th><td><code>features/jasoseol-calendar.md</code></td></tr>
 <tr><th scope="row"><a href="../features/jasoseol-collector.md">자소설닷컴 공고 수집 엔진 (jasoseol-collector)</a></th><td><code>features/jasoseol-collector.md</code></td></tr>
-<tr><th scope="row"><a href="../features/jasoseol-report.md">자소설닷컴 일일 리포트 &amp; 텔레그램 (jasoseol-report)</a></th><td><code>features/jasoseol-report.md</code></td></tr>
+<tr><th scope="row"><a href="../features/jasoseol-report.md">자소설닷컴 일일 리포트 &amp; 운영 알림 (jasoseol-report)</a></th><td><code>features/jasoseol-report.md</code></td></tr>
 <tr><th scope="row"><a href="../features/presentation-builder.md">대학원 포트폴리오 PPT 생성기 (presentation-builder)</a></th><td><code>features/presentation-builder.md</code></td></tr>
 <tr><th scope="row"><a href="../features/wanted-collector.md">원티드 채용공고 수집 &amp; 상태관리 (wanted-collector)</a></th><td><code>features/wanted-collector.md</code></td></tr>
       </tbody>
@@ -71,10 +71,10 @@
       <tbody>
         <tr><td>cron:jasoseol-collect</td><td>Pulls experienced job announcements from Jasoseol calendar API</td><td><code>30 8 * * *</code></td><td>server-pc (active)</td><td>없음</td></tr>
 <tr><td>cron:jasoseol-calendar</td><td>Synchronizes actionable Jasoseol application deadlines to Google Calendar</td><td><code>34 8 * * *</code></td><td>server-pc (active)</td><td>없음</td></tr>
-<tr><td>cron:jasoseol-report</td><td>Generates daily Jasoseol HTML report and sends via Telegram</td><td><code>36 8 * * *</code></td><td>server-pc (active)</td><td>없음</td></tr>
+<tr><td>cron:jasoseol-report</td><td>Generates daily Jasoseol HTML report and notifies via the harness ops bot</td><td><code>36 8 * * *</code></td><td>server-pc (active)</td><td>없음</td></tr>
 <tr><td>cron:wanted-collect</td><td>Pulls matching Korean tech postings from Wanted API</td><td><code>40 11 * * *</code></td><td>server-pc (active)</td><td>없음</td></tr>
-<tr><td>cron:applications-report</td><td>Generates daily job application pipeline report and sends via Telegram</td><td><code>47 11 * * *</code></td><td>server-pc (active)</td><td>없음</td></tr>
-<tr><td>cron:global-collect</td><td>Pulls matching postings from global ATS APIs and sends report via Telegram</td><td><code>50 11 * * *</code></td><td>server-pc (active)</td><td>없음</td></tr>
+<tr><td>cron:applications-report</td><td>Generates daily job application pipeline report and notifies via the harness ops bot</td><td><code>47 11 * * *</code></td><td>server-pc (active)</td><td>없음</td></tr>
+<tr><td>cron:global-collect</td><td>Pulls matching postings from global ATS APIs and notifies via the harness ops bot</td><td><code>50 11 * * *</code></td><td>server-pc (active)</td><td>없음</td></tr>
       </tbody>
     </table>
   </section>

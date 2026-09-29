@@ -31,7 +31,7 @@ npm run preview
 
 ### 2.2 Python Test Suite
 ```bash
-# Run all 90 hermetic unit tests via uv
+# Run the hermetic unit tests via uv
 .venv/bin/python -m pytest tests/
 
 # Run with verbose output
@@ -46,7 +46,7 @@ npm run preview
 # Jasoseol collector (dry-run, no writes)
 .venv/bin/python scripts/jasoseol_collect.py --dry-run
 
-# Jasoseol report generation (HTML only, no Telegram)
+# Jasoseol report generation (HTML only, no notification)
 .venv/bin/python scripts/jasoseol_report.py --html
 
 # Jasoseol Google Calendar sync (dry-run plan)

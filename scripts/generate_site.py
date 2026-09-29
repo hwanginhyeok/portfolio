@@ -16,7 +16,7 @@ OUTPUT = ROOT / "site" / "index.html"
 FEATURE_LABELS = {
     "astro-portfolio": "Astro 포트폴리오 웹사이트 (astro-portfolio)",
     "jasoseol-collector": "자소설닷컴 공고 수집 엔진 (jasoseol-collector)",
-    "jasoseol-report": "자소설닷컴 일일 리포트 & 텔레그램 (jasoseol-report)",
+    "jasoseol-report": "자소설닷컴 일일 리포트 & 운영 알림 (jasoseol-report)",
     "jasoseol-calendar": "캘린더 마감일정 동기화 (jasoseol-calendar)",
     "wanted-collector": "원티드 채용공고 수집 & 상태관리 (wanted-collector)",
     "global-collector": "글로벌 ATS 기업공고 수집 (global-collector)",
@@ -135,7 +135,7 @@ def render() -> str:
 <body>
   <header>
     <h1>Portfolio & 채용 인텔리전스 파이프라인 운영 개요</h1>
-    <p>Astro 기반 엔지니어링 포트폴리오 웹사이트 + 자동화 채용 공고 수집, 캘린더 동기화 및 텔레그램 일일 브리핑 파이프라인.</p>
+    <p>Astro 기반 엔지니어링 포트폴리오 웹사이트 + 자동화 채용 공고 수집, 캘린더 동기화 및 운영 봇 일일 브리핑 파이프라인.</p>
     <p class="meta">운영 노드: <strong>{html.escape(str(data.get("current_node", "unknown")))}</strong> · 기준일: <strong>{html.escape(str(data.get("last_verified", "unknown")))}</strong> · 시간대: {html.escape(str(data.get("timezone", "unknown")))}</p>
   </header>
 

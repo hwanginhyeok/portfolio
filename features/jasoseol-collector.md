@@ -23,8 +23,8 @@ Automated crawler that queries Jasoseol (자소설닷컴) calendar and recruit A
 
 ## Tests
 
-- `uv run pytest tests/test_jasoseol_collect.py` (17 tests covering calendar query, detail fetch, score filtering, and dry-run)
+- `.venv/bin/python -m pytest tests/test_jasoseol_collect.py` (calendar query, detail fetch, score filtering, and dry-run)
 
 ## Status
 
-live on server-pc via cron (`30 8 * * *`); draft LaunchAgent prepared in `launchd/hih.portfolio.jasoseol-collect.plist`.
+live on server-pc via cron (`30 8 * * *`); prepared macOS LaunchAgent (absolute paths, not loaded); server cron still runs until the per-job cutover (`docs/cutover.md`).
