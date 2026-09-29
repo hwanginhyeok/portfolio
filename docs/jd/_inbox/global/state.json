@@ -1832,8 +1832,8 @@
     "greenhouse:lucidmotors:5109621007": {
       "first_seen": "2026-08-19",
       "company": "Lucid Motors",
-      "title": "Sr. Supplier Industrialization Engineer – Chassis Systems",
-      "score": 31,
+      "title": "Sr. Supplier Industrialization Engineer – Exterior Trim",
+      "score": 26,
       "eligibility": "visa-needed",
       "track": "core",
       "search_lane": "core",
@@ -7846,8 +7846,8 @@
     "ashby:gecko-robotics:5ff40755-edc3-4cdb-9d04-bc3eddce4102": {
       "first_seen": "2026-08-19",
       "company": "Gecko Robotics",
-      "title": "Quality Engineer",
-      "score": 31,
+      "title": "Quality Engineer, Hardware",
+      "score": 34,
       "eligibility": "blocked-itar",
       "track": "ai-native",
       "search_lane": "ai-native",
@@ -7855,13 +7855,15 @@
         "ai-native",
         "core"
       ],
-      "fit_score": 28,
+      "fit_score": 54,
       "actionable": false,
       "fit_evidence": [
-        "quality-supplier"
+        "quality-supplier",
+        "electrical-hardware"
       ],
       "technical_signal_evidence": [],
       "owner_domain_evidence": [
+        "embedded-electrical-hardware",
         "physical-product-test-validation-reliability-quality"
       ]
     },
@@ -28673,6 +28675,243 @@
       "fit_evidence": [],
       "technical_signal_evidence": [],
       "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5250791007": {
+      "first_seen": "2026-09-29",
+      "company": "Lucid Motors",
+      "title": "Sr. Technical Program Manager, Vehicle Closures Systems",
+      "score": 34,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 32,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility"
+      ]
+    },
+    "greenhouse:lucidmotors:5133671007": {
+      "first_seen": "2026-09-29",
+      "company": "Lucid Motors",
+      "title": "Supplier Quality Engineer",
+      "score": 48,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 28,
+      "actionable": false,
+      "fit_evidence": [
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:figureai:4717229006": {
+      "first_seen": "2026-09-29",
+      "company": "Figure AI",
+      "title": "Production Lead ",
+      "score": 17,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation"
+      ]
+    },
+    "ashby:openai:b073abb1-cf6c-4fd9-a318-732fdd2f1408": {
+      "first_seen": "2026-09-29",
+      "company": "OpenAI",
+      "title": "Platform Engineering Manager, Forward Deployed Engineering (FDE)",
+      "score": 42,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "forward-deployed-engineering"
+      ],
+      "owner_domain_evidence": []
+    },
+    "ashby:openai:e7594296-a38b-43a1-b4f8-01253a3b7732": {
+      "first_seen": "2026-09-29",
+      "company": "OpenAI",
+      "title": "Data Center Hardware Quality & Reliability Engineer",
+      "score": 35,
+      "eligibility": "remote",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 84,
+      "actionable": false,
+      "fit_evidence": [
+        "reliability-durability",
+        "quality-supplier",
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "ashby:openai:32ca0028-c12d-4def-a200-946ec8d4ea5f": {
+      "first_seen": "2026-09-29",
+      "company": "OpenAI",
+      "title": "Technical Program Manager, Hardware Systems",
+      "score": 36,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 58,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program",
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "ashby:1x:d017fa5e-61d8-43e9-aa37-70067cc33f29": {
+      "first_seen": "2026-09-29",
+      "company": "1X",
+      "title": "Tactile Sensing Research Engineer",
+      "score": 26,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:1x:e350ff0d-dd7f-4299-8415-dc8e6da051ac": {
+      "first_seen": "2026-09-29",
+      "company": "1X",
+      "title": "Manufacturing Engineer",
+      "score": 32,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation",
+        "technical-product-industrialization"
+      ]
+    },
+    "ashby:1x:262f9af1-db00-4a21-8adb-a40206027cbc": {
+      "first_seen": "2026-09-29",
+      "company": "1X",
+      "title": "Manufacturing Process Engineer, Hands ",
+      "score": 27,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation",
+        "technical-product-industrialization"
+      ]
+    },
+    "workday:amat:2628933": {
+      "first_seen": "2026-09-29",
+      "company": "Applied Materials",
+      "title": "Technical Configuration Management III Sr. (TCM)",
+      "score": 10,
+      "eligibility": "korea",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "workday:aptiv:000704918": {
+      "first_seen": "2026-09-29",
+      "company": "Aptiv",
+      "title": "Project Manager - Robotics & Drones",
+      "score": 15,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "robotics-industrial-automation"
+      ]
     }
   }
 }

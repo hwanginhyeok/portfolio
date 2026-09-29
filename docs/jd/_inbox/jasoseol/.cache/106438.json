@@ -1,0 +1,99 @@
+{
+  "id": 106438,
+  "end_time": "2026-10-07T14:00:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106438,
+    "name": "한국영상자료원",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/005/506/webp/download.webp?1684487003",
+    "employment_page_url": "https://koreafilm.brms.kr/",
+    "start_time": "2026-09-23T00:00:00.000+09:00",
+    "end_time": "2026-10-07T14:00:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div style=\"position:relative;\"><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/370/788/webp/%ED%95%9C%EA%B5%AD%EC%98%81%EC%83%81%EC%9E%90%EB%A3%8C%EC%9B%90_0923.webp?1790153833\" alt=\"한국영상자료원 2026년 제4차 채용 공고 (정규직·인턴·계약직)\"></div></body></html>\n",
+    "target": 4,
+    "created_at": "2026-09-28T09:17:10.000+09:00",
+    "recruit_type": 0,
+    "view_count": 1360,
+    "favorite_count": 88,
+    "homepage_count": 24,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 11893,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "2026년 제4차 채용 공고 (정규직·인턴·계약직)",
+    "resume_expose": true,
+    "company_group": {
+      "id": 5506,
+      "name": "한국영상자료원",
+      "business_size": null,
+      "business_type": "public_institution",
+      "created_at": "2017-07-04T17:23:17.000+09:00",
+      "updated_at": "2023-05-19T18:03:23.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/005/506/original/download.png?1684487003",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 431304,
+        "field": "계약·위기관리(정규직)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 6,
+        "end_time": null,
+        "duty_group_ids": [
+          127,
+          128,
+          107
+        ],
+        "apply": null
+      },
+      {
+        "id": 431305,
+        "field": "영화관 운영(채용형)",
+        "division": 3,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 6,
+        "end_time": null,
+        "duty_group_ids": [
+          200
+        ],
+        "apply": null
+      },
+      {
+        "id": 431306,
+        "field": "영화, 영화인 DB 구축(체험형)",
+        "division": 3,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 3,
+        "end_time": null,
+        "duty_group_ids": [
+          181,
+          182,
+          163
+        ],
+        "apply": null
+      },
+      {
+        "id": 431307,
+        "field": "회계·세무",
+        "division": 4,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          122,
+          123,
+          105
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

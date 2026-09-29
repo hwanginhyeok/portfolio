@@ -1,0 +1,64 @@
+{
+  "id": 106447,
+  "end_time": "2026-10-11T23:00:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106447,
+    "name": "LG생활건강",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/000/021/webp/2560px-LG_Household___Health_Care_logo_%28korean%29.svg.webp?1698989473",
+    "employment_page_url": "https://careers.lg.com/apply/detail?id=1002235",
+    "start_time": "2026-09-28T11:33:00.000+09:00",
+    "end_time": "2026-10-11T23:00:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/370/945/webp/image.webp?1790562878\" alt=\"LG생활건강 SCM 공급망관리\"></div></body></html>\n",
+    "target": 0,
+    "created_at": "2026-09-28T11:34:39.000+09:00",
+    "recruit_type": 0,
+    "view_count": 4070,
+    "favorite_count": 70,
+    "homepage_count": 23,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 3912,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "SCM 공급망관리",
+    "resume_expose": true,
+    "company_group": {
+      "id": 21,
+      "name": "LG생활건강",
+      "business_size": "big_business",
+      "business_type": null,
+      "created_at": "2015-09-10T05:46:07.000+09:00",
+      "updated_at": "2023-11-03T14:31:15.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/000/021/original/2560px-LG_Household___Health_Care_logo_%28korean%29.svg.png?1698989473",
+      "alternate_names": [
+        "엘지생활건강"
+      ],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 431331,
+        "field": "SCM 공급망관리",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 13,
+        "end_time": null,
+        "duty_group_ids": [
+          150,
+          151,
+          152,
+          157,
+          109,
+          110,
+          103,
+          145,
+          147
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": true
+  }
+}

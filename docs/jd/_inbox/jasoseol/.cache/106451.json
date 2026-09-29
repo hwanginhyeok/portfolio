@@ -1,0 +1,58 @@
+{
+  "id": 106451,
+  "end_time": "2026-11-27T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106451,
+    "name": "앱솔브랩",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/015/853/webp/jss_hashed_97686e4d0c0935235d2d_20260310T152950_logo_black.webp?1773124263",
+    "employment_page_url": "https://celimax.ninehire.site/job_posting/Byj2fEFd",
+    "start_time": "2026-09-28T00:00:00.000+09:00",
+    "end_time": "2026-11-27T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div style=\"position:relative;\"><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/370/957/webp/%EA%B5%AD%EB%82%B4_%EC%98%81%EC%97%85_MD_%EA%B2%BD%EB%A0%A5_2026-08-25.webp?1790564755\" alt=\"앱솔브랩 [셀리맥스] 국내 영업 MD 경력 채용\"></div></body></html>\n",
+    "target": 4,
+    "created_at": "2026-09-28T13:21:02.000+09:00",
+    "recruit_type": 1,
+    "view_count": 334,
+    "favorite_count": 13,
+    "homepage_count": 1,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 20694,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "[셀리맥스] 국내 영업 MD 경력 채용",
+    "resume_expose": true,
+    "company_group": {
+      "id": 15853,
+      "name": "앱솔브랩",
+      "business_size": null,
+      "business_type": null,
+      "created_at": "2026-03-10T15:18:22.000+09:00",
+      "updated_at": "2026-03-10T15:31:03.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/015/853/original/jss_hashed_97686e4d0c0935235d2d_20260310T152950_logo_black.jpg?1773124263",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 431343,
+        "field": "국내 영업 MD",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          134,
+          137,
+          194,
+          197,
+          132
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

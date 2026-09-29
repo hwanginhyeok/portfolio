@@ -1,0 +1,870 @@
+{
+  "id": 106456,
+  "end_time": "2026-10-12T17:00:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106456,
+    "name": "한국장애인개발원",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/004/777/webp/%EC%8B%9C%EA%B7%B8%EB%8B%88%EC%B2%98-%ED%98%BC%ED%95%A9%ED%98%95_%EC%A2%8C%EC%9A%B0%EC%A1%B0%ED%95%A9_A-2-Positive.webp?1684486747",
+    "employment_page_url": "https://job.incruit.com/jobdb_info/jobpost.asp?job=2609230001148",
+    "start_time": "2026-10-01T12:00:00.000+09:00",
+    "end_time": "2026-10-12T17:00:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body>\n<div style=\"position:relative;\"><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/370/988/webp/%ED%95%9C%EA%B5%AD%EC%9E%A5%EC%95%A0%EC%9D%B8%EA%B0%9C%EB%B0%9C%EC%9B%90_2026%EB%85%84_3%EC%B0%A8_%EC%A7%81%EC%9B%90_%EC%B1%84%EC%9A%A911.webp?1790573500\" alt=\"한국장애인개발원 2026년도 제3차 직원 정기채용\"></div>\n<div style=\"position:relative;\"><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/370/989/webp/%ED%95%9C%EA%B5%AD%EC%9E%A5%EC%95%A0%EC%9D%B8%EA%B0%9C%EB%B0%9C%EC%9B%90_2026%EB%85%84_3%EC%B0%A8_%EC%A7%81%EC%9B%90_%EC%B1%84%EC%9A%A92_1.webp?1790573512\" alt=\"한국장애인개발원 2026년도 제3차 직원 정기채용\"></div>\n<div style=\"position:relative;\"><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/370/990/webp/%ED%95%9C%EA%B5%AD%EC%9E%A5%EC%95%A0%EC%9D%B8%EA%B0%9C%EB%B0%9C%EC%9B%90_2026%EB%85%84_3%EC%B0%A8_%EC%A7%81%EC%9B%90_%EC%B1%84%EC%9A%A92_2.webp?1790573523\" alt=\"한국장애인개발원 2026년도 제3차 직원 정기채용\"></div>\n</body></html>\n",
+    "target": 4,
+    "created_at": "2026-09-28T14:45:32.000+09:00",
+    "recruit_type": 0,
+    "view_count": 998,
+    "favorite_count": 70,
+    "homepage_count": 11,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 11160,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "2026년도 제3차 직원 정기채용",
+    "resume_expose": false,
+    "company_group": {
+      "id": 4777,
+      "name": "한국장애인개발원",
+      "business_size": null,
+      "business_type": "public_institution",
+      "created_at": "2017-01-10T10:19:25.000+09:00",
+      "updated_at": "2023-05-19T17:59:08.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/004/777/original/%EC%8B%9C%EA%B7%B8%EB%8B%88%EC%B2%98-%ED%98%BC%ED%95%A9%ED%98%95_%EC%A2%8C%EC%9A%B0%EC%A1%B0%ED%95%A9_A-2-Positive.png?1684486747",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 431376,
+        "field": "정책지원 (일반직6급)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          110,
+          103
+        ],
+        "apply": null
+      },
+      {
+        "id": 431377,
+        "field": "직업재활 (일반직다급)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431378,
+        "field": "우선구매 (일반직다급)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          110,
+          103
+        ],
+        "apply": null
+      },
+      {
+        "id": 431379,
+        "field": "발달장애인 서비스지원 (일반직다급)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431380,
+        "field": "UD환경정책기획 (일반직5급)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          110,
+          103
+        ],
+        "apply": null
+      },
+      {
+        "id": 431381,
+        "field": "BF인증 (일반직다급)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          110,
+          103
+        ],
+        "apply": null
+      },
+      {
+        "id": 431438,
+        "field": "BF인증 (일반직다급)(강원)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          110,
+          103
+        ],
+        "apply": null
+      },
+      {
+        "id": 431382,
+        "field": "지역장애아동·발달장애인지원 센터장 (개방형, 전북)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431383,
+        "field": "지역장애아동·발달장애인지원 센터장 (임기제, 충남)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431384,
+        "field": "장애아동지원 팀장 복지행정직1급 (광주)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431385,
+        "field": "장애아동지원 팀장 복지행정직1급 (전남)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431386,
+        "field": "장애아동지원 팀장 복지행정직1급 (대전)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431387,
+        "field": "발달장애인지원 팀원 복지행정직4급 (일반, 서울)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431388,
+        "field": "발달장애인지원 팀원 복지행정직4급 (일반, 광주)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431389,
+        "field": "발달장애인지원 팀원 복지행정직4급 (일반, 전남)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431390,
+        "field": "발달장애인지원 팀원 복지행정직4급 (일반, 부산)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431391,
+        "field": "발달장애인지원 팀원 복지행정직4급 (일반, 대구)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431392,
+        "field": "발달장애인지원 팀원 복지행정직4급 (일반, 대전)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431393,
+        "field": "발달장애인지원 팀원 복지행정직4급 (일반, 울산)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431394,
+        "field": "발달장애인지원 팀원 복지행정직4급 (일반, 세종)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431395,
+        "field": "발달장애인지원 팀원 복지행정직4급 (일반, 경기(수원))",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431396,
+        "field": "발달장애인지원 팀원 복지행정직4급 (일반, 경기(의정부))",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431397,
+        "field": "발달장애인지원 팀원 복지행정직4급 (일반, 경기(미정))",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431398,
+        "field": "발달장애인지원 팀원 복지행정직4급 (일반, 강원)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431399,
+        "field": "발달장애인지원 팀원 복지행정직4급 (일반, 충북)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431400,
+        "field": "발달장애인지원 팀원 복지행정직4급 (일반, 충남)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431401,
+        "field": "발달장애인지원 팀원 복지행정직4급 (일반, 전북)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431402,
+        "field": "발달장애인지원 팀원 복지행정직4급 (일반, 경북)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431403,
+        "field": "발달장애인지원 팀원 복지행정직4급 (일반, 경남)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431404,
+        "field": "발달장애인지원 팀원 복지행정직4급 (일반, 제주)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431405,
+        "field": "발달장애인지원 팀원 복지행정직4급 (장애, 서울)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431406,
+        "field": "발달장애인지원 팀원 복지행정직4급 (장애, 전남)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431407,
+        "field": "발달장애인지원 팀원 복지행정직4급 (장애, 부산)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431408,
+        "field": "발달장애인지원 팀원 복지행정직4급 (장애, 대전)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431409,
+        "field": "발달장애인지원 팀원 복지행정직4급 (장애, 울산)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431410,
+        "field": "발달장애인지원 팀원 복지행정직4급 (장애, 경기(미정))",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431411,
+        "field": "발달장애인지원 팀원 복지행정직4급 (장애, 강원)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431412,
+        "field": "발달장애인지원 팀원 복지행정직4급 (장애, 충북)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431413,
+        "field": "발달장애인지원 팀원 복지행정직4급 (장애, 전북)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431414,
+        "field": "운영지원 팀원 복지행정직4급 (일반, 대전)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          128,
+          107
+        ],
+        "apply": null
+      },
+      {
+        "id": 431415,
+        "field": "운영지원 팀원 복지행정직4급 (일반, 강원)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          128,
+          107
+        ],
+        "apply": null
+      },
+      {
+        "id": 431416,
+        "field": "운영지원 팀원 복지행정직4급 (일반, 충북)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          128,
+          107
+        ],
+        "apply": null
+      },
+      {
+        "id": 431417,
+        "field": "운영지원 팀원 복지행정직4급 (장애, 경북)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          128,
+          107
+        ],
+        "apply": null
+      },
+      {
+        "id": 431418,
+        "field": "운영지원 팀원 복지행정직4급 (장애, 경남)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          128,
+          107
+        ],
+        "apply": null
+      },
+      {
+        "id": 431419,
+        "field": "장애아동지원 팀원 복지행정직2급 (서울)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431420,
+        "field": "장애아동지원 팀원 복지행정직2급 (광주)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431421,
+        "field": "장애아동지원 팀원 복지행정직2급 (전남)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431422,
+        "field": "장애아동지원 팀원 복지행정직2급 (대전)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431423,
+        "field": "장애아동지원 팀원 복지행정직2급 (경기(수원))",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431424,
+        "field": "장애아동지원 팀원 복지행정직2급 (강원)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431425,
+        "field": "장애아동지원 팀원 복지행정직2급 (충북)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431426,
+        "field": "장애아동지원 팀원 복지행정직2급 (전북)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431427,
+        "field": "장애아동지원 팀원 복지행정직2급 (경북)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431428,
+        "field": "장애아동지원 팀원 복지행정직2급 (경남)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431429,
+        "field": "장애아동지원 팀원 복지행정직2급 (제주)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431430,
+        "field": "장애아동지원 팀원 복지행정직3급 (서울)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431431,
+        "field": "장애아동지원 팀원 복지행정직3급 (부산)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431432,
+        "field": "장애아동지원 팀원 복지행정직3급 (대전)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431433,
+        "field": "장애아동지원 팀원 복지행정직3급 (경기(수원))",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431434,
+        "field": "장애아동지원 팀원 복지행정직3급 (경북)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431435,
+        "field": "장애아동지원 팀원 복지행정직3급 (경남)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431436,
+        "field": "장애아동지원 팀원 복지행정직3·4급 (서울)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      },
+      {
+        "id": 431437,
+        "field": "장애아동지원 팀원 복지행정직3·4급 (강원)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          262
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

@@ -14087,6 +14087,313 @@
       "search_lanes": [
         "ai-native"
       ]
+    },
+    "389305": {
+      "first_seen": "2026-09-29",
+      "company": "현대에이치엑스피",
+      "position": "Product Manager(Property Management System)",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "333553": {
+      "first_seen": "2026-09-29",
+      "company": "클레로보틱스",
+      "position": "3차원 머신비전 생산 및 생산관리 (4년 이상 · 대리급)",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ]
+    },
+    "389397": {
+      "first_seen": "2026-09-29",
+      "company": "한화그룹 (Hanwha)",
+      "position": "[한화솔루션/케미칼] 생산관리",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "389299": {
+      "first_seen": "2026-09-29",
+      "company": "뉴로클",
+      "position": "[비전 AI 플랫폼] 프론트엔드 엔지니어 (전문연구요원 가능)",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "389291": {
+      "first_seen": "2026-09-29",
+      "company": "큐픽스",
+      "position": "컴퓨터비전 엔지니어(SLAM, 3D, AI)",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "389078": {
+      "first_seen": "2026-09-29",
+      "company": "원티드_일본 현지 채용",
+      "position": "[クリエーションライン株式会社] 솔루션 엔지니어 (AI 개발 기반, 보안 및 거버넌스 솔루션)_근무지 일본",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "389073": {
+      "first_seen": "2026-09-29",
+      "company": "원티드_일본 현지 채용",
+      "position": "[株式会社Datachain] 블록체인 엔지니어 (토큰화 예금 사업)_근무지 일본",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "389071": {
+      "first_seen": "2026-09-29",
+      "company": "원티드_일본 현지 채용",
+      "position": "[株式会社Datachain] 백엔드 리드 엔지니어 (스테이블 코인 사업)_근무지 일본",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "389070": {
+      "first_seen": "2026-09-29",
+      "company": "원티드_일본 현지 채용",
+      "position": "[株式会社Datachain] 제품 보안 엔지니어 _근무지 일본",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "389272": {
+      "first_seen": "2026-09-29",
+      "company": "아티스트컴퍼니",
+      "position": "시스템 엔지니어",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "380560": {
+      "first_seen": "2026-09-29",
+      "company": "트리플오스",
+      "position": "백엔드/인프라 개발자 3년 이상",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "381282": {
+      "first_seen": "2026-09-29",
+      "company": "에이블랩스",
+      "position": "제어 소프트웨어 엔지니어",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "385986": {
+      "first_seen": "2026-09-29",
+      "company": "룰루랩(lululab)",
+      "position": "하드웨어 엔지니어",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "389469": {
+      "first_seen": "2026-09-29",
+      "company": "렛유인에듀",
+      "position": "에듀테크 플랫폼 서비스 기획자 (LMS·가상훈련 콘텐츠)",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "378131": {
+      "first_seen": "2026-09-29",
+      "company": "빅크(BIGC)",
+      "position": "Data & AI Product Manager",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ]
+    },
+    "389447": {
+      "first_seen": "2026-09-29",
+      "company": "알고케어",
+      "position": "프로덕트 매니저 (PM/PO)",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "388632": {
+      "first_seen": "2026-09-29",
+      "company": "트래블월렛",
+      "position": "사업 개발 담당 (Business Development) - 7년 이상 ",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "389414": {
+      "first_seen": "2026-09-29",
+      "company": "네오심플릭스",
+      "position": "[Dr.Reju-All] AI PM",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ]
+    },
+    "389403": {
+      "first_seen": "2026-09-29",
+      "company": "한화그룹 (Hanwha)",
+      "position": "[한화솔루션/케미칼] Technical Service & Development (TS&D)",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "389228": {
+      "first_seen": "2026-09-29",
+      "company": "페이히어",
+      "position": "프로덕트 매니저",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ]
+    },
+    "389080": {
+      "first_seen": "2026-09-29",
+      "company": "원티드_일본 현지 채용",
+      "position": "[クリエーションライン株式会社] 시니어 프로덕트 매니저_근무지 일본",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ]
+    },
+    "389064": {
+      "first_seen": "2026-09-29",
+      "company": "원티드_일본 현지 채용",
+      "position": "[株式会社Datachain] 프로덕트 매니저_근무지 일본",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ]
+    },
+    "389062": {
+      "first_seen": "2026-09-29",
+      "company": "원티드_일본 현지 채용",
+      "position": "[株式会社Datachain] 테크니컬 프로덕트 매니저 (스테이블 코인 사업)_근무지 일본",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ]
+    },
+    "389253": {
+      "first_seen": "2026-09-29",
+      "company": "제이피모간(JPMorgan)",
+      "position": "Risk Management Professional, Asia Pacific (Fixed Term Contract)",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "389324": {
+      "first_seen": "2026-09-29",
+      "company": "써모아이",
+      "position": "제품 생산기술 담당자",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native"
+      ]
+    },
+    "389456": {
+      "first_seen": "2026-09-29",
+      "company": "페블스퀘어",
+      "position": "Firmware Engineer (군포)",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native"
+      ]
+    },
+    "389326": {
+      "first_seen": "2026-09-29",
+      "company": "리빈에이아이",
+      "position": "네오클라우드 MSP (GPU 클러스터 · 운영) 자동화 개발",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native"
+      ]
+    },
+    "389430": {
+      "first_seen": "2026-09-29",
+      "company": "스피드플로어",
+      "position": "하드웨어 총괄 리더",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native"
+      ]
+    },
+    "389072": {
+      "first_seen": "2026-09-29",
+      "company": "원티드_일본 현지 채용",
+      "position": "[株式会社Datachain] 사업개발 · PMM (토큰화 예금 사업)_근무지 일본",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native"
+      ]
+    },
+    "389120": {
+      "first_seen": "2026-09-29",
+      "company": "올거나이즈코리아(Allganize Korea)",
+      "position": "FDE(SW) - Solutions Architect",
+      "track": "engineering-consulting",
+      "search_lane": "engineering-consulting",
+      "search_lanes": [
+        "engineering-consulting"
+      ]
     }
   }
 }

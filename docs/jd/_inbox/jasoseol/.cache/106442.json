@@ -1,0 +1,59 @@
+{
+  "id": 106442,
+  "end_time": "2026-10-11T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106442,
+    "name": "녹십자웰빙",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/008/313/webp/%EC%9D%B4%EB%AF%B8%EC%A7%80_3.webp?1684487813",
+    "employment_page_url": "https://careers.gcbiopharma.com/job/GC%EB%85%B9%EC%8B%AD%EC%9E%90%EC%9B%B0%EB%B9%99-%EC%9D%98%EC%95%BD%ED%92%88-%ED%8F%AC%EC%9E%A5-%EB%B0%8F-%EC%9D%B4%EB%AC%BC%EA%B2%80%EC%82%AC%28%EA%B2%BD%EB%A0%A5%29/4476150/",
+    "start_time": "2026-09-28T00:00:00.000+09:00",
+    "end_time": "2026-10-11T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div style=\"position:relative;\"><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/370/898/webp/%ED%8F%AC%EC%9E%A5%28%EA%B2%BD%EB%A0%A5%29_%EC%9E%AC%EA%B3%B5%EA%B3%A0_260928.webp?1790558151\" alt=\"녹십자웰빙 의약품 포장 및 이물검사(경력) 채용\"></div></body></html>\n",
+    "target": 4,
+    "created_at": "2026-09-28T10:49:10.000+09:00",
+    "recruit_type": 0,
+    "view_count": 684,
+    "favorite_count": 4,
+    "homepage_count": 3,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 15224,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "의약품 포장 및 이물검사(경력) 채용",
+    "resume_expose": true,
+    "company_group": {
+      "id": 8313,
+      "name": "녹십자웰빙",
+      "business_size": "middle_market",
+      "business_type": null,
+      "created_at": "2020-03-02T12:33:36.000+09:00",
+      "updated_at": "2023-05-19T18:16:53.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/008/313/original/%EC%9D%B4%EB%AF%B8%EC%A7%80_3.png?1684487813",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 431312,
+        "field": "의약품 포장 및 이물검사",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          187,
+          188,
+          189,
+          190,
+          185,
+          183
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}
