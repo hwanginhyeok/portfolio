@@ -1,5 +1,21 @@
 # TEST_LOG
 
+## t34 macOS cutover prep (2026-09-29)
+Test venv created per README (`uv venv .venv --python 3.12` then
+`uv pip install --offline pytest requests pyyaml`; the repo has no pyproject).
+
+| Command | Result | Notes |
+|---|---|---|
+| `.venv/bin/python -m pytest` | 106 passed, 1 failed, 16 subtests | The single failure is the pre-existing, date-sensitive `test_live_inbox_loads_and_renders` (asserts >=5 actionable postings; 4 remain now that deadlines passed). Unrelated to this change; see Known Failures. |
+| `.venv/bin/python -m pytest tests/test_notify.py tests/test_jasoseol_report.py tests/test_jasoseol_calendar.py tests/test_applications_report.py` | PASS (except the same live-inbox test) | New notify/secret tests, notify-based report tests, direct `hih-schedule` exec tests. |
+| `plutil -lint launchd/*.plist` | OK (6/6) | Absolute paths only; exact server times/args; `Aqua`; logs under `~/Library/Logs/hih/`. |
+| `PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m py_compile scripts/*.py` | PASS | Six jobs plus the new `scripts/notify.py` compile. |
+| `.venv/bin/python scripts/generate_site.py` | PASS | `site/index.html` regenerated with the `harness-scheduling` feature row. |
+| `git diff --check` | PASS | No whitespace errors. |
+
+No network, no Keychain access, and no `launchctl` call were made.
+
+
 ## Final Verification
 | Date | Command | Result | Notes |
 |---|---|---|---|
@@ -41,3 +57,4 @@ Success IDs: `110132`, `350510`, `361079`, `361330`, `370445`,
 | Date | Command | Failure | Owner | Next Action |
 |---|---|---|---|---|
 | 2026-08-24 | N/A | Resolved before finalization: 16 pre-existing Wanted JD files were zero bytes. | Codex | Preserve the 16 hydrated files; no network re-run is authorized in this pass. |
+| 2026-09-29 | `.venv/bin/python -m pytest` | `test_live_inbox_loads_and_renders` expects >=5 actionable postings but only 4 remain (their deadlines passed at the current date). | PM | Date/data-sensitive live assertion, not introduced by t34; fix by adding a future-dated fixture or making the count relative to the clock. |

@@ -5,10 +5,10 @@
 - **Current Operating Node**: `server-pc` (Linux / WSL).
   - Runs six scheduled cron jobs for Jasoseol, Wanted, Global ATS, and Applications reporting.
   - Server jobs must **not** be interrupted, killed, or modified during local development.
-- **Local Development Node**: macOS.
+- **Migration Node**: macOS.
   - Houses the canonical repository worktree (`~/Workspace/projects/portfolio`).
-  - Runs hermetic unit tests (`uv run pytest tests/`) and Astro static site builds (`npm run build`).
-  - Houses draft LaunchAgents in `launchd/` ready for future cutover.
+  - Runs hermetic unit tests (`.venv/bin/python -m pytest tests/`) and Astro static site builds (`npm run build`).
+  - Houses prepared LaunchAgents in `launchd/` (absolute paths, exact server times); cutover is per job (`docs/cutover.md`).
 
 ---
 
@@ -32,43 +32,43 @@ npm run preview
 ### 2.2 Python Test Suite
 ```bash
 # Run all 90 hermetic unit tests via uv
-uv run pytest tests/
+.venv/bin/python -m pytest tests/
 
 # Run with verbose output
-uv run pytest tests/ -v
+.venv/bin/python -m pytest tests/ -v
 
 # Run a specific test suite
-uv run pytest tests/test_job_collectors.py
+.venv/bin/python -m pytest tests/test_job_collectors.py
 ```
 
 ### 2.3 Job Collectors (On-Demand / Dry-Run)
 ```bash
 # Jasoseol collector (dry-run, no writes)
-uv run python3 scripts/jasoseol_collect.py --dry-run
+.venv/bin/python scripts/jasoseol_collect.py --dry-run
 
 # Jasoseol report generation (HTML only, no Telegram)
-uv run python3 scripts/jasoseol_report.py --html
+.venv/bin/python scripts/jasoseol_report.py --html
 
 # Jasoseol Google Calendar sync (dry-run plan)
-uv run python3 scripts/jasoseol_calendar.py --dry-run
+.venv/bin/python scripts/jasoseol_calendar.py --dry-run
 
 # Wanted collector (dry-run)
-uv run python3 scripts/wanted_collect.py --dry-run
+.venv/bin/python scripts/wanted_collect.py --dry-run
 
 # Applications status report (markdown & HTML)
-uv run python3 scripts/applications_report.py --html
+.venv/bin/python scripts/applications_report.py --html
 
 # Global ATS collector (dry-run)
-uv run python3 scripts/global_collect.py --dry-run
+.venv/bin/python scripts/global_collect.py --dry-run
 ```
 
 ### 2.4 Diagnostic & Recovery Tools
 ```bash
 # Diagnose and repair Wanted state ledger
-uv run python3 scripts/wanted_state_repair.py
+.venv/bin/python scripts/wanted_state_repair.py
 
 # Re-generate static operational overview site
-uv run python3 scripts/generate_site.py
+.venv/bin/python scripts/generate_site.py
 ```
 
 ---
@@ -77,7 +77,7 @@ uv run python3 scripts/generate_site.py
 
 | Check | Frequency | Command | Expected Outcome |
 |---|---|---|---|
-| Python Test Suite | Per commit / PR | `uv run pytest tests/` | 90 passed in <1s |
+| Python Test Suite | Per commit / PR | `.venv/bin/python -m pytest tests/` | All pass except the date-sensitive live-inbox assertion (needs >=5 future deadlines) |
 | Astro Web Build | Per content update | `npm run build` | 10 static routes generated in `dist/` |
 | Wanted Ledger Health | Weekly | `python3 scripts/wanted_state_repair.py` | "Ledger is clean, 0 corrupt entries" |
 | Overview Site Sync | Pre-commit | `python3 scripts/generate_site.py` | `site/index.html` updated |
@@ -86,19 +86,20 @@ uv run python3 scripts/generate_site.py
 
 ## 4. Known Failure Modes & Recovery Procedures
 
-### 4.1 Failure: Telegram Notification Fails / Credentials Missing
-- **Symptoms**: Console log reports `WARNING: Telegram credentials not found in ...; report not sent` or HTTP 401/403.
-- **Root Cause**: The script looks for `/home/window11/project-manager/.env` by default, which does not exist on macOS.
+### 4.1 Failure: Ops notification not delivered
+- **Symptoms**: no ops message arrived; the job log shows
+  `[notify] report delivery failed or not attempted`.
+- **Root cause**: the harness ops channel is disabled (`notify.enabled` off in
+  the Telegram registry), the Keychain entries are missing, or the job did not
+  run in an Aqua session (Keychain is unreachable outside it).
 - **Recovery**:
-  1. Provide credentials via environment variables:
-     ```bash
-     export PM_BOT_TOKEN="$(hih-secret get telegram/bot-token)"
-     export PM_BOT_CHAT_ID="$(hih-secret get telegram/ops-chat-id)"
-     ```
-  2. Or specify an explicit `.env` path:
-     ```bash
-     python3 scripts/jasoseol_report.py --env /path/to/.env --telegram
-     ```
+  1. Confirm the channel: `hih notify "portfolio test"` prints `[disabled]`
+     while the ops channel is off and exits 0.
+  2. Confirm the ops-bot entries exist in the Keychain (names in the shared
+     secret-name index); import/repair them if absent.
+  3. Confirm the LaunchAgent has `LimitLoadToSessionType = Aqua`, then reload it.
+- **Note**: the HTML report is still written locally even if the notification
+  fails; check `docs/jd/report/` and `docs/jd/_inbox/*/report/`.
 
 ### 4.2 Failure: Jasoseol API Rate Limiting or HTTP 500
 - **Symptoms**: `ERROR: calendar fetch failed: HTTP 500 Server Error` or empty job lists.
@@ -148,20 +149,27 @@ uv run python3 scripts/generate_site.py
 
 ## 5. Cutover Procedure (Server PC to macOS)
 
-When the operator decides to decommission `server-pc` workloads for `portfolio`:
-1. On `server-pc`:
-   - Comment out or remove the six portfolio crontab lines:
-     - `30 8 * * * ... jasoseol_collect.py`
-     - `34 8 * * * ... jasoseol_calendar.py --apply`
-     - `36 8 * * * ... jasoseol_report.py --telegram`
-     - `40 11 * * * ... wanted_collect.py`
-     - `47 11 * * * ... applications_report.py --telegram`
-     - `50 11 * * * ... global_collect.py --telegram`
-2. On macOS:
-   - Ensure macOS Keychain holds `telegram/bot-token` and `telegram/ops-chat-id`.
-   - Copy draft plists from `launchd/` to `~/Library/LaunchAgents/`.
-   - Load each agent:
-     ```bash
-     launchctl load ~/Library/LaunchAgents/hih.portfolio.*.plist
-     ```
-3. Verify next morning's reports arrive in the Telegram ops channel on schedule.
+Per job, in one step so a side-effecting job never runs twice
+(project-standard "Cutover"; job table and state files in `docs/cutover.md`):
+
+1. On `server-pc`: leave the job's cron line running until the Mac agent is up.
+2. Rsync the job's state files from `server-pc` to the Mac (see `docs/cutover.md`).
+3. On macOS:
+   ```bash
+   cp launchd/<label>.plist $HOME/Library/LaunchAgents/
+   launchctl bootstrap gui/$(id -u) $HOME/Library/LaunchAgents/<label>.plist
+   ```
+4. On `server-pc`: comment out that job's cron line in the same step.
+5. Watch 2 days on the Mac alone, then delete the server copy.
+
+Rollback (any time in the 2-day watch):
+
+```bash
+launchctl bootout gui/$(id -u) $HOME/Library/LaunchAgents/<label>.plist
+```
+
+then uncomment the server cron line. State is rsynced, not moved, so nothing is
+lost.
+
+Ensure the project venv exists before the first load (README "Setup
+Environment"): `.venv/bin/python` is what every plist runs.

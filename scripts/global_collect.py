@@ -35,17 +35,15 @@ match terms, not regexes).
 
 Usage:
   python3 scripts/global_collect.py [--config PATH] [--dry-run] [--limit N]
-                                    [--html] [--telegram [--env ENV_PATH]]
+                                    [--html] [--telegram]
 """
 import argparse
 import hashlib
 import html
 import json
-import os
 import re
 import sys
 import time
-import urllib.request
 from datetime import date, datetime
 from pathlib import Path
 
@@ -78,11 +76,23 @@ except ModuleNotFoundError:  # pragma: no cover - exercised by CLI execution
     )
     from state_utils import atomic_write_json
 
+try:  # harness ops notification ("hih notify")
+    from scripts.notify import send as notify_send
+except ModuleNotFoundError:  # pragma: no cover - exercised by CLI execution
+    from notify import send as notify_send
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_CONFIG = REPO_ROOT / "config" / "global_targets.json"
 INBOX_DIR = REPO_ROOT / "docs" / "jd" / "_inbox" / "global"
 REPORT_DIR = INBOX_DIR / "report"
-PM_ENV = Path(os.environ.get("PORTFOLIO_PM_ENV", os.environ.get("PM_ENV_PATH", "/home/window11/project-manager/.env")))
+
+
+def display_path(path: Path) -> Path:
+    """Report a path relative to the repo when possible, else absolute."""
+    try:
+        return path.relative_to(REPO_ROOT)
+    except ValueError:
+        return path
 
 GREENHOUSE_URL = "https://boards-api.greenhouse.io/v1/boards/{slug}/jobs"
 ASHBY_URL = "https://api.ashbyhq.com/posting-api/job-board/{slug}"
@@ -1025,64 +1035,6 @@ def render_html_report(today: str, fresh: list[dict], bucket_counts: dict,
         f"<style>{REPORT_CSS}</style></head><body>{''.join(body)}</body></html>")
 
 
-# ── Telegram delivery (same helper as wanted_collect.py) ─────────────────────
-
-def telegram_creds(env_path: Path) -> tuple[str, str] | None:
-    """(token, chat_id) from KEY=VALUE lines; None when either key is missing.
-
-    The values are never logged, printed, or written anywhere.
-    """
-    if not env_path.exists():
-        return None
-    token = chat = None
-    for line in env_path.read_text(encoding="utf-8").splitlines():
-        if line.startswith("PM_BOT_TOKEN="):
-            token = line.split("=", 1)[1].strip()
-        elif line.startswith("PM_BOT_CHAT_ID="):
-            chat = line.split("=", 1)[1].strip()
-    return (token, chat) if token and chat else None
-
-
-# telegram error strings can embed the request URL, which embeds the bot token
-TOKEN_IN_URL = re.compile(r"bot\d+:[A-Za-z0-9_-]+")
-
-
-def send_report_via_telegram(path: Path, caption: str, env_path: Path) -> bool:
-    """sendDocument via stdlib urllib — the same multipart construction as
-    scripts/wanted_collect.py. Returns False on any failure; a delivery problem
-    must never fail the collection run that already succeeded.
-    """
-    creds = telegram_creds(env_path)
-    if creds is None:
-        log(f"WARNING: Telegram credentials not found in {env_path}; report not sent "
-            "(the collection run itself succeeded)")
-        return False
-    token, chat = creds
-    boundary = "----global" + datetime.now().strftime("%H%M%S%f")
-    body = bytearray()
-    for key, value in (("chat_id", chat), ("caption", caption[:1000])):
-        body += (f"--{boundary}\r\nContent-Disposition: form-data; name=\"{key}\"\r\n\r\n"
-                 f"{value}\r\n").encode("utf-8")
-    body += (f"--{boundary}\r\nContent-Disposition: form-data; name=\"document\"; "
-             f"filename=\"{path.name}\"\r\nContent-Type: text/html; charset=utf-8"
-             "\r\n\r\n").encode()
-    body += path.read_bytes() + b"\r\n" + f"--{boundary}--\r\n".encode()
-    req = urllib.request.Request(
-        f"https://api.telegram.org/bot{token}/sendDocument", data=bytes(body),
-        headers={"Content-Type": f"multipart/form-data; boundary={boundary}"})
-    try:
-        with urllib.request.urlopen(req, timeout=60) as resp:
-            ok = bool(json.loads(resp.read()).get("ok"))
-    except Exception as exc:
-        log(f"WARNING: telegram sendDocument failed: {TOKEN_IN_URL.sub('bot***', str(exc))}")
-        return False
-    if not ok:
-        log("WARNING: telegram sendDocument returned ok=false; report not confirmed sent")
-    return ok
-
-
-# ── main ─────────────────────────────────────────────────────────────────────
-
 def main() -> int:
     parser = argparse.ArgumentParser(
         description="Collect global job postings (Greenhouse/Ashby/Lever/Workday) "
@@ -1096,10 +1048,7 @@ def main() -> int:
     parser.add_argument("--html", action="store_true",
                         help="also render report/YYYY-MM-DD.html for today's new postings")
     parser.add_argument("--telegram", action="store_true",
-                        help="render the report (implies --html) and send it to the PM bot")
-    parser.add_argument("--env", type=Path, default=PM_ENV,
-                        help=f"env file with PM_BOT_TOKEN / PM_BOT_CHAT_ID "
-                             f"(default: {PM_ENV})")
+                        help="render the report (implies --html) and send a summary via the harness ops bot")
     args = parser.parse_args()
     if args.telegram:
         args.html = True  # --telegram implies --html; never send without a file
@@ -1318,7 +1267,7 @@ def main() -> int:
         f"(한국 {fresh_counts['korea']} · 지원가능 {n_applicable}) | "
         f"state: {len(seen)} postings seen")
 
-    # ---- phase 4: HTML report + optional Telegram delivery --------------------
+    # ---- phase 4: HTML report + optional ops notification ---------------------
     report_path: Path | None = None
     if args.html:
         REPORT_DIR.mkdir(parents=True, exist_ok=True)
@@ -1327,7 +1276,7 @@ def main() -> int:
             render_html_report(today, fresh_today, fresh_counts,
                                len(companies) + len(workday_companies), len(seen)),
             encoding="utf-8")
-        log(f"[report] {report_path.relative_to(REPO_ROOT)} "
+        log(f"[report] {display_path(report_path)} "
             f"({report_path.stat().st_size:,} bytes)")
     if args.telegram:
         if report_path is None or not report_path.exists():
@@ -1336,8 +1285,10 @@ def main() -> int:
             caption = (f"🌐 글로벌 채용 리포트 {today}\n"
                        f"🇰🇷 한국 {fresh_counts['korea']}건\n"
                        f"신규 {n_new}건 (지원가능 {n_applicable}) / 누적 {len(seen)}건")
-            if send_report_via_telegram(report_path, caption, args.env):
-                log("[telegram] report delivered to the PM bot")
+            if notify_send(
+                    caption + f"\n\U0001F4C4 {display_path(report_path)}",
+                    title="portfolio global"):
+                log("[notify] report summary delivered to the harness ops bot")
 
     log(f"[stats] http calls: {sess.n_calls}")
     return 0

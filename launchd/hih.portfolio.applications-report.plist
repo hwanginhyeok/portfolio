@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <!--
-  hih.portfolio.applications-report — Daily job application pipeline report and Telegram dispatch, 11:47 Asia/Seoul.
+  hih.portfolio.applications-report — Daily job application pipeline report and ops notification, 11:47 Asia/Seoul.
 
-  DRAFT ONLY: NOT INSTALLED / NOT LOADED by the migration.
-  To be installed on macOS by PM upon operational cutover:
+  macOS LaunchAgent for the portfolio cutover. Absolute paths only: a home
+  shorthand anywhere in a plist makes launchd fail the spawn with EX_CONFIG.
 
-      cp launchd/hih.portfolio.applications-report.plist ~/Library/LaunchAgents/
-      launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/hih.portfolio.applications-report.plist
+  NOT loaded by the preparation step. The PM loads it together with turning off
+  the matching server-pc cron line (project-standard "Cutover"), after rsyncing
+  the job's state files:
+
+      cp launchd/hih.portfolio.applications-report.plist $HOME/Library/LaunchAgents/
+      launchctl bootstrap gui/$(id -u) $HOME/Library/LaunchAgents/hih.portfolio.applications-report.plist
 -->
 <plist version="1.0">
 <dict>
@@ -16,10 +20,14 @@
 
     <key>ProgramArguments</key>
     <array>
-        <string>/bin/zsh</string>
-        <string>-lc</string>
-        <string>cd ~/Workspace/projects/portfolio &amp;&amp; exec uv run python3 scripts/applications_report.py --html --telegram</string>
+        <string>/Users/hwang-inhyeok/Workspace/projects/portfolio/.venv/bin/python</string>
+        <string>/Users/hwang-inhyeok/Workspace/projects/portfolio/scripts/applications_report.py</string>
+        <string>--html</string>
+        <string>--telegram</string>
     </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/hwang-inhyeok/Workspace/projects/portfolio</string>
 
     <key>StartCalendarInterval</key>
     <dict>

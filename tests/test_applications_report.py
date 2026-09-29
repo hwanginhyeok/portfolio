@@ -84,3 +84,41 @@ def test_load_ledger_rejects_a_non_list(tmp_path):
     bad.write_text(json.dumps({"applications": {"a": 1}}), encoding="utf-8")
     with pytest.raises(ValueError):
         ar.load_ledger(bad)
+
+
+def test_telegram_flag_notifies_a_summary(tmp_path, monkeypatch):
+    ledger = tmp_path / "applications.json"
+    ledger.write_text(
+        json.dumps({"applications": [row(status="준비완료", next_action="submit")]}),
+        encoding="utf-8",
+    )
+    calls = []
+
+    def fake(text, **kwargs):
+        calls.append((text, kwargs))
+        return True
+
+    monkeypatch.setattr(ar, "notify_send", fake)
+    monkeypatch.setattr(ar, "MARKDOWN", tmp_path / "APPLICATIONS.md")
+    monkeypatch.setattr(ar, "REPORT_DIR", tmp_path / "report")
+
+    code = ar.main(["--ledger", str(ledger), "--html", "--telegram"])
+
+    assert code == 0
+    assert len(calls) == 1
+    text, kwargs = calls[0]
+    assert kwargs.get("title") == "portfolio applications"
+    assert "submit" in text
+    assert list((tmp_path / "report").glob("applications-*.html"))
+    assert "applications-" in text
+
+
+def test_telegram_flag_without_html_still_writes_report(tmp_path, monkeypatch):
+    ledger = tmp_path / "applications.json"
+    ledger.write_text(json.dumps({"applications": [row()]}), encoding="utf-8")
+    monkeypatch.setattr(ar, "notify_send", lambda *a, **k: True)
+    monkeypatch.setattr(ar, "MARKDOWN", tmp_path / "APPLICATIONS.md")
+    monkeypatch.setattr(ar, "REPORT_DIR", tmp_path / "report")
+
+    assert ar.main(["--ledger", str(ledger), "--telegram"]) == 0
+    assert list((tmp_path / "report").glob("applications-*.html"))

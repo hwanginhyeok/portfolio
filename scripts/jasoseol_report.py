@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Daily Jasoseol (자소설닷컴) job report generator and Telegram notifier.
+"""Daily Jasoseol (자소설닷컴) job report generator and ops notifier.
 
 Reads collected postings under docs/jd/_inbox/jasoseol/ and renders one
 self-contained HTML report with:
@@ -7,14 +7,14 @@ self-contained HTML report with:
      (with urgent deadlines inside the next 3 days distinctly marked).
   2. A table of actionable postings sorted by deadline ascending.
 
-Optionally sends the HTML report as a document attachment to the operator
-Telegram bot via sendDocument with a curated caption.
+Optionally sends a curated caption + report path through the harness ops bot
+(`hih notify`); the HTML report itself is written under docs/jd/report/.
 
 Usage:
   python3 scripts/jasoseol_report.py                  # render only (default)
   python3 scripts/jasoseol_report.py --html           # write report HTML to docs/jd/report/
-  python3 scripts/jasoseol_report.py --html --dry-run # render without Telegram send
-  python3 scripts/jasoseol_report.py --telegram       # write HTML and send to Telegram bot
+  python3 scripts/jasoseol_report.py --html --dry-run # render without sending
+  python3 scripts/jasoseol_report.py --telegram       # write HTML and notify via the ops bot
 """
 
 from __future__ import annotations
@@ -22,14 +22,11 @@ from __future__ import annotations
 import argparse
 import html
 import json
-import os
 import re
 import sys
-import urllib.request
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
-from urllib.parse import urlencode
 
 try:
     from scripts.shortlist import (
@@ -49,15 +46,26 @@ except ModuleNotFoundError:
         normalize_track = lambda t: t or "core"
         track_label = lambda t: t or "core"
 
+try:  # harness ops notification ("hih notify")
+    from scripts.notify import send as notify_send
+except ModuleNotFoundError:  # pragma: no cover - exercised by CLI execution
+    from notify import send as notify_send
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_CONFIG = REPO_ROOT / "config" / "jasoseol_targets.json"
 DEFAULT_INBOX_DIR = REPO_ROOT / "docs" / "jd" / "_inbox" / "jasoseol"
 DEFAULT_REPORT_DIR = REPO_ROOT / "docs" / "jd" / "report"
-DEFAULT_ENV = Path(os.environ.get("PORTFOLIO_PM_ENV", os.environ.get("PM_ENV_PATH", "/home/window11/project-manager/.env")))
 RECRUIT_BASE_URL = "https://jasoseol.com/recruit"
 CURRENT_SCORING_VERSION = 2
 KST = timezone(timedelta(hours=9))
-TOKEN_IN_URL = re.compile(r"bot\d+:[A-Za-z0-9_-]+")
+
+
+def display_path(path: Path) -> Path:
+    """Report a path relative to the repo when possible, else absolute."""
+    try:
+        return path.relative_to(REPO_ROOT)
+    except ValueError:
+        return path
 
 REPORT_CSS = """
 :root {
@@ -972,91 +980,6 @@ def render_html(
     return "\n".join(parts)
 
 
-def telegram_creds(env_path: Path) -> tuple[str, str] | None:
-    """(token, chat_id) from KEY=VALUE lines; None when either key is missing."""
-    if not env_path.exists():
-        return None
-    token = chat = None
-    try:
-        text = env_path.read_text(encoding="utf-8")
-    except OSError:
-        return None
-    for line in text.splitlines():
-        if line.startswith("PM_BOT_TOKEN="):
-            token = line.split("=", 1)[1].strip()
-        elif line.startswith("PM_BOT_CHAT_ID="):
-            chat = line.split("=", 1)[1].strip()
-    return (token, chat) if token and chat else None
-
-
-def send_report_via_telegram(path: Path, caption_text: str, env_path: Path) -> bool:
-    """Send document to operator Telegram bot via sendDocument."""
-    creds = telegram_creds(env_path)
-    if creds is None:
-        log(f"WARNING: Telegram credentials not found in {env_path}; report not sent")
-        return False
-    token, chat = creds
-    boundary = "----jasoseol" + datetime.now().strftime("%H%M%S%f")
-    body = bytearray()
-    for key, value in (("chat_id", chat), ("caption", caption_text[:1000])):
-        body += (
-            f"--{boundary}\r\nContent-Disposition: form-data; name=\"{key}\"\r\n\r\n"
-            f"{value}\r\n"
-        ).encode("utf-8")
-    body += (
-        f"--{boundary}\r\nContent-Disposition: form-data; name=\"document\"; "
-        f"filename=\"{path.name}\"\r\nContent-Type: text/html; charset=utf-8\r\n\r\n"
-    ).encode()
-    body += path.read_bytes() + b"\r\n" + f"--{boundary}--\r\n".encode()
-
-    req = urllib.request.Request(
-        f"https://api.telegram.org/bot{token}/sendDocument",
-        data=bytes(body),
-        headers={"Content-Type": f"multipart/form-data; boundary={boundary}"},
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=60) as resp:
-            result = json.loads(resp.read())
-            ok = bool(result.get("ok"))
-            http_status = getattr(resp, "status", None)
-            status_text = str(http_status) if isinstance(http_status, int) else "unknown"
-            log(f"[telegram] sendDocument API response: HTTP {status_text}, ok={'true' if ok else 'false'}")
-    except Exception as exc:
-        log(f"WARNING: telegram sendDocument failed: {TOKEN_IN_URL.sub('bot***', str(exc))}")
-        return False
-    if not ok:
-        log("WARNING: telegram sendDocument returned ok=false; report not confirmed sent")
-    return ok
-
-
-def send_message_via_telegram(message_text: str, env_path: Path) -> bool:
-    """Send a plain text message to the operator Telegram bot via sendMessage."""
-    creds = telegram_creds(env_path)
-    if creds is None:
-        log(f"WARNING: Telegram credentials not found in {env_path}; message not sent")
-        return False
-    token, chat = creds
-    body = urlencode({"chat_id": chat, "text": message_text}).encode("utf-8")
-    req = urllib.request.Request(
-        f"https://api.telegram.org/bot{token}/sendMessage",
-        data=body,
-        headers={"Content-Type": "application/x-www-form-urlencoded"},
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=60) as resp:
-            result = json.loads(resp.read())
-            ok = bool(result.get("ok"))
-            http_status = getattr(resp, "status", None)
-            status_text = str(http_status) if isinstance(http_status, int) else "unknown"
-            log(f"[telegram] sendMessage API response: HTTP {status_text}, ok={'true' if ok else 'false'}")
-    except Exception as exc:
-        log(f"WARNING: telegram sendMessage failed: {TOKEN_IN_URL.sub('bot***', str(exc))}")
-        return False
-    if not ok:
-        log("WARNING: telegram sendMessage returned ok=false; message not confirmed sent")
-    return ok
-
-
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Render Jasoseol actionable job postings report.")
     parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG,
@@ -1070,11 +993,9 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--html", action="store_true",
                         help="write report to docs/jd/report/jasoseol-YYYY-MM-DD.html")
     parser.add_argument("--telegram", action="store_true",
-                        help="send report via Telegram bot (implies writing HTML)")
+                        help="send a summary via the harness ops bot (implies writing HTML)")
     parser.add_argument("--dry-run", action="store_true",
-                        help="render report without sending Telegram message")
-    parser.add_argument("--env", type=Path, default=DEFAULT_ENV,
-                        help=f"env file for Telegram credentials (default: {DEFAULT_ENV})")
+                        help="render report without sending")
     parser.add_argument("--date", type=str, default=None,
                         help="override today's date (YYYY-MM-DD)")
     parser.add_argument("--min-score", type=int, default=None,
@@ -1110,11 +1031,11 @@ def main(argv: list[str] | None = None) -> int:
                 load_stats.get("examined", 0), load_stats.get("filtered", 0)
             )
             if args.dry_run:
-                log(f"[dry-run] telegram send skipped (--dry-run). Message: {empty_message}")
-            elif send_message_via_telegram(empty_message, args.env):
-                log("[telegram] empty-result message delivered to PM bot")
+                log(f"[dry-run] notify skipped (--dry-run). Message: {empty_message}")
+            elif notify_send(empty_message, title="portfolio jasoseol"):
+                log("[notify] empty-result message delivered to the harness ops bot")
             else:
-                log("[telegram] empty-result message delivery failed or not attempted")
+                log("[notify] empty-result message delivery failed or not attempted")
         return 0
 
     html_content = render_html(postings, today=today)
@@ -1129,22 +1050,19 @@ def main(argv: list[str] | None = None) -> int:
     if report_path is not None:
         report_path.parent.mkdir(parents=True, exist_ok=True)
         report_path.write_text(html_content, encoding="utf-8")
-        try:
-            rel_path = report_path.relative_to(REPO_ROOT)
-        except ValueError:
-            rel_path = report_path
-        log(f"[report] {rel_path} ({len(html_content):,} bytes, {len(postings)} actionable, {urgent_count} urgent)")
+        log(f"[report] {display_path(report_path)} ({len(html_content):,} bytes, {len(postings)} actionable, {urgent_count} urgent)")
     else:
         log(f"[jasoseol_report] rendered HTML in memory ({len(html_content):,} bytes, {len(postings)} actionable, {urgent_count} urgent). (Use --html to save)")
 
     if args.telegram:
         if args.dry_run:
-            log(f"[dry-run] telegram send skipped (--dry-run). Caption:\n{caption_text}")
+            log(f"[dry-run] notify skipped (--dry-run). Caption:\n{caption_text}")
+        elif report_path and notify_send(
+                caption_text + f"\n\U0001F4C4 {display_path(report_path)}",
+                title="portfolio jasoseol"):
+            log("[notify] report summary delivered to the harness ops bot")
         else:
-            if report_path and send_report_via_telegram(report_path, caption_text, args.env):
-                log("[telegram] report delivered to PM bot")
-            else:
-                log("[telegram] report delivery failed or not attempted")
+            log("[notify] report delivery failed or not attempted")
     elif args.dry_run:
         log(f"[dry-run] render completed. Caption preview:\n{caption_text}")
 

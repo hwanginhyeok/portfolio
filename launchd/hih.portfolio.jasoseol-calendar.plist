@@ -3,11 +3,15 @@
 <!--
   hih.portfolio.jasoseol-calendar — Daily Jasoseol application deadlines sync to Google Calendar, 08:34 Asia/Seoul.
 
-  DRAFT ONLY: NOT INSTALLED / NOT LOADED by the migration.
-  To be installed on macOS by PM upon operational cutover:
+  macOS LaunchAgent for the portfolio cutover. Absolute paths only: a home
+  shorthand anywhere in a plist makes launchd fail the spawn with EX_CONFIG.
 
-      cp launchd/hih.portfolio.jasoseol-calendar.plist ~/Library/LaunchAgents/
-      launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/hih.portfolio.jasoseol-calendar.plist
+  NOT loaded by the preparation step. The PM loads it together with turning off
+  the matching server-pc cron line (project-standard "Cutover"), after rsyncing
+  the job's state files:
+
+      cp launchd/hih.portfolio.jasoseol-calendar.plist $HOME/Library/LaunchAgents/
+      launchctl bootstrap gui/$(id -u) $HOME/Library/LaunchAgents/hih.portfolio.jasoseol-calendar.plist
 -->
 <plist version="1.0">
 <dict>
@@ -16,10 +20,13 @@
 
     <key>ProgramArguments</key>
     <array>
-        <string>/bin/zsh</string>
-        <string>-lc</string>
-        <string>cd ~/Workspace/projects/portfolio &amp;&amp; exec uv run python3 scripts/jasoseol_calendar.py --apply</string>
+        <string>/Users/hwang-inhyeok/Workspace/projects/portfolio/.venv/bin/python</string>
+        <string>/Users/hwang-inhyeok/Workspace/projects/portfolio/scripts/jasoseol_calendar.py</string>
+        <string>--apply</string>
     </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/hwang-inhyeok/Workspace/projects/portfolio</string>
 
     <key>StartCalendarInterval</key>
     <dict>

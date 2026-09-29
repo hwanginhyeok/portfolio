@@ -14,6 +14,7 @@ Astro-powered physical AI engineering portfolio website + autonomous multi-chann
 | `docs/runbook.md` | Operations, health diagnostics, and failure recovery runbooks |
 | `docs/review-2026-09-28.md` | Comprehensive codebase review & severity audit |
 | `docs/harness-integration.md` | Harness migration design (Keychain secrets, `hih notify`, LaunchAgent drafts) |
+| `docs/cutover.md` | macOS cutover: job table, state files to rsync, rollback, `mac.yaml` block |
 | `docs/history/` | Historical documents (`handoff-2026-05-19.md`) |
 | `docs/jd/` | Company application dossiers, materials, and staging inboxes |
 | `features/_template.md` | Standard feature specification template |
@@ -25,6 +26,7 @@ Astro-powered physical AI engineering portfolio website + autonomous multi-chann
 | `features/global-collector.md` | Global enterprise ATS job board crawler & report |
 | `features/applications-ledger.md` | Application tracking pipeline ledger & status report |
 | `features/presentation-builder.md` | Graduate portfolio PPTX presentation deck generators |
+| `features/harness-scheduling.md` | macOS LaunchAgent schedule + harness notify/secret integration |
 | `ops/ops.yaml` | Operations inventory: services, schedules, state paths, secret names |
 | `site/index.html` | Generated static operational dashboard |
 | `scripts/generate_site.py` | Script generating `site/index.html` from `features/` and `ops/` |
@@ -32,7 +34,7 @@ Astro-powered physical AI engineering portfolio website + autonomous multi-chann
 | `launchd/` | Draft LaunchAgent plists for macOS scheduling (inactive) |
 | `src/` | Astro website source code (pages, components, layouts, styles) |
 | `scripts/` | Recruitment collectors, reporting utilities, and data repair tools |
-| `tests/` | 90 hermetic, isolated unit tests (no network) |
+| `tests/` | Hermetic, isolated unit tests (no network) |
 
 ---
 
@@ -72,11 +74,11 @@ npm run build
 
 ### Run Automated Tests
 ```bash
-# Run 90 hermetic unit tests (100% offline, isolated tmp_path)
-uv run pytest tests/
+# Run the hermetic unit tests (100% offline, isolated tmp_path)
+.venv/bin/python -m pytest tests/
 ```
 
 ### Regenerate Overview Site
 ```bash
-uv run python3 scripts/generate_site.py
+.venv/bin/python scripts/generate_site.py
 ```

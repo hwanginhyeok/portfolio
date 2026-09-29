@@ -70,3 +70,27 @@ This log records numbered architectural decisions (D1, D2, ...) for `portfolio` 
 - **Context**: The repository houses both the Astro web platform (`src/`, `astro.config.mjs`, `tailwind.config.mjs`) and the Python recruitment intelligence pipeline (`scripts/`, `docs/jd/`).
 - **Decision**: Maintain clear separation between the Astro presentation layer and the Python data collector pipeline. The Astro site builds independently (`npm run build`) with zero Python runtime dependency; Python collectors execute independently (`pytest tests/`) with zero node_modules dependency.
 - **Consequence**: High cohesion, minimal coupling, and independent deployment cycles.
+
+---
+
+### D9: Ops notifications via `hih notify`, retire the per-project Telegram bot
+- **Date**: 2026-09-29
+- **Context**: `applications_report.py`, `global_collect.py`, `jasoseol_report.py`, and `wanted_collect.py` each built their own multipart `sendDocument`/`sendMessage` calls to `api.telegram.org`, reading `PM_BOT_TOKEN` / `PM_BOT_CHAT_ID` from a server env file. The project standard says notifications use `hih notify` (the ops bot), not per-project Telegram bots.
+- **Decision**: Deliver one text message per report job through `hih notify` via a shared `scripts/notify.py` (`send()`), which resolves the harness entry point (env override, `PATH`, then the harness checkout). The HTML report is still written locally and its path rides in the message. The `--env` flag and the per-project bot credentials are removed.
+- **Consequence**: No per-project bot or plaintext env read remains. While the harness ops channel is disabled, `hih notify` prints `[disabled]` and exits 0, so scheduled runs stay quiet. Attachments are no longer sent; the operator opens the local HTML by path.
+
+---
+
+### D10: macOS LaunchAgents use absolute paths, the project venv, and a per-job cutover
+- **Date**: 2026-09-29
+- **Context**: The server runs six crontab lines with `/usr/bin/python3` and a repo-root cwd. Launchd rejects a `~` in a plist (`EX_CONFIG`), and the collectors need `requests`/`pyyaml` from the project venv. Side-effecting jobs (Telegram, Calendar) must never run twice during the move.
+- **Decision**: Each `launchd/hih.portfolio.*.plist` names absolute paths only (venv interpreter, script, working directory, log), keeps the exact server times and arguments, and loads in `Aqua` so `hih notify` can read the Keychain. The PM switches one job at a time: load the agent and comment out the matching server cron line in the same step, after rsyncing that job's state files; rollback is `launchctl bootout` + uncomment.
+- **Consequence**: `hih node check` can see drift once the agents are listed in `infra/data/nodes/mac.yaml`; the prepared block is in `docs/cutover.md`. Nothing is loaded by the preparation step.
+
+---
+
+### D11: `jasoseol_calendar.py` invokes `hih-schedule` directly on macOS
+- **Date**: 2026-09-29
+- **Context**: The calendar script ran the server copies of the hih-schedule script under `sys.executable`. On macOS the calendar skill needs its own Google-API venv, and the old `/home/window11/...` path no longer exists.
+- **Decision**: Default `HIH_SCHEDULE_CLI` to `~/bin/hih-schedule` and execute that CLI directly (its shebang picks its own interpreter) instead of prefixing `sys.executable`. The env override is kept.
+- **Consequence**: No hardcoded server path remains; the calendar still writes only through `hih-schedule`.

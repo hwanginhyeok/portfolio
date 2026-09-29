@@ -22,6 +22,7 @@ FEATURE_LABELS = {
     "global-collector": "글로벌 ATS 기업공고 수집 (global-collector)",
     "applications-ledger": "지원 파이프라인 원장 & 현황 (applications-ledger)",
     "presentation-builder": "대학원 포트폴리오 PPT 생성기 (presentation-builder)",
+    "harness-scheduling": "macOS 예약 작업 & 하네스 연동 (harness-scheduling)",
 }
 
 

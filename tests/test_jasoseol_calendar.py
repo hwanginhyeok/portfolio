@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+from types import SimpleNamespace
 from typing import Any
 
 import pytest
@@ -517,3 +518,33 @@ def test_orphan_sweep_lists_calendar_window_in_dry_run(
         "list", "--account", "personal", "--from", "2026-08-21",
     ]
     assert cli_calls[0][-2:] == ["--to", "2027-09-20"]
+
+
+def test_run_schedule_cli_execs_the_cli_directly(monkeypatch, tmp_path):
+    calls = []
+
+    def fake_run(cmd, **kwargs):
+        calls.append(cmd)
+        return SimpleNamespace(returncode=0, stdout='{"events": []}', stderr="")
+
+    monkeypatch.setattr(jcal.subprocess, "run", fake_run)
+    cli = tmp_path / "hih-schedule"
+    result = jcal.run_schedule_cli(["list", "--account", "personal"], cli_path=cli)
+
+    assert result == {"events": []}
+    assert calls[0][0] == str(cli)
+    assert calls[0][1:] == ["list", "--account", "personal"]
+
+
+def test_run_schedule_cli_raises_on_failure(monkeypatch, tmp_path):
+    def fake_run(cmd, **kwargs):
+        return SimpleNamespace(returncode=2, stdout="", stderr="boom")
+
+    monkeypatch.setattr(jcal.subprocess, "run", fake_run)
+    with pytest.raises(RuntimeError, match="boom"):
+        jcal.run_schedule_cli(["list"], cli_path=tmp_path / "hih-schedule")
+
+
+def test_default_schedule_cli_is_a_mac_path():
+    assert str(jcal.DEFAULT_SCHEDULE_CLI).startswith("/")
+    assert "window11" not in str(jcal.DEFAULT_SCHEDULE_CLI)

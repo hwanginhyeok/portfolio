@@ -1,97 +1,72 @@
-# Harness Integration Specification (docs/harness-integration.md)
+# Harness Integration (docs/harness-integration.md)
 
-This document specifies how `portfolio` (포트폴리오) integrates with the HIH Harness ecosystem upon migration to macOS, in accordance with `~/Workspace/agents/project-standard.md`.
-
----
-
-## 1. Secrets Management (`hih-secret`)
-
-### Current State
-- Scripts read credentials from `/home/window11/project-manager/.env`.
-- Credential keys: `PM_BOT_TOKEN`, `PM_BOT_CHAT_ID`.
-
-### Target Architecture
-- Zero plaintext credential files (`.env`) in the repository or home directories.
-- Secret values are stored securely in the macOS Keychain under dedicated keys:
-  - `telegram/bot-token`
-  - `telegram/ops-chat-id`
-- Secret **names only** are cataloged in `ops/ops.yaml`:
-  ```yaml
-  secrets:
-    - PM_BOT_TOKEN
-    - PM_BOT_CHAT_ID
-  ```
-- At runtime on macOS, wrapper scripts or LaunchAgents retrieve secrets using the standard harness utility:
-  ```bash
-  export PM_BOT_TOKEN="$(hih-secret get telegram/bot-token)"
-  export PM_BOT_CHAT_ID="$(hih-secret get telegram/ops-chat-id)"
-  ```
+How `portfolio` (포트폴리오) uses the HIH harness, as required by the shared
+project standard ("Harness integration"). This supersedes the earlier design
+where the report scripts talked to Telegram directly.
 
 ---
 
-## 2. Centralized Notifications (`hih notify`)
+## 1. Notifications (`hih notify`)
 
-### Current State
-- `applications_report.py`, `global_collect.py`, `jasoseol_report.py`, and `wanted_collect.py` contain custom urllib multipart HTTP POST routines calling `https://api.telegram.org/bot{token}/sendDocument` and `/sendMessage`.
+- `scripts/notify.py::send(text, title=..., level=...)` runs the harness entry
+  point `hih notify --title <t> --level <l> <text>` with `subprocess`. It
+  resolves the entry point from `HIH_BIN` (binary or bin directory), then
+  `PATH`, then the harness checkout.
+- `hih notify` is **text only** and send-only. It gates on `notify.enabled`:
+  while the ops channel is off it prints `[disabled]` and exits 0, so scheduled
+  runs stay quiet by construction.
+- The four report jobs (`jasoseol_report`, `applications_report`,
+  `wanted_collect`, `global_collect`) send one Korean summary per run. The HTML
+  report is still written locally (`docs/jd/report/`, `docs/jd/_inbox/*/report/`)
+  and its path is included in the message instead of being attached.
+- The old per-project Telegram bot (`PM_BOT_TOKEN` / `PM_BOT_CHAT_ID`) and the
+  `--env` flag are retired.
 
-### Target Architecture
-- Notifications are routed through the central harness notification engine:
-  - Text alerts and execution summaries: `hih notify --channel ops --text "<message>"`
-  - Document attachments (HTML reports): `hih notify --channel ops --document <path> --caption "<caption>"`
-- Benefits:
-  - Eliminates redundant network error handling and token masking in Python scripts.
-  - Centralizes rate-limiting and connection retries.
-  - Respects quiet hours and operator alert preferences.
+## 2. Secrets (`hih-secret`)
 
----
+- No portfolio script reads a secret directly. `scripts/notify.py::secret(name)`
+  wraps `hih-secret get <NAME>` as the sanctioned accessor if a job ever needs
+  one; values are never logged, printed, or committed.
+- The harness resolves the ops-bot token/chat id from the macOS Keychain itself.
+  The relevant names live in the shared secret-name index (names only).
+- LaunchAgents load in the `Aqua` session so the Keychain is reachable.
 
-## 3. Scheduled Workloads (`launchd/`)
+## 3. Schedules (`launchd/`)
 
-### Current State
-- Six cron jobs on `server-pc` (Linux crontab):
-  - `30 8 * * *`: `jasoseol_collect.py`
-  - `34 8 * * *`: `jasoseol_calendar.py --apply`
-  - `36 8 * * *`: `jasoseol_report.py --telegram`
-  - `40 11 * * *`: `wanted_collect.py`
-  - `47 11 * * *`: `applications_report.py --telegram`
-  - `50 11 * * *`: `global_collect.py --telegram`
+Six prepared LaunchAgents, one per server cron line, with absolute paths
+(venv interpreter, script, working directory, log), the exact server times and
+arguments, and `LimitLoadToSessionType = Aqua`:
 
-### Target Architecture
-- Managed as native macOS user LaunchAgents under `launchd/`:
-  - `launchd/hih.portfolio.jasoseol-collect.plist` (08:30 KST)
-  - `launchd/hih.portfolio.jasoseol-calendar.plist` (08:34 KST)
-  - `launchd/hih.portfolio.jasoseol-report.plist` (08:36 KST)
-  - `launchd/hih.portfolio.wanted-collect.plist` (11:40 KST)
-  - `launchd/hih.portfolio.applications-report.plist` (11:47 KST)
-  - `launchd/hih.portfolio.global-collect.plist` (11:50 KST)
-- **Policy**: These plist files are provided as templates in `launchd/` and listed in `ops/ops.yaml`. They are **not loaded** during migration to ensure zero duplicate crawling while `server-pc` remains active.
+| Label | Time (Asia/Seoul) | argv |
+|---|---|---|
+| `hih.portfolio.jasoseol-collect` | 08:30 | `scripts/jasoseol_collect.py` |
+| `hih.portfolio.jasoseol-calendar` | 08:34 | `scripts/jasoseol_calendar.py --apply` |
+| `hih.portfolio.jasoseol-report` | 08:36 | `scripts/jasoseol_report.py --html --telegram` |
+| `hih.portfolio.wanted-collect` | 11:40 | `scripts/wanted_collect.py` |
+| `hih.portfolio.applications-report` | 11:47 | `scripts/applications_report.py --html --telegram` |
+| `hih.portfolio.global-collect` | 11:50 | `scripts/global_collect.py --html --telegram` |
 
----
+They are **not loaded** until the per-job cutover; see `docs/cutover.md` for the
+job table, state files to rsync, rollback, and the `infra/data/nodes/mac.yaml`
+block.
 
-## 4. Path Configurability & Portability
+## 4. Portability
 
-### Current State
-- Hardcoded server paths in scripts:
-  - `/home/window11/project-manager/.env`
-  - `/home/window11/hih-skills/hih-schedule/scripts/hih_schedule.py`
+- No `/home/window11` or old `project-manager` path remains in the six scripts
+  or anything they import.
+- `jasoseol_calendar.py` defaults `HIH_SCHEDULE_CLI` to `~/bin/hih-schedule` and
+  executes that CLI directly (its own Google-API venv); the env override is
+  kept.
+- All intra-repository paths resolve from `Path(__file__).resolve().parent.parent`.
 
-### Target Architecture
-- Path resolution uses environment variables with fallback to server defaults:
-  - `PORTFOLIO_PM_ENV` / `PM_ENV_PATH`: Configurable path to credentials file.
-  - `HIH_SCHEDULE_CLI`: Configurable path to calendar CLI script.
-- Standard repository root resolution using `Path(__file__).resolve().parent.parent` ensures all intra-repository data paths (`docs/jd/`, `config/`) are relative and portable across platforms.
+## 5. Legacy replacements
 
----
-
-## 5. Replacement of Legacy Runtime_v2 & Project-Manager Dependencies
-
-| Legacy Component | Legacy Location | Harness Replacement | Switch Date |
-|---|---|---|---|
-| Telegram credentials | `/home/window11/project-manager/.env` | `hih-secret get telegram/bot-token` | Phase 2 cutover |
-| Calendar synchronization | `hih-schedule/scripts/hih_schedule.py` | `hih schedule` CLI / local REST OAuth | Phase 2 cutover |
-| In-repo work tracking | `TASK.md`, `CURRENT_TASK.md` | Plan cards in `~/Workspace/project-manager/plans/` | Completed (Phase 1) |
-| Runtime instructions | `coordination/runtime-instructions/` | `~/Workspace/project-manager/plans/` & `hih-worker` | Completed (Phase 1) |
-| Multi-agent debate state | `DEBATE.md`, `debate/`, `WORK_ITEM.md` | `hih-review` peer critiques & harness logs | Completed (Phase 1) |
-| Run receipts & history | `WORK_LOG.md`, `FINISHED_TASK.md` | `<project>/records/runs/<task>/<run>/` via `hih-worker` | Completed (Phase 1) |
-| Web site preview | `build_preview.py` & `preview.html` | Astro web frontend (`npm run dev` / `npm run build`) | Completed (Phase 1) |
-| Operations dashboard | N/A | `site/index.html` generated by `scripts/generate_site.py` | Completed (Phase 1) |
+| Legacy component | Replacement | Switch |
+|---|---|---|
+| Per-project Telegram bot + plaintext env file | `hih notify` (ops bot) via `scripts/notify.py` | t34 step 1 (2026-09-29) |
+| Server cron schedule | `launchd/hih.portfolio.*.plist` (per-job cutover) | t34 step 2 |
+| `hih-schedule` under `sys.executable` | `~/bin/hih-schedule` invoked directly | t34 step 1 |
+| In-repo work tracking | plan cards in `project-manager/plans/` | done (Phase 1) |
+| runtime_v2 (preflight, context envelopes) | retired; no replacement gate | done |
+| Run receipts | `<project>/records/runs/` via hih-worker | done (Phase 1) |
+| Web site preview | Astro (`npm run dev` / `npm run build`) | done (Phase 1) |

@@ -73,7 +73,10 @@ except ModuleNotFoundError:
     from state_utils import atomic_write_json
 
 DEFAULT_LEDGER_PATH = DEFAULT_INBOX_DIR / "calendar_events.json"
-DEFAULT_SCHEDULE_CLI = Path(os.environ.get("HIH_SCHEDULE_CLI", "/home/window11/hih-skills/hih-schedule/scripts/hih_schedule.py"))
+DEFAULT_SCHEDULE_CLI = Path(os.environ.get(
+    "HIH_SCHEDULE_CLI",
+    str(Path.home() / "bin" / "hih-schedule"),
+))
 CALENDAR_ACCOUNT = "personal"
 CALENDAR_LOOKBACK_DAYS = 30
 CALENDAR_LOOKAHEAD_DAYS = 365
@@ -430,8 +433,11 @@ def build_delete_cli_args(
 
 
 def run_schedule_cli(args: list[str], cli_path: Path = DEFAULT_SCHEDULE_CLI) -> dict[str, Any]:
-    """Invoke the hih-schedule CLI and return parsed JSON stdout."""
-    cmd = [sys.executable, str(cli_path)] + args
+    """Invoke the hih-schedule CLI and return parsed JSON stdout.
+
+    The CLI is executed directly (its own interpreter/venv), not under this
+    project's Python, so the Google API dependencies live with the skill."""
+    cmd = [str(cli_path)] + args
     res = subprocess.run(cmd, capture_output=True, text=True)
     if res.returncode != 0:
         err_msg = res.stderr.strip() or res.stdout.strip()
@@ -794,7 +800,7 @@ def main(argv: list[str] | None = None) -> int:
         "--schedule-cli",
         type=Path,
         default=DEFAULT_SCHEDULE_CLI,
-        help=f"Path to hih-schedule CLI script (default: {DEFAULT_SCHEDULE_CLI}).",
+        help=f"Path to the hih-schedule CLI executable (default: {DEFAULT_SCHEDULE_CLI}).",
     )
     parser.add_argument(
         "--today",

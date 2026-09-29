@@ -1,17 +1,79 @@
 schema_version: 1
-last_verified: '2026-09-28'
+last_verified: '2026-09-29'
 timezone: Asia/Seoul
 current_node: server-pc
 server_jobs_remain_running: true
 notes:
-  - 'Production job collection and reporting runs on server-pc via crontab.'
+  - 'Production job collection and reporting still runs on server-pc via crontab.'
   - 'Do NOT alter, stop, or restart crontab jobs on server-pc.'
-  - 'Draft LaunchAgents in launchd/ are templates and not loaded during migration.'
+  - 'Prepared LaunchAgents in launchd/ match the server cron times and arguments; they are NOT loaded until the per-job cutover (see mac_launchagents and cutover).'
+  - 'No plaintext env or per-project Telegram bot: notifications go through the harness ops bot (`hih notify`), which reads its Keychain entries itself.'
   - 'Astro static site builds locally on macOS.'
 counts:
   cron: 6
+  mac_launchagents: 6
   services: 0
   timers: 0
+mac_launchagents:
+  # Prepared macOS LaunchAgents (launchd/*.plist). Absolute paths only; Aqua
+  # session because the report jobs notify through `hih notify` (Keychain).
+  # status: prepared = plist ready, NOT loaded.
+  - label: hih.portfolio.jasoseol-collect
+    plist: launchd/hih.portfolio.jasoseol-collect.plist
+    command: scripts/jasoseol_collect.py
+    schedule: "30 8 * * *"
+    log: /Users/hwang-inhyeok/Library/Logs/hih/portfolio_jasoseol_collect.log
+    status: prepared
+  - label: hih.portfolio.jasoseol-calendar
+    plist: launchd/hih.portfolio.jasoseol-calendar.plist
+    command: scripts/jasoseol_calendar.py --apply
+    schedule: "34 8 * * *"
+    log: /Users/hwang-inhyeok/Library/Logs/hih/portfolio_jasoseol_calendar.log
+    status: prepared
+  - label: hih.portfolio.jasoseol-report
+    plist: launchd/hih.portfolio.jasoseol-report.plist
+    command: scripts/jasoseol_report.py --html --telegram
+    schedule: "36 8 * * *"
+    log: /Users/hwang-inhyeok/Library/Logs/hih/portfolio_jasoseol_report.log
+    status: prepared
+  - label: hih.portfolio.wanted-collect
+    plist: launchd/hih.portfolio.wanted-collect.plist
+    command: scripts/wanted_collect.py
+    schedule: "40 11 * * *"
+    log: /Users/hwang-inhyeok/Library/Logs/hih/portfolio_wanted_collect.log
+    status: prepared
+  - label: hih.portfolio.applications-report
+    plist: launchd/hih.portfolio.applications-report.plist
+    command: scripts/applications_report.py --html --telegram
+    schedule: "47 11 * * *"
+    log: /Users/hwang-inhyeok/Library/Logs/hih/portfolio_applications_report.log
+    status: prepared
+  - label: hih.portfolio.global-collect
+    plist: launchd/hih.portfolio.global-collect.plist
+    command: scripts/global_collect.py --html --telegram
+    schedule: "50 11 * * *"
+    log: /Users/hwang-inhyeok/Library/Logs/hih/portfolio_global_collect.log
+    status: prepared
+cutover:
+  mode: per-job
+  from_node: server-pc
+  to_node: mac
+  rule: >
+    Switch one job at a time: load its Mac LaunchAgent and comment out the
+    matching server-pc cron line in the same step, so a side-effecting job
+    (Telegram notification, calendar write) never runs twice. The PM rsyncs the
+    job state files first. Watch 2 days on the Mac alone, then delete the server
+    copy (project-standard "Cutover", plan t34).
+  state_files_to_rsync:
+    - docs/jd/_inbox/jasoseol/state.json
+    - docs/jd/_inbox/jasoseol/calendar_events.json
+    - docs/jd/_inbox/wanted/state.json
+    - docs/jd/_inbox/global/state.json
+    - docs/jd/applications.json
+  rollback: >
+    launchctl bootout gui/$(id -u) <prepared plist label> and re-enable the
+    matching commented server-pc cron line; no state is lost because the state
+    files are rsynced, not moved.
 state_paths:
   - docs/jd/_inbox/jasoseol/state.json
   - docs/jd/_inbox/jasoseol/calendar_events.json
@@ -21,19 +83,21 @@ state_paths:
   - dist/
 external_dependencies:
   - Node.js & npm (Astro build & dependencies)
-  - Python 3.12 & uv (Collector runtime & test suite)
+  - Python 3.12 venv (.venv via uv; requests, pyyaml, pytest)
   - Jasoseol public calendar API
   - Wanted public search API
   - Enterprise ATS endpoints (Workday, Greenhouse, Lever, Ashby)
   - Google Calendar via hih-schedule CLI
-  - Telegram Bot API
+  - Harness ops bot via `hih notify`
 external_sites:
   - https://jasoseol.com
   - https://www.wanted.co.kr
   - https://api.telegram.org
 secrets:
-  - PM_BOT_TOKEN
-  - PM_BOT_CHAT_ID
+  # Retired for this project: per-job PM bot credentials. Delivery now goes
+  # through `hih notify`; the harness owns the ops-bot Keychain entries
+  # TELEGRAM_OPS_BOT_TOKEN / TELEGRAM_OPS_CHAT_ID (names in agents/secrets.txt).
+  []
 services: []
 cron:
   - id: cron:jasoseol-collect
@@ -52,13 +116,11 @@ cron:
     secrets: []
   - id: cron:jasoseol-report
     what: Generates daily Jasoseol HTML report and sends via Telegram
-    command: python3 scripts/jasoseol_report.py --telegram
+    command: python3 scripts/jasoseol_report.py --html --telegram
     schedule: "36 8 * * *"
     node: server-pc
     status: active
-    secrets:
-      - PM_BOT_TOKEN
-      - PM_BOT_CHAT_ID
+    secrets: []
   - id: cron:wanted-collect
     what: Pulls matching Korean tech postings from Wanted API
     command: python3 scripts/wanted_collect.py
@@ -68,28 +130,24 @@ cron:
     secrets: []
   - id: cron:applications-report
     what: Generates daily job application pipeline report and sends via Telegram
-    command: python3 scripts/applications_report.py --telegram
+    command: python3 scripts/applications_report.py --html --telegram
     schedule: "47 11 * * *"
     node: server-pc
     status: active
-    secrets:
-      - PM_BOT_TOKEN
-      - PM_BOT_CHAT_ID
+    secrets: []
   - id: cron:global-collect
     what: Pulls matching postings from global ATS APIs and sends report via Telegram
-    command: python3 scripts/global_collect.py --telegram
+    command: python3 scripts/global_collect.py --html --telegram
     schedule: "50 11 * * *"
     node: server-pc
     status: active
-    secrets:
-      - PM_BOT_TOKEN
-      - PM_BOT_CHAT_ID
+    secrets: []
 timers: []
 health_checks:
-  - uv run pytest tests/ (90 hermetic unit tests)
+  - .venv/bin/python -m pytest tests/
   - npm run build (Astro static site compilation)
-  - uv run python3 scripts/wanted_state_repair.py (Wanted state ledger integrity check)
+  - .venv/bin/python scripts/wanted_state_repair.py (Wanted state ledger integrity check)
 latest_health:
   status: ok
-  checked_at: '2026-09-28T16:22:20+09:00'
-  note: All 90 hermetic tests passing on macOS (Python 3.12); Astro site builds cleanly (10 static routes).
+  checked_at: '2026-09-29T22:50:00+09:00'
+  note: 6 LaunchAgents prepared with absolute paths and exact cron times/args; ops notification routed through hih notify.

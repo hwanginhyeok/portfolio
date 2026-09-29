@@ -18,16 +18,14 @@ API behavior (verified 2026-08-18, plain HTTP, no auth):
 
 Usage:
   python3 scripts/wanted_collect.py [--config PATH] [--dry-run] [--limit N]
-                                    [--html] [--telegram [--env ENV_PATH]]
+                                    [--html] [--telegram]
 """
 import argparse
 import html
 import json
-import os
 import re
 import sys
 import time
-import urllib.request
 from datetime import date, datetime
 from pathlib import Path
 
@@ -58,11 +56,23 @@ except ModuleNotFoundError:  # pragma: no cover - exercised by CLI execution
     )
     from state_utils import atomic_write_json
 
+try:  # harness ops notification ("hih notify")
+    from scripts.notify import send as notify_send
+except ModuleNotFoundError:  # pragma: no cover - exercised by CLI execution
+    from notify import send as notify_send
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_CONFIG = REPO_ROOT / "config" / "wanted_targets.json"
 INBOX_DIR = REPO_ROOT / "docs" / "jd" / "_inbox" / "wanted"
 REPORT_DIR = INBOX_DIR / "report"
-PM_ENV = Path(os.environ.get("PORTFOLIO_PM_ENV", os.environ.get("PM_ENV_PATH", "/home/window11/project-manager/.env")))
+
+
+def display_path(path: Path) -> Path:
+    """Report a path relative to the repo when possible, else absolute."""
+    try:
+        return path.relative_to(REPO_ROOT)
+    except ValueError:
+        return path
 
 BASE = "https://www.wanted.co.kr"
 RESULTS_URL = BASE + "/api/chaos/search/v1/results"
@@ -444,10 +454,10 @@ def write_digest(digest_dir: Path, today: str, watchlist: dict, fresh: list[dict
     (digest_dir / f"{today}.md").write_text("\n".join(lines), encoding="utf-8")
 
 
-# ── HTML daily report + Telegram delivery ───────────────────────────────────
+# ── HTML daily report + ops notification ────────────────────────────────────
 # Rendered from the same `fresh_today` set the markdown digest lists, so the
 # two never disagree. The page is self-contained (inline CSS only, no JS) and
-# mobile-first: the PM reads it as a Telegram document on a phone.
+# mobile-first: the path is announced over the ops bot and opened on a phone.
 
 # A posting is 핵심 when its title matches manufacturing / AI / PM / engineering
 # intent. Substring match, case-insensitive: Korean titles glue Latin tokens to
@@ -776,63 +786,6 @@ def build_caption(today: str, watchlist: dict, n_new: int, n_core: int,
     return "\n".join(lines)
 
 
-def telegram_creds(env_path: Path) -> tuple[str, str] | None:
-    """(token, chat_id) from KEY=VALUE lines; None when either key is missing.
-
-    The values are never logged, printed, or written anywhere.
-    """
-    if not env_path.exists():
-        return None
-    token = chat = None
-    for line in env_path.read_text(encoding="utf-8").splitlines():
-        if line.startswith("PM_BOT_TOKEN="):
-            token = line.split("=", 1)[1].strip()
-        elif line.startswith("PM_BOT_CHAT_ID="):
-            chat = line.split("=", 1)[1].strip()
-    return (token, chat) if token and chat else None
-
-
-# telegram error strings can embed the request URL, which embeds the bot token
-TOKEN_IN_URL = re.compile(r"bot\d+:[A-Za-z0-9_-]+")
-
-
-def send_report_via_telegram(path: Path, caption: str, env_path: Path) -> bool:
-    """sendDocument via stdlib urllib — the same multipart construction as
-    sns-studio's studio_dashboard.send_document. `chat_id` rides in the form
-    body as a string, which is what sendDocument expects.
-
-    Returns False on any failure. The collection run has already succeeded by
-    the time this is called, so a delivery problem must never fail the run.
-    """
-    creds = telegram_creds(env_path)
-    if creds is None:
-        log(f"WARNING: Telegram credentials not found in {env_path}; report not sent "
-            "(the collection run itself succeeded)")
-        return False
-    token, chat = creds
-    boundary = "----wanted" + datetime.now().strftime("%H%M%S%f")
-    body = bytearray()
-    for key, value in (("chat_id", chat), ("caption", caption[:1000])):
-        body += (f"--{boundary}\r\nContent-Disposition: form-data; name=\"{key}\"\r\n\r\n"
-                 f"{value}\r\n").encode("utf-8")
-    body += (f"--{boundary}\r\nContent-Disposition: form-data; name=\"document\"; "
-             f"filename=\"{path.name}\"\r\nContent-Type: text/html; charset=utf-8"
-             "\r\n\r\n").encode()
-    body += path.read_bytes() + b"\r\n" + f"--{boundary}--\r\n".encode()
-    req = urllib.request.Request(
-        f"https://api.telegram.org/bot{token}/sendDocument", data=bytes(body),
-        headers={"Content-Type": f"multipart/form-data; boundary={boundary}"})
-    try:
-        with urllib.request.urlopen(req, timeout=60) as resp:
-            ok = bool(json.loads(resp.read()).get("ok"))
-    except Exception as exc:
-        log(f"WARNING: telegram sendDocument failed: {TOKEN_IN_URL.sub('bot***', str(exc))}")
-        return False
-    if not ok:
-        log("WARNING: telegram sendDocument returned ok=false; report not confirmed sent")
-    return ok
-
-
 def main() -> int:
     parser = argparse.ArgumentParser(description="Collect Wanted job postings into the staging inbox.")
     parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG,
@@ -844,10 +797,7 @@ def main() -> int:
     parser.add_argument("--html", action="store_true",
                         help="also render report/YYYY-MM-DD.html for today's new postings")
     parser.add_argument("--telegram", action="store_true",
-                        help="render the report (implies --html) and send it to the PM bot")
-    parser.add_argument("--env", type=Path, default=PM_ENV,
-                        help=f"env file with PM_BOT_TOKEN / PM_BOT_CHAT_ID "
-                             f"(default: {PM_ENV})")
+                        help="render the report (implies --html) and send a summary via the harness ops bot")
     args = parser.parse_args()
     if args.telegram:
         args.html = True  # --telegram implies --html; never send without a file
@@ -996,7 +946,7 @@ def main() -> int:
         log(f"[done] files written: {len(written)} | digest: digest/{today}.md | "
             f"state: {len(seen)} ids seen")
 
-        # ---- phase 5: HTML report + optional Telegram delivery ---------------
+        # ---- phase 5: HTML report + optional ops notification ----------------
         report_path: Path | None = None
         globals_ = global_postings(seen, config.get("global_companies", []))
         if args.html:
@@ -1006,7 +956,7 @@ def main() -> int:
                 render_html_report(today, watch_counts, fresh_today, len(seen),
                                    globals_),
                 encoding="utf-8")
-            log(f"[report] {report_path.relative_to(REPO_ROOT)} "
+            log(f"[report] {display_path(report_path)} "
                 f"({report_path.stat().st_size:,} bytes)")
         if args.telegram:
             if report_path is None or not report_path.exists():
@@ -1017,8 +967,10 @@ def main() -> int:
                              if p["actionable"])
                 caption = build_caption(today, watch_counts, len(fresh_today),
                                         n_core, len(seen), len(globals_))
-                if send_report_via_telegram(report_path, caption, args.env):
-                    log("[telegram] report delivered to the PM bot")
+                if notify_send(
+                        caption + f"\n\U0001F4C4 {display_path(report_path)}",
+                        title="portfolio wanted"):
+                    log("[notify] report summary delivered to the harness ops bot")
     else:
         log(f"[dry-run] would fetch details for {len(todo)} new postings; "
             f"no files written.")
