@@ -3,15 +3,13 @@
 set -e
 
 ROOT="$(git rev-parse --show-toplevel)"
-if [ -f "$ROOT/.venv/bin/python" ]; then
-  PYTHON="$ROOT/.venv/bin/python"
+if [ -f "$ROOT/.venv/bin/python" ] && "$ROOT/.venv/bin/python" -c "import yaml" 2>/dev/null; then
+  "$ROOT/.venv/bin/python" "$ROOT/scripts/generate_site.py" >/dev/null
 elif command -v uv >/dev/null 2>&1; then
-  PYTHON="uv run python3"
+  uv run --with pyyaml python3 "$ROOT/scripts/generate_site.py" >/dev/null
 else
-  PYTHON="python3"
+  python3 "$ROOT/scripts/generate_site.py" >/dev/null
 fi
-
-$PYTHON "$ROOT/scripts/generate_site.py" >/dev/null
 
 if ! git diff --quiet -- site/index.html || ! git diff --cached --quiet -- site/index.html; then
   git add site/index.html

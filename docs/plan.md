@@ -2,7 +2,7 @@
 
 ## 1. Goal
 
-Migrate `portfolio` (server dir `포트폴리오`, GitHub repo `portfolio`) onto the HIH Project Standard (`~/Workspace/agents/project-standard.md`) in accordance with plan card `t19-consolidate-projects.md`. Establish standard documentation, hermetic tests on macOS, an operational inventory (`ops/ops.yaml`), and an integration plan for the HIH harness while keeping existing `server-pc` cron jobs completely undisturbed.
+Migrate `portfolio` (server dir `포트폴리오`, GitHub repo `portfolio`) onto the HIH Project Standard (`~/Workspace/agents/project-standard.md`) in accordance with plan card `t19-consolidate-projects.md`, continued under plan card `t37-standard-alignment.md`. Establish standard documentation, hermetic tests on macOS, an operational inventory (`ops/ops.yaml`), and an integration plan for the HIH harness while keeping existing `server-pc` cron jobs completely undisturbed.
 
 ---
 
@@ -10,10 +10,10 @@ Migrate `portfolio` (server dir `포트폴리오`, GitHub repo `portfolio`) onto
 
 ### In Scope
 - Comprehensive code review of server snapshot (`docs/review-2026-09-28.md`).
-- Standard repository layout: `README.md` (`Path | What` table), `docs/plan.md`, `docs/decisions.md`, `docs/runbook.md`, `features/` specs, `ops/ops.yaml`, `site/index.html` generator + pre-commit hook.
+- Standard repository layout: `README.md` (`Path | What` table), `docs/plan.md`, `docs/decisions.md`, `docs/runbook.md`, `features/` specs with a `features/README.md` index, `ops/ops.yaml`, `site/index.html` generator + pre-commit hook, and `records/` (generated runs, git-ignored except `records/README.md`).
 - Harness integration design: `hih-secret` credential resolution, `hih notify` operational alerts, and LaunchAgent plist drafts under `launchd/`.
 - Code changes strictly needed for macOS portability (`PORTFOLIO_PM_ENV`, `HIH_SCHEDULE_CLI`, hermetic test conftest) while preserving server defaults.
-- Hermetic test verification of 90 unit tests on macOS under Python 3.12 (`uv`) and Astro static site build (`npm run build`).
+- Hermetic test verification on macOS under Python 3.12 (`uv`): 106 passed, 16 subtests passed, one pre-existing date-sensitive failure (`test_live_inbox_loads_and_renders`); Astro static site build (`npm run build`).
 - Resolution of macOS case-collision between `HANDOFF.md` and historical `handoff.md` (renamed to `docs/history/handoff-2026-05-19.md`).
 - Untracking legacy coordination, multi-agent debate, and TASK-style files from git while retaining contents on disk.
 
@@ -32,7 +32,7 @@ Phase 1: Project Standardization (Current)
    ├── Resolve macOS case collision (HANDOFF.md vs handoff.md)
    ├── Code review & severity assessment (docs/review-2026-09-28.md)
    ├── Standard documentation & features specs
-   ├── Portable path resolution & hermetic test suite (90 passed)
+   ├── Portable path resolution & hermetic test suite (106 passed, 1 pre-existing failure)
    ├── Astro static site build verification (10 static routes)
    ├── Untrack legacy task/coordination files (.gitignore)
    └── ops/ops.yaml & site/index.html generator

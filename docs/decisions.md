@@ -2,6 +2,12 @@
 
 This log records numbered architectural decisions (D1, D2, ...) for `portfolio` (포트폴리오), their dates, and rationales.
 
+> Merge note (2026-09-30, t37 standard alignment): the legacy root `DECISIONS.md`
+> (a `Date | Decision | Source | Context | Alternatives Rejected | Owner` table
+> managed by the multi-agent workflow) was merged into this file. It carried no
+> numbered decisions, so nothing was renumbered; the D-series below continues
+> unchanged from D1.
+
 ---
 
 ### D1: Job Collector Data Location & Staging Strategy
@@ -94,3 +100,11 @@ This log records numbered architectural decisions (D1, D2, ...) for `portfolio` 
 - **Context**: The calendar script ran the server copies of the hih-schedule script under `sys.executable`. On macOS the calendar skill needs its own Google-API venv, and the old `/home/window11/...` path no longer exists.
 - **Decision**: Default `HIH_SCHEDULE_CLI` to `~/bin/hih-schedule` and execute that CLI directly (its shebang picks its own interpreter) instead of prefixing `sys.executable`. The env override is kept.
 - **Consequence**: No hardcoded server path remains; the calendar still writes only through `hih-schedule`.
+
+---
+
+### D12: Root legacy docs fold into the standard layout; `records/` reserved for runs
+- **Date**: 2026-09-30
+- **Context**: The repo still carried legacy multi-agent root files — an empty `DECISIONS.md` table, `HANDOFF.md`, and `TEST_LOG.md` — while `features/` had no index and `records/` was ignored only piecemeal (`records/runs/`, `records/packs/`, `records/health/`). Plan card `t37` asks for the standard layout and legacy handling.
+- **Decision**: Merge the root `DECISIONS.md` into `docs/decisions.md` (it held no decisions, so numbering is unchanged); `git mv` `HANDOFF.md` to `docs/history/handoff.md` and `TEST_LOG.md` to `docs/history/test-log.md` unchanged; add `features/README.md` as the spec index; ignore `records/` entirely except `records/README.md` (`records/*` + `!records/README.md`), which also covers any future `records/coordination/`; make `scripts/generate_site.py` skip `features/README.md`; and repoint the `AGENTS.md` startup-read paths.
+- **Consequence**: One numbered decision log and one historical-docs location; `records/` holds only generated worker runs and packs. No runtime, server, or scheduled-job behavior changes.

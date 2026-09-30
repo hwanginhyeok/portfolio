@@ -10,14 +10,15 @@ Astro-powered physical AI engineering portfolio website + autonomous multi-chann
 |---|---|
 | `README.md` | Purpose, layout, operational nodes, and execution guides |
 | `docs/plan.md` | Project goals, scope, and migration phases |
-| `docs/decisions.md` | Numbered architectural decisions (D1..D8) |
+| `docs/decisions.md` | Numbered architectural decisions (D1..D11) |
 | `docs/runbook.md` | Operations, health diagnostics, and failure recovery runbooks |
 | `docs/review-2026-09-28.md` | Comprehensive codebase review & severity audit |
 | `docs/harness-integration.md` | Harness migration design (Keychain secrets, `hih notify`, LaunchAgent drafts) |
 | `docs/cutover.md` | macOS cutover: job table, state files to rsync, rollback, `mac.yaml` block |
-| `docs/history/` | Historical documents (`handoff-2026-05-19.md`) |
+| `docs/history/` | Archived legacy docs: `handoff.md`, `test-log.md`, `handoff-2026-05-19.md` |
 | `docs/jd/` | Company application dossiers, materials, and staging inboxes |
 | `features/_template.md` | Standard feature specification template |
+| `features/README.md` | Feature spec index (one row per `features/*.md`) |
 | `features/astro-portfolio.md` | Astro static portfolio web application |
 | `features/jasoseol-collector.md` | Jasoseol recruitment calendar crawler & filter engine |
 | `features/jasoseol-report.md` | Daily Jasoseol actionable report & Telegram dispatcher |
@@ -31,6 +32,7 @@ Astro-powered physical AI engineering portfolio website + autonomous multi-chann
 | `site/index.html` | Generated static operational dashboard |
 | `scripts/generate_site.py` | Script generating `site/index.html` from `features/` and `ops/` |
 | `hooks/pre-commit` | Pre-commit hook rebuilding `site/index.html` on change |
+| `records/` | Generated worker runs and packs (git-ignored except `records/README.md`) |
 | `launchd/` | Draft LaunchAgent plists for macOS scheduling (inactive) |
 | `src/` | Astro website source code (pages, components, layouts, styles) |
 | `scripts/` | Recruitment collectors, reporting utilities, and data repair tools |

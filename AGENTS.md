@@ -9,10 +9,10 @@ Do not rely on private chat memory. Read the shared files before making decision
 
 For handoff, review, debate, or implementation work, read:
 
-- `HANDOFF.md`
-- `DECISIONS.md`
+- `docs/history/handoff.md`
+- `docs/decisions.md`
 - `REVIEW.md`
-- `TEST_LOG.md`
+- `docs/history/test-log.md`
 - `LLM_BUDGET.md`
 - `LLM_PROVIDERS.json`
 - `WORK_LOG.md`
@@ -20,16 +20,16 @@ For handoff, review, debate, or implementation work, read:
 
 ## Source of Truth
 
-- Current task state: `HANDOFF.md`
-- Durable decisions: `DECISIONS.md`
+- Current task state: `docs/history/handoff.md`
+- Durable decisions: `docs/decisions.md`
 - Review findings and gates: `REVIEW.md`
-- Verification commands/results: `TEST_LOG.md`
+- Verification commands/results: `docs/history/test-log.md`
 - Provider routing and budget policy: `LLM_PROVIDERS.json`, `LLM_BUDGET.md`
 - Work history and rationale: `WORK_LOG.md`, `WORK_ITEMS/{work_id}.md`
 - Raw model outputs: `debate/runs/{run_id}/`
 
 Raw provider output is evidence, not final truth. Promote accepted conclusions into
-`DECISIONS.md`, `REVIEW.md`, or `HANDOFF.md`.
+`docs/decisions.md`, `REVIEW.md`, or `docs/history/handoff.md`.
 
 Use `WORK_LOG.md` to connect why work started, which discussion/decision led to
 it, how it was executed, and how it was verified.
@@ -45,7 +45,7 @@ risky/reversible consequences. Work ID format: `{PROJECT}-{YYYYMMDD}-{NN}`.
 - Use read-only provider runs for review.
 - Use `--level quick` for cheap sanity checks, `--level normal` for normal work,
   and `--level hard` for risky changes or architecture disputes.
-- Record tests and known failures in `TEST_LOG.md`.
+- Record tests and known failures in `docs/history/test-log.md`.
 
 ## Provider Fan-out
 

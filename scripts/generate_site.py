@@ -29,7 +29,7 @@ FEATURE_LABELS = {
 def _feature_rows() -> str:
     rows = []
     for path in sorted(FEATURES_DIR.glob("*.md")):
-        if path.name == "_template.md":
+        if path.name in {"_template.md", "README.md"}:
             continue
         label = FEATURE_LABELS.get(path.stem, path.stem)
         title = html.escape(label)
@@ -109,7 +109,7 @@ def render() -> str:
         for item in data.get("health_checks", [])
     )
 
-    feature_count = len([p for p in FEATURES_DIR.glob("*.md") if p.name != "_template.md"])
+    feature_count = len([p for p in FEATURES_DIR.glob("*.md") if p.name not in {"_template.md", "README.md"}])
 
     return f'''<!doctype html>
 <html lang="ko">
