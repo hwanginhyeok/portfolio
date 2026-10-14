@@ -15,7 +15,7 @@ Covers:
 from __future__ import annotations
 
 import json
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 import pytest
@@ -403,25 +403,47 @@ def test_load_postings_filters_by_threshold(tmp_path):
 
 # ── 8. Live inbox and CLI integration ───────────────────────────────────────
 
-def test_live_inbox_loads_and_renders():
-    postings = jr.load_postings(jr.DEFAULT_INBOX_DIR)
-    assert len(postings) >= 5, "Expected at least 5 actionable postings collected in Part 1"
+def _write_inbox_md(inbox: Path, **overrides) -> None:
+    posting = make_posting(**overrides)
+    lines = ["---"] + [f"{k}: {json.dumps(v, ensure_ascii=False)}" for k, v in posting.items()] + ["---", "", "body"]
+    (inbox / f"{posting['id']}.md").write_text("\n".join(lines), encoding="utf-8")
+
+
+def test_fixture_inbox_loads_and_renders(tmp_path):
+    """Pinned-today replacement for the old live-inbox test (pf-3): the real
+    inbox shrinks as deadlines pass, so a fixed inbox is the stable contract."""
+    today = date(2026, 9, 20)
+    for n in range(1, 6):
+        _write_inbox_md(tmp_path, id=str(n), company=f"회사{n}",
+                        end_time=f"2026-09-{24 + n}T23:59:00.000+09:00")
+    _write_inbox_md(tmp_path, id="9", company="현대모비스", end_time="2026-09-30T23:59:00.000+09:00")
+    _write_inbox_md(tmp_path, id="10", company="한국법무보호복지공단", score=10, actionable=False,
+                    verdict="rejected")
+    _write_inbox_md(tmp_path, id="11", company="마감회사", end_time="2026-09-01T23:59:00.000+09:00")
+
+    postings = jr.load_postings(tmp_path, today=today)
+    assert len(postings) == 6
     for p in postings:
         assert p["company"], f"Missing company in {p['id']}"
         assert p["title"], f"Missing title in {p['id']}"
         assert p["score"] >= 28, f"Posting {p['id']} score {p['score']} below threshold"
 
-    html_out = jr.render_html(postings, today=date(2026, 9, 20))
+    html_out = jr.render_html(postings, today=today)
     assert "<!doctype html>" in html_out
     assert "마감 캘린더" in html_out
     assert "추천 공고 목록" in html_out
     assert "현대모비스" in html_out
     assert "한국법무보호복지공단" not in html_out
+    assert "마감회사" not in html_out
 
 
 def test_cli_html_and_dry_run(tmp_path):
+    inbox = tmp_path / "inbox"
+    inbox.mkdir()
+    deadline = (datetime.now(jr.KST) + timedelta(days=10)).strftime("%Y-%m-%dT23:59:00.000+09:00")
+    _write_inbox_md(inbox, id="1", end_time=deadline)
     out_file = tmp_path / "test_report.html"
-    ret = jr.main(["--output", str(out_file), "--dry-run"])
+    ret = jr.main(["--inbox-dir", str(inbox), "--output", str(out_file), "--dry-run"])
     assert ret == 0
     assert out_file.exists()
     content = out_file.read_text(encoding="utf-8")

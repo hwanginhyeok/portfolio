@@ -108,3 +108,10 @@ This log records numbered architectural decisions (D1, D2, ...) for `portfolio` 
 - **Context**: The repo still carried legacy multi-agent root files — an empty `DECISIONS.md` table, `HANDOFF.md`, and `TEST_LOG.md` — while `features/` had no index and `records/` was ignored only piecemeal (`records/runs/`, `records/packs/`, `records/health/`). Plan card `t37` asks for the standard layout and legacy handling.
 - **Decision**: Merge the root `DECISIONS.md` into `docs/decisions.md` (it held no decisions, so numbering is unchanged); `git mv` `HANDOFF.md` to `docs/history/handoff.md` and `TEST_LOG.md` to `docs/history/test-log.md` unchanged; add `features/README.md` as the spec index; ignore `records/` entirely except `records/README.md` (`records/*` + `!records/README.md`), which also covers any future `records/coordination/`; make `scripts/generate_site.py` skip `features/README.md`; and repoint the `AGENTS.md` startup-read paths.
 - **Consequence**: One numbered decision log and one historical-docs location; `records/` holds only generated worker runs and packs. No runtime, server, or scheduled-job behavior changes.
+
+### D13: Apply flow is kit + form assist; the operator presses submit
+- **Date**: 2026-10-14
+- **Context**: Collection and alerts worked, but each application was still hand-written and hand-entered (t265).
+- **Decision**: Add `scripts/apply_flow.py` (shortlist with domain-gated ranking, kit from verbatim profile lines, ledger tracking) and `scripts/apply_browser.py` (fills known fields in a new tab, stops before submit). Unknown facts stay `[TODO]`. Collector output is committed daily by `scripts/backup_collected.py` (pf-2); `global_collect.py` alerts once after 3 consecutive board failures (pf-4); the live-inbox tests use fixtures (pf-3).
+- **Consequence**: No account is created and nothing is submitted by an agent; a missing site login is reported as blocked. Wanted/Workday/Jasoseol need a stored login before step 3 can run live.
+

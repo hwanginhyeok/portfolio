@@ -2,7 +2,7 @@
 
 ## What
 
-Runs the six portfolio jobs on the hih harness instead of the server crontab:
+Runs the six portfolio jobs (plus a seventh backup job, `features/collected-backup.md`) on the hih harness instead of the server crontab:
 six macOS LaunchAgents whose times and arguments match the server cron exactly,
 notifications through the harness ops bot, and secrets through the Keychain.
 Daily reports are written locally and announced with one ops message.

@@ -24,7 +24,7 @@ Generates a responsive HTML digest of actionable, non-expired Jasoseol job posti
 
 ## Tests
 
-- `.venv/bin/python -m pytest tests/test_jasoseol_report.py` (scoring, HTML rendering, caption formatting, deadline filtering, and ops notification)
+- `.venv/bin/python -m pytest tests/test_jasoseol_report.py` (pinned-date fixture inbox instead of the live inbox (pf-3), scoring, HTML rendering, caption formatting, deadline filtering, and ops notification)
 
 ## Status
 
