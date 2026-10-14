@@ -8,7 +8,7 @@
 
 - 현재 `hih check layout .` 결과는 **100건** (번호 없음 73 + 깊이 초과 27). 검사기는 깊이 4 폴더까지만 보고하며, 실제로는 깊이 5 폴더 5개가 더 있다.
 - 제안: 루트 폴더를 `01_content`, `02_recruiting`, `03_scripts`, `04_config`, `05_tests`, `06_presentations`, `07_launchd`, `90_docs`, `91_features`, `92_site`, `93_hooks` 로 번호화한다. 도구가 이름을 강제하는 `src`, `public`, `ops`, `records`, 점(.) 폴더는 번호 없이 두고 README에 사유를 적는다.
-- `docs/jd`(3,068개 파일, 채용 수집 데이터)와 `scripts`/`launchd`/`config`는 **돌고 있는 잡**(plist 6개, server-pc cron 6개, state 파일 rsync)과 얽혀 있어 가장 위험하다. 서버→Mac 전환(cutover) 감시가 끝난 뒤에 옮기는 것을 권장한다.
+- `docs/jd`(3,068개 파일, 채용 수집 데이터)와 `scripts`/`launchd`/`config`는 **돌고 있는 잡**(LaunchAgent plist 7개, 2026-09-29 Mac 전환 완료)과 얽혀 있어 가장 위험하다. 서버→Mac 전환(cutover) 감시가 끝난 뒤에 옮기는 것을 권장한다.
 - 슬라이스는 **7개**. 잡과 무관한 것(1~4)을 먼저, 잡을 건드리는 것(5~7)을 나중에. 각 슬라이스는 소비처 재지정과 같은 커밋.
 - 운영자 결정 사항 4개 (아래 §7). 모두 권장 답 포함.
 
@@ -34,7 +34,7 @@ Tracked files: 3,370. Sizes are on-disk (`du -sk`) and include untracked/ignored
 | `tests/` | 10 | 140 KB | pytest + `fixtures/jasoseol` (3) |
 | `features/` | 11 | 44 KB | feature docs + `_template.md` + README index |
 | `config/` | 3 | 24 KB | collector target JSON |
-| `launchd/` | 6 | 24 KB | prepared plists |
+| `launchd/` | 7 | 28 KB | loaded plists |
 | `diagrams/` `cases/` `hooks/` `ops/` `site/` `records/` | 3 / 2 / 1 / 1 / 1 / 1 | <30 KB each | |
 | `.claude/` `.github/` `.hih/` | 4 / 2 / (untracked) | small | dot-dirs |
 | `참조자료/` | 2 | small | Korean-named reference notes |

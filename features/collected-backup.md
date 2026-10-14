@@ -8,7 +8,7 @@ Commits and pushes the daily collector output (`docs/jd/_inbox/**`, the ledger a
 
 - `python3 scripts/backup_collected.py` — dry run, lists what would be committed
 - `python3 scripts/backup_collected.py --apply` — `git add -A` + commit + `hih git push` (gitleaks, non-force, both remotes)
-- `launchd/hih.portfolio.backup-collected.plist` — 12:30 daily, after the 11:50 global collect (prepared, not loaded)
+- `launchd/hih.portfolio.backup-collected.plist` — 12:30 daily, after the 11:50 global collect (loaded)
 
 ## Contract
 
@@ -28,4 +28,4 @@ Commits and pushes the daily collector output (`docs/jd/_inbox/**`, the ledger a
 
 ## Status
 
-built 2026-10-14; plist prepared, not loaded. Review verdict: keep (once per day is enough, runs after the last collector, failure reaches the operator through `hih notify`). The PM runs it once against the live checkout and loads the LaunchAgent.
+built 2026-10-14; plist installed and loaded (never fired as of 2026-10-15 06:12, first run due 12:30; infra `mac.yaml` does not list it yet). Review verdict: keep (once per day is enough, runs after the last collector, failure reaches the operator through `hih notify`).

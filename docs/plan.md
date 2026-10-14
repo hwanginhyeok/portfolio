@@ -18,7 +18,7 @@ Migrate `portfolio` (server dir `포트폴리오`, GitHub repo `portfolio`) onto
 - Untracking legacy coordination, multi-agent debate, and TASK-style files from git while retaining contents on disk.
 
 ### Out of Scope
-- Altering, stopping, or restarting the six running cron jobs on `server-pc`.
+- Altering the server-pc crontab from this repo (the six jobs have moved to macOS LaunchAgents).
 - Pushing commits to remote repositories.
 - Live external crawling or live Telegram report dispatches during migration.
 - Activating/bootstrapping LaunchAgents into macOS `launchctl`.
@@ -38,14 +38,14 @@ Phase 1: Project Standardization (Current)
    └── ops/ops.yaml & site/index.html generator
            │
            ▼
-Phase 2: Harness Integration (Specification Ready)
+Phase 2: Harness Integration (done)
    ├── Connect credential resolution to hih-secret (macOS Keychain)
    ├── Route operational alerts and human reports through hih notify
    ├── Migrate Google Calendar sync to direct local REST OAuth (hih schedule)
-   └── Prepare LaunchAgents in launchd/ for local execution
+   └── LaunchAgents in launchd/ for local execution
            │
            ▼
-Phase 3: Operational Cutover & Server PC Decommissioning
+Phase 3: Operational Cutover & Server PC Decommissioning (cutover done 2026-09-29; server copy cleanup not verified)
    ├── Stop server-pc crontab lines by name (6 cron entries)
    ├── Bootstrap LaunchAgents on macOS
    ├── Verify one week of stable local collector runs & Telegram reports
@@ -59,7 +59,7 @@ Phase 3: Operational Cutover & Server PC Decommissioning
 
 | Step | Gate Condition | Verification Tool |
 |---|---|---|
-| Python Hermetic Tests | 90 unit tests pass with zero network and isolated temp directories | `uv run pytest tests/` |
+| Python Hermetic Tests | 121 unit tests pass with zero network and isolated temp directories | `uv run pytest tests/` |
 | Web Static Build | 10 static routes compile cleanly into `dist/` with sitemap | `npm run build` |
 | Code Portability | `scripts/` modules run without hardcoded server paths | Hermetic test suite & script checks |
 | Static Site Generation | `site/index.html` builds cleanly from `ops/ops.yaml` and `features/*.md` | `python3 scripts/generate_site.py` |

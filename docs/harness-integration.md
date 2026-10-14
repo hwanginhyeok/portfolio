@@ -33,7 +33,7 @@ where the report scripts talked to Telegram directly.
 
 ## 3. Schedules (`launchd/`)
 
-Six prepared LaunchAgents, one per server cron line, with absolute paths
+Seven loaded LaunchAgents (six moved from the server cron lines, plus the 12:30 backup), with absolute paths
 (venv interpreter, script, working directory, log), the exact server times and
 arguments, and `LimitLoadToSessionType = Aqua`:
 
@@ -45,14 +45,14 @@ arguments, and `LimitLoadToSessionType = Aqua`:
 | `hih.portfolio.wanted-collect` | 11:40 | `scripts/wanted_collect.py` |
 | `hih.portfolio.applications-report` | 11:47 | `scripts/applications_report.py --html --telegram` |
 | `hih.portfolio.global-collect` | 11:50 | `scripts/global_collect.py --html --telegram` |
+| `hih.portfolio.backup-collected` | 12:30 | `scripts/backup_collected.py --apply` |
 
-They are **not loaded** until the per-job cutover; see `docs/cutover.md` for the
-job table, state files to rsync, rollback, and the `infra/data/nodes/mac.yaml`
-block.
+All seven are loaded (cutover done 2026-09-29, t34); see `docs/cutover.md` for
+the historical job table and `docs/runbook.md` section 5 for reload/rollback.
 
 ## 4. Portability
 
-- No `/home/window11` or old `project-manager` path remains in the six scripts
+- No `/home/window11` or old `project-manager` path remains in the collector scripts
   or anything they import.
 - `jasoseol_calendar.py` defaults `HIH_SCHEDULE_CLI` to `~/bin/hih-schedule` and
   executes that CLI directly (its own Google-API venv); the env override is
@@ -64,7 +64,7 @@ block.
 | Legacy component | Replacement | Switch |
 |---|---|---|
 | Per-project Telegram bot + plaintext env file | `hih notify` (ops bot) via `scripts/notify.py` | t34 step 1 (2026-09-29) |
-| Server cron schedule | `launchd/hih.portfolio.*.plist` (per-job cutover) | t34 step 2 |
+| Server cron schedule | `launchd/hih.portfolio.*.plist` | done 2026-09-29 (t34) |
 | `hih-schedule` under `sys.executable` | `~/bin/hih-schedule` invoked directly | t34 step 1 |
 | In-repo work tracking | plan cards in `project-manager/plans/` | done (Phase 1) |
 | runtime_v2 (preflight, context envelopes) | retired; no replacement gate | done |

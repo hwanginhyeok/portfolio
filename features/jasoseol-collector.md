@@ -27,4 +27,4 @@ Automated crawler that queries Jasoseol (자소설닷컴) calendar and recruit A
 
 ## Status
 
-live on server-pc via cron (`30 8 * * *`); prepared macOS LaunchAgent (absolute paths, not loaded); server cron still runs until the per-job cutover (`docs/cutover.md`).
+live on macOS: LaunchAgent `hih.portfolio.jasoseol-collect` (08:30 Asia/Seoul, loaded; moved from the server cron 2026-09-29, t34). See `docs/cutover.md`.

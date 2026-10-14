@@ -2,13 +2,11 @@
 
 ## 1. Operating Model & Node Architecture
 
-- **Current Operating Node**: `server-pc` (Linux / WSL).
-  - Runs six scheduled cron jobs for Jasoseol, Wanted, Global ATS, and Applications reporting.
-  - Server jobs must **not** be interrupted, killed, or modified during local development.
-- **Migration Node**: macOS.
-  - Houses the canonical repository worktree (`~/Workspace/projects/portfolio`).
-  - Runs hermetic unit tests (`.venv/bin/python -m pytest tests/`) and Astro static site builds (`npm run build`).
-  - Houses prepared LaunchAgents in `launchd/` (absolute paths, exact server times); cutover is per job (`docs/cutover.md`).
+- **Operating Node**: macOS (this Mac), canonical checkout `~/Workspace/projects/portfolio`.
+  - Seven LaunchAgents (`launchd/hih.portfolio.*.plist`, all loaded, Aqua session) run the Jasoseol, Wanted, Global ATS and Applications jobs plus the daily collected-data backup; times in `README.md`.
+  - The six collector jobs moved here from the `server-pc` crontab on 2026-09-29 (t34, `docs/cutover.md`).
+  - Hermetic tests (`.venv/bin/python -m pytest tests/`) and Astro builds (`npm run build`) run in the same checkout.
+- **Inspect a job**: `launchctl print gui/$(id -u)/hih.portfolio.<job>` (state, runs, last exit code) and `tail ~/Library/Logs/hih/portfolio_<job>.log`.
 
 ---
 
@@ -77,10 +75,10 @@ npm run preview
 
 | Check | Frequency | Command | Expected Outcome |
 |---|---|---|---|
-| Python Test Suite | Per commit / PR | `.venv/bin/python -m pytest tests/` | All pass except the date-sensitive live-inbox assertion (needs >=5 future deadlines) |
+| Python Test Suite | Per commit / PR | `.venv/bin/python -m pytest tests/` | All pass (121 passed on 2026-10-15) |
 | Astro Web Build | Per content update | `npm run build` | 10 static routes generated in `dist/` |
-| Wanted Ledger Health | Weekly | `python3 scripts/wanted_state_repair.py` | "Ledger is clean, 0 corrupt entries" |
-| Overview Site Sync | Pre-commit | `python3 scripts/generate_site.py` | `site/index.html` updated |
+| Wanted Ledger Health | Weekly | `.venv/bin/python scripts/wanted_state_repair.py` | "Ledger is clean, 0 corrupt entries" |
+| Overview Site Sync | Pre-commit | `.venv/bin/python scripts/generate_site.py` | `site/index.html` updated |
 
 ---
 
@@ -115,7 +113,7 @@ npm run preview
 - **Recovery**:
   1. Run the dedicated repair utility:
      ```bash
-     python3 scripts/wanted_state_repair.py
+     .venv/bin/python scripts/wanted_state_repair.py
      ```
   2. Verify ledger integrity:
      ```bash
@@ -133,7 +131,7 @@ npm run preview
   2. Refresh the OAuth token via standard HIH calendar workflow.
   3. Verify synchronization plan with dry-run:
      ```bash
-     python3 scripts/jasoseol_calendar.py --dry-run
+     .venv/bin/python scripts/jasoseol_calendar.py --dry-run
      ```
 
 ### 4.5 Failure: Astro Build Peer Dependency Warning
@@ -147,29 +145,19 @@ npm run preview
 
 ---
 
-## 5. Cutover Procedure (Server PC to macOS)
+## 5. Installing, reloading and rolling back an agent
 
-Per job, in one step so a side-effecting job never runs twice
-(project-standard "Cutover"; job table and state files in `docs/cutover.md`):
-
-1. On `server-pc`: leave the job's cron line running until the Mac agent is up.
-2. Rsync the job's state files from `server-pc` to the Mac (see `docs/cutover.md`).
-3. On macOS:
-   ```bash
-   cp launchd/<label>.plist $HOME/Library/LaunchAgents/
-   launchctl bootstrap gui/$(id -u) $HOME/Library/LaunchAgents/<label>.plist
-   ```
-4. On `server-pc`: comment out that job's cron line in the same step.
-5. Watch 2 days on the Mac alone, then delete the server copy.
-
-Rollback (any time in the 2-day watch):
+The server-to-Mac cutover is finished (2026-09-29); `docs/cutover.md` keeps the
+record. To (re)install one agent after editing its plist:
 
 ```bash
-launchctl bootout gui/$(id -u) $HOME/Library/LaunchAgents/<label>.plist
+cp launchd/<label>.plist $HOME/Library/LaunchAgents/
+launchctl bootout gui/$(id -u)/<label> 2>/dev/null   # ignore "not loaded"
+launchctl bootstrap gui/$(id -u) $HOME/Library/LaunchAgents/<label>.plist
 ```
 
-then uncomment the server cron line. State is rsynced, not moved, so nothing is
-lost.
+Run once on demand: `launchctl kickstart gui/$(id -u)/<label>`. Stop a job:
+`launchctl bootout gui/$(id -u)/<label>`.
 
 Ensure the project venv exists before the first load (README "Setup
 Environment"): `.venv/bin/python` is what every plist runs.

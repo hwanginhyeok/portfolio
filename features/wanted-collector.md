@@ -28,4 +28,4 @@ Crawls tech job postings from the Wanted API, assesses candidate profile fit wit
 
 ## Status
 
-live on server-pc via cron (`40 11 * * *`); prepared macOS LaunchAgent (absolute paths, not loaded); server cron still runs until the per-job cutover (`docs/cutover.md`).
+live on macOS: LaunchAgent `hih.portfolio.wanted-collect` (11:40 Asia/Seoul, loaded; moved from the server cron 2026-09-29, t34). See `docs/cutover.md`.

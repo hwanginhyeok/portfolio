@@ -1,13 +1,17 @@
-# Portfolio macOS cutover (t34 step 1)
+# Portfolio macOS cutover (t34) — done 2026-09-29
 
-**Status: prepared, not switched.** The six jobs still run on `server-pc`
-crontab. The macOS LaunchAgents under `launchd/` are ready and are **not
-loaded**; the PM switches one job at a time (project-standard "Cutover", plan
-`t34`).
+**Status: done.** The six jobs moved from the `server-pc` crontab to the macOS
+LaunchAgents under `launchd/` on 2026-09-29 (`infra/data/nodes/mac.yaml` lists
+them as `approved`, "moved from the server 2026-09-29 (t34)"). All are loaded;
+the installed plists in `~/Library/LaunchAgents/` are identical to the repo copies
+(checked 2026-10-15). A seventh agent, `hih.portfolio.backup-collected` (12:30), was
+added on 2026-10-14 and has no server twin (`features/collected-backup.md`).
+The tables below are the historical switch record; the server crontab itself
+was not re-checked in this sweep.
 
 ## Job table
 
-| Server cron (Asia/Seoul) | Server command | Mac LaunchAgent label | Mac argv | Log |
+| Cron time (Asia/Seoul, now the agent schedule) | Former server command | Mac LaunchAgent label | Mac argv | Log |
 |---|---|---|---|---|
 | `30 8 * * *` | `scripts/jasoseol_collect.py` | `hih.portfolio.jasoseol-collect` | `scripts/jasoseol_collect.py` | `~/Library/Logs/hih/portfolio_jasoseol_collect.log` |
 | `34 8 * * *` | `scripts/jasoseol_calendar.py --apply` | `hih.portfolio.jasoseol-calendar` | `scripts/jasoseol_calendar.py --apply` | `...portfolio_jasoseol_calendar.log` |
@@ -25,7 +29,7 @@ the spawn with `EX_CONFIG`):
 - logs: `/Users/hwang-inhyeok/Library/Logs/hih/portfolio_<job>.log`
 - session: `Aqua` (needed for `hih notify` to read the Keychain)
 
-## State files to rsync before each switch
+## State files rsynced before each switch (historical)
 
 | Job | State to rsync (server-pc -> mac) |
 |---|---|
@@ -36,7 +40,7 @@ the spawn with `EX_CONFIG`):
 | applications-report | `docs/jd/applications.json` |
 | global-collect | `docs/jd/_inbox/global/state.json` |
 
-## Switch and rollback (PM)
+## Switch and rollback (historical; current reload steps are in `docs/runbook.md` section 5)
 
 Switch one job in the same step on both sides so a side-effecting job never runs
 twice:
@@ -72,37 +76,11 @@ alone before deleting the server copy.
 - **Account emails** — none of the six scripts use an account email, so no
   `infra/data/identities.yaml` id was needed.
 
-## Proposed `infra/data/nodes/mac.yaml` block
+## `infra/data/nodes/mac.yaml`
 
-infra is outside this worktree; the PM pastes this under
-`desired.launch_agents` (the 6 entries are not applied by this step):
-
-```yaml
-    - label: hih.portfolio.jasoseol-collect
-      source: ~/Workspace/projects/portfolio/launchd/hih.portfolio.jasoseol-collect.plist
-      status: proposed
-      note: daily 08:30 Asia/Seoul Jasoseol crawl; prepared by t34, loads with the server cron line off (Aqua)
-    - label: hih.portfolio.jasoseol-calendar
-      source: ~/Workspace/projects/portfolio/launchd/hih.portfolio.jasoseol-calendar.plist
-      status: proposed
-      note: daily 08:34 Jasoseol deadline sync via hih-schedule; prepared by t34, loads with the server cron line off (Aqua)
-    - label: hih.portfolio.jasoseol-report
-      source: ~/Workspace/projects/portfolio/launchd/hih.portfolio.jasoseol-report.plist
-      status: proposed
-      note: daily 08:36 Jasoseol report + hih notify; prepared by t34, loads with the server cron line off (Aqua)
-    - label: hih.portfolio.wanted-collect
-      source: ~/Workspace/projects/portfolio/launchd/hih.portfolio.wanted-collect.plist
-      status: proposed
-      note: daily 11:40 Wanted crawl; prepared by t34, loads with the server cron line off (Aqua)
-    - label: hih.portfolio.applications-report
-      source: ~/Workspace/projects/portfolio/launchd/hih.portfolio.applications-report.plist
-      status: proposed
-      note: daily 11:47 applications report + hih notify; prepared by t34, loads with the server cron line off (Aqua)
-    - label: hih.portfolio.global-collect
-      source: ~/Workspace/projects/portfolio/launchd/hih.portfolio.global-collect.plist
-      status: proposed
-      note: daily 11:50 global ATS crawl + hih notify; prepared by t34, loads with the server cron line off (Aqua)
-```
+The six cutover agents are listed under `desired.launch_agents` with
+`status: approved`. `hih.portfolio.backup-collected` is installed and loaded but
+is not listed there yet (open finding, 2026-10-15).
 
 ## Skipped gates
 
