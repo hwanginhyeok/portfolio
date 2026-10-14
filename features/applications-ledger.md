@@ -14,6 +14,7 @@ Tracks Hwang Inhyeok's active application pipeline across all companies, maintai
 
 - Inputs: Ledger JSON `docs/jd/applications.json`
 - Outputs: Markdown table in `docs/jd/APPLICATIONS.md`, HTML report in `docs/jd/report/applications-YYYY-MM-DD.html`
+- `python3 scripts/apply_flow.py track KEY STATUS` — adds/moves a row and appends a dated `history` entry (applied, response, interview)
 - Gate: Valid status values (`미지원`, `준비중`, `준비완료`, `제출`, `서류탈락`, `면접`, `오퍼`, `보류`, `마감`)
 
 ## Data and state

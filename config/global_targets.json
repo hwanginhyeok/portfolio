@@ -33,7 +33,7 @@
     },
     {
       "name": "Wayve",
-      "ats": "greenhouse",
+      "ats": "ashby",
       "slug": "wayve",
       "category": "av"
     },
@@ -75,8 +75,8 @@
     },
     {
       "name": "Shield AI",
-      "ats": "ashby",
-      "slug": "shield-ai",
+      "ats": "lever",
+      "slug": "shieldai",
       "category": "defense"
     },
     {

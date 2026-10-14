@@ -13,5 +13,7 @@ One spec per shipped feature, following `features/_template.md`
 | `features/wanted-collector.md` | Wanted API crawler with owner-domain fit gate and dedup ledger |
 | `features/global-collector.md` | Global ATS (Workday/Greenhouse/Ashby/Lever) crawler and reports |
 | `features/applications-ledger.md` | Application pipeline ledger, Markdown view, and morning report |
+| `features/apply-flow.md` | Posting to application: ranked shortlist, tailored kit, form-fill assist, tracking |
+| `features/collected-backup.md` | Daily commit + push of collector output (backup) |
 | `features/presentation-builder.md` | Graduate portfolio PPTX deck generators |
 | `features/harness-scheduling.md` | Six macOS LaunchAgents, `hih notify` alerts, Keychain secrets |

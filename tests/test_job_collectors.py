@@ -743,3 +743,28 @@ class ShortlistTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class BoardFailureAlertTests(unittest.TestCase):
+    """pf-4: a board that keeps failing alerts once, a recovery resets it."""
+
+    def test_alerts_once_at_threshold_and_resets_on_success(self):
+        state = {"seen": {}}
+        names = ["Wayve", "Nuro"]
+        track = global_collect.track_board_failures
+        self.assertEqual(track(state, names, ["Wayve"], alert_after=3), [])
+        self.assertEqual(track(state, names, ["Wayve"], alert_after=3), [])
+        self.assertEqual(track(state, names, ["Wayve"], alert_after=3), ["Wayve"])
+        # still down: no repeat alert
+        self.assertEqual(track(state, names, ["Wayve"], alert_after=3), [])
+        self.assertEqual(state["board_failures"], {"Wayve": 4})
+        # recovery clears the streak, a new outage can alert again
+        self.assertEqual(track(state, names, [], alert_after=3), [])
+        self.assertEqual(state["board_failures"], {})
+
+    def test_config_targets_use_live_ats_slugs(self):
+        cfg = json.loads((Path(__file__).resolve().parent.parent / "config" / "global_targets.json")
+                         .read_text(encoding="utf-8"))
+        by_name = {c["name"]: (c["ats"], c["slug"]) for c in cfg["companies"]}
+        self.assertEqual(by_name["Wayve"], ("ashby", "wayve"))
+        self.assertEqual(by_name["Shield AI"], ("lever", "shieldai"))

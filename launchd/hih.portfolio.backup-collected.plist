@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  hih.portfolio.backup-collected — Daily commit + push of the collector output (pf-2), 12:30 Asia/Seoul, after the 11:50 global collect.
+
+  macOS LaunchAgent for the portfolio cutover. Absolute paths only: a home
+  shorthand anywhere in a plist makes launchd fail the spawn with EX_CONFIG.
+
+  NOT loaded by the preparation step. The PM loads it together with turning off
+  the matching server-pc cron line (project-standard "Cutover"), after rsyncing
+  the job's state files:
+
+      cp launchd/hih.portfolio.backup-collected.plist $HOME/Library/LaunchAgents/
+      launchctl bootstrap gui/$(id -u) $HOME/Library/LaunchAgents/hih.portfolio.backup-collected.plist
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>hih.portfolio.backup-collected</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/hwang-inhyeok/Workspace/projects/portfolio/.venv/bin/python</string>
+        <string>/Users/hwang-inhyeok/Workspace/projects/portfolio/scripts/backup_collected.py</string>
+        <string>--apply</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/hwang-inhyeok/Workspace/projects/portfolio</string>
+
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>12</integer>
+        <key>Minute</key>
+        <integer>30</integer>
+    </dict>
+
+    <key>LimitLoadToSessionType</key>
+    <string>Aqua</string>
+
+    <key>StandardOutPath</key>
+    <string>/Users/hwang-inhyeok/Library/Logs/hih/portfolio_backup_collected.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/hwang-inhyeok/Library/Logs/hih/portfolio_backup_collected.log</string>
+</dict>
+</plist>

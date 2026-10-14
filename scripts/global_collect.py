@@ -777,6 +777,29 @@ def render_markdown(posting: dict, matched_terms: list[str]) -> str:
     return "\n".join(lines)
 
 
+BOARD_FAILURE_ALERT_AFTER = 3  # consecutive failed runs before one ops alert
+
+
+def track_board_failures(state: dict, source_names: list[str], failed: list[str],
+                         alert_after: int = BOARD_FAILURE_ALERT_AFTER) -> list[str]:
+    """Count consecutive failed runs per source in state["board_failures"].
+
+    A success resets the count. A source is returned for alerting exactly once,
+    on the run where its streak reaches `alert_after`, so a board that stays
+    down does not page every day (pf-4)."""
+    streaks = state.setdefault("board_failures", {})
+    failed_set = set(failed)
+    alerts: list[str] = []
+    for name in source_names:
+        if name in failed_set:
+            streaks[name] = int(streaks.get(name, 0)) + 1
+            if streaks[name] == alert_after:
+                alerts.append(name)
+        else:
+            streaks.pop(name, None)
+    return alerts
+
+
 def load_state(path: Path) -> dict:
     if not path.exists():
         return {"seen": {}}
@@ -1247,6 +1270,14 @@ def main() -> int:
         log(f"[state] refreshed score/eligibility on {n_refreshed} known postings")
 
     # ---- phase 3: persist state ----------------------------------------------
+    source_names = [c["name"] for c in companies] + [
+        f"{c['name']} (workday:{c['tenant']})" for c in workday_companies]
+    board_alerts = track_board_failures(state, source_names, failed_companies)
+    if board_alerts:
+        notify_send(
+            f"채용 보드 {len(board_alerts)}곳이 {BOARD_FAILURE_ALERT_AFTER}회 연속 수집 실패: "
+            + ", ".join(board_alerts) + " (slug 이동 또는 차단 확인)",
+            title="portfolio global", level="warn")
     INBOX_DIR.mkdir(parents=True, exist_ok=True)
     try:
         atomic_write_json(state_path, state)

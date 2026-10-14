@@ -1,5 +1,13 @@
 # TEST_LOG
 
+## t265 apply flow + pf-2/3/4 (2026-10-14)
+
+| Command | Result | Notes |
+|---|---|---|
+| `.venv/bin/python -m pytest -q tests` | 121 passed, 16 subtests | Before: 106 passed, 1 failed (pf-3) with a second live-data dependence in `test_cli_html_and_dry_run`; both now use fixture inboxes. New: `tests/test_apply_flow.py` (12), board-failure tests (2). |
+| `scripts/apply_flow.py shortlist --check-open` on the live inbox | top row `wanted:383727` open | Wanted JSON `status` decides openness. |
+| `apply_browser.py` on a local fixture form | filled, not submitted | Wanted live form blocked at login (no stored login). |
+
 ## t34 macOS cutover prep (2026-09-29)
 Test venv created per README (`uv venv .venv --python 3.12` then
 `uv pip install --offline pytest requests pyyaml`; the repo has no pyproject).
@@ -57,4 +65,4 @@ Success IDs: `110132`, `350510`, `361079`, `361330`, `370445`,
 | Date | Command | Failure | Owner | Next Action |
 |---|---|---|---|---|
 | 2026-08-24 | N/A | Resolved before finalization: 16 pre-existing Wanted JD files were zero bytes. | Codex | Preserve the 16 hydrated files; no network re-run is authorized in this pass. |
-| 2026-09-29 | `.venv/bin/python -m pytest` | `test_live_inbox_loads_and_renders` expects >=5 actionable postings but only 4 remain (their deadlines passed at the current date). | PM | Date/data-sensitive live assertion, not introduced by t34; fix by adding a future-dated fixture or making the count relative to the clock. |
+| 2026-09-29 | `.venv/bin/python -m pytest` | (fixed 2026-10-14, t265 pf-3) `test_live_inbox_loads_and_renders` expects >=5 actionable postings but only 4 remain (their deadlines passed at the current date). | PM | Date/data-sensitive live assertion, not introduced by t34; fix by adding a future-dated fixture or making the count relative to the clock. |

@@ -11,7 +11,7 @@ notes:
   - 'Astro static site builds locally on macOS.'
 counts:
   cron: 6
-  mac_launchagents: 6
+  mac_launchagents: 7
   services: 0
   timers: 0
 mac_launchagents:
@@ -100,6 +100,12 @@ secrets:
   []
 services: []
 cron:
+  - label: hih.portfolio.backup-collected
+    plist: launchd/hih.portfolio.backup-collected.plist
+    command: scripts/backup_collected.py --apply
+    schedule: "30 12 * * *"
+    log: /Users/hwang-inhyeok/Library/Logs/hih/portfolio_backup_collected.log
+    status: prepared
   - id: cron:jasoseol-collect
     what: Pulls experienced job announcements from Jasoseol calendar API
     command: python3 scripts/jasoseol_collect.py

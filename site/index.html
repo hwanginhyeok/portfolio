@@ -37,12 +37,14 @@
   </section>
 
   <section>
-    <h2>주요 기능 (9)</h2>
+    <h2>주요 기능 (11)</h2>
     <table>
       <thead><tr><th>기능</th><th>문서 링크</th></tr></thead>
       <tbody>
         <tr><th scope="row"><a href="../features/applications-ledger.md">지원 파이프라인 원장 &amp; 현황 (applications-ledger)</a></th><td><code>features/applications-ledger.md</code></td></tr>
+<tr><th scope="row"><a href="../features/apply-flow.md">apply-flow</a></th><td><code>features/apply-flow.md</code></td></tr>
 <tr><th scope="row"><a href="../features/astro-portfolio.md">Astro 포트폴리오 웹사이트 (astro-portfolio)</a></th><td><code>features/astro-portfolio.md</code></td></tr>
+<tr><th scope="row"><a href="../features/collected-backup.md">collected-backup</a></th><td><code>features/collected-backup.md</code></td></tr>
 <tr><th scope="row"><a href="../features/global-collector.md">글로벌 ATS 기업공고 수집 (global-collector)</a></th><td><code>features/global-collector.md</code></td></tr>
 <tr><th scope="row"><a href="../features/harness-scheduling.md">macOS 예약 작업 &amp; 하네스 연동 (harness-scheduling)</a></th><td><code>features/harness-scheduling.md</code></td></tr>
 <tr><th scope="row"><a href="../features/jasoseol-calendar.md">캘린더 마감일정 동기화 (jasoseol-calendar)</a></th><td><code>features/jasoseol-calendar.md</code></td></tr>
@@ -65,11 +67,12 @@
   </section>
 
   <section>
-    <h2>예약 작업 (6)</h2>
+    <h2>예약 작업 (7)</h2>
     <table>
       <thead><tr><th>식별자</th><th>작업 내용</th><th>일정</th><th>노드 (상태)</th><th>필요 시크릿</th></tr></thead>
       <tbody>
-        <tr><td>cron:jasoseol-collect</td><td>Pulls experienced job announcements from Jasoseol calendar API</td><td><code>30 8 * * *</code></td><td>server-pc (active)</td><td>없음</td></tr>
+        <tr><td>cron:unknown</td><td>unknown</td><td><code>30 12 * * *</code></td><td>server-pc (prepared)</td><td>없음</td></tr>
+<tr><td>cron:jasoseol-collect</td><td>Pulls experienced job announcements from Jasoseol calendar API</td><td><code>30 8 * * *</code></td><td>server-pc (active)</td><td>없음</td></tr>
 <tr><td>cron:jasoseol-calendar</td><td>Synchronizes actionable Jasoseol application deadlines to Google Calendar</td><td><code>34 8 * * *</code></td><td>server-pc (active)</td><td>없음</td></tr>
 <tr><td>cron:jasoseol-report</td><td>Generates daily Jasoseol HTML report and notifies via the harness ops bot</td><td><code>36 8 * * *</code></td><td>server-pc (active)</td><td>없음</td></tr>
 <tr><td>cron:wanted-collect</td><td>Pulls matching Korean tech postings from Wanted API</td><td><code>40 11 * * *</code></td><td>server-pc (active)</td><td>없음</td></tr>
