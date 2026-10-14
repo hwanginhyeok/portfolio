@@ -1,0 +1,74 @@
+{
+  "id": 106678,
+  "end_time": "2026-10-25T23:50:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106678,
+    "name": "동부건설",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/001/830/webp/open-uri20220629-6865-1ki0xv8.webp?1684485618",
+    "employment_page_url": "https://dongbucon.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=268861",
+    "start_time": "2026-10-12T13:00:00.000+09:00",
+    "end_time": "2026-10-25T23:50:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body>\n<p><img style=\"border-color:rgb(0, 0, 0);height:auto;max-width:100%;\" src=\"https://dongbucon.recruiter.co.kr/upload/138733/image/202610/b78679a4-440a-4c5c-b736-e9ae6c797d80.png\" sqeid=\"QE_179152807173281123\" alt=\"동부건설 플랜트사업본부 경력사원(건축/기계/전기) 채용\"><br> </p>\n<p> </p>\n<p> </p>\n</body></html>\n",
+    "target": 0,
+    "created_at": "2026-10-13T09:36:34.000+09:00",
+    "recruit_type": 0,
+    "view_count": 1320,
+    "favorite_count": 4,
+    "homepage_count": 2,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 5721,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "플랜트사업본부 경력사원(건축/기계/전기) 채용",
+    "resume_expose": true,
+    "company_group": {
+      "id": 1830,
+      "name": "동부건설",
+      "business_size": "big_business",
+      "business_type": null,
+      "created_at": "2015-09-10T05:50:51.000+09:00",
+      "updated_at": "2026-09-15T17:37:58.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/001/830/original/open-uri20220629-6865-1ki0xv8?1684485618",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 432599,
+        "field": "경력-건축-플랜트 공사-전국",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 2,
+        "end_time": null,
+        "duty_group_ids": [],
+        "apply": null
+      },
+      {
+        "id": 432600,
+        "field": "경력-기계-플랜트 공사-전국",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [],
+        "apply": null
+      },
+      {
+        "id": 432601,
+        "field": "경력-전기-플랜트 공사-전국",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

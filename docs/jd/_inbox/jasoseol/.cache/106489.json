@@ -1,0 +1,107 @@
+{
+  "id": 106489,
+  "end_time": "2026-10-16T17:00:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106489,
+    "name": "한국소재융합연구원(KIMCO)",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/003/404/webp/jss_hashed_d117c15ed549f0776ba5_20260521T161136_%EC%8B%9C%EA%B7%B8%EB%8B%88%EC%B2%98_%EA%B5%AD%EC%98%81%EB%AC%B8%28%EC%83%81%ED%95%98%EC%A1%B0%ED%95%A9%29_4x.webp?1779347692",
+    "employment_page_url": "https://www.kimco.re.kr/recruit/recruit_person/list",
+    "start_time": "2026-10-01T17:00:00.000+09:00",
+    "end_time": "2026-10-16T17:00:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/371/264/webp/image.webp?1790661239\" alt=\"한국소재융합연구원(KIMCO) 2026년도 제8차 공개채용(정규직)\"></div></body></html>\n",
+    "target": 0,
+    "created_at": "2026-09-29T14:54:02.000+09:00",
+    "recruit_type": 0,
+    "view_count": 3724,
+    "favorite_count": 115,
+    "homepage_count": 83,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 9740,
+    "attached_file_url": "https://daoift3qrrnil.cloudfront.net/employment_companies/guidebooks/000/106/489/original/15393__%E1%84%87%E1%85%AE%E1%87%80%E1%84%8B%E1%85%B5%E1%86%B71__%E1%84%8C%E1%85%B5%E1%86%A8%E1%84%86%E1%85%AE%E1%84%80%E1%85%B5%E1%84%89%E1%85%AE%E1%86%AF%E1%84%89%E1%85%A5_KIMCO.zip",
+    "direct_apply": false,
+    "title": "2026년도 제8차 공개채용(정규직)",
+    "resume_expose": true,
+    "company_group": {
+      "id": 3404,
+      "name": "한국소재융합연구원(KIMCO)",
+      "business_size": null,
+      "business_type": "public_institution",
+      "created_at": "2016-02-15T18:15:46.000+09:00",
+      "updated_at": "2026-05-21T16:14:54.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/003/404/original/jss_hashed_d117c15ed549f0776ba5_20260521T161136_%EC%8B%9C%EA%B7%B8%EB%8B%88%EC%B2%98_%EA%B5%AD%EC%98%81%EB%AC%B8%28%EC%83%81%ED%95%98%EC%A1%B0%ED%95%A9%29_4x.png?1779347692",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 431695,
+        "field": "연구직 - 가공",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 7,
+        "end_time": null,
+        "duty_group_ids": [
+          229,
+          233,
+          234,
+          217,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 431696,
+        "field": "행정직 - 회계",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 5,
+        "end_time": null,
+        "duty_group_ids": [
+          106,
+          122,
+          256,
+          105
+        ],
+        "apply": null
+      },
+      {
+        "id": 431697,
+        "field": "연구직 - 시험분석",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 8,
+        "end_time": null,
+        "duty_group_ids": [
+          229,
+          189,
+          160,
+          183,
+          217
+        ],
+        "apply": null
+      },
+      {
+        "id": 431698,
+        "field": "기술직 - 전기·안전",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          204,
+          191,
+          186,
+          184
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": 106634,
+  "end_time": "2026-10-30T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106634,
+    "name": "교원그룹",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/002/165/webp/data.webp?1684485757",
+    "employment_page_url": "https://kyowon.ninehire.site/recruit",
+    "start_time": "2026-10-12T00:00:00.000+09:00",
+    "end_time": "2026-10-30T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div style=\"position:relative;\"><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/372/675/webp/%EC%8A%A4%EB%A7%88%ED%8A%B8%EA%B5%AC%EB%AA%AC_%EB%B0%B1%EC%97%94%EB%93%9C_%EA%B0%9C%EB%B0%9C_%EC%A7%81%EB%AC%B4_%EC%B1%84%EC%9A%A9%EA%B3%B5%EA%B3%A0_%28_10.30%29.webp?1791422742\" alt=\"교원그룹 스마트구몬 백엔드 개발 직무 모집 (경력)\"></div></body></html>\n",
+    "target": 4,
+    "created_at": "2026-10-08T11:45:07.000+09:00",
+    "recruit_type": 0,
+    "view_count": 605,
+    "favorite_count": 7,
+    "homepage_count": 7,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 6056,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "스마트구몬 백엔드 개발 직무 모집 (경력)",
+    "resume_expose": true,
+    "company_group": {
+      "id": 2165,
+      "name": "교원그룹",
+      "business_size": "middle_market",
+      "business_type": null,
+      "created_at": "2015-09-10T05:51:45.000+09:00",
+      "updated_at": "2023-05-19T17:42:37.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/002/165/original/data?1684485757",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 432353,
+        "field": "스마트구몬 백엔드 개발",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          176,
+          162
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

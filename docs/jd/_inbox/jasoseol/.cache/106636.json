@@ -1,0 +1,174 @@
+{
+  "id": 106636,
+  "end_time": "2026-10-21T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106636,
+    "name": "케이더블유이코리아",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/011/625/webp/KWE-logo_color.webp?1684488065",
+    "employment_page_url": "https://kwe.recruiter.co.kr/career/job",
+    "start_time": "2026-10-08T15:00:00.000+09:00",
+    "end_time": "2026-10-21T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/372/787/webp/KWE_2026.10_recruit_address_uniform_spacing.webp?1791442246\" alt=\"케이더블유이코리아 신입 및 경력사원 채용\"></div></body></html>\n",
+    "target": 0,
+    "created_at": "2026-10-08T15:05:57.000+09:00",
+    "recruit_type": 0,
+    "view_count": 2588,
+    "favorite_count": 103,
+    "homepage_count": 30,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 15424,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "신입 및 경력사원 채용",
+    "resume_expose": true,
+    "company_group": {
+      "id": 11625,
+      "name": "케이더블유이코리아",
+      "business_size": null,
+      "business_type": null,
+      "created_at": "2021-03-15T11:26:44.000+09:00",
+      "updated_at": "2023-05-19T18:21:05.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/011/625/original/KWE-logo_color.png?1684488065",
+      "alternate_names": [
+        "KWE"
+      ],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 432355,
+        "field": "수입영업부",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 7,
+        "end_time": null,
+        "duty_group_ids": [
+          197,
+          154,
+          155,
+          146
+        ],
+        "apply": null
+      },
+      {
+        "id": 432356,
+        "field": "항공수입업무부",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 2,
+        "end_time": null,
+        "duty_group_ids": [
+          155,
+          150,
+          151,
+          145,
+          146
+        ],
+        "apply": null
+      },
+      {
+        "id": 432357,
+        "field": "해운수출업무부(신입)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 5,
+        "end_time": null,
+        "duty_group_ids": [
+          154,
+          155,
+          197,
+          146
+        ],
+        "apply": null
+      },
+      {
+        "id": 432358,
+        "field": "해운수출업무부(경력)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          154,
+          155,
+          150,
+          145,
+          146
+        ],
+        "apply": null
+      },
+      {
+        "id": 432359,
+        "field": "품질관리부",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          189,
+          108,
+          203,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 432360,
+        "field": "총무부",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          128,
+          116,
+          191,
+          104,
+          107,
+          184
+        ],
+        "apply": null
+      },
+      {
+        "id": 432361,
+        "field": "디지털솔루션부(WMS 개발)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          176,
+          175,
+          170,
+          162
+        ],
+        "apply": null
+      },
+      {
+        "id": 432362,
+        "field": "디지털솔루션부(Infra)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          166,
+          164,
+          170
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

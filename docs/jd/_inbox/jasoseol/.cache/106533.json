@@ -1,0 +1,126 @@
+{
+  "id": 106533,
+  "end_time": "2026-10-11T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106533,
+    "name": "한성기업",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/001/691/webp/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_%282%29.webp?1684485564",
+    "employment_page_url": "https://job.incruit.com/jobdb_info/jobpost.asp?job=2609300003523&handle=3787F44F5A47F52FC9AF4F246FCDAC6EB357EED1BEF8D89464E5CEDCC38FF823",
+    "start_time": "2026-10-02T00:00:00.000+09:00",
+    "end_time": "2026-10-11T23:59:00.000+09:00",
+    "content": "<div style='position: relative;'><img src='https://daoift3qrrnil.cloudfront.net/content_images/images/000/371/578/webp/1._%EC%B1%84%EC%9A%A9_%EA%B3%B5%EA%B3%A0%EB%AC%B8.webp?1790758477' style='max-width: 100%;' /></div>",
+    "target": 4,
+    "created_at": "2026-10-01T09:17:53.000+09:00",
+    "recruit_type": 0,
+    "view_count": 3721,
+    "favorite_count": 180,
+    "homepage_count": 57,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 5582,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "부문별 신입 및 경력직 공개채용",
+    "resume_expose": true,
+    "company_group": {
+      "id": 1691,
+      "name": "한성기업",
+      "business_size": "middle_market",
+      "business_type": null,
+      "created_at": "2015-09-10T05:50:29.000+09:00",
+      "updated_at": "2023-05-19T17:39:25.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/001/691/original/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_%282%29.png?1684485564",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 431900,
+        "field": "구매",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          157,
+          147
+        ],
+        "apply": null
+      },
+      {
+        "id": 431901,
+        "field": "해외영업",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 21,
+        "end_time": null,
+        "duty_group_ids": [
+          154,
+          146
+        ],
+        "apply": null
+      },
+      {
+        "id": 431902,
+        "field": "SCM",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 23,
+        "end_time": null,
+        "duty_group_ids": [
+          150,
+          151,
+          145
+        ],
+        "apply": null
+      },
+      {
+        "id": 431903,
+        "field": "품질관리 (당진)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          189,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 431904,
+        "field": "생산1 (포항)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 2,
+        "end_time": null,
+        "duty_group_ids": [
+          187,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 431905,
+        "field": "생산2 (포항)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          187,
+          183
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": true
+  }
+}

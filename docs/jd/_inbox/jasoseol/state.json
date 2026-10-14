@@ -487,6 +487,369 @@
       "matched_sub_positions": [
         "리스크_리스크 검증"
       ]
+    },
+    "106466": {
+      "first_seen": "2026-09-30",
+      "company": "일화",
+      "title": "2026년 신입 및 경력 채용(7)",
+      "end_time": "2026-10-05T23:59:00.000+09:00",
+      "track": "core",
+      "score": 28,
+      "verdict": "actionable",
+      "actionable": true,
+      "threshold": 28,
+      "scoring_version": 2,
+      "sub_positions": [
+        "춘천제약공장-제약품질관리담당"
+      ],
+      "matched_sub_positions": [
+        "춘천제약공장-제약품질관리담당"
+      ]
+    },
+    "106491": {
+      "first_seen": "2026-09-30",
+      "company": "선진",
+      "title": "2026년 하반기 대규모 신입/경력 채용",
+      "end_time": "2026-10-13T23:59:00.000+09:00",
+      "track": "ai-native",
+      "score": 30,
+      "verdict": "actionable",
+      "actionable": true,
+      "threshold": 28,
+      "scoring_version": 2,
+      "sub_positions": [
+        "육가공 공무기획",
+        "내부감사",
+        "육가공 물류 자동화 관리",
+        "컴플라이언스",
+        "급수설비연구"
+      ],
+      "matched_sub_positions": [
+        "육가공 물류 자동화 관리"
+      ]
+    },
+    "105604": {
+      "first_seen": "2026-10-01",
+      "company": "LIG D&A",
+      "title": "AI/SW/사이버보안 신입/경력채용",
+      "end_time": "2026-11-29T23:59:00.000+09:00",
+      "track": "core",
+      "score": 30,
+      "verdict": "actionable",
+      "actionable": true,
+      "threshold": 28,
+      "scoring_version": 2,
+      "sub_positions": [
+        "SW(검증)",
+        "SW(응용)",
+        "SW(AI)",
+        "SW(공통기반)"
+      ],
+      "matched_sub_positions": [
+        "SW(검증)"
+      ]
+    },
+    "106489": {
+      "first_seen": "2026-10-03",
+      "company": "한국소재융합연구원(KIMCO)",
+      "title": "2026년도 제8차 공개채용(정규직)",
+      "end_time": "2026-10-16T17:00:00.000+09:00",
+      "track": "core",
+      "score": 56,
+      "verdict": "actionable",
+      "actionable": true,
+      "threshold": 28,
+      "scoring_version": 2,
+      "sub_positions": [
+        "연구직 - 시험분석",
+        "기술직 - 전기·안전"
+      ],
+      "matched_sub_positions": [
+        "연구직 - 시험분석",
+        "기술직 - 전기·안전"
+      ]
+    },
+    "106533": {
+      "first_seen": "2026-10-03",
+      "company": "한성기업",
+      "title": "부문별 신입 및 경력직 공개채용",
+      "end_time": "2026-10-11T23:59:00.000+09:00",
+      "track": "core",
+      "score": 30,
+      "verdict": "actionable",
+      "actionable": true,
+      "threshold": 28,
+      "scoring_version": 2,
+      "sub_positions": [
+        "구매",
+        "생산2 (포항)"
+      ],
+      "matched_sub_positions": [
+        "생산2 (포항)"
+      ]
+    },
+    "106538": {
+      "first_seen": "2026-10-03",
+      "company": "미원상사 및 관계사",
+      "title": "각 부문 채용",
+      "end_time": "2026-10-11T23:59:00.000+09:00",
+      "track": "ai-native",
+      "score": 58,
+      "verdict": "actionable",
+      "actionable": true,
+      "threshold": 28,
+      "scoring_version": 2,
+      "sub_positions": [
+        "자동화 시스템 엔지니어 (미원상사 익산공장)",
+        "품질보증 (미원상사 전주2공장)",
+        "국내영업 (미원상사 안양사무소)"
+      ],
+      "matched_sub_positions": [
+        "자동화 시스템 엔지니어 (미원상사 익산공장)",
+        "품질보증 (미원상사 전주2공장)"
+      ]
+    },
+    "106541": {
+      "first_seen": "2026-10-03",
+      "company": "휴온스메디텍",
+      "title": "[휴온스그룹] 10월 각 부문 신입 및 경력직 모집",
+      "end_time": "2026-10-21T23:59:00.000+09:00",
+      "track": "core",
+      "score": 56,
+      "verdict": "actionable",
+      "actionable": true,
+      "threshold": 28,
+      "scoring_version": 2,
+      "sub_positions": [
+        "제어팀 (시니어급)",
+        "의약품RA팀",
+        "생산지원팀"
+      ],
+      "matched_sub_positions": [
+        "생산지원팀"
+      ]
+    },
+    "106570": {
+      "first_seen": "2026-10-03",
+      "company": "녹십자웰빙",
+      "title": "의약품 품질보증(경력) 채용",
+      "end_time": "2026-10-11T23:59:00.000+09:00",
+      "track": "core",
+      "score": 28,
+      "verdict": "actionable",
+      "actionable": true,
+      "threshold": 28,
+      "scoring_version": 2,
+      "sub_positions": [
+        "의약품 품질보증"
+      ],
+      "matched_sub_positions": [
+        "의약품 품질보증"
+      ]
+    },
+    "106551": {
+      "first_seen": "2026-10-06",
+      "company": "도쿄일렉트론코리아",
+      "title": "2026년 하반기 채용",
+      "end_time": "2026-10-18T23:59:00.000+09:00",
+      "track": "core",
+      "score": 30,
+      "verdict": "actionable",
+      "actionable": true,
+      "threshold": 28,
+      "scoring_version": 2,
+      "sub_positions": [
+        "Field Engineer (Etching System)_화성,평택,이천,청주,용인",
+        "Field Engineer (Single Wafer Deposition)",
+        "Field Engineer (Surface Preparation System)",
+        "Process Engineer (Etching System)_용인",
+        "Process Engineer (Module Process and Integration)",
+        "Process Engineer (Assemble & Test System)",
+        "Process Engineer (Thermal Processing)",
+        "Process Engineer (Single Wafer Deposition)",
+        "Process Engineer (Surface Preparation System - Wet Clean)-평택",
+        "Process Engineer (Surface Preparation System - Wet Clean)-이천",
+        "System Engineer",
+        "Product Safety Engineer",
+        "기술영업 (반도체 장비 기술영업)",
+        "기술영업 (Account Sales)",
+        "전략기획",
+        "Finance specialist"
+      ],
+      "matched_sub_positions": [
+        "Process Engineer (Etching System)_용인",
+        "Process Engineer (Module Process and Integration)",
+        "Process Engineer (Assemble & Test System)",
+        "Process Engineer (Thermal Processing)",
+        "Process Engineer (Single Wafer Deposition)",
+        "Process Engineer (Surface Preparation System - Wet Clean)-평택",
+        "Process Engineer (Surface Preparation System - Wet Clean)-이천"
+      ]
+    },
+    "106636": {
+      "first_seen": "2026-10-09",
+      "company": "케이더블유이코리아",
+      "title": "신입 및 경력사원 채용",
+      "end_time": "2026-10-21T23:59:00.000+09:00",
+      "track": "core",
+      "score": 28,
+      "verdict": "actionable",
+      "actionable": true,
+      "threshold": 28,
+      "scoring_version": 2,
+      "sub_positions": [
+        "해운수출업무부(경력)",
+        "품질관리부",
+        "총무부",
+        "디지털솔루션부(WMS 개발)",
+        "디지털솔루션부(Infra)"
+      ],
+      "matched_sub_positions": [
+        "품질관리부"
+      ]
+    },
+    "106644": {
+      "first_seen": "2026-10-09",
+      "company": "차병원·차바이오그룹",
+      "title": "세포&유전자치료 연구 임원·교수·연구원 초빙",
+      "end_time": "2026-10-21T23:59:00.000+09:00",
+      "track": "ai-native",
+      "score": 60,
+      "verdict": "actionable",
+      "actionable": true,
+      "threshold": 28,
+      "scoring_version": 2,
+      "sub_positions": [
+        "세포&유전자치료연구 (연구소장)",
+        "세포&유전자치료연구 (부소장)",
+        "줄기세포연구",
+        "면역세포연구",
+        "유전자 교정·편집",
+        "글로벌 BD",
+        "RA",
+        "세포 배양·공정 (시니어)",
+        "세포 배양·공정 (주니어)",
+        "BI 상품·보관·공정",
+        "전분화능줄기세포",
+        "성체줄기세포",
+        "GMP Manufacturing",
+        "Automation Engineer",
+        "QA Team Leader",
+        "Project Management (CDMO)"
+      ],
+      "matched_sub_positions": [
+        "세포 배양·공정 (시니어)",
+        "세포 배양·공정 (주니어)",
+        "BI 상품·보관·공정",
+        "GMP Manufacturing",
+        "Automation Engineer"
+      ]
+    },
+    "106633": {
+      "first_seen": "2026-10-13",
+      "company": "아이센스",
+      "title": "2026 하반기 신입/경력 대규모 채용",
+      "end_time": "2026-11-11T23:59:00.000+09:00",
+      "track": "core",
+      "score": 30,
+      "verdict": "actionable",
+      "actionable": true,
+      "threshold": 28,
+      "scoring_version": 2,
+      "sub_positions": [
+        "고객사 관리/운영",
+        "전략마케팅",
+        "해외CS (POC 장비) - 경력",
+        "라벨링 (Technical Writer)",
+        "인허가관리",
+        "CGMS 알고리즘 개발 - 경력",
+        "POC S/W 개발",
+        "기술문서",
+        "소프트웨어 테스트",
+        "ASIC 및 HW 개발",
+        "펌웨어개발",
+        "서비스운영 - 대리급",
+        "서비스운영 - 과장/차장급",
+        "백엔드 개발",
+        "AI 프로세스 개발",
+        "디바이스 생산기술",
+        "SCM (구매)"
+      ],
+      "matched_sub_positions": [
+        "디바이스 생산기술"
+      ]
+    },
+    "106667": {
+      "first_seen": "2026-10-13",
+      "company": "지엠테크니컬센터코리아",
+      "title": "생산기술연구소 경력직 엔지니어 모집",
+      "end_time": "2026-10-22T23:59:00.000+09:00",
+      "track": "ai-native",
+      "score": 60,
+      "verdict": "actionable",
+      "actionable": true,
+      "threshold": 28,
+      "scoring_version": 2,
+      "sub_positions": [
+        "프레스 장비 및 금형 공정 엔지니어",
+        "차체생산기술 장비 및 공정 엔지니어",
+        "도장생산기술 장비 및 공정 엔지니어",
+        "생산기술 AI 엔지니어",
+        "IE 엔지니어",
+        "차량 자동화설비 엔지니어",
+        "조립생산기술 장비 및 공정 엔지니어",
+        "엔진구동 장비 및 공정 엔지니어"
+      ],
+      "matched_sub_positions": [
+        "프레스 장비 및 금형 공정 엔지니어",
+        "차체생산기술 장비 및 공정 엔지니어",
+        "도장생산기술 장비 및 공정 엔지니어",
+        "생산기술 AI 엔지니어",
+        "차량 자동화설비 엔지니어",
+        "조립생산기술 장비 및 공정 엔지니어",
+        "엔진구동 장비 및 공정 엔지니어"
+      ]
+    },
+    "106689": {
+      "first_seen": "2026-10-14",
+      "company": "비테스코테크놀로지스코리아",
+      "title": "셰플러코리아 이천사업장 10월 신입 및 경력직 채용",
+      "end_time": "2026-10-20T23:59:00.000+09:00",
+      "track": "core",
+      "score": 30,
+      "verdict": "actionable",
+      "actionable": true,
+      "threshold": 28,
+      "scoring_version": 2,
+      "sub_positions": [
+        "TL Manufacturing Technology",
+        "Material Resource Planning Professional",
+        "Controlling E-Mobility Asia/Pacific"
+      ],
+      "matched_sub_positions": [
+        "TL Manufacturing Technology"
+      ]
+    },
+    "106700": {
+      "first_seen": "2026-10-14",
+      "company": "애경케미칼",
+      "title": "각 부문 신입/경력 채용",
+      "end_time": "2026-10-26T23:59:00.000+09:00",
+      "track": "core",
+      "score": 30,
+      "verdict": "actionable",
+      "actionable": true,
+      "threshold": 28,
+      "scoring_version": 2,
+      "sub_positions": [
+        "생산시스템 기획/운영",
+        "국내영업 (가소제)",
+        "생산 엔지니어"
+      ],
+      "matched_sub_positions": [
+        "생산시스템 기획/운영",
+        "생산 엔지니어"
+      ]
     }
   }
 }

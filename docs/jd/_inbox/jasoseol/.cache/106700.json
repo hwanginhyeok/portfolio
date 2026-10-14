@@ -1,0 +1,198 @@
+{
+  "id": 106700,
+  "end_time": "2026-10-26T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106700,
+    "name": "애경케미칼",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/000/219/webp/%EC%95%A0%EA%B2%BD%EC%BC%80%EB%AF%B8%EC%B9%BCCI.webp?1698910555",
+    "employment_page_url": "https://aekyungchemical.applyin.co.kr/jobs/",
+    "start_time": "2026-10-14T00:00:00.000+09:00",
+    "end_time": "2026-10-26T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div><img style=\"display:block;max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/376/webp/image.webp?1791879341\" alt=\"애경케미칼 각 부문 신입/경력 채용\"></div></body></html>\n",
+    "target": 0,
+    "created_at": "2026-10-13T17:15:45.000+09:00",
+    "recruit_type": 0,
+    "view_count": 1591,
+    "favorite_count": 136,
+    "homepage_count": 23,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 4110,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "각 부문 신입/경력 채용",
+    "resume_expose": false,
+    "company_group": {
+      "id": 219,
+      "name": "애경케미칼",
+      "business_size": "big_business",
+      "business_type": null,
+      "created_at": "2015-09-10T05:46:38.000+09:00",
+      "updated_at": "2023-11-02T16:35:55.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/000/219/original/%EC%95%A0%EA%B2%BD%EC%BC%80%EB%AF%B8%EC%B9%BCCI.jpg?1698910555",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 432633,
+        "field": "해외영업 (가소제)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          154,
+          146
+        ],
+        "apply": null
+      },
+      {
+        "id": 432634,
+        "field": "국내/해외 영업 (UP수지)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          154,
+          194,
+          146
+        ],
+        "apply": null
+      },
+      {
+        "id": 432635,
+        "field": "국내영업 (합성수지)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          194
+        ],
+        "apply": null
+      },
+      {
+        "id": 432636,
+        "field": "구매",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          157,
+          147
+        ],
+        "apply": null
+      },
+      {
+        "id": 432637,
+        "field": "재무/회계 (청양공장)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          106,
+          122,
+          123,
+          105
+        ],
+        "apply": null
+      },
+      {
+        "id": 432638,
+        "field": "화학·공정 시뮬레이션 및 프로그램 개발",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          167,
+          229,
+          217
+        ],
+        "apply": null
+      },
+      {
+        "id": 432639,
+        "field": "생산시스템 기획/운영",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          187,
+          170,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 432640,
+        "field": "국내영업 (가소제)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          194,
+          196
+        ],
+        "apply": null
+      },
+      {
+        "id": 432641,
+        "field": "생산 엔지니어",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          187,
+          185,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 432642,
+        "field": "생산 (전주공장)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          185
+        ],
+        "apply": null
+      },
+      {
+        "id": 432643,
+        "field": "공무 (전주공장)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          186
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

@@ -1,0 +1,308 @@
+{
+  "id": 106644,
+  "end_time": "2026-10-21T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106644,
+    "name": "차병원·차바이오그룹",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/005/832/webp/%EC%B0%A8%EA%B7%B8%EB%A3%B9_CI.webp?1684487119",
+    "employment_page_url": "https://recruit.chamc.co.kr/page.ckd#/recruit/announcement/RG20268949-001",
+    "start_time": "2026-10-08T00:00:00.000+09:00",
+    "end_time": "2026-10-21T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div><img style=\"display:block;max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/372/817/webp/image.webp?1791444803\" alt=\"차병원·차바이오그룹 세포&amp;유전자치료 연구 임원·교수·연구원 초빙\"></div></body></html>\n",
+    "target": 0,
+    "created_at": "2026-10-08T16:33:29.000+09:00",
+    "recruit_type": 0,
+    "view_count": 700,
+    "favorite_count": 6,
+    "homepage_count": 5,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 12217,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "세포&유전자치료 연구 임원·교수·연구원 초빙",
+    "resume_expose": true,
+    "company_group": {
+      "id": 5832,
+      "name": "차병원·바이오그룹",
+      "business_size": "middle_market",
+      "business_type": null,
+      "created_at": "2017-10-16T10:57:02.000+09:00",
+      "updated_at": "2023-05-19T18:05:19.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/005/832/original/%EC%B0%A8%EA%B7%B8%EB%A3%B9_CI.jpg?1684487119",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 432398,
+        "field": "세포&유전자치료연구 (연구소장)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          109,
+          113,
+          234,
+          103,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 432399,
+        "field": "세포&유전자치료연구 (부소장)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          113,
+          234,
+          103,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 432400,
+        "field": "줄기세포연구",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          234,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 432401,
+        "field": "면역세포연구",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          234,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 432402,
+        "field": "유전자 교정·편집",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          234,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 432403,
+        "field": "글로벌 BD",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          110,
+          112,
+          154,
+          103,
+          146
+        ],
+        "apply": null
+      },
+      {
+        "id": 432404,
+        "field": "RA",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          108,
+          234,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 432414,
+        "field": "세포 배양·공정 (시니어)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          234,
+          235,
+          236,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 432405,
+        "field": "세포 배양·공정 (주니어)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          185,
+          234,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 432406,
+        "field": "BI 상품·보관·공정",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          150,
+          152,
+          234,
+          145,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 432407,
+        "field": "GMP 제조",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          189,
+          185,
+          234,
+          183,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 432408,
+        "field": "전분화능줄기세포",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          234,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 432409,
+        "field": "성체줄기세포",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          234,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 432410,
+        "field": "GMP Manufacturing",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          189,
+          185,
+          234,
+          183,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 432411,
+        "field": "Automation Engineer",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          188,
+          185,
+          220,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 432412,
+        "field": "QA Team Leader",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          160,
+          189,
+          234,
+          183,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 432413,
+        "field": "Project Management (CDMO)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          110,
+          171,
+          234,
+          103,
+          218
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

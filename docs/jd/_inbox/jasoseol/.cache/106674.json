@@ -1,0 +1,133 @@
+{
+  "id": 106674,
+  "end_time": "2026-10-25T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106674,
+    "name": "LS MnM",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/001/236/webp/data.webp?1684485374",
+    "employment_page_url": "https://lsmnm.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=268747",
+    "start_time": "2026-10-13T00:00:00.000+09:00",
+    "end_time": "2026-10-25T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div><img style=\"display:block;max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/178/webp/image.webp?1791848636\" alt=\"LS MnM 경력사원 수시채용\"></div></body></html>\n",
+    "target": 0,
+    "created_at": "2026-10-13T08:44:07.000+09:00",
+    "recruit_type": 0,
+    "view_count": 5333,
+    "favorite_count": 72,
+    "homepage_count": 16,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 5127,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "경력사원 수시채용",
+    "resume_expose": true,
+    "company_group": {
+      "id": 1236,
+      "name": "LS MnM",
+      "business_size": "big_business",
+      "business_type": null,
+      "created_at": "2015-09-10T05:49:17.000+09:00",
+      "updated_at": "2023-05-19T17:36:14.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/001/236/original/data?1684485374",
+      "alternate_names": [
+        "엘에스엠앤엠"
+      ],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 432587,
+        "field": "원료 구매/기획",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 5,
+        "end_time": null,
+        "duty_group_ids": [
+          157,
+          110,
+          112,
+          154,
+          155,
+          103,
+          146,
+          147
+        ],
+        "apply": null
+      },
+      {
+        "id": 432588,
+        "field": "설비엔지니어(기계)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 3,
+        "end_time": null,
+        "duty_group_ids": [
+          227,
+          205,
+          186,
+          187,
+          188,
+          183,
+          216
+        ],
+        "apply": null
+      },
+      {
+        "id": 432589,
+        "field": "설비엔지니어(계기)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 3,
+        "end_time": null,
+        "duty_group_ids": [
+          220,
+          186,
+          188,
+          189,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 432590,
+        "field": "사업전략",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          112,
+          110,
+          113,
+          109,
+          103
+        ],
+        "apply": null
+      },
+      {
+        "id": 432591,
+        "field": "인사",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          115,
+          120,
+          119,
+          116,
+          104
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

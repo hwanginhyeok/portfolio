@@ -1,0 +1,310 @@
+{
+  "id": 106538,
+  "end_time": "2026-10-11T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106538,
+    "name": "미원상사 및 관계사",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/001/038/webp/%EC%9E%90%EC%86%8C%EC%84%A4%EB%8B%B7%EC%BB%B4_%EB%A1%9C%EA%B3%A0.webp?1684485316",
+    "employment_page_url": "https://recruit.mwc.co.kr/recruit?mode=detail&nidx=286",
+    "start_time": "2026-10-02T00:00:00.000+09:00",
+    "end_time": "2026-10-11T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/371/704/webp/4%EB%B6%84%EA%B8%B0_%EB%AF%B8%EC%9B%90%EC%83%81%EC%82%AC_%EB%B0%8F_%EA%B4%80%EA%B3%84%EC%82%AC_%EA%B0%81_%EB%B6%80%EB%AC%B8_%EC%B1%84%EC%9A%A9_%281%29.webp?1790832545\" alt=\"미원상사 및 관계사 각 부문 채용\"></div></body></html>\n",
+    "target": 0,
+    "created_at": "2026-10-01T09:44:09.000+09:00",
+    "recruit_type": 0,
+    "view_count": 9256,
+    "favorite_count": 383,
+    "homepage_count": 206,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 4929,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "각 부문 채용",
+    "resume_expose": true,
+    "company_group": {
+      "id": 1038,
+      "name": "미원상사 및 관계사",
+      "business_size": "middle_market",
+      "business_type": null,
+      "created_at": "2015-09-10T05:48:46.000+09:00",
+      "updated_at": "2023-05-19T17:35:16.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/001/038/original/%EC%9E%90%EC%86%8C%EC%84%A4%EB%8B%B7%EC%BB%B4_%EB%A1%9C%EA%B3%A0.png?1684485316",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 431931,
+        "field": "연구개발 - 전자재료 소재 개발 (잉크테크 안산사업장)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 19,
+        "end_time": null,
+        "duty_group_ids": [
+          229,
+          220,
+          221,
+          217
+        ],
+        "apply": null
+      },
+      {
+        "id": 431932,
+        "field": "연구개발 - 잉크젯 제품 개발 (잉크테크 안산사업장)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 4,
+        "end_time": null,
+        "duty_group_ids": [
+          229,
+          233,
+          217
+        ],
+        "apply": null
+      },
+      {
+        "id": 432011,
+        "field": "연구개발 - 정밀화학제품 개발 (비드테크 반월연구소)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 2,
+        "end_time": null,
+        "duty_group_ids": [
+          205
+        ],
+        "apply": null
+      },
+      {
+        "id": 431933,
+        "field": "생산기술 (미원상사 익산공장)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          187,
+          188,
+          185,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 431934,
+        "field": "생산기술 (미원스페셜티케미칼 충주공장)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 10,
+        "end_time": null,
+        "duty_group_ids": [
+          187,
+          188,
+          185,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 431935,
+        "field": "생산기술 (동남합성 탄천공장)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 3,
+        "end_time": null,
+        "duty_group_ids": [
+          187,
+          188,
+          185,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 431936,
+        "field": "자동화 시스템 엔지니어 (미원상사 익산공장)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          164,
+          166,
+          220
+        ],
+        "apply": null
+      },
+      {
+        "id": 431937,
+        "field": "품질보증 (미원상사 전주2공장)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          160,
+          189,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 431938,
+        "field": "품질관리 (미원상사 전주/익산공장)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 6,
+        "end_time": null,
+        "duty_group_ids": [
+          160,
+          189,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 431939,
+        "field": "안전환경 (동남합성 대산1공장)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 9,
+        "end_time": null,
+        "duty_group_ids": [
+          191,
+          192,
+          193,
+          184
+        ],
+        "apply": null
+      },
+      {
+        "id": 431940,
+        "field": "국내영업 (미원상사 안양사무소)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          194,
+          195
+        ],
+        "apply": null
+      },
+      {
+        "id": 431941,
+        "field": "국내영업·해외영업 (미원상사 안양사무소)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 5,
+        "end_time": null,
+        "duty_group_ids": [
+          154,
+          194,
+          196,
+          146
+        ],
+        "apply": null
+      },
+      {
+        "id": 431942,
+        "field": "해외영업 (미원스페셜티케미칼 광교사무소)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 2,
+        "end_time": null,
+        "duty_group_ids": [
+          154,
+          155,
+          146
+        ],
+        "apply": null
+      },
+      {
+        "id": 431943,
+        "field": "구매 (미원상사 안양사무소)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 14,
+        "end_time": null,
+        "duty_group_ids": [
+          152,
+          157,
+          158,
+          145,
+          147
+        ],
+        "apply": null
+      },
+      {
+        "id": 431944,
+        "field": "구매물류 (아시아첨가제 평택사업장)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 2,
+        "end_time": null,
+        "duty_group_ids": [
+          150,
+          155,
+          157,
+          145,
+          146,
+          147
+        ],
+        "apply": null
+      },
+      {
+        "id": 431945,
+        "field": "공장관리 (미원화학 탄천공장)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          116,
+          128,
+          150,
+          152,
+          104,
+          107,
+          145
+        ],
+        "apply": null
+      },
+      {
+        "id": 431946,
+        "field": "인사총무(총무) (아시아첨가제 평택사업장)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 7,
+        "end_time": null,
+        "duty_group_ids": [
+          115,
+          116,
+          128,
+          104,
+          107
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": true
+  }
+}

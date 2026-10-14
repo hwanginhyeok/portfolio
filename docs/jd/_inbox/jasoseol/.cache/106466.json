@@ -1,0 +1,97 @@
+{
+  "id": 106466,
+  "end_time": "2026-10-05T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106466,
+    "name": "일화",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/001/938/webp/data.webp?1684485664",
+    "employment_page_url": "https://ilhwa.recruiter.co.kr/career/jobs/129726",
+    "start_time": "2026-09-29T00:00:00.000+09:00",
+    "end_time": "2026-10-05T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body>\n<p><img style=\"height:auto;max-width:100%;\" src=\"https://ilhwa.recruiter.co.kr/upload/17192/image/202609/2e685350-0772-4e44-82eb-4570d648aaaf.jpg\" alt=\"일화 2026년 신입 및 경력 채용(7)\"><br> </p>\n<p> </p>\n</body></html>\n",
+    "target": 0,
+    "created_at": "2026-09-29T08:41:04.000+09:00",
+    "recruit_type": 0,
+    "view_count": 3982,
+    "favorite_count": 66,
+    "homepage_count": 29,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 5829,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "2026년 신입 및 경력 채용(7)",
+    "resume_expose": true,
+    "company_group": {
+      "id": 1938,
+      "name": "일화",
+      "business_size": "middle_market",
+      "business_type": null,
+      "created_at": "2015-09-10T05:51:09.000+09:00",
+      "updated_at": "2023-05-19T17:41:04.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/001/938/original/data?1684485664",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 431575,
+        "field": "IT팀-IT담당",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 7,
+        "end_time": null,
+        "duty_group_ids": [
+          166
+        ],
+        "apply": null
+      },
+      {
+        "id": 431576,
+        "field": "초정공장-초정관리담당(원자재)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          152,
+          158,
+          145,
+          147
+        ],
+        "apply": null
+      },
+      {
+        "id": 431577,
+        "field": "초정공장-공무담당",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 2,
+        "end_time": null,
+        "duty_group_ids": [
+          186
+        ],
+        "apply": null
+      },
+      {
+        "id": 431578,
+        "field": "춘천제약공장-제약품질관리담당",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 2,
+        "end_time": null,
+        "duty_group_ids": [
+          189,
+          183
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

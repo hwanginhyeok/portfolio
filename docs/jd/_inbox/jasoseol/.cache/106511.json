@@ -1,0 +1,243 @@
+{
+  "id": 106511,
+  "end_time": "2026-10-11T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106511,
+    "name": "제일약품",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/000/790/webp/%EC%A0%9C%EC%9D%BC%EC%95%BD%ED%92%88_%EB%A1%9C%EA%B3%A0.webp?1684485268",
+    "employment_page_url": "https://jeil.recruiter.co.kr/career/jobs/129870",
+    "start_time": "2026-10-01T10:00:00.000+09:00",
+    "end_time": "2026-10-11T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div style=\"position:relative;\">\n<div><a style=\"display:block;height:1.0574550581600282%;left:31.298273259943183%;position:absolute;text-decoration:none;top:98.29852830619933%;width:37.5668449197861%;z-index:1;\" href=\"https://jeil.recruiter.co.kr/career/jobs/129870\" target=\"_blank\">   </a></div>\n<div><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/371/446/webp/image.webp?1790735967\" alt=\"제일약품 그룹 부문별 인재모집\"></div>\n</div></body></html>\n",
+    "target": 0,
+    "created_at": "2026-09-30T11:39:32.000+09:00",
+    "recruit_type": 0,
+    "view_count": 4978,
+    "favorite_count": 185,
+    "homepage_count": 50,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 4681,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "그룹 부문별 인재모집",
+    "resume_expose": true,
+    "company_group": {
+      "id": 790,
+      "name": "제일약품",
+      "business_size": "middle_market",
+      "business_type": null,
+      "created_at": "2015-09-10T05:48:08.000+09:00",
+      "updated_at": "2023-05-19T17:34:28.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/000/790/original/%EC%A0%9C%EC%9D%BC%EC%95%BD%ED%92%88_%EB%A1%9C%EA%B3%A0.jfif?1684485268",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 431815,
+        "field": "[제일약품] 임상팀 CPL",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          234,
+          258,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 431816,
+        "field": "[제일약품] 임상팀 MSL",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          234,
+          258,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 431817,
+        "field": "[제일약품] 임상팀 임상QA",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          189,
+          234,
+          183,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 431818,
+        "field": "[제일약품] 품질보증 QA (계약직)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 5,
+        "end_time": null,
+        "duty_group_ids": [
+          189,
+          234,
+          183,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 431819,
+        "field": "[제일약품] 물류 (행정)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 15,
+        "end_time": null,
+        "duty_group_ids": [
+          150,
+          127,
+          107,
+          145
+        ],
+        "apply": null
+      },
+      {
+        "id": 431820,
+        "field": "[제일약품] 주사제 (생산)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          185,
+          234,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 431821,
+        "field": "[제일약품] 고형제 (생산)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          185,
+          234,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 431822,
+        "field": "[제일약품] 공무 (공조)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          186,
+          185
+        ],
+        "apply": null
+      },
+      {
+        "id": 431823,
+        "field": "[제일헬스사이언스] 경영관리",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          109,
+          122,
+          106,
+          103,
+          105
+        ],
+        "apply": null
+      },
+      {
+        "id": 431824,
+        "field": "[제일헬스사이언스] 영업기획",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          197,
+          109,
+          137,
+          103,
+          132
+        ],
+        "apply": null
+      },
+      {
+        "id": 431825,
+        "field": "[제일헬스사이언스] 품질보증 QA (계약직)",
+        "division": 4,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          189,
+          234,
+          183,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 431826,
+        "field": "[제일파마홀딩스] 재경팀",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 9,
+        "end_time": null,
+        "duty_group_ids": [
+          106,
+          122,
+          123,
+          105
+        ],
+        "apply": null
+      },
+      {
+        "id": 431827,
+        "field": "[제일파마홀딩스] 준법감시팀",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          108,
+          255
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": true
+  }
+}

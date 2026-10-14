@@ -1,42 +1,82 @@
 {
-  "106170": {
-    "event_id": "idq5cc977ev0anl2je679gdee8",
-    "end_time": "2026-09-29T10:00:00.000+09:00",
-    "title": "마감 · 현대모비스 로보틱스 모터 설계(경력)",
-    "marker": "jasoseol:106170",
-    "timing": "2026-09-29 09:30 ~ 10:00 KST (30m timed)",
-    "updated_at": "2026-09-20T21:49:42.423203+09:00"
+  "105604": {
+    "event_id": "u11b1ce8scna7vs7cnbgh1adc0",
+    "end_time": "2026-11-29T23:59:00.000+09:00",
+    "title": "마감 · LIG D&A SW(검증)",
+    "marker": "jasoseol:105604",
+    "timing": "2026-11-29 (all-day)",
+    "updated_at": "2026-10-01T08:34:09.177568+09:00"
   },
-  "106348": {
-    "event_id": "fr4do68p0ij17fjv6jdas3f4vo",
-    "end_time": "2026-10-08T15:00:00.000+09:00",
-    "title": "마감 · 한국선급 함정 기본/전장 계산 및 도면승인",
-    "marker": "jasoseol:106348",
-    "timing": "2026-10-08 14:30 ~ 15:00 KST (30m timed)",
-    "updated_at": "2026-09-22T08:34:11.927818+09:00"
+  "106489": {
+    "event_id": "9fus2tt9e61s2fpu7vbvv1pgmo",
+    "end_time": "2026-10-16T17:00:00.000+09:00",
+    "title": "마감 · 한국소재융합연구원(KIMCO) 연구직 - 시험분석",
+    "marker": "jasoseol:106489",
+    "timing": "2026-10-16 16:30 ~ 17:00 KST (30m timed)",
+    "updated_at": "2026-10-03T08:34:06.864959+09:00"
   },
-  "106402": {
-    "event_id": "qaihpgcmgehd8ef0015qgkgfg8",
-    "end_time": "2026-10-11T23:59:00.000+09:00",
-    "title": "마감 · SK바이오사이언스 Drug Substance (원액생산)",
-    "marker": "jasoseol:106402",
-    "timing": "2026-10-11 (all-day)",
-    "updated_at": "2026-09-23T08:34:08.701104+09:00"
+  "106541": {
+    "event_id": "v2gt2eebfdnqntnb12n3sl9sdc",
+    "end_time": "2026-10-21T23:59:00.000+09:00",
+    "title": "마감 · 휴온스메디텍 생산지원팀",
+    "marker": "jasoseol:106541",
+    "timing": "2026-10-21 (all-day)",
+    "updated_at": "2026-10-03T08:34:06.920285+09:00"
   },
-  "106424": {
-    "event_id": "eqq9mmah0ef1ksmdhmsr4fp2fo",
-    "end_time": "2026-10-06T10:00:00.000+09:00",
-    "title": "마감 · 하나은행 리스크_리스크 검증",
-    "marker": "jasoseol:106424",
-    "timing": "2026-10-06 09:30 ~ 10:00 KST (30m timed)",
-    "updated_at": "2026-09-24T08:34:11.103624+09:00"
+  "106551": {
+    "event_id": "fiuhrqm4osrhtqf3eid9cu8lcg",
+    "end_time": "2026-10-18T23:59:00.000+09:00",
+    "title": "마감 · 도쿄일렉트론코리아 Process Engineer (Etching System)_용인",
+    "marker": "jasoseol:106551",
+    "timing": "2026-10-18 (all-day)",
+    "updated_at": "2026-10-06T08:34:10.291846+09:00"
   },
-  "106405": {
-    "event_id": "mvem4i95cghcvqtmgg4fg04a7c",
-    "end_time": "2026-10-11T23:59:00.000+09:00",
-    "title": "마감 · 호반그룹 [호반건설] 시공_전기(주니어프로)",
-    "marker": "jasoseol:106405",
-    "timing": "2026-10-11 (all-day)",
-    "updated_at": "2026-09-24T08:34:11.288896+09:00"
+  "106636": {
+    "event_id": "ejo7b0c6r0g1t0bemltnkgb79c",
+    "end_time": "2026-10-21T23:59:00.000+09:00",
+    "title": "마감 · 케이더블유이코리아 품질관리부",
+    "marker": "jasoseol:106636",
+    "timing": "2026-10-21 (all-day)",
+    "updated_at": "2026-10-09T08:34:09.353742+09:00"
+  },
+  "106644": {
+    "event_id": "vusia1nsaca4vsco82lsnp9o1o",
+    "end_time": "2026-10-21T23:59:00.000+09:00",
+    "title": "마감 · 차병원·차바이오그룹 세포 배양·공정 (시니어)",
+    "marker": "jasoseol:106644",
+    "timing": "2026-10-21 (all-day)",
+    "updated_at": "2026-10-09T08:34:09.727785+09:00"
+  },
+  "106667": {
+    "event_id": "uh6ue4ritsp1apudgoaap2r9rs",
+    "end_time": "2026-10-22T23:59:00.000+09:00",
+    "title": "마감 · 지엠테크니컬센터코리아 프레스 장비 및 금형 공정 엔지니어",
+    "marker": "jasoseol:106667",
+    "timing": "2026-10-22 (all-day)",
+    "updated_at": "2026-10-13T08:34:09.130124+09:00"
+  },
+  "106633": {
+    "event_id": "grbeiaj7abspjddq6o94b29vc4",
+    "end_time": "2026-11-11T23:59:00.000+09:00",
+    "title": "마감 · 아이센스 디바이스 생산기술",
+    "marker": "jasoseol:106633",
+    "timing": "2026-11-11 (all-day)",
+    "updated_at": "2026-10-13T08:34:09.270781+09:00"
+  },
+  "106689": {
+    "event_id": "fotg011e305bpf3r8nkjsofke8",
+    "end_time": "2026-10-20T23:59:00.000+09:00",
+    "title": "마감 · 비테스코테크놀로지스코리아 TL Manufacturing Technology",
+    "marker": "jasoseol:106689",
+    "timing": "2026-10-20 (all-day)",
+    "updated_at": "2026-10-14T08:34:10.162546+09:00"
+  },
+  "106700": {
+    "event_id": "4gv8f0tg4ocre5415li2rc85us",
+    "end_time": "2026-10-26T23:59:00.000+09:00",
+    "title": "마감 · 애경케미칼 생산시스템 기획/운영",
+    "marker": "jasoseol:106700",
+    "timing": "2026-10-26 (all-day)",
+    "updated_at": "2026-10-14T08:34:10.422842+09:00"
   }
 }

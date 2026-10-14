@@ -1,0 +1,280 @@
+{
+  "id": 106549,
+  "end_time": "2026-10-15T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106549,
+    "name": "테크윙",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/001/954/webp/%ED%85%8C%ED%81%AC%EC%9C%99%EC%98%81%EB%AC%B8_%EB%A1%9C%EA%B3%A0.webp?1684485670",
+    "employment_page_url": "https://techwing.careerlink.kr/jobs",
+    "start_time": "2026-10-02T00:00:00.000+09:00",
+    "end_time": "2026-10-15T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/371/739/webp/image.webp?1790834787\" alt=\"테크윙 2026년 10월 각 부문 채용\"></div></body></html>\n",
+    "target": 0,
+    "created_at": "2026-10-01T15:06:33.000+09:00",
+    "recruit_type": 0,
+    "view_count": 11876,
+    "favorite_count": 413,
+    "homepage_count": 165,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 5845,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "2026년 10월 각 부문 채용",
+    "resume_expose": true,
+    "company_group": {
+      "id": 1954,
+      "name": "테크윙",
+      "business_size": "middle_market",
+      "business_type": null,
+      "created_at": "2015-09-10T05:51:11.000+09:00",
+      "updated_at": "2023-05-19T17:41:11.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/001/954/original/%ED%85%8C%ED%81%AC%EC%9C%99%EC%98%81%EB%AC%B8_%EB%A1%9C%EA%B3%A0.jpg?1684485670",
+      "alternate_names": [],
+      "premiums": [
+        {
+          "type": "JASOSEOL_PICK",
+          "name": "자소설 PICK",
+          "properties": {
+            "hr_comment": "Providing The Best Handler Solutions. 더 나은 내일을 함께 만들어 갈 인재를 기다립니다.",
+            "description": ""
+          },
+          "priority": 100,
+          "start_at": "2026-05-14T09:17:25.000+09:00",
+          "end_at": null
+        }
+      ]
+    },
+    "employments": [
+      {
+        "id": 432023,
+        "field": "해외영업",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 13,
+        "end_time": null,
+        "duty_group_ids": [
+          154,
+          196,
+          146
+        ],
+        "apply": null
+      },
+      {
+        "id": 432024,
+        "field": "기구설계 (아산)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 6,
+        "end_time": null,
+        "duty_group_ids": [
+          219,
+          227,
+          216
+        ],
+        "apply": null
+      },
+      {
+        "id": 432025,
+        "field": "기구설계 (동탄)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 10,
+        "end_time": null,
+        "duty_group_ids": [
+          219,
+          227,
+          216
+        ],
+        "apply": null
+      },
+      {
+        "id": 432026,
+        "field": "SW개발 (아산)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 3,
+        "end_time": null,
+        "duty_group_ids": [
+          165,
+          176,
+          169,
+          162
+        ],
+        "apply": null
+      },
+      {
+        "id": 432027,
+        "field": "SW개발 (동탄)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 11,
+        "end_time": null,
+        "duty_group_ids": [
+          165,
+          176,
+          169,
+          162
+        ],
+        "apply": null
+      },
+      {
+        "id": 432028,
+        "field": "제조기술",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          185,
+          186,
+          220
+        ],
+        "apply": null
+      },
+      {
+        "id": 432029,
+        "field": "구매",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 5,
+        "end_time": null,
+        "duty_group_ids": [
+          157,
+          147
+        ],
+        "apply": null
+      },
+      {
+        "id": 432030,
+        "field": "국내영업",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 4,
+        "end_time": null,
+        "duty_group_ids": [
+          195,
+          196,
+          194
+        ],
+        "apply": null
+      },
+      {
+        "id": 432031,
+        "field": "고객만족(CS) - 각 고객사",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 4,
+        "end_time": null,
+        "duty_group_ids": [
+          200,
+          186
+        ],
+        "apply": null
+      },
+      {
+        "id": 432032,
+        "field": "고객만족(싱가폴 현지 CS)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          200,
+          186
+        ],
+        "apply": null
+      },
+      {
+        "id": 432033,
+        "field": "고객만족(인도 현지 CS)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          200,
+          186
+        ],
+        "apply": null
+      },
+      {
+        "id": 432034,
+        "field": "Vision SW",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 4,
+        "end_time": null,
+        "duty_group_ids": [
+          165,
+          167,
+          176,
+          162
+        ],
+        "apply": null
+      },
+      {
+        "id": 432035,
+        "field": "AI",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 16,
+        "end_time": null,
+        "duty_group_ids": [
+          167,
+          180,
+          179,
+          163
+        ],
+        "apply": null
+      },
+      {
+        "id": 432036,
+        "field": "광학기술",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          220,
+          221
+        ],
+        "apply": null
+      },
+      {
+        "id": 432037,
+        "field": "IT",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 2,
+        "end_time": null,
+        "duty_group_ids": [
+          166,
+          170,
+          176,
+          181,
+          162,
+          163
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": true
+  }
+}

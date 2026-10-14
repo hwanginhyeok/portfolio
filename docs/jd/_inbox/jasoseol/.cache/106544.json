@@ -1,0 +1,58 @@
+{
+  "id": 106544,
+  "end_time": "2026-10-31T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106544,
+    "name": "NHN Cloud",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/014/192/webp/jss_hashed_19a2587bbf9a37b6c377_20251230T140207_NHN_Cloud_Logo.webp?1767070928",
+    "employment_page_url": "https://careers.nhn.com/recruits/4433519176515675929?utm_source=jasoseol&utm_medium=jobposting&utm_campaign=NHN%20Cloud_Tech",
+    "start_time": "2026-10-01T00:00:00.000+09:00",
+    "end_time": "2026-10-31T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div style=\"position:relative;\"><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/371/821/webp/NHNCloud_%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C_%EC%A0%84%ED%99%98_%EA%B5%AC%EC%B6%95_%EB%B0%8F_AX_%EC%82%AC%EC%97%85_%EC%A0%9C%EC%95%88.webp?1790844987\" alt=\"NHN Cloud 클라우드 전환 구축 및 AX 사업 제안\"></div></body></html>\n",
+    "target": 4,
+    "created_at": "2026-10-01T13:17:26.000+09:00",
+    "recruit_type": 0,
+    "view_count": 887,
+    "favorite_count": 13,
+    "homepage_count": 1,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 17672,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "클라우드 전환 구축 및 AX 사업 제안",
+    "resume_expose": true,
+    "company_group": {
+      "id": 14192,
+      "name": "NHN Cloud",
+      "business_size": null,
+      "business_type": null,
+      "created_at": "2022-10-13T16:22:47.000+09:00",
+      "updated_at": "2025-12-30T14:02:09.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/014/192/original/jss_hashed_19a2587bbf9a37b6c377_20251230T140207_NHN_Cloud_Logo.png?1767070928",
+      "alternate_names": [
+        "엔에이치엔클라우드"
+      ],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 431980,
+        "field": "클라우드 전환 구축 및 AX 사업 제안",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          110,
+          112,
+          103
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

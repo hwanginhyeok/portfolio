@@ -1,0 +1,77 @@
+{
+  "id": 106530,
+  "end_time": "2026-10-16T15:00:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106530,
+    "name": "한국벤처투자(KVIC)",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/002/312/webp/%ED%95%9C%EA%B5%AD%EB%B2%A4%EC%B2%98%ED%88%AC%EC%9E%90_CI_%EC%83%81%ED%95%98%EC%A1%B0%ED%95%A9_Main.webp?1684485816",
+    "employment_page_url": "https://kvic.incruit.com/hire/viewhire.asp?projectid=105",
+    "start_time": "2026-10-02T13:00:00.000+09:00",
+    "end_time": "2026-10-16T15:00:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div style=\"position:relative;\"><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/371/610/webp/1._%ED%95%9C%EA%B5%AD%EB%B2%A4%EC%B2%98%ED%88%AC%EC%9E%90_%EC%8B%A0%EC%9E%85NCS_%EC%B1%84%EC%9A%A9%EA%B3%B5%EA%B3%A0_%EC%B5%9C%EC%A2%85.webp?1790814948\" alt=\"한국벤처투자(KVIC) 2026년 3차 신입(NCS)·경력 채용공고\"></div></body></html>\n",
+    "target": 4,
+    "created_at": "2026-09-30T16:43:35.000+09:00",
+    "recruit_type": 0,
+    "view_count": 5448,
+    "favorite_count": 639,
+    "homepage_count": 121,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 6203,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "2026년 3차 신입(NCS)·경력 채용공고",
+    "resume_expose": true,
+    "company_group": {
+      "id": 2312,
+      "name": "한국벤처투자(KVIC)",
+      "business_size": null,
+      "business_type": "public_institution",
+      "created_at": "2015-09-10T05:52:08.000+09:00",
+      "updated_at": "2024-07-11T16:11:59.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/002/312/original/%ED%95%9C%EA%B5%AD%EB%B2%A4%EC%B2%98%ED%88%AC%EC%9E%90_CI_%EC%83%81%ED%95%98%EC%A1%B0%ED%95%A9_Main.jpg?1684485816",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 431888,
+        "field": "일반 심사역 (사원)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 84,
+        "end_time": null,
+        "duty_group_ids": [
+          110,
+          111,
+          122,
+          210,
+          211,
+          103,
+          105
+        ],
+        "apply": null
+      },
+      {
+        "id": 431889,
+        "field": "AI·전산 심사역 (대리)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 10,
+        "end_time": null,
+        "duty_group_ids": [
+          179,
+          180,
+          166,
+          170,
+          163
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": true
+  }
+}

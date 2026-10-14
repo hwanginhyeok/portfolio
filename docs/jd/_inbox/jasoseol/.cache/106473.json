@@ -1,0 +1,56 @@
+{
+  "id": 106473,
+  "end_time": "2026-10-18T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106473,
+    "name": "한국석유공업",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/003/762/webp/mainlogo-JPG.webp?1684486387",
+    "employment_page_url": "https://kpgroup.recruiter.co.kr/career/home",
+    "start_time": "2026-09-29T10:00:00.000+09:00",
+    "end_time": "2026-10-18T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body>\n<div style=\"position:relative;\"><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/371/144/webp/1.webp?1790644169\" alt=\"한국석유공업 [KP그룹]KP한석화학 케미칼솔루션사업부 LAB BIZ팀 영업직 채용(경력)\"></div>\n<div style=\"position:relative;\"><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/371/145/webp/2.webp?1790644171\" alt=\"한국석유공업 [KP그룹]KP한석화학 케미칼솔루션사업부 LAB BIZ팀 영업직 채용(경력)\"></div>\n<div style=\"position:relative;\"><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/371/146/webp/3.webp?1790644174\" alt=\"한국석유공업 [KP그룹]KP한석화학 케미칼솔루션사업부 LAB BIZ팀 영업직 채용(경력)\"></div>\n<div style=\"position:relative;\"><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/371/147/webp/4.webp?1790644174\" alt=\"한국석유공업 [KP그룹]KP한석화학 케미칼솔루션사업부 LAB BIZ팀 영업직 채용(경력)\"></div>\n<div style=\"position:relative;\"><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/371/148/webp/5.webp?1790644175\" alt=\"한국석유공업 [KP그룹]KP한석화학 케미칼솔루션사업부 LAB BIZ팀 영업직 채용(경력)\"></div>\n<div style=\"position:relative;\"><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/371/149/webp/6.webp?1790644176\" alt=\"한국석유공업 [KP그룹]KP한석화학 케미칼솔루션사업부 LAB BIZ팀 영업직 채용(경력)\"></div>\n</body></html>\n",
+    "target": 4,
+    "created_at": "2026-09-29T10:21:00.000+09:00",
+    "recruit_type": 0,
+    "view_count": 884,
+    "favorite_count": 7,
+    "homepage_count": 4,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 10099,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "[KP그룹]KP한석화학 케미칼솔루션사업부 LAB BIZ팀 영업직 채용(경력)",
+    "resume_expose": true,
+    "company_group": {
+      "id": 3762,
+      "name": "한국석유공업",
+      "business_size": "middle_market",
+      "business_type": null,
+      "created_at": "2016-05-11T13:14:49.000+09:00",
+      "updated_at": "2024-06-12T11:20:37.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/003/762/original/mainlogo-JPG.jpg?1684486387",
+      "alternate_names": [
+        "케이피그룹"
+      ],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 431603,
+        "field": "[KP한석화학] Chemical사업본부 LAB BIZ팀 영업직",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 2,
+        "end_time": null,
+        "duty_group_ids": [
+          194
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

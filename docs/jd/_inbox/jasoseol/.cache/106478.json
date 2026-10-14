@@ -1,0 +1,56 @@
+{
+  "id": 106478,
+  "end_time": "2026-10-13T11:00:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106478,
+    "name": "인하공업전문대학",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/004/053/webp/_EC_9D_B8_ED_95_98_EA_B3_B5_EC_A0_84.webp?1684486499",
+    "employment_page_url": "https://job.incruit.com/jobdb_info/jobpost.asp?job=2609290001050",
+    "start_time": "2026-09-28T00:00:00.000+09:00",
+    "end_time": "2026-10-13T11:00:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div style=\"position:relative;\"><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/371/167/webp/%EC%9D%B8%ED%95%98%EA%B3%B5%EC%97%85%EC%A0%84%EB%AC%B8%EB%8C%80%ED%95%99_0929.webp?1790647604\" alt=\"인하공업전문대학 행정직원(경력) 채용공고\"></div></body></html>\n",
+    "target": 4,
+    "created_at": "2026-09-29T11:43:49.000+09:00",
+    "recruit_type": 0,
+    "view_count": 635,
+    "favorite_count": 17,
+    "homepage_count": 4,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 10390,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "행정직원(경력) 채용공고",
+    "resume_expose": true,
+    "company_group": {
+      "id": 4053,
+      "name": "인하공업전문대학",
+      "business_size": null,
+      "business_type": null,
+      "created_at": "2016-07-05T11:08:51.000+09:00",
+      "updated_at": "2023-05-19T17:55:00.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/004/053/original/_EC_9D_B8_ED_95_98_EA_B3_B5_EC_A0_84.JPG?1684486499",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 431666,
+        "field": "전산/IT(경력)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 2,
+        "end_time": null,
+        "duty_group_ids": [
+          170,
+          179,
+          163
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

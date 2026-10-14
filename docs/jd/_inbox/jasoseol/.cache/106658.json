@@ -1,0 +1,58 @@
+{
+  "id": 106658,
+  "end_time": "2026-10-19T14:00:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106658,
+    "name": "KBS N",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/003/989/webp/KBS_N_%EB%A1%9C%EA%B3%A0.webp?1684486475",
+    "employment_page_url": "https://kbsn.saramin.co.kr/",
+    "start_time": "2026-10-12T00:00:00.000+09:00",
+    "end_time": "2026-10-19T14:00:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div style=\"position:relative;\">\n<img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/019/webp/%28KBS_N%29_%EA%B4%91%EA%B3%A0%EC%98%81%EC%97%85_%EA%B3%B5%EA%B3%A0_261012_%EC%8B%9C%EC%9E%91.webp?1791767579\" alt=\"KBS N 광고영업 경력사원 공개채용\"><a style=\"display:block;height:3.51%;left:51.18%;position:absolute;top:63.65%;width:29.15%;\" href=\"https://kbsn.saramin.co.kr\" target=\"_blank\" rel=\"noopener noreferrer\">​</a>\n</div></body></html>\n",
+    "target": 4,
+    "created_at": "2026-10-12T10:14:15.000+09:00",
+    "recruit_type": 0,
+    "view_count": 1570,
+    "favorite_count": 27,
+    "homepage_count": 3,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 10326,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "광고영업 경력사원 공개채용",
+    "resume_expose": true,
+    "company_group": {
+      "id": 3989,
+      "name": "KBS N",
+      "business_size": "middle_market",
+      "business_type": null,
+      "created_at": "2016-06-21T17:31:21.000+09:00",
+      "updated_at": "2023-05-19T17:54:36.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/003/989/original/KBS_N_%EB%A1%9C%EA%B3%A0.png?1684486475",
+      "alternate_names": [
+        "케이비에스엔"
+      ],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 432483,
+        "field": "광고영업",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 4,
+        "end_time": null,
+        "duty_group_ids": [
+          194,
+          196,
+          197
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

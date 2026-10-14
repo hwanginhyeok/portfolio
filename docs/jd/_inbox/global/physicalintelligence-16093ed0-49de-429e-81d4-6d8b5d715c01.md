@@ -1,0 +1,27 @@
+---
+company: "Physical Intelligence"
+ats: "ashby"
+job_id: "16093ed0-49de-429e-81d4-6d8b5d715c01"
+title: "ML Infra Engineer, Platform"
+location: "San Francisco"
+country: "United States"
+region: "americas"
+eligibility: "visa-needed"
+track: "ai-native"
+search_lane: "ai-native"
+search_lanes: ["ai-native", "core"]
+score: 18
+matched_keywords: ["Physical AI", "robotics / industrial automation", "simulation engineering", "reliability"]
+url: "https://jobs.ashbyhq.com/physicalintelligence/16093ed0-49de-429e-81d4-6d8b5d715c01"
+first_seen: "2026-10-10"
+---
+
+# ML Infra Engineer, Platform — Physical Intelligence
+
+- 지원 자격: **비자 필요 (스폰서 미확인)** (visa-needed) · 점수 18
+- Track: **AI-native / Physical AI** (ai-native)
+- 위치: San Francisco (United States)
+
+## JD 본문
+
+Who We Are Physical Intelligence is bringing general-purpose AI into the physical world. We are a team of engineers, scientists, roboticists, and company builders developing foundation models and learning algorithms to power the robots of today and the physically-actuated devices of the future. The Team The Infrastructure team builds and operates the backbone of everything PI does: from training state-of-the-art VLA models, to orchestrating large-scale simulation, to reliably deploying intelligence across fleets of physical robots. The team works closely with researchers, robotics runtime, product, and platform engineers to ensure infrastructure scales from prototype to production-grade deployments. In This Role You Will - Own and scale AI-native infrastructure: You will operate and evolve Kubernetes clusters and service deployment patterns, and help build a scalable microservice platform for internal systems such as evaluation services, operational tooling, and internal APIs with agent-use as the primary interface. This includes supporting safe rollouts, upgrades, and rollback strategies. - Drive security, observability and cost-aware infrastructure: You will treat security, logging, metrics, tracing, and alerting as first-class platform primitives, and build systems that surface reliability and performance issues early. You will also help improve cost visibility and enable cost-aware decision-making at the infrastructure level. - Harden platform foundations: You will own core infrastructure with multi-cloud considerations, designing authentication/authorization flows, networking architecture, quota and rate-limiting services, and cloud primitives that behave predictably. A major part of this work is reducing infra churn by standardizing patterns, abstractions, and interfaces. - Improve developer experience: You will build clear, documented interfaces for using platform infrastructure, reducing the gap between “I need infra” and “I can run my workload.” This includes supporting consistent local vs. remote development workflows and improving self-serve infrastructure usage. - Collaborate and lead through ownership: You will work closely with researchers and other engineers to understand requirements and constraints, translate fast-moving needs into reusable infrastructure, and own systems end-to-end, from design through operation. What We Hope You'll Bring - Extremely strong first-principles thinking. - Familiarity with agent infrastructure, observability, security and sandboxing - Deep experience with cloud platforms (GCP, AWS) and distributed systems: compute orchestration, networking, autoscaling, service meshes, load balancing. - Ability to reason about system bottlenecks, performance tuning, and cost optimizations across compute, networking, and storage. - Comfort with Kubernetes, cluster-level reliability, and service-oriented architectures. - Solid intuition around scalability, performance, and failure modes. - Experience with infrastructure-as-code (e.g. Terraform), containerization, and modern platform engineering practices. - Familiarity with logging, metrics, tracing, incident response, SLOs, and debugging complex distributed systems. - Strong cross-functional communication and ownership mindset. - Experience (4-6 years) working in fast-moving or early-stage environments where ambiguity is normal with demonstrated growth trajectory. Ultimately, we’re looking for someone who can spin up quickly on unfamiliar and ambiguous domains, has a strong sense of ownership, and cares deeply about our mission. Even if you don’t check all the boxes above, we strongly encourage you to apply if this sounds like you. Bonus Points If You Have - Experience with large-scale ML training, evaluation, or simulation infrastructure. - Experience with secrets management systems (e.g., Doppler). - Background in observability, cost optimization, or internal platform tooling. - Exposure to robotics, simulation, or real-time systems. Pursuant to the San Francisco Fair Chance Ordinance, we will consider for employment qualified applicants with arrest and conviction records.

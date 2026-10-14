@@ -1,0 +1,95 @@
+{
+  "id": 106666,
+  "end_time": "2026-10-18T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106666,
+    "name": "경신",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/001/589/webp/Vertical_K_Blue-1.webp?1684485523",
+    "employment_page_url": "https://KyungshinHR.recruiter.co.kr/career/jobs/130899",
+    "start_time": "2026-10-12T12:30:00.000+09:00",
+    "end_time": "2026-10-18T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><p><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/086/webp/screencapture-kyungshinhr-recruiter-co-kr-career-jobs-130899-2026-10-12-14_11_59.webp?1791781991\" alt=\"경신 2026년 연구본부 신입/경력 채용\"></p></body></html>\n",
+    "target": 0,
+    "created_at": "2026-10-12T14:12:19.000+09:00",
+    "recruit_type": 0,
+    "view_count": 4318,
+    "favorite_count": 96,
+    "homepage_count": 55,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 5480,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "2026년 연구본부 신입/경력 채용",
+    "resume_expose": true,
+    "company_group": {
+      "id": 1589,
+      "name": "경신",
+      "business_size": "big_business",
+      "business_type": null,
+      "created_at": "2015-09-10T05:50:13.000+09:00",
+      "updated_at": "2023-05-19T17:38:44.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/001/589/original/Vertical_K_Blue-1.jpg?1684485523",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 432531,
+        "field": "신입-연구-전장설계(경로)-본사/연구소",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 22,
+        "end_time": null,
+        "duty_group_ids": [
+          219
+        ],
+        "apply": null
+      },
+      {
+        "id": 432533,
+        "field": "경력-연구-전장설계(경로)-본사/연구소",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          219
+        ],
+        "apply": null
+      },
+      {
+        "id": 432534,
+        "field": "경력-연구-전장설계(회로)-본사/연구소",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          219
+        ],
+        "apply": null
+      },
+      {
+        "id": 432535,
+        "field": "경력-연구-PM-본사/연구소",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          226,
+          219,
+          216
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": true
+  }
+}

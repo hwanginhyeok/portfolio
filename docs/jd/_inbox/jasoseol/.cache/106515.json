@@ -1,0 +1,66 @@
+{
+  "id": 106515,
+  "end_time": "2026-10-11T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106515,
+    "name": "마이다스그룹",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/014/668/webp/midas%EB%A1%9C%EA%B3%A0.webp?1684488774",
+    "employment_page_url": "https://midas.recruiter.co.kr/career/jobs/129945",
+    "start_time": "2026-09-30T00:00:00.000+09:00",
+    "end_time": "2026-10-11T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body>\n<p><a href=\"https://group.midasit.com/\" target=\"_blank\" rel=\"noopener noreferrer\"><img style=\"height:auto;max-width:100%;\" src=\"https://midas.recruiter.co.kr/upload/1/image/202608/b816098e-d53b-4b76-bc5b-aec5a4e58fd4.png\" alt=\"마이다스그룹 영상 콘텐츠 디자이너 채용\"></a><br> </p>\n<p> </p>\n</body></html>\n",
+    "target": 0,
+    "created_at": "2026-09-30T13:25:43.000+09:00",
+    "recruit_type": 0,
+    "view_count": 187,
+    "favorite_count": 1,
+    "homepage_count": 3,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 18472,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "영상 콘텐츠 디자이너 채용",
+    "resume_expose": true,
+    "company_group": {
+      "id": 14668,
+      "name": "마이다스그룹",
+      "business_size": null,
+      "business_type": null,
+      "created_at": "2023-03-09T11:35:37.000+09:00",
+      "updated_at": "2025-02-24T16:04:11.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/014/668/original/midas%EB%A1%9C%EA%B3%A0.png?1684488774",
+      "alternate_names": [],
+      "premiums": [
+        {
+          "type": "JASOSEOL_PICK",
+          "name": "자소설 PICK",
+          "properties": {
+            "hr_comment": "단순 직무를 넘어 진짜 성장을 해보고 싶다면? 스펙이 아닌 역량을 알아봐주는 회사를 찾고 있다면? 마이다스와 함께 더 큰 세상을 만나보세요.",
+            "description": ""
+          },
+          "priority": 100,
+          "start_at": "2025-09-22T18:00:00.000+09:00",
+          "end_at": null
+        }
+      ]
+    },
+    "employments": [
+      {
+        "id": 431834,
+        "field": "경력-디자인-영상 디자이너-판교본사",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          248
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

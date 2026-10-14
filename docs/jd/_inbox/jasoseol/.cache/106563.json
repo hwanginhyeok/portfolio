@@ -1,0 +1,73 @@
+{
+  "id": 106563,
+  "end_time": "2026-10-16T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106563,
+    "name": "KPX케미칼",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/002/473/webp/%E1%84%8F%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%91%E1%85%B5%E1%84%8B%E1%85%A6%E1%86%A8%E1%84%89%E1%85%B3.webp?1684485887",
+    "employment_page_url": "https://kpxchemical.recruiter.im/recruit?utm_source=jasoseol&utm_medium=banner&utm_campaign=2610kpx",
+    "start_time": "2026-10-06T00:00:00.000+09:00",
+    "end_time": "2026-10-16T23:59:00.000+09:00",
+    "content": "<div><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/371/890/webp/image.webp?1790905333\" alt=\"KPX케미칼\"></div>\n",
+    "target": 0,
+    "created_at": "2026-10-02T10:42:19.000+09:00",
+    "recruit_type": 0,
+    "view_count": 1160,
+    "favorite_count": 43,
+    "homepage_count": 5,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 6364,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "2026년 각 부문별 채용",
+    "resume_expose": true,
+    "company_group": {
+      "id": 2473,
+      "name": "KPX케미칼",
+      "business_size": "middle_market",
+      "business_type": null,
+      "created_at": "2015-09-10T05:52:34.000+09:00",
+      "updated_at": "2023-05-19T17:44:48.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/002/473/original/%E1%84%8F%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%91%E1%85%B5%E1%84%8B%E1%85%A6%E1%86%A8%E1%84%89%E1%85%B3.jpeg?1684485887",
+      "alternate_names": [
+        "케이피엑스케미칼"
+      ],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 432110,
+        "field": "구매",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          157,
+          158,
+          147
+        ],
+        "apply": null
+      },
+      {
+        "id": 432111,
+        "field": "연구",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          229,
+          232,
+          217
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

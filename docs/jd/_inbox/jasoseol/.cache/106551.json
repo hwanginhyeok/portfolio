@@ -1,0 +1,489 @@
+{
+  "id": 106551,
+  "end_time": "2026-10-18T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106551,
+    "name": "도쿄일렉트론코리아",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/001/896/webp/0712.webp?1684485648",
+    "employment_page_url": "https://tel.recruiter.co.kr/career/home",
+    "start_time": "2026-10-05T13:00:00.000+09:00",
+    "end_time": "2026-10-18T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div>\n<img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/371/799/webp/%E1%84%83%E1%85%A9%E1%84%8F%E1%85%AD%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%85%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%E1%84%85%E1%85%A9%E1%86%AB%E1%84%8F%E1%85%A9%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A1_%E1%84%80%E1%85%A1%E1%84%85%E1%85%A9%E1%84%92%E1%85%AA%E1%86%A8%E1%84%8C%E1%85%A1%E1%86%BC_1.webp?1790841503\" alt=\"도쿄일렉트론코리아 2026년 하반기 채용\"><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/371/801/webp/%E1%84%83%E1%85%A9%E1%84%8F%E1%85%AD%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%85%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%E1%84%85%E1%85%A9%E1%86%AB%E1%84%8F%E1%85%A9%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A1_%E1%84%80%E1%85%A1%E1%84%85%E1%85%A9%E1%84%92%E1%85%AA%E1%86%A8%E1%84%8C%E1%85%A1%E1%86%BC_2.webp?1790841503\" alt=\"도쿄일렉트론코리아 2026년 하반기 채용\"><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/371/800/webp/%E1%84%83%E1%85%A9%E1%84%8F%E1%85%AD%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%85%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%E1%84%85%E1%85%A9%E1%86%AB%E1%84%8F%E1%85%A9%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A1_%E1%84%80%E1%85%A1%E1%84%85%E1%85%A9%E1%84%92%E1%85%AA%E1%86%A8%E1%84%8C%E1%85%A1%E1%86%BC_3.webp?1790841503\" alt=\"도쿄일렉트론코리아 2026년 하반기 채용\">\n</div></body></html>\n",
+    "target": 0,
+    "created_at": "2026-10-01T15:28:14.000+09:00",
+    "recruit_type": 0,
+    "view_count": 12777,
+    "favorite_count": 1002,
+    "homepage_count": 367,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 5787,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "2026년 하반기 채용",
+    "resume_expose": true,
+    "company_group": {
+      "id": 1896,
+      "name": "도쿄일렉트론코리아",
+      "business_size": "big_business",
+      "business_type": null,
+      "created_at": "2015-09-10T05:51:02.000+09:00",
+      "updated_at": "2023-05-19T17:40:48.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/001/896/original/0712.png?1684485648",
+      "alternate_names": [
+        "Tokyo Electron Korea"
+      ],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 432045,
+        "field": "Field Engineer",
+        "division": 3,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 102,
+        "end_time": null,
+        "duty_group_ids": [
+          189,
+          185,
+          186,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 432046,
+        "field": "Process Engineer",
+        "division": 3,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 70,
+        "end_time": null,
+        "duty_group_ids": [
+          229,
+          234,
+          221,
+          217,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 432047,
+        "field": "Engineer Operation Analyst",
+        "division": 3,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 11,
+        "end_time": null,
+        "duty_group_ids": [
+          127,
+          152,
+          197,
+          107,
+          145
+        ],
+        "apply": null
+      },
+      {
+        "id": 432048,
+        "field": "Manufacturing Engineer",
+        "division": 3,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 9,
+        "end_time": null,
+        "duty_group_ids": [
+          187,
+          189,
+          185,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 432049,
+        "field": "Parts Sales",
+        "division": 3,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 12,
+        "end_time": null,
+        "duty_group_ids": [
+          152,
+          194,
+          197,
+          145
+        ],
+        "apply": null
+      },
+      {
+        "id": 432050,
+        "field": "Product Management",
+        "division": 3,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 10,
+        "end_time": null,
+        "duty_group_ids": [
+          150,
+          151,
+          187,
+          145,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 432051,
+        "field": "General Affair(총무) - Office Support",
+        "division": 3,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 9,
+        "end_time": null,
+        "duty_group_ids": [
+          120,
+          127,
+          128,
+          104,
+          107
+        ],
+        "apply": null
+      },
+      {
+        "id": 432052,
+        "field": "Software Engineer - System & Solution Engineer",
+        "division": 3,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 8,
+        "end_time": null,
+        "duty_group_ids": [
+          176,
+          180,
+          166,
+          162,
+          163
+        ],
+        "apply": null
+      },
+      {
+        "id": 432053,
+        "field": "Software Engineer - Tech Support Engineer",
+        "division": 3,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 11,
+        "end_time": null,
+        "duty_group_ids": [
+          176,
+          166,
+          171,
+          162
+        ],
+        "apply": null
+      },
+      {
+        "id": 432054,
+        "field": "System Engineer",
+        "division": 3,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 3,
+        "end_time": null,
+        "duty_group_ids": [
+          113,
+          227,
+          219,
+          103,
+          216
+        ],
+        "apply": null
+      },
+      {
+        "id": 432055,
+        "field": " DPM(연구소개발기획) - 전기,전력제어 안전관리자",
+        "division": 3,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 10,
+        "end_time": null,
+        "duty_group_ids": [
+          128,
+          191,
+          204,
+          107,
+          184
+        ],
+        "apply": null
+      },
+      {
+        "id": 432056,
+        "field": "Field Engineer (Etching System)_화성,평택,이천,청주,용인",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 31,
+        "end_time": null,
+        "duty_group_ids": [
+          189,
+          185,
+          186,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 432057,
+        "field": "Field Engineer (Single Wafer Deposition)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          185,
+          186,
+          234,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 432058,
+        "field": "Field Engineer (Surface Preparation System)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          189,
+          185,
+          186,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 432059,
+        "field": "Process Engineer (Etching System)_용인",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 6,
+        "end_time": null,
+        "duty_group_ids": [
+          113,
+          234,
+          221,
+          103,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 432060,
+        "field": "Process Engineer (Module Process and Integration)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          113,
+          234,
+          221,
+          103,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 432061,
+        "field": "Process Engineer (Assemble & Test System)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          186,
+          234,
+          221,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 432062,
+        "field": "Process Engineer (Thermal Processing)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 3,
+        "end_time": null,
+        "duty_group_ids": [
+          229,
+          234,
+          221,
+          217,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 432063,
+        "field": "Process Engineer (Single Wafer Deposition)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          229,
+          234,
+          221,
+          217,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 432064,
+        "field": "Process Engineer (Surface Preparation System - Wet Clean)-평택",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          189,
+          234,
+          221,
+          183,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 432065,
+        "field": "Process Engineer (Surface Preparation System - Wet Clean)-이천",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          189,
+          234,
+          221,
+          183,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 432066,
+        "field": "System Engineer",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 2,
+        "end_time": null,
+        "duty_group_ids": [
+          113,
+          227,
+          219,
+          103,
+          216
+        ],
+        "apply": null
+      },
+      {
+        "id": 432067,
+        "field": "Product Safety Engineer",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          189,
+          191,
+          219,
+          183,
+          184
+        ],
+        "apply": null
+      },
+      {
+        "id": 432068,
+        "field": "기술영업 (반도체 장비 기술영업)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          195
+        ],
+        "apply": null
+      },
+      {
+        "id": 432069,
+        "field": "기술영업 (Account Sales)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          195
+        ],
+        "apply": null
+      },
+      {
+        "id": 432070,
+        "field": "전략기획",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 5,
+        "end_time": null,
+        "duty_group_ids": [
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          103
+        ],
+        "apply": null
+      },
+      {
+        "id": 432071,
+        "field": "Finance specialist",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          122,
+          123,
+          124,
+          125,
+          126,
+          105
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": true
+  }
+}

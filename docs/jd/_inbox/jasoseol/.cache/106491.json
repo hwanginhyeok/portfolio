@@ -1,0 +1,204 @@
+{
+  "id": 106491,
+  "end_time": "2026-10-13T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106491,
+    "name": "선진",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/001/113/webp/%EC%84%A0%EC%A7%84CI_%EC%9B%8C%EB%93%9C%EB%A7%88%ED%81%AC.webp?1684485334",
+    "employment_page_url": "https://recruit-sj.com/?utm_source=jasoseol&utm_medium=plus&utm_campaign=202609",
+    "start_time": "2026-09-30T00:00:00.000+09:00",
+    "end_time": "2026-10-13T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div style=\"position:relative;\"><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/371/300/webp/260930_sj.webp?1790663495\" alt=\"선진 2026년 하반기 대규모 신입/경력 채용\"></div></body></html>\n",
+    "target": 4,
+    "created_at": "2026-09-29T15:56:40.000+09:00",
+    "recruit_type": 0,
+    "view_count": 1615,
+    "favorite_count": 54,
+    "homepage_count": 5,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 5004,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "2026년 하반기 대규모 신입/경력 채용",
+    "resume_expose": true,
+    "company_group": {
+      "id": 1113,
+      "name": "선진",
+      "business_size": "big_business",
+      "business_type": null,
+      "created_at": "2015-09-10T05:48:58.000+09:00",
+      "updated_at": "2025-10-15T10:48:32.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/001/113/original/%EC%84%A0%EC%A7%84CI_%EC%9B%8C%EB%93%9C%EB%A7%88%ED%81%AC.png?1684485334",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 431700,
+        "field": "사료영업",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          194
+        ],
+        "apply": null
+      },
+      {
+        "id": 431701,
+        "field": "식육영업",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          194
+        ],
+        "apply": null
+      },
+      {
+        "id": 431702,
+        "field": "유전자영업",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          194
+        ],
+        "apply": null
+      },
+      {
+        "id": 431703,
+        "field": "육가공 급식영업",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          194
+        ],
+        "apply": null
+      },
+      {
+        "id": 431704,
+        "field": "육가공 식품영업",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          194
+        ],
+        "apply": null
+      },
+      {
+        "id": 431705,
+        "field": "육가공 공무기획",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          186
+        ],
+        "apply": null
+      },
+      {
+        "id": 431706,
+        "field": "내부감사",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          109,
+          103
+        ],
+        "apply": null
+      },
+      {
+        "id": 431707,
+        "field": "육가공 물류 자동화 관리",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          150,
+          145
+        ],
+        "apply": null
+      },
+      {
+        "id": 431708,
+        "field": "컴플라이언스",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          109,
+          103
+        ],
+        "apply": null
+      },
+      {
+        "id": 431709,
+        "field": "신용지원",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 4,
+        "end_time": null,
+        "duty_group_ids": [
+          122,
+          125,
+          105
+        ],
+        "apply": null
+      },
+      {
+        "id": 431711,
+        "field": "급수설비연구",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          227,
+          216
+        ],
+        "apply": null
+      },
+      {
+        "id": 431712,
+        "field": "육가공 경영기획",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          109,
+          103
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

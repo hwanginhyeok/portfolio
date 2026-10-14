@@ -1,0 +1,96 @@
+{
+  "id": 106486,
+  "end_time": "2026-10-14T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106486,
+    "name": "케이씨",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/006/570/webp/conect_info_278_logo.webp?1684487376",
+    "employment_page_url": "https://www.kct.co.kr/#0",
+    "start_time": "2026-09-29T14:00:00.000+09:00",
+    "end_time": "2026-10-14T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div style=\"position:relative;\"><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/371/244/webp/%EC%BC%80%EC%9D%B4%EC%94%A8_%EA%B3%B5%EA%B3%A0%EB%AC%B8_v3.webp?1790658370\" alt=\"케이씨 2026년 하반기 경력사원 채용\"></div></body></html>\n",
+    "target": 4,
+    "created_at": "2026-09-29T14:38:03.000+09:00",
+    "recruit_type": 0,
+    "view_count": 5818,
+    "favorite_count": 17,
+    "homepage_count": 15,
+    "is_receive_applicant": true,
+    "favorite": false,
+    "chat_id": 12959,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "2026년 하반기 경력사원 채용",
+    "resume_expose": true,
+    "company_group": {
+      "id": 6570,
+      "name": "케이씨",
+      "business_size": "middle_market",
+      "business_type": null,
+      "created_at": "2018-05-15T16:02:18.000+09:00",
+      "updated_at": "2023-05-19T18:09:36.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/006/570/original/conect_info_278_logo.png?1684487376",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 431685,
+        "field": "인사총무 (계약)",
+        "division": 4,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 2,
+        "end_time": null,
+        "duty_group_ids": [
+          115,
+          128,
+          104,
+          107
+        ],
+        "apply": "OPEN"
+      },
+      {
+        "id": 431686,
+        "field": "SI팀 - 전장설계 / 프로그램",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          220
+        ],
+        "apply": "OPEN"
+      },
+      {
+        "id": 431687,
+        "field": "Gas장비개발팀 - 기구 설계",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          219
+        ],
+        "apply": "OPEN"
+      },
+      {
+        "id": 431688,
+        "field": "Chem장비개발팀 - Chemical Mixing System & CCSS 제어 프로그램",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          220
+        ],
+        "apply": "OPEN"
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

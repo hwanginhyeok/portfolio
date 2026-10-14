@@ -1,0 +1,75 @@
+{
+  "id": 106571,
+  "end_time": "2026-10-15T17:00:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106571,
+    "name": "디앤오",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/001/850/webp/%EB%94%94%EC%95%A4%EC%98%A4.webp?1703819040",
+    "employment_page_url": "https://careers.lg.com/apply?c=SVO",
+    "start_time": "2026-10-02T09:00:00.000+09:00",
+    "end_time": "2026-10-15T17:00:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div style=\"position:relative;\">\n<div><a style=\"display:block;height:8.80281690140845%;left:1.1883495963193516%;position:absolute;text-decoration:none;top:90.85289753658671%;width:97.05882352941177%;z-index:1;\" href=\"https://careers.lg.com/apply?c=SVO\" target=\"_blank\">   </a></div>\n<div><a style=\"display:block;height:2.147887323943662%;left:70.57337633428726%;position:absolute;text-decoration:none;top:87.6760606362786%;width:22.593582887700535%;z-index:1;\" href=\"http://pf.kakao.com/_Exaxfwxj/chat\" target=\"_blank\">   </a></div>\n<div><a style=\"display:block;height:2.535211267605634%;left:38.22043515781668%;position:absolute;text-decoration:none;top:87.53521556585608%;width:21.92513368983957%;z-index:1;\" href=\"https://blog.naver.com/dnocorp\" target=\"_blank\">   </a></div>\n<div><a style=\"display:block;height:2.147887323943662%;left:7.605461895784591%;position:absolute;text-decoration:none;top:87.39437049543353%;width:19.25133689839572%;z-index:1;\" href=\"https://www.youtube.com/@do1616\" target=\"_blank\">   </a></div>\n<div><a style=\"display:block;height:6.232394366197183%;left:53.32738702947443%;position:absolute;text-decoration:none;top:78.16510267660651%;width:36.229946524064175%;z-index:1;\" href=\"https://careers.lg.com/channel/detail/svo/story/486\" target=\"_blank\">   </a></div>\n<div><a style=\"display:block;height:6.302816901408451%;left:10.680328205945019%;position:absolute;text-decoration:none;top:78.05946887378961%;width:36.36363636363637%;z-index:1;\" href=\"https://youtu.be/fkwZbmlkfRo?si=9c6TvIyYZtS6xIhK\" target=\"_blank\">   </a></div>\n<div><a style=\"display:block;height:1.4084507042253522%;left:28.728456548191012%;position:absolute;text-decoration:none;top:72.2143984512544%;width:13.23529411764706%;z-index:1;\" href=\"https://careers.lg.com/channel/detail/svo\" target=\"_blank\">   </a></div>\n<div><a style=\"display:block;height:1.3380281690140845%;left:7.4717720562124%;position:absolute;text-decoration:none;top:35.58294269400583%;width:26.069518716577537%;z-index:1;\" href=\"https://careers.lg.com/apply?c=SVO\" target=\"_blank\">   </a></div>\n<div><a style=\"display:block;height:3.8028169014084505%;left:7.605461895784591%;position:absolute;text-decoration:none;top:30.93505537006217%;width:85.6951871657754%;z-index:1;\" href=\"https://careers.lg.com/apply/detail?id=1002254\" target=\"_blank\">   </a></div>\n<div><a style=\"display:block;height:3.873239436619718%;left:7.739151735356785%;position:absolute;text-decoration:none;top:25.970266637667805%;width:85.56149732620321%;z-index:1;\" href=\"https://careers.lg.com/apply/detail?id=1002255\" target=\"_blank\">   </a></div>\n<div><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/371/990/webp/image.webp?1790927187\" alt=\"디앤오 [LG그룹] 지원 부문 인재 채용\"></div>\n</div></body></html>\n",
+    "target": 0,
+    "created_at": "2026-10-02T16:46:30.000+09:00",
+    "recruit_type": 0,
+    "view_count": 1837,
+    "favorite_count": 137,
+    "homepage_count": 57,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 5741,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "[LG그룹] 지원 부문 인재 채용",
+    "resume_expose": true,
+    "company_group": {
+      "id": 1850,
+      "name": "디앤오",
+      "business_size": "big_business",
+      "business_type": null,
+      "created_at": "2015-09-10T05:50:55.000+09:00",
+      "updated_at": "2023-12-29T12:04:00.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/001/850/original/%EB%94%94%EC%95%A4%EC%98%A4.png?1703819040",
+      "alternate_names": [
+        "D&O"
+      ],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 432136,
+        "field": "IT기획",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 5,
+        "end_time": null,
+        "duty_group_ids": [
+          170,
+          171,
+          109,
+          103
+        ],
+        "apply": null
+      },
+      {
+        "id": 432137,
+        "field": "세무",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 24,
+        "end_time": null,
+        "duty_group_ids": [
+          123,
+          122,
+          106,
+          105
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": true
+  }
+}

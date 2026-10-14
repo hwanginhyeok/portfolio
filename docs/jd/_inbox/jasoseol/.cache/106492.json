@@ -1,0 +1,186 @@
+{
+  "id": 106492,
+  "end_time": "2026-10-18T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106492,
+    "name": "한국화재보험협회",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/004/302/webp/logo_443.webp?1684486601",
+    "employment_page_url": "https://kfpa.careerlink.kr/jobs",
+    "start_time": "2026-09-29T00:00:00.000+09:00",
+    "end_time": "2026-10-18T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/371/389/webp/%E1%84%92%E1%85%A1%E1%86%AB%E1%84%80%E1%85%AE%E1%86%A8%E1%84%92%E1%85%AA%E1%84%8C%E1%85%A2%E1%84%87%E1%85%A9%E1%84%92%E1%85%A5%E1%86%B7%E1%84%92%E1%85%A7%E1%86%B8%E1%84%92%E1%85%AC2.webp?1790724565\" alt=\"한국화재보험협회 2026년 하반기 신입/경력직 채용\"></div></body></html>\n",
+    "target": 0,
+    "created_at": "2026-09-29T16:08:08.000+09:00",
+    "recruit_type": 0,
+    "view_count": 4293,
+    "favorite_count": 178,
+    "homepage_count": 37,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 10639,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "2026년 하반기 신입/경력직 채용",
+    "resume_expose": true,
+    "company_group": {
+      "id": 4302,
+      "name": "한국화재보험협회",
+      "business_size": null,
+      "business_type": "public_institution",
+      "created_at": "2016-10-10T11:44:35.000+09:00",
+      "updated_at": "2023-05-19T17:56:41.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/004/302/original/logo_443.jpg?1684486601",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 431713,
+        "field": "연구원",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 8,
+        "end_time": null,
+        "duty_group_ids": [
+          191,
+          192,
+          225,
+          184
+        ],
+        "apply": null
+      },
+      {
+        "id": 431714,
+        "field": "홍보",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 6,
+        "end_time": null,
+        "duty_group_ids": [
+          142,
+          143,
+          133
+        ],
+        "apply": null
+      },
+      {
+        "id": 431715,
+        "field": "보험",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 4,
+        "end_time": null,
+        "duty_group_ids": [
+          201,
+          212,
+          213
+        ],
+        "apply": null
+      },
+      {
+        "id": 431716,
+        "field": "기술사, 관리사",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 2,
+        "end_time": null,
+        "duty_group_ids": [
+          191,
+          192,
+          113,
+          103,
+          184
+        ],
+        "apply": null
+      },
+      {
+        "id": 431717,
+        "field": "LLM",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 4,
+        "end_time": null,
+        "duty_group_ids": [
+          167,
+          176,
+          171,
+          162
+        ],
+        "apply": null
+      },
+      {
+        "id": 431718,
+        "field": "머신러닝",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 6,
+        "end_time": null,
+        "duty_group_ids": [
+          167,
+          180,
+          179,
+          163
+        ],
+        "apply": null
+      },
+      {
+        "id": 431719,
+        "field": "데이터",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 2,
+        "end_time": null,
+        "duty_group_ids": [
+          179,
+          181,
+          166,
+          163
+        ],
+        "apply": null
+      },
+      {
+        "id": 431720,
+        "field": "플랫폼",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 3,
+        "end_time": null,
+        "duty_group_ids": [
+          167,
+          176,
+          175,
+          166,
+          162
+        ],
+        "apply": null
+      },
+      {
+        "id": 431721,
+        "field": "연구원 박사",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          227,
+          220,
+          230,
+          216,
+          217
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

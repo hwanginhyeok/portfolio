@@ -1,0 +1,56 @@
+{
+  "id": 106668,
+  "end_time": "2026-10-21T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106668,
+    "name": "녹십자웰빙",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/008/313/webp/%EC%9D%B4%EB%AF%B8%EC%A7%80_3.webp?1684487813",
+    "employment_page_url": "https://careers.gcbiopharma.com/job-invite/2898/",
+    "start_time": "2026-10-12T12:00:00.000+09:00",
+    "end_time": "2026-10-21T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div style=\"position:relative;\"><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/098/webp/R_D%EC%9A%B4%EC%98%81%EA%B4%80%EB%A6%AC_%EC%B1%84%EC%9A%A9%EA%B3%B5%EA%B3%A0.webp?1791785185\" alt=\"녹십자웰빙 R&amp;D운영관리 경력 채용\"></div></body></html>\n",
+    "target": 4,
+    "created_at": "2026-10-12T15:10:34.000+09:00",
+    "recruit_type": 0,
+    "view_count": 790,
+    "favorite_count": 14,
+    "homepage_count": 0,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 15224,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "R&D운영관리 경력 채용",
+    "resume_expose": true,
+    "company_group": {
+      "id": 8313,
+      "name": "녹십자웰빙",
+      "business_size": "middle_market",
+      "business_type": null,
+      "created_at": "2020-03-02T12:33:36.000+09:00",
+      "updated_at": "2023-05-19T18:16:53.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/008/313/original/%EC%9D%B4%EB%AF%B8%EC%A7%80_3.png?1684487813",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 432544,
+        "field": "R&D운영관리",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          110,
+          114,
+          103
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

@@ -1,0 +1,433 @@
+{
+  "id": 106633,
+  "end_time": "2026-11-11T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106633,
+    "name": "아이센스",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/001/294/webp/logo_r.webp?1684485407",
+    "employment_page_url": "https://recruit.i-sens.com/career",
+    "start_time": "2026-10-12T09:00:00.000+09:00",
+    "end_time": "2026-11-11T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div style=\"position:relative;\">\n<div><a style=\"display:block;height:0.42557215812369964%;left:34.07605013107871%;position:absolute;text-decoration:none;top:96.16775411681957%;width:31.550802139037433%;z-index:1;\" href=\"https://www.youtube.com/playlist?list=PLtOaAeMvxGKLVYoiS12OcRVuIFoj6IuIO\" target=\"_blank\">   </a></div>\n<div><a style=\"display:block;height:1.7212029506336295%;left:50.920969917174965%;position:absolute;text-decoration:none;top:94.13446491689521%;width:43.18181818181818%;z-index:1;\" href=\"https://youtu.be/eiq7wvmFls8?si=ZtvOIBb60X0ATXhW\" target=\"_blank\">   </a></div>\n<div><a style=\"display:block;height:1.7212029506336295%;left:5.718953341723763%;position:absolute;text-decoration:none;top:94.2444505686117%;width:43.18181818181818%;z-index:1;\" href=\"https://youtu.be/cWl8Xxj2vDo?si=uOauisitR7TvoaFy\" target=\"_blank\">   </a></div>\n<div><img style=\"display:block;max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/372/671/webp/image.webp?1791422116\" alt=\"아이센스 2026 하반기 신입/경력 대규모 채용\"></div>\n</div></body></html>\n",
+    "target": 0,
+    "created_at": "2026-10-08T10:15:26.000+09:00",
+    "recruit_type": 0,
+    "view_count": 6418,
+    "favorite_count": 223,
+    "homepage_count": 91,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 5185,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "2026 하반기 신입/경력 대규모 채용",
+    "resume_expose": true,
+    "company_group": {
+      "id": 1294,
+      "name": "아이센스",
+      "business_size": "middle_market",
+      "business_type": null,
+      "created_at": "2015-09-10T05:49:27.000+09:00",
+      "updated_at": "2023-05-19T17:36:47.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/001/294/original/logo_r.png?1684485407",
+      "alternate_names": [
+        "i-SENS"
+      ],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 432327,
+        "field": "고객사 관리/운영",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          197,
+          200,
+          194
+        ],
+        "apply": null
+      },
+      {
+        "id": 432328,
+        "field": "전략마케팅",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          110,
+          112,
+          137,
+          113,
+          103,
+          132
+        ],
+        "apply": null
+      },
+      {
+        "id": 432329,
+        "field": "해외CS (POC 장비) - 신입",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 7,
+        "end_time": null,
+        "duty_group_ids": [
+          200,
+          195,
+          186
+        ],
+        "apply": null
+      },
+      {
+        "id": 432330,
+        "field": "해외CS (POC 장비) - 경력",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          200,
+          195,
+          186
+        ],
+        "apply": null
+      },
+      {
+        "id": 432331,
+        "field": "라벨링 (Technical Writer)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          127,
+          243,
+          244,
+          107,
+          237
+        ],
+        "apply": null
+      },
+      {
+        "id": 432332,
+        "field": "인허가관리",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          108,
+          127,
+          107
+        ],
+        "apply": null
+      },
+      {
+        "id": 432333,
+        "field": "품질관리",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          189,
+          160,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 432334,
+        "field": "CGMS 알고리즘 개발 - 신입",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 5,
+        "end_time": null,
+        "duty_group_ids": [
+          167,
+          180,
+          179,
+          163
+        ],
+        "apply": null
+      },
+      {
+        "id": 432335,
+        "field": "CGMS 알고리즘 개발 - 경력",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          167,
+          180,
+          179,
+          163
+        ],
+        "apply": null
+      },
+      {
+        "id": 432336,
+        "field": "POC S/W 개발",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          165,
+          170,
+          169
+        ],
+        "apply": null
+      },
+      {
+        "id": 432337,
+        "field": "기술문서",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          160,
+          108,
+          127,
+          107
+        ],
+        "apply": null
+      },
+      {
+        "id": 432338,
+        "field": "소프트웨어 테스트",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          160,
+          166
+        ],
+        "apply": null
+      },
+      {
+        "id": 432339,
+        "field": "ASIC 및 HW 개발",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          220,
+          221,
+          169
+        ],
+        "apply": null
+      },
+      {
+        "id": 432340,
+        "field": "펌웨어개발",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          169,
+          220
+        ],
+        "apply": null
+      },
+      {
+        "id": 432341,
+        "field": "서비스운영 - 대리급",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          166,
+          171
+        ],
+        "apply": null
+      },
+      {
+        "id": 432342,
+        "field": "서비스운영 - 과장/차장급",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          166,
+          171
+        ],
+        "apply": null
+      },
+      {
+        "id": 432343,
+        "field": "백엔드 개발",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          176,
+          179,
+          181,
+          162,
+          163
+        ],
+        "apply": null
+      },
+      {
+        "id": 432344,
+        "field": "AI 프로세스 개발",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          167,
+          166,
+          171
+        ],
+        "apply": null
+      },
+      {
+        "id": 432345,
+        "field": "코딩/시약제조 - 학사",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 6,
+        "end_time": null,
+        "duty_group_ids": [
+          185,
+          189,
+          234,
+          183,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 432346,
+        "field": "코딩/시약제조 - 전문학사",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          185,
+          189,
+          234,
+          183,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 432347,
+        "field": "공정 엔지니어",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 17,
+        "end_time": null,
+        "duty_group_ids": [
+          188,
+          187,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 432348,
+        "field": "디바이스 생산기술",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          187,
+          220,
+          185,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 432349,
+        "field": "생산관리",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          187,
+          127,
+          107,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 432350,
+        "field": "SCM (구매)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          157,
+          150,
+          145,
+          147
+        ],
+        "apply": null
+      },
+      {
+        "id": 432351,
+        "field": "SCM (자재/물류)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          152,
+          150,
+          155,
+          145,
+          146
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": true
+  }
+}
