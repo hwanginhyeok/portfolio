@@ -3,12 +3,11 @@
 <!--
   hih.portfolio.jasoseol-report — Daily Jasoseol actionable report and ops notification, 08:36 Asia/Seoul.
 
-  macOS LaunchAgent for the portfolio cutover. Absolute paths only: a home
+  macOS LaunchAgent for the portfolio jobs. Absolute paths only: a home
   shorthand anywhere in a plist makes launchd fail the spawn with EX_CONFIG.
 
-  NOT loaded by the preparation step. The PM loads it together with turning off
-  the matching server-pc cron line (project-standard "Cutover"), after rsyncing
-  the job's state files:
+  Installed and loaded on the Mac; moved from the server-pc cron line on
+  2026-09-29 (t34, infra mac.yaml). Install / reload:
 
       cp launchd/hih.portfolio.jasoseol-report.plist $HOME/Library/LaunchAgents/
       launchctl bootstrap gui/$(id -u) $HOME/Library/LaunchAgents/hih.portfolio.jasoseol-report.plist

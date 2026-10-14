@@ -7,7 +7,7 @@ Crawls career boards of global technology firms (Aptiv, Tesla, Apple, Applied Ma
 ## Entry points
 
 - `python3 scripts/global_collect.py` — Crawl and update global inbox
-- `python3 scripts/global_collect.py --telegram` — Crawl and dispatch report via Telegram
+- `python3 scripts/global_collect.py --telegram` — Crawl and announce the report via `hih notify`
 - `python3 scripts/global_collect.py --dry-run` — Scan without persisting
 
 ## Contract
@@ -33,4 +33,4 @@ Crawls career boards of global technology firms (Aptiv, Tesla, Apple, Applied Ma
 
 ## Status
 
-live on server-pc via cron (`50 11 * * *`); prepared macOS LaunchAgent (absolute paths, not loaded); server cron still runs until the per-job cutover (`docs/cutover.md`).
+live on macOS: LaunchAgent `hih.portfolio.global-collect` (11:50 Asia/Seoul, loaded; moved from the server cron 2026-09-29, t34). See `docs/cutover.md`.

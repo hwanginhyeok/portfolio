@@ -29,4 +29,4 @@ Tracks Hwang Inhyeok's active application pipeline across all companies, maintai
 
 ## Status
 
-live on server-pc via cron (`47 11 * * *`); prepared macOS LaunchAgent (absolute paths, not loaded); server cron still runs until the per-job cutover (`docs/cutover.md`).
+live on macOS: LaunchAgent `hih.portfolio.applications-report` (11:47 Asia/Seoul, loaded; moved from the server cron 2026-09-29, t34). See `docs/cutover.md`.

@@ -18,6 +18,8 @@ For handoff, review, debate, or implementation work, read:
 - `WORK_LOG.md`
 - latest `debate/runs/*/summary.json` when relevant
 
+Note (2026-10-15): `REVIEW.md`, `LLM_BUDGET.md`, `LLM_PROVIDERS.json`, `WORK_LOG.md` and `debate/` do not exist in this repo; skip the ones that are absent.
+
 ## Source of Truth
 
 - Current task state: `docs/history/handoff.md`
@@ -49,7 +51,10 @@ risky/reversible consequences. Work ID format: `{PROJECT}-{YYYYMMDD}-{NN}`.
 
 ## Provider Fan-out
 
-Run the same context package through configured providers:
+Run the same context package through configured providers. NOTE (2026-10-15): the
+server-era script path below (`/home/gint_pcd/projects/hih-skills/...`) does not exist on
+this Mac and `~/hih-skills` was archived 2026-10-07; use the `hih-review` skill instead
+until `LLM_PROVIDERS.json` is repointed:
 
 ```bash
 /home/gint_pcd/projects/hih-skills/scripts/llm-fanout.py \
@@ -63,7 +68,7 @@ Use `--dry-run` first when changing provider config.
 
 ## Validation
 
-For the shared skill/provider infrastructure:
+For the shared skill/provider infrastructure (same dead server path; `check-ssot.sh` has no Mac copy):
 
 ```bash
 /home/gint_pcd/projects/hih-skills/scripts/check-ssot.sh

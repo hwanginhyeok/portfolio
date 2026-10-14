@@ -16,4 +16,4 @@ One spec per shipped feature, following `features/_template.md`
 | `features/apply-flow.md` | Posting to application: ranked shortlist, tailored kit, form-fill assist, tracking |
 | `features/collected-backup.md` | Daily commit + push of collector output (backup) |
 | `features/presentation-builder.md` | Graduate portfolio PPTX deck generators |
-| `features/harness-scheduling.md` | Six macOS LaunchAgents, `hih notify` alerts, Keychain secrets |
+| `features/harness-scheduling.md` | Seven macOS LaunchAgents, `hih notify` alerts, Keychain secrets |

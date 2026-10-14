@@ -115,3 +115,9 @@ This log records numbered architectural decisions (D1, D2, ...) for `portfolio` 
 - **Decision**: Add `scripts/apply_flow.py` (shortlist with domain-gated ranking, kit from verbatim profile lines, ledger tracking) and `scripts/apply_browser.py` (fills known fields in a new tab, stops before submit). Unknown facts stay `[TODO]`. Collector output is committed daily by `scripts/backup_collected.py` (pf-2); `global_collect.py` alerts once after 3 consecutive board failures (pf-4); the live-inbox tests use fixtures (pf-3).
 - **Consequence**: No account is created and nothing is submitted by an agent; a missing site login is reported as blocked. Wanted/Workday/Jasoseol need a stored login before step 3 can run live.
 
+---
+
+## Changes (docs truth sweep, t265 wave 18, 2026-10-15)
+
+- D7 ("non-active drafts") and D10 ("per-job cutover") describe the 2026-09-28/29 preparation. The cutover finished 2026-09-29 (t34): all six jobs run as loaded LaunchAgents; a seventh (`hih.portfolio.backup-collected`, 12:30) was added 2026-10-14.
+- D2 and D3 (`PORTFOLIO_PM_ENV` / `PM_ENV_PATH`, `/home/window11/...` defaults) are superseded: no script reads those variables any more; only `HIH_SCHEDULE_CLI` (default `~/bin/hih-schedule`), `HIH_BIN` and `HIH_SECRET_BIN` remain (D9, D11).
