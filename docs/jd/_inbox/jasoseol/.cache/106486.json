@@ -1,6 +1,6 @@
 {
   "id": 106486,
-  "end_time": "2026-10-14T23:59:00.000+09:00",
+  "end_time": "2026-10-18T23:59:00.000+09:00",
   "detail": {
     "ret": true,
     "id": 106486,
@@ -8,14 +8,14 @@
     "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/006/570/webp/conect_info_278_logo.webp?1684487376",
     "employment_page_url": "https://www.kct.co.kr/#0",
     "start_time": "2026-09-29T14:00:00.000+09:00",
-    "end_time": "2026-10-14T23:59:00.000+09:00",
-    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div style=\"position:relative;\"><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/371/244/webp/%EC%BC%80%EC%9D%B4%EC%94%A8_%EA%B3%B5%EA%B3%A0%EB%AC%B8_v3.webp?1790658370\" alt=\"케이씨 2026년 하반기 경력사원 채용\"></div></body></html>\n",
+    "end_time": "2026-10-18T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div style=\"position:relative;\"><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/575/webp/%E1%84%8F%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8A%E1%85%B5_%E1%84%80%E1%85%A9%E1%86%BC%E1%84%80%E1%85%A9%E1%84%86%E1%85%AE%E1%86%AB_%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC.webp?1791966799\" alt=\"케이씨 2026년 하반기 경력사원 채용\"></div></body></html>\n",
     "target": 4,
     "created_at": "2026-09-29T14:38:03.000+09:00",
     "recruit_type": 0,
-    "view_count": 5818,
-    "favorite_count": 17,
-    "homepage_count": 15,
+    "view_count": 32404,
+    "favorite_count": 170,
+    "homepage_count": 229,
     "is_receive_applicant": true,
     "favorite": false,
     "chat_id": 12959,
@@ -41,7 +41,7 @@
         "division": 4,
         "duty_category": null,
         "employment_resume": true,
-        "resume_count": 2,
+        "resume_count": 12,
         "end_time": null,
         "duty_group_ids": [
           115,
@@ -52,12 +52,25 @@
         "apply": "OPEN"
       },
       {
+        "id": 431891,
+        "field": "정보보안",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 21,
+        "end_time": null,
+        "duty_group_ids": [
+          166
+        ],
+        "apply": "OPEN"
+      },
+      {
         "id": 431686,
         "field": "SI팀 - 전장설계 / 프로그램",
         "division": 2,
         "duty_category": null,
         "employment_resume": true,
-        "resume_count": 0,
+        "resume_count": 2,
         "end_time": null,
         "duty_group_ids": [
           220
@@ -70,7 +83,7 @@
         "division": 2,
         "duty_category": null,
         "employment_resume": true,
-        "resume_count": 0,
+        "resume_count": 1,
         "end_time": null,
         "duty_group_ids": [
           219
@@ -89,8 +102,21 @@
           220
         ],
         "apply": "OPEN"
+      },
+      {
+        "id": 431892,
+        "field": "GAS설계팀",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 16,
+        "end_time": null,
+        "duty_group_ids": [
+          219
+        ],
+        "apply": "OPEN"
       }
     ],
-    "has_exceeded_employment": false
+    "has_exceeded_employment": true
   }
 }

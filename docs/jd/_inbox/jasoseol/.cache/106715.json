@@ -1,0 +1,60 @@
+{
+  "id": 106715,
+  "end_time": "2026-10-21T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106715,
+    "name": "엘티정밀",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/015/839/webp/jss_hashed_8d53bfa9c3c2bc445dd9_20260213T095221_LT%EC%A0%95%EB%B0%80_%EB%A1%9C%EA%B3%A0.webp?1770943942",
+    "employment_page_url": "https://ltpr.careerlink.kr/jobs/RC20261014037665",
+    "start_time": "2026-10-15T00:00:00.000+09:00",
+    "end_time": "2026-10-21T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div style=\"position:relative;\">\n<div><a style=\"display:block;height:32.375055285272005%;left:4.26321590647978%;position:absolute;text-decoration:none;top:1.1057047652017222%;width:91.44385026737967%;z-index:1;\" href=\"https://www.youtube.com/watch?v=67V0s0RjOmA&amp;t=401s\" target=\"_blank\">   </a></div>\n<div><img style=\"display:block;max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/492/webp/image.webp?1791951863\" alt=\"엘티정밀 AX Part 경력사원 모집\"></div>\n</div></body></html>\n",
+    "target": 0,
+    "created_at": "2026-10-14T13:24:25.000+09:00",
+    "recruit_type": 0,
+    "view_count": 598,
+    "favorite_count": 1,
+    "homepage_count": 3,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 20673,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "AX Part 경력사원 모집",
+    "resume_expose": true,
+    "company_group": {
+      "id": 15839,
+      "name": "엘티정밀",
+      "business_size": "middle_market",
+      "business_type": null,
+      "created_at": "2026-02-13T09:43:48.000+09:00",
+      "updated_at": "2026-07-13T14:53:53.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/015/839/original/jss_hashed_8d53bfa9c3c2bc445dd9_20260213T095221_LT%EC%A0%95%EB%B0%80_%EB%A1%9C%EA%B3%A0.png?1770943942",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 432679,
+        "field": "AX Part (기획, AI활용)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          110,
+          112,
+          167,
+          180,
+          113,
+          103,
+          163
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

@@ -1,0 +1,364 @@
+{
+  "id": 106665,
+  "end_time": "2026-10-28T14:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106665,
+    "name": "무림그룹",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/004/110/webp/20210614104625_pxaenamx.webp?1700698371",
+    "employment_page_url": "https://recruit.moorim.co.kr",
+    "start_time": "2026-10-14T09:00:00.000+09:00",
+    "end_time": "2026-10-28T14:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/443/webp/%EC%B1%84%EC%9A%A9%EA%B3%B5%EA%B3%A0_%EC%B5%9C%EC%A2%85%28%EC%88%98%EC%A0%95%29.webp?1791938582\" alt=\"무림그룹 2026년 하반기 신입·경력 채용공고\"></div></body></html>\n",
+    "target": 0,
+    "created_at": "2026-10-12T13:26:05.000+09:00",
+    "recruit_type": 0,
+    "view_count": 11599,
+    "favorite_count": 732,
+    "homepage_count": 223,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 10447,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "2026년 하반기 신입·경력 채용공고",
+    "resume_expose": true,
+    "company_group": {
+      "id": 4110,
+      "name": "무림그룹",
+      "business_size": "middle_market",
+      "business_type": null,
+      "created_at": "2016-07-22T10:58:54.000+09:00",
+      "updated_at": "2023-11-23T09:12:52.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/004/110/original/20210614104625_pxaenamx.jpg?1700698371",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 432510,
+        "field": "경영(기술) 기획",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          109,
+          111,
+          103
+        ],
+        "apply": null
+      },
+      {
+        "id": 432511,
+        "field": "경영관리",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 29,
+        "end_time": null,
+        "duty_group_ids": [
+          109,
+          122,
+          103,
+          105
+        ],
+        "apply": null
+      },
+      {
+        "id": 432512,
+        "field": "인사",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 44,
+        "end_time": null,
+        "duty_group_ids": [
+          115,
+          117,
+          118,
+          104
+        ],
+        "apply": null
+      },
+      {
+        "id": 432526,
+        "field": "인사",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 5,
+        "end_time": null,
+        "duty_group_ids": [
+          115,
+          116,
+          117,
+          118,
+          119,
+          120,
+          121,
+          104
+        ],
+        "apply": null
+      },
+      {
+        "id": 432513,
+        "field": "자금",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 12,
+        "end_time": null,
+        "duty_group_ids": [
+          122,
+          125,
+          105
+        ],
+        "apply": null
+      },
+      {
+        "id": 432527,
+        "field": "자금",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          122,
+          123,
+          124,
+          125,
+          126,
+          105
+        ],
+        "apply": null
+      },
+      {
+        "id": 432514,
+        "field": "경영혁신",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 6,
+        "end_time": null,
+        "duty_group_ids": [
+          109,
+          117,
+          103,
+          104
+        ],
+        "apply": null
+      },
+      {
+        "id": 432515,
+        "field": "회계",
+        "division": 4,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 2,
+        "end_time": null,
+        "duty_group_ids": [
+          123,
+          106,
+          105
+        ],
+        "apply": null
+      },
+      {
+        "id": 432516,
+        "field": "채권관리",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 3,
+        "end_time": null,
+        "duty_group_ids": [
+          122,
+          213,
+          105
+        ],
+        "apply": null
+      },
+      {
+        "id": 432517,
+        "field": "펄프생산관리",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 10,
+        "end_time": null,
+        "duty_group_ids": [
+          187,
+          185,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 432518,
+        "field": "품질관리(울산)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 13,
+        "end_time": null,
+        "duty_group_ids": [
+          189,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 432519,
+        "field": "품질관리(진주)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 3,
+        "end_time": null,
+        "duty_group_ids": [
+          187,
+          189,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 432528,
+        "field": "품질관리(진주)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          187,
+          188,
+          189,
+          190,
+          183
+        ],
+        "apply": null
+      },
+      {
+        "id": 432520,
+        "field": "안전보건관리",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 23,
+        "end_time": null,
+        "duty_group_ids": [
+          191,
+          184
+        ],
+        "apply": null
+      },
+      {
+        "id": 432521,
+        "field": "설비관리(울산)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 4,
+        "end_time": null,
+        "duty_group_ids": [
+          186,
+          227,
+          216
+        ],
+        "apply": null
+      },
+      {
+        "id": 432529,
+        "field": "설비관리(울산)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 2,
+        "end_time": null,
+        "duty_group_ids": [
+          185
+        ],
+        "apply": null
+      },
+      {
+        "id": 432522,
+        "field": "설비관리(진주)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 4,
+        "end_time": null,
+        "duty_group_ids": [
+          186,
+          227,
+          216
+        ],
+        "apply": null
+      },
+      {
+        "id": 432523,
+        "field": "기계관리",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          186,
+          227,
+          216
+        ],
+        "apply": null
+      },
+      {
+        "id": 432530,
+        "field": "기계관리",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          205
+        ],
+        "apply": null
+      },
+      {
+        "id": 432524,
+        "field": "연구개발",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 13,
+        "end_time": null,
+        "duty_group_ids": [
+          233,
+          235,
+          217,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 432525,
+        "field": "제지연구",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 2,
+        "end_time": null,
+        "duty_group_ids": [
+          229,
+          233,
+          217
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": true
+  }
+}

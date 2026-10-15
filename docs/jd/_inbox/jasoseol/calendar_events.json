@@ -78,5 +78,13 @@
     "marker": "jasoseol:106700",
     "timing": "2026-10-26 (all-day)",
     "updated_at": "2026-10-14T08:34:10.422842+09:00"
+  },
+  "106724": {
+    "event_id": "dgkso4qr82echo7svdp98i1898",
+    "end_time": "2026-10-31T23:59:00.000+09:00",
+    "title": "마감 · 토스플레이스 Device Hardware Quality Engineer",
+    "marker": "jasoseol:106724",
+    "timing": "2026-10-31 (all-day)",
+    "updated_at": "2026-10-15T08:34:09.060982+09:00"
   }
 }

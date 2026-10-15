@@ -1,0 +1,478 @@
+{
+  "id": 106724,
+  "end_time": "2026-10-31T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106724,
+    "name": "토스플레이스",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/014/368/webp/jss_hashed_bd3ae151c6b5f2508b9d_20260716T153159_logo-place.webp?1784183571",
+    "employment_page_url": "https://tossplace.com/recruit",
+    "start_time": "2026-10-12T00:00:00.000+09:00",
+    "end_time": "2026-10-31T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div style=\"position:relative;\"><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/403/webp/1200_628.webp?1791899778\" alt=\"토스플레이스 토스플레이스 전 직군 대규모 채용 (-10/31)\"></div></body></html>\n",
+    "target": 4,
+    "created_at": "2026-10-14T17:36:40.000+09:00",
+    "recruit_type": 0,
+    "view_count": 1530,
+    "favorite_count": 95,
+    "homepage_count": 169,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 17987,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "토스플레이스 전 직군 대규모 채용 (-10/31)",
+    "resume_expose": true,
+    "company_group": {
+      "id": 14368,
+      "name": "토스플레이스",
+      "business_size": null,
+      "business_type": null,
+      "created_at": "2022-12-01T16:02:43.000+09:00",
+      "updated_at": "2026-07-16T15:32:51.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/014/368/original/jss_hashed_bd3ae151c6b5f2508b9d_20260716T153159_logo-place.png?1784183571",
+      "alternate_names": [
+        "toss place"
+      ],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 432699,
+        "field": "Android Developer",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          173,
+          161
+        ],
+        "apply": null
+      },
+      {
+        "id": 432700,
+        "field": "Business Operations Manager",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          197
+        ],
+        "apply": null
+      },
+      {
+        "id": 432701,
+        "field": "Channel Account Manager",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          194,
+          198,
+          200
+        ],
+        "apply": null
+      },
+      {
+        "id": 432702,
+        "field": "Data Engineer",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          179,
+          163
+        ],
+        "apply": null
+      },
+      {
+        "id": 432703,
+        "field": "Device Hardware Quality Engineer",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          160,
+          169
+        ],
+        "apply": null
+      },
+      {
+        "id": 432704,
+        "field": "DevOps Engineer",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          175,
+          176,
+          177,
+          178,
+          162
+        ],
+        "apply": null
+      },
+      {
+        "id": 432705,
+        "field": "Direct Sales Manager",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          194,
+          198
+        ],
+        "apply": null
+      },
+      {
+        "id": 432706,
+        "field": "Direct Sales Operations Manager",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          194,
+          197,
+          198,
+          200
+        ],
+        "apply": null
+      },
+      {
+        "id": 432707,
+        "field": "Enterprise Account Manager",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          194,
+          195,
+          196,
+          197,
+          198,
+          200
+        ],
+        "apply": null
+      },
+      {
+        "id": 432708,
+        "field": "Frontend Developer",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 3,
+        "end_time": null,
+        "duty_group_ids": [
+          175,
+          162
+        ],
+        "apply": null
+      },
+      {
+        "id": 432709,
+        "field": "Frontend Platform Engineer",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          175,
+          162
+        ],
+        "apply": null
+      },
+      {
+        "id": 432710,
+        "field": "General Affairs Manager",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          128,
+          107
+        ],
+        "apply": null
+      },
+      {
+        "id": 432711,
+        "field": "HRBP",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          115,
+          116,
+          118,
+          119,
+          120,
+          104
+        ],
+        "apply": null
+      },
+      {
+        "id": 432712,
+        "field": "iOS Developer",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          172,
+          161
+        ],
+        "apply": null
+      },
+      {
+        "id": 432713,
+        "field": "Node.js Developer",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          176,
+          162
+        ],
+        "apply": null
+      },
+      {
+        "id": 432714,
+        "field": "Platform Product Owner",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          171
+        ],
+        "apply": null
+      },
+      {
+        "id": 432715,
+        "field": "Privacy Manager",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          166
+        ],
+        "apply": null
+      },
+      {
+        "id": 432716,
+        "field": "Product Designer",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          241
+        ],
+        "apply": null
+      },
+      {
+        "id": 432717,
+        "field": "Product Owner",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          171
+        ],
+        "apply": null
+      },
+      {
+        "id": 432718,
+        "field": "QA Manager",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 2,
+        "end_time": null,
+        "duty_group_ids": [
+          160
+        ],
+        "apply": null
+      },
+      {
+        "id": 432719,
+        "field": "Recruiting Business Partner",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          118,
+          104
+        ],
+        "apply": null
+      },
+      {
+        "id": 432720,
+        "field": "Security Engineer",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          166
+        ],
+        "apply": null
+      },
+      {
+        "id": 432721,
+        "field": "Security Researcher",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          166
+        ],
+        "apply": null
+      },
+      {
+        "id": 432722,
+        "field": "Server Developer",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 5,
+        "end_time": null,
+        "duty_group_ids": [
+          176,
+          162
+        ],
+        "apply": null
+      },
+      {
+        "id": 432723,
+        "field": "Site Reliability Engineer",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          176,
+          178,
+          162
+        ],
+        "apply": null
+      },
+      {
+        "id": 432724,
+        "field": "Solution Account Manager",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          194,
+          195,
+          196,
+          197,
+          198,
+          200
+        ],
+        "apply": null
+      },
+      {
+        "id": 432725,
+        "field": "Technical Account Manager",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          194,
+          195,
+          196,
+          198
+        ],
+        "apply": null
+      },
+      {
+        "id": 432726,
+        "field": "Technical Product Owner",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          171
+        ],
+        "apply": null
+      },
+      {
+        "id": 432727,
+        "field": "UX Researcher",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          114,
+          171,
+          103
+        ],
+        "apply": null
+      },
+      {
+        "id": 432728,
+        "field": "Visual Designer",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          243,
+          238,
+          241,
+          237
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

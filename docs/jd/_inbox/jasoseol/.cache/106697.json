@@ -1,0 +1,69 @@
+{
+  "id": 106697,
+  "end_time": "2026-10-27T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106697,
+    "name": "STX엔진",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/006/609/webp/jss_hashed_d8babf2ac90e4e9b7f2d_20260521T083947_CI_Kor.webp?1779320537",
+    "employment_page_url": "https://recruit.stxengine.co.kr/",
+    "start_time": "2026-10-14T09:00:00.000+09:00",
+    "end_time": "2026-10-27T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div style=\"position:relative;\">\n<div><a style=\"display:block;height:1.4951627088830255%;left:36.06283422459893%;position:absolute;text-decoration:none;top:96.1228378774553%;width:28.74331550802139%;z-index:1;\" href=\"https://recruit.stxengine.co.kr/\" target=\"_blank\">   </a></div>\n<div><img style=\"display:block;max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/333/webp/image.webp?1791875157\" alt=\"STX엔진 신입/경력 수시채용\"></div>\n</div></body></html>\n",
+    "target": 0,
+    "created_at": "2026-10-13T16:06:04.000+09:00",
+    "recruit_type": 0,
+    "view_count": 5589,
+    "favorite_count": 30,
+    "homepage_count": 30,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 12998,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "신입/경력 수시채용",
+    "resume_expose": true,
+    "company_group": {
+      "id": 6609,
+      "name": "STX엔진",
+      "business_size": "middle_market",
+      "business_type": null,
+      "created_at": "2018-05-17T13:57:19.000+09:00",
+      "updated_at": "2026-05-21T08:42:17.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/006/609/original/jss_hashed_d8babf2ac90e4e9b7f2d_20260521T083947_CI_Kor.jpg?1779320537",
+      "alternate_names": [
+        "에스티엑스엔진"
+      ],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 432629,
+        "field": "법무",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 3,
+        "end_time": null,
+        "duty_group_ids": [
+          108
+        ],
+        "apply": null
+      },
+      {
+        "id": 432630,
+        "field": "법무",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          108
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

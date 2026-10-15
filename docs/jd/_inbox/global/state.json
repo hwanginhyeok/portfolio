@@ -29559,7 +29559,7 @@
       "first_seen": "2026-10-02",
       "company": "Waymo",
       "title": "Machine Learning Engineer, Driver Refinement & Validation, Perception",
-      "score": 20,
+      "score": 23,
       "eligibility": "visa-needed",
       "track": "ai-native",
       "search_lane": "ai-native",
@@ -32127,6 +32127,2870 @@
       "owner_domain_evidence": [
         "embedded-electrical-hardware"
       ]
+    },
+    "greenhouse:waymo:8275507": {
+      "first_seen": "2026-10-15",
+      "company": "Waymo",
+      "title": "Senior SDS Component Homologation Engineer",
+      "score": 18,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility"
+      ]
+    },
+    "greenhouse:anthropic:5453262008": {
+      "first_seen": "2026-10-15",
+      "company": "Anthropic",
+      "title": "Technical Program Manager, Inference",
+      "score": 26,
+      "eligibility": "sponsorship-likely",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 32,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5262993007": {
+      "first_seen": "2026-10-15",
+      "company": "Lucid Motors",
+      "title": "Automation Manager ",
+      "score": 51,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "motor-power-electronics",
+        "robotics-industrial-automation",
+        "industrial-manufacturing-transformation"
+      ]
+    },
+    "ashby:wayve:ab085171-5815-4a63-bfe9-3bf4a09787b2": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Technical Lead Manager, Synthetic Data ",
+      "score": 21,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "ashby:wayve:643e2bcf-ee19-4b9c-8b13-fa65c8069fc9": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "System Integration Engineer",
+      "score": 24,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility"
+      ]
+    },
+    "ashby:wayve:25e804f4-e223-4dd4-ae7a-a718c1bb17cd": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Senior Software Engineer - Runtime Platform, Robot Software",
+      "score": 35,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "automotive-mobility",
+        "robotics-industrial-automation"
+      ]
+    },
+    "ashby:wayve:cf7dee5e-25cf-4284-8435-cfbcae4deb9c": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "System Test Automation Engineer",
+      "score": 47,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "robotics-industrial-automation"
+      ]
+    },
+    "ashby:wayve:f4e9b0b3-f7c2-42d7-a9ed-67548a5b8073": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Software Engineer, Embedded Automotive Platform",
+      "score": 36,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility",
+        "embedded-electrical-hardware"
+      ]
+    },
+    "ashby:wayve:3976048f-1ffc-4be4-85f5-5287ce7b1a78": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Lead Technical Program Manager, Quality & Compliance",
+      "score": 31,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 60,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program",
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:wayve:6c8ef024-906f-4882-82dd-bec9991dbe38": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Engineering Manager, Embedded Automotive Platforms",
+      "score": 22,
+      "eligibility": "remote",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility",
+        "embedded-electrical-hardware"
+      ]
+    },
+    "ashby:wayve:52393239-7fd8-437b-8877-b204f1a8e014": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "US - Technical Operations Manager",
+      "score": 15,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:wayve:f3f61d23-6149-4391-8caa-3b92d809338b": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Applied Scientist / Machine Learning Engineer",
+      "score": 26,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": [
+        "machinery-equipment",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "ashby:wayve:79d22b83-32e2-4078-bfc0-218e2115f76c": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Data Science Manager",
+      "score": 23,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "ashby:wayve:642556b2-a8c3-4ad2-876e-0ee029436db9": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Robotaxi Commercial Manager",
+      "score": 22,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:wayve:8dc02566-893e-40e6-89f8-2675a9e793df": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Senior Triage Automation Engineer",
+      "score": 45,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation",
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": [
+        "robotics-industrial-automation",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "ashby:wayve:e2f5355f-ac4e-4487-8cb5-a9f0d8cbb71e": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Robotics Generalist",
+      "score": 28,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "robotics-industrial-automation"
+      ]
+    },
+    "ashby:wayve:f81da2a7-7ef3-4338-8957-90b10baf53f3": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Engineering Manager, OS, Robot Software ",
+      "score": 36,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "automotive-mobility",
+        "robotics-industrial-automation"
+      ]
+    },
+    "ashby:wayve:34758430-ea52-4ebd-a850-0ea518a41385": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Engineering Manager, Runtime Platform, Robot Software",
+      "score": 41,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "automotive-mobility",
+        "robotics-industrial-automation"
+      ]
+    },
+    "ashby:wayve:d0b278b9-2548-4fe3-8878-bcd7989944b9": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Senior Embedded Software Test Engineer, Onboard Test Automation",
+      "score": 46,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 56,
+      "actionable": false,
+      "fit_evidence": [
+        "test-validation",
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility",
+        "embedded-electrical-hardware",
+        "robotics-industrial-automation",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "ashby:wayve:0e78f153-01ea-413a-92b5-03f42efae1be": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Systems Engineer, Robotaxi ",
+      "score": 27,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:wayve:61807813-98e4-4884-a002-b330a794ab73": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Software Engineer, Data Enrichment",
+      "score": 25,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "ashby:wayve:5769c470-3752-4a00-b6d2-983cf892ed9e": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Senior Software Engineer, Reliability Engineer",
+      "score": 16,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "reliability-durability"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "ashby:wayve:ff2f5234-99c2-4eae-b5c6-e8d719da4e4e": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Software Engineer, Simulation",
+      "score": 44,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "ashby:wayve:bdf6686e-52e9-45b6-9cf3-3de9645a9b04": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Tech Lead - Remote Assist, Robotaxi",
+      "score": 28,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility"
+      ]
+    },
+    "ashby:wayve:0ab3def7-8ac2-431c-82b0-225c97c8d495": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Automotive Systems Engineer",
+      "score": 26,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility"
+      ]
+    },
+    "ashby:wayve:5d3baafc-4af6-47db-91a0-ee5cb2cf3e04": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Applied Scientist/Machine Learning Engineer, Gaia ",
+      "score": 23,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": [
+        "machinery-equipment",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "ashby:wayve:797b69f1-b371-4373-9017-8437f2d81a9b": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Solution Architect",
+      "score": 33,
+      "eligibility": "remote",
+      "track": "engineering-consulting",
+      "search_lane": "engineering-consulting",
+      "search_lanes": [
+        "core",
+        "engineering-consulting"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "technical-consulting"
+      ],
+      "owner_domain_evidence": []
+    },
+    "ashby:wayve:424ef55e-7efc-45bd-8f8c-48b8b51cb617": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Software Engineer, Data Ingestion",
+      "score": 19,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "ashby:wayve:102a31c7-44a5-48bc-8c6e-1f4434e83974": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Data Engineer, Data Quality & Provenance",
+      "score": 35,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 58,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting",
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "ashby:wayve:e457992b-17a7-44eb-8e08-0482a5632386": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Tech Lead - Autonomy Performance, Robotaxi",
+      "score": 29,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "automotive-mobility"
+      ]
+    },
+    "ashby:wayve:b6c681ff-1978-4211-93cd-53120a2164b2": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Vehicle Performance Modelling Engineer, Robotics  ",
+      "score": 34,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "automotive-mobility",
+        "robotics-industrial-automation"
+      ]
+    },
+    "ashby:wayve:5713855b-d198-462e-b0d5-e851912e80e5": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Senior Machine Learning Engineer, Vision Models",
+      "score": 29,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": [
+        "machinery-equipment",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "ashby:wayve:1666994e-b345-4dad-ad85-eac0f4fbcf0a": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Technical Product Manager - Robotaxi",
+      "score": 29,
+      "eligibility": "korea-apac",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:wayve:c65879b5-065c-4c29-87ae-3b74f4be2f98": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Senior Machine Learning Engineer, AV Core",
+      "score": 17,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "machinery-equipment"
+      ]
+    },
+    "ashby:wayve:dbb2e7e2-6749-422b-a91c-c701af2f8ef2": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Technical Program Manager, Robotaxi ",
+      "score": 37,
+      "eligibility": "korea-apac",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 32,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:wayve:39658971-6520-4cf3-9ba8-fad26cf8f365": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "ADAS Feature Engineer, App SW",
+      "score": 22,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:wayve:6add4e92-70f7-4dcb-8025-cc2fcb91b866": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Mechanical Design Engineer",
+      "score": 15,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:wayve:aa7ad033-e6a1-43ca-a77f-6faa025479c2": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Senior Software Engineer - OS, Robot Software",
+      "score": 43,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "automotive-mobility",
+        "robotics-industrial-automation"
+      ]
+    },
+    "ashby:wayve:2412075e-c64b-4633-aa6c-a912ced41b22": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Senior Software Engineer - Platform Integration, Robot Software",
+      "score": 52,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "automotive-mobility",
+        "robotics-industrial-automation"
+      ]
+    },
+    "ashby:wayve:ee56ff16-017e-4728-b047-460d012347c1": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Senior Data Scientist  ",
+      "score": 16,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:wayve:eb5d4f5a-2b04-438b-9450-59da39d64714": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "ML Triaging Engineer",
+      "score": 16,
+      "eligibility": "korea-apac",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:wayve:1ae72709-259d-4238-85a6-af001fb023f2": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "ADAS Feature Engineer, Application Software",
+      "score": 22,
+      "eligibility": "korea-apac",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:wayve:3ffe6272-dc0e-4fa7-b3bc-a428337910ed": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Software Engineer, Fleet Management",
+      "score": 15,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:wayve:c8d443c8-595d-426f-9cbf-f589b68c58d5": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Senior Embedded Software Test Engineer, Onboard Test Automation",
+      "score": 46,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 56,
+      "actionable": false,
+      "fit_evidence": [
+        "test-validation",
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility",
+        "embedded-electrical-hardware",
+        "robotics-industrial-automation",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "ashby:wayve:b52585d5-ed8a-4ec8-90f5-2cd06b766e73": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Machine Learning Engineer, Synthetic Data",
+      "score": 21,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": [
+        "machinery-equipment",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "ashby:wayve:b05bb793-6686-4b18-a057-5d91a9fe1fcb": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Senior Technical Program Manager ",
+      "score": 33,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 32,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:wayve:192550ad-e0f6-42d1-a704-414671527a05": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Lead Technical Program Manager, Data ",
+      "score": 20,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 32,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:wayve:2546561b-a57e-4521-90d6-a70de43e1a18": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Embedded Automotive Platforms, Senior Software Engineer",
+      "score": 25,
+      "eligibility": "remote",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility",
+        "embedded-electrical-hardware"
+      ]
+    },
+    "ashby:wayve:a9b7f459-07c1-4725-a505-ef2c7c71c3c1": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Engineering Manager, App SW - Embedded",
+      "score": 23,
+      "eligibility": "remote",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "ashby:wayve:e2bba4ea-40aa-4710-9cb4-8e6f50ff772c": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Application Software Engineer - Embedded Software C++",
+      "score": 23,
+      "eligibility": "remote",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "ashby:wayve:6c5bcd05-d726-4315-aa3c-03cc73bc2f63": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Principle Roboticist, Robot Foundation Model",
+      "score": 35,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "robotics-industrial-automation"
+      ]
+    },
+    "ashby:wayve:002821a8-dd53-4737-be19-dc3270f4d39b": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Lead Technical Program Manager, AI Platform ",
+      "score": 25,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 62,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program",
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "ai-product-technical-pm"
+      ],
+      "owner_domain_evidence": []
+    },
+    "ashby:wayve:1dc6ac74-cf95-43d3-870e-04abf15d991c": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Controls Engineer",
+      "score": 24,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:wayve:88d59a4c-d681-46da-b663-41b2ccceffa8": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Software Engineer - Drive-by-Wire, Robot Software",
+      "score": 65,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "automotive-mobility",
+        "robotics-industrial-automation"
+      ]
+    },
+    "ashby:wayve:90866bb9-017d-45a4-ba18-d9b7fc46a6e5": {
+      "first_seen": "2026-10-15",
+      "company": "Wayve",
+      "title": "Software Engineer, Simulation",
+      "score": 44,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:nuro:8282222": {
+      "first_seen": "2026-10-15",
+      "company": "Nuro",
+      "title": "Senior Software Engineer, Autonomy Behavior Testing",
+      "score": 26,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": []
+    },
+    "ashby:openai:8842f4d5-dabb-4b15-a339-36ab13a6db11": {
+      "first_seen": "2026-10-15",
+      "company": "OpenAI",
+      "title": "Enablement Lead, Knowledge Work",
+      "score": 1,
+      "eligibility": "korea",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:78842190-deba-4864-9ef9-272009cb15a4": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Associate Engineer, Manufacturing",
+      "score": 21,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation",
+        "technical-product-industrialization"
+      ]
+    },
+    "lever:shieldai:ec31b849-7235-4d07-b46e-6fd89c85073d": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Associate Engineer, Manufacturing",
+      "score": 21,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation",
+        "technical-product-industrialization"
+      ]
+    },
+    "lever:shieldai:f6a9e3d1-92f1-44c2-aed2-4b205106129f": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Digital Factory Lead (R5265)",
+      "score": 17,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation",
+        "technical-product-industrialization"
+      ]
+    },
+    "lever:shieldai:c9321f8a-b367-4dcb-9308-bd64ae6bac1d": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Electrical Engineer I (BOS)",
+      "score": 16,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "lever:shieldai:1b229cdc-9a0b-4704-b39b-b3b4c6e3fa89": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Electrical Engineer I (SD)",
+      "score": 16,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "lever:shieldai:37fa20c1-57dc-4aa1-9515-ecc87f22f31b": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Electrical Engineer I (SEA) (R5046)",
+      "score": 16,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "lever:shieldai:d07a1f9b-76eb-44ce-b0ef-5e478fd12f02": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Electrical Engineer, Hardware Test (R5099)",
+      "score": 38,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "lever:shieldai:e53fdc42-177f-4413-8464-0bafb1cc81a9": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Electrical Engineer, Test Equipment Design",
+      "score": 35,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware",
+        "machinery-equipment"
+      ]
+    },
+    "lever:shieldai:49d0cfc6-952f-42b6-ad6c-630597a1780a": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Engineer I, Electrical Integration & Test (R5136)",
+      "score": 25,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "lever:shieldai:dc978728-0162-4e7d-8f5b-de44296a6ac9": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Engineer I, Quality (R5976)",
+      "score": 19,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 28,
+      "actionable": false,
+      "fit_evidence": [
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:71a4617f-c917-4536-bbf1-8d11d04d8cba": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Engineer I, Simulation Framework (R6203)",
+      "score": 19,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:d80f9bad-a014-475a-a018-a676eb6fbad7": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Engineer I, Software Test and Automation (R6216)",
+      "score": 27,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "robotics-industrial-automation"
+      ]
+    },
+    "lever:shieldai:b7078f80-3ad8-45d8-8bc4-69a143cd1ed8": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Engineer II, Battery Test (R5954)",
+      "score": 20,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "motor-power-electronics"
+      ]
+    },
+    "lever:shieldai:e136857b-1cd9-4fea-9ff5-ad7587ff1835": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Engineer II, Electrical (R5111)",
+      "score": 15,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "lever:shieldai:de13deec-afa6-4d78-b920-aeb5571be9d3": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Engineer II, Integration (R6202)",
+      "score": 18,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:2a942ccb-7f31-443e-a455-044081454b81": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Engineer II, Modelling and Simulation (R5712)",
+      "score": 17,
+      "eligibility": "korea-apac",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:39a7aa1b-9988-4ac7-ade9-12dd16cbae62": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Engineer II, Simulation Framework (R6204)",
+      "score": 19,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:22e914d8-488d-4f22-96a9-61dd4b15ea04": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Engineer, Software- open level (R5285)",
+      "score": 17,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:c71d4278-e8af-4d66-ba49-80670cccfc3c": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Flight Test Engineer (R5898)",
+      "score": 23,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "test-validation"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "lever:shieldai:4a8a35f3-9be6-4b18-97b6-37923c71619a": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Forward Deployed Engineer II (5951)",
+      "score": 29,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "forward-deployed-engineering"
+      ],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:8afc41da-27a5-4054-a3c7-87b3ceb6cf0a": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Forward Deployed Engineer, Autonomy (open level)",
+      "score": 27,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation",
+        "forward-deployed-engineering"
+      ],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:41c56241-9a9c-473f-a5a2-b11000aa0c23": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Forward Deployed Engineer, Operations & Sustainment - open level (R5497)",
+      "score": 29,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "forward-deployed-engineering"
+      ],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:55e14c5c-ee01-4c42-afc1-3583cf5e93d9": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Hardware Reliability Lab Engineer II (R5142)",
+      "score": 25,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 56,
+      "actionable": false,
+      "fit_evidence": [
+        "reliability-durability",
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "lever:shieldai:c6b86a5c-c646-43d2-b651-4656ea2f917e": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Lead Mechanical Engineer, Hardware Test (X-BAT)",
+      "score": 15,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "lever:shieldai:e1b78ed6-0a52-49e1-9014-735873dab5a5": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Lead, Electrical Engineering (R5116)",
+      "score": 16,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "lever:shieldai:003b0edf-550d-4110-b246-38d628a46a94": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Manager, Engineering - Software Integration (R5237)",
+      "score": 22,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 28,
+      "actionable": false,
+      "fit_evidence": [
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:b7059120-c128-4442-9a61-fb6fdecb057e": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Manager, Propulsion (Test) (R5089)",
+      "score": 16,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:4b31c2db-feb0-4a4f-96e3-20af7b267e2d": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Manager, Simulation Engineering (R4870)",
+      "score": 16,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:d4dd7743-41c3-4d5f-9a6e-e305aebd8541": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Manager, Software Test & Automation (R5461)",
+      "score": 22,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "robotics-industrial-automation"
+      ]
+    },
+    "lever:shieldai:52b8f7b5-3a88-4e78-8f22-a3edc3bf1e73": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Modeling & Simulation Engineer (R4869)",
+      "score": 21,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:2c42f55f-331d-44da-859d-16ec532df973": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Modelling and Simulation Lead (R4706)",
+      "score": 18,
+      "eligibility": "korea-apac",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:0af53b2b-e1ba-4e73-9e94-a4a689cabab9": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Power Electronics - Electrical Engineer I",
+      "score": 20,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "motor-power-electronics",
+        "embedded-electrical-hardware"
+      ]
+    },
+    "lever:shieldai:622ee448-5ab3-4b2e-b20b-1fff995cbc45": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Power Electronics - Electrical Engineer II",
+      "score": 20,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "motor-power-electronics",
+        "embedded-electrical-hardware"
+      ]
+    },
+    "lever:shieldai:c03bc781-786f-4bac-9884-4328b98e2534": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Power System – High-Voltage Test Engineer II – Electric Powertrain & Battery Systems  (R4728)",
+      "score": 58,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "test-validation"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "motor-power-electronics",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "lever:shieldai:c3e09d7f-cbd3-4e25-b1eb-cbb6e06d8459": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Propulsion Test Engineer (R4380)",
+      "score": 20,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "test-validation"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "lever:shieldai:dbeedcfb-0420-4216-8529-9b02d43e29f4": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Senior Electrical Engineer, Hardware Test (R5099)",
+      "score": 35,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "lever:shieldai:9208872f-9af8-4a63-8afc-0d7a5e7dbca0": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Senior Electrical Engineer, Test Equipment Design",
+      "score": 32,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware",
+        "machinery-equipment"
+      ]
+    },
+    "lever:shieldai:cda131b5-3cfb-4d59-8d4b-bfd2f8c9661d": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Senior Electrical Engineer, Test Equipment Design",
+      "score": 28,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware",
+        "machinery-equipment"
+      ]
+    },
+    "lever:shieldai:ce828e5e-dcc2-4cab-94cf-c6e8fca728d4": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Senior Electrical, Motor and Motor Drive Engineer (R6021)",
+      "score": 34,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "motor-power-electronics",
+        "embedded-electrical-hardware"
+      ]
+    },
+    "lever:shieldai:2b247600-44e1-42c9-8c07-a92852f9932e": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Senior Engineer, Architecture and Infrastructure Test (R5485)",
+      "score": 19,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:21d73732-e08b-415e-a6ec-b2763b6faaeb": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Senior Engineer, Automated Test (R4461)",
+      "score": 29,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 28,
+      "actionable": false,
+      "fit_evidence": [
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:ebd0fc72-501b-48c3-969a-6864b8d3da43": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Senior Engineer, C++ Software (R5848)",
+      "score": 18,
+      "eligibility": "korea-apac",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:03e89bdf-2eb1-4058-8281-4cddc3d46049": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Senior Engineer, Flight Test (R5371)",
+      "score": 29,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 28,
+      "actionable": false,
+      "fit_evidence": [
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:81366fcf-513d-47be-8fae-d227e7c6e126": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Senior Engineer, HMS Simulation Framework (R6058)",
+      "score": 18,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:836d3989-cb7c-455c-8594-c56f97022182": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Senior Engineer, Manufacturing",
+      "score": 21,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation",
+        "technical-product-industrialization"
+      ]
+    },
+    "lever:shieldai:73308f04-b030-4e98-b4af-09a8ccb1c974": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Senior Engineer, Modelling and Simulation (R5702)",
+      "score": 17,
+      "eligibility": "korea-apac",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "digital-twin-simulation"
+      ],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:942abc1f-eb47-4dbd-b3fc-c16f40d41ae3": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Senior Engineer, Reliability (R5950)",
+      "score": 19,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "reliability-durability"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "lever:shieldai:498f7d45-a951-45ad-aa7f-3f54bf3dd2bb": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Senior Engineer, Software Test and Automation (R4472)",
+      "score": 27,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "robotics-industrial-automation"
+      ]
+    },
+    "lever:shieldai:20bc08b5-f30d-4ba5-b9c3-3a28107bb2ee": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Senior Engineer, System Integration Test (R6086)",
+      "score": 23,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:5a47cd5d-0efb-4d4e-925a-eb104f90904c": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Senior Engineer, Systems Test (R5038)",
+      "score": 17,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:1b5f8795-9e77-4999-b1be-09eb7f08f7b9": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Senior Engineer, Test (R5833)",
+      "score": 25,
+      "eligibility": "korea-apac",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:cffd00e2-4d48-40c2-b657-a116fdb2c2a2": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Senior Forward Deployed Engineer (5961)",
+      "score": 29,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "forward-deployed-engineering"
+      ],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:4a54270b-ab95-4702-ac8e-64d07835ad0f": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Senior Manager, Quality – Development Programs (R5315)",
+      "score": 18,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 28,
+      "actionable": false,
+      "fit_evidence": [
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:00e419e1-cd8b-47c3-9c82-40b07d51bf87": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Senior Propulsion Test Engineer (R4639)",
+      "score": 20,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "test-validation"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "lever:shieldai:942cf840-e5da-489d-9086-e1e8ae09821a": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Senior Reliability and Maintainability Engineer (R5301)",
+      "score": 20,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "reliability-durability"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "lever:shieldai:a2627727-1714-46fd-8724-3557bc17c696": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Senior Software Engineer, Embedded Linux Platform (R5718)",
+      "score": 17,
+      "eligibility": "korea-apac",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "lever:shieldai:a6b11a01-e749-4b1a-90a4-828524ceb7a0": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Senior Software Engineer, Hardware Test (R4978)",
+      "score": 25,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "lever:shieldai:11876020-2e25-418c-990d-e27f9df7d456": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Senior Technical Program Manager",
+      "score": 16,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 32,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:6b500b70-dca1-41aa-a283-ce36d0b02a65": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Senior Technical Program Manager",
+      "score": 15,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 32,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:6b2673d1-a8e1-4c9b-a9c4-7e1098ae9536": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Senior Vibrations Test Engineer (R5091)",
+      "score": 25,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "test-validation"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "lever:shieldai:79c3b65f-ce0c-4868-bedf-4ddcc4cfe583": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Software Development Engineer - New Graduate",
+      "score": 21,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:10936087-44a4-47db-bddf-105436e872aa": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Software Embedded Applications Engineer (R5068)",
+      "score": 25,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "lever:shieldai:d0635c93-bb07-4585-80d3-c53aaa2fdf6d": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Software Test Automation Engineer (R4719)",
+      "score": 26,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "robotics-industrial-automation"
+      ]
+    },
+    "lever:shieldai:eb301146-1229-4f63-b82b-dac764382c21": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Sr Metrology Engineer (R4960)",
+      "score": 17,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 28,
+      "actionable": false,
+      "fit_evidence": [
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:cbba120f-2089-4531-9e41-1dad856473a7": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Systems Test Engineer",
+      "score": 24,
+      "eligibility": "korea-apac",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "test-validation"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "lever:shieldai:df29f189-21de-40b9-a485-4aef884df365": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Technical Product Manager - open level (R5249)",
+      "score": 17,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:25feb5d5-903c-444f-abe9-518c0be8882f": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Technical Program Manager (R5149)",
+      "score": 18,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 32,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:325f1f23-de6a-4202-9b33-d90f159bf885": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Technical Program Manager, Maritime (R6148)",
+      "score": 23,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 32,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:000362bc-8cc0-4569-8b47-a3c463f67b2f": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Technical Program Manager, Mission Autonomy - V-BAT (R6151)",
+      "score": 26,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 62,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program",
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:24485aa8-c033-48ef-95a6-6f59c0eef787": {
+      "first_seen": "2026-10-15",
+      "company": "Shield AI",
+      "title": "Technical Program Manager, Mission Autonomy - X-BAT (R6152)",
+      "score": 26,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 62,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program",
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": []
+    },
+    "ashby:physicalintelligence:f2062b48-9939-478f-a605-6a2d16a4688a": {
+      "first_seen": "2026-10-15",
+      "company": "Physical Intelligence",
+      "title": "General Manager, Research Operations",
+      "score": 15,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "lever:zoox:a90cfd71-9434-4013-adf1-85111e5ce65f": {
+      "first_seen": "2026-10-15",
+      "company": "Zoox",
+      "title": "Hardware Engineer - Test Development",
+      "score": 37,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility",
+        "embedded-electrical-hardware",
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "lever:zoox:96faea2e-c539-4d63-89a5-f534b807ab09": {
+      "first_seen": "2026-10-15",
+      "company": "Zoox",
+      "title": "Senior Technical Program Manager, Powertrain & Thermal",
+      "score": 56,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 58,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program",
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "motor-power-electronics",
+        "embedded-electrical-hardware"
+      ]
+    },
+    "lever:zoox:1d0b857f-cd93-4ba3-a9d2-a23721c4c97c": {
+      "first_seen": "2026-10-15",
+      "company": "Zoox",
+      "title": "Systems Engineer, Autonomy Verification and Validation",
+      "score": 23,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "robotics-automation"
+      ],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "workday:amat:2630307": {
+      "first_seen": "2026-10-15",
+      "company": "Applied Materials",
+      "title": "EHS Nurse – Fixed Term (Maternity & Parental Leave Backfill)",
+      "score": 5,
+      "eligibility": "korea",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "workday:amat:2631046": {
+      "first_seen": "2026-10-15",
+      "company": "Applied Materials",
+      "title": "Non-Technical Project/Program Management (Installation Coordinator)",
+      "score": 1,
+      "eligibility": "korea",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
     }
-  }
+  },
+  "board_failures": {}
 }

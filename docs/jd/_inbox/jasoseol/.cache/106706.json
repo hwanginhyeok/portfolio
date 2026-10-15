@@ -1,0 +1,60 @@
+{
+  "id": 106706,
+  "end_time": "2026-11-01T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106706,
+    "name": "아이쓰리시스템",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/006/465/webp/logo02-01.webp?1725320282",
+    "employment_page_url": "https://i3system.career.greetinghr.com/ko/intro",
+    "start_time": "2026-10-13T19:30:00.000+09:00",
+    "end_time": "2026-11-01T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div style=\"position:relative;\"><img style=\"max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/398/webp/AI_%EB%B0%B1%EC%97%94%EB%93%9C_%EA%B0%9C%EB%B0%9C%EC%9E%90_261013.webp?1791887877\" alt=\"아이쓰리시스템 AI 백엔드 개발자 채용 (경력 5~10년)\"></div></body></html>\n",
+    "target": 4,
+    "created_at": "2026-10-14T09:17:59.000+09:00",
+    "recruit_type": 0,
+    "view_count": 453,
+    "favorite_count": 6,
+    "homepage_count": 1,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 12854,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "AI 백엔드 개발자 채용 (경력 5~10년)",
+    "resume_expose": true,
+    "company_group": {
+      "id": 6465,
+      "name": "아이쓰리시스템",
+      "business_size": null,
+      "business_type": null,
+      "created_at": "2018-04-12T18:20:17.000+09:00",
+      "updated_at": "2024-09-03T08:38:02.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/006/465/original/logo02-01.jpg?1725320282",
+      "alternate_names": [
+        "i3system"
+      ],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 432664,
+        "field": "AI 백엔드 개발자",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          176,
+          179,
+          167,
+          162,
+          163
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

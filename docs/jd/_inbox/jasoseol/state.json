@@ -850,6 +850,51 @@
         "생산시스템 기획/운영",
         "생산 엔지니어"
       ]
+    },
+    "106724": {
+      "first_seen": "2026-10-15",
+      "company": "토스플레이스",
+      "title": "토스플레이스 전 직군 대규모 채용 (-10/31)",
+      "end_time": "2026-10-31T23:59:00.000+09:00",
+      "track": "core",
+      "score": 84,
+      "verdict": "actionable",
+      "actionable": true,
+      "threshold": 28,
+      "scoring_version": 2,
+      "sub_positions": [
+        "Android Developer",
+        "Business Operations Manager",
+        "Channel Account Manager",
+        "Data Engineer",
+        "Device Hardware Quality Engineer",
+        "DevOps Engineer",
+        "Direct Sales Manager",
+        "Direct Sales Operations Manager",
+        "Enterprise Account Manager",
+        "Frontend Platform Engineer",
+        "General Affairs Manager",
+        "HRBP",
+        "iOS Developer",
+        "Node.js Developer",
+        "Platform Product Owner",
+        "Privacy Manager",
+        "Product Designer",
+        "Product Owner",
+        "Recruiting Business Partner",
+        "Security Engineer",
+        "Security Researcher",
+        "Site Reliability Engineer",
+        "Solution Account Manager",
+        "Technical Account Manager",
+        "Technical Product Owner",
+        "UX Researcher",
+        "Visual Designer"
+      ],
+      "matched_sub_positions": [
+        "Device Hardware Quality Engineer",
+        "Site Reliability Engineer"
+      ]
     }
   }
 }
