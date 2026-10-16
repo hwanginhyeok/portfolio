@@ -895,6 +895,24 @@
         "Device Hardware Quality Engineer",
         "Site Reliability Engineer"
       ]
+    },
+    "106739": {
+      "first_seen": "2026-10-16",
+      "company": "녹십자웰빙",
+      "title": "의약품 품질보증(경력) 채용",
+      "end_time": "2026-10-25T23:59:00.000+09:00",
+      "track": "core",
+      "score": 28,
+      "verdict": "actionable",
+      "actionable": true,
+      "threshold": 28,
+      "scoring_version": 2,
+      "sub_positions": [
+        "의약품 품질보증"
+      ],
+      "matched_sub_positions": [
+        "의약품 품질보증"
+      ]
     }
   }
 }

@@ -86,5 +86,13 @@
     "marker": "jasoseol:106724",
     "timing": "2026-10-31 (all-day)",
     "updated_at": "2026-10-15T08:34:09.060982+09:00"
+  },
+  "106739": {
+    "event_id": "72a1qcmuqaiqsl4cpp7phukvj0",
+    "end_time": "2026-10-25T23:59:00.000+09:00",
+    "title": "마감 · 녹십자웰빙 의약품 품질보증",
+    "marker": "jasoseol:106739",
+    "timing": "2026-10-25 (all-day)",
+    "updated_at": "2026-10-16T08:34:09.655652+09:00"
   }
 }
