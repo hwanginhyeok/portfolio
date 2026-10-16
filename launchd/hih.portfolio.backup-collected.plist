@@ -1,46 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-  hih.portfolio.backup-collected — Daily commit + push of the collector output (pf-2), 12:30 Asia/Seoul, after the 11:50 global collect.
-
-  macOS LaunchAgent for the portfolio jobs. Absolute paths only: a home
-  shorthand anywhere in a plist makes launchd fail the spawn with EX_CONFIG.
-
-  Installed and loaded on the Mac (the daily backup has no server twin).
-  Install / reload:
-
-      cp launchd/hih.portfolio.backup-collected.plist $HOME/Library/LaunchAgents/
-      launchctl bootstrap gui/$(id -u) $HOME/Library/LaunchAgents/hih.portfolio.backup-collected.plist
--->
 <plist version="1.0">
 <dict>
-    <key>Label</key>
-    <string>hih.portfolio.backup-collected</string>
-
-    <key>ProgramArguments</key>
-    <array>
-        <string>/Users/hwang-inhyeok/Workspace/projects/portfolio/.venv/bin/python</string>
-        <string>/Users/hwang-inhyeok/Workspace/projects/portfolio/scripts/backup_collected.py</string>
-        <string>--apply</string>
-    </array>
-
-    <key>WorkingDirectory</key>
-    <string>/Users/hwang-inhyeok/Workspace/projects/portfolio</string>
-
-    <key>StartCalendarInterval</key>
-    <dict>
-        <key>Hour</key>
-        <integer>12</integer>
-        <key>Minute</key>
-        <integer>30</integer>
-    </dict>
-
-    <key>LimitLoadToSessionType</key>
-    <string>Aqua</string>
-
-    <key>StandardOutPath</key>
-    <string>/Users/hwang-inhyeok/Library/Logs/hih/portfolio_backup_collected.log</string>
-    <key>StandardErrorPath</key>
-    <string>/Users/hwang-inhyeok/Library/Logs/hih/portfolio_backup_collected.log</string>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>PATH</key>
+		<string>/Users/hwang-inhyeok/bin:/Users/hwang-inhyeok/Workspace/harness/bin:/Users/hwang-inhyeok/.local/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+	</dict>
+	<key>Label</key>
+	<string>hih.portfolio.backup-collected</string>
+	<key>LimitLoadToSessionType</key>
+	<string>Aqua</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Users/hwang-inhyeok/Workspace/projects/portfolio/.venv/bin/python</string>
+		<string>/Users/hwang-inhyeok/Workspace/projects/portfolio/scripts/backup_collected.py</string>
+		<string>--apply</string>
+	</array>
+	<key>StandardErrorPath</key>
+	<string>/Users/hwang-inhyeok/Library/Logs/hih/portfolio_backup_collected.log</string>
+	<key>StandardOutPath</key>
+	<string>/Users/hwang-inhyeok/Library/Logs/hih/portfolio_backup_collected.log</string>
+	<key>StartCalendarInterval</key>
+	<dict>
+		<key>Hour</key>
+		<integer>12</integer>
+		<key>Minute</key>
+		<integer>30</integer>
+	</dict>
+	<key>WorkingDirectory</key>
+	<string>/Users/hwang-inhyeok/Workspace/projects/portfolio</string>
 </dict>
 </plist>
