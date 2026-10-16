@@ -21351,7 +21351,7 @@
       "first_seen": "2026-08-29",
       "company": "KLA",
       "title": "GSS LKS Technical Training Manager",
-      "score": 8,
+      "score": 2,
       "eligibility": "korea",
       "track": "core",
       "search_lane": "core",
@@ -29759,8 +29759,8 @@
     "greenhouse:waymo:8248314": {
       "first_seen": "2026-10-03",
       "company": "Waymo",
-      "title": "Technical Program Management, Service Quality",
-      "score": 24,
+      "title": "Technical Program Management, Commercialization",
+      "score": 21,
       "eligibility": "visa-needed",
       "track": "ai-native",
       "search_lane": "ai-native",
@@ -29768,11 +29768,10 @@
         "ai-native",
         "core"
       ],
-      "fit_score": 60,
+      "fit_score": 32,
       "actionable": false,
       "fit_evidence": [
-        "technical-program",
-        "quality-supplier"
+        "technical-program"
       ],
       "technical_signal_evidence": [],
       "owner_domain_evidence": []
@@ -31122,8 +31121,8 @@
     "workday:kla:2639826": {
       "first_seen": "2026-10-08",
       "company": "KLA",
-      "title": "System Engineer",
-      "score": 9,
+      "title": "Division System Engineer",
+      "score": 20,
       "eligibility": "korea",
       "track": "core",
       "search_lane": "core",
@@ -34989,6 +34988,337 @@
       "actionable": false,
       "fit_evidence": [],
       "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:anthropic:5454673008": {
+      "first_seen": "2026-10-16",
+      "company": "Anthropic",
+      "title": "Applied AI Engineer, Startups (Physical AI)",
+      "score": 39,
+      "eligibility": "sponsorship-likely",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "industrial-ai"
+      ],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:anthropic:5453548008": {
+      "first_seen": "2026-10-16",
+      "company": "Anthropic",
+      "title": "Technical Program Manager, Corporate Engineering",
+      "score": 22,
+      "eligibility": "sponsorship-likely",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 32,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:anthropic:5453550008": {
+      "first_seen": "2026-10-16",
+      "company": "Anthropic",
+      "title": "Technical Program Manager, SOX Compliance",
+      "score": 19,
+      "eligibility": "sponsorship-likely",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 32,
+      "actionable": false,
+      "fit_evidence": [
+        "technical-program"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5267095007": {
+      "first_seen": "2026-10-16",
+      "company": "Lucid Motors",
+      "title": "Senior Controls Engineer, EV Body and Access Systems",
+      "score": 35,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "automotive-mobility"
+      ]
+    },
+    "ashby:wayve:6c77a737-9560-49fd-b687-72894adfc4d0": {
+      "first_seen": "2026-10-16",
+      "company": "Wayve",
+      "title": "Senior Machine Learning Engineer, Driving Product  ",
+      "score": 17,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "machinery-equipment"
+      ]
+    },
+    "greenhouse:apptronik:6225394004": {
+      "first_seen": "2026-10-16",
+      "company": "Apptronik",
+      "title": "Senior Perception Learning Engineer ",
+      "score": 23,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:agilityrobotics:6222776004": {
+      "first_seen": "2026-10-16",
+      "company": "Agility Robotics",
+      "title": "Buyer II",
+      "score": 15,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:agilityrobotics:6222704004": {
+      "first_seen": "2026-10-16",
+      "company": "Agility Robotics",
+      "title": "Global Supply Manager - PCBA",
+      "score": 15,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:agilityrobotics:6128829004": {
+      "first_seen": "2026-10-16",
+      "company": "Agility Robotics",
+      "title": "Senior Triage & RCA Engineer",
+      "score": 24,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "lever:shieldai:8a52bffc-52c5-4aef-8914-d618a511518a": {
+      "first_seen": "2026-10-16",
+      "company": "Shield AI",
+      "title": "Senior Manager, Supplier Quality (R6220)",
+      "score": 16,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 28,
+      "actionable": false,
+      "fit_evidence": [
+        "quality-supplier"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "lever:zoox:ac297a1f-2bd3-42bc-9f4f-7fdeb0273e06": {
+      "first_seen": "2026-10-16",
+      "company": "Zoox",
+      "title": "Systems Integration Engineer",
+      "score": 15,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation"
+      ]
+    },
+    "workday:amat:2631324": {
+      "first_seen": "2026-10-16",
+      "company": "Applied Materials",
+      "title": "TSE Engineer",
+      "score": 3,
+      "eligibility": "korea",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "workday:amat:2630240": {
+      "first_seen": "2026-10-16",
+      "company": "Applied Materials",
+      "title": "Software Validation Engineer (QA Engineer)",
+      "score": 18,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "test-validation"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "workday:kla:2640647": {
+      "first_seen": "2026-10-16",
+      "company": "KLA",
+      "title": "Manager - Cyber Security Operations Center",
+      "score": 2,
+      "eligibility": "korea",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "workday:aptiv:000705532": {
+      "first_seen": "2026-10-16",
+      "company": "Aptiv",
+      "title": "Senior Solutions architect",
+      "score": 15,
+      "eligibility": "visa-needed",
+      "track": "engineering-consulting",
+      "search_lane": "engineering-consulting",
+      "search_lanes": [
+        "engineering-consulting"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "technical-consulting"
+      ],
+      "owner_domain_evidence": []
+    },
+    "workday:aptiv:000705624": {
+      "first_seen": "2026-10-16",
+      "company": "Aptiv",
+      "title": "Product Engineer",
+      "score": 16,
+      "eligibility": "korea",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "workday:micron:114769": {
+      "first_seen": "2026-10-16",
+      "company": "Micron",
+      "title": "MTS - Thermal Simulation Engineer",
+      "score": 18,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "ai-native-consulting"
+      ],
+      "technical_signal_evidence": [
+        "digital-twin-simulation"
+      ],
       "owner_domain_evidence": []
     }
   },

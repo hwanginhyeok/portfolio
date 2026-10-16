@@ -18016,6 +18016,293 @@
       "search_lanes": [
         "engineering-consulting"
       ]
+    },
+    "392626": {
+      "first_seen": "2026-10-16",
+      "company": "현대자동차그룹 (HYUNDAI)",
+      "position": "[제조AI] 무선통신 자율 운영 시스템 개발",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "392625": {
+      "first_seen": "2026-10-16",
+      "company": "현대자동차그룹 (HYUNDAI)",
+      "position": "[제조로보틱스] 모방학습/강화학습 개발",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ]
+    },
+    "392679": {
+      "first_seen": "2026-10-16",
+      "company": "커넥셔너리",
+      "position": "금융 IT 프로젝트 매니저 (금융 SI PM)",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "351071": {
+      "first_seen": "2026-10-16",
+      "company": "패브릭덕트",
+      "position": "기술 영업 및 프로젝트 매니저 (PM)",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "392777": {
+      "first_seen": "2026-10-16",
+      "company": "바로고(barogo)",
+      "position": "4륜사업본부 사업운영 매니저(신입)",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "383681": {
+      "first_seen": "2026-10-16",
+      "company": "에이엠씨알",
+      "position": "브랜드마케팅 매니저(과장급)",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "391725": {
+      "first_seen": "2026-10-16",
+      "company": "시크릿키",
+      "position": "국내 마케팅 매니저",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "392570": {
+      "first_seen": "2026-10-16",
+      "company": "서스틴베스트",
+      "position": "AI 엔지니어 (LLM Application & Backend)",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ]
+    },
+    "392384": {
+      "first_seen": "2026-10-16",
+      "company": "리펀디",
+      "position": "AI Finance Manager",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ]
+    },
+    "391217": {
+      "first_seen": "2026-10-16",
+      "company": "로민",
+      "position": "AI 데이터 매니저",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "391154": {
+      "first_seen": "2026-10-16",
+      "company": "로민",
+      "position": "ML(머신러닝) 엔지니어 (전문연구요원 신규 편입)",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ]
+    },
+    "255370": {
+      "first_seen": "2026-10-16",
+      "company": "버티컬바",
+      "position": "AI 엔지니어 (5년 이상)",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "315908": {
+      "first_seen": "2026-10-16",
+      "company": "버티컬바",
+      "position": "Head of Engineering",
+      "track": "engineering-consulting",
+      "search_lane": "engineering-consulting",
+      "search_lanes": [
+        "core",
+        "engineering-consulting"
+      ]
+    },
+    "392320": {
+      "first_seen": "2026-10-16",
+      "company": "윗유",
+      "position": "숏폼 콘텐츠 기획자",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "392654": {
+      "first_seen": "2026-10-16",
+      "company": "여기어때컴퍼니",
+      "position": "Marketing Strategy PM",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "392633": {
+      "first_seen": "2026-10-16",
+      "company": "현대자동차그룹 (HYUNDAI)",
+      "position": "[ICT] IT Project Manager - Sales System PM",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ]
+    },
+    "370452": {
+      "first_seen": "2026-10-16",
+      "company": "네오사피엔스(타입캐스트)",
+      "position": "Product Manager (Conversational AI App)",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ]
+    },
+    "392582": {
+      "first_seen": "2026-10-16",
+      "company": "에스케이그룹 (SK)",
+      "position": "[SK인텔릭스] 개발 PM 경력 인재",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "392376": {
+      "first_seen": "2026-10-16",
+      "company": "문토",
+      "position": "Node.js 개발자 (신입)",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "392373": {
+      "first_seen": "2026-10-16",
+      "company": "문토",
+      "position": "Node.js 개발자",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "392632": {
+      "first_seen": "2026-10-16",
+      "company": "현대자동차그룹 (HYUNDAI)",
+      "position": "[ICT] IT Project Manager - 경영지원시스템",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "392620": {
+      "first_seen": "2026-10-16",
+      "company": "현대자동차그룹 (HYUNDAI)",
+      "position": "미래 모빌리티 및 Physical AI 신사업 전략",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native"
+      ]
+    },
+    "392439": {
+      "first_seen": "2026-10-16",
+      "company": "에스케이그룹 (SK)",
+      "position": "[SK인텔릭스] 가전·로보틱스 제품 기구설계",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native"
+      ]
+    },
+    "391658": {
+      "first_seen": "2026-10-16",
+      "company": "비아이매트릭스",
+      "position": "솔루션 영업 담당자",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native"
+      ]
+    },
+    "392514": {
+      "first_seen": "2026-10-16",
+      "company": "씨제이올리브영(CJ올리브영)",
+      "position": "Product Manager - Product Detail Page (상품상세)",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native"
+      ]
+    },
+    "392556": {
+      "first_seen": "2026-10-16",
+      "company": "아마존(Amazon)",
+      "position": "Technical Consultant (TAM) - AMAZON Web Services, Korea , Partner/FSI",
+      "track": "engineering-consulting",
+      "search_lane": "engineering-consulting",
+      "search_lanes": [
+        "engineering-consulting"
+      ]
+    },
+    "392577": {
+      "first_seen": "2026-10-16",
+      "company": "델(Dell)",
+      "position": "Principal Engineer, Solutions Architecture",
+      "track": "engineering-consulting",
+      "search_lane": "engineering-consulting",
+      "search_lanes": [
+        "engineering-consulting"
+      ]
+    },
+    "392282": {
+      "first_seen": "2026-10-16",
+      "company": "올거나이즈코리아(Allganize Korea)",
+      "position": "[도쿄] FDE(SW) - Solutions Architect",
+      "track": "engineering-consulting",
+      "search_lane": "engineering-consulting",
+      "search_lanes": [
+        "engineering-consulting"
+      ]
     }
   }
 }
