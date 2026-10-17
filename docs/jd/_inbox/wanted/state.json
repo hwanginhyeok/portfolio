@@ -18303,6 +18303,267 @@
       "search_lanes": [
         "engineering-consulting"
       ]
+    },
+    "392798": {
+      "first_seen": "2026-10-17",
+      "company": "스터닝",
+      "position": "라우드 메이커스 프로젝트 매니저(신입)",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "391889": {
+      "first_seen": "2026-10-17",
+      "company": "인포그린",
+      "position": "맘가이드 광고사업팀 매니저",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "347462": {
+      "first_seen": "2026-10-17",
+      "company": "팀블라인드세일즈앤마케팅코리아",
+      "position": "시니어 AI 엔지니어 (Senior AI Engineer)",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "377300": {
+      "first_seen": "2026-10-17",
+      "company": "피에프씨테크놀로지스",
+      "position": "Product Engineer(프로덕트 엔지니어) - Applied AI Team",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "390707": {
+      "first_seen": "2026-10-17",
+      "company": "그린에스씨에이",
+      "position": "산업제어시스템 보안 엔지니어",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "391284": {
+      "first_seen": "2026-10-17",
+      "company": "그린에스씨에이",
+      "position": "산업제어시스템 보안 엔지니어",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "392655": {
+      "first_seen": "2026-10-17",
+      "company": "메리츠증권",
+      "position": "Security Engineer",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "388793": {
+      "first_seen": "2026-10-17",
+      "company": "액션파워",
+      "position": "[다글로] AI Researcher",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ]
+    },
+    "392945": {
+      "first_seen": "2026-10-17",
+      "company": "비큐에이아이",
+      "position": "Business Development(BD)",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "338175": {
+      "first_seen": "2026-10-17",
+      "company": "피에프씨테크놀로지스",
+      "position": "B2B Business Development Manager(B2B 사업개발 매니저)",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "392867": {
+      "first_seen": "2026-10-17",
+      "company": "코너스톤앤컴퍼니",
+      "position": "[CORNERSTONE] PMO",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "392705": {
+      "first_seen": "2026-10-17",
+      "company": "넵튠(Neptune)",
+      "position": "서비스팀 Product Manager (MEEFF)",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "392853": {
+      "first_seen": "2026-10-17",
+      "company": "넥스트그라운드",
+      "position": "앱/웹 서비스 기획 (PM)",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "392392": {
+      "first_seen": "2026-10-17",
+      "company": "로레알(L'Oreal)",
+      "position": "Digital Project Manager - CORP IT",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "392634": {
+      "first_seen": "2026-10-17",
+      "company": "현대자동차그룹 (HYUNDAI)",
+      "position": "[ICT] IT Project Manager - Aftersales Service Systems",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ]
+    },
+    "392847": {
+      "first_seen": "2026-10-17",
+      "company": "아이엔지로보틱스",
+      "position": "자율주행 로봇 제어 및 소프트웨어 엔지니어",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native"
+      ]
+    },
+    "392682": {
+      "first_seen": "2026-10-17",
+      "company": "미켈로로보틱스",
+      "position": "Automation Field Engineer (로봇 자동화 필드 엔지니어)",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native"
+      ]
+    },
+    "392677": {
+      "first_seen": "2026-10-17",
+      "company": "미켈로로보틱스",
+      "position": "HR Senior (인사·조직문화·채용)",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native"
+      ]
+    },
+    "390515": {
+      "first_seen": "2026-10-17",
+      "company": "유진로봇",
+      "position": "[스마트자동화시스템사업부] PLC 엔지니어 (SIEMENS)",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native"
+      ]
+    },
+    "390517": {
+      "first_seen": "2026-10-17",
+      "company": "유진로봇",
+      "position": "[스마트자동화시스템사업부] PLC 엔지니어 (Beckhoff)",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native"
+      ]
+    },
+    "390520": {
+      "first_seen": "2026-10-17",
+      "company": "유진로봇",
+      "position": "[스마트자동화시스템사업부] 기구설계 (대구지사)",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native"
+      ]
+    },
+    "390521": {
+      "first_seen": "2026-10-17",
+      "company": "유진로봇",
+      "position": "[스마트자동화시스템사업부] 전장설계 엔지니어 (EPLAN)",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native"
+      ]
+    },
+    "390519": {
+      "first_seen": "2026-10-17",
+      "company": "유진로봇",
+      "position": "[스마트자동화시스템사업부] 기술영업 (대구지사)",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native"
+      ]
+    },
+    "388288": {
+      "first_seen": "2026-10-17",
+      "company": "유진로봇",
+      "position": "[자율주행솔루션사업부] FAE(기술지원 엔지니어)",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native"
+      ]
+    },
+    "288329": {
+      "first_seen": "2026-10-17",
+      "company": "디엑스알",
+      "position": "Robot Control Engineer 분야 R&D 연구원",
+      "track": "engineering-consulting",
+      "search_lane": "engineering-consulting",
+      "search_lanes": [
+        "engineering-consulting"
+      ]
+    },
+    "388667": {
+      "first_seen": "2026-10-17",
+      "company": "브레인즈컴퍼니",
+      "position": "통합로그관리 SW 기술지원 엔지니어",
+      "track": "engineering-consulting",
+      "search_lane": "engineering-consulting",
+      "search_lanes": [
+        "engineering-consulting"
+      ]
     }
   }
 }

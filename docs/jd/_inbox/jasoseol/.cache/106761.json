@@ -1,0 +1,57 @@
+{
+  "id": 106761,
+  "end_time": "2026-10-21T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106761,
+    "name": "한양대학교병원",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/008/036/webp/data.webp?1684487776",
+    "employment_page_url": "https://hyumc.recruiter.co.kr/career/jobs/130782",
+    "start_time": "2026-10-08T00:00:00.000+09:00",
+    "end_time": "2026-10-21T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div><img style=\"display:block;max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/826/webp/image.webp?1792114235\" alt=\"한양대학교병원 2026년 신규직원(정규직) 모집\"></div></body></html>\n",
+    "target": 0,
+    "created_at": "2026-10-16T10:30:36.000+09:00",
+    "recruit_type": 0,
+    "view_count": 1359,
+    "favorite_count": 154,
+    "homepage_count": 15,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 14943,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "2026년 신규직원(정규직) 모집",
+    "resume_expose": true,
+    "company_group": {
+      "id": 8036,
+      "name": "한양대학교병원",
+      "business_size": null,
+      "business_type": null,
+      "created_at": "2020-01-06T14:41:38.000+09:00",
+      "updated_at": "2023-05-19T18:16:16.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/008/036/original/data?1684487776",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 432919,
+        "field": "사무원",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": false,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          127,
+          128,
+          258,
+          107
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": false
+  }
+}

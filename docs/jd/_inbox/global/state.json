@@ -15170,8 +15170,8 @@
     "greenhouse:nuro:7943735": {
       "first_seen": "2026-08-24",
       "company": "Nuro",
-      "title": "Autonomous Vehicle Operator, Los Angeles (AM Shift, 12-Month Duration)",
-      "score": 22,
+      "title": "Autonomous Vehicle Operator - AM",
+      "score": 18,
       "eligibility": "visa-needed",
       "track": "ai-native",
       "search_lane": "ai-native",
@@ -15194,8 +15194,8 @@
     "greenhouse:nuro:7436219": {
       "first_seen": "2026-08-24",
       "company": "Nuro",
-      "title": "Autonomous Vehicle Operator, Los Angeles (PM Shift, 12-Month Duration)",
-      "score": 22,
+      "title": "Autonomous Vehicle Operator - PM",
+      "score": 18,
       "eligibility": "visa-needed",
       "track": "ai-native",
       "search_lane": "ai-native",
@@ -15218,8 +15218,8 @@
     "greenhouse:nuro:8104145": {
       "first_seen": "2026-08-24",
       "company": "Nuro",
-      "title": "Autonomous Vehicle Operator, San Francisco (AM Shift, 12-Month Duration)",
-      "score": 22,
+      "title": "Autonomous Vehicle Operator",
+      "score": 18,
       "eligibility": "visa-needed",
       "track": "ai-native",
       "search_lane": "ai-native",
@@ -21772,8 +21772,8 @@
     "greenhouse:nuro:8172396": {
       "first_seen": "2026-09-03",
       "company": "Nuro",
-      "title": "Autonomous Vehicle Operator, Los Angeles (Overnight Shift, 12-Month Duration)",
-      "score": 22,
+      "title": "Autonomous Vehicle Operator - Overnight",
+      "score": 18,
       "eligibility": "visa-needed",
       "track": "ai-native",
       "search_lane": "ai-native",
@@ -35319,6 +35319,273 @@
       "technical_signal_evidence": [
         "digital-twin-simulation"
       ],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:waymo:8289592": {
+      "first_seen": "2026-10-17",
+      "company": "Waymo",
+      "title": "Senior Product Manager, New Platform Discovery and Validation",
+      "score": 38,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:lucidmotors:5215431007": {
+      "first_seen": "2026-10-17",
+      "company": "Lucid Motors",
+      "title": "Senior Android Software Developer, Infotainment ",
+      "score": 15,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "greenhouse:lucidmotors:5212729007": {
+      "first_seen": "2026-10-17",
+      "company": "Lucid Motors",
+      "title": "Sr. Electrical Engineer, Inverter",
+      "score": 53,
+      "eligibility": "visa-needed",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "motor-power-electronics",
+        "embedded-electrical-hardware"
+      ]
+    },
+    "greenhouse:figureai:4722716006": {
+      "first_seen": "2026-10-17",
+      "company": "Figure AI",
+      "title": "Material Planning Manager, Human Data Collect",
+      "score": 18,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "manufacturing-process"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "industrial-manufacturing-transformation"
+      ]
+    },
+    "ashby:wayve:8d005484-ef7e-431c-9bc4-32f12967c5ab": {
+      "first_seen": "2026-10-17",
+      "company": "Wayve",
+      "title": "Control Engineer",
+      "score": 16,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "ashby:wayve:900e0743-3133-4b66-9425-77f40e013717": {
+      "first_seen": "2026-10-17",
+      "company": "Wayve",
+      "title": "Test Engineer",
+      "score": 41,
+      "eligibility": "remote",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 30,
+      "actionable": false,
+      "fit_evidence": [
+        "test-validation"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "physical-product-test-validation-reliability-quality"
+      ]
+    },
+    "greenhouse:agilityrobotics:6227252004": {
+      "first_seen": "2026-10-17",
+      "company": "Agility Robotics",
+      "title": "Mechanical Engineer II",
+      "score": 22,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "lever:dexterity:ab404c3f-a336-4a6c-b31b-07d048feb3dc": {
+      "first_seen": "2026-10-17",
+      "company": "Dexterity",
+      "title": "Lead Functional Safety Engineer",
+      "score": 59,
+      "eligibility": "visa-needed",
+      "track": "ai-native",
+      "search_lane": "ai-native",
+      "search_lanes": [
+        "ai-native",
+        "core"
+      ],
+      "fit_score": 26,
+      "actionable": false,
+      "fit_evidence": [
+        "electrical-hardware"
+      ],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": [
+        "embedded-electrical-hardware"
+      ]
+    },
+    "workday:amat:2630712": {
+      "first_seen": "2026-10-17",
+      "company": "Applied Materials",
+      "title": "Fusion GPS Engineer",
+      "score": 7,
+      "eligibility": "korea",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "workday:kla:2642241": {
+      "first_seen": "2026-10-17",
+      "company": "KLA",
+      "title": "Software Application Engineer",
+      "score": 5,
+      "eligibility": "korea",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "workday:kla:2640288": {
+      "first_seen": "2026-10-17",
+      "company": "KLA",
+      "title": "Engr, Cust Supp 2",
+      "score": 2,
+      "eligibility": "korea",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "workday:kla:2638270": {
+      "first_seen": "2026-10-17",
+      "company": "KLA",
+      "title": "Engr, Cust Supp 3",
+      "score": 2,
+      "eligibility": "korea",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "workday:kla:2639931": {
+      "first_seen": "2026-10-17",
+      "company": "KLA",
+      "title": "Engr, Cust Supp 2",
+      "score": 2,
+      "eligibility": "korea",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
+      "owner_domain_evidence": []
+    },
+    "workday:kla:2640289": {
+      "first_seen": "2026-10-17",
+      "company": "KLA",
+      "title": "Engr, Cust Supp 2",
+      "score": 2,
+      "eligibility": "korea",
+      "track": "core",
+      "search_lane": "core",
+      "search_lanes": [
+        "core"
+      ],
+      "fit_score": 0,
+      "actionable": false,
+      "fit_evidence": [],
+      "technical_signal_evidence": [],
       "owner_domain_evidence": []
     }
   },

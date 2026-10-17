@@ -1,0 +1,97 @@
+{
+  "id": 106736,
+  "end_time": "2026-10-25T23:59:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106736,
+    "name": "보령LNG터미널",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/006/005/webp/%EB%B3%B4%EB%A0%B9.webp?1684487188",
+    "employment_page_url": "https://boryeonglng.career.greetinghr.com/ko/main",
+    "start_time": "2026-10-16T09:00:00.000+09:00",
+    "end_time": "2026-10-25T23:59:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div><img style=\"display:block;max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/671/webp/image.webp?1792032390\" alt=\"보령LNG터미널 [GS계열] 2026 하반기 신입/경력 공개채용\"></div></body></html>\n",
+    "target": 0,
+    "created_at": "2026-10-15T11:46:34.000+09:00",
+    "recruit_type": 0,
+    "view_count": 6405,
+    "favorite_count": 365,
+    "homepage_count": 100,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 12391,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "[GS계열] 2026 하반기 신입/경력 공개채용",
+    "resume_expose": true,
+    "company_group": {
+      "id": 6005,
+      "name": "보령LNG터미널",
+      "business_size": "big_business",
+      "business_type": null,
+      "created_at": "2017-11-29T17:23:41.000+09:00",
+      "updated_at": "2023-05-19T18:06:29.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/006/005/original/%EB%B3%B4%EB%A0%B9.png?1684487188",
+      "alternate_names": [
+        "보령엘엔지터미널"
+      ],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 432793,
+        "field": "터미널현장(신입)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 13,
+        "end_time": null,
+        "duty_group_ids": [
+          122,
+          125,
+          106,
+          105
+        ],
+        "apply": null
+      },
+      {
+        "id": 432823,
+        "field": "경영기획(신입)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 66,
+        "end_time": null,
+        "duty_group_ids": [
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          103
+        ],
+        "apply": null
+      },
+      {
+        "id": 432824,
+        "field": "경영기획(경력)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 2,
+        "end_time": null,
+        "duty_group_ids": [
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          103
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": true
+  }
+}

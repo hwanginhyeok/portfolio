@@ -1,0 +1,240 @@
+{
+  "id": 106759,
+  "end_time": "2026-10-26T09:00:00.000+09:00",
+  "detail": {
+    "ret": true,
+    "id": 106759,
+    "name": "삼진제약",
+    "image_file_name": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/002/436/webp/%EC%82%BC%EC%A7%84%EC%A0%9C%EC%95%BD_%EB%A1%9C%EA%B3%A0%EC%84%9C%EC%B2%B4_%EA%B8%B0%EB%B3%B80%28%ED%88%AC%EB%AA%85%EB%B0%B0%EA%B2%BD%29.webp?1684485872",
+    "employment_page_url": "https://samjinpharm.recruiter.co.kr/career/jobs/131383?utm_source=jasoseol&utm_medium=banner&utm_campaign=2610samjinpharm",
+    "start_time": "2026-10-16T09:59:00.000+09:00",
+    "end_time": "2026-10-26T09:00:00.000+09:00",
+    "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><div><img style=\"display:block;max-width:100%;\" src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/816/webp/image.webp?1792112491\" alt=\"삼진제약 2026년 하반기 신입/경력 채용\"></div></body></html>\n",
+    "target": 0,
+    "created_at": "2026-10-16T10:01:34.000+09:00",
+    "recruit_type": 0,
+    "view_count": 4479,
+    "favorite_count": 223,
+    "homepage_count": 54,
+    "is_receive_applicant": false,
+    "favorite": false,
+    "chat_id": 6327,
+    "attached_file_url": null,
+    "direct_apply": false,
+    "title": "2026년 하반기 신입/경력 채용",
+    "resume_expose": true,
+    "company_group": {
+      "id": 2436,
+      "name": "삼진제약",
+      "business_size": "middle_market",
+      "business_type": null,
+      "created_at": "2015-09-10T05:52:28.000+09:00",
+      "updated_at": "2023-05-19T17:44:33.000+09:00",
+      "image_url": "https://daoift3qrrnil.cloudfront.net/company_groups/images/000/002/436/original/%EC%82%BC%EC%A7%84%EC%A0%9C%EC%95%BD_%EB%A1%9C%EA%B3%A0%EC%84%9C%EC%B2%B4_%EA%B8%B0%EB%B3%B80%28%ED%88%AC%EB%AA%85%EB%B0%B0%EA%B2%BD%29.png?1684485872",
+      "alternate_names": [],
+      "premiums": []
+    },
+    "employments": [
+      {
+        "id": 432896,
+        "field": "사무지원",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 7,
+        "end_time": null,
+        "duty_group_ids": [
+          108,
+          127,
+          107
+        ],
+        "apply": null
+      },
+      {
+        "id": 432897,
+        "field": "ETC영업",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          194,
+          201
+        ],
+        "apply": null
+      },
+      {
+        "id": 432898,
+        "field": "ETC마케팅",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          137,
+          134,
+          132
+        ],
+        "apply": null
+      },
+      {
+        "id": 432899,
+        "field": "Technical Product Specialist",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          194,
+          258
+        ],
+        "apply": null
+      },
+      {
+        "id": 432900,
+        "field": "재무",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 33,
+        "end_time": null,
+        "duty_group_ids": [
+          122,
+          125,
+          105
+        ],
+        "apply": null
+      },
+      {
+        "id": 432901,
+        "field": "ADC ",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          234,
+          229,
+          217,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 432902,
+        "field": "약리 ",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 2,
+        "end_time": null,
+        "duty_group_ids": [
+          234,
+          229,
+          217,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 432903,
+        "field": "개발 ",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          110,
+          234,
+          103,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 432904,
+        "field": "RA ",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          234,
+          108,
+          218
+        ],
+        "apply": null
+      },
+      {
+        "id": 432905,
+        "field": "원자재 (향남공장)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 0,
+        "end_time": null,
+        "duty_group_ids": [
+          157,
+          152,
+          145,
+          147
+        ],
+        "apply": null
+      },
+      {
+        "id": 432906,
+        "field": "공무 (오송공장)",
+        "division": 2,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 1,
+        "end_time": null,
+        "duty_group_ids": [
+          186,
+          128,
+          107
+        ],
+        "apply": null
+      },
+      {
+        "id": 432907,
+        "field": "품질관리(환경) (오송공장)",
+        "division": 1,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 6,
+        "end_time": null,
+        "duty_group_ids": [
+          189,
+          192,
+          183,
+          184
+        ],
+        "apply": null
+      },
+      {
+        "id": 432908,
+        "field": "품질관리(미생물) (오송공장)",
+        "division": 5,
+        "duty_category": null,
+        "employment_resume": true,
+        "resume_count": 7,
+        "end_time": null,
+        "duty_group_ids": [
+          189,
+          234,
+          183,
+          218
+        ],
+        "apply": null
+      }
+    ],
+    "has_exceeded_employment": true
+  }
+}
