@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 330" role="img" aria-label="나 → PM AI → AI 워커 → 내 맥미니의 자원 → 프로젝트" font-family="system-ui, -apple-system, 'Noto Sans KR', sans-serif">
+  <defs><marker id="a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8z" fill="#475569"/></marker></defs>
+  <rect width="760" height="330" fill="#ffffff"/>
+  <rect x="150" y="6" width="600" height="318" rx="14" fill="#f1f5f9" stroke="#94a3b8" stroke-dasharray="6 4"/>
+  <text x="166" y="28" font-size="13" font-weight="700" fill="#334155">내 맥미니 — 데이터와 규칙은 여기에만 있다</text>
+  <g font-size="14" font-weight="700" fill="#0f172a" text-anchor="middle">
+    <rect x="10" y="125" width="110" height="64" rx="10" fill="#0f172a"/><text x="65" y="153" fill="#fff">나</text><text x="65" y="173" fill="#cbd5e1" font-size="11" font-weight="400">목표·규칙·최종 판단</text>
+    <rect x="170" y="125" width="130" height="64" rx="10" fill="#dbeafe" stroke="#2563eb"/><text x="235" y="153">PM AI</text><text x="235" y="173" font-size="11" font-weight="400" fill="#334155">쪼개고·검수·합치기</text>
+    <rect x="350" y="60" width="130" height="52" rx="10" fill="#fff" stroke="#2563eb"/><text x="415" y="82">AI 워커 A</text><text x="415" y="100" font-size="11" font-weight="400" fill="#334155">따로 받은 작업 폴더</text>
+    <rect x="350" y="138" width="130" height="52" rx="10" fill="#fff" stroke="#2563eb"/><text x="415" y="160">AI 워커 B</text><text x="415" y="178" font-size="11" font-weight="400" fill="#334155">따로 받은 작업 폴더</text>
+    <rect x="350" y="216" width="130" height="52" rx="10" fill="#fff" stroke="#2563eb"/><text x="415" y="238">AI 워커 …</text><text x="415" y="256" font-size="11" font-weight="400" fill="#334155">모델은 위험도로 배정</text>
+    <rect x="530" y="60" width="200" height="86" rx="10" fill="#fff" stroke="#64748b"/><text x="630" y="84">자원</text><text x="630" y="104" font-size="11" font-weight="400" fill="#334155">구독 AI 모델 · 클라우드 무료 구간</text><text x="630" y="122" font-size="11" font-weight="400" fill="#334155">서버 PC · 예약 작업</text>
+    <rect x="530" y="176" width="200" height="92" rx="10" fill="#fff" stroke="#16a34a"/><text x="630" y="200">프로젝트</text><text x="630" y="220" font-size="11" font-weight="400" fill="#334155">회사 · 인성이 블로그</text><text x="630" y="238" font-size="11" font-weight="400" fill="#334155">SNS 스튜디오 · 행운거북이</text>
+  </g>
+  <g stroke="#475569" stroke-width="1.6" fill="none" marker-end="url(#a)">
+    <path d="M122 157 H168"/><path d="M302 157 H348"/>
+    <path d="M302 150 C325 120 330 90 348 86"/><path d="M302 164 C325 200 330 235 348 242"/>
+    <path d="M482 86 H528"/><path d="M482 164 C505 164 510 215 528 220"/><path d="M482 242 H528"/>
+  </g>
+  <g font-size="11" fill="#475569"><text x="12" y="212">알림·승인은 Grok 채팅 한 곳</text><text x="12" y="228">(그록봇)</text></g>
+  <text x="166" y="312" font-size="11" fill="#64748b">하네스 설계에서 그린 그림 · 실제 화면 아님</text>
+</svg>
